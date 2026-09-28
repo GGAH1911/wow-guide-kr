@@ -1,0 +1,86 @@
+{
+ "id": "death-knight/blood",
+ "arena": [
+  "[생존기] Icebound Fortitude makes you immune to stuns and reduces damage taken by 30% for 8 sec. Use it when the enemy stuns you and starts their burst.",
+  "[생존기] Anti-Magic Shell absorbs magic damage and prevents harmful magic effects for 5 sec. With Spellwarden you can also cast it on allies and its cooldown drops by 10 sec, so time it to magic CC casts aimed at teammates.",
+  "[해제] Lichborne makes you immune to charm, fear and sleep for 10 sec. Pop it early when you see the enemy casting a fear.",
+  "[차단] Mind Freeze interrupts a cast within 15 yds and locks that school for 5 sec. Save it for the enemy healer's heals.",
+  "[제어] Asphyxiate stuns a target within 20 yds for 5 sec. Lock down the enemy healer when your team bursts.",
+  "[제어] Death Grip pulls the target to you, but its cooldown is 10 sec longer in PvP combat. Save it to pull an enemy healer out from behind a pillar.",
+  "[생존기] Last Dance cuts Dancing Rune Weapon's cooldown by 50% and its duration by 25%. Use it often for 30% parry every time a melee DPS bursts.",
+  "[광역 피해] With Decomposing Aura, enemies within 8 yds lose up to 3% of max health every 2 sec. Fight stacked next to multiple enemies."
+ ],
+ "bg": [
+  "[참고] In Battleground Blitz there are 0-1 tanks, and slow tanks need help carrying the flag. Create your own distance with Death's Advance (10 sec slow and knockback immunity) and Wraith Walk's root break.",
+  "[제어] Gorefiend's Grasp pulls all enemies within 15 yds of the target to the target's location and silences them for 3 sec. Group up enemies gathered to capture a base and shut them down.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Use Vampiric Blood (+30% healing and absorbs taken) early in a focus; with Bloodforged Armor, Death Strike reduces physical damage taken by 25% for 4 sec.",
+  "[분담] Anti-Magic Zone reduces party and raid members' magic damage taken by 15% for 6 sec. Drop it when allies stacked on base defense take magic AoE damage.",
+  "[위치] Chains of Ice slows the target by 70% for 8 sec and Death Grip pulls it in. Hold the enemy flag carrier on your team's side."
+ ],
+ "pvpTalents": "Last Dance, picked by all top 23 Solo Shuffle players and 35 of 40 Battleground Blitz players, halves Dancing Rune Weapon's cooldown. Decomposing Aura, picked by 19 of 23 Solo Shuffle and 28 of 40 Battleground Blitz players, drains max health from enemies within 8 yds every 2 sec. Spellwarden, picked by 18 of 23 Solo Shuffle players, lets you cast Anti-Magic Shell on allies.",
+ "tips": {
+  "last dance": "233412",
+  "decomposing aura": "199720",
+  "spellwarden": "410320",
+  "bloodforged armor": "410301"
+ },
+ "spells": {
+  "199720": {
+   "n": "Decomposing Aura",
+   "i": "ability_deathknight_necroticaura",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "All enemies within 8 yards slowly decay, losing up to 3% of their max health every 2 sec. Max 5 stacks. Lasts 6 sec."
+  },
+  "233412": {
+   "n": "Last Dance",
+   "i": "inv_sword_07",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Reduces the cooldown of Dancing Rune Weapon by 50% and its duration by 25%."
+  },
+  "410301": {
+   "n": "Bloodforged Armor",
+   "i": "spell_deathknight_bladedarmor",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Death Strike reduces all Physical damage taken by 25% for 4 sec."
+  },
+  "410320": {
+   "n": "Spellwarden",
+   "i": "spell_shadow_antimagicshell",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Anti-Magic Shell is now usable on allies and its cooldown is reduced by 10 sec."
+  }
+ },
+ "spellsKo": {
+  "199720": {
+   "n": "부패의 오라",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "8미터 내의 모든 적이 서서히 부패하여 2초마다 최대 생명력의 3%만큼 생명력이 감소합니다. 최대 5번까지 중첩되며 6초 동안 지속됩니다."
+  },
+  "233412": {
+   "n": "마지막 춤",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "춤추는 룬 무기의 재사용 대기시간을 50%만큼, 지속시간을 25%만큼 감소시킵니다."
+  },
+  "410301": {
+   "n": "피로 벼려낸 방어구",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "죽음의 일격을 사용하면 4초 동안 자신이 받는 모든 물리 피해를 25%만큼 감소시킵니다."
+  },
+  "410320": {
+   "n": "주문 수호자",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "아군에게 대마법 보호막을 시전할 수 있습니다. 또한 재사용 대기시간이 10초만큼 감소합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "투기장 상위권 표본이 한국 3v3 3명·2v2 2명뿐이라 투기장 줄은 1인 조합전(23명) 채택률과 일반 원칙 기준",
+   "영웅 특성이 1인 조합전 산레인 14·죽음의 인도자 9로 갈려 Vampiric Strike·Reaper's Mark 등 한쪽 전용 기술은 쓰지 않음",
+   "Death Grip 같은 끌어오기가 공포·방향 상실 대상에게 통하는지는 전장 규칙(밀쳐내기만 언급)으로 확인되지 않아 연결하지 않음"
+  ]
+ }
+}

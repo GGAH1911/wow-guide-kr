@@ -1,6 +1,7 @@
 # 와우 공략 (한국어) · World of Warcraft 한밤 2시즌
 
-**사이트: https://ggah1911.github.io/wow-guide-kr/**
+**사이트: https://ggah1911.github.io/wow-guide-kr/**  
+**English: https://ggah1911.github.io/wow-guide-kr/?ui=en**
 
 한밤(Midnight) 2시즌 **쐐기 · 레이드 · PvP**를 내 전문화 기준으로 보는 한국어 공략 사이트입니다. 40개 전문화 모두 지원합니다. 기술·NPC 이름은 **한글 / 영문 게임 클라이언트** 둘 다에 맞춰 볼 수 있고, 순위·빌드 통계는 매일 자동으로 갱신됩니다.
 
@@ -30,7 +31,7 @@
 - **[쐐기 | 레이드 | PvP]**: 세 갈래 사이를 오갑니다. 전문화 페이지에서는 대신 **쐐기 공략 · 레이드 공략 · PvP · 스킬** 탭이 나옵니다.
 - **내 전문화 아이콘**: 저장한 전문화의 공략으로 바로 이동
 - **한 / EN**: 게임 언어 전환. 기술·NPC·전문화 이름과 툴팁이 한글 클라이언트 또는 영문 클라이언트 표기로 바뀝니다.
-- **☰ 메뉴**: 쐐기·레이드·PvP의 모든 페이지와 내 전문화 바로가기, 전문화 변경
+- **☰ 메뉴**: 쐐기·레이드·PvP의 모든 페이지와 내 전문화 바로가기, 전문화 변경, 화면 언어(한국어 / English) 전환
 
 ![헤더 메뉴](docs/screenshots/13-menu.jpg)
 
@@ -97,6 +98,12 @@ Raider.IO 쐐기 점수 상위 500명을 **세계 · 세계(중국 제외) · �
 - 수치는 게임 데이터(툴팁) 원문에 있는 것만 씁니다. 출처를 확인하지 못한 내용은 쓰지 않고, 출처는 각 페이지 아래에 적습니다.
 - 전문화별 레이드 활용 줄과 PvP 전략은 전문화 전용 공략 출처가 없어 **기술 툴팁 + 보스·지도 기믹 + 상위권 실제 채택률**을 맞춘 일반 원칙입니다(화면에도 표시).
 - 공략 초안이며, 게임 패치로 내용이 달라질 수 있습니다.
+
+---
+
+## English version
+
+The whole site is also available in English: https://ggah1911.github.io/wow-guide-kr/?ui=en (or ☰ menu → English). Guides, raid and PvP strategy, rankings and menus are all in English, and ability and NPC names match the English game client. The choice is saved on your device; switch back with the 한국어 button.
 
 ---
 

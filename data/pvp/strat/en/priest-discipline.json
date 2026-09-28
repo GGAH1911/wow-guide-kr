@@ -1,0 +1,73 @@
+{
+ "id": "priest/discipline",
+ "arena": [
+  "[생존기] Pain Suppression can be used while stunned and reduces all damage the target takes by 40% for 8 sec. Put it on an ally immediately when they take burst while you're stunned.",
+  "[회피] With Phase Shift, Fade makes you avoid all attacks and spells for 1 sec, but not interrupts. Press Fade the moment an enemy CC cast finishes.",
+  "[제어] Psychic Scream makes enemies within 8 yds flee in fear for 8 sec but damage can break it. Use it when enemies your team isn't hitting get on you.",
+  "[해제] Purify removes all harmful magic effects from an ally. Dispel magic CC stopping your team's healing or damage first.",
+  "[해제] Mass Dispel removes harmful magic from 5 allies within 15 yds, including magic normal dispels can't remove. Use it to strip the enemy's undispellable magic protection effects.",
+  "[광역 피해] With Ultimate Radiance, Evangelism's cooldown drops by 45 sec and Radiance healing increases by 15%. Time Evangelism to the enemy burst cooldowns to blanket your team with Atonement.",
+  "[참고] Inner Light toggles between 10% mana savings on heals and 10% more spell damage and Atonement healing, with a 6 sec cooldown on swapping. Switch to damage only when mana is plentiful.",
+  "[생존기] Desperate Prayer increases your max health for 10 sec and instantly heals you for that amount. Press it first the moment you get focused."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 2 healers, and on flag maps a mobile healer is a good carrier. You can help carry with Angelic Feather's 40% movement speed for 5 sec and Fade's slow removal via Phantasm.",
+  "[분담] Leap of Faith instantly pulls an ally in front of you. Pull a pinned flag carrier back toward your team.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than healing after health drops, pre-apply Pain Suppression right before the enemy burst.",
+  "[제어] Enemies feared by Psychic Scream can't be knocked back. Use it on enemies trying to capture a base, but don't overlap it with your team's knockbacks.",
+  "[해제] Mass Dispel removes harmful magic from 5 allies within 15 yds at once. Use it when several magic CC effects land on allies stacked on base defense."
+ ],
+ "pvpTalents": "Ultimate Radiance, picked by 45 of the top 47 Solo Shuffle and 41 of 42 Battleground Blitz players, reduces Evangelism's cooldown by 45 sec and increases Radiance healing by 15%. Inner Light, picked by 39 of 47, toggles between heal mana savings and more damage and Atonement healing. Phase Shift, picked by 35 of 47, makes you avoid all attacks and spells for 1 sec on Fade.",
+ "tips": {
+  "ultimate radiance": "236499",
+  "inner light": "355897",
+  "phase shift": "408557"
+ },
+ "spells": {
+  "236499": {
+   "n": "Ultimate Radiance",
+   "i": "spell_priest_power-word",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Evangelism cooldown is reduced by 45 sec and Power Word: Radiance healing is increased by 15%."
+  },
+  "355897": {
+   "n": "Inner Light",
+   "i": "spell_holy_divinespirit",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · Instant · 6 sec cooldown",
+   "d": "[Inner Light: Embrace the light, reducing the mana cost of healing spells by 10% / Inner Light: Healing spells cost 10% less mana.\n\nInner Shadow: Spell damage and Atonement healing increased by 10%.\n\nActivate to swap from one effect to the other, incurring a 6 sec cooldown.]"
+  },
+  "408557": {
+   "n": "Phase Shift",
+   "i": "spell_priest_spectralguise",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Step into the shadows when you cast Fade, avoiding all attacks and spells for 1 sec.\n\nInterrupt effects are not affected by Phase Shift."
+  }
+ },
+ "spellsKo": {
+  "236499": {
+   "n": "궁극의 광휘",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "사도의 재사용 대기시간이 45초만큼 감소하고 신의 권능: 광휘의 치유량이 15%만큼 증가합니다."
+  },
+  "355897": {
+   "n": "내면의 빛",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 즉시 · 6 초 재사용 대기시간",
+   "d": "[내면의 빛: 빛을 받아들여 치유 주문의 마나 소모량이 10%만큼 감소합니다 / 내면의 빛: 치유 주문의 마나 소모량이 10%만큼 감소합니다.\n\n내면의 어둠: 주문 공격력과 속죄의 치유량이 10%만큼 증가합니다.\n\n활성화 시 효과가 번갈아 가며 변경되며, 6초의 재사용 대기시간이 적용됩니다.]"
+  },
+  "408557": {
+   "n": "위상 변화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "소실 시전 시 그림자에 숨어들어 1초 동안 모든 공격과 주문을 회피합니다.\n\n주문 방해 효과는 위상 변화에 영향을 받지 않습니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 예언자 43·공허술사 4로 거의 예언자지만 한쪽 전용 기술은 쓰지 않음",
+   "쌍점이 든 이름(Power Word 계열·Shadow Word 계열)은 지침에 따라 문장에 쓰지 않아 보호막·광휘 운용은 Evangelism·Atonement로만 설명"
+  ]
+ }
+}

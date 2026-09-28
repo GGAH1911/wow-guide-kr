@@ -1,0 +1,262 @@
+{
+ "id": "priest/shadow",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] Slow a Restless Amani with its Gravebound Advance shield still up by 50% with Mind Flay to delay it reaching the well.",
+    "[해제] An Essence Rend target who has moved to the edge can also be cleared with Mass Dispel, which removes it from up to 5 players within 15 yards at once.",
+    "@m [참고] Spells being cast are interrupted the moment Invoke ends, so stop casting Mind Blast and Mind Flay at that moment."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] When a Venom Coagulation ooze spawns, pop Voidform and Power Infusion to kill it right away.",
+    "[참고] The boss takes 99% less damage during Vitriolic Stasis, so hold Voidform until after the intermission.",
+    "[해제] Blighted Blood is a Magic effect, so Mass Dispel can clear it from up to 5 players within 15 yards at once."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] On the venom adds, use Tentacle Slam to apply Vampiric Touch to up to 6 targets and split damage with Psychic Link to kill them before they reach the center.",
+    "[제어] Burning Venom can be held with Psychic Scream until Hardened Venom. Damage may break it.",
+    "[해제] Every dispel of Exploding Infection makes Caustic Explosion hit the raid, so do not clear several at once with Mass Dispel."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Interrupt Scrollsage Iku's Icebound Flames with Silence.",
+    "[해제] An Icebound Flames that lands after a missed interrupt is a Magic effect, so it can be cleared with Mass Dispel.",
+    "[위치] If you are the Blink Nova target, step on Angelic Feather to get away from the raid quickly."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Sszorak takes more damage during the 25 sec Dig In, so line up Voidform and Power Infusion with it.",
+    "[분담] When soaking Mutilate, reduce damage taken by 75% with Dispersion.",
+    "[위치] If you are the Venomous Surge target, use Angelic Feather to get to the far side of the gust zone quickly and drop the Viscous Cyst."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Kill the Venomous Emergence adds first by popping Voidform and applying Vampiric Touch with Tentacle Slam.",
+    "[생존기] When soaking Ravenous Feast, hold through it by raising your max health with Desperate Prayer.",
+    "@m [차단] Interrupt Broodling of Ithraz's Visceral Burst and Caustic Globule's Barbed Bulwark with Silence."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[차단] Once the Veil of Twilight shield breaks, interrupt Eternal Nightfall with Silence.",
+    "[우선 처치] Ghastly Regeneration in the intermission makes Zul'jan take 100% more damage, so dump Voidform and Power Infusion.",
+    "[회피] After soaking Guillotine, step on Angelic Feather to immediately get 40 yards away from the axe."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Dump Voidform and Power Infusion into the Venomous Heart exposed after Rage of the Shackled.",
+    "[생존기] During the 20 sec of Rage of the Shackled raid damage, pop Vampiric Embrace to heal nearby allies with your Shadow spell damage.",
+    "[차단] Interrupt Malice, Anguished Cry, and Vicious Echoes with Silence."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Kill the Bubblefin Shorerunners drawn in by Alluring Bubble with Tentacle Slam and Halo before they reach the bubble.",
+    "[생존기] Hold through the raid damage from Pop! and Unending Tides with Dispersion or Desperate Prayer.",
+    "@m [우선 처치] Waterfog Shield reduces damage to nearby murlocs by 99%, so kill the Bubblefin Frostscale before using AoE."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] In the intermission, interrupt Pitch Bulwark from Shadowguard Stalwart and Voidbound Annihilator with Silence.",
+    "[우선 처치] AoE down the Voidmaw packs with Tentacle Slam and Halo.",
+    "[생존기] If assigned to Dark Upheaval at the pull and after each intermission, help heal nearby allies with Vampiric Embrace."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] The Blisterburst damage taken increase and the Creep Spit movement slow are Magic effects, so Mass Dispel can clear them from up to 5 players within 15 yards at once.",
+    "[회피] If Creep Spit stacks have slowed you, use Dispersion during Void Breath to become immune to movement impairing effects and move 50% faster to the end of the room.",
+    "[우선 처치] Kill the Blistercreeps gathered at the wall together with Tentacle Slam so Blisterburst breaks the Void Crystal."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Interrupt Shadow Fracture from distant Fractured Images with Silence.",
+    "@m [차단] If a Fractured Image stripped of Nexus Shield is within 8 yards, you can also interrupt it with the Psychic Scream fear.",
+    "[참고] The boss takes 25% more damage during the 20 sec Entropic Unraveling, so line up Voidform with it."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] If players feared by Dread Breath are grouped up, you can free several at once with Mass Dispel.",
+    "[생존기] Dispersion can be used even while feared by Dread Breath, so reduce the follow-up DoT damage by 75%.",
+    "[차단] Interrupt Voidorb's Voidbolt with Silence."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[참고] The Divine Shield the boss casts after Bloodlust can be removed by an enemy buff dispel, so remove it with Dispel Magic or Mass Dispel.",
+    "[해제] If the Avenger's Shield DoT is on several players, you can clear them at once with Mass Dispel.",
+    "[차단] After breaking War Chaplain Senn's Sacred Shield, interrupt Blinding Light with Silence."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] Mass Dispel can clear Corrupting Essence from several players at once.",
+    "[해제] If a Null Corona target is inside the Mass Dispel radius, the absorb moves to someone else, so keep them out of it unless it is an emergency.",
+    "[참고] Stop casting Mind Blast when Demiar's Interrupting Tremor cast finishes."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Interrupt Haunting Essence's Fearsome Cry first with Silence.",
+    "[해제] Fearsome Cry fear that slips past interrupts is a Magic effect, so you can free several players at once with Mass Dispel.",
+    "[우선 처치] If you are on the lower floor team, save Voidform to break the adds' Alnshroud shields quickly."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] If your feather color matches, interrupt the embers' Light Eruption or Void Eruption with Silence.",
+    "[생존기] During the Phase 2 egg's Rebirth, dump Voidform and Power Infusion to burn down Immortal Flame.",
+    "[분담] When soaking Light Dive or Void Dive with same-color players, hold through it by raising your max health with Desperate Prayer."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [해제] The Safeguard buff is a Magic effect, so strip it with Dispel Magic.",
+    "@nh [차단] Interrupt the Safeguard Matrix's Safeguard casts with Silence to remove the stacks.",
+    "@m [차단] Interrupt Terminate from your assigned Termination Matrix in order with Silence."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Always interrupt Sporecap's Poison Burst with Silence, and take the second Sporecap that spawns far away from range.",
+    "[우선 처치] AoE down the Shroomlings and Bursting Shrooms gathered at the set spot with Tentacle Slam and Halo.",
+    "[생존기] Rotting Pustules stacks make raid damage ramp up as the fight goes on, so use Vampiric Embrace late in the fight."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 15407",
+   "u": "https://nether.wowhead.com/tooltip/spell/15407?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 32375",
+   "u": "https://nether.wowhead.com/tooltip/spell/32375?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 8092",
+   "u": "https://nether.wowhead.com/tooltip/spell/8092?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 10060",
+   "u": "https://nether.wowhead.com/tooltip/spell/10060?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 228260",
+   "u": "https://nether.wowhead.com/tooltip/spell/228260?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 34914",
+   "u": "https://nether.wowhead.com/tooltip/spell/34914?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 199484",
+   "u": "https://nether.wowhead.com/tooltip/spell/199484?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 1227280",
+   "u": "https://nether.wowhead.com/tooltip/spell/1227280?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 8122",
+   "u": "https://nether.wowhead.com/tooltip/spell/8122?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 15487",
+   "u": "https://nether.wowhead.com/tooltip/spell/15487?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 121536",
+   "u": "https://nether.wowhead.com/tooltip/spell/121536?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 47585",
+   "u": "https://nether.wowhead.com/tooltip/spell/47585?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 19236",
+   "u": "https://nether.wowhead.com/tooltip/spell/19236?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 15286",
+   "u": "https://nether.wowhead.com/tooltip/spell/15286?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 120644",
+   "u": "https://nether.wowhead.com/tooltip/spell/120644?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 15487",
+   "u": "https://nether.wowhead.com/tooltip/spell/15487?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 120644",
+   "u": "https://nether.wowhead.com/tooltip/spell/120644?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 1227280",
+   "u": "https://nether.wowhead.com/tooltip/spell/1227280?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 15286",
+   "u": "https://nether.wowhead.com/tooltip/spell/15286?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 32375",
+   "u": "https://nether.wowhead.com/tooltip/spell/32375?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 47585",
+   "u": "https://nether.wowhead.com/tooltip/spell/47585?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 8122",
+   "u": "https://nether.wowhead.com/tooltip/spell/8122?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 228260",
+   "u": "https://nether.wowhead.com/tooltip/spell/228260?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 528",
+   "u": "https://nether.wowhead.com/tooltip/spell/528?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 8092",
+   "u": "https://nether.wowhead.com/tooltip/spell/8092?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 10060",
+   "u": "https://nether.wowhead.com/tooltip/spell/10060?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 19236",
+   "u": "https://nether.wowhead.com/tooltip/spell/19236?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Mass Dispel 줄은 digest 해제 목록의 마법 효과(Essence Rend·Blighted Blood·Icebound Flames)에만 썼고, Exploding Infection은 digest의 '시차를 두고 해제'와 툴팁 '5명까지 한꺼번에 제거'를 연결해 쓰지 말라는 경고로만 넣었다. Purify Disease가 지울 질병 디버프는 digest에 없다",
+   "Gravebound Advance 보호막을 깨는 피해 속성은 적지 않았다(미확인). Archon·Voidweaver 영웅 특성 전용 기술(Devour Matter 등)은 넣지 않았다",
+   "1시즌: Mass Dispel은 digest 해제 목록의 마법 효과(Blisterburst·Creep Spit·Dread Breath·Avenger's Shield·Corrupting Essence·Fearsome Cry)에만 썼고, Null Corona는 해제 시 옮겨 간다는 digest 문구로 경고만 넣었다. Dispel Magic·Mass Dispel의 적 버프 제거는 digest가 적 버프 해제를 요구한 Divine Shield·Safeguard에만 썼다",
+   "1시즌: Dispersion 줄은 툴팁의 '공포 중 사용 가능'·'이동 방해 효과 면역·이동 속도 50%'만 근거로 썼다. Purify Disease가 지울 질병 디버프는 digest에 없다. Archon·Voidweaver 영웅 특성 전용 기술(Devour Matter 등)은 넣지 않았다"
+  ]
+ }
+}

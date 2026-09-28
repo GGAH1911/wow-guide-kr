@@ -1,0 +1,154 @@
+{
+ "id": "paladin/holy",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Essence Rend is a Magic effect, so dispel it with Cleanse after the target reaches the edge of the room. A Latent Cultist pool is left where it was removed.",
+    "[생존기] Soulcoil Rite goes off with every Phase 2 Invoke, so take a turn using Aura Mastery to reduce damage taken by the raid within 40 yards.",
+    "@m [참고] Spells being cast are interrupted the moment Invoke ends, so heal with instant Holy Shock and Word of Glory instead of Holy Light at that moment."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood is an 18 sec Magic DoT, so dispel it right away with Cleanse.",
+    "[위치] The two groups are more than 40 yards apart, so Aura Mastery and Light of Dawn only reach your own group within 40 yards. Stay with your assigned group.",
+    "[광역 피해] While a Venom Coagulation ooze is alive, Contaminate hits the raid every 3 sec, so top up several players at once with Divine Toll and Beacon of Virtue."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Every Cleanse on Exploding Infection makes Caustic Explosion hit the whole raid, so stagger with the other dispellers and clear one player at a time.",
+    "@m [생존기] Line up an Aura Mastery turn with Gloom Expulsion and Conflagrating Expulsion, which grow with each Imbibe."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[해제] An Icebound Flames that slips past interrupts is a Magic effect, so dispel it with Cleanse.",
+    "[생존기] During Scrollsage Iku's ultimate, line up Aura Mastery or Avenging Wrath with the window when Frostfire Volley debuffs are being cleared.",
+    "[탱버] When First Mate Nama's Steady Strikes stacks get high, use Blessing of Sacrifice to reduce the tank's damage taken by 30%."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[탱버] Put Blessing of Sacrifice on the tank taking Ravage to reduce their damage taken by 30%.",
+    "[광역 피해] The whole raid takes damage when Venomous Surge ends, so top everyone up right away with Light of Dawn and Divine Toll.",
+    "[위치] If you are late to gather in the middle of the arena before the Howling Maelstrom gusts, use Divine Steed for movement speed to join up."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[생존기] Stir the Depths hits the whole raid for 6 sec, so reduce damage taken with Aura Mastery and have Protection of Tyr's healing received increase overlap with it.",
+    "@m [분담] Put Beacon of Virtue on players standing in a Tainted Blood source and dump Holy Shock to fill the absorb within 8 sec.",
+    "@m [탱버] Put Blessing of Sacrifice on the Ithraz tank stacking healing absorbs from Blood Torrent to reduce their damage taken by 30%."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[생존기] Suffocating Darkness healing absorbs stack up during Veil of Twilight, so raise your healing with Avenging Wrath to strip them.",
+    "@hm [생존기] Venom Rupture DoTs stack up right after Sever pops the orbs, so line up Aura Mastery.",
+    "[위치] You need to spread past 40 yards right after soaking Guillotine, so keep Divine Steed available."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Blightscale Viper's Acidic Burst is a Poison DoT, so clear it with Cleanse, talented into Improved Cleanse.",
+    "@hm [해제] Blightscale Rawling's Poisonous Bite stacks are also Poison, so clear them with Cleanse.",
+    "[생존기] Split Aura Mastery and Avenging Wrath between the 20 sec of Rage of the Shackled raid damage and Fury Unleashed."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[생존기] Line up an Aura Mastery turn with Unending Tides hitting the raid every second.",
+    "[광역 피해] Pop! is raid-wide damage plus a knockback, so top up the scattered players together with Divine Toll and Beacon of Virtue.",
+    "@hm [생존기] If a missed Frost Orb stacks up the Shatter DoT, raise your healing with Avenging Wrath to hold through it."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[생존기] On Dark Upheaval at the pull and after each intermission, use Aura Mastery to raise Devotion Aura's damage reduction to 12%.",
+    "[광역 피해] When intermission Dark Barrage lands on several players, apply Beacon of Virtue and top them up together with Light of Dawn.",
+    "@m [광역 피해] Heal through the 10 sec Lingering Darkness DoT on players dispelled of Void Marked with Holy Shock and Word of Glory."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] The Blisterburst damage taken increase and the Creep Spit movement slow are Magic effects, so dispel them with Cleanse.",
+    "[광역 피해] After the raid takes Primordial Roar stacked, top up 5 players within 40 yards at once with Light of Dawn.",
+    "@m [생존기] Line up Aura Mastery when the first Blistercreep pack pops."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[생존기] Use Aura Mastery and Avenging Wrath together on the 20 sec of raid damage from Entropic Unraveling.",
+    "[참고] Strip the Oppressive Darkness healing absorb from players coming out of Despotic Command with Holy Shock and Word of Glory.",
+    "@hm [광역 피해] When Dark Radiation stacking DoTs are on the raid, top up with Beacon of Virtue and Light of Dawn."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath fear is a Magic effect, so dispel affected players right away with Cleanse.",
+    "[생존기] Part of the Midnight Flames damage gets through the Radiant Barrier absorb, so reduce raid damage taken with Aura Mastery.",
+    "[참고] Keep Beacon of Light on the tank gaining healing absorbs from Rakfang stacks and fill them up with Holy Light."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] The Avenger's Shield DoT is a Magic effect, so dispel it right away with Cleanse.",
+    "[분담] Put Beacon of Virtue on the 5 players with the Tyr's Wrath healing absorb and dump Holy Shock and Light of Dawn.",
+    "@m [생존기] Pop Aura Mastery when the empowered Searing Radiance damage grows every second."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] Corrupting Essence on a player is a Magic effect, so dispel it with Cleanse.",
+    "[해제] Cleansing Null Corona moves the absorb to someone else, so fill the absorb with Holy Light and only Cleanse in an emergency.",
+    "@nh [광역 피해] Raid damage comes in every second while Cosmic Barrier is up, so hold through it with Beacon of Virtue and Light of Dawn."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[해제] Fearsome Cry fear that slips past interrupts is a Magic effect, so dispel it with Cleanse.",
+    "@hm [해제] Dispel Consuming Miasma with Cleanse once the target reaches an Alndust Essence pool.",
+    "[광역 피해] Strip the Rift Sickness healing absorb applied every time adds spawn from several players at once with Beacon of Virtue and Light of Dawn."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[광역 피해] Heal off the Light Burn and Void Burn healing absorbs completely with Holy Shock and Word of Glory.",
+    "[생존기] Burning Heart comes more often during Phase 2 Rebirth, so raise your healing by 20% with Avenging Wrath.",
+    "@m [분담] You can move with Divine Shield active, so you can take the Radiant Echoes orb assignment."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[분담] Heal a Dusk Crystal to full with Holy Shock and Holy Light to turn it into a Dawn Crystal.",
+    "[광역 피해] During Total Eclipse, strip the Eclipsed healing absorbs with Beacon of Virtue and Light of Dawn, prioritizing crystal carriers.",
+    "[생존기] Line up Aura Mastery with the 25 sec of raid damage from Shattered Sky."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [해제] Clear a Poison Burst poison DoT that slips past interrupts with Cleanse, talented into Improved Cleanse.",
+    "[생존기] Rotting Pustules makes damage ramp up as the fight goes on, so stack Aura Mastery and Avenging Wrath late in the fight.",
+    "[광역 피해] Use Beacon of Virtue and Light of Dawn on the Fungal Bloom raid damage and 16 sec DoT."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [],
+ "audit": {
+  "unverified": [
+   "Aura Mastery의 Concentration Aura 차단·침묵 면역이 신화 Invoke 침묵을 막는지는 출처가 없어 쓰지 않음"
+  ],
+  "notes": [
+   "독 해제는 Improved Cleanse 특성 기준",
+   "Holy Bulwark·Dawnlight 등 영웅 특성 한쪽 기술은 제외",
+   "1시즌: 해제 줄은 digest 해제 목록(Magic/Poison)과 Cleanse·Improved Cleanse 툴팁을 짝지었다. Void Marked는 해제 유형이 확인되지 않아 Cleanse 대신 도트 치유 줄로 썼다.",
+   "1시즌: Vanguard 탭에서는 보스 기술과 이름이 겹치는 Divine Toll·Avenging Wrath·Judgment를 쓰지 않았다. Divine Shield 구슬 줄은 digest의 면역기 담당 문구에 근거했다."
+  ]
+ }
+}

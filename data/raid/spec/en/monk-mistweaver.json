@@ -1,0 +1,151 @@
+{
+ "id": "monk/mistweaver",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Once the Essence Rend target reaches the edge of the room, clear it with Detox. A Latent Cultist pool is left where it was removed.",
+    "[생존기] Soulcoil Rite goes off with every Phase 2 Invoke, so take a turn with Revival.",
+    "[제어] If a Restless Amani with its shield still up walks toward the well, stun it for 3 sec with Leg Sweep to slow it down."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood is a Magic effect, so dispel it right away with Detox.",
+    "[위치] The two groups are more than 40 yards apart, so Revival only reaches your own group within 40 yards. Use it next to your assigned group."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Dispelling Exploding Infection makes Caustic Explosion hit the raid, so stagger with the other dispellers and Detox one player at a time.",
+    "[참고] Revival removes harmful Magic effects from raid members, so using it while Exploding Infection is on several players sets off every Caustic Explosion at once.",
+    "@hm [제어] Burning Venom can be controlled until Hardened Venom, so you can hold one with Paralysis. Damage may break it."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[해제] An Icebound Flames that slips past interrupts is a Magic effect, so dispel it with Detox.",
+    "[생존기] Line up Revival or Invoke Chi-Ji with the window when Frostfire Volley debuffs are being cleared.",
+    "[탱버] Put Life Cocoon on the tank when First Mate Nama's Steady Strikes stacks get high."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[탱버] Put Life Cocoon on the tank taking Ravage to absorb the damage.",
+    "[광역 피해] Before Venomous Surge ends and the whole raid takes damage, spread Renewing Mist on several players and top them up together with Vivify."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[생존기] Line up Revival or Invoke Chi-Ji with the 6 sec of raid damage from Stir the Depths.",
+    "@m [탱버] Put Life Cocoon on the Ithraz tank stacking healing absorbs from Blood Torrent to raise their periodic healing received by 50%."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[생존기] Split Revival and Invoke Chi-Ji across the Suffocating Darkness and Defilement of the Coiled Altar healing absorb windows.",
+    "@hm [생존기] Venom Rupture DoTs stack up right after Sever, so line up Invoke Chi-Ji.",
+    "[위치] After soaking Guillotine, when players spread out past 40 yards, give laggards Tiger's Lust for 70% movement speed."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Clear the Acidic Burst poison DoT from Blightscale Viper with Detox, talented into Improved Detox.",
+    "[생존기] Revival removes all Poison effects from the raid, so using it on Rage of the Shackled raid damage also clears Acidic Burst.",
+    "[생존기] Line up Invoke Chi-Ji with Fury Unleashed."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[생존기] Take a Revival turn on Unending Tides.",
+    "[광역 피해] While Pulsing Tides continues, spread Renewing Mist on several players and top them up together with Vivify."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[생존기] On Dark Upheaval at the pull and after each intermission, heal the raid within 40 yards all at once with Revival.",
+    "[탱버] When Gnashing Void DoTs stack on the tank picking up adds under Weakened, absorb the damage with Life Cocoon.",
+    "@m [광역 피해] Heal through the 10 sec Lingering Darkness DoT on players dispelled of Void Marked with Renewing Mist and Enveloping Mist."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] The Blisterburst damage taken increase and the Creep Spit slow are Magic effects, so dispel them with Detox.",
+    "[위치] Put Tiger's Lust on a Blistercreep target with stacked Creep Spit slows to remove the slow and give 70% movement speed so they reach the wall.",
+    "@m [생존기] When the first Blistercreep pack pops, heal the raid with Revival and clear the Blisterburst Magic effect at the same time."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[생존기] Line up Revival with the 20 sec of raid damage from Entropic Unraveling.",
+    "[참고] Strip the Oppressive Darkness healing absorb from players coming out of Despotic Command with Enveloping Mist and Vivify.",
+    "[탱버] Put Life Cocoon on the tank taking Shattering Twilight by the wall."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath fear is a Magic effect, so dispel it with Detox. If several players are caught in the cone, use Revival to clear up to 3 Magic effects from players within 40 yards.",
+    "[생존기] Part of the Midnight Flames damage gets through Radiant Barrier, so line up Revival.",
+    "[참고] Put Life Cocoon on the tank gaining healing absorbs from Rakfang stacks to raise their periodic healing received by 50%."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] The Avenger's Shield DoT is a Magic effect, so dispel it right away with Detox.",
+    "@m [해제] On Mythic, when Avenger's Shield targets every player, heal the raid with Revival and clear the DoTs at the same time.",
+    "[분담] Focus heal players with the Tyr's Wrath healing absorb using Enveloping Mist and Vivify."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] Corrupting Essence on a player is a Magic effect, so dispel it with Detox.",
+    "[해제] Dispelling Null Corona with Detox moves the absorb to someone else, so heal through it with Vivify and only dispel in an emergency. Avoid Revival, your raid dispel, at this moment too.",
+    "@nh [생존기] Put Life Cocoon on the tank that gets Gravity Collapse from breaking Aspect of the End."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[해제] Fearsome Cry fear that slips past interrupts is a Magic effect, so dispel it with Detox.",
+    "@hm [해제] Dispel Consuming Miasma with Detox once the target reaches an Alndust Essence pool.",
+    "[광역 피해] For the Rift Sickness healing absorb applied every time adds spawn, spread Renewing Mist and strip several players at once with Vivify."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[광역 피해] Heal off the Light Burn and Void Burn healing absorbs completely with Enveloping Mist and Vivify.",
+    "[생존기] Burning Heart comes more often during Phase 2 Rebirth, so line up Revival.",
+    "[탱버] Put Life Cocoon on the tank taking Light Edict or Void Edict."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[분담] Heal a Dusk Crystal to full with Enveloping Mist and Vivify to turn it into a Dawn Crystal.",
+    "@nh [차단] Remove the Safeguard stacks on a Safeguard Prism matrix by stunning the matrix with Leg Sweep.",
+    "[생존기] Line up Revival with the 25 sec of raid damage from Shattered Sky."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [해제] Clear a Poison Burst poison DoT that slips past interrupts with Detox, talented into Improved Detox. If several players have it, clear them all at once with Revival.",
+    "[생존기] Rotting Pustules makes damage ramp up as the fight goes on, so save Revival for late in the fight.",
+    "[광역 피해] During the 16 sec Fungal Bloom DoT, spread Renewing Mist and top players up together with Vivify."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [],
+ "audit": {
+  "unverified": [
+   "Revival로 Exploding Infection이 한꺼번에 지워지면 폭발이 겹친다는 점은 툴팁과 기믹 조합이며 실측 출처는 없음"
+  ],
+  "notes": [
+   "독 해제는 Improved Detox 기준, Revival은 독 전부와 마법 3개 제거",
+   "Celestial Conduit·Aspect of Harmony 등 영웅 한쪽 기술 제외",
+   "1시즌: Revival 툴팁의 '해로운 마법 3개·모든 독 제거'를 digest 해제 목록(Magic·Poison)과 짝지었다. Null Corona는 해제 시 흡수량이 옮겨 가므로 Revival도 피하라고 적었다.",
+   "1시즌: Celestial Conduit 등 영웅 특성 전용 기술은 쓰지 않았다."
+  ]
+ }
+}

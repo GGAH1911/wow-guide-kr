@@ -1,0 +1,124 @@
+{
+ "id": "mage/frost",
+ "arena": [
+  "[생존기] With Overpowered Barrier, Ice Barrier absorbs 60% more but lasts only 4 sec, and when fully consumed it slows enemies within 10 yds by 70% for 4 sec. Pop it when melee DPS are on you bursting, and gain distance when the barrier breaks.",
+  "[생존기] Alter Time returns you to the position and health you had when you cast it when pressed again or after 10 sec. Activate it before the burst starts and press it again when your health takes a big hit.",
+  "[생존기] Ice Block prevents all attacks and damage for 10 sec, but you can't attack, move or cast meanwhile. Use it when you take burst with other defensives down.",
+  "[제어] With Snowdrift, a blizzard surrounds you for 6 sec, slowing enemies by 70% and stunning enemies that stay in it for 2 sec straight for 4 sec. Pop it to lock down melee DPS on you.",
+  "[제어] Dragon's Breath disorients enemies within 12 yds in front of you for 4 sec but damage breaks it. Use it on melee DPS on top of you, don't hit them, and gain distance.",
+  "[제어] Polymorph incapacitates the target for 1 min but damage breaks it. Put it on the enemy healer and pop Icy Veins to burst another target; during Icy Veins damage doesn't push back your casts.",
+  "[차단] Counterspell interrupts a cast and locks that school for 7 sec. Save it for the enemy healer's heals.",
+  "[회피] Freeze enemies within 12 yds for 6 sec with Frost Nova, then Blink 20 yds away; Blink also frees you from all stuns and roots. Create casting distance from melee DPS."
+ ],
+ "bg": [
+  "[제어] Ice Wall was picked by 33 of 39 Battleground Blitz players, and its 30 yd wall blocks line of sight for up to 15 sec. Cut line of sight for enemies chasing your carrier or for the enemy healer.",
+  "[위치] Snowdrift was picked by 23 of 39 Battleground Blitz players. Its blizzard around you slows enemies for 6 sec and stuns those that stay in it for 2 sec straight. Pop it next to the base flag you're guarding when enemies come to capture.",
+  "[제어] Enemies disoriented by Dragon's Breath can't be knocked back. Use it on enemies trying to capture a base, but don't overlap it with your team's knockbacks.",
+  "[위치] Enemies hit by Frozen Orb or Cone of Cold are slowed by 50% for 8 sec. Use them to hold the enemy flag or orb carrier.",
+  "[분담] With Improved Mass Invisibility, Mass Invisibility also affects allies in combat. When losing a teamfight, make allies within 40 yds invisible for 12 sec and move to the next base.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Ice Barrier and Alter Time right before the burst."
+ ],
+ "pvpTalents": "Overpowered Barrier, picked by all top 35 Solo Shuffle players, increases Ice Barrier absorbs by 60% and slows enemies within 10 yds by 70% for 4 sec when consumed, but lasts only 4 sec. Improved Mass Invisibility, picked by 28 of 35 Solo Shuffle players, reduces Mass Invisibility's cooldown by 3 min and lets it affect allies in combat. Ice Wall, picked by 33 of 39 Battleground Blitz players, blocks line of sight for up to 15 sec with a 30 yd wall.",
+ "tips": {
+  "overpowered barrier": "1220739",
+  "improved mass invisibility": "415945",
+  "snowdrift": "389794",
+  "ice wall": "352278",
+  "mass invisibility": "414664",
+  "blink": "1953",
+  "icy veins": "12472"
+ },
+ "spells": {
+  "1953": {
+   "n": "Blink",
+   "i": "spell_arcane_blink",
+   "m": "2% of base mana · Instant · 20 sec cooldown · 1 Charge",
+   "d": "Teleports you forward 20 yds or until reaching an obstacle, and frees you from all stuns and bonds."
+  },
+  "12472": {
+   "n": "Icy Veins",
+   "i": "spell_frost_coldhearted",
+   "m": "Instant · 2 min cooldown",
+   "d": "Calm your mind, sending you into a focused trance for 25 sec. Grants 20% haste, increases spell damage by 15%, and prevents damage from delaying your spellcasts."
+  },
+  "352278": {
+   "n": "Ice Wall",
+   "i": "ability_mage_icewall",
+   "m": "Tank Specs – Row 1 PvP Talent · 8% of base mana · 30 yd range · 1.5 sec cast · 1.5 min cooldown",
+   "d": "Conjures an Ice Wall 30 yards long that obstructs line of sight. The wall has 30% of your maximum health and lasts up to 15 sec."
+  },
+  "389794": {
+   "n": "Snowdrift",
+   "i": "spell_fire_blueflamestrike",
+   "m": "Tank Specs – Row 1 PvP Talent · 2.5% of base mana · Instant · 45 sec cooldown",
+   "d": "Summon a strong Blizzard that surrounds you for 6 sec that slows enemies by 70% and deals (20% of Spell Power) Frost damage every 1 sec.\n\nEnemies that are caught in Snowdrift for 2 sec consecutively become Frozen in ice, stunned for 4 sec."
+  },
+  "414664": {
+   "n": "Mass Invisibility",
+   "i": "ability_mage_massinvisibility",
+   "m": "Talent · 6% of base mana · Instant · 5 min cooldown",
+   "d": "You and your allies within 40 yards instantly become invisible for 12 sec. Taking any action will cancel the effect.\n\nDoes not affect allies in combat."
+  },
+  "415945": {
+   "n": "Improved Mass Invisibility",
+   "i": "ability_mage_massinvisibility",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "The cooldown of Mass Invisibility is reduced by 3 min and it can affect allies in combat."
+  },
+  "1220739": {
+   "n": "Overpowered Barrier",
+   "i": "ability_racial_magicalresistance",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Your barriers absorb 60% more damage and have an additional effect, but last 4 sec. [ Frost: Ice Barrier\nIf the barrier is fully consumed, enemies within 10 yds suffer (650% of Spell Power) Frost damage and are slowed by 70% for 4 sec / Fire: Blazing Barrier\nReflects 40% of damage absorbed /"
+  }
+ },
+ "spellsKo": {
+  "1953": {
+   "n": "점멸",
+   "m": "2% (기본 마나 중) · 즉시 · 20 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "전방으로 20미터를 순간이동합니다. 경로에 장애물이 있으면 이동이 중단됩니다. 모든 기절 및 구속 효과에서 벗어납니다."
+  },
+  "12472": {
+   "n": "얼음 핏줄",
+   "m": "즉시 · 2 분 재사용 대기시간",
+   "d": "마음을 차분하게 다스려 25초 동안 초집중 상태가 됩니다. 가속이 20%만큼, 주문 공격력이 15%만큼 증가하고 피해를 입어도 주문 시전이 지연되지 않습니다."
+  },
+  "352278": {
+   "n": "얼음 벽",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 8% (기본 마나 중) · 30 야드 사정거리 · 1.5 초 주문 시전 시간 · 1.5 분 재사용 대기시간",
+   "d": "시야를 가리는 30미터 길이의 얼음 벽을 생성합니다. 벽은 자신의 최대 생명력의 30%에 해당하는 생명력을 가지며, 최대 15초 동안 지속됩니다."
+  },
+  "389794": {
+   "n": "눈더미",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 2.5% (기본 마나 중) · 즉시 · 45 초 재사용 대기시간",
+   "d": "6초 동안 지속되는 강력한 눈보라로 자신을 감쌉니다. 눈보라는 적의 이동 속도를 70%만큼 감소시키고 1초마다 (주문력의 20%)의 냉기 피해를 입힙니다.\n\n적이 2초 연속으로 눈더미에 휘말린 상태로 있으면 얼음 속에 얼어붙어 4초 동안 기절합니다."
+  },
+  "414664": {
+   "n": "대규모 투명화",
+   "m": "특성 · 6% (기본 마나 중) · 즉시 · 5 분 재사용 대기시간",
+   "d": "자신과 40미터 내의 아군이 즉시 12초 동안 투명 상태가 됩니다. 행동을 취하면 효과가 사라집니다.\n\n전투 중인 아군에게는 영향을 주지 않습니다."
+  },
+  "415945": {
+   "n": "대규모 투명화 연마",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "대규모 투명화의 재사용 대기시간이 3분만큼 감소하고 전투 중인 아군에게도 영향을 줍니다."
+  },
+  "1220739": {
+   "n": "과부하된 방벽",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "방벽 주문이 60%의 피해를 추가로 흡수하고 추가 효과를 발휘하지만 지속시간이 4초가 됩니다. [ 냉기: 얼음 보호막\n방벽이 완전히 소진되면 10미터 내의 적에게 (주문력의 650%)의 냉기 피해를 입히고 4초 동안 이동 속도를 70%만큼 감소시킵니다 / 화염: 이글거리는 방벽\n흡수한 피해의 40%를 반사합니다 /"
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 주문술사 33·서리불꽃 2로 거의 주문술사지만 한쪽 전용 기술은 쓰지 않음",
+   "투기장 상위권 표본이 3v3 9명·2v2(한국) 4명뿐이고 특성 분포가 1인 조합전과 달라(응축된 한기 등) 투기장 줄은 1인 조합전(35명) 채택률 기준",
+   "Blink의 기절·속박 해제는 Blink 툴팁 문구로 쐐기 파일은 Shimmer 기준이라 Blink 툴팁을 새로 받음. Snowdrift 기절과 Frost Nova의 점감 관계는 확인하지 않아 연계로 쓰지 않음",
+   "지도 공략상 운반자가 은신·일부 무적 기술을 쓰면 깃발이 떨어지는데 Mass Invisibility 투명화·Ice Block이 여기에 드는지 확인되지 않아 운반 중 사용 권고는 쓰지 않음"
+  ]
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "id": "warlock/affliction",
+ "arena": [
+  "[생존기] Unending Resolve reduces all damage taken by 25% for 8 sec and makes you immune to interrupts and silences. Pop it when enemy burst cooldowns or interrupt attempts pile up and keep casting.",
+  "[생존기] Dark Pact can be used while CC'd; it sacrifices 20% of your current health to grant a shield worth more than twice that for 20 sec. Press it immediately when you take burst while stunned.",
+  "[회피] Place Demonic Circle behind a pillar and teleport back to it to remove all slows. With Impish Instincts, each time you take direct physical damage its cooldown drops by 3 sec. When melee DPS get on you, teleport and break line of sight.",
+  "[생존기] With Nether Ward, all harmful spells cast at you are reflected for 3 sec. Pop it right before an enemy caster's CC cast finishes.",
+  "[제어] Fear disorients the target for 20 sec but damage can break it. Put it on the enemy healer, and first check they don't have your DoTs on them.",
+  "[차단] Your Felhunter's Spell Lock interrupts a cast and locks that school for 7 sec. Save it for the enemy healer's heals.",
+  "[참고] With Jinx, casting a curse also applies Corruption and Agony. Put Curse of Tongues on the enemy healer to increase all their cast times by 30% while spreading DoTs.",
+  "[제어] Mortal Coil incapacitates the target for 3 sec and heals you for 20% of your max health. Peel melee DPS during their burst while topping up your health."
+ ],
+ "bg": [
+  "[참고] Pet classes are good at base defense. On defense, place Demonic Circle away from the base flag; with Shadow Rift, enemy players in the rift are moved to your Demonic Circle after 2 sec. Pull enemies coming to capture off the flag.",
+  "[분담] Gateway Mastery was picked by 23 of 38 Battleground Blitz players. It increases Demonic Gateway's range by 20 yds and reduces the reuse delay for the same person by 30 sec. Move your team toward a distant base under attack or your carrier.",
+  "[생존기] Nether Ward was picked by 29 of 38 Battleground Blitz players and reflects all harmful spells for 3 sec. Pop it when multiple enemies are casting CC at you.",
+  "[제어] Enemies disoriented by Fear can't be knocked back. Use it on enemies trying to capture a base, but don't overlap it with your team's knockbacks.",
+  "[위치] Curse of Exhaustion slows the target by 50% for 12 sec. Put it on the enemy flag or orb carrier so your team can catch up.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Dark Pact's shield and Unending Resolve right before the burst."
+ ],
+ "pvpTalents": "Jinx, picked by 34 of the top 37 Solo Shuffle players and all 38 Battleground Blitz players, makes your curses also apply Corruption and Agony, but curses cost 1 Soul Shard. Impish Instincts, picked by 24 of 37 Solo Shuffle players, reduces Demonic Circle's cooldown by 3 sec when you take direct physical damage. Nether Ward, picked by 29 of 38 Battleground Blitz players, reflects all harmful spells for 3 sec.",
+ "tips": {
+  "jinx": "426352",
+  "impish instincts": "409835",
+  "nether ward": "212295",
+  "gateway mastery": "248855",
+  "shadow rift": "353294"
+ },
+ "spells": {
+  "212295": {
+   "n": "Nether Ward",
+   "i": "spell_fire_felfireward",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · Instant · 45 sec cooldown",
+   "d": "Surrounds the caster with a shield that lasts 3 sec, reflecting all harmful spells cast on you."
+  },
+  "248855": {
+   "n": "Gateway Mastery",
+   "i": "spell_warlock_demonicportal_green",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of your Demonic Gateway by 20 yards, and reduces the cast time by 30%. Reduces the time between how often players can take your Demonic Gateway by 30 sec."
+  },
+  "353294": {
+   "n": "Shadow Rift",
+   "i": "ability_warlock_voidzone",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · 30 yd range · Instant · 1 min cooldown",
+   "d": "Conjure a Shadow Rift at the target location lasting 2 sec. Enemy players within the rift when it expires are teleported to your Demonic Circle.\n\nMust be within 40 yds of your Demonic Circle to cast."
+  },
+  "409835": {
+   "n": "Impish Instincts",
+   "i": "spell_shadow_demoniccircleteleport",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Taking direct Physical damage reduces the cooldown of Demonic Circle by 3 sec.\n\nCannot occur more than once every 5 sec. (5s cooldown)"
+  },
+  "426352": {
+   "n": "Jinx",
+   "i": "ability_warlock_jinx",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Casting a curse now applies Corruption and Agony to your target, but curses now costs 1 Soul Shard."
+  }
+ },
+ "spellsKo": {
+  "212295": {
+   "n": "황천 보호막",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 즉시 · 45 초 재사용 대기시간",
+   "d": "3초 동안 지속되는 보호막으로 시전자를 감싸, 시전자에게 시전되는 모든 해로운 주문을 반사합니다."
+  },
+  "248855": {
+   "n": "관문 특화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "악마의 관문의 사거리가 20미터만큼 증가하고, 시전 시간이 30%만큼 감소합니다. 악마의 관문을 이용할 수 있는 대기시간이 30초만큼 감소합니다."
+  },
+  "353294": {
+   "n": "그림자 균열",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 30 야드 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "대상 지역에 2초 동안 지속되는 그림자 균열을 불러냅니다. 균열이 만료될 때 적이 그 안에 남아 있으면 악마의 마법진으로 순간이동됩니다.\n\n악마의 마법진 40미터 내에 있어야 시전할 수 있습니다."
+  },
+  "409835": {
+   "n": "악동의 본능",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "직접 물리 피해를 받으면 악마의 마법진의 재사용 대기시간이 3초만큼 감소합니다.\n\n5초에 한 번씩만 발동합니다. (5초 재사용 대기시간)"
+  },
+  "426352": {
+   "n": "징크스",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "저주 시전 시 대상에게 부패와 고통을 부여하지만, 저주가 영혼의 조각 1개를 소모합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 영혼 수확자 25·지옥소환사 12, 전장 대공세 18·20으로 갈려 한쪽 전용 기술은 쓰지 않음",
+   "3v3·2v2 한국 상위권(12명·14명)은 Rot and Decay·Essence Drain을 거의 전원이 골라 세계 1인 조합전과 분포가 다름, pvpTalents는 1인 조합전·전장 대공세 기준",
+   "쌍점이 든 Demonic Circle 순간이동 기술 이름은 쓰지 않고 Demonic Circle 툴팁 문구로 설명함"
+  ]
+ }
+}

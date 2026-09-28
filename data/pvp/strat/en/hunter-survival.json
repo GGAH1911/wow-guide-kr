@@ -1,0 +1,86 @@
+{
+ "id": "hunter/survival",
+ "arena": [
+  "[생존기] With Survival Tactics, Feign Death reduces damage taken by 90% for 2 sec. Press Feign Death when the enemy pops burst cooldowns and unloads on you.",
+  "[생존기] Aspect of the Turtle makes all spells and attacks miss you and reduces damage taken by 30% for 8 sec, but you can't attack meanwhile. Use it when no other defensive can keep you alive.",
+  "[제어] Sticky Tar Bomb disarms the target for 4 sec, then explodes after 4 sec to apply the same effect to nearby enemies. Use it when weapon-wielding melee DPS pop their burst cooldowns.",
+  "[제어] Intimidation stuns the target for 5 sec via your pet. Burst with Takedown while the enemy healer is locked down.",
+  "[차단] Muzzle interrupts a cast and locks that school for 5 sec. Close in with Harpoon's 3 sec root, then time it to the enemy healer's heal casts.",
+  "[회피] Scatter Shot incapacitates a target within 20 yds for 3 sec and removes all DoTs. Use it to briefly peel melee DPS off your healer.",
+  "[분담] Roar of Sacrifice has your pet protect one ally, reducing their damage taken by 15%. Put it on the focused ally and free allies held by slows with Master's Call.",
+  "[제어] Freezing Trap incapacitates the first enemy to approach for 1 min but damage can break it. While the enemy healer is trapped, your team bursts another target."
+ ],
+ "bg": [
+  "[참고] Stealth and pet classes are good at base defense. Place Freezing Trap in front of the base flag you're guarding and use Flare to reveal stealthed enemies in that spot for 20 sec.",
+  "[위치] When protecting your flag carrier, if a stealthed enemy hasn't shown up in the teamfight, suspect an ambush in your flag room and escort while revealing stealthers with Flare.",
+  "[우선 처치] Harpoon roots an enemy within 30 yds for 3 sec and pulls you to it. Get straight onto the enemy flag or orb carrier and start the kill.",
+  "[제어] Chimaeral Sting was picked by 25 of 46 Battleground Blitz players and applies a 3 sec 90% slow followed by a 3 sec silence. Use it to hold the enemy flag carrier.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Survival of the Fittest or Aspect of the Turtle right before the burst.",
+  "[분담] Master's Call removes roots and movement impairing effects from an ally and makes them immune for 4 sec. Use it on your flag carrier when they're held by slows."
+ ],
+ "pvpTalents": "Survival Tactics, picked by 46 of the top 47 Solo Shuffle and 45 of 46 Battleground Blitz players, adds a 90% damage reduction for 2 sec to Feign Death. Scatter Shot, picked by 31 of 47 Solo Shuffle players, gives a 3 sec incapacitate and removes DoTs. Sticky Tar Bomb, picked by 27 of 46 Battleground Blitz players, disarms the target and nearby enemies for 4 sec.",
+ "tips": {
+  "survival tactics": "202746",
+  "scatter shot": "213691",
+  "sticky tar bomb": "407028",
+  "chimaeral sting": "356719"
+ },
+ "spells": {
+  "202746": {
+   "n": "Survival Tactics",
+   "i": "ability_rogue_feigndeath",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Feign Death reduces damage taken by 90% for 2 sec."
+  },
+  "213691": {
+   "n": "Scatter Shot",
+   "i": "ability_golemstormbolt",
+   "m": "Tank Specs – Row 1 PvP Talent · 20 yd range · Instant · 30 sec cooldown",
+   "d": "A short-range shot that deals (4.4616% of Attack Power) damage, removes all harmful damage over time effects, and incapacitates the target for 3 sec. Any damage caused will remove the effect. Turns off your attack when used. [Binding Shackles: Targets incapacitated by Scatter Shot deal 10% less damage to you for 8 sec after the effect ends]"
+  },
+  "356719": {
+   "n": "Chimaeral Sting",
+   "i": "ability_hunter_snaketrap",
+   "m": "Tank Specs – Row 1 PvP Talent · 40 yd range · Instant · 1 min cooldown",
+   "d": "Stings the target, dealing (150% of Attack Power) Nature damage and initiating a series of venoms. Each lasts 3 sec and applies the next effect after the previous one ends.\n\nScorpid Venom:\n90% reduced movement speed.\n\nSpider Venom:\nSilenced.\n\nViper Venom:\n20% reduced damage and healing."
+  },
+  "407028": {
+   "n": "Sticky Tar Bomb",
+   "i": "ability_hunter_stickytarbombtrap",
+   "m": "Tank Specs – Row 1 PvP Talent · 1.5% of base mana · 40 yd range · Instant · 45 sec cooldown",
+   "d": "Throw a Sticky Tar Bomb that coats your target's weapons with tar, disarming them for 4 sec.\n\nAfter 4 sec, Sticky Tar Bomb explodes onto nearby enemies. Other enemies that are hit by the explosion are affected by Sticky Tar Bomb but this effect cannot spread further."
+  }
+ },
+ "spellsKo": {
+  "202746": {
+   "n": "생존술",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "죽은 척하기 사용 시 2초 동안 받는 피해가 90%만큼 감소합니다."
+  },
+  "213691": {
+   "n": "분산 사격",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 20 야드 사정거리 · 즉시 · 30 초 재사용 대기시간",
+   "d": "(전투력의 4.4616%)의 피해를 입히고, 모든 해로운 지속 피해 효과를 제거합니다. 또한 3초 동안 적을 행동 불가 상태로 만들며, 대상에 대한 공격을 중단합니다. 사정거리가 짧습니다. 대상이 피해를 입으면 효과가 사라집니다. [억제의 족쇄: 분산 사격으로 행동 불가 상태가 된 대상의 효과가 사라지면 8초 동안 대상에게 받는 피해가 10%만큼 감소합니다]"
+  },
+  "356719": {
+   "n": "키메라 쐐기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 40 야드 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "독침으로 대상을 찔러 (전투력의 150%)의 자연 피해를 입히고 일련의 맹독을 주입합니다. 각각의 맹독은 3초 동안 지속되며, 이전 맹독 효과 하나가 종료되면 다음 효과를 부여합니다.\n\n전갈 맹독:\n이동 속도를 90%만큼 감소시킵니다.\n\n거미 맹독:\n침묵시킵니다.\n\n살무사 맹독:\n공격력과 치유량을 20%만큼 감소시킵니다."
+  },
+  "407028": {
+   "n": "끈적거리는 타르 폭탄",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1.5% (기본 마나 중) · 40 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "끈적거리는 타르 폭탄을 던져 대상의 무기를 타르로 뒤덮어 4초 동안 무장 해제 상태로 만듭니다.\n\n4초 후에, 끈적거리는 타르 폭탄은 폭발하여 주위의 적에게 옮겨붙습니다. 폭발에 휘말린 적은 끈적거리는 타르 폭탄에 걸리지만, 이 과정에서 부여된 끈적거리는 타르 폭탄은 추가로 전이되지 않습니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 파수꾼 38·무리의 지도자 9로 갈려 한쪽 전용 기술(Moonlight Chakram·Howl of the Pack Leader 등)은 쓰지 않음",
+   "Sticky Tar Bomb 툴팁의 확산 규칙(다른 적이 폭발에 맞으면 같은 효과, 더 퍼지지 않음)만 적고 무장 해제 점감은 언급하지 않음"
+  ]
+ }
+}

@@ -1,0 +1,303 @@
+{
+ "id": "paladin/protection",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[위치] If you are the Possession Barrage target, use Divine Steed for 100% movement speed and run far from the boss.",
+    "[제어] Stun a Restless Amani with its shield still up for 6 sec with Hammer of Justice to slow it down.",
+    "[생존기] Under Uncoiled Rage, taunts do not work and all damage rises by 500%, so reduce damage taken by 50% with Guardian of Ancient Kings."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[탱버] Empowering Slam and Bloodvenom Injection deal 2.5 million physical damage, so have Shield of the Righteous up for armor when they are cast.",
+    "[교대] When the intermission ends, take the boss with Hand of Reckoning and go to the same side."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[탱버] When Dripping Fangs stacks build up, reduce damage taken by 30% with Ardent Defender.",
+    "[제어] Burning Venom can be held with Hammer of Justice or Blinding Light until Hardened Venom."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[교대] On the Shredding Shards swap, take Scrollsage Iku with Hand of Reckoning.",
+    "[차단] Interrupt Icebound Flames with Rebuke or Avenger's Shield.",
+    "[탱버] Use Ardent Defender or Guardian of Ancient Kings when Steady Strikes stacks are high."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[교대] During the Apex Predator cast, swap targets with Hand of Reckoning so each tank takes one of Ravage and Mutilate.",
+    "[탱버] When taking Ravage, reduce damage taken by 50% with Guardian of Ancient Kings.",
+    "[생존기] When the other tank takes Ravage, you can reduce their damage taken by 30% with Blessing of Sacrifice."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[탱버] Reduce damage taken by 30% with Ardent Defender during the 5 sec Caustic Deluge.",
+    "[위치] After being knocked back by Stone Breaker, use Divine Steed to quickly step on the stomp spots in order.",
+    "@m [탱버] Fill the Blood Torrent healing absorb with Word of Glory or Lay on Hands."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[교대] After taking Sever, swap for the next Sever with Hand of Reckoning and use Guardian of Ancient Kings when you take it.",
+    "[차단] Once Veil of Twilight breaks, interrupt Eternal Nightfall with Rebuke.",
+    "@hm [차단] Interrupt Spiteful Soulcoiler's Wail of Terror with Rebuke or Avenger's Shield."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[교대] On the Caustic Waves cast, swap Ula'tek and Gore Rattle with Hand of Reckoning.",
+    "[위치] If Mother's Wrath knocks you back, get back in range right away with Divine Steed, and during the Hobbled slow use Blessing of Freedom to become immune to movement impairing effects.",
+    "[해제] Clear the Acidic Burst poison from Blightscale Viper with Cleanse Toxins."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[탱버] Water Jet damage stacks up by 20% with every hit, so use Ardent Defender or Guardian of Ancient Kings on the later Water Jets.",
+    "[제어] Stun a Bubblefin Shorerunner heading for the bubble for 6 sec with Hammer of Justice."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[교대] After the first Umbral Collapse, take the boss with Hand of Reckoning and take the second Umbral Collapse.",
+    "[탱버] When Gnashing Void DoTs from Voidmaws charging in under Weakened stack up, reduce damage taken by 30% with Ardent Defender.",
+    "[차단] Interrupt the intermission Pitch Bulwark with Rebuke or Avenger's Shield."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[탱버] When taking the second big claw impact with Smashed stacked, reduce damage taken by 50% with Guardian of Ancient Kings.",
+    "[위치] If a Blistercreep latches onto you, use Divine Steed for 100% movement speed and go to your side's Void Crystal wall.",
+    "[위치] Put Blessing of Freedom on a Blistercreep target with stacked Creep Spit slows so they get movement impairment immunity and reach the wall."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[탱버] Shattering Twilight is heavy Shadow damage, so pop Guardian of Ancient Kings by the wall and take it.",
+    "[교대] When Destabilizing Strikes stacks build up, take the boss with Hand of Reckoning and drag it away from the Concentrated Void orbs.",
+    "[차단] Interrupt Shadow Fracture from the nearest Fractured Image with Rebuke or Avenger's Shield, or stun it with Hammer of Justice."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[탱버] Ezzorak's Rakfang is heavy physical damage, so have Shield of the Righteous up for armor when it is cast and use Ardent Defender when the empowerment has stacked.",
+    "[생존기] When the other tank takes an empowered Rakfang, you can reduce their damage taken by 30% with Blessing of Sacrifice.",
+    "[우선 처치] Pick up the intermission Manifestation of Midnight with Hand of Reckoning and pull it away from the raid."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[교대] Swap with Hand of Reckoning right after Commander Venel Lightblood's Judgment to avoid the amplified Final Verdict damage.",
+    "[탱버] While tanking all three bosses together, reduce damage taken by 30% with Ardent Defender when Final Verdict or Exorcism overlap.",
+    "[차단] Once Sacred Shield breaks, interrupt War Chaplain Senn's Blinding Light with Rebuke or Avenger's Shield."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[위치] If Dark Hand knocks you back, get right back into the sentinel's melee range with Divine Steed.",
+    "@nh [교대] When Rift Slash stacks reduce your stats, swap with Hand of Reckoning after the Undying Voidspawn is handled.",
+    "@nh [생존기] Gravity Collapse from breaking Aspect of the End increases physical damage taken by 300%, so pop Guardian of Ancient Kings."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[탱버] The Alndust Upheaval target takes heavy physical damage, so pop Ardent Defender and take it with your group.",
+    "[탱버] When Colossal Horror's Colossal Strikes ramp up on the lower floor, reduce damage taken by 50% with Guardian of Ancient Kings.",
+    "[차단] On the lower floor, interrupt Haunting Essence's Fearsome Cry first with Rebuke or Avenger's Shield."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[교대] When the opposite-color Light Edict or Void Edict comes, the matching-color tank takes the boss with Hand of Reckoning during the cast and takes it.",
+    "[탱버] Light Edict and Void Edict hit hard, so pop Ardent Defender or Guardian of Ancient Kings before taking them.",
+    "[차단] Interrupt Light Eruption or Void Eruption from embers matching your feather color with Rebuke or Avenger's Shield."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[교대] Swap with Hand of Reckoning after the 5 Heaven's Lance stabs end, and pop Ardent Defender when you take the stabs.",
+    "@nh [차단] Remove Safeguard stacks on a Safeguard Prism matrix with Rebuke and Avenger's Shield interrupts and Hammer of Justice stuns.",
+    "@m [차단] Interrupt Terminate from your assigned Termination Prism matrix with Rebuke."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "[교대] Swap with Hand of Reckoning after taking Putrid Fist, and when you take it, have Shield of the Righteous up for armor and pop Guardian of Ancient Kings.",
+    "@hm [차단] Interrupt Poison Burst from the Sporecaps near the boss with Rebuke or Avenger's Shield.",
+    "@hm [해제] Clear a Poison Burst poison DoT that slips past interrupts with Cleanse Toxins."
+   ]
+  }
+ },
+ "tips": {
+  "hand of reckoning": "62124"
+ },
+ "spells": {
+  "633": {
+   "n": "Lay on Hands",
+   "i": "spell_holy_layonhands",
+   "m": "Talent · 40 yd range · Instant · 10 min cooldown",
+   "d": "Heals a friendly target for an amount equal to 100% your maximum health.\n\nCannot be used on a target with Forbearance. Causes Forbearance for 30 sec."
+  },
+  "853": {
+   "n": "Hammer of Justice",
+   "i": "spell_holy_sealofmight",
+   "m": "0.7% of base mana · 10 yd range · Instant · 45 sec cooldown",
+   "d": "Stuns the target for 6 sec."
+  },
+  "1044": {
+   "n": "Blessing of Freedom",
+   "i": "spell_holy_sealofvalor",
+   "m": "Talent · 1.4% of base mana · 40 yd range · Instant · 25 sec cooldown · 1 Charge",
+   "d": "Blesses a party or raid member, granting immunity to movement impairing effects [Unbound Freedom: and increasing movement speed by 30%]for 8 sec."
+  },
+  "31850": {
+   "n": "Ardent Defender",
+   "i": "spell_holy_ardentdefender",
+   "m": "Talent · Instant · 1.5 min cooldown",
+   "d": "Reduces all damage you take by 30% for 12 sec.\n\nWhile Ardent Defender is active, the next attack that would otherwise kill you will instead bring you to 20% of your maximum health."
+  },
+  "31935": {
+   "n": "Avenger's Shield",
+   "i": "spell_holy_avengersshield",
+   "m": "Talent · 30 yd range · Instant · 15 sec cooldown",
+   "d": "Hurls your shield at an enemy target, dealing (200% of Attack Power) Holy damage, interrupting and silencing the non-Player target for 3 sec, and then jumping to 2 additional nearby enemies.\n\nShields you for 8 sec, absorbing 75% as much damage as it dealt.\n\nDeals ((12% of Attack Power)) additional damage to all enemies within 5 yds of each target hit."
+  },
+  "53600": {
+   "n": "Shield of the Righteous",
+   "i": "ability_paladin_shieldofvengeance",
+   "m": "3 to 5 Holy Power · Melee Range · Instant · 1 sec cooldown",
+   "d": "Slams enemies in front of you with your shield, causing (95% of Attack Power) Holy damage, and increasing your Armor by (192 * Strength / 100) for 4.5 sec.\n\nArmor granted by Shield of the Righteous is increased by up to 72%, based on your missing health."
+  },
+  "62124": {
+   "n": "Hand of Reckoning",
+   "i": "spell_holy_unyieldingfaith",
+   "m": "0.6% of base mana · 30 yd range · Instant · 8 sec cooldown · 1 Charge",
+   "d": "Commands the attention of an enemy target, forcing them to attack you and increasing the threat you generate against them by 800% for 6 sec."
+  },
+  "85673": {
+   "n": "Word of Glory",
+   "i": "inv_helmet_96",
+   "m": "3 Holy Power / 15% of base mana · 40 yd range · Instant",
+   "d": "Calls down the Light to heal a friendly target for (415.8% of Spell Power).\n\nProtection:"
+  },
+  "86659": {
+   "n": "Guardian of Ancient Kings",
+   "i": "spell_holy_heroism",
+   "m": "Talent · 30 yd range · Instant · 3 min cooldown · 1 Charge",
+   "d": "Empowers you with the spirit of ancient kings, reducing all damage you take by 50% for 8 sec."
+  },
+  "96231": {
+   "n": "Rebuke",
+   "i": "spell_holy_rebuke",
+   "m": "Talent · Melee Range · Instant · 15 sec cooldown",
+   "d": "Interrupts spellcasting and prevents any spell in that school from being cast for 5 sec."
+  },
+  "115750": {
+   "n": "Blinding Light",
+   "i": "ability_paladin_blindinglight",
+   "m": "Talent · 1.2% of base mana · Instant · 1.5 min cooldown",
+   "d": "Emits dazzling light in all directions, blinding enemies within 10 yds, causing them to wander disoriented for 6 sec. Damage may cancel the effect."
+  },
+  "190784": {
+   "n": "Divine Steed",
+   "i": "ability_paladin_divinesteed",
+   "m": "Talent · Instant · 45 sec cooldown · 1 Charge",
+   "d": "Leap atop your Charger for 3 sec, increasing movement speed by 100%. Usable while indoors or in combat."
+  },
+  "213644": {
+   "n": "Cleanse Toxins",
+   "i": "spell_holy_renew",
+   "m": "Talent · 10% of base mana · 40 yd range · Instant · 8 sec cooldown · 1 Charge",
+   "d": "Cleanses a friendly target, removing all Poison and Disease effects."
+  }
+ },
+ "spellsKo": {
+  "633": {
+   "n": "신의 축복",
+   "m": "특성 · 40 야드 사정거리 · 즉시 · 10 분 재사용 대기시간",
+   "d": "자신의 최대 생명력의 100%만큼 아군 대상의 생명력을 회복시킵니다.\n\n참을성 상태인 대상에게는 사용할 수 없습니다. 대상은 이후 30초 동안 참을성 상태가 됩니다."
+  },
+  "853": {
+   "n": "심판의 망치",
+   "m": "0.7% (기본 마나 중) · 10 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "6초 동안 대상을 기절시킵니다."
+  },
+  "1044": {
+   "n": "자유의 축복",
+   "m": "특성 · 1.4% (기본 마나 중) · 40 야드 사정거리 · 즉시 · 25 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "대상 파티원 또는 공격대원에게 축복을 내려, 8초 동안 이동 방해 효과에 면역이 되도록 [해방된 자유: 하고, 이동 속도를 30%만큼 증가시킵니다 / 합니다]."
+  },
+  "31850": {
+   "n": "헌신적인 수호자",
+   "m": "특성 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "12초 동안 자신이 받는 모든 피해를 30%만큼 감소시킵니다.\n\n헌신적인 수호자가 활성화되어 있는 동안 죽음에 이르는 피해를 입으면, 죽지 않고 남은 생명력이 최대 생명력의 20%로 변경됩니다."
+  },
+  "31935": {
+   "n": "응징의 방패",
+   "m": "특성 · 30 야드 사정거리 · 즉시 · 15 초 재사용 대기시간",
+   "d": "적에게 방패를 날려 (전투력의 200%)의 신성 피해를 입힙니다. 대상이 플레이어가 아니라면 주문 시전을 차단하고 3초 동안 침묵시킵니다. 또한, 주위 적 2명을 연쇄적으로 가격합니다.\n\nShields you for 8 sec, absorbing 75% as much damage as it dealt.\n\nDeals ((전투력의 12%)) additional damage to all enemies within 5 yds of each target hit."
+  },
+  "53600": {
+   "n": "정의의 방패",
+   "m": "신성한 힘 3의 5개 · 근접 사정거리 · 즉시 · 1 초 재사용 대기시간",
+   "d": "전방의 적을 방패로 가격하여 (전투력의 95%)의 신성 피해를 입힙니다. 4.5초 동안 방어도가 (160 * 힘 / 100)만큼 증가합니다.\n\nArmor granted by Shield of the Righteous is increased by up to 72%, based on your missing health."
+  },
+  "62124": {
+   "n": "집행의 손길",
+   "m": "0.6% (기본 마나 중) · 30 야드 사정거리 · 즉시 · 8 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "적을 호령하여 자신에게 주의를 돌리게 해, 강제로 자신을 공격하게 합니다. 또한 6초 동안 대상을 향해 생성되는 위협 수준이 800%만큼 증가합니다."
+  },
+  "85673": {
+   "n": "영광의 서약",
+   "m": "신성한 힘 3개 / 15% (기본 마나 중) · 40 야드 사정거리 · 즉시",
+   "d": "아군 대상에게 빛을 내려 (주문력의 415.8%)만큼 생명력을 회복시킵니다.\n\nProtection:"
+  },
+  "86659": {
+   "n": "고대 왕의 수호자",
+   "m": "특성 · 30 야드 사정거리 · 즉시 · 3 분 재사용 대기시간 · 1회 사용 가능",
+   "d": "고대 왕의 영혼으로 자신을 강화화여, 8초 동안 받는 모든 피해가 50%만큼 감소합니다."
+  },
+  "96231": {
+   "n": "비난",
+   "m": "특성 · 근접 사정거리 · 즉시 · 15 초 재사용 대기시간",
+   "d": "주문 시전을 차단하고, 대상이 5초 동안 같은 계열의 주문을 시전하는 것을 방해합니다."
+  },
+  "115750": {
+   "n": "눈부신 빛",
+   "m": "특성 · 1.2% (기본 마나 중) · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "휘황찬란한 빛을 사방으로 내뿜어 10미터 내의 적들의 눈을 멀게 하고, 6초 동안 방향 감각을 상실하여 방황하게 만듭니다. 피해를 받으면 효과가 해제될 수 있습니다."
+  },
+  "190784": {
+   "n": "천상의 군마",
+   "m": "특성 · 즉시 · 45 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "군마에 올라타 3초 동안 이동 속도가 100%만큼 증가합니다. 실내 또는 전투 중에도 사용할 수 있습니다."
+  },
+  "213644": {
+   "n": "독소 정화",
+   "m": "특성 · 10% (기본 마나 중) · 40 야드 사정거리 · 즉시 · 8 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "아군 대상을 정화하여 모든 독과 질병 효과를 제거합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [
+  {
+   "t": "Wowhead tooltip (nether, EN/KO)",
+   "u": "https://nether.wowhead.com/tooltip/spell/53600?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "탱버·교대 줄은 digest 역할 tank 항목(Empowering Slam·Dripping Fangs·Shredding Shards·Steady Strikes·Apex Predator·Caustic Deluge·Stone Breaker·Sever·Caustic Waves·Water Jet)과 core 보스 툴팁의 피해 계열(물리/자연/암흑/냉기)을 기술 툴팁 효과와 짝지었다.",
+   "면역으로 기믹을 무시한다는 서술은 넣지 않았다(기절·공포·밀쳐내기 면역 기술 포함). 영웅 특성 전용 기술은 쓰지 않았다.",
+   "쐐기 파일 tips에는 있으나 spells가 비어 있던 기술 12개와 Hand of Reckoning 1개 툴팁을 새로 받아 spells/spellsKo에 넣었다.",
+   "1시즌: Hand of Reckoning 툴팁은 이번 시즌 레이드 전문화 파일에서 그대로 옮겼다.",
+   "1시즌: Blessing of Spellwarding 같은 면역기로 기믹을 무시한다는 서술은 넣지 않았다. 영웅 특성 전용 기술은 쓰지 않았다."
+  ]
+ }
+}

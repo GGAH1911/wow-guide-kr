@@ -1,0 +1,86 @@
+{
+ "id": "monk/mistweaver",
+ "arena": [
+  "[분담] Life Cocoon encases the target for 12 sec, absorbing heavy damage and increasing periodic healing taken by 50%. Put it on the ally the enemy burst cooldowns are focused on.",
+  "[광역 피해] With Peaceweaver, Revival's cooldown drops by 16% and it grants 2 sec of immunity to magic damage and harmful effects. Use Revival when enemy magic burst or AoE CC is coming in.",
+  "[해제] Detox removes all magic, poison and disease effects from an ally, and Revival removes 3 harmful magic effects plus poisons and diseases from party members within 40 yds at once. Use Revival when several allies are CC'd.",
+  "[우선 처치] With Zen Spheres, a sphere appears over the target hit by Rising Sun Kick, increasing their damage taken by 10% and reducing their damage dealt by 3%. Put Rising Sun Kick on your team's kill target.",
+  "[위치] With Eminence, you can swap places with your Transcendence spirit even while stunned. Leave the spirit near a pillar and swap when a stun and burst line up.",
+  "[제어] Paralysis incapacitates a target within 20 yds but damage can break it. Use it on an enemy your team isn't hitting; Leg Sweep stuns enemies within 6 yds for 3 sec.",
+  "[차단] With Zen Focus Tea, Thunder Focus Tea grants 5 sec of immunity to silences and interrupts. Pop it before a long heal cast while the enemy interrupt is up.",
+  "[생존기] Fortifying Brew turns your skin to stone for 15 sec. Pop it when you start getting focused."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 2 healers, and on flag maps a mobile healer is a good carrier. You can take the carry with 2 Roll charges and the root and slow removal from Tiger's Lust on yourself.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than healing, put damage-absorbing Life Cocoon on the flag carrier or focused ally first.",
+  "[분담] Tiger's Lust removes roots and slows from an ally and increases movement speed by 70% for 6 sec. Use it on your rooted flag carrier.",
+  "[제어] Ring of Peace knocks back enemies entering the ring, but feared or disoriented targets can't be knocked back. Drop it on the path enemies without CC on them take into a base or toward your flag carrier.",
+  "[해제] Revival removes 3 harmful magic effects plus poisons and diseases from party members within 40 yds. Use it when several CC effects land on allies stacked on base defense."
+ ],
+ "pvpTalents": "Zen Spheres, picked by all top 48 Solo Shuffle players and 39 of 44 Battleground Blitz players, creates a sphere on your Rising Sun Kick target that increases their damage taken by 10%. Peaceweaver, picked by 47 of 48 Solo Shuffle and 39 of 44 Battleground Blitz players, adds 2 sec of magic immunity to Revival. Eminence, picked by 36 of 48 Solo Shuffle players, lets you swap places with Transcendence even while stunned.",
+ "tips": {
+  "zen spheres": "1243554",
+  "peaceweaver": "353313",
+  "eminence": "353584",
+  "zen focus tea": "468430"
+ },
+ "spells": {
+  "353313": {
+   "n": "Peaceweaver",
+   "i": "spell_monk_revival",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "[Restoral: Restoral's / Revival's] cooldown is reduced by 16%, and provides immunity to magical damage and harmful effects for 2 sec."
+  },
+  "353584": {
+   "n": "Eminence",
+   "i": "monk_ability_transcendence",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Transcendence: Transfer can now be cast if you are stunned. Cooldown reduced by (15)) sec if you are not."
+  },
+  "468430": {
+   "n": "Zen Focus Tea",
+   "i": "inv_misc_pearlmilktea",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Thunder Focus Tea provides immunity to Silence and Interrupt effects for 5 sec."
+  },
+  "1243554": {
+   "n": "Zen Spheres",
+   "i": "ability_monk_sphereharmonydiscord",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Soothing Mist, Crackling Jade Lightning, and Rising Sun Kick form a sphere of Hope or Despair above their targets. Only one of each sphere can be active at a time.\n\nSphere of Hope: Increases your healing done to the target by 10%.\nSphere of Despair: Target deals 3% less damage and takes 10% increased damage from all sources."
+  }
+ },
+ "spellsKo": {
+  "353313": {
+   "n": "평화의 수사",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "[회복 / 재활]의 재사용 대기시간이 16%만큼 감소하며, 대상을 2초 동안 마법 피해와 해로운 효과에 면역으로 만듭니다."
+  },
+  "353584": {
+   "n": "명성",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "기절 상태에서 해탈: 전환 시전이 가능합니다. 기절 상태가 아닐 경우 재사용 대기시간이 (15))초만큼 감소합니다."
+  },
+  "468430": {
+   "n": "선의 집중 차",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "집중의 천둥 차 사용 시 5초 동안 침묵 및 주문 방해 효과에 면역이 됩니다."
+  },
+  "1243554": {
+   "n": "선의 구슬",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "위안의 안개와 짜릿한 비취 번개, 해오름차기 사용 시 대상의 머리 위에 희망 또는 절망의 구슬을 형성합니다. 각 구슬은 한 번에 하나씩만 활성화됩니다.\n\n희망의 구슬: 대상에 대한 치유량이 10%만큼 증가합니다.\n절망의 구슬: 대상이 자신에게 입히는 피해를 3%만큼 감소시키고 대상이 받는 모든 피해는 10%만큼 증가시킵니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 조화의 종사 43·천신의 대변자 5, 전장 대공세 32·12로 갈려 Celestial Conduit·Aspect of Harmony 등 한쪽 전용 기술은 쓰지 않음",
+   "Zen Spheres의 두 구슬 이름은 한글 짝이 확인되지 않아 효과로만 풀어 씀",
+   "쌍점이 든 Transcendence 전환 기술 이름은 쓰지 않고 Transcendence로 설명"
+  ]
+ }
+}

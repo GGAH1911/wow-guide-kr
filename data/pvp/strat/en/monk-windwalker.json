@@ -1,0 +1,86 @@
+{
+ "id": "monk/windwalker",
+ "arena": [
+  "[생존기] Touch of Karma absorbs all damage taken up to 50% of your max health for 10 sec and redirects 70% of it to the target. Use it when the enemy pops burst cooldowns and unloads on you.",
+  "[생존기] Diffuse Magic reduces magic damage taken by 60% for 6 sec and reflects harmful magic effects on you back to the caster. Use it when enemy casters' magic burst or magic DoTs pile up.",
+  "[생존기] With Turbo Fists, you parry all attacks while channeling Fists of Fury and slow enemies hit by 90%. When melee DPS are on you bursting, answer with Fists of Fury.",
+  "[제어] Grapple Weapon disarms an enemy's weapon and shield from 20 yds for 5 sec. Use it when weapon-wielding melee DPS pop their burst cooldowns.",
+  "[제어] Paralysis incapacitates the target for 1 min but damage can break it. Put it on the enemy healer and have your team attack another target.",
+  "[제어] Leg Sweep stuns all enemies within 6 yds for 3 sec. Get on the enemy healer and have your team burst while they're locked down.",
+  "[차단] Spear Hand Strike interrupts a cast and locks that school for 5 sec. Save it for the enemy healer's heals.",
+  "[해제] Tiger's Lust removes all roots and slows from an ally and makes them 70% faster for 6 sec, and Detox removes poisons and diseases. Free your rooted healer so they can break line of sight."
+ ],
+ "bg": [
+  "[참고] With Ride the Wind, Flying Serpent Kick removes your slows and leaves a wind path where allies are 30% faster and immune to slows. Open a path in front of your flag carrier, or shake off chasers when you're carrying.",
+  "[위치] Fists of Fury with Turbo Fists slows all enemies hit by 90%. Channel it to hold the enemy flag or orb carrier.",
+  "[제어] Ring of Peace knocks back enemies entering the ring for 5 sec, but feared or disoriented targets can't be knocked back. Use it to push enemies not under your team's fears off the base flag.",
+  "[분담] Transcendence leaves your spirit behind for 15 min and lets you swap places with it. Leave the spirit at the base you're guarding and return instantly when it gets attacked.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Touch of Karma and Diffuse Magic right before the burst."
+ ],
+ "pvpTalents": "Turbo Fists, picked by all top 47 Solo Shuffle players and all 43 Battleground Blitz players, parries all attacks while channeling Fists of Fury and slows enemies hit by 90%. Grapple Weapon, picked by 35 of 47 Solo Shuffle players, disarms an enemy's weapon and shield from 20 yds for 5 sec. Ride the Wind, picked by 33 of 47 Solo Shuffle players, adds slow removal and an ally speed-boosting wind path to Flying Serpent Kick.",
+ "tips": {
+  "turbo fists": "287681",
+  "grapple weapon": "233759",
+  "ride the wind": "201372",
+  "diffuse magic": "122783"
+ },
+ "spells": {
+  "122783": {
+   "n": "Diffuse Magic",
+   "i": "spell_monk_diffusemagic",
+   "m": "Talent · Instant · 1.5 min cooldown",
+   "d": "Reduces magic damage you take by 60% for 6 sec, and transfers all currently active harmful magical effects on you back to their original caster if possible."
+  },
+  "201372": {
+   "n": "Ride the Wind",
+   "i": "ability_monk_ridethewind",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Flying Serpent Kick clears all snares from you when used and forms a path of wind in its wake, causing all allies who stand in it to have 30% increased movement speed and to be immune to movement slowing effects."
+  },
+  "233759": {
+   "n": "Grapple Weapon",
+   "i": "ability_warrior_disarm",
+   "m": "Tank Specs – Row 1 PvP Talent · 20 yd range · Instant · 45 sec cooldown",
+   "d": "You fire off a rope spear, grappling the target's weapons and shield, returning them to you for 5 sec."
+  },
+  "287681": {
+   "n": "Turbo Fists",
+   "i": "monk_ability_fistoffury",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Fists of Fury now reduces all targets movement speed by 90%, and you Parry all attacks while channelling Fists of Fury."
+  }
+ },
+ "spellsKo": {
+  "122783": {
+   "n": "마법 해소",
+   "m": "특성 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "6초 동안 자신이 받는 마법 피해가 60%만큼 감소하고, 가능할 경우 현재 자신에게 활성화된 모든 해로운 마법 효과를 시전한 대상에게 되돌려줍니다."
+  },
+  "201372": {
+   "n": "바람 타기",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "비룡차기 사용 시 모든 감속 효과가 해제되고 지나간 길에 바람의 길이 형성됩니다. 길 안에 서 있는 아군은 이동 속도가 30%만큼 증가하고 이동 속도 감소 효과에 면역이 됩니다."
+  },
+  "233759": {
+   "n": "갈고리 무기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 20 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "밧줄 달린 창을 발사하여 대상의 무기와 방패에 꽂은 후, 5초 동안 자신에게 가져옵니다."
+  },
+  "287681": {
+   "n": "쾌속의 주먹",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "분노의 주먹이 모든 대상의 이동 속도를 90%만큼 감소시킵니다. 또한 분노의 주먹을 사용하는 동안에는 모든 공격을 무기로 막습니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 음영파 41·천신의 대변자 6으로 갈려 한쪽 전용 기술과 Absolute Serenity 같은 한쪽 전용 PvP 특성은 쓰지 않음",
+   "투기장 줄은 1인 조합전 47명과 2v2 32명의 채택 분포(Turbo Fists·Grapple Weapon·Ride the Wind 순)가 같아 이를 기준으로 씀",
+   "Transcendence의 자리 바꾸기 기술은 쌍점이 든 이름이라 이름 없이 설명함. Paralysis와 Leg Sweep의 점감 관계는 확인하지 않아 연계로 쓰지 않음"
+  ]
+ }
+}

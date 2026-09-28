@@ -127,13 +127,17 @@ for (const s of SPECS.filter(x => x.status === 'ready')) {
   const gf = `data/spec/${s.id.replace('/', '-')}.guide.json`;
   if (!fs.existsSync(path.join(ROOT, gf))) continue;
   sp.guide = rd(gf);
+  const enGf = `data/spec/en/${s.id.replace('/', '-')}.guide.json`;
+  const enGuide = fs.existsSync(path.join(ROOT, enGf)) ? rd(enGf) : null;
+  const enSp = fs.existsSync(path.join(ROOT, `data/spec/en/${s.id.replace('/', '-')}.json`)) ? rd(`data/spec/en/${s.id.replace('/', '-')}.json`) : sp;
   const EN = { ...coreEn, ...sp.spells, ...sp.guide.en };
   for (const h of s.heroes) {
     const g = sp.guide.heroes[h.slug]; if (!g) continue;
     const base = up(3);
     const ids = new Set();
+    const body = GD => { const g = GD.heroes[h.slug];
     const card = i => {
-      const c = sp.guide.cards[i]; ids.add(String(c.id));
+      const c = GD.cards[i]; ids.add(String(c.id));
       const e = EN[c.id];
       return `<div class="skill-card" data-sid="${c.id}"><div class="icon-slot">${e ? `<img src="https://wow.zamimg.com/images/wow/icons/large/${e.i}.jpg" alt="" loading="lazy">` : ''}</div><div class="info"><div class="name">${c.name}${c.badges.map(b => `<span class="badge ${b.cls}">${b.text}</span>`).join('')}</div><div class="kname"></div><div class="desc">${c.desc}</div></div></div>`;
     };
@@ -141,14 +145,7 @@ for (const s of SPECS.filter(x => x.status === 'ready')) {
     const sections = g.sections.map(x => `<section class="tier"${x.id ? ` id="${x.id}"` : ''}><h2 class="tier-header">${x.title}${x.note ? ` <span class="count">${x.note}</span>` : ''}</h2>
 ${x.groups ? x.groups.map(gr => `<div class="subcat"><div class="subcat-title">${gr.title}</div>${grid(gr.cards)}</div>`).join('\n') : x.cards ? grid(x.cards) : ''}
 ${x.html || ''}</section>`).join('\n');
-    const G = { en: {}, ko: {}, koExtra: g.koExtra };
-    ids.forEach(id => { if (EN[id]) G.en[id] = EN[id]; if (sp.guide.ko[id]) G.ko[id] = sp.guide.ko[id]; });
-    const heroSeg = s.heroes.map(x => `<a href="../${x.slug}/" data-hero-go${x.slug === h.slug ? ' aria-current="page"' : ''}>${esc(x.en)}</a>`).join('');
-    wr(`${s.id}/${h.slug}/index.html`, `${head({ title: `${s.koFull} ${h.ko} 스킬`, base, wg: { page: 'guide', spec: s.id, hero: h.slug }, desc: `${s.koFull} ${h.ko}(${h.en}) 빌드 기술을 사용 시점별로 정리` })}
-<body>
-<div id="top"><header class="lnav"><div class="in wrap"><a href="../">← ${esc(s.koFull)} 공략</a></div></header></div>
-<main id="gbody">
-<section class="ghero wrap"><p class="eb">${esc(s.koFull)} 스킬</p><h1>${esc(h.en)}</h1>
+    return `<section class="ghero wrap"><p class="eb">${esc(s.koFull)} 스킬</p><h1>${esc(h.en)}</h1>
 <p class="lead">${esc(g.subtitle)} 기준으로, 누르는 기술을 사용 시점별로 모았습니다. 기술 카드를 누르면 게임 툴팁이 나옵니다.</p>
 <div class="seg" role="group" aria-label="영웅 특성">${heroSeg}</div>
 ${s.hero500 && s.hero500.n && s.hero500.counts[h.slug] != null ? `<p class="gtop">쐐기 상위 500명 기준 <b>${Math.round(s.hero500.counts[h.slug] / s.hero500.n * 100)}%</b>(${s.hero500.counts[h.slug]}명)가 이 영웅 특성을 골랐습니다${(() => { const p = (o, t) => o && o.hero500 && o.hero500.n ? `${t} <b>${Math.round((o.hero500.counts[h.slug] || 0) / o.hero500.n * 100)}%</b>(${o.hero500.counts[h.slug] || 0}명)` : ''; const l = [p(s.xcn, '세계(중국 제외)'), p(s.kr, `한국 상위 ${(R.meta.mplus500kr || {}).specTop || 500}명`), p(s.cn, '중국')].filter(Boolean); return l.length ? ` <span class="gsub">(${l.join(' · ')})</span>` : ''; })()} <span class="muted">(${esc(R.meta.mplus500.src)}, ${esc(R.meta.mplus500.date)})</span> · <a class="cmplink" href="../compare/">두 영웅 특성 비교 ›</a> · <a class="cmplink" href="${base}rank/?spec=${s.id}">순위표 ›</a></p>` : ''}
@@ -158,7 +155,16 @@ ${s.hero500 && s.hero500.n && s.hero500.counts[h.slug] != null ? `<p class="gtop
 ${sections}
 <p class="gfoot">기술 설명과 툴팁은 Wowhead 공식 데이터(${esc(sp.patch)})를 따릅니다. 갱신 ${esc(sp.updated)}.</p>
 </div>
-</main>
+`; };
+    const heroSeg = s.heroes.map(x => `<a href="../${x.slug}/" data-hero-go${x.slug === h.slug ? ' aria-current="page"' : ''}>${esc(x.en)}</a>`).join('');
+    const koBody = body(sp.guide), enBody = enGuide ? body(enGuide) : '';
+    const G = { en: {}, ko: {}, koExtra: g.koExtra };
+    ids.forEach(id => { if (EN[id]) G.en[id] = EN[id]; if (sp.guide.ko[id]) G.ko[id] = sp.guide.ko[id]; });
+    wr(`${s.id}/${h.slug}/index.html`, `${head({ title: `${s.koFull} ${h.ko} 스킬`, base, wg: { page: 'guide', spec: s.id, hero: h.slug }, desc: `${s.koFull} ${h.ko}(${h.en}) 빌드 기술을 사용 시점별로 정리` })}
+<body>
+<div id="top"><header class="lnav"><div class="in wrap"><a href="../">← ${esc(s.koFull)} 공략</a></div></header></div>
+<main id="gbody">
+${koBody}</main>${enBody ? `\n<template id="gbody-en">${enBody}</template>` : ''}
 <script>window.GUIDE=${JSON.stringify(G)}</script>
 </body>
 </html>

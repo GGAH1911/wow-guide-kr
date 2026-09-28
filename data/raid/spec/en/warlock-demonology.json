@@ -1,0 +1,241 @@
+{
+ "id": "warlock/demonology",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Once the Essence Rend target reaches the edge of the room, help dispel it with Singe Magic. A Latent Cultist spawns where it was removed.",
+    "[제어] Stun a pack of Restless Amani with their Gravebound Advance shields still up for 3 sec with Shadowfury to delay them reaching the Soulcoil Well.",
+    "@m [차단] If you are on the well-kill team, interrupt Drowned Echo's Soulcoiler's Curse with your Felguard's Axe Toss."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood is a Magic effect, so help dispel it with Singe Magic.",
+    "[참고] The boss takes 99% less damage during Vitriolic Stasis, so hold Summon Demonic Tyrant until after the intermission.",
+    "[생존기] Shield yourself with Dark Pact before soaking Unstable Miasma."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] AoE down the venom adds with Hand of Gul'dan and Implosion before they reach Malignant Cavity.",
+    "[제어] Burning Venom can be held with Fear until Hardened Venom. Damage may break it.",
+    "[해제] Dispelling Exploding Infection sets off Caustic Explosion, so use Singe Magic on one player at a time, staggered with the healers' dispels."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Interrupt Scrollsage Iku's Icebound Flames with your Felguard's Axe Toss.",
+    "[해제] An Icebound Flames that lands after a missed interrupt is a Magic effect, so help dispel it with Singe Magic.",
+    "[위치] If you are the Blink Nova target, teleport with Demonic Circle or use Burning Rush to get away from the raid quickly."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Sszorak takes 30% more damage during the 25 sec Dig In, so line up Summon Demonic Tyrant with it.",
+    "[분담] When soaking Mutilate, absorb the damage with Dark Pact.",
+    "[회피] Burning Rush keeps movement impairing effects from dropping you below normal speed, so you can dodge the whirlwinds even with Tempest slows stacked."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Kill the Venomous Emergence adds first with Hand of Gul'dan and Implosion.",
+    "[생존기] When soaking Ravenous Feast, absorb the damage with Dark Pact.",
+    "@m [차단] Interrupt Broodling of Ithraz's Visceral Burst with your Felguard's Axe Toss."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] Ghastly Regeneration in the intermission makes Zul'jan take 100% more damage, so line up Summon Demonic Tyrant with it.",
+    "[차단] Once the Veil of Twilight shield breaks, interrupt Eternal Nightfall with your Felguard's Axe Toss.",
+    "[회피] After soaking Guillotine, teleport to a Demonic Circle placed 40 yards out to escape the axe."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Dump Summon Demonic Tyrant into the Venomous Heart exposed after Rage of the Shackled.",
+    "[차단] Interrupt Malice, Anguished Cry, and Vicious Echoes with your Felguard's Axe Toss.",
+    "[생존기] Line up Unending Resolve with the 20 sec of Rage of the Shackled raid damage and Fury Unleashed to reduce damage taken."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Kill the Bubblefin Shorerunners drawn in by Alluring Bubble with Implosion before they reach the bubble.",
+    "[생존기] Split Dark Pact and Unending Resolve across the raid damage from Pop! and Unending Tides.",
+    "@m [우선 처치] Waterfog Shield reduces damage to nearby murlocs by 99%, so kill the Bubblefin Frostscale before using Implosion."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] In the intermission, interrupt Pitch Bulwark from Shadowguard Stalwart and Voidbound Annihilator with your Felguard's Axe Toss.",
+    "[우선 처치] Kill the Voidmaws together with Hand of Gul'dan and Implosion.",
+    "[생존기] Line up Dark Pact with Dark Upheaval raid damage at the pull and after each intermission."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] The Blisterburst damage taken increase and the Creep Spit slow are Magic effects, so help dispel them with Singe Magic.",
+    "[회피] Burning Rush keeps movement impairing effects from dropping you below normal speed, so even with Creep Spit slows stacked, run to the far end of the room opposite Void Breath.",
+    "[우선 처치] Kill the Blistercreeps gathered at the wall together with Implosion so Blisterburst breaks the Void Crystal."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Interrupt Fractured Image's Shadow Fracture with your Felguard's Axe Toss.",
+    "@m [차단] If Fractured Images stripped of Nexus Shield are grouped, stun them together with Shadowfury to interrupt them.",
+    "[생존기] The boss takes 25% more damage during Entropic Unraveling, so line up Summon Demonic Tyrant with it and reduce raid damage taken by 25% with Unending Resolve."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath fear is a Magic effect, so dispel affected players right away with Singe Magic.",
+    "[차단] Interrupt Voidbolt from the Voidorbs spawned after Void Howl with your Felguard's Axe Toss.",
+    "@m [제어] Stun Voidorbs that do not drift toward the raid even when interrupted together with Shadowfury when they are grouped in one spot."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] Right after the pull, line up Summon Demonic Tyrant on Commander Venel Lightblood, who takes 20% more damage from Avenging Wrath, and hit the group with Implosion.",
+    "[차단] Once Sacred Shield breaks, interrupt War Chaplain Senn's Blinding Light with your Felguard's Axe Toss.",
+    "[해제] The Avenger's Shield DoT is a Magic effect, so help dispel it with Singe Magic."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] Corrupting Essence on a player is a Magic effect, so dispel it with Singe Magic.",
+    "[위치] If you are targeted by Grasp of Emptiness, run far out of the circle with Burning Rush so Bursting Emptiness misses the raid.",
+    "@nh [차단] Interrupt Undying Voidspawn's Void Barrage with your Felguard's Axe Toss, or stun them together with Shadowfury."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Interrupt Haunting Essence's Fearsome Cry first with your Felguard's Axe Toss, and dispel any Fearsome Cry fear that slips through with Singe Magic.",
+    "@hm [해제] Once the Consuming Miasma target reaches an Alndust Essence pool, help dispel it with Singe Magic.",
+    "[우선 처치] If you are on the lower floor team, save Summon Demonic Tyrant to break the Alnshroud shield quickly."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] Interrupt Light Eruption or Void Eruption from embers matching your feather color with your Felguard's Axe Toss.",
+    "[생존기] Save Summon Demonic Tyrant for the Phase 2 egg and use it during the Rebirth cast.",
+    "[분담] Shield yourself with Dark Pact before soaking Light Dive or Void Dive of your color together."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Remove Safeguard stacks on a Safeguard Prism matrix with your Felguard's Axe Toss and Shadowfury.",
+    "@m [차단] Interrupt Terminate from your assigned Termination Matrix in order with your Felguard's Axe Toss.",
+    "[우선 처치] When the scattered Midnight Crystals are grouped, hit them together with Implosion to kill them before the cast finishes."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Interrupt Sporecap's Poison Burst with your Felguard's Axe Toss.",
+    "[우선 처치] Kill the Bursting Shrooms at the stack spot with Implosion and Felstorm within 16 sec.",
+    "[위치] The Festering Vines target loses 30% movement speed, but Burning Rush keeps you from dropping below normal speed, so get to the edge of the room quickly."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 132411",
+   "u": "https://nether.wowhead.com/tooltip/spell/132411?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 30283",
+   "u": "https://nether.wowhead.com/tooltip/spell/30283?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 89766",
+   "u": "https://nether.wowhead.com/tooltip/spell/89766?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 265187",
+   "u": "https://nether.wowhead.com/tooltip/spell/265187?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 108416",
+   "u": "https://nether.wowhead.com/tooltip/spell/108416?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 105174",
+   "u": "https://nether.wowhead.com/tooltip/spell/105174?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 196277",
+   "u": "https://nether.wowhead.com/tooltip/spell/196277?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 5782",
+   "u": "https://nether.wowhead.com/tooltip/spell/5782?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 268358",
+   "u": "https://nether.wowhead.com/tooltip/spell/268358?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 111400",
+   "u": "https://nether.wowhead.com/tooltip/spell/111400?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 104773",
+   "u": "https://nether.wowhead.com/tooltip/spell/104773?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 89766",
+   "u": "https://nether.wowhead.com/tooltip/spell/89766?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 105174",
+   "u": "https://nether.wowhead.com/tooltip/spell/105174?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 196277",
+   "u": "https://nether.wowhead.com/tooltip/spell/196277?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 108416",
+   "u": "https://nether.wowhead.com/tooltip/spell/108416?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 132411",
+   "u": "https://nether.wowhead.com/tooltip/spell/132411?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 111400",
+   "u": "https://nether.wowhead.com/tooltip/spell/111400?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 30283",
+   "u": "https://nether.wowhead.com/tooltip/spell/30283?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 265187",
+   "u": "https://nether.wowhead.com/tooltip/spell/265187?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 104773",
+   "u": "https://nether.wowhead.com/tooltip/spell/104773?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 89751",
+   "u": "https://nether.wowhead.com/tooltip/spell/89751?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Gravebound Advance 보호막을 어느 피해 계열이 깨는지는 확인하지 않아 쓰지 않고 Shadowfury 기절로 늦추는 것만 넣었다",
+   "Singe Magic 해제 줄은 쐐기 파일 kit.dispel(magic: Singe Magic)과 digest 해제 목록(Essence Rend·Blighted Blood·Exploding Infection·Icebound Flames 모두 Magic)을 연결했다, Singe Magic은 Grimoire: Imp Lord 재사용 대기 중에 바뀌는 버튼이다",
+   "Axe Toss는 툴팁 \"stunning and interrupting\"만 근거로 차단기로 썼다, Unending Resolve의 침묵 면역이 신화 Invoke에 통하는지는 출처가 없어 쓰지 않았다",
+   "악마학자·영혼 수확자 영웅 특성 전용 기술은 넣지 않았다",
+   "1시즌: Singe Magic 해제 줄은 쐐기 파일 kit.dispel(magic: Singe Magic)과 s1.json 해제 목록(Blisterburst·Creep Spit·Dread Breath·Avenger's Shield·Corrupting Essence·Consuming Miasma·Fearsome Cry 모두 Magic)을 연결했다, Null Corona는 해제하면 옮겨 가 넣지 않았다",
+   "1시즌: Axe Toss는 툴팁 'stunning and interrupting'을 근거로 차단기로 썼다, Shadowfury 줄은 신화 '기절도 된다'·Safeguard '기절로 없애라'와 연결했다",
+   "1시즌: Devour Magic은 지옥수호병을 쓰는 악마 전문화에서 쓸 수 없을 수 있어 Divine Shield·Safeguard 강화 해제 줄에서 뺐다, 악마학자·영혼 수확자 전용 기술은 넣지 않았다"
+  ]
+ }
+}

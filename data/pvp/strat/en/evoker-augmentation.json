@@ -1,0 +1,75 @@
+{
+ "id": "evoker/augmentation",
+ "arena": [
+  "[생존기] Obsidian Scales reduces damage taken by 30% for 12 sec, and with Obsidian Mettle you're immune to interrupts and silences meanwhile. Pop it when enemy burst cooldowns or interrupt attempts pile up and keep casting empowered spells.",
+  "[해제] With Scouring Flame, Fire Breath burns off 2 beneficial magic effects from every target hit. Strip the enemy's magic protection effects, then have your team burst.",
+  "[참고] Ebon Might increases the primary stat of DPS allies by 8% of yours for 10 sec, and Prescience increases one ally's crit chance by 3% for 18 sec. Pre-apply both before your DPS pop their burst cooldowns.",
+  "[차단] Quell interrupts a cast from 25 yds and locks that school for 6 sec. Save it for the enemy healer's heals.",
+  "[제어] Sleep Walk disorients the target for 20 sec and makes it walk toward you, but damage can wake it. Put it on the enemy healer and have your team attack another target.",
+  "[위치] With Unburdened Flight, your movement speed can't drop below 100% during Hover, and you can cast while moving in Hover. When melee DPS slow you, gain distance with Hover and keep casting.",
+  "[분담] Spatial Paradox lets you and your healer cast while moving and doubles the range of most spells for 10 sec. Pop it when your healer must heal while being chased.",
+  "[해제] Cauterizing Flame removes all bleed, poison, curse and disease effects from an ally, and Expunge removes poisons. Cleanse bleeds or poisons on your healer first."
+ ],
+ "bg": [
+  "[참고] Unburdened Flight was picked by 20 of 29 Battleground Blitz players and keeps your movement speed from dropping when slowed during Hover. Pop Hover when you carry the flag or rush first to support a distant base under attack.",
+  "[분담] Rescue flies you to an ally and carries both of you to a chosen spot within 30 yds, removing all slows from both. Pull out a carrier the enemy has pinned down.",
+  "[제어] Wing Buffet knocks back enemies in front of you, but feared or disoriented targets can't be knocked back. Push enemies not under Sleep Walk or your team's fears off the base flag or carrier path.",
+  "[위치] Landslide roots enemies on the rock path for 15 sec but damage can break it. Lay it across the path of enemies chasing your flag carrier or in front of enemies rushing a base.",
+  "[분담] Zephyr reduces AoE damage taken by 20% and grants 30% movement speed for 8 sec to you and the 4 nearest allies within 20 yds. Pop it when moving to a base together or in teamfights with heavy AoE damage.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, pop Obsidian Scales right before the burst."
+ ],
+ "pvpTalents": "Obsidian Mettle, picked by 25 of the top 32 Solo Shuffle and 24 of 29 Battleground Blitz players, grants interrupt and silence immunity during Obsidian Scales. Scouring Flame, picked by 25 of 32 Solo Shuffle players, makes Fire Breath remove 2 beneficial magic effects from every target. Unburdened Flight, picked by 24 of 32 Solo Shuffle and 20 of 29 Battleground Blitz players, keeps your movement speed from dropping below 100% during Hover.",
+ "tips": {
+  "obsidian mettle": "378444",
+  "scouring flame": "378438",
+  "unburdened flight": "378437"
+ },
+ "spells": {
+  "378437": {
+   "n": "Unburdened Flight",
+   "i": "ability_skyreach_lens_flare",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Hover prevents movement speed from being reduced below 100%."
+  },
+  "378438": {
+   "n": "Scouring Flame",
+   "i": "spell_fire_selfdestruct",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Fire Breath burns away 2 beneficial Magic effects from all targets."
+  },
+  "378444": {
+   "n": "Obsidian Mettle",
+   "i": "inv_misc_scales_basilliskorange",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "While Obsidian Scales is active you gain immunity to interrupt, silence, and pushback effects."
+  }
+ },
+ "spellsKo": {
+  "378437": {
+   "n": "굴레를 벗어난 날개",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "부양 중에는 이동 속도가 100% 미만으로 감소하지 않습니다."
+  },
+  "378438": {
+   "n": "소탕의 불길",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "불의 숨결 시전 시 모든 대상에게서 이로운 마법 효과 2개를 제거합니다."
+  },
+  "378444": {
+   "n": "흑요석의 기개",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "흑요석 비늘이 활성화된 동안 시전 방해, 침묵, 밀쳐내기 효과에 면역이 됩니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 32명 전원 비늘사령관이지만 전장 대공세에 시간 감시자 2명이 있어 한쪽 전용 기술은 쓰지 않음",
+   "투기장 상위권 표본이 3v3 1명·2v2 2명뿐이라 투기장 줄은 1인 조합전(32명) 채택률과 일반 원칙 기준",
+   "Obsidian Mettle 툴팁의 pushback은 시전 지연 면역이라 밀쳐내기 면역으로 옮기지 않음. Ebon Might는 아군 둘을 넘으면 효과가 나뉘어 8인 전장 줄에는 쓰지 않음"
+  ]
+ }
+}

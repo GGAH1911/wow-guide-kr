@@ -114,6 +114,12 @@ ul.items{list-style:none;margin:0;padding:0;display:grid;gap:7px}
 .items li{display:grid;grid-template-columns:54px minmax(0,1fr);gap:9px;align-items:start;font-size:15px;line-height:1.45}
 .items li[hidden]{display:none}
 .tag{font-size:11px;font-weight:700;text-align:center;padding:2px 0;border-radius:5px;margin-top:2px;white-space:nowrap;overflow:hidden}
+/* 영어 화면: 태그 이름이 길다(Tank buster·AoE damage 등). 한글 기준 54px 칸을 넓히고 잘리지 않게 */
+html[lang="en"] .items li{grid-template-columns:76px minmax(0,1fr)}
+html[lang="en"] .tag{padding:2px 3px;overflow:visible}
+html[lang="en"] .lnav .long{display:none}html[lang="en"] .lnav .short{display:inline}
+html[lang="en"] .lnav .nm{font-size:15px;gap:6px}
+html[lang="en"] .rkname b,html[lang="en"] .rkname small{white-space:normal;text-overflow:clip;line-height:1.25}
 .ab{font-weight:600;color:var(--ink);overflow-wrap:break-word}
 .ab.has-tip{cursor:help;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:color-mix(in srgb,var(--cls) 70%,transparent)}
 .ab.has-tip:hover,.ab.has-tip:focus-visible{color:var(--cls-ink);outline:none}
@@ -479,6 +485,9 @@ main.raid .bname{flex:0 0 240px}
 .gh .gmine .gml{overflow:hidden;text-overflow:ellipsis}
 .gh .gmine:hover{border-color:var(--muted);color:var(--ink)}
 .gh .hlang button{padding:4px 8px;font-size:12.5px}
+.gh .uisw{flex:0 0 auto;padding:4px 9px;border-radius:8px;border:1px solid var(--line,#d2d2d7);background:none;color:var(--ink-2);font-size:12.5px;font-weight:600;cursor:pointer;margin-left:6px}
+.gh .uisw:hover{color:var(--ink,#1d1d1f)}
+@media (max-width:520px){.gh .uisw{display:none}html[lang="en"] .lnav .vseg a{padding:4px 5px}html[lang="en"] .lnav .nm{white-space:normal;font-size:13px;line-height:1.15}html[lang="en"] .lnav .nm .n{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;white-space:normal}html[lang="en"] .rkname b{font-size:13px}}
 .gh .gmb{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;border:0;background:none;color:var(--ink-2);cursor:pointer;flex:0 0 auto}
 .gh .gmb:hover,.gh .gmb[aria-expanded="true"]{background:var(--fill);color:var(--ink)}
 .gh .gmenu{position:absolute;top:100%;right:max(8px,calc((100vw - 760px) / 2 + 8px));z-index:40}
@@ -489,7 +498,7 @@ main.raid .bname{flex:0 0 240px}
 .gh .gm-in .gsep{font-size:12px;font-weight:700;color:var(--muted);padding:10px 12px 4px;border-top:1px solid var(--line);margin-top:4px}
 .gh .gm-in #gchg{border-top:1px solid var(--line);border-radius:0 0 9px 9px;margin-top:4px;color:var(--link,#0066CC);font-weight:600}
 @media (max-width:760px){.gh .gnav{display:none}}
-@media (max-width:520px){.gh .gmine .gml{display:none}.gh .gmine{padding:3px}.gh .hlang button{padding:4px 6px}.gh .gmb{width:30px}}
+@media (max-width:520px){.gh .gmine .gml{display:none}.gh .gmine{padding:3px}.gh .hlang button{padding:4px 6px}.gh .gmb{width:30px}.gh .uisw{padding:4px 6px;margin-left:4px}}
 /* 첫 화면 요약 줄은 헤더 바로 아래에 붙는다 */
 .summary{top:calc(53px + env(safe-area-inset-top,0px));padding-top:0}
 /* ---------- 쐐기·레이드 두 갈래 ---------- */

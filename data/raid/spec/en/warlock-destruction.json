@@ -1,0 +1,262 @@
+{
+ "id": "warlock/destruction",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] Stun a pack of Restless Amani with their Gravebound Advance shields still up for 3 sec with Shadowfury to delay them reaching the Soulcoil Well.",
+    "@m [참고] Spells being cast are interrupted the moment Invoke ends, so stop casting Chaos Bolt and Incinerate at that moment and use instant Conflagrate instead.",
+    "@m [차단] If you are on the well-kill team, interrupt Drowned Echo's Soulcoiler's Curse with your Felhunter's Spell Lock."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[참고] The boss takes 99% less damage during Vitriolic Stasis, so hold Summon Infernal until after the intermission.",
+    "[생존기] Shield yourself with Dark Pact before soaking Unstable Miasma.",
+    "@m [위치] If you get Shifting Protovenom, use Burning Rush to quickly reach your partner or get away from others."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] AoE down the venom adds with Rain of Fire and Cataclysm before they reach Malignant Cavity.",
+    "[제어] Burning Venom can be held with Howl of Terror until Hardened Venom. Damage may break it.",
+    "@m [생존기] Line up Dark Pact with Gloom Expulsion and Conflagrating Expulsion raid damage."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Interrupt Scrollsage Iku's Icebound Flames with your Felhunter's Spell Lock.",
+    "[위치] If you are the Blink Nova target, teleport with Demonic Circle or use Burning Rush to get away from the raid quickly.",
+    "[생존기] Line up Dark Pact with the Fishy Feedback raid damage and its 12 sec DoT."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Sszorak takes 30% more damage during the 25 sec Dig In, so line up Summon Infernal with it.",
+    "[분담] When soaking Mutilate, absorb the damage with Dark Pact.",
+    "[회피] Burning Rush keeps movement impairing effects from dropping you below normal speed, so you can dodge the whirlwinds even with Tempest slows stacked."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Kill the Venomous Emergence adds first with Cataclysm and Rain of Fire.",
+    "[생존기] When soaking Ravenous Feast, absorb the damage with Dark Pact.",
+    "@m [차단] Interrupt Broodling of Ithraz's Visceral Burst and Caustic Globule's Barbed Bulwark with your Felhunter's Spell Lock."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] Ghastly Regeneration in the intermission makes Zul'jan take 100% more damage, so line up Summon Infernal with it.",
+    "[차단] Once the Veil of Twilight shield breaks, interrupt Eternal Nightfall with your Felhunter's Spell Lock.",
+    "[회피] After soaking Guillotine, teleport to a Demonic Circle placed 40 yards out to escape the axe."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Dump Summon Infernal into the Venomous Heart exposed after Rage of the Shackled.",
+    "[차단] Interrupt Malice, Anguished Cry, and Vicious Echoes with your Felhunter's Spell Lock.",
+    "[생존기] Line up Unending Resolve with the 20 sec of Rage of the Shackled raid damage and Fury Unleashed to reduce damage taken by 25%."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Kill the Bubblefin Shorerunners drawn in by Alluring Bubble with Rain of Fire and Cataclysm before they reach the bubble.",
+    "[생존기] Split Dark Pact and Unending Resolve across the raid damage from Pop! and Unending Tides.",
+    "@m [우선 처치] Waterfog Shield reduces damage to nearby murlocs by 99%, so kill the Bubblefin Frostscale before using Rain of Fire."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] In the intermission, interrupt Pitch Bulwark from Shadowguard Stalwart and Voidbound Annihilator with your Felhunter's Spell Lock.",
+    "[우선 처치] Kill the Voidmaws together with Rain of Fire and Cataclysm.",
+    "[생존기] Line up Dark Pact with Dark Upheaval raid damage at the pull and after each intermission."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] Burning Rush keeps movement impairing effects from dropping you below normal speed, so even with Creep Spit slows stacked, run to the far end of the room opposite Void Breath.",
+    "[우선 처치] Kill the Blistercreeps gathered at the wall together with Rain of Fire and Cataclysm so Blisterburst breaks the Void Crystal.",
+    "@m [생존기] Shield yourself with Dark Pact before the first Blistercreep pack pops."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Interrupt Fractured Image's Shadow Fracture with your Felhunter's Spell Lock.",
+    "@m [차단] Interrupt Fractured Images stripped of Nexus Shield by stunning them with Shadowfury or fearing them with Howl of Terror.",
+    "[생존기] The boss takes 25% more damage during Entropic Unraveling, so line up Summon Infernal with it and reduce raid damage taken by 25% with Unending Resolve."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Interrupt Voidbolt from the Voidorbs spawned after Void Howl with your Felhunter's Spell Lock.",
+    "@m [제어] Stun Voidorbs that do not drift toward the raid even when interrupted together with Shadowfury when they are grouped in one spot.",
+    "[생존기] Part of the Midnight Flames damage gets through Radiant Barrier, so shield yourself with Dark Pact."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] Right after the pull, line up Summon Infernal on Commander Venel Lightblood, who takes 20% more damage from Avenging Wrath, and hit the group with Rain of Fire.",
+    "[차단] Once Sacred Shield breaks, interrupt War Chaplain Senn's Blinding Light with your Felhunter's Spell Lock.",
+    "[참고] When the boss pops Divine Shield after Bloodlust, act as the enemy buff dispeller and remove it with your Felhunter's Devour Magic."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[참고] When Demiar's Interrupting Tremor cast finishes, stop casting Chaos Bolt and Incinerate and use instant Conflagrate instead.",
+    "[위치] If you are targeted by Grasp of Emptiness, run far out of the circle with Burning Rush so Bursting Emptiness misses the raid.",
+    "@nh [차단] Interrupt Undying Voidspawn's Void Barrage with your Felhunter's Spell Lock, or stun them together with Shadowfury."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Interrupt Haunting Essence's Fearsome Cry first with your Felhunter's Spell Lock, then use spare interrupts on Essence Bolt.",
+    "[우선 처치] If you are on the lower floor team, save Summon Infernal to break the Alnshroud shield quickly.",
+    "[우선 처치] In Phase 2, Rift Shroud makes the boss take 99% less damage, so spend Rain of Fire and Cataclysm on the adds."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] Interrupt Light Eruption or Void Eruption from embers matching your feather color with your Felhunter's Spell Lock.",
+    "[생존기] Save Summon Infernal for the Phase 2 egg and use it during the Rebirth cast.",
+    "[분담] Shield yourself with Dark Pact before soaking Light Dive or Void Dive of your color together."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Remove Safeguard stacks on a Safeguard Prism matrix with Spell Lock and Shadowfury, and strip the Safeguard buff, a Magic effect, with Devour Magic.",
+    "@m [차단] Interrupt Terminate from your assigned Termination Matrix in order with your Felhunter's Spell Lock.",
+    "[우선 처치] When the scattered Midnight Crystals are grouped, hit them together with Cataclysm and Rain of Fire to kill them before the cast finishes."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Interrupt Sporecap's Poison Burst with your Felhunter's Spell Lock.",
+    "[우선 처치] Kill the Bursting Shrooms at the stack spot with Rain of Fire and Cataclysm within 16 sec.",
+    "[위치] The Festering Vines target loses 30% movement speed, but Burning Rush keeps you from dropping below normal speed, so get to the edge of the room quickly."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 30283",
+   "u": "https://nether.wowhead.com/tooltip/spell/30283?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 116858",
+   "u": "https://nether.wowhead.com/tooltip/spell/116858?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 29722",
+   "u": "https://nether.wowhead.com/tooltip/spell/29722?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 17962",
+   "u": "https://nether.wowhead.com/tooltip/spell/17962?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 119910",
+   "u": "https://nether.wowhead.com/tooltip/spell/119910?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 1122",
+   "u": "https://nether.wowhead.com/tooltip/spell/1122?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 108416",
+   "u": "https://nether.wowhead.com/tooltip/spell/108416?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 111400",
+   "u": "https://nether.wowhead.com/tooltip/spell/111400?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 5740",
+   "u": "https://nether.wowhead.com/tooltip/spell/5740?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 152108",
+   "u": "https://nether.wowhead.com/tooltip/spell/152108?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 5484",
+   "u": "https://nether.wowhead.com/tooltip/spell/5484?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 48018",
+   "u": "https://nether.wowhead.com/tooltip/spell/48018?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 104773",
+   "u": "https://nether.wowhead.com/tooltip/spell/104773?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 119910",
+   "u": "https://nether.wowhead.com/tooltip/spell/119910?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 5740",
+   "u": "https://nether.wowhead.com/tooltip/spell/5740?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 152108",
+   "u": "https://nether.wowhead.com/tooltip/spell/152108?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 108416",
+   "u": "https://nether.wowhead.com/tooltip/spell/108416?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 111400",
+   "u": "https://nether.wowhead.com/tooltip/spell/111400?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 30283",
+   "u": "https://nether.wowhead.com/tooltip/spell/30283?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 5484",
+   "u": "https://nether.wowhead.com/tooltip/spell/5484?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 1122",
+   "u": "https://nether.wowhead.com/tooltip/spell/1122?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 104773",
+   "u": "https://nether.wowhead.com/tooltip/spell/104773?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 19505",
+   "u": "https://nether.wowhead.com/tooltip/spell/19505?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 116858",
+   "u": "https://nether.wowhead.com/tooltip/spell/116858?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 29722",
+   "u": "https://nether.wowhead.com/tooltip/spell/29722?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 17962",
+   "u": "https://nether.wowhead.com/tooltip/spell/17962?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "1시즌: Divine Shield는 s1.json이 '적 버프 해제 기술로 지워라'라고만 적었고 해제 유형(Magic)은 dispel 목록에서 확인되지 않았다, Devour Magic 툴팁은 'beneficial magic effect'만 지운다"
+  ],
+  "notes": [
+   "Gravebound Advance 보호막을 어느 피해 계열이 깨는지는 확인하지 않아 쓰지 않고 Shadowfury 기절로 늦추는 것만 넣었다",
+   "Invoke 줄은 digest의 신화 \"시전 중인 주문이 끊긴다\"와 Chaos Bolt 3초·Incinerate 2초 시전, Conflagrate 즉시 시전 툴팁을 연결했다, Unending Resolve 침묵 면역이 Invoke에 통하는지는 출처가 없어 쓰지 않았다",
+   "Singe Magic은 쐐기 파일 kit.dispel이 비어 있고 임프가 있어야 해 쓰지 않았다",
+   "악마학자·지옥소환사 영웅 특성 전용 기술은 넣지 않았다",
+   "1시즌: Fractured Image 줄은 s1.json 신화 '밀치기·기절·공포도 된다'와 Shadowfury 기절·Howl of Terror 공포 툴팁을 연결했다, Howl of Terror는 피해를 받으면 풀릴 수 있다",
+   "1시즌: Interrupting Tremor 줄은 Chaos Bolt 3초·Incinerate 2초 시전과 Conflagrate 즉시 시전 툴팁 기준, Singe Magic은 kit.dispel이 비어 있어 쓰지 않았다, 악마학자·지옥소환사 전용 기술은 넣지 않았다"
+  ]
+ }
+}

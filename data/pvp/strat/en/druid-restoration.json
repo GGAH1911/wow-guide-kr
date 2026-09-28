@@ -1,0 +1,122 @@
+{
+ "id": "druid/restoration",
+ "arena": [
+  "[분담] Ironbark reduces damage the target takes by 20% for 12 sec. Put it first on the ally the enemy burst cooldowns are focused on.",
+  "[생존기] Barkskin can be used while stunned, frozen, incapacitated, feared or asleep, and reduces damage taken by 20% for 8 sec. Pop it immediately when you're focused while CC'd.",
+  "[제어] Cyclone disorients the target for up to 5 sec but also makes it invulnerable. Use it on the enemy healer while your team isn't bursting. With Call of Ohn'ahra you can instant-cast it with Nature's Swiftness, but its cooldown increases by 60 sec.",
+  "[광역 피해] With Early Spring, Wild Growth becomes instant. Heal your whole team even while moving to kite enemy melee DPS.",
+  "[참고] With Forest Guardian, Wrath and Cyclone extend your HoTs on up to 3 allies by 1 sec each. Weave in Wrath when healing isn't urgent.",
+  "[위치] Shifting into Bear Form, Cat Form or Travel Form removes movement impairing effects and protects against polymorph effects. Shift out of slows and break line of sight behind a pillar.",
+  "[해제] Nature's Cure removes all magic, curse and poison effects from an ally. Dispel magic CC on your healer or DPS first.",
+  "[제어] Entangling Roots roots the target for 30 sec but damage can break it. With High Winds, Cyclone, Typhoon and Entangling Roots gain 5 yds range. Root melee DPS chasing you from afar."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 2 healers, and on flag maps a mobile healer is a good carrier. You can help carry with Dash and shapeshift root breaks, and with Tireless Pursuit your movement speed lingers for 3 sec after leaving a form.",
+  "[광역 피해] With Early Spring, when Wild Growth heals 6 allies your next Wild Growth applies Lifebloom to every target. Cast it twice in a row during base defense or flag fights where many allies are grouped.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. For a focused flag carrier, cut incoming damage with Ironbark before trying to heal harder.",
+  "[위치] With Disentanglement, Efflorescence removes all slows from allies it heals and costs 40% less mana. Drop it on the flag carrier's path or on your base defense spot.",
+  "[제어] Typhoon knocks back enemies within 15 yds in front of you, but feared or disoriented targets can't be knocked back. Push enemies without CC on them away from the base or flag carrier."
+ ],
+ "pvpTalents": "Early Spring, picked by all top 45 Solo Shuffle players and all 34 Battleground Blitz players, makes Wild Growth instant. Forest Guardian, picked by all 45 Solo Shuffle and 26 of 34 Battleground Blitz players, extends ally HoTs with Wrath and Cyclone. High Winds, picked by 19 of 45 Solo Shuffle players, increases the range of Cyclone, Typhoon and Entangling Roots by 5 yds.",
+ "tips": {
+  "early spring": "203624",
+  "forest guardian": "1217474",
+  "high winds": "200931",
+  "call of ohn'ahra": "1246126",
+  "disentanglement": "233673",
+  "tireless pursuit": "377801",
+  "cyclone": "33786"
+ },
+ "spells": {
+  "33786": {
+   "n": "Cyclone",
+   "i": "spell_nature_earthbind",
+   "m": "Talent · 1.2% of base mana · 20 yd range · 1.7 sec cast",
+   "d": "Tosses the enemy target into the air, disorienting them but making them invulnerable for up to 5 sec. Only one target can be affected by your Cyclone at a time."
+  },
+  "200931": {
+   "n": "High Winds",
+   "i": "ability_druid_cyclone",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of Cyclone, Typhoon, and Entangling Roots by 5 yds."
+  },
+  "203624": {
+   "n": "Early Spring",
+   "i": "ability_druid_flourish",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Wild Growth is now instant cast, and when you heal 6 allies with Wild Growth you gain Full Bloom. This effect has a 30 sec cooldown.\n\nFull Bloom\nYour next Wild Growth applies Lifebloom to all targets at 100% effectiveness. Lasts for 30 sec."
+  },
+  "233673": {
+   "n": "Disentanglement",
+   "i": "inv_misc_herb_talandrasrose",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Efflorescence removes all snare effects from friendly targets when it heals and its Mana cost is reduced by 40%."
+  },
+  "377801": {
+   "n": "Tireless Pursuit",
+   "i": "spell_druid_tirelesspursuit",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "For 3 sec after leaving Cat Form or Travel Form, you retain up to 25% movement speed."
+  },
+  "1217474": {
+   "n": "Forest Guardian",
+   "i": "ability_druid_ripandtear",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Wrath, Starfire, Cyclone, and Combo-Point generating abilities extend the duration of your active heal over time effects by 1.0 sec on up to 3 allies.\n\nStarsurge and Combo-Point spending abilities increase the rate of your heal over time spells by 20% for 4 sec. (300ms cooldown)"
+  },
+  "1246126": {
+   "n": "Call of Ohn'ahra",
+   "i": "spell_nature_ravenform",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Nature's Swiftness now also affects Cyclone, but its cooldown is increased by 60 sec."
+  }
+ },
+ "spellsKo": {
+  "33786": {
+   "n": "회오리바람",
+   "m": "특성 · 1.2% (기본 마나 중) · 20 야드 사정거리 · 1.7 초 주문 시전 시간",
+   "d": "적을 공중으로 날립니다. 대상은 5초 동안 방향 감각을 상실하지만, 무적 상태가 됩니다. 한 대상만 날려둘 수 있습니다."
+  },
+  "200931": {
+   "n": "강풍",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "회오리바람, 태풍, 휘감는 뿌리의 사정거리가 5미터만큼 증가합니다."
+  },
+  "203624": {
+   "n": "새봄",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "급속 성장이 즉시 시전됩니다. 급속 성장으로 6명의 아군을 치유하면 만개 효과를 얻습니다. 이 효과는 30초마다 한 번씩만 발동됩니다.\n\n만개\n다음 급속 성장이 모든 대상에게 피어나는 생명 효과를 100% 효율로 부여합니다. 30초 동안 지속됩니다."
+  },
+  "233673": {
+   "n": "해방",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "꽃피우기가 치유할 때 아군 대상에게 걸린 모든 감속 효과를 제거합니다. 또한 마나 소모량이 40%만큼 감소합니다."
+  },
+  "377801": {
+   "n": "불휴의 추적",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "표범 변신이나 날쌘 동물 변신을 해제해도 3초 동안 이동 속도가 최대 25%만큼 유지됩니다."
+  },
+  "1217474": {
+   "n": "숲 수호자",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "천벌, 별빛섬광, 회오리바람, 연계 점수를 생성하는 능력 시전 시 최대 3명의 아군에게 부여되어 활성화된 지속 치유 효과의 지속시간을 1.0초만큼 연장시킵니다.\n\n별빛쇄도와 연계 점수를 소모하는 능력 시전 시 4초 동안 지속 치유 주문의 속도를 20%만큼 증가시킵니다. (300밀리초 재사용 대기시간)"
+  },
+  "1246126": {
+   "n": "온아라의 부름",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "자연의 신속함이 회오리바람에 영향을 주지만, 재사용 대기시간이 60초만큼 증가합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 야생추적자 38·숲의 수호자 7, 전장 대공세 숲의 수호자 22·야생추적자 12로 갈려 Grove Guardians 강화·Bloodseeker Vines 등 한쪽 전용 효과는 쓰지 않음",
+   "Early Spring의 Full Bloom은 아군 6명 치유가 조건이라 인원이 적은 투기장·1인 조합전 줄에서는 즉시 시전 효과만 씀",
+   "Cyclone은 쐐기 파일에 없어 툴팁을 새로 받음"
+  ]
+ }
+}

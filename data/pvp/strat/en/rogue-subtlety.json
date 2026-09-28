@@ -1,0 +1,87 @@
+{
+ "id": "rogue/subtlety",
+ "arena": [
+  "[생존기] Cloak of Shadows instantly removes all harmful spell effects and resists harmful spells for 5 sec. Use it when enemy casters send CC spells or magic burst.",
+  "[생존기] With Preemptive Maneuver, Feint grants an extra 25% damage reduction while you're stunned and costs 30% less Energy. Pop Feint right before you get stunned.",
+  "[제어] Shadow Dance lets you use Stealth abilities in combat for 6 sec. Land Cheap Shot's 6 sec stun on the enemy healer mid-combat and burst with Shadow Blades.",
+  "[제어] Kidney Shot lasts longer with more combo points, up to an 8 sec stun. Use it the moment the enemy healer or your kill target has no defensives up.",
+  "[제어] Blind disorients the target for 1 min but damage can break it. Put it on the enemy healer and have your team attack another target.",
+  "[분담] Smoke Bomb creates an 8 yd smoke cloud around you for 5 sec, and enemies can't target into or out of it. Drop it next to your kill target so the enemy healer outside can't heal them.",
+  "[차단] Kick interrupts a cast and locks that school for 6 sec. Shadowstep behind a target up to 25 yds away and time it to the enemy healer's heal casts.",
+  "[생존기] Evasion increases your dodge chance by 100% for 10 sec, and Dismantle disarms an enemy's weapon and shield for 5 sec. Alternate them when melee DPS pop burst cooldowns and get on you."
+ ],
+ "bg": [
+  "[참고] Stealth classes are good at base defense. Hide in Stealth next to the base flag you're guarding, then Cheap Shot enemies that come to capture for a 6 sec stun.",
+  "[참고] Per map rules, a flag carrier that stealths drops the flag. Don't use Vanish or Stealth while holding the flag.",
+  "[분담] In Rated Battlegrounds, when the middle teamfight is lost, stealthy DPS sneak to enemy bases. Sap an out-of-combat base defender for 1 min and go for the capture.",
+  "[분담] With Silhouette, Shadowstep used on an ally has a 67% shorter cooldown. Jump straight to your focused flag carrier and protect them.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Feint, Evasion and Cloak of Shadows right before the burst.",
+  "[제어] Enemies disoriented by Blind can't be knocked back. Use it on enemies trying to capture a base, but don't overlap it with your team's knockbacks."
+ ],
+ "pvpTalents": "Smoke Bomb, picked by all top 38 Solo Shuffle players and all 43 Battleground Blitz players, creates an 8 yd smoke cloud enemies can't target into or out of. Preemptive Maneuver, picked by 35 of 38 Solo Shuffle and 35 of 43 Battleground Blitz players, adds 25% damage reduction to Feint while stunned. Dismantle, picked by 26 of 38 Solo Shuffle players, disarms an enemy's weapon and shield for 5 sec.",
+ "tips": {
+  "smoke bomb": "212182",
+  "preemptive maneuver": "1219122",
+  "dismantle": "207777",
+  "silhouette": "197899"
+ },
+ "spells": {
+  "197899": {
+   "n": "Silhouette",
+   "i": "ability_rogue_shadowstep",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Shadowstep's cooldown is reduced by 67% when cast on a friendly target."
+  },
+  "207777": {
+   "n": "Dismantle",
+   "i": "ability_rogue_dismantle",
+   "m": "Tank Specs – Row 1 PvP Talent · 15 Energy · Melee Range · Instant · 45 sec cooldown",
+   "d": "Disarm the enemy, preventing the use of any weapons or shield for 5 sec."
+  },
+  "212182": {
+   "n": "Smoke Bomb",
+   "i": "ability_rogue_smoke",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 3 min cooldown",
+   "d": "Creates a cloud of thick smoke in an 8 yard radius around the Rogue for 5 sec. Enemies are unable to target into or out of the smoke cloud."
+  },
+  "1219122": {
+   "n": "Preemptive Maneuver",
+   "i": "ability_rogue_feint",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Feint decreases your damage taken by an additional 25% while stunned and its energy cost is reduced by 30%."
+  }
+ },
+ "spellsKo": {
+  "197899": {
+   "n": "윤곽",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "그림자 밟기를 아군 대상에게 사용하면 재사용 대기시간이 67%만큼 감소합니다."
+  },
+  "207777": {
+   "n": "장비 분해",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 기력 15 · 근접 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "적을 무장 해제시켜 5초 동안 무기와 방패를 사용하지 못하게 합니다."
+  },
+  "212182": {
+   "n": "연막탄",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 3 분 재사용 대기시간",
+   "d": "도적 주위로 8미터 반경에 5초 동안 연막을 생성합니다. 연막 밖의 적은 안쪽의 대상을, 연막 안의 적은 바깥쪽의 대상을 대상으로 지정할 수 없습니다."
+  },
+  "1219122": {
+   "n": "선제 조치",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "교란이 기절한 동안 받는 피해를 추가로 25%만큼 감소시키며, 기력 소모량도 30%만큼 감소합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 죽음추적자 29·기만자(Trickster) 9, 전장 대공세 26·17로 갈려 한쪽 전용 기술은 쓰지 않음",
+   "Shadow Dance 툴팁의 은신 기술 사용 허용과 Cheap Shot의 은신 필요 조건을 연결했고 Kidney Shot과 Cheap Shot의 점감 관계는 쓰지 않음",
+   "깃발 운반 중 은신 시 깃발이 떨어진다는 사실은 전쟁노래 협곡·쌍둥이 봉우리 지도 공략 기준이며 Shadow Dance도 같은 판정인지는 확인되지 않아 쓰지 않음"
+  ]
+ }
+}
