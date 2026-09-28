@@ -1,0 +1,97 @@
+{
+ "id": "evoker/preservation",
+ "arena": [
+  "[생존기] Emerald Communion은 기절·방향 상실·행동 불가·침묵 중에도 시전할 수 있고 5초간 매초 생명력 20%를 회복하니 제어에 묶인 채 폭딜을 받을 때 눌러라",
+  "[회피] Nullifying Shroud를 고르면 Verdant Embrace를 쓸 때 3초간 다음 완전 제어 효과 하나를 막으니 상대 제어 주문 시전이 끝나기 직전에 Verdant Embrace를 써라",
+  "[분담] Time Dilation은 8초간 아군이 받을 피해의 50%를 8초에 걸쳐 나눠 받게 하니 상대 폭딜이 몰린 아군에게 걸어 한꺼번에 쓰러지지 않게 하라",
+  "[생존기] Obsidian Scales는 12초간 받는 피해를 30% 줄이고 Obsidian Mettle을 고르면 그동안 차단과 침묵과 밀림에 면역이 되니 상대 차단기가 살아 있을 때 긴 강화 주문 앞에 켜라",
+  "[차단] Quell은 25미터 밖에서 시전을 끊고 그 계열 주문을 6초간 막으니 상대 치유 전담의 치유 시전에 아껴라",
+  "[제어] Sleep Walk는 대상을 20초간 방향 상실시키지만 피해에 깰 수 있고 Landslide는 경로의 적을 15초간 묶으니 아군이 때리지 않는 상대를 재우고 나를 쫓는 근접 딜러는 묶어라",
+  "[해제] Naturalize는 아군의 마법과 독을 지우고 Cauterizing Flame은 출혈과 독과 저주와 질병을 지우니 아군 제어는 Naturalize로 먼저 풀어라",
+  "[해제] Scouring Flame을 고르면 Fire Breath가 맞은 모든 대상의 이로운 마법 효과를 2개씩 태워 없애니 상대 딜러가 폭딜 강화를 켰을 때 그쪽으로 뿜어라"
+ ],
+ "bg": [
+  "[참고] 전장 대공세는 치유 전담 2명 편성이고 깃발 지도에서는 이동력이 좋은 치유 전담이 운반에 좋으니 Hover로 움직이며 시전하고 Unburdened Flight를 고르면 Hover 중 이동 속도가 100% 밑으로 떨어지지 않는다",
+  "[분담] Rescue는 아군에게 날아가 함께 지정한 곳으로 날아가며 둘의 이동 방해 효과를 지우니 적에게 붙잡힌 깃발 운반자나 거점 아군을 빼내라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 늘리기보다 Time Dilation으로 피해를 나눠 받게 하고 Temporal Anomaly 흡수로 피해를 먼저 막아라",
+  "[위치] Zephyr는 나와 20미터 안 아군 4명을 띄워 8초간 광역 피해를 20% 줄이고 이동 속도를 30% 올리니 거점 사이를 함께 옮기거나 광역 피해를 받을 때 써라",
+  "[제어] Tail Swipe와 Wing Buffet은 적을 밀쳐내지만 공포나 방향 상실에 걸린 대상은 밀쳐낼 수 없으니 Sleep Walk로 재운 적과 겹치지 않게 거점이나 깃발 운반자에게서 떼어내라"
+ ],
+ "pvpTalents": "1인 조합전 상위 43명 모두와 전장 대공세 47명 중 46명이 고른 Nullifying Shroud는 Verdant Embrace를 쓸 때 다음 완전 제어 하나를 막고, 1인 조합전 43명과 전장 대공세 47명 모두가 고른 Emerald Communion은 제어 중에도 5초간 생명력을 크게 회복하며, 전장 대공세 47명 중 35명이 고른 Unburdened Flight는 Hover 중 이동 속도가 떨어지지 않게 한다.",
+ "tips": {
+  "nullifying shroud": "1241352",
+  "emerald communion": "370960",
+  "obsidian mettle": "378444",
+  "scouring flame": "378438",
+  "unburdened flight": "378437"
+ },
+ "spells": {
+  "1241352": {
+   "n": "Nullifying Shroud",
+   "i": "spell_arcane_prismaticcloak",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Verdant Embrace wreathes you in arcane energy, preventing the next full loss of control effect against you. Lasts 3 sec."
+  },
+  "370960": {
+   "n": "Emerald Communion",
+   "i": "ability_evoker_green_01",
+   "m": "Tank Specs – Row 1 PvP Talent · Channeled (5 sec cast) · 3 min cooldown",
+   "d": "Commune with the Emerald Dream, restoring 20% health and 2% mana every 1 sec for 5 sec. Overhealing is transferred to an injured ally within 40 yds.\n\nCastable while stunned, disoriented, incapacitated, or silenced."
+  },
+  "378444": {
+   "n": "Obsidian Mettle",
+   "i": "inv_misc_scales_basilliskorange",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "While Obsidian Scales is active you gain immunity to interrupt, silence, and pushback effects."
+  },
+  "378438": {
+   "n": "Scouring Flame",
+   "i": "spell_fire_selfdestruct",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Fire Breath burns away 2 beneficial Magic effects from all targets."
+  },
+  "378437": {
+   "n": "Unburdened Flight",
+   "i": "ability_skyreach_lens_flare",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Hover prevents movement speed from being reduced below 100%."
+  }
+ },
+ "spellsKo": {
+  "1241352": {
+   "n": "무효화의 장막",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "신록의 품으로 몸을 감싸 다음 회의 제어 불가 효과를 방지합니다. 3초 동안 지속됩니다."
+  },
+  "370960": {
+   "n": "에메랄드 교감",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 집중 (5 초 주문 시전 시간) · 3 분 재사용 대기시간",
+   "d": "에메랄드의 꿈과 교감하여 5초 동안 1초마다 20%의 생명력과 2%의 마나를 회복합니다. 초과 치유량은 40미터 내의 부상당한 아군에게 이전됩니다.\n\n기절, 방향 감각 상실, 행동 불가, 침묵 상태에서 시전할 수 있습니다."
+  },
+  "378444": {
+   "n": "흑요석의 기개",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "흑요석 비늘이 활성화된 동안 시전 방해, 침묵, 밀쳐내기 효과에 면역이 됩니다."
+  },
+  "378438": {
+   "n": "소탕의 불길",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "불의 숨결 시전 시 모든 대상에게서 이로운 마법 효과 2개를 제거합니다."
+  },
+  "378437": {
+   "n": "굴레를 벗어난 날개",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "부양 중에는 이동 속도가 100% 미만으로 감소하지 않습니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 불꽃형성자 40·시간 감시자 3, 전장 대공세 시간 감시자 31·불꽃형성자 16으로 갈려 Chrono Flame·Consume Flame 등 한쪽 전용 기술은 쓰지 않음",
+   "Dream Simulacrum 특성을 고르면 Verdant Embrace가 도약하지 않으므로 Nullifying Shroud 줄은 이동 여부와 무관한 제어 방지 효과만 씀"
+  ]
+ }
+}

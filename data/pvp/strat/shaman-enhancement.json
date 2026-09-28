@@ -1,0 +1,99 @@
+{
+ "id": "shaman/enhancement",
+ "arena": [
+  "[회피] Grounding Totem은 30미터 안 아군에게 오는 해로운 단일 주문을 3초간 대신 받으니 상대 제어 주문 시전이 끝나기 직전에 세워라",
+  "[생존기] Astral Shift는 12초간 받는 피해를 40% 줄이니 상대가 폭딜 쿨기를 켜고 몰아칠 때 먼저 써라",
+  "[생존기] Burrow를 고르면 5초간 땅속으로 들어가 공격받지 않고 이동 방해가 풀리며 끝날 때 6미터 안 적을 띄워 올리니 다른 생존기가 빠졌을 때 폭딜을 피하는 데 써라",
+  "[참고] Shamanism을 고르면 Bloodlust나 Heroism이 60초마다 나와 아군 하나에게 10초간 가속을 주니 아군 딜러와 폭딜 타이밍을 맞춰 Doom Winds와 함께 켜라",
+  "[제어] Hex는 대상을 1분간 개구리로 만들어 행동 불가로 묶지만 피해에 풀릴 수 있으니 상대 치유 전담에게 걸고 아군은 다른 대상을 공격하게 하라",
+  "[차단] Wind Shear는 30미터 밖에서 시전을 끊고 그 계열 주문을 4초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[제어] Capacitor Totem은 2초 뒤 터져 8미터 안 적을 3초 기절시키니 상대 치유 전담과 폭딜 대상이 가까이 있을 때 발밑에 세워라",
+  "[해제] Purge는 적 대상의 이로운 마법 효과 하나를 지우니 상대 치유 전담이 건 마법 보호 효과를 벗기고 Cleanse Spirit으로 아군의 저주를 지워라"
+ ],
+ "bg": [
+  "[참고] 전장 대공세는 딜러 5~6명 편성이고 깃발 운반은 치유 전담이 먼저 맡으며 없으면 이동력 좋은 딜러가 맡으니 Ghost Wolf와 Spirit Walk와 Feral Lunge로 운반자를 따라붙어 지켜라",
+  "[분담] Wind Rush Totem은 15초간 10미터 안을 지나는 아군 모두에게 5초간 40% 이동 속도를 주니 아군 깃발 운반자의 도주로나 거점으로 가는 길에 세워라",
+  "[위치] Spirit Walk는 이동 방해를 모두 풀고 8초간 이동 속도를 60% 올리니 감속에 붙잡힌 채 공격받는 거점이나 수레로 가야 할 때 써라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Astral Shift를 폭딜 직전에 먼저 쓰고 Grounding Totem으로 제어 주문을 막아라",
+  "[제어] Static Field Totem을 고르면 6초간 적이 지나갈 수 없는 전기 회로를 만드니 상대 깃발 운반자의 도주로나 거점 입구를 막아라",
+  "[해제] Poison Cleansing Totem은 6초간 1.5초마다 30미터 안 아군 하나의 독을 모두 지우니 독 효과가 거점 한타로 뭉친 여러 아군에게 걸렸을 때 세워라"
+ ],
+ "pvpTalents": "1인 조합전 상위 45명 중 44명과 전장 대공세 47명 중 41명이 고른 Shamanism은 Bloodlust나 Heroism을 60초마다 나와 아군 하나에게 10초간 쓰게 하며, 1인 조합전 45명 중 42명이 고른 Grounding Totem과 Burrow는 각각 아군에게 오는 해로운 단일 주문을 3초간 대신 받고 5초간 공격받지 않게 한다.",
+ "tips": {
+  "shamanism": "193876",
+  "grounding totem": "204336",
+  "burrow": "409293",
+  "static field totem": "355580",
+  "hex": "51514"
+ },
+ "spells": {
+  "193876": {
+   "n": "Shamanism",
+   "i": "trade_archaeology_ancientorcshamanheaddress",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Your Bloodlust / Heroism spell now has a 60 sec cooldown, but increases Haste by 15%, and only affects you and your friendly target when cast for 10 sec.\n\nIn addition, Bloodlust / Heroism is no longer affected by Sated / Exhaustion."
+  },
+  "204336": {
+   "n": "Grounding Totem",
+   "i": "spell_nature_groundingtotem",
+   "m": "Tank Specs – Row 1 PvP Talent · 1.18% of base mana · Instant · 30 sec cooldown",
+   "d": "Summons a totem at your feet that will redirect all harmful spells cast within 30 yards on a nearby party or raid member to itself. Will not redirect area of effect spells. Lasts 3 sec."
+  },
+  "409293": {
+   "n": "Burrow",
+   "i": "pvp_burrow",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 2 min cooldown",
+   "d": "Burrow beneath the ground, becoming unattackable, removing movement impairing effects, and increasing your movement speed by 50% for 5 sec.\n\nWhen the effect ends, enemies within 6 yards are knocked in the air and take [Spell Power * 6.6 * (1 + Versatility)] Physical damage."
+  },
+  "355580": {
+   "n": "Static Field Totem",
+   "i": "spell_shaman_stormtotem",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · 30 yd range · Instant · 1.5 min cooldown",
+   "d": "Summons a totem with 4% of your health at the target location for 6 sec that forms a circuit of electricity that enemies cannot pass through."
+  },
+  "51514": {
+   "n": "Hex",
+   "i": "spell_shaman_hex",
+   "m": "Talent · 30 yd range · 1.7 sec cast · 30 sec cooldown",
+   "d": "Transforms the enemy into a frog for 1 min. While hexed, the victim is incapacitated, and cannot attack or cast spells. Damage may cancel the effect. Limit 1. Only works on Humanoids and Beasts."
+  }
+ },
+ "spellsKo": {
+  "193876": {
+   "n": "주술의 힘",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "피의 욕망 / 영웅심 주문의 재사용 대기시간이 60초로 변경되지만, 가속이 15%만큼 증가하고 시전 시 10초 동안 자신과 아군 대상에게만 효과가 적용됩니다.\n\n추가로 피의 욕망 / 영웅심이 만족함 / 소진의 영향을 받지 않습니다."
+  },
+  "204336": {
+   "n": "마법흡수 토템",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1.18% (기본 마나 중) · 즉시 · 30 초 재사용 대기시간",
+   "d": "자신의 위치에 토템을 소환합니다. 토템은 주위 30미터 내의 파티원 또는 공격대원을 대상으로 시전되는 모든 해로운 주문을 토템에 이전합니다. 광역 주문에는 효과가 없습니다. 3초 동안 지속됩니다."
+  },
+  "409293": {
+   "n": "잠복",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 2 분 재사용 대기시간",
+   "d": "땅속으로 잠복해 이동 방해 효과를 제거하고 5초 동안 공격받지 않는 상태가 되며 이동 속도가 50%만큼 증가합니다.\n\n효과가 끝나면 6미터 내의 적을 공중으로 날려 보내고 [주문력 * 6.6 * (1 + 유연성)]의 물리 피해를 입힙니다."
+  },
+  "355580": {
+   "n": "전자기장 토템",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 30 야드 사정거리 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "대상 위치에 6초 동안 자신의 생명력의 4%에 해당하는 생명력을 지닌 토템을 소환합니다. 토템은 전류의 흐름을 형성하여 적이 통과하지 못하게 합니다."
+  },
+  "51514": {
+   "n": "사술",
+   "m": "특성 · 30 야드 사정거리 · 1.7 초 주문 시전 시간 · 30 초 재사용 대기시간",
+   "d": "1분 동안 적을 개구리로 변신시킵니다. 사술에 걸린 대상은 공격하거나 주문을 시전할 수 없습니다. 대상이 피해를 입으면 효과가 해제될 수 있습니다. 대상은 하나로 제한됩니다. 야수와 인간형에게만 사용할 수 있습니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 폭풍인도자 41·토템술사 4로 쏠렸지만 한쪽 전용 기술(Surging Totem·Tempest 등)은 쓰지 않음",
+   "투기장 상위권 표본이 3v3 5명·2v2(한국) 4명뿐이라 투기장 줄은 1인 조합전(45명) 채택률과 일반 원칙 기준",
+   "Static Field Totem은 전장 대공세 47명 중 12명만 골라 선택 사항으로 적음"
+  ]
+ }
+}

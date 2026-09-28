@@ -1,0 +1,75 @@
+{
+ "id": "priest/shadow",
+ "arena": [
+  "[생존기] Dispersion은 기절·공포·침묵 중에도 쓸 수 있고 6초간 받는 모든 피해를 75% 줄이지만 그동안 공격과 주문을 쓸 수 없으니 제어에 묶인 채 폭딜을 받을 때 눌러라",
+  "[회피] Phase Shift를 고르면 Fade를 쓸 때 1초간 모든 공격과 주문을 피하지만 차단은 피하지 못하니 상대 제어 주문 시전이 끝나는 순간에 Fade를 눌러라",
+  "[우선 처치] Psyfiend는 12초간 대상의 이동 속도와 받는 치유를 50% 줄이니 폭딜 대상에게 소환해 상대 치유 전담이 대상을 살리기 어렵게 하라",
+  "[제어] Silence는 40미터 밖에서 대상을 5초간 침묵시키니 상대 치유 전담에게 걸고 그동안 Voidform을 켜서 폭딜을 넣어라",
+  "[제어] Psychic Scream은 8미터 안 적을 8초간 공포로 도망치게 하지만 피해에 풀릴 수 있으니 아군이 때리지 않는 적이 붙었을 때 써라",
+  "[참고] Vampiric Touch를 해제한 적은 3초간 공포에 빠지니 상대 치유 전담이 해제할 만한 대상에게 먼저 걸어 두어라",
+  "[해제] Mass Dispel은 15미터 안 아군 5명의 해로운 마법과 적 5명의 이로운 마법 하나를 지우고 일반 해제로 못 지우는 마법도 지우니 상대의 해제 불가 마법 보호 효과를 벗길 때 써라",
+  "[해제] Dispel Magic은 적 대상의 이로운 마법 효과 하나를 지우니 상대 치유 전담이 건 마법 보호 효과를 벗겨라"
+ ],
+ "bg": [
+  "[참고] 전장 대공세는 딜러 5~6명 편성이고 깃발 운반은 치유 전담이 먼저 맡으니 Angelic Feather의 이동 속도 증가를 아군 깃발 운반자 경로에 깔아 운반을 도와라",
+  "[분담] Leap of Faith는 아군을 즉시 내 앞으로 끌어오니 적에게 붙잡힌 아군 깃발 운반자를 아군 쪽으로 빼내라",
+  "[우선 처치] Psyfiend는 전장 대공세 44명 중 37명이 골랐고 12초간 대상의 이동 속도와 받는 치유를 50% 줄이니 상대 깃발 운반자나 구슬 운반자에게 소환하라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Dispersion을 폭딜 직전에 먼저 쓰고 Dispersion 동안 늘어난 이동 속도로 빠져나와라",
+  "[제어] Psychic Scream으로 공포에 빠진 적은 밀쳐낼 수 없으니 거점을 점령하려는 적에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라",
+  "[해제] Mass Dispel은 15미터 안 아군 5명의 해로운 마법을 한 번에 지우니 거점 한타로 뭉친 아군에게 마법 제어가 여럿 걸렸을 때 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 50명 중 44명과 전장 대공세 44명 중 36명이 고른 Phase Shift는 Fade 때 1초간 모든 공격과 주문을 피하게 하며, 1인 조합전 50명 중 43명이 고른 Driven to Madness는 Voidform이 꺼져 있을 때 공격받을수록 재사용 대기시간을 줄이고, 전장 대공세 44명 중 37명이 고른 Psyfiend는 대상의 이동 속도와 받는 치유를 50% 줄인다.",
+ "tips": {
+  "phase shift": "408557",
+  "driven to madness": "199259",
+  "psyfiend": "211522"
+ },
+ "spells": {
+  "408557": {
+   "n": "Phase Shift",
+   "i": "spell_priest_spectralguise",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Step into the shadows when you cast Fade, avoiding all attacks and spells for 1 sec.\n\nInterrupt effects are not affected by Phase Shift."
+  },
+  "199259": {
+   "n": "Driven to Madness",
+   "i": "ability_warlock_improvedsoulleech",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "While Voidform is not active, being attacked will reduce the cooldown of Voidform by 3 sec. (1s cooldown)"
+  },
+  "211522": {
+   "n": "Psyfiend",
+   "i": "spell_priest_psyfiend",
+   "m": "Tank Specs – Row 1 PvP Talent · 40 yd range · Instant · 45 sec cooldown",
+   "d": "Summons a Psyfiend with [Total Health * (0.04)] health for 12 sec beside you to attack the target at range with Psyflay.\n\nPsyflay\nDeals up to 1% of the target's total health in Shadow damage every 1 sec. Also slows their movement speed by 50% and reduces healing received by 50%."
+  }
+ },
+ "spellsKo": {
+  "408557": {
+   "n": "위상 변화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "소실 시전 시 그림자에 숨어들어 1초 동안 모든 공격과 주문을 회피합니다.\n\n주문 방해 효과는 위상 변화에 영향을 받지 않습니다."
+  },
+  "199259": {
+   "n": "광기에 내몰리다",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "공허의 형상이 활성화되지 않은 상태에서 공격을 받으면 공허의 형상의 재사용 대기시간이 3초만큼 감소합니다. (1초 재사용 대기시간)"
+  },
+  "211522": {
+   "n": "영혼의 마귀",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 40 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "생명력이 [총 생명력 * (0.04)]인 영혼의 마귀를 곁에 소환해 12초 동안 원거리의 적을 영혼의 채찍으로 공격하게 합니다.\n\n영혼의 채찍\n1초마다 대상의 생명력의 최대 1%만큼 암흑 피해를 입힙니다. 또한, 대상의 이동 속도를 50%만큼 감소시키고 받는 치유 효과를 50%만큼 감소시킵니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 공허술사 46·집정관 4, 전장 대공세 31·13으로 갈려 한쪽 전용 기술(Halo 계열 등)은 쓰지 않음",
+   "쌍점이 든 이름(Shadow Word 계열·Power Word 계열·Mind Flay 계열)은 지침에 따라 문장에 쓰지 않음",
+   "Psyfiend 치유 감소와 전장 고정 치유 20% 감소가 어떻게 겹치는지는 툴팁으로 확인되지 않아 연결하지 않음"
+  ]
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "id": "death-knight/unholy",
+ "arena": [
+  "[우선 처치] Necrotic Wounds를 고르면 Putrefy가 적중할 때마다 대상이 받는 치유를 15초간 8%씩 최대 3번 흡수하니 폭딜 대상 한 명에게 Putrefy를 몰아 넣어라",
+  "[생존기] Anti-Magic Shell은 5초간 마법 피해를 흡수하고 해로운 마법 효과가 걸리지 않게 하니 상대 시전자의 마법 제어나 마법 폭딜이 들어올 때 써라",
+  "[분담] Spellwarden을 고르면 Anti-Magic Shell을 아군에게도 걸 수 있고 재사용 대기시간이 10초 줄어드니 아군 치유 전담에게 마법 제어가 날아올 때 걸어 주어라",
+  "[생존기] Icebound Fortitude는 8초간 기절에 면역이 되고 받는 모든 피해를 30% 줄이니 상대 기절 연계가 시작되기 직전에 켜고 공포 제어에는 Lichborne을 미리 켜라",
+  "[제어] Strangulate를 고르면 Asphyxiate 대신 20미터 밖 대상을 4초간 침묵시키니 상대 치유 전담에게 걸고 그동안 Dark Transformation을 켜서 폭딜을 넣어라",
+  "[차단] Mind Freeze는 15미터 밖에서 시전을 끊고 그 계열 주문을 5초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[우선 처치] Death Grip은 30미터 밖 대상을 내 쪽으로 끌어오니 기둥 뒤로 숨은 폭딜 대상이나 상대 치유 전담을 시야 안으로 끌어내라",
+  "[제어] Blinding Sleet은 전방 적을 5초간 방향 상실시키고 끝나면 6초간 50% 감속시키지만 피해에 풀릴 수 있으니 아군이 때리지 않는 상대 딜러들에게 써라"
+ ],
+ "bg": [
+  "[참고] 거점 수비는 소환수 직업이 좋으니 Raise Dead로 불러낸 소환수와 함께 거점 깃발을 지키고 Death Grip으로 점령하려는 적을 깃발에서 끌어내라",
+  "[우선 처치] Necrotic Wounds는 전장 대공세 40명 중 39명이 골랐고 Putrefy로 대상이 받는 치유를 최대 24%까지 흡수하니 상대 깃발 운반자나 구슬 운반자에게 몰아 넣어라",
+  "[위치] Wraith Walk는 뿌리묶기를 풀고 4초간 이동 속도를 70% 올리며 감속을 막으니 붙잡힌 채 거점이나 깃발 운반자에게 가야 할 때 쓰고 다른 행동을 하면 풀린다는 점을 기억하라",
+  "[위치] Death's Advance는 10초간 이동 속도를 35% 올리고 밀쳐내기에 면역이 되니 가장자리나 수레 원 근처에서 밀쳐내기에 떨어지지 않게 켜라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Icebound Fortitude와 Anti-Magic Shell을 폭딜 직전에 먼저 써라",
+  "[제어] Blinding Sleet으로 방향 상실에 빠진 적은 밀쳐낼 수 없으니 거점을 점령하려는 적에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라"
+ ],
+ "pvpTalents": "1인 조합전 상위 48명 모두와 전장 대공세 40명 중 39명이 고른 Necrotic Wounds는 Putrefy가 적중한 대상이 받는 치유를 8%씩 최대 3번 흡수하며, 1인 조합전 48명 중 41명이 고른 Spellwarden은 Anti-Magic Shell을 아군에게도 걸게 하고, 1인 조합전 48명 중 36명과 전장 대공세 40명 중 30명이 고른 Strangulate는 Asphyxiate 대신 4초 침묵을 건다.",
+ "tips": {
+  "necrotic wounds": "356520",
+  "spellwarden": "410320",
+  "strangulate": "47476",
+  "asphyxiate": "221562",
+  "lichborne": "49039"
+ },
+ "spells": {
+  "356520": {
+   "n": "Necrotic Wounds",
+   "i": "ability_racial_aberration",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Putrefy applies a Necrotic Wound to the enemy when it deals damage, absorbing 8% of all healing received for 15 sec.\n\nMax 3 stacks. Adding a stack does not refresh the duration."
+  },
+  "410320": {
+   "n": "Spellwarden",
+   "i": "spell_shadow_antimagicshell",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Anti-Magic Shell is now usable on allies and its cooldown is reduced by 10 sec."
+  },
+  "47476": {
+   "n": "Strangulate",
+   "i": "spell_shadow_soulleech_3",
+   "m": "Tank Specs – Row 1 PvP Talent · Replaces Asphyxiate · 20 yd range · Instant · 45 sec cooldown",
+   "d": "Shadowy tendrils constrict an enemy's throat, silencing them for 4 sec."
+  },
+  "221562": {
+   "n": "Asphyxiate",
+   "i": "ability_deathknight_asphixiate",
+   "m": "Talent · 20 yd range · Instant · 45 sec cooldown",
+   "d": "Lifts the enemy target off the ground, crushing their throat with dark energy and stunning them for 5 sec."
+  },
+  "49039": {
+   "n": "Lichborne",
+   "i": "spell_shadow_raisedead",
+   "m": "Instant · 2 min cooldown",
+   "d": "Draw upon unholy energy to become Undead for 10 sec, increasing Leech by 6% and making you immune to Charm, Fear, and Sleep."
+  }
+ },
+ "spellsKo": {
+  "356520": {
+   "n": "괴저 상처",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "부패가 적에게 피해를 입힐 때 괴저 상처를 부여해 15초 동안 받는 모든 치유 효과의 8%를 흡수합니다.\n\n최대 3번까지 중첩됩니다. 중첩되어도 지속시간을 갱신시키지 않습니다."
+  },
+  "410320": {
+   "n": "주문 수호자",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "아군에게 대마법 보호막을 시전할 수 있습니다. 또한 재사용 대기시간이 10초만큼 감소합니다."
+  },
+  "47476": {
+   "n": "질식시키기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 어둠의 질식을(를) 대신함 · 20 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "어둠의 촉수로 대상의 목을 졸라 4초 동안 침묵하도록 만듭니다."
+  },
+  "221562": {
+   "n": "어둠의 질식",
+   "m": "특성 · 20 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "암흑 마력으로 적 대상을 지면에서 들어올리고 목을 휘감아 5초 동안 기절시킵니다."
+  },
+  "49039": {
+   "n": "리치의 혼",
+   "m": "즉시 · 2 분 재사용 대기시간",
+   "d": "부정의 에너지를 끌어내 10초 동안 언데드가 되어, 생기흡수가 6%만큼 증가하고 현혹과 공포, 수면에 면역이 됩니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 산레인 43·종말의 기수 5, 전장 대공세 산레인 18·종말의 기수 22로 갈려 한쪽 전용 기술(Death Charge 등)은 쓰지 않음",
+   "Necrotic Wounds 치유 흡수와 전장 고정 치유 20% 감소가 어떻게 겹치는지는 툴팁으로 확인되지 않아 연결하지 않음",
+   "Raise Dead 소환수의 거점 수비 쓰임은 모드 요구(거점 수비는 소환수 직업이 좋다) 기준"
+  ]
+ }
+}

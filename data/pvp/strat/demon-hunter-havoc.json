@@ -1,0 +1,99 @@
+{
+ "id": "demon-hunter/havoc",
+ "arena": [
+  "[생존기] Blur는 10초간 받는 모든 피해를 25% 줄이니 상대 폭딜 쿨기가 켜지는 순간에 맞춰 써라",
+  "[회피] Glimpse를 고르면 Vengeful Retreat로 뛰는 동안 제어 효과에 면역이 되고 착지할 때까지 받는 피해가 20% 주니 상대 제어 주문 시전이 끝나기 직전에 뒤로 뛰어라",
+  "[생존기] Darkness는 8미터 안 아군이 8초간 공격을 피할 확률을 주고 공격대가 아닐 때 확률이 두 배가 되니 투기장에서 아군 치유 전담이 폭딜을 받을 때 곁에서 켜라",
+  "[해제] Reverse Magic을 고르면 나와 10미터 안 아군의 해로운 마법 효과를 모두 지우고 시전자에게 되돌리니 아군 치유 전담 곁에서 마법 제어가 걸리면 바로 써라",
+  "[해제] Blood Moon을 고르면 Consume Magic이 대상 8미터 안의 모든 적에게서 이로운 마법 효과를 하나씩 지우니 상대 둘이 붙어 있을 때 보호 효과를 한꺼번에 벗겨라",
+  "[제어] Imprison은 대상을 1분간 행동 불가로 만들지만 피해에 풀릴 수 있고 Detainment를 고르면 갇힌 대상이 피해와 치유 모두에 면역이 되니 상대 치유 전담에게 걸고 다른 대상을 공격하라",
+  "[제어] Chaos Nova는 주변 적을 모두 3초간 기절시키니 상대 치유 전담에게 붙어 묶은 사이 아군과 함께 Essence Break로 폭딜을 넣어라",
+  "[차단] Disrupt는 시전을 끊고 그 계열 주문을 5초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라"
+ ],
+ "bg": [
+  "[참고] 깃발 지도에서 치유 전담이 운반하지 못하면 이동력 좋은 딜러가 운반하니 깃발을 들면 Vengeful Retreat로 감속을 모두 풀고 Fel Rush로 추격자와 거리를 벌려라",
+  "[생존기] Rain from Above는 전장 대공세 47명 중 25명이 골랐고 공중으로 떠올라 피해에서 벗어난 채 아래 적에게 공격할 수 있으니 거점 한타에서 집중 공격받을 때 써라",
+  "[제어] Sigil of Misery는 2초 뒤 인장 위 적을 모두 15초간 방향 상실시키지만 방향 상실에 걸린 대상은 밀쳐낼 수 없으니 거점을 점령하려는 적에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라",
+  "[분담] Spectral Sight는 8초간 은신하거나 투명한 적을 보여 주니 거점을 지킬 때 상대 은신 직업이 몰래 점령하러 오는지 확인하라",
+  "[해제] Reverse Magic을 고르면 10미터 안 아군의 해로운 마법 효과를 모두 지우니 거점에 뭉친 아군에게 마법 제어가 여럿 걸렸을 때 써라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Blur를 폭딜 직전에 먼저 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 47명 중 46명이 고른 Blood Moon은 Consume Magic을 대상 8미터 안의 모든 적에게 넓히고, 1인 조합전 47명 중 43명과 전장 대공세 47명 중 45명이 고른 Glimpse는 Vengeful Retreat 동안 제어 효과 면역과 받는 피해 20% 감소를 주며, 1인 조합전 47명 중 33명이 고른 Reverse Magic은 나와 10미터 안 아군의 해로운 마법 효과를 모두 지워 시전자에게 되돌린다.",
+ "tips": {
+  "blood moon": "355995",
+  "glimpse": "354489",
+  "reverse magic": "205604",
+  "detainment": "205596",
+  "rain from above": "206803"
+ },
+ "spells": {
+  "355995": {
+   "n": "Blood Moon",
+   "i": "spell_misc_zandalari_council_soulswap",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Consume Magic now affects all enemies within 8 yards of the target and generates a Lesser Soul Fragment, with a 15% chance to be upgraded to a Greater Soul."
+  },
+  "354489": {
+   "n": "Glimpse",
+   "i": "ability_demonhunter_vengefulretreat2",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Vengeful Retreat provides immunity to loss of control effects, and reduces damage taken by 20% until you land."
+  },
+  "205604": {
+   "n": "Reverse Magic",
+   "i": "ability_demonhunter_reversemagic",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 1 min cooldown",
+   "d": "Removes all harmful magical effects from yourself and all nearby allies within 10 yards, and sends them back to their original caster if possible."
+  },
+  "205596": {
+   "n": "Detainment",
+   "i": "inv_misc_steelweaponchain",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Imprison's PvP duration is increased by 1 sec, and targets become immune to damage and healing while imprisoned."
+  },
+  "206803": {
+   "n": "Rain from Above",
+   "i": "ability_demonhunter_rain-from-above",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 1.5 min cooldown",
+   "d": "You fly into the air out of harm's way. While floating, you gain access to Fel Lance allowing you to deal damage to enemies below."
+  }
+ },
+ "spellsKo": {
+  "355995": {
+   "n": "핏빛 달",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "마법 삼키기가 대상의 8미터 내에 있는 모든 적에게 영향을 주고 하급 영혼 파편을 생성합니다. 이때 15%의 확률로 상급 영혼으로 강화됩니다."
+  },
+  "354489": {
+   "n": "벗어나기",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "복수의 퇴각이 제어 불가 효과에 면역으로 만들며 착지할 때까지 받는 피해를 20%만큼 감소시킵니다."
+  },
+  "205604": {
+   "n": "마법 역전",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 1 분 재사용 대기시간",
+   "d": "자신과 주위 10미터 내의 모든 아군에게서 해로운 마법 효과를 제거하고, 가능한 경우 해당 효과를 시전한 대상에게 되돌려줍니다."
+  },
+  "205596": {
+   "n": "억류",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "플레이어 간 전투 시 감금의 지속시간이 1초만큼 증가하고, 감금된 대상은 피해 및 치유에 면역이 됩니다."
+  },
+  "206803": {
+   "n": "하늘에서 내리는 비",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "공중으로 날아올라 위험에서 벗어납니다. 비행하는 동안 지옥 창 능력으로 아래의 적을 공격할 수 있습니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 알드라치 파괴자 41·지옥상흔 6, 전장 대공세 23·24로 갈려 한쪽 전용 기술은 쓰지 않음",
+   "지도 공략상 운반자가 일부 무적 기술을 쓰면 깃발이 떨어지는데 Rain from Above가 여기에 드는지 확인되지 않아 운반 중 사용 권고는 쓰지 않음",
+   "Darkness의 확률 두 배 조건은 툴팁의 공격대가 아닐 때 문구 기준, 전장은 공격대 편성이라 전장 줄에는 쓰지 않음"
+  ]
+ }
+}

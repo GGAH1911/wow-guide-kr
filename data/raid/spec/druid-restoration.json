@@ -1,0 +1,151 @@
+{
+ "id": "druid/restoration",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Essence Rend 대상이 방 가장자리에 도착하면 Nature's Cure로 지워라, 지운 자리에 Latent Cultist 장판이 남는다",
+    "[생존기] 2단계 Invoke마다 Soulcoil Rite가 터지니 Tranquility 차례를 맡아라",
+    "@m [참고] Invoke가 끝나는 순간 시전 중인 주문이 끊기니 6초 정신 집중인 Tranquility는 Invoke가 끝난 뒤 시작하라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood는 마법 효과이니 Nature's Cure로 바로 지워라",
+    "[위치] 두 조가 40미터 이상 떨어지니 Tranquility는 40미터 안 자기 조에만 닿는다, 맡은 조 곁에서 써라",
+    "[분담] Unstable Miasma를 7.5미터 안에서 나눠 맞는 자리에 Efflorescence를 깔아라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Exploding Infection은 지울 때 Caustic Explosion이 공대를 치니 다른 해제자와 시차를 두고 Nature's Cure로 한 명씩 지워라",
+    "@m [생존기] Imbibe마다 커지는 Gloom Expulsion과 Conflagrating Expulsion에 Tranquility나 Convoke the Spirits 차례를 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[해제] 차단을 놓친 Icebound Flames는 마법 효과이니 Nature's Cure로 지워라",
+    "[생존기] Frostfire Volley 디버프를 지우는 구간에 Tranquility나 Convoke the Spirits를 맞춰라",
+    "[탱버] First Mate Nama의 Steady Strikes 중첩이 높을 때 Ironbark를 탱커에게 걸어라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[탱버] Ravage를 맞는 탱커에게 Ironbark를 걸어 받는 피해를 20% 줄여라",
+    "[위치] Howling Maelstrom 돌풍 전에 가운데로 모일 때 Stampeding Roar로 15미터 안 인원의 이동 속도를 60% 올려라",
+    "@m [분담] Serpent's Fury 대상 8미터 안에 14명 이상 모일 때 그 자리에 Efflorescence와 Wild Growth를 깔아라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[생존기] Stir the Depths 6초 공대 피해에 Tranquility를 맞춰라",
+    "@m [분담] Tainted Blood 원천 안의 인원에게 Wild Growth와 Swiftmend를 몰아 8초 안에 흡수량을 채워라",
+    "[광역 피해] Toxic Fumes와 Eternal Venom 도트가 전투 내내 이어지니 Rejuvenation을 여럿에 유지하라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[생존기] Suffocating Darkness와 Defilement of the Coiled Altar 치유 흡수 구간에 Tranquility와 Convoke the Spirits를 나눠 맞춰라",
+    "@hm [생존기] Sever 직후 Venom Rupture 도트가 겹겹이 쌓이니 Convoke the Spirits를 맞춰라",
+    "[위치] Guillotine을 나눠 맞은 뒤 40미터 밖으로 흩어질 때 Stampeding Roar로 15미터 안 인원의 이동 속도를 60% 올려라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Blightscale Viper의 Acidic Burst 독 도트는 Improved Nature's Cure를 찍은 Nature's Cure로 지워라",
+    "@hm [해제] Blightscale Rawling의 Poisonous Bite 중첩도 독이니 Nature's Cure로 지워라",
+    "[생존기] Rage of the Shackled 20초 공대 피해와 Fury Unleashed에 Tranquility와 Convoke the Spirits를 나눠 써라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[생존기] Unending Tides에 Tranquility 차례를 맞춰라",
+    "[광역 피해] Pulsing Tides와 Pop! 공대 피해에 대비해 Rejuvenation을 여럿에 깔고 Wild Growth를 쿨마다 써라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval에 Tranquility로 40미터 안 공대를 6초 동안 치유하라",
+    "[분담] 공대가 모여 Umbral Collapse를 나눠 맞는 자리에 Efflorescence를 깔고 Wild Growth로 함께 채워라",
+    "@m [해제] Abyssal Malus의 Black Miasma는 저주이니 Improved Nature's Cure를 찍은 Nature's Cure로 지워라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] Blisterburst 받는 피해 증가와 Creep Spit 감속은 마법 효과이니 Nature's Cure로 지워라",
+    "[회피] Void Breath 방향이 정해지면 Stampeding Roar로 15미터 안 공대원 이동 속도를 60% 올려 방 끝으로 달리게 하라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 Tranquility를 맞춰라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[생존기] Entropic Unraveling 20초 공대 피해에 Tranquility를 써라",
+    "[참고] Despotic Command가 끝난 대상의 Oppressive Darkness 치유 흡수는 Swiftmend와 Regrowth로 벗겨라",
+    "[탱버] 벽 쪽에서 Shattering Twilight를 받는 탱커에게 Ironbark로 받는 피해를 20% 줄여라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath 공포는 마법 효과이니 Nature's Cure로 바로 지워라",
+    "[생존기] Midnight Flames 동안 Radiant Barrier 안에 모인 공대에 Efflorescence를 깔고 Tranquility로 흡수막을 뚫는 피해를 채워라",
+    "[참고] Rakfang 중첩으로 치유 흡수가 붙는 탱커에게 Ironbark를 걸고 Lifebloom을 유지하라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] Avenger's Shield 도트는 마법 효과이니 Nature's Cure로 바로 지워라",
+    "[분담] Tyr's Wrath 치유 흡수가 걸린 인원은 Wild Growth와 Swiftmend로 집중 치유하라",
+    "@hm [광역 피해] Searing Radiance 15초 공대 피해 동안 Rejuvenation을 넓게 깔고 Wild Growth를 이어라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] 플레이어에게 묻은 Corrupting Essence는 마법 효과이니 Nature's Cure로 지워라",
+    "[해제] Null Corona는 Nature's Cure로 지우면 흡수량이 다른 사람에게 옮겨 가니 Regrowth로 채우고 위급할 때만 지워라",
+    "@nh [생존기] Aspect of the End를 끊어 Gravity Collapse가 걸린 탱커에게 Ironbark를 걸어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[해제] 차단을 놓친 Fearsome Cry 공포는 마법 효과이니 Nature's Cure로 지워라",
+    "@hm [해제] Consuming Miasma 대상이 Alndust Essence 웅덩이 곁에 닿으면 Nature's Cure로 지워라",
+    "[광역 피해] 쫄이 나올 때마다 걸리는 Rift Sickness 치유 흡수는 Wild Growth로 여러 명을 함께 벗겨라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[광역 피해] Light Burn·Void Burn 치유 흡수는 Swiftmend와 Regrowth로 다 치유해 없애라",
+    "[생존기] 2단계 Rebirth 동안 Burning Heart가 잦아지니 Tranquility나 Convoke the Spirits를 맞춰라",
+    "[탱버] Light Edict·Void Edict를 맞는 탱커에게 Ironbark를 걸어라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[분담] Dusk Crystal은 Regrowth와 Swiftmend로 가득 치유해 Dawn Crystal로 바꿔라",
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩은 Typhoon으로 매트릭스를 밀쳐 없애라",
+    "[생존기] Shattered Sky 25초 공대 피해에 Tranquility를 맞춰라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [해제] 차단을 놓친 Poison Burst 독 도트는 Improved Nature's Cure를 찍은 Nature's Cure로 지워라",
+    "[생존기] Rotting Pustules로 뒤로 갈수록 피해가 커지니 Tranquility와 Convoke the Spirits를 전투 후반에 몰아 두라",
+    "[광역 피해] 쫄 처치 자리에 모인 공대에 Efflorescence를 깔고 Fungal Bloom 도트에 Wild Growth를 이어라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "독 해제는 Improved Nature's Cure 기준",
+   "Grove Guardians·Implant 등 영웅 카드에 걸린 기술 제외",
+   "1시즌: 해제 줄은 digest 해제 목록(Magic·Curse·Poison)과 Nature's Cure·Improved Nature's Cure 툴팁을 짝지었다.",
+   "1시즌: Convoke the Spirits는 전문화 특성으로 쐐기 파일에 있어 썼다. 영웅 특성 전용 기술은 쓰지 않았다."
+  ]
+ }
+}

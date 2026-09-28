@@ -1,0 +1,154 @@
+{
+ "id": "paladin/holy",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Essence Rend는 마법 효과이니 대상이 방 가장자리에 도착한 뒤 Cleanse로 지워라, 지운 자리에 Latent Cultist 장판이 남는다",
+    "[생존기] 2단계 Invoke마다 Soulcoil Rite가 터지니 Aura Mastery로 40미터 안 공대가 받는 피해를 줄이는 차례를 맡아라",
+    "@m [참고] Invoke가 끝나는 순간 시전 중인 주문이 끊기니 그 순간에는 Holy Light 대신 즉시 시전인 Holy Shock과 Word of Glory로 치유하라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood는 마법 효과인 18초 도트이니 Cleanse로 바로 지워라",
+    "[위치] 두 조가 40미터 이상 떨어지니 Aura Mastery와 Light of Dawn은 40미터 안 자기 조에만 닿는다, 맡은 조 곁에 머물러라",
+    "[광역 피해] Venom Coagulation 수액괴물이 살아 있는 동안 Contaminate가 3초마다 공대를 치니 Divine Toll과 Beacon of Virtue로 여러 명을 함께 채워라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Exploding Infection은 Cleanse로 지울 때마다 Caustic Explosion이 공대 전체를 치니 다른 해제자와 시차를 두고 한 명씩 지워라",
+    "@m [생존기] Imbibe마다 커지는 Gloom Expulsion과 Conflagrating Expulsion에 Aura Mastery 차례를 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[해제] 차단을 놓친 Icebound Flames는 마법 효과이니 Cleanse로 지워라",
+    "[생존기] Scrollsage Iku 궁극기에서 Frostfire Volley 디버프를 지우는 구간에 Aura Mastery나 Avenging Wrath를 맞춰라",
+    "[탱버] First Mate Nama의 Steady Strikes 중첩이 높을 때 Blessing of Sacrifice로 탱커가 받는 피해를 30% 줄여라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[탱버] Ravage를 맞는 탱커에게 Blessing of Sacrifice를 걸어 받는 피해를 30% 줄여라",
+    "[광역 피해] Venomous Surge가 끝나면 공대 전체가 피해를 받으니 곧바로 Light of Dawn과 Divine Toll로 채워라",
+    "[위치] Howling Maelstrom 돌풍 전에 경기장 가운데로 모일 때 늦으면 Divine Steed로 이동 속도를 올려 합류하라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[생존기] Stir the Depths는 6초간 공대 전체를 치니 Aura Mastery로 받는 피해를 줄이고 Protection of Tyr의 받는 치유 증가를 함께 받게 하라",
+    "@m [분담] Tainted Blood 원천 안에 선 인원에게 Beacon of Virtue를 걸고 Holy Shock을 몰아 8초 안에 흡수량을 채워라",
+    "@m [탱버] Blood Torrent로 치유 흡수가 쌓이는 Ithraz 탱커에게 Blessing of Sacrifice를 걸어 받는 피해를 30% 줄여라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[생존기] Veil of Twilight 동안 Suffocating Darkness 치유 흡수가 쌓이니 Avenging Wrath로 치유량을 올려 흡수를 벗겨라",
+    "@hm [생존기] Sever로 구슬을 터뜨린 직후 Venom Rupture 도트가 겹겹이 쌓이니 Aura Mastery를 맞춰라",
+    "[위치] Guillotine을 나눠 맞은 뒤 곧바로 40미터 밖으로 흩어져야 하니 Divine Steed를 남겨 두라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Blightscale Viper의 Acidic Burst는 독 도트이니 Improved Cleanse를 찍은 Cleanse로 지워라",
+    "@hm [해제] Blightscale Rawling의 Poisonous Bite 중첩도 독이니 Cleanse로 지워라",
+    "[생존기] Rage of the Shackled 20초 공대 피해와 Fury Unleashed에 Aura Mastery와 Avenging Wrath를 나눠 써라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[생존기] Unending Tides가 매초 공대를 칠 때 Aura Mastery 차례를 맞춰라",
+    "[광역 피해] Pop!은 공대 전체 피해와 밀쳐내기이니 밀려나 흩어진 인원을 Divine Toll과 Beacon of Virtue로 함께 채워라",
+    "@hm [생존기] Frost Orb를 놓쳐 Shatter 중첩 도트가 쌓이면 Avenging Wrath로 치유량을 올려 버텨라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval에 Aura Mastery로 Devotion Aura의 피해 감소를 12%로 올려라",
+    "[광역 피해] 사이 단계 Dark Barrage가 여러 명에게 떨어지면 Beacon of Virtue를 걸고 Light of Dawn으로 함께 채워라",
+    "@m [광역 피해] Void Marked를 해제받은 대상에게 10초 동안 걸리는 Lingering Darkness 도트는 Holy Shock과 Word of Glory로 채워라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] Blisterburst의 받는 피해 증가와 Creep Spit 이동 속도 감소는 마법 효과이니 Cleanse로 지워라",
+    "[광역 피해] Primordial Roar로 공대가 모여 맞은 뒤 Light of Dawn으로 40미터 안 5명을 한꺼번에 채워라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 Aura Mastery를 맞춰라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[생존기] Entropic Unraveling 20초 공대 피해에 Aura Mastery와 Avenging Wrath를 함께 써라",
+    "[참고] Despotic Command가 끝난 대상의 Oppressive Darkness 치유 흡수는 Holy Shock과 Word of Glory로 벗겨라",
+    "@hm [광역 피해] Dark Radiation 중첩 도트가 공대에 걸리면 Beacon of Virtue와 Light of Dawn으로 채워라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath 공포에 걸린 인원은 마법 효과이니 Cleanse로 바로 지워라",
+    "[생존기] Midnight Flames 피해 일부가 Radiant Barrier 흡수막을 뚫으니 Aura Mastery로 공대가 받는 피해를 줄여라",
+    "[참고] Rakfang 중첩으로 치유 흡수가 붙는 탱커에게는 Beacon of Light를 걸어 두고 Holy Light로 채워라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] Avenger's Shield 도트는 마법 효과이니 Cleanse로 바로 지워라",
+    "[분담] Tyr's Wrath 치유 흡수가 걸린 5명에게 Beacon of Virtue를 걸고 Holy Shock과 Light of Dawn을 몰아라",
+    "@m [생존기] 강화된 Searing Radiance 피해가 1초마다 커지면 Aura Mastery를 켜라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] 플레이어에게 묻은 Corrupting Essence는 마법 효과이니 Cleanse로 지워라",
+    "[해제] Null Corona는 Cleanse로 지우면 흡수량이 다른 사람에게 옮겨 가니 Holy Light로 흡수막을 채우고 위급할 때만 Cleanse를 써라",
+    "@nh [광역 피해] Cosmic Barrier가 있는 동안 매초 공대 피해가 들어오니 Beacon of Virtue와 Light of Dawn으로 버텨라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[해제] 차단을 놓친 Fearsome Cry 공포는 마법 효과이니 Cleanse로 지워라",
+    "@hm [해제] Consuming Miasma 대상이 Alndust Essence 웅덩이 곁에 닿으면 Cleanse로 지워라",
+    "[광역 피해] 쫄이 나올 때마다 걸리는 Rift Sickness 치유 흡수는 Beacon of Virtue와 Light of Dawn으로 여러 명을 함께 벗겨라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[광역 피해] Light Burn·Void Burn 치유 흡수는 Holy Shock과 Word of Glory로 다 치유해 없애라",
+    "[생존기] 2단계 Rebirth 동안 Burning Heart가 잦아지니 Avenging Wrath로 치유량을 20% 올려라",
+    "@m [분담] Divine Shield를 켠 채 움직일 수 있으니 Radiant Echoes 구슬 처리 담당을 맡을 수 있다"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[분담] Dusk Crystal은 Holy Shock과 Holy Light로 가득 치유해 Dawn Crystal로 바꿔라",
+    "[광역 피해] Total Eclipse 동안 Eclipsed 치유 흡수는 Beacon of Virtue와 Light of Dawn으로 벗기고 수정 운반자를 먼저 챙겨라",
+    "[생존기] Shattered Sky 25초 공대 피해에 Aura Mastery를 맞춰라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [해제] 차단을 놓친 Poison Burst 독 도트는 Improved Cleanse를 찍은 Cleanse로 지워라",
+    "[생존기] Rotting Pustules로 뒤로 갈수록 피해가 커지니 Aura Mastery와 Avenging Wrath를 전투 후반에 몰아 두라",
+    "[광역 피해] Fungal Bloom 공대 피해와 16초 도트에 Beacon of Virtue와 Light of Dawn을 써라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [
+   "Aura Mastery의 Concentration Aura 차단·침묵 면역이 신화 Invoke 침묵을 막는지는 출처가 없어 쓰지 않음"
+  ],
+  "notes": [
+   "독 해제는 Improved Cleanse 특성 기준",
+   "Holy Bulwark·Dawnlight 등 영웅 특성 한쪽 기술은 제외",
+   "1시즌: 해제 줄은 digest 해제 목록(Magic/Poison)과 Cleanse·Improved Cleanse 툴팁을 짝지었다. Void Marked는 해제 유형이 확인되지 않아 Cleanse 대신 도트 치유 줄로 썼다.",
+   "1시즌: Vanguard 탭에서는 보스 기술과 이름이 겹치는 Divine Toll·Avenging Wrath·Judgment를 쓰지 않았다. Divine Shield 구슬 줄은 digest의 면역기 담당 문구에 근거했다."
+  ]
+ }
+}

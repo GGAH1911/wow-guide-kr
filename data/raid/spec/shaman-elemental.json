@@ -1,0 +1,269 @@
+{
+ "id": "shaman/elemental",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] Gravebound Advance 보호막이 남은 Restless Amani는 Earthgrab Totem으로 묶어 우물 도착을 늦춰라",
+    "@m [참고] Invoke가 끝나는 순간 시전 중인 주문이 끊기니 그때는 Lightning Bolt와 Lava Burst 시전을 멈춰라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Wind Shear로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Stormkeeper를 켜 바로 처치하라",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Ascendance를 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞을 때 Astral Shift로 받는 피해를 40% 줄여라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Chain Lightning과 Earthquake로 광역 정리해 중앙에 닿기 전에 잡아라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Capacitor Totem으로 기절시키거나 Earthgrab Totem으로 묶을 수 있다",
+    "@m [생존기] Gloom Expulsion과 Conflagrating Expulsion에 Astral Shift를 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Wind Shear로 끊어라",
+    "[위치] Blink Nova 대상이 되면 Gust of Wind나 Ghost Wolf로 공대에서 빨리 멀어져라",
+    "[회피] Shell Spin 껍질과 Evil Eyes 불꽃을 피해 움직일 때 Spiritwalker's Grace로 시전을 이어가라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 Ascendance와 Stormkeeper를 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Astral Shift로 받는 피해를 40% 줄여라",
+    "[회피] Tempest 회오리를 피해 움직일 때 Spiritwalker's Grace로 시전을 이어가라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Stormkeeper를 켜고 Chain Lightning으로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Astral Shift로 받는 피해를 40% 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Wind Shear로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Wind Shear로 끊어라",
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Ascendance를 몰아라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Gust of Wind나 Ghost Wolf로 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Blightscale Viper의 Acidic Burst 독은 Poison Cleansing Totem으로 30미터 안 아군에게서 지워라",
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Ascendance와 Stormkeeper를 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Wind Shear로 끊어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Chain Lightning과 Earthquake로 거품에 닿기 전에 잡아라",
+    "[위치] Chilling Frost 대상이 되어 천천히 움직여야 할 때 Spiritwalker's Grace로 시전을 이어가라",
+    "[생존기] Pop!과 Unending Tides의 공대 피해에 Astral Shift를 맞춰라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Wind Shear로 끊어라",
+    "[우선 처치] Voidmaw 무리는 Earthquake와 Chain Lightning으로 광역으로 잡아라",
+    "@m [해제] Abyssal Malus의 Black Miasma는 저주이니 Cleanse Spirit으로 지워라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] Void Breath 때는 Gust of Wind로 앞으로 뛰어 빛나는 손 반대쪽 방 끝까지 가라",
+    "[우선 처치] 벽 앞에 모인 Blistercreep은 Earthquake로 함께 잡아 Blisterburst로 Void Crystal을 부숴라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 Astral Shift로 받는 피해를 줄여라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] 먼 Fractured Image의 Shadow Fracture는 Wind Shear로 끊거나 Capacitor Totem으로 묶어라",
+    "[참고] Entropic Unraveling 20초 동안 보스가 받는 피해가 25% 늘어나니 Ascendance를 여기에 맞추고 공대 피해는 Astral Shift로 줄여라",
+    "[회피] Umbral Beams를 피해 움직이는 동안 Spiritwalker's Grace로 시전을 이어가라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Voidorb의 Voidbolt는 Wind Shear로 끊거나 Capacitor Totem으로 묶어라",
+    "[분담] Gloom 경로에서 Gloomtouched를 받을 때 Astral Shift로 받는 피해를 줄여라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[참고] 블러드 뒤 보스가 켠 Divine Shield는 적 버프 해제로 지울 수 있으니 Purge로 지워라",
+    "[차단] War Chaplain Senn의 Sacred Shield를 깬 뒤 Blinding Light를 Wind Shear로 끊어라",
+    "[분담] Execution Sentence를 대상 옆에서 나눠 맞을 때 Astral Shift로 받는 피해를 줄여라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[참고] Demiar의 Interrupting Tremor 시전이 끝날 때는 Lava Burst 시전을 멈춰라",
+    "[우선 처치] Void Droplet은 파수꾼 밑에서 Earthquake로 파수꾼과 함께 때려 처치하라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage는 Wind Shear로 끊거나 Capacitor Totem으로 묶어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Wind Shear로 가장 먼저 끊어라",
+    "[우선 처치] 아래층 조라면 Ascendance를 아껴 두었다가 쫄의 Alnshroud 보호막을 빠르게 깨라",
+    "@m [분담] Rift Madness 교대 인원이면 Gust of Wind로 대상 곁까지 빠르게 가서 영역을 바꿔라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 같은 색 깃털이면 불씨의 Light Eruption·Void Eruption을 Wind Shear로 끊어라",
+    "[생존기] 블러드는 첫 알 단계이니 Rebirth가 시작되면 Bloodlust나 Heroism을 쓰고 Ascendance를 몰아라",
+    "[분담] Light Dive·Void Dive를 같은 색 인원과 나눠 맞을 때 Astral Shift로 받는 피해를 줄여라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Matrix의 Safeguard 시전은 Wind Shear와 Capacitor Totem으로 끊고, 쌓인 Safeguard 강화 효과는 Purge로 벗겨라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 순서대로 Wind Shear로 끊어라",
+    "@m [생존기] 블러드는 3단계에 쓰니 Bloodlust나 Heroism을 이때 써라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Wind Shear로 반드시 끊어라, 멀리 생긴 두 번째 Sporecap도 원거리에서 맡아라",
+    "@hm [해제] 차단을 놓친 Poison Burst 독 도트는 Poison Cleansing Totem으로 주위 인원에게서 지워라",
+    "[우선 처치] 정한 자리에 모인 Shroomling과 Bursting Shroom은 Earthquake와 Chain Lightning으로 광역으로 잡아라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 51485",
+   "u": "https://nether.wowhead.com/tooltip/spell/51485?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 51505",
+   "u": "https://nether.wowhead.com/tooltip/spell/51505?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 188196",
+   "u": "https://nether.wowhead.com/tooltip/spell/188196?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 57994",
+   "u": "https://nether.wowhead.com/tooltip/spell/57994?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 191634",
+   "u": "https://nether.wowhead.com/tooltip/spell/191634?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 114050",
+   "u": "https://nether.wowhead.com/tooltip/spell/114050?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 108271",
+   "u": "https://nether.wowhead.com/tooltip/spell/108271?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 188443",
+   "u": "https://nether.wowhead.com/tooltip/spell/188443?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 462620",
+   "u": "https://nether.wowhead.com/tooltip/spell/462620?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 192058",
+   "u": "https://nether.wowhead.com/tooltip/spell/192058?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 2645",
+   "u": "https://nether.wowhead.com/tooltip/spell/2645?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 192063",
+   "u": "https://nether.wowhead.com/tooltip/spell/192063?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 79206",
+   "u": "https://nether.wowhead.com/tooltip/spell/79206?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 454009",
+   "u": "https://nether.wowhead.com/tooltip/spell/454009?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 383013",
+   "u": "https://nether.wowhead.com/tooltip/spell/383013?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 57994",
+   "u": "https://nether.wowhead.com/tooltip/spell/57994?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 188443",
+   "u": "https://nether.wowhead.com/tooltip/spell/188443?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 462620",
+   "u": "https://nether.wowhead.com/tooltip/spell/462620?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 51886",
+   "u": "https://nether.wowhead.com/tooltip/spell/51886?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 192063",
+   "u": "https://nether.wowhead.com/tooltip/spell/192063?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 108271",
+   "u": "https://nether.wowhead.com/tooltip/spell/108271?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 192058",
+   "u": "https://nether.wowhead.com/tooltip/spell/192058?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 114050",
+   "u": "https://nether.wowhead.com/tooltip/spell/114050?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 79206",
+   "u": "https://nether.wowhead.com/tooltip/spell/79206?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 370",
+   "u": "https://nether.wowhead.com/tooltip/spell/370?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 51505",
+   "u": "https://nether.wowhead.com/tooltip/spell/51505?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 2825",
+   "u": "https://nether.wowhead.com/tooltip/spell/2825?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 32182",
+   "u": "https://nether.wowhead.com/tooltip/spell/32182?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 383013",
+   "u": "https://nether.wowhead.com/tooltip/spell/383013?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Poison Cleansing Totem은 digest 해제 목록에서 독으로 확인된 Acidic Burst에만 썼다. Cleanse Spirit이 지울 저주 디버프는 digest에 없다",
+   "Gravebound Advance 보호막을 깨는 피해 속성은 적지 않았다. Farseer·Stormbringer 전용 기술(Ancestral Swiftness·Tempest 등)은 넣지 않았다",
+   "1시즌: Cleanse Spirit·Poison Cleansing Totem은 kit.dispel 기준으로 digest 해제 목록의 저주(Black Miasma)·독(Poison Burst)에만 썼다. Purge는 digest가 적 버프 해제를 요구한 Divine Shield·Safeguard에만 썼다",
+   "1시즌: Capacitor Totem은 digest가 기절을 허용한 Shadow Fracture·Voidbolt·Void Barrage·Safeguard에 썼다. 선견자·폭풍인도자 영웅 특성 전용 기술(Ancestral Swiftness·Tempest 등)은 넣지 않았다"
+  ]
+ }
+}

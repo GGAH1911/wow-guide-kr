@@ -1,0 +1,110 @@
+{
+ "id": "druid/balance",
+ "arena": [
+  "[생존기] Barkskin은 8초간 받는 모든 피해를 20% 줄이고 기절이나 공포 중에도 쓸 수 있으니 기절에 묶인 채 폭딜을 받으면 바로 눌러라",
+  "[생존기] Bear Form으로 바꾸고 Frenzied Regeneration을 쓰면 3초에 걸쳐 생명력 24%를 회복하니 치유 전담이 제어에 묶였을 때 스스로 버텨라",
+  "[제어] Cyclone은 대상을 최대 5초간 방향 상실시키지만 그동안 무적으로 만드니 폭딜 대상이 아닌 상대 치유 전담에게 걸고 Owlkin Adept를 고르면 올빼미야수의 광기가 쌓일 때 다음 Cyclone 시전 시간이 10% 줄어든다",
+  "[제어] Entangling Roots는 대상을 30초간 묶지만 피해에 풀릴 수 있고 High Winds를 고르면 Cyclone과 Typhoon과 함께 사거리가 5미터 늘어나니 근접 딜러를 멀리서 묶고 거리를 벌려라",
+  "[차단] Solar Beam은 대상의 시전을 끊고 8초간 빛줄기 안의 적을 모두 침묵시키니 상대 치유 전담이 기둥 뒤로 가기 전에 치유 시전에 맞춰라",
+  "[위치] Typhoon은 전방 15미터 적을 밀쳐내고 6초간 50% 감속시키니 나에게 붙은 근접 딜러를 떼어낼 때 써라",
+  "[참고] Moonkin Aura를 고르면 Starsurge를 쓸 때마다 40미터 안 아군 8명의 주문 치명타 확률이 18초간 2%씩 최대 3번 오르니 아군 폭딜 직전에 Starsurge를 미리 넣어 두어라",
+  "[해제] Remove Corruption은 아군의 저주와 독을 모두 지우니 아군 치유 전담에게 걸린 저주나 독부터 풀어라"
+ ],
+ "bg": [
+  "[광역 피해] Star Burst는 전장 대공세 47명 중 22명이 골랐고 Starfall 별이 15초간 남아 닿은 적 주변을 띄우며 터지니 지키는 거점 깃발 둘레에 Starfall을 깔아 점령하러 온 적을 맞혀라",
+  "[위치] Ursol's Vortex는 10초간 8미터 안 적을 50% 감속시키고 처음 빠져나가려는 적을 가운데로 끌어오니 거점 깃발 위나 상대 운반자 발밑에 깔아라",
+  "[제어] Typhoon은 전방 적을 밀쳐내지만 공포나 방향 상실에 걸린 대상은 밀쳐낼 수 없으니 Cyclone이나 아군 공포가 걸리지 않은 적을 거점 깃발이나 운반로에서 떼어내라",
+  "[분담] Stampeding Roar는 15미터 안 아군을 8초간 60% 빠르게 하니 아군 깃발 운반자와 함께 달리거나 공격받는 거점으로 여럿이 지원 갈 때 써라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Barkskin과 Bear Form을 폭딜 직전에 먼저 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 46명 중 43명과 평점제 전장 58명 중 42명이 고른 Moonkin Aura는 Starsurge마다 40미터 안 아군 8명의 주문 치명타 확률을 올리고, 1인 조합전 46명 중 39명과 3v3 18명 전원이 고른 Owlkin Adept는 다음 Cyclone이나 Entangling Roots 시전 시간을 10% 줄이며, 1인 조합전 46명 중 28명이 고른 High Winds는 Cyclone과 Typhoon과 Entangling Roots 사거리를 5미터 늘린다.",
+ "tips": {
+  "moonkin aura": "209740",
+  "owlkin adept": "354541",
+  "high winds": "200931",
+  "star burst": "356517",
+  "cyclone": "33786",
+  "entangling roots": "339"
+ },
+ "spells": {
+  "209740": {
+   "n": "Moonkin Aura",
+   "i": "ability_druid_improvedmoonkinform",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Starsurge grants 2% spell critical strike chance to 8 allies within 40 yards for 18 sec, stacking up to 3 times."
+  },
+  "354541": {
+   "n": "Owlkin Adept",
+   "i": "ability_druid_owlkinfrenzy",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Owlkin Frenzy can stack up to 2 times and reduces the cast time of your next Cyclone or Entangling Roots by 10%."
+  },
+  "200931": {
+   "n": "High Winds",
+   "i": "ability_druid_cyclone",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of Cyclone, Typhoon, and Entangling Roots by 5 yds."
+  },
+  "356517": {
+   "n": "Star Burst",
+   "i": "ability_druid_cresentburn",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Starfall calls down collapsing stars that last 15 sec. Enemies that come into contact with a star cause it to burst, knocking nearby enemies upwards and dealing (211.5% of Spell Power) Astral damage. Generates 15 Astral Power.\n\nThe Druid and their allies may pick up stars, causing them to orbit around you."
+  },
+  "33786": {
+   "n": "Cyclone",
+   "i": "spell_nature_earthbind",
+   "m": "Talent · 1.2% of base mana · 20 yd range · 1.7 sec cast",
+   "d": "Tosses the enemy target into the air, disorienting them but making them invulnerable for up to 5 sec. Only one target can be affected by your Cyclone at a time."
+  },
+  "339": {
+   "n": "Entangling Roots",
+   "i": "spell_nature_stranglevines",
+   "m": "1.2% of base mana · 35 yd range · 1.7 sec cast",
+   "d": "Roots the target in place for 30 sec. Damage may cancel the effect. [Incarnation: Tree of Life: Tree of Life: Instant cast.]"
+  }
+ },
+ "spellsKo": {
+  "209740": {
+   "n": "달빛야수 오라",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "별빛쇄도 시전 시 18초 동안 40미터 내에 있는 아군 8명의 주문 극대화율이 2%만큼 증가하며, 최대 3번까지 중첩됩니다."
+  },
+  "354541": {
+   "n": "능숙한 올빼미야수",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "올빼미야수의 광기가 최대 2번까지 중첩됩니다. 또한 다음 회오리바람 또는 휘감는 뿌리의 시전 시간을 10%만큼 감소시킵니다."
+  },
+  "200931": {
+   "n": "강풍",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "회오리바람, 태풍, 휘감는 뿌리의 사정거리가 5미터만큼 증가합니다."
+  },
+  "356517": {
+   "n": "별 폭발",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "별똥별 시전 시 15초 동안 붕괴하는 별을 불러 내립니다. 적과 접촉한 별은 폭발을 일으켜 주위 적을 공중으로 날려 보내고 (주문력의 211.5%)의 천공 피해를 입힙니다. 15의 천공의 힘을 생성합니다.\n\n드루이드와 아군은 별을 획득하여 자신의 주위를 맴돌게 할 수 있습니다."
+  },
+  "33786": {
+   "n": "회오리바람",
+   "m": "특성 · 1.2% (기본 마나 중) · 20 야드 사정거리 · 1.7 초 주문 시전 시간",
+   "d": "적을 공중으로 날립니다. 대상은 5초 동안 방향 감각을 상실하지만, 무적 상태가 됩니다. 한 대상만 날려둘 수 있습니다."
+  },
+  "339": {
+   "n": "휘감는 뿌리",
+   "m": "1.2% (기본 마나 중) · 35 야드 사정거리 · 1.7 초 주문 시전 시간",
+   "d": "30초 동안 대상을 제자리에 묶습니다. 대상이 피해를 입으면 효과가 해제될 수 있습니다. [화신: 생명의 나무: 생명의 나무: 즉시 시전됩니다.]"
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 숲의 수호자 43·엘룬의 대행자 3으로 거의 숲의 수호자지만 한쪽 전용 기술은 쓰지 않음",
+   "Owlkin Frenzy 툴팁(157228)이 달빛야수 변신 문구로 받아져 영문 이름은 쓰지 않고 Owlkin Adept 툴팁 문구만 인용",
+   "Cyclone과 Entangling Roots는 쐐기 파일에 없어 툴팁을 새로 받음. 제어기 사이 점감 관계는 확인하지 않아 연계로 쓰지 않음"
+  ]
+ }
+}

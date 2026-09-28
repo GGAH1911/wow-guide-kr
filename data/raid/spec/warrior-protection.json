@@ -1,0 +1,151 @@
+{
+ "id": "warrior/protection",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[위치] Possession Barrage 대상이 되면 Heroic Leap으로 보스에게서 멀리 뛰어 메아리가 멀리 날게 하라",
+    "[제어] 보호막이 남은 Restless Amani가 우물로 걸어갈 때 Piercing Howl로 12미터 안을 70% 감속시켜 늦춰라",
+    "[생존기] Uncoiled Rage가 걸리면 도발이 통하지 않고 모든 피해가 500% 오르니 Shield Wall로 받는 피해를 40% 줄여라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[탱버] Empowering Slam은 250만 물리 피해이고 같은 대상을 칠수록 강해지니 Ignore Pain과 Shield Wall을 나눠 대라",
+    "[탱버] Bloodvenom Injection의 40초 암흑 도트가 중첩되면 Spell Reflection으로 마법 피해를 20% 줄여라",
+    "[교대] 사이 단계가 끝나면 Taunt로 보스를 가져오고 같은 쪽으로 가라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[탱버] Dripping Fangs는 받는 물리 피해를 200% 늘리며 중첩되니 중첩이 쌓이면 Shield Wall이나 Last Stand를 써라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Storm Bolt나 Shockwave로 기절시킬 수 있다"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[교대] Shredding Shards 교대 때 Taunt로 Scrollsage Iku를 받고, 냉기 피해이니 Spell Reflection으로 마법 피해를 20% 줄여라",
+    "[차단] 위치가 되면 Icebound Flames를 Pummel로 차단하라",
+    "[탱버] First Mate Nama의 Steady Strikes 중첩이 높을 때 Shield Wall로 받는 피해를 40% 줄여라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[교대] Apex Predator 시전 중 첫 Ravage나 Mutilate 뒤 Taunt로 대상을 바꿔 두 탱커가 하나씩 맡아라",
+    "[탱버] Ravage는 350만 물리 피해이니 맞을 때 Shield Wall이나 Last Stand를 써라",
+    "[탱버] Mutilate는 자연 피해이니 공대와 함께 맞을 때 Spell Reflection으로 마법 피해를 20% 줄여라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[탱버] Caustic Deluge는 5초 동안 자연 피해를 쏟고 Envenomed가 쌓이니 Spell Reflection을 맞춰 켜라",
+    "[위치] Stone Breaker로 밀려난 뒤 Heroic Leap으로 밟기 자리에 뛰어들어 순서대로 밟아라",
+    "@m [차단] Barbed Bulwark와 Broodling of Ithraz의 Visceral Burst를 Pummel로 차단하라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[교대] Sever는 물리 피해와 600% 피해 증가를 남기니 다음 Sever 전에 Taunt로 교대하고 맞을 때 Shield Wall을 써라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Pummel로 차단하라",
+    "@hm [차단] Spiteful Soulcoiler의 Wail of Terror를 Pummel로 차단하라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[교대] Caustic Waves 시전 때 Taunt로 Ula'tek과 Gore Rattle을 서로 바꿔라",
+    "[위치] Mother's Wrath로 밀려나면 Heroic Leap이나 Charge로 곧바로 Ula'tek 공격 범위 안으로 돌아가라",
+    "[차단] 2단계 Doomscale Warden의 Malice와 Weakened Doomscale의 Anguished Cry를 Pummel로 차단하라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[탱버] Water Jet은 냉기 피해가 맞을 때마다 20%씩 커지니 Spell Reflection으로 마법 피해를 20% 줄여라",
+    "[제어] 거품으로 몰려드는 Bubblefin Shorerunner는 Shockwave로 기절시키거나 Piercing Howl로 늦춰라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[탱버] Blackening Wounds 중첩으로 최대 생명력이 줄어들면 Last Stand로 최대 생명력을 30% 늘려 버텨라",
+    "[탱버] Weakened로 쫄이 달려들면 Demoralizing Shout로 10미터 안 적의 피해를 줄이고, Gnashing Void 암흑 도트가 쌓이면 Spell Reflection으로 마법 피해를 20% 줄여라",
+    "[차단] 사이 단계 Pitch Bulwark를 Pummel로 차단하고, 쫄 여럿이 함께 시전하면 Disrupting Shout로 14미터 안 시전을 한꺼번에 끊어라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[탱버] Smashed가 쌓인 채 두 번째 큰 발톱 충격을 받을 때 Shield Wall로 받는 피해를 40% 줄여라",
+    "[위치] Blistercreep이 달라붙으면 Heroic Leap으로 자기 쪽 Void Crystal 벽까지 빨리 뛰어가라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 공대 전체 피해가 크니 Rallying Cry로 40미터 안 공대원 생명력을 10% 올려라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[탱버] Shattering Twilight는 큰 암흑 피해이니 벽 쪽에서 Shield Wall과 Spell Reflection을 함께 켜고 받아라",
+    "[교대] Destabilizing Strikes 중첩이 쌓이면 Taunt로 보스를 가져와 Concentrated Void 구슬 반대쪽으로 끌어라",
+    "[차단] 가까운 Fractured Image의 Shadow Fracture는 Pummel로 끊거나 Storm Bolt로 기절시켜라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[탱버] Ezzorak의 Rakfang은 큰 물리 피해이니 Ignore Pain을 쌓아 두고 강화가 쌓였을 때 Shield Wall을 써라",
+    "[탱버] Vaelgor의 Vaelwing으로 강화된 근접 공격은 암흑 피해를 더하니 Spell Reflection으로 마법 피해를 20% 줄여라",
+    "[우선 처치] 사이 단계 Manifestation of Midnight은 Taunt로 잡아 공대에서 떨어뜨리고, Unbound Shadow로 공격 속도가 오르면 Shield Block으로 근접 공격을 막아라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[교대] Commander Venel Lightblood의 Judgment 직후 Taunt로 교대해 Final Verdict 증폭 피해를 피하라",
+    "[탱버] Shield of the Righteous와 Exorcism은 신성 피해이니 Spell Reflection으로 마법 피해를 20% 줄여라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Pummel로 차단하라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[위치] Dark Hand에 밀려나면 Charge나 Heroic Leap으로 파수꾼 근접 범위로 곧바로 돌아가라",
+    "@nh [교대] Rift Slash 중첩으로 능력치가 줄면 Undying Voidspawn 처리 뒤 Taunt로 교대하라",
+    "@nh [생존기] Aspect of the End를 끊어 Gravity Collapse가 걸리면 받는 물리 피해가 300% 늘어나니 Shield Wall을 켜라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[탱버] Alndust Upheaval 대상이 되면 큰 물리 피해를 받으니 Shield Wall을 켜고 조와 함께 맞아라",
+    "[탱버] 아래층에서 Colossal Horror의 Colossal Strikes가 세지면 Last Stand나 Shield Wall을 써라",
+    "[차단] 아래층에서는 Haunting Essence의 Fearsome Cry를 Pummel로 먼저 끊어라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[교대] 반대 색 Light Edict·Void Edict가 오면 같은 색 탱커가 시전 중 Taunt로 가져와 맞아라",
+    "[탱버] Light Edict·Void Edict는 큰 신성·암흑 피해이니 Spell Reflection으로 마법 피해를 20% 줄이고, 두 번 연달아 올 때는 Shield Wall을 더하라",
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Pummel로 끊어라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[교대] Heaven's Lance 5번 찌르기가 끝나면 Taunt로 교대하고, 찌르기를 받을 때 Shield Wall이나 Ignore Pain을 켜라",
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩은 Pummel과 Storm Bolt·Shockwave 기절로 없애라",
+    "@m [차단] 배정된 Termination Prism 매트릭스의 Terminate를 Pummel로 차단하라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "[교대] Putrid Fist를 맞은 뒤 Taunt로 교대하고, 맞을 때는 Shield Wall이나 Last Stand를 켜라",
+    "[제어] 쫓아오는 Shroomling은 Piercing Howl로 12미터 안을 70% 감속시켜 정한 자리로 모아라",
+    "@hm [차단] 보스 곁 Sporecap의 Poison Burst를 Pummel로 차단하라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "탱버·교대 줄은 digest 역할 tank 항목(Empowering Slam·Dripping Fangs·Shredding Shards·Steady Strikes·Apex Predator·Caustic Deluge·Stone Breaker·Sever·Caustic Waves·Water Jet)과 core 보스 툴팁의 피해 계열(물리/자연/암흑/냉기)을 기술 툴팁 효과와 짝지었다.",
+   "면역으로 기믹을 무시한다는 서술은 넣지 않았다(기절·공포·밀쳐내기 면역 기술 포함). 영웅 특성 전용 기술은 쓰지 않았다.",
+   "1시즌: 탱버·교대 줄은 digest 역할 tank 항목과 s1.json 보스 툴팁의 피해 계열(물리/암흑/신성)을 기술 툴팁 효과와 짝지었다.",
+   "1시즌: Heaven's Lance는 우주 피해라 Spell Reflection 대신 모든 피해 감소기만 붙였다. 영웅 특성 전용 기술은 쓰지 않았다."
+  ]
+ }
+}

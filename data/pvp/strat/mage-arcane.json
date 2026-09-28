@@ -1,0 +1,112 @@
+{
+ "id": "mage/arcane",
+ "arena": [
+  "[생존기] Overpowered Barrier를 고르면 Prismatic Barrier가 60% 더 흡수하는 대신 4초만 유지되고 모두 소모되면 6초간 Time Warp를 얻으니 상대 폭딜 쿨기가 켜지는 순간에 맞춰 켜라",
+  "[생존기] Alter Time은 다시 누르거나 10초가 지나면 시전한 순간의 위치와 생명력으로 되돌리니 폭딜이 시작되기 전에 켜 두고 생명력이 크게 깎이면 다시 눌러라",
+  "[생존기] Ice Block은 10초간 모든 공격과 피해를 막지만 그동안 공격과 이동과 시전을 못 하니 다른 생존기가 빠진 채 폭딜을 받을 때 써라",
+  "[회피] Blink는 20미터 앞으로 순간이동하며 모든 기절과 속박에서 풀어 주니 근접 딜러의 기절에 걸리면 바로 빠져나와 거리를 벌려라",
+  "[위치] Chrono Shift를 고르면 Arcane Barrage가 적을 50% 감속시키고 내 이동 속도를 5초간 10% 올리니 근접 딜러가 붙으면 Arcane Barrage를 맞히며 거리를 벌려라",
+  "[차단] Counterspell은 시전을 끊고 그 계열 주문을 7초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[제어] Polymorph는 대상을 1분간 행동 불가로 만들지만 피해에 풀리니 상대 치유 전담에게 걸고 그동안 아군과 함께 다른 대상에게 Touch of the Magi를 걸어 폭딜을 넣어라",
+  "[해제] Spellsteal은 대상의 이로운 마법 효과 하나를 훔쳐 오니 상대에게 걸린 마법 강화 효과나 보호 효과를 빼앗아라"
+ ],
+ "bg": [
+  "[참고] 깃발 지도에서 치유 전담이 운반하지 못하면 이동력 좋은 딜러가 운반하니 깃발을 들면 Blink로 기절과 속박을 풀고 Chrono Shift를 고른 Arcane Barrage의 감속으로 추격자를 떼어라",
+  "[제어] Ice Wall을 고르면 30미터 길이의 벽이 최대 15초간 시야를 가리니 아군 운반자를 쫓는 적이나 상대 치유 전담의 시야를 끊어라",
+  "[분담] Improved Mass Invisibility를 고르면 Mass Invisibility가 전투 중인 40미터 안 아군에게도 걸려 12초간 투명해지니 한타에서 밀릴 때 아군을 빼내 다음 거점으로 옮겨라",
+  "[제어] Ring of Frost는 10초간 고리를 깔아 들어온 적을 최대 10명까지 10초간 행동 불가로 만드니 지키는 거점 깃발 곁에 깔아 점령하러 오는 적을 묶어라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Prismatic Barrier와 Alter Time을 폭딜 직전에 먼저 써라",
+  "[해제] Remove Curse는 아군의 저주를 모두 지우니 운반자나 치유 전담에게 걸린 저주부터 풀어라"
+ ],
+ "pvpTalents": "1인 조합전 상위 38명 중 36명이 고른 Overpowered Barrier는 방벽 흡수량을 60% 늘리는 대신 4초만 유지되고 Prismatic Barrier가 모두 소모되면 6초간 Time Warp를 주며, 1인 조합전 38명 중 33명과 전장 대공세 43명 중 34명이 고른 Chrono Shift는 Arcane Barrage에 50% 감속과 내 이동 속도 10% 증가를 더하고, 1인 조합전 38명 중 27명이 고른 Improved Mass Invisibility는 Mass Invisibility 재사용 대기시간을 3분 줄이고 전투 중인 아군에게도 걸리게 한다.",
+ "tips": {
+  "overpowered barrier": "1220739",
+  "chrono shift": "235711",
+  "improved mass invisibility": "415945",
+  "ice wall": "352278",
+  "mass invisibility": "414664",
+  "ring of frost": "113724"
+ },
+ "spells": {
+  "1220739": {
+   "n": "Overpowered Barrier",
+   "i": "ability_racial_magicalresistance",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Your barriers absorb 60% more damage and have an additional effect, but last 4 sec. [ Frost: Ice Barrier\nIf the barrier is fully consumed, enemies within 10 yds suffer (650% of Spell Power) Frost damage and are slowed by 70% for 4 sec / Fire: Blazing Barrier\nReflects 40% of damage absorbed /\n\nPrismatic Barrier\nIf the barrier is fully consumed, gain Time Warp for 6 sec]"
+  },
+  "235711": {
+   "n": "Chrono Shift",
+   "i": "ability_monk_deadlyreach",
+   "m": "PvP Talent",
+   "d": "Arcane Barrage slows enemies by 50% and increases your movement speed by 10% for 5 sec."
+  },
+  "415945": {
+   "n": "Improved Mass Invisibility",
+   "i": "ability_mage_massinvisibility",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "The cooldown of Mass Invisibility is reduced by 3 min and it can affect allies in combat."
+  },
+  "352278": {
+   "n": "Ice Wall",
+   "i": "ability_mage_icewall",
+   "m": "Tank Specs – Row 1 PvP Talent · 8% of base mana · 30 yd range · 1.5 sec cast · 1.5 min cooldown",
+   "d": "Conjures an Ice Wall 30 yards long that obstructs line of sight. The wall has 30% of your maximum health and lasts up to 15 sec."
+  },
+  "414664": {
+   "n": "Mass Invisibility",
+   "i": "ability_mage_massinvisibility",
+   "m": "Talent · 6% of base mana · Instant · 5 min cooldown",
+   "d": "You and your allies within 40 yards instantly become invisible for 12 sec. Taking any action will cancel the effect.\n\nDoes not affect allies in combat."
+  },
+  "113724": {
+   "n": "Ring of Frost",
+   "i": "spell_frost_ring-of-frost",
+   "m": "Talent · 8% of base mana · 30 yd range · 2 sec cast · 45 sec cooldown",
+   "d": "Summons a Ring of Frost for 10 sec at the target location. Enemies entering the ring are incapacitated for 10 sec. Limit 10 targets.\n\nWhen the incapacitate expires, enemies are slowed by 65% for 4 sec."
+  }
+ },
+ "spellsKo": {
+  "1220739": {
+   "n": "과부하된 방벽",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "방벽 주문이 60%의 피해를 추가로 흡수하고 추가 효과를 발휘하지만 지속시간이 4초가 됩니다. [ 냉기: 얼음 보호막\n방벽이 완전히 소진되면 10미터 내의 적에게 (주문력의 650%)의 냉기 피해를 입히고 4초 동안 이동 속도를 70%만큼 감소시킵니다 / 화염: 이글거리는 방벽\n흡수한 피해의 40%를 반사합니다 /\n\n오색 방벽\n방벽이 완전히 소진되면 6초 동안 시간 왜곡이 부여됩니다]"
+  },
+  "235711": {
+   "n": "시간 전환",
+   "m": "PvP 특성",
+   "d": "비전 탄막이 5초 동안 적을 50%만큼 감속시키고, 자신의 이동 속도를 10%만큼 증가시킵니다."
+  },
+  "415945": {
+   "n": "대규모 투명화 연마",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "대규모 투명화의 재사용 대기시간이 3분만큼 감소하고 전투 중인 아군에게도 영향을 줍니다."
+  },
+  "352278": {
+   "n": "얼음 벽",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 8% (기본 마나 중) · 30 야드 사정거리 · 1.5 초 주문 시전 시간 · 1.5 분 재사용 대기시간",
+   "d": "시야를 가리는 30미터 길이의 얼음 벽을 생성합니다. 벽은 자신의 최대 생명력의 30%에 해당하는 생명력을 가지며, 최대 15초 동안 지속됩니다."
+  },
+  "414664": {
+   "n": "대규모 투명화",
+   "m": "특성 · 6% (기본 마나 중) · 즉시 · 5 분 재사용 대기시간",
+   "d": "자신과 40미터 내의 아군이 즉시 12초 동안 투명 상태가 됩니다. 행동을 취하면 효과가 사라집니다.\n\n전투 중인 아군에게는 영향을 주지 않습니다."
+  },
+  "113724": {
+   "n": "서리 고리",
+   "m": "특성 · 8% (기본 마나 중) · 30 야드 사정거리 · 2 초 주문 시전 시간 · 45 초 재사용 대기시간",
+   "d": "10초 동안 대상 지역에 서리 고리를 소환합니다. 고리를 밟는 적은 10초 동안 행동 불가 상태가 됩니다. 최대 10명의 대상에 영향을 줍니다.\n\n행동 불가 효과가 만료되면 4초 동안 적의 이동 속도가 65%만큼 감소합니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 성난태양 34·주문술사 4, 전장 대공세 28·15로 갈려 한쪽 전용 기술은 쓰지 않음",
+   "투기장 상위권 표본이 3v3 3명·2v2 1명뿐이라 투기장 줄은 1인 조합전(38명) 채택률과 일반 원칙 기준",
+   "Blink의 기절·속박 해제는 Blink 툴팁 문구이며 Shimmer로 바꾸면 그 문구가 없어 Blink 기준으로만 씀. Ring of Frost는 Ring of Fire로 바꿀 수 있는 특성",
+   "지도 공략상 운반자가 은신·일부 무적 기술을 쓰면 깃발이 떨어지는데 Mass Invisibility 투명화·Ice Block이 여기에 드는지 확인되지 않아 운반 중 사용 권고는 쓰지 않음"
+  ]
+ }
+}

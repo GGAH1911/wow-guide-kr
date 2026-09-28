@@ -1,0 +1,241 @@
+{
+ "id": "warlock/demonology",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Essence Rend 대상이 방 가장자리에 도착하면 Singe Magic으로 해제를 도와라, 해제 자리에 Latent Cultist가 생긴다",
+    "[제어] Gravebound Advance 보호막이 남은 Restless Amani 무리는 Shadowfury로 3초 기절시켜 Soulcoil Well로 가는 시간을 늦춰라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Felguard의 Axe Toss로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood는 마법 효과이니 Singe Magic으로 해제를 도와라",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Summon Demonic Tyrant를 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞기 전에 Dark Pact로 보호막을 씌워라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Hand of Gul'dan과 Implosion으로 광역으로 잡아 Malignant Cavity에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Fear로 묶을 수 있다, 피해를 받으면 풀릴 수 있다",
+    "[해제] Exploding Infection은 해제하면 Caustic Explosion이 터지니 Singe Magic은 힐러 해제와 시차를 두고 한 명씩 써라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Felguard의 Axe Toss로 끊어라",
+    "[해제] 차단을 놓쳐 걸린 Icebound Flames는 마법 효과이니 Singe Magic으로 해제를 도와라",
+    "[위치] Blink Nova 대상이 되면 Demonic Circle로 순간이동하거나 Burning Rush로 공대에서 빨리 멀어져라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 30% 늘어나니 Summon Demonic Tyrant를 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Dark Pact로 피해를 흡수하라",
+    "[회피] Burning Rush는 이동 방해 효과로 평소 속도 아래로 떨어지지 않으니 Tempest 감속이 쌓여도 회오리를 피할 수 있다"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Hand of Gul'dan과 Implosion으로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Dark Pact로 피해를 흡수하라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst를 Felguard의 Axe Toss로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Summon Demonic Tyrant를 여기에 맞춰라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Felguard의 Axe Toss로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 40미터 밖에 깔아 둔 Demonic Circle로 순간이동해 도끼에서 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Summon Demonic Tyrant를 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Felguard의 Axe Toss로 끊어라",
+    "[생존기] Rage of the Shackled 20초 공대 피해와 Fury Unleashed에 Unending Resolve를 맞춰 받는 피해를 줄여라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Implosion으로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides 공대 피해에 Dark Pact와 Unending Resolve를 나눠 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Implosion 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Felguard의 Axe Toss로 끊어라",
+    "[우선 처치] Voidmaw는 Hand of Gul'dan과 Implosion으로 함께 잡아라",
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval 공대 피해에 Dark Pact를 맞춰라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] Blisterburst의 받는 피해 증가와 Creep Spit 감속은 마법 효과이니 Singe Magic으로 해제를 도와라",
+    "[회피] Burning Rush는 이동 방해 효과로 평소 속도 아래로 떨어지지 않으니 Creep Spit 감속이 쌓여도 Void Breath 반대쪽 방 끝까지 달려라",
+    "[우선 처치] 벽 앞에 모은 Blistercreep은 Implosion으로 함께 잡아 Blisterburst로 Void Crystal을 부숴라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Fractured Image의 Shadow Fracture를 Felguard의 Axe Toss로 끊어라",
+    "@m [차단] Nexus Shield가 벗겨진 Fractured Image들이 모여 있으면 Shadowfury로 함께 기절시켜 끊어라",
+    "[생존기] Entropic Unraveling 동안 보스가 받는 피해가 25% 늘어나니 Summon Demonic Tyrant를 여기에 맞추고 Unending Resolve로 공대 피해를 25% 줄여라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath 공포는 마법 효과이니 걸린 인원을 Singe Magic으로 바로 해제하라",
+    "[차단] Void Howl 뒤 생긴 Voidorb의 Voidbolt를 Felguard의 Axe Toss로 끊어라",
+    "@m [제어] 끊겨도 공대로 떠오지 않는 Voidorb는 한곳에 모인 것을 Shadowfury로 함께 기절시켜라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] 풀 직후 Avenging Wrath로 받는 피해가 20% 늘어난 Commander Venel Lightblood에 Summon Demonic Tyrant를 맞추고 Implosion으로 함께 때려라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Felguard의 Axe Toss로 끊어라",
+    "[해제] Avenger's Shield 도트는 마법 효과이니 Singe Magic으로 해제를 도와라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] 플레이어에게 묻은 Corrupting Essence는 마법 효과이니 Singe Magic으로 지워라",
+    "[위치] Grasp of Emptiness 대상이 되면 Burning Rush로 원에서 멀리 달려 Bursting Emptiness가 공대를 비껴가게 하라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage를 Felguard의 Axe Toss로 끊거나 Shadowfury로 함께 기절시켜라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Felguard의 Axe Toss로 먼저 끊고, 놓친 Fearsome Cry 공포는 Singe Magic으로 해제하라",
+    "@hm [해제] Consuming Miasma 대상이 Alndust Essence 웅덩이 곁에 닿으면 Singe Magic으로 해제를 도와라",
+    "[우선 처치] 아래층 조라면 Summon Demonic Tyrant를 아껴 두었다가 Alnshroud 보호막을 빠르게 깨라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Felguard의 Axe Toss로 끊어라",
+    "[생존기] Summon Demonic Tyrant는 2단계 알에 아껴 두었다가 Rebirth 시전 동안 써라",
+    "[분담] 같은 색 Light Dive·Void Dive를 함께 맞기 전에 Dark Pact로 보호막을 씌워라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩을 Felguard의 Axe Toss와 Shadowfury로 없애라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 Felguard의 Axe Toss로 순서대로 끊어라",
+    "[우선 처치] 흩어진 Midnight Crystal이 모여 있으면 Implosion으로 함께 때려 시전이 끝나기 전에 처치하라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Felguard의 Axe Toss로 끊어라",
+    "[우선 처치] 모인 자리의 Bursting Shroom은 Implosion과 Felstorm으로 16초 안에 처치하라",
+    "[위치] Festering Vines 대상은 이동 속도가 30% 줄지만 Burning Rush를 켜면 평소 속도 아래로 떨어지지 않으니 방 가장자리로 빨리 나가라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 132411",
+   "u": "https://nether.wowhead.com/tooltip/spell/132411?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 30283",
+   "u": "https://nether.wowhead.com/tooltip/spell/30283?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 89766",
+   "u": "https://nether.wowhead.com/tooltip/spell/89766?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 265187",
+   "u": "https://nether.wowhead.com/tooltip/spell/265187?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 108416",
+   "u": "https://nether.wowhead.com/tooltip/spell/108416?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 105174",
+   "u": "https://nether.wowhead.com/tooltip/spell/105174?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 196277",
+   "u": "https://nether.wowhead.com/tooltip/spell/196277?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 5782",
+   "u": "https://nether.wowhead.com/tooltip/spell/5782?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 268358",
+   "u": "https://nether.wowhead.com/tooltip/spell/268358?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 111400",
+   "u": "https://nether.wowhead.com/tooltip/spell/111400?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 104773",
+   "u": "https://nether.wowhead.com/tooltip/spell/104773?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 89766",
+   "u": "https://nether.wowhead.com/tooltip/spell/89766?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 105174",
+   "u": "https://nether.wowhead.com/tooltip/spell/105174?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 196277",
+   "u": "https://nether.wowhead.com/tooltip/spell/196277?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 108416",
+   "u": "https://nether.wowhead.com/tooltip/spell/108416?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 132411",
+   "u": "https://nether.wowhead.com/tooltip/spell/132411?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 111400",
+   "u": "https://nether.wowhead.com/tooltip/spell/111400?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 30283",
+   "u": "https://nether.wowhead.com/tooltip/spell/30283?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 265187",
+   "u": "https://nether.wowhead.com/tooltip/spell/265187?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 104773",
+   "u": "https://nether.wowhead.com/tooltip/spell/104773?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 89751",
+   "u": "https://nether.wowhead.com/tooltip/spell/89751?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Gravebound Advance 보호막을 어느 피해 계열이 깨는지는 확인하지 않아 쓰지 않고 Shadowfury 기절로 늦추는 것만 넣었다",
+   "Singe Magic 해제 줄은 쐐기 파일 kit.dispel(magic: Singe Magic)과 digest 해제 목록(Essence Rend·Blighted Blood·Exploding Infection·Icebound Flames 모두 Magic)을 연결했다, Singe Magic은 Grimoire: Imp Lord 재사용 대기 중에 바뀌는 버튼이다",
+   "Axe Toss는 툴팁 \"stunning and interrupting\"만 근거로 차단기로 썼다, Unending Resolve의 침묵 면역이 신화 Invoke에 통하는지는 출처가 없어 쓰지 않았다",
+   "악마학자·영혼 수확자 영웅 특성 전용 기술은 넣지 않았다",
+   "1시즌: Singe Magic 해제 줄은 쐐기 파일 kit.dispel(magic: Singe Magic)과 s1.json 해제 목록(Blisterburst·Creep Spit·Dread Breath·Avenger's Shield·Corrupting Essence·Consuming Miasma·Fearsome Cry 모두 Magic)을 연결했다, Null Corona는 해제하면 옮겨 가 넣지 않았다",
+   "1시즌: Axe Toss는 툴팁 'stunning and interrupting'을 근거로 차단기로 썼다, Shadowfury 줄은 신화 '기절도 된다'·Safeguard '기절로 없애라'와 연결했다",
+   "1시즌: Devour Magic은 지옥수호병을 쓰는 악마 전문화에서 쓸 수 없을 수 있어 Divine Shield·Safeguard 강화 해제 줄에서 뺐다, 악마학자·영혼 수확자 전용 기술은 넣지 않았다"
+  ]
+ }
+}

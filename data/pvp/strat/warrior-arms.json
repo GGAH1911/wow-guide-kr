@@ -1,0 +1,123 @@
+{
+ "id": "warrior/arms",
+ "arena": [
+  "[우선 처치] Mortal Strike는 대상이 받는 치유 효과를 10초간 50% 줄이니 폭딜 대상에게 끊기지 않게 유지하고 Sharpen Blade를 고르면 Colossus Smash 뒤 다음 Mortal Strike의 피해가 15% 늘고 4초간 받는 치유가 50% 준다",
+  "[생존기] Die by the Sword는 받는 모든 피해를 8초간 30% 줄이고 막기 확률을 100% 올리니 근접 딜러가 폭딜 쿨기를 켰을 때 써라",
+  "[생존기] Spell Reflection은 나에게 오는 첫 주문을 반사하고 5초간 마법 피해를 20% 줄이니 상대 시전자의 제어 주문 시전이 끝나기 직전에 맞춰라",
+  "[차단] Pummel은 시전을 끊고 그 계열 주문을 5초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[제어] Storm Bolt는 20미터 밖에서 대상을 4초 기절시키니 상대 치유 전담을 묶은 사이 Colossus Smash의 피해 30% 증가 구간에 폭딜을 넣어라",
+  "[제어] Disarm은 적의 무기와 방패를 5초간 빼앗으니 무기를 쓰는 근접 딜러가 폭딜 쿨기를 켰을 때 써라",
+  "[분담] Berserker Shout는 나의 공포와 행동 불가 효과를 풀고 6초간 면역이 되며 12미터 안 아군의 공포도 풀고 Berserker Roar를 고르면 5초 안에 걸리는 다음 제어 효과 지속시간을 50% 줄이니 상대 제어 연계가 시작될 때 아군 곁에서 외쳐라",
+  "[생존기] Bladestorm 중에는 이동 방해와 제어 효과에 면역이니 상대 제어 연계가 예상될 때 켜서 제어를 받지 않고 딜을 이어가라"
+ ],
+ "bg": [
+  "[참고] 전장 대공세는 딜러 5~6명 편성이고 깃발 운반은 치유 전담이 먼저 맡으며 없으면 이동력 좋은 딜러가 맡으니 Charge와 Heroic Leap으로 운반자를 따라붙어 지켜라",
+  "[광역 피해] Storm of Destruction을 고르면 Bladestorm과 Ravager에 맞은 모든 적이 6초간 60% 느려지고 10초간 받는 치유가 50% 주니 거점이나 깃발 운반자 주변에 뭉친 적에게 써라",
+  "[우선 처치] 상대 깃발 운반자에게 Mortal Strike의 치유 효과 50% 감소를 끊기지 않게 유지해 상대 치유 전담이 운반자를 살리기 어렵게 하라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Die by the Sword와 Defensive Stance의 받는 피해 감소를 먼저 써라",
+  "[위치] Piercing Howl은 12미터 안 적을 8초간 70% 감속시키고 6미터 안 아군은 4초간 30% 빨라지니 아군 깃발 운반자를 쫓는 적을 끊을 때 써라",
+  "[제어] Intimidating Shout으로 공포에 빠진 적은 밀쳐낼 수 없으니 거점을 점령하려는 적을 쫓아낼 때 쓰되 아군 밀쳐내기와 겹치지 않게 하라"
+ ],
+ "pvpTalents": "1인 조합전 상위 40명 모두와 전장 대공세 46명 중 45명이 고른 Sharpen Blade는 Colossus Smash 뒤 다음 Mortal Strike의 피해를 15% 올리고 4초간 받는 치유를 50% 줄이며, 전장 대공세 46명 중 37명이 고른 Storm of Destruction은 Bladestorm과 Ravager에 맞은 적을 6초간 60% 느리게 하고 받는 치유를 50% 줄이고, 1인 조합전 40명 중 26명이 고른 Berserker Roar는 Berserker Shout에 아군의 다음 제어 효과 지속시간 50% 단축을 더한다.",
+ "tips": {
+  "sharpen blade": "1219165",
+  "storm of destruction": "236308",
+  "berserker roar": "1227751",
+  "disarm": "236077",
+  "intimidating shout": "5246",
+  "piercing howl": "12323",
+  "berserker shout": "384100"
+ },
+ "spells": {
+  "1219165": {
+   "n": "Sharpen Blade",
+   "i": "spell_warrior_sharpenblade",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Colossus Smash causes your next Mortal Strike to deal 15% increased damage and reduce healing taken by 50% for 4 sec."
+  },
+  "236308": {
+   "n": "Storm of Destruction",
+   "i": "ability_warrior_bladestorm",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Bladestorm, Ravager, and Demolish now snare all targets you hit by 60% for 6 sec and decrease their healing taken by 50% for 10 sec."
+  },
+  "1227751": {
+   "n": "Berserker Roar",
+   "i": "spell_nature_ancestralguardian",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Berserker Shout also reduces the duration of the next crowd control effect within 5 sec by 50% on group members within 12 yds."
+  },
+  "236077": {
+   "n": "Disarm",
+   "i": "ability_warrior_disarm",
+   "m": "Tank Specs – Row 1 PvP Talent · Melee Range · Instant · 45 sec cooldown",
+   "d": "Disarm the enemy's weapons and shield for 5 sec. Disarmed creatures deal significantly reduced damage."
+  },
+  "5246": {
+   "n": "Intimidating Shout",
+   "i": "ability_golemthunderclap",
+   "m": "Talent · 8 yd range · Instant · 1.5 min cooldown",
+   "d": "Causes the targeted enemy to cower in fear while all enemies within 8 yards flee from you and their movement speed is reduced by 70% for 8 sec.\nDamage may cancel the effect."
+  },
+  "12323": {
+   "n": "Piercing Howl",
+   "i": "spell_shadow_deathscream",
+   "m": "Talent · Instant · 1.5 min cooldown",
+   "d": "Snares all enemies within 12 yards, reducing their movement speed by 70% for 8 sec.\n\nSpurs all allies within 6 yards, increasing their movement speed by 30% for 4 sec."
+  },
+  "384100": {
+   "n": "Berserker Shout",
+   "i": "spell_nature_ancestralguardian",
+   "m": "Talent · Instant · 1 min cooldown",
+   "d": "Go berserk, removing and granting immunity to Fear, Sap, and Incapacitate effects for 6 sec.\n\nAlso remove fear effects from group members within 12 yds."
+  }
+ },
+ "spellsKo": {
+  "1219165": {
+   "n": "무기 연마",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "거인의 강타가 다음 필사의 일격의 공격력을 15%만큼 증가시키고 4초 동안 받는 치유 효과를 50%만큼 감소시킵니다."
+  },
+  "236308": {
+   "n": "파괴의 폭풍",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "칼날폭풍과 쇠날발톱, 쇄파가 6초 동안 적중당한 모든 대상을 60%만큼 감속시키고, 10초 동안 받는 치유 효과를 50%만큼 감소시킵니다."
+  },
+  "1227751": {
+   "n": "광전사의 포효",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "광전사의 외침 사용 시 추가로 다음 5초 안에 12미터 내 파티원에게 걸리는 군중 제어 효과의 지속시간이 50%만큼 감소합니다."
+  },
+  "236077": {
+   "n": "무장 해제",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 근접 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "5초 동안 적의 무기와 방패를 무장 해제시킵니다. 무장 해제된 적은 공격력이 크게 감소합니다."
+  },
+  "5246": {
+   "n": "위협의 외침",
+   "m": "특성 · 8 야드 사정거리 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "대상을 공포에 질려 제자리에서 떨게 하고, 8초 동안 주위 8미터 내 모든 적의 이동 속도를 70%만큼 감소시킵니다.\n피해를 받으면 효과가 해제될 수 있습니다."
+  },
+  "12323": {
+   "n": "날카로운 고함",
+   "m": "특성 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "8초 동안 12미터 내에 있는 적의 이동 속도를 70%만큼 감소시킵니다.\n\n6미터 내 모든 아군을 자극하여 4초 동안 이동 속도를 30%만큼 증가시킵니다."
+  },
+  "384100": {
+   "n": "광전사의 외침",
+   "m": "특성 · 즉시 · 1 분 재사용 대기시간",
+   "d": "광폭화하여 6초 동안 공포, 혼절시키기, 행동 불가 상태를 제거하고 면역이 됩니다.\n\n추가로 12미터 내 파티원에게 부여된 공포 효과를 제거합니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 학살자 37·거신 3, 전장 대공세 학살자 44·거신 2로 학살자가 대부분이지만 한쪽 전용 기술(Demolish 등)은 쓰지 않음",
+   "Storm of Destruction 툴팁의 Demolish 부분은 거신 전용이라 Bladestorm·Ravager만 연결",
+   "Mortal Strike 치유 감소가 전장 고정 치유 20% 감소와 어떻게 겹치는지는 툴팁으로 확인되지 않아 연결하지 않음"
+  ]
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "id": "monk/mistweaver",
+ "arena": [
+  "[분담] Life Cocoon은 12초간 대상을 감싸 큰 피해를 흡수하고 받는 지속 치유를 50% 올리니 상대 폭딜 쿨기가 몰린 아군에게 걸어라",
+  "[광역 피해] Peaceweaver를 고르면 Revival 재사용 대기시간이 16% 줄고 2초간 마법 피해와 해로운 효과에 면역을 주니 상대의 마법 폭딜이나 광역 제어가 몰릴 때 Revival을 써라",
+  "[해제] Detox는 아군의 마법과 독과 질병을 모두 지우고 Revival은 40미터 안 파티원의 해로운 마법 3개와 독과 질병을 한 번에 지우니 여럿이 제어에 걸리면 Revival을 써라",
+  "[우선 처치] Zen Spheres를 고르면 Rising Sun Kick을 맞은 대상 위에 받는 피해 10% 증가와 주는 피해 3% 감소 구슬이 생기니 아군이 노리는 대상에게 Rising Sun Kick을 넣어라",
+  "[위치] Eminence를 고르면 Transcendence로 남겨 둔 영혼과 자리를 바꾸는 기술을 기절 중에도 쓸 수 있으니 기둥 근처에 영혼을 두고 기절과 폭딜이 겹칠 때 옮겨 가라",
+  "[제어] Paralysis는 20미터 안 대상을 행동 불가로 만들지만 피해에 풀릴 수 있으니 아군이 때리지 않는 상대에게 쓰고 Leg Sweep은 6미터 안 적을 3초 기절시킨다",
+  "[차단] Zen Focus Tea를 고르면 Thunder Focus Tea가 5초간 침묵과 차단에 면역을 주니 상대 차단기가 살아 있을 때 긴 치유 시전 앞에 켜라",
+  "[생존기] Fortifying Brew는 15초간 몸을 돌처럼 굳히니 내가 집중 공격을 받기 시작하면 켜라"
+ ],
+ "bg": [
+  "[참고] 전장 대공세는 치유 전담 2명 편성이고 깃발 지도에서는 이동력이 좋은 치유 전담이 운반에 좋으니 Roll 2회 충전과 자신에게 건 Tiger's Lust의 속박·감속 해제로 운반을 맡을 수 있다",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유보다 피해를 흡수하는 Life Cocoon을 깃발 운반자나 집중 공격받는 아군에게 먼저 걸어라",
+  "[분담] Tiger's Lust는 아군의 속박과 감속을 풀고 6초간 이동 속도를 70% 올리니 발이 묶인 깃발 운반자에게 써라",
+  "[제어] Ring of Peace는 고리에 들어오는 적을 튕겨내지만 공포나 방향 상실에 걸린 대상은 밀쳐낼 수 없으니 제어가 걸리지 않은 적이 거점이나 깃발 운반자로 들어오는 길에 깔아라",
+  "[해제] Revival은 40미터 안 파티원의 해로운 마법 3개와 독과 질병을 지우니 거점 수비로 뭉친 아군에게 제어가 여럿 걸렸을 때 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 48명 모두와 전장 대공세 44명 중 39명이 고른 Zen Spheres는 Rising Sun Kick 대상에 받는 피해 10% 증가 구슬을 만들고, 1인 조합전 48명 중 47명과 전장 대공세 44명 중 39명이 고른 Peaceweaver는 Revival에 2초 마법 면역을 붙이며, 1인 조합전 48명 중 36명이 고른 Eminence는 기절 중에도 Transcendence 자리 바꾸기를 쓰게 한다.",
+ "tips": {
+  "zen spheres": "1243554",
+  "peaceweaver": "353313",
+  "eminence": "353584",
+  "zen focus tea": "468430"
+ },
+ "spells": {
+  "1243554": {
+   "n": "Zen Spheres",
+   "i": "ability_monk_sphereharmonydiscord",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Soothing Mist, Crackling Jade Lightning, and Rising Sun Kick form a sphere of Hope or Despair above their targets. Only one of each sphere can be active at a time.\n\nSphere of Hope: Increases your healing done to the target by 10%.\nSphere of Despair: Target deals 3% less damage and takes 10% increased damage from all sources."
+  },
+  "353313": {
+   "n": "Peaceweaver",
+   "i": "spell_monk_revival",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "[Restoral: Restoral's / Revival's] cooldown is reduced by 16%, and provides immunity to magical damage and harmful effects for 2 sec."
+  },
+  "353584": {
+   "n": "Eminence",
+   "i": "monk_ability_transcendence",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Transcendence: Transfer can now be cast if you are stunned. Cooldown reduced by (15)) sec if you are not."
+  },
+  "468430": {
+   "n": "Zen Focus Tea",
+   "i": "inv_misc_pearlmilktea",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Thunder Focus Tea provides immunity to Silence and Interrupt effects for 5 sec."
+  }
+ },
+ "spellsKo": {
+  "1243554": {
+   "n": "선의 구슬",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "위안의 안개와 짜릿한 비취 번개, 해오름차기 사용 시 대상의 머리 위에 희망 또는 절망의 구슬을 형성합니다. 각 구슬은 한 번에 하나씩만 활성화됩니다.\n\n희망의 구슬: 대상에 대한 치유량이 10%만큼 증가합니다.\n절망의 구슬: 대상이 자신에게 입히는 피해를 3%만큼 감소시키고 대상이 받는 모든 피해는 10%만큼 증가시킵니다."
+  },
+  "353313": {
+   "n": "평화의 수사",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "[회복 / 재활]의 재사용 대기시간이 16%만큼 감소하며, 대상을 2초 동안 마법 피해와 해로운 효과에 면역으로 만듭니다."
+  },
+  "353584": {
+   "n": "명성",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "기절 상태에서 해탈: 전환 시전이 가능합니다. 기절 상태가 아닐 경우 재사용 대기시간이 (15))초만큼 감소합니다."
+  },
+  "468430": {
+   "n": "선의 집중 차",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "집중의 천둥 차 사용 시 5초 동안 침묵 및 주문 방해 효과에 면역이 됩니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 조화의 종사 43·천신의 대변자 5, 전장 대공세 32·12로 갈려 Celestial Conduit·Aspect of Harmony 등 한쪽 전용 기술은 쓰지 않음",
+   "Zen Spheres의 두 구슬 이름은 한글 짝이 확인되지 않아 효과로만 풀어 씀",
+   "쌍점이 든 Transcendence 전환 기술 이름은 쓰지 않고 Transcendence로 설명"
+  ]
+ }
+}

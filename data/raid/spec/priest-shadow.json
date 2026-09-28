@@ -1,0 +1,262 @@
+{
+ "id": "priest/shadow",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] Gravebound Advance 보호막이 남은 Restless Amani는 Mind Flay로 이동 속도를 50% 줄여 우물 도착을 늦춰라",
+    "[해제] 가장자리로 나간 Essence Rend 대상은 Mass Dispel로도 지울 수 있다, 15미터 안 5명까지 한 번에 지운다",
+    "@m [참고] Invoke가 끝나는 순간 시전 중인 주문이 끊기니 그때는 Mind Blast와 Mind Flay를 멈춰라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Voidform과 Power Infusion을 켜 바로 처치하라",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Voidform을 사이 단계 뒤로 미뤄라",
+    "[해제] Blighted Blood는 마법 효과이니 Mass Dispel로 15미터 안 5명까지 한 번에 지울 수 있다"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄에는 Tentacle Slam으로 Vampiric Touch를 최대 6마리에 걸고 Psychic Link로 피해를 나눠 중앙에 닿기 전에 잡아라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Psychic Scream으로 묶을 수 있다, 피해를 받으면 풀릴 수 있다",
+    "[해제] Exploding Infection은 해제할 때마다 Caustic Explosion이 공대를 치니 Mass Dispel로 여럿을 한꺼번에 지우지 마라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Silence로 끊어라",
+    "[해제] 차단을 놓쳐 걸린 Icebound Flames는 마법 효과이니 Mass Dispel로 지울 수 있다",
+    "[위치] Blink Nova 대상이 되면 Angelic Feather를 밟아 공대에서 빨리 멀어져라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 Voidform과 Power Infusion을 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Dispersion으로 받는 피해를 75% 줄여라",
+    "[위치] Venomous Surge 대상이 되면 Angelic Feather로 돌풍 구역 맞은편에 빨리 가서 Viscous Cyst를 놓아라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Voidform을 켜고 Tentacle Slam으로 Vampiric Touch를 걸어 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Desperate Prayer로 최대 생명력을 늘려 버텨라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Silence로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Silence로 끊어라",
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Voidform과 Power Infusion을 몰아라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Angelic Feather를 밟아 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Voidform과 Power Infusion을 몰아라",
+    "[생존기] Rage of the Shackled 20초 공대 피해에 Vampiric Embrace를 켜 암흑 주문 피해로 주위 아군을 치유하라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Silence로 끊어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Tentacle Slam과 Halo로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 공대 피해에는 Dispersion이나 Desperate Prayer로 버텨라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 광역 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Silence로 끊어라",
+    "[우선 처치] Voidmaw 무리는 Tentacle Slam과 Halo로 광역으로 잡아라",
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval에 배정되면 Vampiric Embrace로 주위 아군 치유를 거들어라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] Blisterburst의 받는 피해 증가와 Creep Spit 이동 속도 감소는 마법 효과이니 Mass Dispel로 15미터 안 5명까지 한꺼번에 지울 수 있다",
+    "[회피] Creep Spit이 쌓여 느려졌다면 Void Breath 때 Dispersion으로 이동 방해 효과에 면역이 된 채 50% 빨라져 방 끝으로 달려라",
+    "[우선 처치] 벽 앞에 모인 Blistercreep은 Tentacle Slam으로 함께 잡아 Blisterburst로 Void Crystal을 부숴라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] 먼 Fractured Image의 Shadow Fracture는 Silence로 끊어라",
+    "@m [차단] Nexus Shield가 벗겨진 Fractured Image가 8미터 안에 있으면 Psychic Scream 공포로도 끊을 수 있다",
+    "[참고] Entropic Unraveling 20초 동안 보스가 받는 피해가 25% 늘어나니 Voidform을 여기에 맞춰라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath 공포에 걸린 인원이 모여 있으면 Mass Dispel로 여럿을 한꺼번에 풀 수 있다",
+    "[생존기] Dread Breath 공포에 걸려도 Dispersion은 쓸 수 있으니 이어지는 도트 피해를 75% 줄여라",
+    "[차단] Voidorb의 Voidbolt는 Silence로 끊어라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[참고] 블러드 뒤 보스가 켠 Divine Shield는 적 버프 해제로 지울 수 있으니 Dispel Magic이나 Mass Dispel로 지워라",
+    "[해제] Avenger's Shield 도트가 여럿에게 걸리면 Mass Dispel로 한꺼번에 지울 수 있다",
+    "[차단] War Chaplain Senn의 Sacred Shield를 깬 뒤 Blinding Light를 Silence로 끊어라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] 플레이어에게 묻은 Corrupting Essence는 Mass Dispel로 여럿을 한꺼번에 지울 수 있다",
+    "[해제] Null Corona 대상이 Mass Dispel 범위에 들면 흡수막이 다른 사람에게 옮겨 가니 위급할 때가 아니면 범위에서 빼라",
+    "[참고] Demiar의 Interrupting Tremor 시전이 끝날 때는 Mind Blast 시전을 멈춰라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Silence로 가장 먼저 끊어라",
+    "[해제] 차단을 놓친 Fearsome Cry 공포는 마법 효과이니 Mass Dispel로 여럿을 한꺼번에 풀 수 있다",
+    "[우선 처치] 아래층 조라면 Voidform을 아껴 두었다가 쫄의 Alnshroud 보호막을 빠르게 깨라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 같은 색 깃털이면 불씨의 Light Eruption·Void Eruption을 Silence로 끊어라",
+    "[생존기] 2단계 알의 Rebirth 동안 Voidform과 Power Infusion을 몰아 Immortal Flame을 깎아라",
+    "[분담] Light Dive·Void Dive를 같은 색 인원과 나눠 맞을 때 Desperate Prayer로 최대 생명력을 올려 버텨라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [해제] Safeguard 강화 효과는 마법 효과이니 Dispel Magic으로 벗겨라",
+    "@nh [차단] Safeguard Matrix의 Safeguard 시전을 Silence로 끊어 중첩을 없애라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 순서대로 Silence로 끊어라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Silence로 반드시 끊어라, 멀리 생긴 두 번째 Sporecap도 원거리에서 맡아라",
+    "[우선 처치] 정한 자리에 모인 Shroomling과 Bursting Shroom은 Tentacle Slam과 Halo로 광역으로 잡아라",
+    "[생존기] Rotting Pustules 중첩으로 뒤로 갈수록 공대 피해가 커지니 Vampiric Embrace를 전투 후반에 써라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 15407",
+   "u": "https://nether.wowhead.com/tooltip/spell/15407?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 32375",
+   "u": "https://nether.wowhead.com/tooltip/spell/32375?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 8092",
+   "u": "https://nether.wowhead.com/tooltip/spell/8092?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 10060",
+   "u": "https://nether.wowhead.com/tooltip/spell/10060?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 228260",
+   "u": "https://nether.wowhead.com/tooltip/spell/228260?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 34914",
+   "u": "https://nether.wowhead.com/tooltip/spell/34914?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 199484",
+   "u": "https://nether.wowhead.com/tooltip/spell/199484?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1227280",
+   "u": "https://nether.wowhead.com/tooltip/spell/1227280?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 8122",
+   "u": "https://nether.wowhead.com/tooltip/spell/8122?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 15487",
+   "u": "https://nether.wowhead.com/tooltip/spell/15487?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 121536",
+   "u": "https://nether.wowhead.com/tooltip/spell/121536?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 47585",
+   "u": "https://nether.wowhead.com/tooltip/spell/47585?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 19236",
+   "u": "https://nether.wowhead.com/tooltip/spell/19236?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 15286",
+   "u": "https://nether.wowhead.com/tooltip/spell/15286?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 120644",
+   "u": "https://nether.wowhead.com/tooltip/spell/120644?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 15487",
+   "u": "https://nether.wowhead.com/tooltip/spell/15487?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 120644",
+   "u": "https://nether.wowhead.com/tooltip/spell/120644?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1227280",
+   "u": "https://nether.wowhead.com/tooltip/spell/1227280?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 15286",
+   "u": "https://nether.wowhead.com/tooltip/spell/15286?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 32375",
+   "u": "https://nether.wowhead.com/tooltip/spell/32375?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 47585",
+   "u": "https://nether.wowhead.com/tooltip/spell/47585?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 8122",
+   "u": "https://nether.wowhead.com/tooltip/spell/8122?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 228260",
+   "u": "https://nether.wowhead.com/tooltip/spell/228260?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 528",
+   "u": "https://nether.wowhead.com/tooltip/spell/528?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 8092",
+   "u": "https://nether.wowhead.com/tooltip/spell/8092?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 10060",
+   "u": "https://nether.wowhead.com/tooltip/spell/10060?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 19236",
+   "u": "https://nether.wowhead.com/tooltip/spell/19236?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Mass Dispel 줄은 digest 해제 목록의 마법 효과(Essence Rend·Blighted Blood·Icebound Flames)에만 썼고, Exploding Infection은 digest의 '시차를 두고 해제'와 툴팁 '5명까지 한꺼번에 제거'를 연결해 쓰지 말라는 경고로만 넣었다. Purify Disease가 지울 질병 디버프는 digest에 없다",
+   "Gravebound Advance 보호막을 깨는 피해 속성은 적지 않았다(미확인). Archon·Voidweaver 영웅 특성 전용 기술(Devour Matter 등)은 넣지 않았다",
+   "1시즌: Mass Dispel은 digest 해제 목록의 마법 효과(Blisterburst·Creep Spit·Dread Breath·Avenger's Shield·Corrupting Essence·Fearsome Cry)에만 썼고, Null Corona는 해제 시 옮겨 간다는 digest 문구로 경고만 넣었다. Dispel Magic·Mass Dispel의 적 버프 제거는 digest가 적 버프 해제를 요구한 Divine Shield·Safeguard에만 썼다",
+   "1시즌: Dispersion 줄은 툴팁의 '공포 중 사용 가능'·'이동 방해 효과 면역·이동 속도 50%'만 근거로 썼다. Purify Disease가 지울 질병 디버프는 digest에 없다. Archon·Voidweaver 영웅 특성 전용 기술(Devour Matter 등)은 넣지 않았다"
+  ]
+ }
+}

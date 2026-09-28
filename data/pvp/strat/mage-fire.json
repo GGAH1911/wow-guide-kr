@@ -1,0 +1,136 @@
+{
+ "id": "mage/fire",
+ "arena": [
+  "[생존기] Overpowered Barrier를 고르면 Blazing Barrier가 60% 더 흡수하고 흡수한 피해의 40%를 되돌리는 대신 4초만 유지되니 상대 폭딜 쿨기가 켜지는 순간에 맞춰 켜라",
+  "[생존기] Cauterize는 치명적인 피해를 받으면 생명력 35%로 살려 두고 6초간 불태우는 동안 감속을 무시하고 이동 속도를 150% 올리니 그 사이 기둥 뒤로 달려 시야를 끊어라",
+  "[생존기] Ice Block은 10초간 모든 공격과 피해를 막지만 그동안 공격과 이동과 시전을 못 하니 Cauterize가 이미 쓰인 채 폭딜을 받을 때 써라",
+  "[회피] Blink는 20미터 앞으로 순간이동하며 모든 기절과 속박에서 풀어 주니 근접 딜러의 기절에 걸리면 바로 빠져나와 거리를 벌려라",
+  "[제어] Dragon's Breath는 전방 12미터 적을 4초간 방향 상실시키지만 피해에 풀리니 붙어 있는 근접 딜러에게 쓰고 때리지 말고 거리를 벌려라",
+  "[제어] Master Shepherd를 고르면 Polymorph에 걸린 적 플레이어가 있는 동안 내 이동 속도가 25% 오르고 Polymorph가 적을 치유하지 않으니 상대 치유 전담을 양으로 묶고 다른 대상에게 Combustion을 켜 폭딜하라",
+  "[차단] Counterspell은 시전을 끊고 그 계열 주문을 7초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[분담] Improved Mass Invisibility를 고르면 Mass Invisibility가 2분마다 전투 중인 40미터 안 아군에게도 걸려 12초간 투명해지니 아군이 한꺼번에 몰릴 때 모두를 빼내라"
+ ],
+ "bg": [
+  "[참고] 깃발 지도에서 치유 전담이 운반하지 못하면 이동력 좋은 딜러가 운반하니 깃발을 들면 Blink로 기절과 속박을 풀고 Blazing Barrier를 끊기지 않게 유지하라",
+  "[제어] Ice Wall은 전장 대공세 41명 중 29명이 골랐고 30미터 길이의 벽이 최대 15초간 시야를 가리니 아군 운반자를 쫓는 적이나 상대 치유 전담의 시야를 끊어라",
+  "[제어] Dragon's Breath로 방향 상실에 빠진 적은 밀쳐낼 수 없으니 거점을 점령하려는 적에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라",
+  "[제어] Ring of Frost는 10초간 고리를 깔아 들어온 적을 최대 10명까지 10초간 행동 불가로 만드니 지키는 거점 깃발 곁에 깔아 점령하러 오는 적을 묶어라",
+  "[분담] Improved Mass Invisibility를 고르면 Mass Invisibility가 전투 중인 아군에게도 걸리니 한타에서 밀릴 때 40미터 안 아군을 12초간 투명하게 해 다음 거점으로 옮겨라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Blazing Barrier와 Alter Time을 폭딜 직전에 먼저 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 41명 전원이 고른 Overpowered Barrier는 Blazing Barrier 흡수량을 60% 늘리고 흡수한 피해의 40%를 되돌리지만 4초만 유지되며, 1인 조합전 41명 중 40명과 3v3 27명 전원이 고른 Improved Mass Invisibility는 Mass Invisibility 재사용 대기시간을 3분 줄이고 전투 중인 아군에게도 걸리게 하고, 1인 조합전 41명 중 35명이 고른 Master Shepherd는 내 Polymorph에 걸린 적 플레이어가 있는 동안 이동 속도 25%와 유연성 12%를 올린다.",
+ "tips": {
+  "overpowered barrier": "1220739",
+  "improved mass invisibility": "415945",
+  "master shepherd": "410248",
+  "ice wall": "352278",
+  "mass invisibility": "414664",
+  "ring of frost": "113724",
+  "blink": "1953",
+  "dragon's breath": "31661"
+ },
+ "spells": {
+  "1220739": {
+   "n": "Overpowered Barrier",
+   "i": "ability_racial_magicalresistance",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Your barriers absorb 60% more damage and have an additional effect, but last 4 sec. [ Frost: Ice Barrier\nIf the barrier is fully consumed, enemies within 10 yds suffer (650% of Spell Power) Frost damage and are slowed by 70% for 4 sec / Fire: Blazing Barrier\nReflects 40% of damage absorbed /"
+  },
+  "415945": {
+   "n": "Improved Mass Invisibility",
+   "i": "ability_mage_massinvisibility",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "The cooldown of Mass Invisibility is reduced by 3 min and it can affect allies in combat."
+  },
+  "410248": {
+   "n": "Master Shepherd",
+   "i": "spell_nature_doublepolymorph2",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "While an enemy player is affected by your Polymorph or Mass Polymorph, your movement speed is increased by 25% and your Versatility is increased by 12%.\n\nAdditionally, Polymorph and Mass Polymorph no longer heal enemies. (1s cooldown)"
+  },
+  "352278": {
+   "n": "Ice Wall",
+   "i": "ability_mage_icewall",
+   "m": "Tank Specs – Row 1 PvP Talent · 8% of base mana · 30 yd range · 1.5 sec cast · 1.5 min cooldown",
+   "d": "Conjures an Ice Wall 30 yards long that obstructs line of sight. The wall has 30% of your maximum health and lasts up to 15 sec."
+  },
+  "414664": {
+   "n": "Mass Invisibility",
+   "i": "ability_mage_massinvisibility",
+   "m": "Talent · 6% of base mana · Instant · 5 min cooldown",
+   "d": "You and your allies within 40 yards instantly become invisible for 12 sec. Taking any action will cancel the effect.\n\nDoes not affect allies in combat."
+  },
+  "113724": {
+   "n": "Ring of Frost",
+   "i": "spell_frost_ring-of-frost",
+   "m": "Talent · 8% of base mana · 30 yd range · 2 sec cast · 45 sec cooldown",
+   "d": "Summons a Ring of Frost for 10 sec at the target location. Enemies entering the ring are incapacitated for 10 sec. Limit 10 targets.\n\nWhen the incapacitate expires, enemies are slowed by 65% for 4 sec."
+  },
+  "1953": {
+   "n": "Blink",
+   "i": "spell_arcane_blink",
+   "m": "2% of base mana · Instant · 20 sec cooldown · 1 Charge",
+   "d": "Teleports you forward 20 yds or until reaching an obstacle, and frees you from all stuns and bonds."
+  },
+  "31661": {
+   "n": "Dragon's Breath",
+   "i": "inv_misc_head_dragon_01",
+   "m": "Talent · 4% of base mana · Instant · 45 sec cooldown",
+   "d": "Enemies in a 12 yd cone in front of you take (66.99% of Spell Power) Fire damage and are disoriented for 4 sec. Damage will cancel the effect.\n\nAlways deals a critical strike and contributes to Hot Streak."
+  }
+ },
+ "spellsKo": {
+  "1220739": {
+   "n": "과부하된 방벽",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "방벽 주문이 60%의 피해를 추가로 흡수하고 추가 효과를 발휘하지만 지속시간이 4초가 됩니다. [ 냉기: 얼음 보호막\n방벽이 완전히 소진되면 10미터 내의 적에게 (주문력의 650%)의 냉기 피해를 입히고 4초 동안 이동 속도를 70%만큼 감소시킵니다 / 화염: 이글거리는 방벽\n흡수한 피해의 40%를 반사합니다 /"
+  },
+  "415945": {
+   "n": "대규모 투명화 연마",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "대규모 투명화의 재사용 대기시간이 3분만큼 감소하고 전투 중인 아군에게도 영향을 줍니다."
+  },
+  "410248": {
+   "n": "양치기의 대가",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "적 플레이어가 자신의 변이 또는 대규모 변이에 걸리면, 자신의 이동 속도가 25%만큼, 유연성이 12%만큼 증가합니다.\n\n추가로 변이와 대규모 변이가 더는 적의 생명력을 회복시키지 않습니다. (1초 재사용 대기시간)"
+  },
+  "352278": {
+   "n": "얼음 벽",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 8% (기본 마나 중) · 30 야드 사정거리 · 1.5 초 주문 시전 시간 · 1.5 분 재사용 대기시간",
+   "d": "시야를 가리는 30미터 길이의 얼음 벽을 생성합니다. 벽은 자신의 최대 생명력의 30%에 해당하는 생명력을 가지며, 최대 15초 동안 지속됩니다."
+  },
+  "414664": {
+   "n": "대규모 투명화",
+   "m": "특성 · 6% (기본 마나 중) · 즉시 · 5 분 재사용 대기시간",
+   "d": "자신과 40미터 내의 아군이 즉시 12초 동안 투명 상태가 됩니다. 행동을 취하면 효과가 사라집니다.\n\n전투 중인 아군에게는 영향을 주지 않습니다."
+  },
+  "113724": {
+   "n": "서리 고리",
+   "m": "특성 · 8% (기본 마나 중) · 30 야드 사정거리 · 2 초 주문 시전 시간 · 45 초 재사용 대기시간",
+   "d": "10초 동안 대상 지역에 서리 고리를 소환합니다. 고리를 밟는 적은 10초 동안 행동 불가 상태가 됩니다. 최대 10명의 대상에 영향을 줍니다.\n\n행동 불가 효과가 만료되면 4초 동안 적의 이동 속도가 65%만큼 감소합니다."
+  },
+  "1953": {
+   "n": "점멸",
+   "m": "2% (기본 마나 중) · 즉시 · 20 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "전방으로 20미터를 순간이동합니다. 경로에 장애물이 있으면 이동이 중단됩니다. 모든 기절 및 구속 효과에서 벗어납니다."
+  },
+  "31661": {
+   "n": "용의 숨결",
+   "m": "특성 · 4% (기본 마나 중) · 즉시 · 45 초 재사용 대기시간",
+   "d": "전방 부채꼴 12미터 범위 내의 적에게 (주문력의 66.99%)의 화염 피해를 입히고 4초 동안 방향 감각을 상실하게 만듭니다. 피해를 입으면 효과가 사라집니다.\n\nAlways deals a critical strike and contributes to Hot Streak."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 성난태양 40·서리불꽃 1로 거의 성난태양이지만 한쪽 전용 기술은 쓰지 않음",
+   "Blink의 기절·속박 해제는 Blink 툴팁 문구이며 쐐기 파일은 Shimmer 기준이라 Blink 툴팁을 새로 받음. Shimmer로 바꾸면 해제 문구가 없음",
+   "투기장 상위권 표본은 3v3 27명·2v2 9명으로 1인 조합전과 같은 세 특성이 거의 전원이라 채택률을 함께 인용",
+   "지도 공략상 운반자가 은신·일부 무적 기술을 쓰면 깃발이 떨어지는데 Mass Invisibility 투명화·Ice Block이 여기에 드는지 확인되지 않아 운반 중 사용 권고는 쓰지 않음"
+  ]
+ }
+}

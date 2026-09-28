@@ -1,0 +1,111 @@
+{
+ "id": "rogue/outlaw",
+ "arena": [
+  "[생존기] Cloak of Shadows는 해로운 주문 효과를 즉시 모두 지우고 5초간 해로운 주문을 저항하니 상대 시전자의 제어 주문이나 마법 폭딜이 들어올 때 써라",
+  "[생존기] Preemptive Maneuver를 고르면 기절 중 Feint의 받는 피해 감소가 25% 더해지고 기력 소모가 30% 줄어드니 기절에 걸리기 직전 Feint를 켜 두어라",
+  "[생존기] Evasion은 10초간 회피 확률을 100% 올리니 근접 딜러가 폭딜 쿨기를 켜고 붙었을 때 써라",
+  "[제어] Kidney Shot은 연계 점수가 많을수록 길어져 최대 8초 기절시키니 상대 치유 전담을 묶은 사이 Adrenaline Rush를 켜서 폭딜을 넣어라",
+  "[제어] Gouge는 대상 정면에서 4초 행동 불가를 걸고 Blind는 1분 방향 상실을 걸지만 둘 다 피해에 풀릴 수 있으니 상대 치유 전담에게 걸고 아군은 다른 대상을 공격하게 하라",
+  "[분담] Smoke Bomb은 나를 중심으로 8미터 연막을 5초간 깔아 적이 연막 안팎으로 대상을 지정할 수 없게 하니 폭딜 대상 곁에 깔아 연막 밖 상대 치유 전담이 치유하지 못하게 하라",
+  "[차단] Kick은 시전을 끊고 그 계열 주문을 6초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[제어] Dismantle은 적의 무기와 방패를 5초간 빼앗으니 무기를 쓰는 근접 딜러가 폭딜 쿨기를 켰을 때 써라"
+ ],
+ "bg": [
+  "[참고] 거점 수비는 은신 직업이 좋으니 Stealth로 지키는 거점 깃발 곁에 숨어 있다가 점령하러 온 적에게 Cheap Shot으로 6초 기절을 걸어라",
+  "[참고] 지도 공략상 깃발 운반자가 은신하면 깃발이 떨어지니 깃발을 든 동안에는 Vanish나 Stealth를 쓰지 마라",
+  "[위치] Grappling Hook은 40미터 밖 지점으로 나를 끌어당기니 지붕이나 위층으로 도망친 상대 깃발 운반자를 쫓거나 공격받는 거점으로 빨리 지원 갈 때 써라",
+  "[분담] Shroud of Concealment는 30미터 안 아군을 15초간 은신시키니 소수 조를 이끌고 상대 거점이나 수레로 몰래 이동할 때 쓰고 Sap으로 전투 중이 아닌 수비자를 1분간 묶어라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Feint와 Evasion과 Cloak of Shadows를 폭딜 직전에 먼저 써라",
+  "[제어] Blind로 방향 상실에 빠진 적은 밀쳐낼 수 없으니 거점을 점령하려는 적에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라"
+ ],
+ "pvpTalents": "1인 조합전 상위 41명 중 39명과 전장 대공세 33명 모두가 고른 Smoke Bomb은 8미터 연막으로 적이 안팎을 대상 지정하지 못하게 하며, 1인 조합전 41명 중 33명과 전장 대공세 33명 중 27명이 고른 Dismantle은 적의 무기와 방패를 5초간 빼앗고, 전장 대공세 33명 중 25명이 고른 Preemptive Maneuver는 기절 중 Feint 피해 감소를 25% 더한다.",
+ "tips": {
+  "smoke bomb": "212182",
+  "dismantle": "207777",
+  "preemptive maneuver": "1219122",
+  "cheap shot": "1833",
+  "sap": "6770",
+  "gouge": "1776"
+ },
+ "spells": {
+  "212182": {
+   "n": "Smoke Bomb",
+   "i": "ability_rogue_smoke",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 3 min cooldown",
+   "d": "Creates a cloud of thick smoke in an 8 yard radius around the Rogue for 5 sec. Enemies are unable to target into or out of the smoke cloud."
+  },
+  "207777": {
+   "n": "Dismantle",
+   "i": "ability_rogue_dismantle",
+   "m": "Tank Specs – Row 1 PvP Talent · 15 Energy · Melee Range · Instant · 45 sec cooldown",
+   "d": "Disarm the enemy, preventing the use of any weapons or shield for 5 sec."
+  },
+  "1219122": {
+   "n": "Preemptive Maneuver",
+   "i": "ability_rogue_feint",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Feint decreases your damage taken by an additional 25% while stunned and its energy cost is reduced by 30%."
+  },
+  "1833": {
+   "n": "Cheap Shot",
+   "i": "ability_cheapshot",
+   "m": "40 Energy · Melee Range · Instant · 12 sec cooldown · 1 Charge · Requires Stealth",
+   "d": "Stuns the target for 6 sec.\n\nAwards 1 combo point."
+  },
+  "6770": {
+   "n": "Sap",
+   "i": "ability_sap",
+   "m": "35 Energy · 10 yd range · Instant · Requires Stealth",
+   "d": "Incapacitates a target not in combat for 1 min. Only works on Humanoids, Beasts, Demons, and Dragonkin. Damage will revive the target. Limit 1."
+  },
+  "1776": {
+   "n": "Gouge",
+   "i": "ability_gouge",
+   "m": "Talent · 25 Energy · Melee Range · Instant · 25 sec cooldown",
+   "d": "Gouges the eyes of an enemy target, incapacitating for 4 sec. Damage may interrupt the effect.\n\nMust be in front of your target.\n\nAwards 1 combo points."
+  }
+ },
+ "spellsKo": {
+  "212182": {
+   "n": "연막탄",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 3 분 재사용 대기시간",
+   "d": "도적 주위로 8미터 반경에 5초 동안 연막을 생성합니다. 연막 밖의 적은 안쪽의 대상을, 연막 안의 적은 바깥쪽의 대상을 대상으로 지정할 수 없습니다."
+  },
+  "207777": {
+   "n": "장비 분해",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 기력 15 · 근접 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "적을 무장 해제시켜 5초 동안 무기와 방패를 사용하지 못하게 합니다."
+  },
+  "1219122": {
+   "n": "선제 조치",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "교란이 기절한 동안 받는 피해를 추가로 25%만큼 감소시키며, 기력 소모량도 30%만큼 감소합니다."
+  },
+  "1833": {
+   "n": "비열한 습격",
+   "m": "기력 40 · 근접 사정거리 · 즉시 · 12 초 재사용 대기시간 · 1회 사용 가능 · 은신 필요",
+   "d": "적을 6초 동안 기절시킵니다.\n\n연계 점수 1점을 얻습니다."
+  },
+  "6770": {
+   "n": "혼절시키기",
+   "m": "기력 35 · 10 야드 사정거리 · 즉시 · 은신 필요",
+   "d": "비전투 상태의 적을 공격하여 1분 동안 행동 불가 상태로 만듭니다. 인간형, 야수, 악마, 용족에게만 효과가 있습니다. 대상이 피해를 입으면 깨어납니다. 대상은 하나로 제한됩니다."
+  },
+  "1776": {
+   "n": "후려치기",
+   "m": "특성 · 기력 25 · 근접 사정거리 · 즉시 · 25 초 재사용 대기시간",
+   "d": "적의 눈을 공격하여 4초 동안 행동 불가 상태로 만듭니다. 대상이 피해를 입으면 효과가 사라질 수 있습니다.\n\n대상의 앞에 있어야 합니다.\n\n연계 점수 1점을 얻습니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 기만자(Trickster) 30·운명결속 11, 전장 대공세 운명결속 25·기만자 8로 갈려 한쪽 전용 기술(Unseen Blade·Hand of Fate 등)은 쓰지 않음",
+   "평점제 전장 표본은 3명뿐이라 전장 줄은 전장 대공세 채택률과 지도 공략 기준",
+   "깃발 운반 중 은신 시 깃발이 떨어진다는 사실은 전쟁노래 협곡·쌍둥이 봉우리 지도 공략 기준"
+  ]
+ }
+}

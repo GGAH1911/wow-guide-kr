@@ -1,0 +1,99 @@
+{
+ "id": "warlock/demonology",
+ "arena": [
+  "[생존기] Unending Resolve는 8초간 받는 모든 피해를 25% 줄이고 차단과 침묵에 면역이 되니 상대 폭딜 쿨기나 차단 시도가 몰릴 때 켜고 시전을 이어 가라",
+  "[생존기] Dark Pact는 제어에 걸린 중에도 쓸 수 있고 현재 생명력 20%를 바쳐 그 두 배가 넘는 보호막을 20초간 두르니 기절에 묶인 채 폭딜을 받으면 바로 눌러라",
+  "[회피] Demonic Circle을 기둥 뒤에 깔아 두면 순간이동으로 돌아가며 모든 감속이 풀리고 Impish Instincts를 고르면 직접 물리 피해를 받을 때마다 재사용 대기시간이 3초 줄어드니 근접 딜러가 붙으면 순간이동해 시야를 끊어라",
+  "[차단] Felguard의 Axe Toss는 30미터 밖에서 대상을 4초간 기절시키며 시전도 끊으니 상대 치유 전담의 치유 시전에 맞춰 써라",
+  "[참고] Soul Rip을 고르면 20미터 안 적 플레이어 3명까지 8초간 주는 피해와 받는 치유가 25% 줄고 대상이 영혼을 되찾아야 풀리니 폭딜 대상에게 Summon Demonic Tyrant를 부르기 직전에 써라",
+  "[제어] Fear는 대상을 20초간 방향 상실시키지만 피해에 풀릴 수 있으니 상대 치유 전담에게 걸고 아군은 다른 대상을 공격하게 하라",
+  "[생존기] Nether Ward를 고르면 3초간 나에게 오는 해로운 주문을 모두 반사하니 상대 시전자의 제어 주문 시전이 끝나기 직전에 켜라",
+  "[제어] Shadowfury는 8미터 안 적을 모두 3초간 기절시키니 상대 치유 전담과 폭딜 대상이 붙어 있을 때 함께 묶어라"
+ ],
+ "bg": [
+  "[참고] 거점 수비는 소환수 직업이 좋으니 수비를 맡으면 Call Fel Lord를 지키는 거점 깃발 곁에 불러 15초간 6미터 안에 들어온 적 플레이어를 1초씩 기절시켜 점령을 끊어라",
+  "[분담] Gateway Mastery는 전장 대공세 33명 중 24명이 골랐고 Demonic Gateway 사거리를 20미터 늘리고 같은 사람이 다시 타는 대기시간을 30초 줄이니 공격받는 먼 거점이나 아군 운반자 쪽으로 아군을 옮겨라",
+  "[생존기] Nether Ward는 전장 대공세 33명 중 26명이 골랐고 3초간 해로운 주문을 모두 반사하니 여러 적이 나에게 제어 주문을 시전할 때 켜라",
+  "[제어] Fear로 방향 상실에 빠진 적은 밀쳐낼 수 없으니 거점을 점령하려는 적에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라",
+  "[위치] Curse of Exhaustion은 대상을 12초간 50% 감속시키니 상대 깃발 운반자나 구슬 운반자에게 걸어 아군이 따라잡게 하라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Dark Pact 보호막과 Unending Resolve를 폭딜 직전에 먼저 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 27명 중 20명이 고른 Soul Rip은 20미터 안 적 3명까지 8초간 주는 피해와 받는 치유를 25% 줄이고, 1인 조합전 27명 중 19명이 고른 Impish Instincts는 직접 물리 피해를 받을 때 Demonic Circle 재사용 대기시간을 3초 줄이며, 전장 대공세 33명 중 26명이 고른 Nether Ward는 3초간 해로운 주문을 모두 반사한다.",
+ "tips": {
+  "soul rip": "410598",
+  "impish instincts": "409835",
+  "nether ward": "212295",
+  "gateway mastery": "248855",
+  "call fel lord": "212459"
+ },
+ "spells": {
+  "410598": {
+   "n": "Soul Rip",
+   "i": "pvp_soulrip",
+   "m": "Tank Specs – Row 1 PvP Talent · 1 Soul Shard · 20 yd range · Instant · 1 min cooldown",
+   "d": "Fracture the soul of up to 3 target players within 20 yds into the shadows, reducing their damage done by 25% and healing received by 25% for 8 sec. Souls are fractured up to 20 yds from the player's location.\n\nPlayers can retrieve their souls to remove this effect."
+  },
+  "409835": {
+   "n": "Impish Instincts",
+   "i": "spell_shadow_demoniccircleteleport",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Taking direct Physical damage reduces the cooldown of Demonic Circle by 3 sec.\n\nCannot occur more than once every 5 sec. (5s cooldown)"
+  },
+  "212295": {
+   "n": "Nether Ward",
+   "i": "spell_fire_felfireward",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · Instant · 45 sec cooldown",
+   "d": "Surrounds the caster with a shield that lasts 3 sec, reflecting all harmful spells cast on you."
+  },
+  "248855": {
+   "n": "Gateway Mastery",
+   "i": "spell_warlock_demonicportal_green",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of your Demonic Gateway by 20 yards, and reduces the cast time by 30%. Reduces the time between how often players can take your Demonic Gateway by 30 sec."
+  },
+  "212459": {
+   "n": "Call Fel Lord",
+   "i": "achievement_boss_hellfire_fellord",
+   "m": "Tank Specs – Row 1 PvP Talent · 40 yd range · Instant · 2 min cooldown",
+   "d": "Summon a fel lord to guard the location for 15 sec. Any enemy that comes within 6 yards will suffer [(Spell Power * 2) * 1 * 1 * (1 + Versatility)] Physical damage, and players struck will be stunned for 1 sec."
+  }
+ },
+ "spellsKo": {
+  "410598": {
+   "n": "영혼 도려내기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 영혼의 조각 1개 · 20 야드 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "20미터 내에 있는 대상 최대 3명의 영혼을 산산이 조각내 어둠 속으로 보내고 8초 동안 공격력을 25%만큼, 받는 치유 효과를 25%만큼 감소시킵니다. 조각난 영혼은 플레이어의 위치에서 최대 20미터 떨어진 지점에 생성됩니다.\n\n해당 효과를 제거하려면 플레이어가 영혼을 회수해야 합니다."
+  },
+  "409835": {
+   "n": "악동의 본능",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "직접 물리 피해를 받으면 악마의 마법진의 재사용 대기시간이 3초만큼 감소합니다.\n\n5초에 한 번씩만 발동합니다. (5초 재사용 대기시간)"
+  },
+  "212295": {
+   "n": "황천 보호막",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 즉시 · 45 초 재사용 대기시간",
+   "d": "3초 동안 지속되는 보호막으로 시전자를 감싸, 시전자에게 시전되는 모든 해로운 주문을 반사합니다."
+  },
+  "248855": {
+   "n": "관문 특화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "악마의 관문의 사거리가 20미터만큼 증가하고, 시전 시간이 30%만큼 감소합니다. 악마의 관문을 이용할 수 있는 대기시간이 30초만큼 감소합니다."
+  },
+  "212459": {
+   "n": "지옥 군주 부르기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 40 야드 사정거리 · 즉시 · 2 분 재사용 대기시간",
+   "d": "15초 동안 지옥 군주를 소환하여 해당 지역을 지키게 합니다. 6미터 내로 접근하는 적은 [(주문력 * 2) * 1 * 1 * (1 + 유연성)]의 물리 피해를 입고, 적중당한 플레이어는 1초 동안 기절합니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 악마학자 23·영혼 수확자 4, 전장 대공세 17·16으로 갈려 한쪽 전용 기술은 쓰지 않음",
+   "투기장 상위권 표본이 3v3 3명·2v2 4명뿐이라 투기장 줄은 1인 조합전(27명) 채택률과 일반 원칙 기준",
+   "kit 해제기 Singe Magic은 임프 기술이라 지옥수호병을 부리는 기본 운용에서 쓸 수 있는지 툴팁으로 확인되지 않아 쓰지 않음"
+  ]
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "id": "priest/holy",
+ "arena": [
+  "[생존기] Spirit of the Redeemer를 고르면 Spirit of Redemption을 직접 켜서 6초간 공격과 주문의 대상이 되지 않고 치유 주문을 공짜로 쓰니 내가 집중 공격으로 쓰러지기 직전에 눌러라",
+  "[분담] Guardian Spirit은 10초간 대상이 받는 치유량을 60% 올리고 죽을 피해를 한 번 막아 주니 상대 폭딜이 몰린 아군에게 걸어라",
+  "[회피] Phase Shift를 고르면 Fade를 쓸 때 1초간 모든 공격과 주문을 피하지만 차단은 피하지 못하니 상대 제어 주문 시전이 끝나는 순간에 Fade를 눌러라",
+  "[제어] Psychic Scream은 8미터 안 적을 8초간 공포로 도망치게 하고 Psychic Shroud를 고르면 플레이어가 맞았을 때 나에게 오는 다음 제어 효과 하나를 6초 안에 막아 준다",
+  "[해제] Purify는 아군의 해로운 마법을 모두 지우고 Mass Dispel은 15미터 안 아군 5명의 해로운 마법과 일반 해제로 못 지우는 마법까지 지우니 여럿이 제어에 걸리면 Mass Dispel을 써라",
+  "[위치] Phantasm을 고르면 Fade로 모든 감속이 풀리고 Angelic Feather는 5초간 이동 속도를 40% 올리니 감속을 받으면 이 둘로 기둥 뒤로 시야를 끊어라",
+  "[생존기] Desperate Prayer는 최대 생명력을 10초간 25% 늘리고 그만큼 즉시 회복하니 집중 공격이 시작되면 먼저 눌러 두어라",
+  "[분담] Power Infusion은 대상 플레이어의 가속을 15초간 20% 올리니 아군 딜러가 폭딜 쿨기를 켤 때 함께 걸어라"
+ ],
+ "bg": [
+  "[참고] 전장 대공세는 치유 전담 2명 편성이고 깃발 지도에서는 이동력이 좋은 치유 전담이 운반에 좋으니 Angelic Feather와 Phantasm을 고른 Fade로 감속을 떨치며 운반을 도울 수 있다",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 집중 공격받는 깃발 운반자에게는 받는 치유량을 60% 올리고 죽음을 한 번 막는 Guardian Spirit을 먼저 걸어라",
+  "[분담] Leap of Faith는 아군을 즉시 내 앞으로 끌어오니 적에게 붙잡힌 깃발 운반자를 아군 쪽으로 빼내라",
+  "[제어] Psychic Scream으로 공포에 빠진 적은 밀쳐낼 수 없으니 거점을 점령하려는 적에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라",
+  "[광역 피해] Divine Hymn은 5초간 40미터 안 파티·공격대원을 치유하고 치유마다 받는 치유량을 4%씩 올리니 거점 수비로 뭉친 아군이 광역 피해를 받을 때 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 37명 모두와 전장 대공세 42명 중 41명이 고른 Spirit of the Redeemer는 Spirit of Redemption을 2분마다 직접 켜는 6초 무적 치유 형상으로 바꾸고, 1인 조합전 37명 모두와 전장 대공세 42명 중 39명이 고른 Phase Shift는 Fade 때 1초간 모든 공격과 주문을 피하게 하며, 전장 대공세 42명 중 29명이 고른 Sanctified Ground는 빛의 권능 성역화를 쓴 땅 위 아군을 5초간 침묵과 차단에서 지킨다.",
+ "tips": {
+  "spirit of the redeemer": "215982",
+  "phase shift": "408557",
+  "psychic shroud": "1246968",
+  "spirit of redemption": "215769"
+ },
+ "spells": {
+  "215982": {
+   "n": "Spirit of the Redeemer",
+   "i": "inv_enchant_essenceeternallarge",
+   "m": "Tank Specs – Row 1 PvP Talent · Replaces Spirit of Redemption",
+   "d": "Your Spirit of Redemption is now an active ability with a 2 minute cooldown, but the duration is reduced by 9 sec and you will no longer enter Spirit of Redemption upon dying."
+  },
+  "408557": {
+   "n": "Phase Shift",
+   "i": "spell_priest_spectralguise",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Step into the shadows when you cast Fade, avoiding all attacks and spells for 1 sec.\n\nInterrupt effects are not affected by Phase Shift."
+  },
+  "1246968": {
+   "n": "Psychic Shroud",
+   "i": "ability_priest_surgeofdarkness",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "When your Psychic Scream affects 1 or more players, the next crowd control effect against you is prevented. Lasts 6 sec."
+  },
+  "215769": {
+   "n": "Spirit of Redemption",
+   "i": "inv_enchant_essenceeternallarge",
+   "m": "Instant · 2 min cooldown",
+   "d": "The Priest becomes the Spirit of Redemption for 6 sec. The Spirit of Redemption cannot move, attack, be attacked or targeted by any spells or effects. While in this form the Priest can cast any healing spell free of cost."
+  }
+ },
+ "spellsKo": {
+  "215982": {
+   "n": "구원자의 영혼",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 구원의 영혼을(를) 대신함",
+   "d": "구원의 영혼이 이제 사용 능력이 되고 2분의 재사용 대기시간이 적용됩니다. 하지만 지속시간이 9초로 감소하고, 사망 시 구원의 영혼이 되지 않습니다."
+  },
+  "408557": {
+   "n": "위상 변화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "소실 시전 시 그림자에 숨어들어 1초 동안 모든 공격과 주문을 회피합니다.\n\n주문 방해 효과는 위상 변화에 영향을 받지 않습니다."
+  },
+  "1246968": {
+   "n": "영혼의 수의",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "영혼의 절규가 1명 이상의 플레이어에게 영향을 주면 자신에게 걸리는 다음 군중 제어 효과를 방지합니다. 6초 동안 지속됩니다."
+  },
+  "215769": {
+   "n": "구원의 영혼",
+   "m": "즉시 · 2 분 재사용 대기시간",
+   "d": "사제가 6초 동안 구원의 영혼이 됩니다. 구원의 영혼은 이동 및 공격을 할 수 없지만, 주문 및 기타 효과의 대상이 되거나 공격을 받지도 않습니다. 구원의 영혼 상태에서는 모든 치유 주문을 자원 소모 없이 사용할 수 있습니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [
+   "Sanctified Ground는 툴팁상 성역화 권능에 붙는데 이번 시즌 Ultimate Serenity가 성역화 대상 특성을 평온 권능으로 옮겨 실제 발동 기술이 불확실해 전략 줄에는 쓰지 않음"
+  ],
+  "notes": [
+   "상위권 영웅 특성이 거의 모두 예언자(1인 조합전 37/37)지만 지침대로 한쪽 전용 기술은 쓰지 않음",
+   "쌍점이 든 빛의 권능 이름(평온·응징·성역화)은 문장에 쓰지 않음"
+  ]
+ }
+}

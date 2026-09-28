@@ -1,0 +1,285 @@
+{
+ "id": "monk/windwalker",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Essence Rend 대상이 되면 방 가장자리로 나간 뒤 Diffuse Magic으로 해로운 마법 효과를 스스로 지울 수 있다, 지운 자리에 Latent Cultist가 생긴다",
+    "[분담] 사이 단계 Hungering Pyre를 근접으로 나눠 맞을 때 Dampen Harm으로 큰 피해를 줄여라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Spear Hand Strike로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood가 걸리면 Diffuse Magic으로 스스로 지울 수 있다",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Invoke Xuen과 Zenith를 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞을 때 Dampen Harm이나 Touch of Karma로 피해를 줄여라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Spinning Crane Kick과 Whirling Dragon Punch로 광역으로 잡아 Malignant Cavity에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Paralysis로 묶을 수 있다, 피해를 받으면 풀릴 수 있다",
+    "@m [생존기] Gloom Expulsion과 Conflagrating Expulsion 공대 피해에 Diffuse Magic을 맞춰 마법 피해를 줄여라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Spear Hand Strike로 끊어라",
+    "[해제] 차단을 놓쳐 Icebound Flames가 걸리면 Diffuse Magic으로 스스로 지울 수 있다",
+    "[위치] Blink Nova 대상이 되면 Flying Serpent Kick이나 Roll로 공대에서 빨리 멀어져라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 30% 늘어나니 Invoke Xuen과 Zenith를 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Dampen Harm으로 큰 피해를 줄여라",
+    "[회피] Tempest 감속이 쌓이면 Tiger's Lust로 감속을 지우고 회오리를 피하라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Whirling Dragon Punch와 Spinning Crane Kick으로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Dampen Harm이나 Touch of Karma로 피해를 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Spear Hand Strike로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Invoke Xuen과 Zenith를 여기에 맞춰라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Spear Hand Strike로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Flying Serpent Kick이나 Roll로 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Invoke Xuen과 Zenith를 몰아라",
+    "[해제] Blightscale Viper의 Acidic Burst는 독 효과이니 Detox로 지워라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Spear Hand Strike로 끊어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Spinning Crane Kick으로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 냉기 공대 피해에 Diffuse Magic을 맞춰 마법 피해를 줄여라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Spinning Crane Kick 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Spear Hand Strike로 끊어라",
+    "[우선 처치] Voidmaw는 Spinning Crane Kick과 Fists of Fury로 함께 잡아라",
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval 공대 피해에 Dampen Harm을 맞춰라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] Blisterburst의 받는 피해 증가나 Creep Spit 감속이 걸리면 Diffuse Magic으로 해로운 마법 효과를 스스로 지울 수 있다",
+    "[회피] Creep Spit 감속이 쌓이면 Tiger's Lust로 감속을 지우고 Void Breath 반대쪽 방 끝까지 달려라",
+    "[우선 처치] 벽 앞에 모은 Blistercreep은 Spinning Crane Kick과 Fists of Fury로 함께 잡아 Blisterburst로 Void Crystal을 부숴라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] 가까운 Fractured Image의 Shadow Fracture를 Spear Hand Strike로 끊어라",
+    "@m [차단] Nexus Shield가 벗겨진 Fractured Image들이 6미터 안에 모여 있으면 Leg Sweep으로 함께 기절시켜 끊어라",
+    "[생존기] Entropic Unraveling 동안 보스가 받는 피해가 25% 늘어나니 Invoke Xuen과 Zenith를 여기에 맞추고 Dampen Harm으로 공대 피해를 줄여라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Void Howl 뒤 생긴 Voidorb의 Voidbolt를 Spear Hand Strike로 끊어라",
+    "@m [제어] 끊겨도 공대로 떠오지 않는 Voidorb가 6미터 안에 모여 있으면 Leg Sweep으로 함께 기절시켜라",
+    "[회피] Nullzone 사슬은 Flying Serpent Kick이나 Roll로 초기 반경 밖 10미터까지 빨리 벗어나 끊어라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] 풀 직후 Avenging Wrath로 받는 피해가 20% 늘어난 Commander Venel Lightblood에 Invoke Xuen과 Zenith를 맞춰라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Spear Hand Strike로 끊어라",
+    "[해제] Avenger's Shield 도트가 걸리면 Diffuse Magic으로 해로운 마법 효과를 스스로 지울 수 있다"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] 몸에 묻은 Corrupting Essence는 마법 효과이니 Diffuse Magic으로 스스로 지울 수 있다",
+    "[위치] Grasp of Emptiness 대상이 되면 Flying Serpent Kick이나 Roll로 원에서 멀리 벗어나 Bursting Emptiness가 공대를 비껴가게 하라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage를 Spear Hand Strike로 끊거나 모여 있으면 Leg Sweep으로 함께 기절시켜라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Spear Hand Strike로 먼저 끊고 남는 차단으로 Essence Bolt를 끊어라",
+    "[우선 처치] 아래층 조라면 Invoke Xuen과 Zenith를 아껴 두었다가 Alnshroud 보호막을 빠르게 깨라",
+    "[우선 처치] 2단계에는 Rift Shroud로 보스가 받는 피해가 99% 줄어드니 Spinning Crane Kick과 Fists of Fury를 쫄에 써라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Spear Hand Strike로 끊어라",
+    "[생존기] Invoke Xuen과 Zenith는 2단계 알에 아껴 두었다가 Rebirth 시전 동안 몰아 써라",
+    "[분담] 같은 색 Light Dive·Void Dive를 함께 맞을 때 Dampen Harm으로 큰 피해를 줄여라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩을 Spear Hand Strike와 Leg Sweep으로 없애라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 Spear Hand Strike로 순서대로 끊어라",
+    "[우선 처치] 한곳에 모인 Midnight Crystal은 Spinning Crane Kick과 Fists of Fury로 시전이 끝나기 전에 처치하라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Spear Hand Strike로 끊어라",
+    "@hm [해제] 차단을 놓친 Poison Burst 도트는 독이니 Detox로 지워라",
+    "[우선 처치] 모인 자리의 Bursting Shroom은 Spinning Crane Kick과 Fists of Fury로 16초 안에 처치하라"
+   ]
+  }
+ },
+ "tips": {
+  "dampen harm": "122278",
+  "diffuse magic": "122783"
+ },
+ "spells": {
+  "122278": {
+   "n": "Dampen Harm",
+   "i": "ability_monk_dampenharm",
+   "m": "Talent · Instant · 2 min cooldown",
+   "d": "Reduces all damage you take by 20% to 50% for 10 sec, with larger attacks being reduced by more."
+  },
+  "122783": {
+   "n": "Diffuse Magic",
+   "i": "spell_monk_diffusemagic",
+   "m": "Talent · Instant · 1.5 min cooldown",
+   "d": "Reduces magic damage you take by 60% for 6 sec, and transfers all currently active harmful magical effects on you back to their original caster if possible."
+  }
+ },
+ "spellsKo": {
+  "122278": {
+   "n": "해악 감퇴",
+   "m": "특성 · 즉시 · 2 분 재사용 대기시간",
+   "d": "10초 동안 받는 피해가 20%에서 50%까지 감소합니다. 피해가 큰 공격은 감소량이 증가합니다."
+  },
+  "122783": {
+   "n": "마법 해소",
+   "m": "특성 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "6초 동안 자신이 받는 마법 피해가 60%만큼 감소하고, 가능할 경우 현재 자신에게 활성화된 모든 해로운 마법 효과를 시전한 대상에게 되돌려줍니다."
+  }
+ },
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 122783",
+   "u": "https://nether.wowhead.com/tooltip/spell/122783?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 122278",
+   "u": "https://nether.wowhead.com/tooltip/spell/122278?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 116705",
+   "u": "https://nether.wowhead.com/tooltip/spell/116705?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 123904",
+   "u": "https://nether.wowhead.com/tooltip/spell/123904?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1249625",
+   "u": "https://nether.wowhead.com/tooltip/spell/1249625?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 122470",
+   "u": "https://nether.wowhead.com/tooltip/spell/122470?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 101546",
+   "u": "https://nether.wowhead.com/tooltip/spell/101546?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 152175",
+   "u": "https://nether.wowhead.com/tooltip/spell/152175?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 115078",
+   "u": "https://nether.wowhead.com/tooltip/spell/115078?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 101545",
+   "u": "https://nether.wowhead.com/tooltip/spell/101545?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 109132",
+   "u": "https://nether.wowhead.com/tooltip/spell/109132?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 116841",
+   "u": "https://nether.wowhead.com/tooltip/spell/116841?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 218164",
+   "u": "https://nether.wowhead.com/tooltip/spell/218164?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 116705",
+   "u": "https://nether.wowhead.com/tooltip/spell/116705?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 101546",
+   "u": "https://nether.wowhead.com/tooltip/spell/101546?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 113656",
+   "u": "https://nether.wowhead.com/tooltip/spell/113656?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 122278",
+   "u": "https://nether.wowhead.com/tooltip/spell/122278?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 122783",
+   "u": "https://nether.wowhead.com/tooltip/spell/122783?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 116841",
+   "u": "https://nether.wowhead.com/tooltip/spell/116841?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 119381",
+   "u": "https://nether.wowhead.com/tooltip/spell/119381?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 123904",
+   "u": "https://nether.wowhead.com/tooltip/spell/123904?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1249625",
+   "u": "https://nether.wowhead.com/tooltip/spell/1249625?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 101545",
+   "u": "https://nether.wowhead.com/tooltip/spell/101545?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 109132",
+   "u": "https://nether.wowhead.com/tooltip/spell/109132?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 218164",
+   "u": "https://nether.wowhead.com/tooltip/spell/218164?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "Diffuse Magic 툴팁은 해로운 마법 효과를 \"가능하면\" 시전자에게 되돌린다고 해서 보스 디버프가 반드시 옮겨지는지는 확인하지 못했다, Essence Rend·Blighted Blood·Icebound Flames 줄은 \"지울 수 있다\"로 썼다"
+  ],
+  "notes": [
+   "Gravebound Advance 보호막을 어느 피해 계열이 깨는지는 확인하지 않아 쓰지 않았다",
+   "Fortifying Brew는 풍운 툴팁에 피해 감소 수치가 없어 쓰지 않고 Dampen Harm·Diffuse Magic 툴팁을 새로 받아 썼다",
+   "Detox는 digest 해제 목록 Acidic Burst(Poison)에 연결했다, 음영파·천신의 대변자 영웅 특성 전용 기술은 넣지 않았다",
+   "1시즌: Diffuse Magic 해제 줄은 s1.json 해제 목록(Blisterburst·Creep Spit·Avenger's Shield·Corrupting Essence 모두 Magic)과 툴팁 '해로운 마법 효과를 시전자에게 되돌린다'를 연결했다, Dread Breath 공포 중 사용 가능 여부는 툴팁에 없어 쓰지 않았다",
+   "1시즌: Dampen Harm·Diffuse Magic 툴팁은 2시즌 레이드 풍운 파일에서 그대로 옮겼다, Fortifying Brew는 툴팁에 수치가 없어 쓰지 않았다",
+   "1시즌: Invoke Xuen은 쐐기 파일 names(백호 쉬엔의 원령) 약칭을 썼다, 음영파·천신의 대변자 전용 기술은 넣지 않았다"
+  ]
+ }
+}

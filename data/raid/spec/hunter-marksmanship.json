@@ -1,0 +1,267 @@
+{
+ "id": "hunter/marksmanship",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[우선 처치] Gravebound Advance는 마법 피해를 흡수하는 보호막이니 화염 피해인 Explosive Shot으로 Restless Amani 보호막을 깨라",
+    "@m [참고] Invoke 시전이 끝날 때 시전 중인 주문이 끊기니 그 순간에는 Aimed Shot과 Steady Shot 시전을 멈춰라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Counter Shot으로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Trueshot을 몰아 바로 처치하라",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Trueshot을 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞을 때 Survival of the Fittest로 피해를 줄여라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Volley와 Multi-Shot으로 Trick Shots를 켜 광역으로 잡아 중앙에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Freezing Trap으로 묶을 수 있다",
+    "@m [생존기] Gloom Expulsion과 Conflagrating Expulsion에 Survival of the Fittest를 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Counter Shot으로 끊어라",
+    "[위치] Blink Nova 대상이 되면 Aspect of the Cheetah나 Disengage로 공대에서 빨리 멀어져라",
+    "[생존기] Fishy Feedback 공대 피해와 도트에 Survival of the Fittest를 맞춰라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 Trueshot을 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Survival of the Fittest로 피해를 줄여라",
+    "[회피] Tempest 회오리를 피해 움직일 때는 이동 중 쓸 수 있는 Rapid Fire와 Steady Shot으로 딜을 이어가라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Trueshot과 Explosive Shot으로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Survival of the Fittest로 피해를 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Counter Shot으로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Trueshot을 몰아라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Counter Shot으로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Aspect of the Cheetah로 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Emergency Salve를 찍었다면 Blightscale Viper의 Acidic Burst 독을 Feign Death로 스스로 지울 수 있다",
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Trueshot을 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Counter Shot으로 끊어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Volley와 Multi-Shot으로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 공대 피해에 Survival of the Fittest를 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Volley 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Counter Shot으로 끊어라",
+    "[우선 처치] Voidmaw 무리는 Multi-Shot과 Volley로 광역으로 잡아라",
+    "@m [우선 처치] 사이 단계 Abyssal Voidshaper가 Gathering Darkness를 쓰기 전에 Trueshot을 켜고 즉시 대상을 바꿔 잡아라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[우선 처치] 벽 앞에 모인 Blistercreep은 Multi-Shot과 Explosive Shot으로 함께 잡아 Blisterburst로 Void Crystal을 부숴라",
+    "[회피] Void Breath 때는 Aspect of the Cheetah로 빛나는 손 반대쪽 방 끝까지 달려라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 Survival of the Fittest로 받는 피해를 줄여라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] 먼 Fractured Image의 Shadow Fracture는 Counter Shot으로 끊거나 Intimidation으로 묶어라",
+    "[참고] Entropic Unraveling 20초 동안 보스가 받는 피해가 25% 늘어나니 Trueshot을 여기에 맞춰라",
+    "[생존기] Entropic Unraveling 공대 피해는 Survival of the Fittest로 줄이고 Exhilaration으로 생명력을 채워라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Voidorb의 Voidbolt는 Counter Shot으로 끊거나 Intimidation으로 묶어라",
+    "[생존기] Midnight Flames 암흑 피해가 25초 이어지니 Radiant Barrier 안에서 Survival of the Fittest로 받는 피해를 줄여라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[참고] 블러드 뒤 보스가 켠 Divine Shield는 적 버프 해제로 지울 수 있으니 Tranquilizing Shot으로 지워라",
+    "[차단] War Chaplain Senn의 Sacred Shield를 깬 뒤 Blinding Light를 Counter Shot으로 끊어라",
+    "[분담] Execution Sentence를 대상 옆에서 나눠 맞을 때 Survival of the Fittest로 받는 피해를 줄여라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[참고] Demiar의 Interrupting Tremor 시전이 끝날 때는 Aimed Shot 시전을 멈춰라",
+    "[위치] Grasp of Emptiness 대상이면 Disengage와 Aspect of the Cheetah로 원에서 멀리 달려라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage는 Counter Shot으로 끊거나 Intimidation으로 묶어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Counter Shot으로 가장 먼저 끊어라",
+    "[우선 처치] 아래층 조라면 Trueshot을 아껴 두었다가 쫄의 Alnshroud 보호막을 빠르게 깨라",
+    "@m [분담] Rift Madness 교대 인원이면 Aspect of the Cheetah로 대상 곁까지 빠르게 가서 영역을 바꿔라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 같은 색 깃털이면 불씨의 Light Eruption·Void Eruption을 Counter Shot으로 끊어라",
+    "[생존기] 블러드는 첫 알 단계이니 Rebirth 동안 Harrier's Cry를 쓰고 Trueshot을 몰아라",
+    "[분담] Light Dive·Void Dive를 같은 색 인원과 나눠 맞을 때 Survival of the Fittest로 받는 피해를 줄여라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [해제] Safeguard 강화 효과는 마법 효과이니 Tranquilizing Shot으로 벗겨라",
+    "@nh [차단] Safeguard Matrix의 Safeguard 시전을 Counter Shot과 Intimidation으로 끊어 중첩을 없애라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 순서대로 Counter Shot으로 끊어라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Counter Shot으로 반드시 끊어라, 멀리 생긴 두 번째 Sporecap도 원거리에서 맡아라",
+    "@hm [해제] Emergency Salve를 배웠다면 차단을 놓친 Poison Burst 독 도트를 Aspect of the Turtle로 스스로 지울 수 있다",
+    "[우선 처치] 정한 자리에 모인 Shroomling과 Bursting Shroom은 Multi-Shot과 Volley로 광역으로 잡아라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 212431",
+   "u": "https://nether.wowhead.com/tooltip/spell/212431?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 19434",
+   "u": "https://nether.wowhead.com/tooltip/spell/19434?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 56641",
+   "u": "https://nether.wowhead.com/tooltip/spell/56641?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 257044",
+   "u": "https://nether.wowhead.com/tooltip/spell/257044?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 288613",
+   "u": "https://nether.wowhead.com/tooltip/spell/288613?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 260243",
+   "u": "https://nether.wowhead.com/tooltip/spell/260243?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 257620",
+   "u": "https://nether.wowhead.com/tooltip/spell/257620?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 147362",
+   "u": "https://nether.wowhead.com/tooltip/spell/147362?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 187650",
+   "u": "https://nether.wowhead.com/tooltip/spell/187650?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 264735",
+   "u": "https://nether.wowhead.com/tooltip/spell/264735?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 459517",
+   "u": "https://nether.wowhead.com/tooltip/spell/459517?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 186257",
+   "u": "https://nether.wowhead.com/tooltip/spell/186257?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 781",
+   "u": "https://nether.wowhead.com/tooltip/spell/781?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 147362",
+   "u": "https://nether.wowhead.com/tooltip/spell/147362?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 257620",
+   "u": "https://nether.wowhead.com/tooltip/spell/257620?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 260243",
+   "u": "https://nether.wowhead.com/tooltip/spell/260243?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 288613",
+   "u": "https://nether.wowhead.com/tooltip/spell/288613?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 212431",
+   "u": "https://nether.wowhead.com/tooltip/spell/212431?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 186257",
+   "u": "https://nether.wowhead.com/tooltip/spell/186257?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 264735",
+   "u": "https://nether.wowhead.com/tooltip/spell/264735?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 474421",
+   "u": "https://nether.wowhead.com/tooltip/spell/474421?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 109304",
+   "u": "https://nether.wowhead.com/tooltip/spell/109304?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 19801",
+   "u": "https://nether.wowhead.com/tooltip/spell/19801?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 19434",
+   "u": "https://nether.wowhead.com/tooltip/spell/19434?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 781",
+   "u": "https://nether.wowhead.com/tooltip/spell/781?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 466904",
+   "u": "https://nether.wowhead.com/tooltip/spell/466904?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 186265",
+   "u": "https://nether.wowhead.com/tooltip/spell/186265?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 459517",
+   "u": "https://nether.wowhead.com/tooltip/spell/459517?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "Gravebound Advance 툴팁의 'absorbing magic damage'를 마법 피해만 흡수하는 뜻으로 읽었다, 화염 피해는 어느 해석이든 흡수되므로 줄 내용은 유지된다"
+  ],
+  "notes": [
+   "Invoke 줄은 digest의 '시전 중이면 끊긴다'와 Aimed Shot 2.5초·Steady Shot 1.7초 시전 툴팁을 연결했다",
+   "파수꾼·어둠 순찰자 영웅 특성 전용 기술은 넣지 않았다",
+   "1시즌: Tranquilizing Shot은 툴팁 '적의 마법 효과 1개 제거'를 digest의 적 버프 해제 요구(Divine Shield, 공격형 마법 해제로 벗기는 Safeguard)에만 썼다. Interrupting Tremor 줄은 digest '시전 끝에는 주문 시전을 멈춰라'와 Aimed Shot 2.5초 시전 툴팁을 연결했다",
+   "1시즌: Aspect of the Turtle은 모든 공격이 빗나가게 하므로 나눠 맞기에는 쓰지 않았다. 파수꾼·어둠 순찰자 영웅 특성 전용 기술은 넣지 않았다"
+  ]
+ }
+}

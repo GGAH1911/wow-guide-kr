@@ -1,0 +1,73 @@
+{
+ "id": "priest/discipline",
+ "arena": [
+  "[생존기] Pain Suppression은 기절 중에도 쓸 수 있고 대상이 받는 모든 피해를 8초간 40% 줄이니 기절에 묶인 채 아군이 폭딜을 받으면 바로 걸어라",
+  "[회피] Phase Shift를 고르면 Fade를 쓸 때 1초간 모든 공격과 주문을 피하지만 차단은 피하지 못하니 상대 제어 주문 시전이 끝나는 순간에 Fade를 눌러라",
+  "[제어] Psychic Scream은 8미터 안 적을 8초간 공포로 도망치게 하지만 피해에 풀릴 수 있으니 아군이 때리지 않는 적이 붙었을 때 써라",
+  "[해제] Purify는 아군의 해로운 마법을 모두 지우니 아군 치유나 딜을 막는 마법 제어부터 풀어라",
+  "[해제] Mass Dispel은 15미터 안 아군 5명의 해로운 마법을 지우고 일반 해제로 못 지우는 마법도 지우니 상대의 해제 불가 마법 보호 효과를 벗길 때 써라",
+  "[광역 피해] Ultimate Radiance를 고르면 Evangelism 재사용 대기시간이 45초 줄고 광휘 치유량이 15% 오르니 상대 폭딜 쿨기에 맞춰 Evangelism으로 아군 전체에 Atonement를 깔아라",
+  "[참고] Inner Light는 치유 주문 마나 10% 절약과 주문 피해·Atonement 치유 10% 증가를 오가며 바꾸면 6초 재사용 대기시간이 도니 마나가 넉넉할 때만 피해 쪽으로 돌려라",
+  "[생존기] Desperate Prayer는 최대 생명력을 10초간 늘리고 그만큼 즉시 회복하니 내가 집중 공격받는 순간 먼저 눌러라"
+ ],
+ "bg": [
+  "[참고] 전장 대공세는 치유 전담 2명 편성이고 깃발 지도에서는 이동력이 좋은 치유 전담이 운반에 좋으니 Angelic Feather의 5초 40% 이동 속도와 Phantasm을 고른 Fade의 감속 해제로 운반을 도울 수 있다",
+  "[분담] Leap of Faith는 아군을 즉시 내 앞으로 끌어오니 적에게 붙잡힌 깃발 운반자를 아군 쪽으로 빼내라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 체력이 깎인 뒤 치유하기보다 적의 폭딜 직전에 Pain Suppression을 미리 걸어라",
+  "[제어] Psychic Scream으로 공포에 빠진 적은 밀쳐낼 수 없으니 거점을 점령하려는 적에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라",
+  "[해제] Mass Dispel은 15미터 안 아군 5명의 해로운 마법을 한 번에 지우니 거점 수비로 뭉친 아군에게 마법 제어가 여럿 걸렸을 때 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 47명 중 45명과 전장 대공세 42명 중 41명이 고른 Ultimate Radiance는 Evangelism 재사용 대기시간을 45초 줄이고 광휘 치유량을 15% 올리며, 47명 중 39명이 고른 Inner Light는 치유 마나 절약과 피해·Atonement 치유 증가를 오가고, 47명 중 35명이 고른 Phase Shift는 Fade 때 1초간 모든 공격과 주문을 피하게 한다.",
+ "tips": {
+  "ultimate radiance": "236499",
+  "inner light": "355897",
+  "phase shift": "408557"
+ },
+ "spells": {
+  "236499": {
+   "n": "Ultimate Radiance",
+   "i": "spell_priest_power-word",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Evangelism cooldown is reduced by 45 sec and Power Word: Radiance healing is increased by 15%."
+  },
+  "355897": {
+   "n": "Inner Light",
+   "i": "spell_holy_divinespirit",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · Instant · 6 sec cooldown",
+   "d": "[Inner Light: Embrace the light, reducing the mana cost of healing spells by 10% / Inner Light: Healing spells cost 10% less mana.\n\nInner Shadow: Spell damage and Atonement healing increased by 10%.\n\nActivate to swap from one effect to the other, incurring a 6 sec cooldown.]"
+  },
+  "408557": {
+   "n": "Phase Shift",
+   "i": "spell_priest_spectralguise",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Step into the shadows when you cast Fade, avoiding all attacks and spells for 1 sec.\n\nInterrupt effects are not affected by Phase Shift."
+  }
+ },
+ "spellsKo": {
+  "236499": {
+   "n": "궁극의 광휘",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "사도의 재사용 대기시간이 45초만큼 감소하고 신의 권능: 광휘의 치유량이 15%만큼 증가합니다."
+  },
+  "355897": {
+   "n": "내면의 빛",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 즉시 · 6 초 재사용 대기시간",
+   "d": "[내면의 빛: 빛을 받아들여 치유 주문의 마나 소모량이 10%만큼 감소합니다 / 내면의 빛: 치유 주문의 마나 소모량이 10%만큼 감소합니다.\n\n내면의 어둠: 주문 공격력과 속죄의 치유량이 10%만큼 증가합니다.\n\n활성화 시 효과가 번갈아 가며 변경되며, 6초의 재사용 대기시간이 적용됩니다.]"
+  },
+  "408557": {
+   "n": "위상 변화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "소실 시전 시 그림자에 숨어들어 1초 동안 모든 공격과 주문을 회피합니다.\n\n주문 방해 효과는 위상 변화에 영향을 받지 않습니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 예언자 43·공허술사 4로 거의 예언자지만 한쪽 전용 기술은 쓰지 않음",
+   "쌍점이 든 이름(Power Word 계열·Shadow Word 계열)은 지침에 따라 문장에 쓰지 않아 보호막·광휘 운용은 Evangelism·Atonement로만 설명"
+  ]
+ }
+}

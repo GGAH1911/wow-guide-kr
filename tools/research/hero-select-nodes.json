@@ -1,0 +1,165 @@
+{
+ "note": "영웅 트리 선택 노드: [노드 번호, roster heroes[0] 의 선택지 번호]. 가이드 빌드 코드(영웅별)에서 두 영웅의 선택지가 늘 갈리는 노드이고, 직업마다 전문화 순서대로 번호가 이어진다.",
+ "sel": {
+  "warrior/arms": [
+   158,
+   1
+  ],
+  "warrior/fury": [
+   157,
+   1
+  ],
+  "warrior/protection": [
+   156,
+   1
+  ],
+  "paladin/holy": [
+   176,
+   1
+  ],
+  "paladin/protection": [
+   175,
+   1
+  ],
+  "paladin/retribution": [
+   174,
+   1
+  ],
+  "hunter/beast-mastery": [
+   35,
+   1
+  ],
+  "hunter/marksmanship": [
+   34,
+   1
+  ],
+  "hunter/survival": [
+   36,
+   1
+  ],
+  "rogue/assassination": [
+   184,
+   1
+  ],
+  "rogue/outlaw": [
+   183,
+   1
+  ],
+  "rogue/subtlety": [
+   182,
+   1
+  ],
+  "priest/discipline": [
+   178,
+   1
+  ],
+  "priest/holy": [
+   179,
+   1
+  ],
+  "priest/shadow": [
+   177,
+   1
+  ],
+  "death-knight/blood": [
+   163,
+   1
+  ],
+  "death-knight/frost": [
+   162,
+   1
+  ],
+  "death-knight/unholy": [
+   161,
+   1
+  ],
+  "shaman/elemental": [
+   116,
+   1
+  ],
+  "shaman/enhancement": [
+   118,
+   1
+  ],
+  "shaman/restoration": [
+   117,
+   1
+  ],
+  "mage/arcane": [
+   84,
+   1
+  ],
+  "mage/fire": [
+   83,
+   1
+  ],
+  "mage/frost": [
+   82,
+   1
+  ],
+  "warlock/affliction": [
+   103,
+   1
+  ],
+  "warlock/demonology": [
+   102,
+   1
+  ],
+  "warlock/destruction": [
+   101,
+   1
+  ],
+  "monk/brewmaster": [
+   175,
+   1
+  ],
+  "monk/mistweaver": [
+   187,
+   0
+  ],
+  "monk/windwalker": [
+   188,
+   0
+  ],
+  "druid/balance": [
+   234,
+   1
+  ],
+  "druid/feral": [
+   231,
+   0
+  ],
+  "druid/guardian": [
+   233,
+   0
+  ],
+  "druid/restoration": [
+   232,
+   1
+  ],
+  "demon-hunter/havoc": [
+   142,
+   1
+  ],
+  "demon-hunter/vengeance": [
+   141,
+   0
+  ],
+  "demon-hunter/devourer": [
+   168,
+   0
+  ],
+  "evoker/devastation": [
+   199,
+   1
+  ],
+  "evoker/preservation": [
+   198,
+   1
+  ],
+  "evoker/augmentation": [
+   197,
+   1
+  ]
+ }
+}

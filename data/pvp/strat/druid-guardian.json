@@ -1,0 +1,98 @@
+{
+ "id": "druid/guardian",
+ "arena": [
+  "[생존기] Barkskin은 기절·빙결·행동 불가·공포·수면 중에도 쓸 수 있고 8초간 받는 피해를 20% 줄이니 제어에 묶인 채 폭딜이 들어오면 바로 켜라",
+  "[생존기] Survival Instincts는 2회 충전으로 6초간 받는 피해를 50% 줄이니 상대 폭딜 쿨기가 나에게 몰릴 때 한 번씩 나눠 써라",
+  "[차단] Skull Bash는 13미터 안 대상에게 달려가 시전을 끊고 그 계열 주문을 5초간 막으며 Charging Bash를 고르면 사거리가 10미터 늘어나니 상대 치유 전담의 치유 시전에 아껴라",
+  "[제어] Overrun은 대상에게 달려가 3초 기절시키고 15미터 안 그 아군을 밀쳐내니 상대 치유 전담을 기절시키면서 곁의 딜러를 떼어내라",
+  "[제어] Incapacitating Roar는 10미터 안 적을 3초 행동 불가로 만들지만 피해에 풀릴 수 있으니 아군이 때리지 않는 적들이 몰렸을 때 써라",
+  "[분담] Den Mother를 고르면 15미터 안 아군의 최대 생명력이 15% 오르고 나에게 걸리는 기절 시간이 15% 줄어드니 아군 곁에 붙어 싸워라",
+  "[광역 피해] Demoralizing Roar를 고르면 10미터 안 적이 주는 피해가 8초간 20% 줄어드니 상대 근접 딜러들이 아군에게 폭딜을 넣을 때 그 사이에서 써라",
+  "[위치] Bear Form과 Travel Form은 변신할 때 이동 방해 효과가 풀리고 변이 효과를 막아 주니 감속이나 속박을 받으면 변신으로 벗어나라"
+ ],
+ "bg": [
+  "[참고] 전장 대공세에서 탱커는 0~1명이고 느린 탱커는 깃발 운반에 도움이 필요하니 Dash로 10초간 60% 빨라지고 변신으로 이동 방해를 풀면서 운반하라",
+  "[위치] Stampeding Roar는 15미터 안 아군의 이동 속도를 8초간 60% 올리니 깃발 운반자와 호위가 함께 달릴 때나 거점 사이로 옮길 때 써라",
+  "[분담] Grove Protection을 고르면 10초간 숲 안 아군이 숲 밖 적에게 받는 피해가 50% 줄어드니 거점 수비나 깃발 운반자 호위 자리에 깔아라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유인 Frenzied Regeneration보다 Ironfur 방어도와 Survival Instincts 피해 감소를 먼저 이어라",
+  "[제어] Typhoon과 Overrun은 적을 밀쳐내지만 공포나 방향 상실에 걸린 대상은 밀쳐낼 수 없으니 제어가 걸리지 않은 적을 거점 밖으로 밀어내라"
+ ],
+ "pvpTalents": "1인 조합전 상위 25명 중 20명과 전장 대공세 41명 중 38명이 고른 Den Mother는 15미터 안 아군의 최대 생명력을 15% 올리고 받는 기절 시간을 줄이며, 1인 조합전 25명 중 18명과 전장 대공세 41명 중 26명이 고른 Overrun은 대상을 3초 기절시키고 주변 적을 밀쳐내고, 전장 대공세 41명 중 19명이 고른 Demoralizing Roar는 10미터 안 적의 피해를 8초간 20% 줄인다.",
+ "tips": {
+  "den mother": "236180",
+  "overrun": "202246",
+  "demoralizing roar": "201664",
+  "charging bash": "228431",
+  "grove protection": "354654"
+ },
+ "spells": {
+  "236180": {
+   "n": "Den Mother",
+   "i": "ability_druid_denmother",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "You bolster nearby allies within 15 yards, increasing their maximum health by 15%.\n\nThe duration of all stun effects on you is reduced by 15%."
+  },
+  "202246": {
+   "n": "Overrun",
+   "i": "ability_druid_overrun",
+   "m": "Tank Specs – Row 1 PvP Talent · 8 - 25 yd range · Instant · 25 sec cooldown · Requires Bear Form",
+   "d": "Charge to an enemy, stunning them for 3 sec and knocking back their allies within 15 yards."
+  },
+  "201664": {
+   "n": "Demoralizing Roar",
+   "i": "ability_druid_challangingroar",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 30 sec cooldown",
+   "d": "Demoralizes all enemies within 10 yards, reducing the damage they do by 20% for 8 sec."
+  },
+  "228431": {
+   "n": "Charging Bash",
+   "i": "inv_bone_skull_04",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of your Skull Bash by 10 yards."
+  },
+  "354654": {
+   "n": "Grove Protection",
+   "i": "ability_druid_protectionofthegrove",
+   "m": "Tank Specs – Row 1 PvP Talent · 30 yd range · Instant · 1 min cooldown",
+   "d": "Summon a grove to protect allies in the area for 10 sec, reducing damage taken by 50% from enemies outside the grove."
+  }
+ },
+ "spellsKo": {
+  "236180": {
+   "n": "무리 어미",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "15미터 내의 아군을 강화하여 대상의 최대 생명력을 15%만큼 증가시킵니다.\n\n자신에게 시전되는 모든 기절 효과의 지속시간이 15%만큼 감소합니다."
+  },
+  "202246": {
+   "n": "약진",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 8 - 25 야드 사정거리 · 즉시 · 25 초 재사용 대기시간 · 곰 변신 필요",
+   "d": "적에게 돌진하여 3초 동안 기절시키고, 15미터 내의 모든 적을 뒤로 밀쳐냅니다."
+  },
+  "201664": {
+   "n": "위협의 포효",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 30 초 재사용 대기시간",
+   "d": "10미터 내의 모든 적의 사기를 떨어뜨려, 8초 동안 적의 공격력을 20%만큼 감소시킵니다."
+  },
+  "228431": {
+   "n": "돌진 강타",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "두개골 강타의 사정거리가 10미터만큼 증가합니다."
+  },
+  "354654": {
+   "n": "숲의 보호",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 30 야드 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "숲을 소환하여 10초 동안 해당 지역의 아군을 보호합니다. 숲 밖의 적으로부터 받는 피해가 50%만큼 감소합니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "투기장 상위권 표본이 3v3 1명·한국 3v3 8명·2v2 5명뿐이라 투기장 줄은 1인 조합전(25명) 채택률과 일반 원칙 기준",
+   "영웅 특성이 1인 조합전 엘룬의 대행자 23·발톱의 드루이드 2로 치우쳤지만 Boundless Moonlight·Ravage 등 한쪽 전용 기술은 쓰지 않음",
+   "쌍점이 든 Incarnation 이름은 쓰지 않음"
+  ]
+ }
+}

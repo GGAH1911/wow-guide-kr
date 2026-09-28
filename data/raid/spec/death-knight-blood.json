@@ -1,0 +1,153 @@
+{
+ "id": "death-knight/blood",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[위치] Possession Barrage 대상이 되면 Death's Advance로 이동 속도를 35% 올려 보스에게서 멀리 달려가라",
+    "[탱버] Possession Barrage는 암흑 피해이니 Anti-Magic Shell로 흡수하라",
+    "[제어] 보호막이 남은 Restless Amani는 Chains of Ice로 70% 감속시켜 늦춰라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[탱버] Bloodvenom Injection의 40초 암흑 도트는 마법 피해이니 Anti-Magic Shell로 흡수하라",
+    "[탱버] Empowering Slam이 같은 대상에게 쌓일 때 Icebound Fortitude나 Vampiric Blood를 써라",
+    "[교대] 사이 단계가 끝나면 Dark Command로 보스를 가져와라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[탱버] Dripping Fangs 중첩이 쌓이면 Icebound Fortitude로 받는 피해를 30% 줄여라",
+    "@m [분담] Burning Venom 둘을 Death Grip이나 Gorefiend's Grasp로 Shrouded Venom 곁으로 끌어와라",
+    "@hm [참고] Clotting Venom은 Death Grip이나 Gorefiend's Grasp로 끌어올 수 없다"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[교대] Shredding Shards는 냉기 피해이니 Dark Command로 교대해 받을 때 Anti-Magic Shell로 흡수하라",
+    "[차단] Icebound Flames를 Mind Freeze로 차단하라",
+    "[탱버] Steady Strikes 중첩이 높을 때 Dancing Rune Weapon으로 무기 막기 확률을 30% 올려라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[교대] Apex Predator 시전 중 Dark Command로 대상을 바꿔 Ravage와 Mutilate를 하나씩 맡아라",
+    "[탱버] Ravage를 맞을 때 Icebound Fortitude나 Vampiric Blood를 써라",
+    "[탱버] Mutilate는 자연 피해이니 Anti-Magic Shell로 흡수하라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[탱버] Caustic Deluge는 5초 자연 피해이니 Anti-Magic Shell로 흡수하라",
+    "[위치] Stone Breaker로 밀려난 뒤 Death's Advance로 밟기 자리를 빠르게 밟아라",
+    "@m [탱버] Blood Torrent 치유 흡수는 Vampiric Blood로 받는 치유를 30% 늘리고 Death Strike로 채워라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[교대] Sever 교대 때 Dark Command를 쓰고 맞을 때 Icebound Fortitude를 켜라",
+    "[탱버] Soul Sever와 Blighted Sever는 암흑 피해이니 Anti-Magic Shell로 흡수하라",
+    "[차단] Veil of Twilight가 깨지면 Eternal Nightfall을 Mind Freeze로 차단하라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[교대] Caustic Waves 시전 때 Dark Command로 Ula'tek과 Gore Rattle을 바꿔라",
+    "[위치] Mother's Wrath로 밀려나면 Death's Advance로 이동 속도를 올려 곧바로 공격 범위 안으로 돌아가라",
+    "[차단] 2단계 Doomscale Warden의 Malice를 Mind Freeze로 차단하라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[탱버] Water Jet은 냉기 피해이니 Anti-Magic Shell로 흡수하라",
+    "[제어] 거품으로 몰려드는 Bubblefin Shorerunner를 Gorefiend's Grasp로 한곳에 끌어모아 광역으로 잡게 하라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[탱버] Blackening Wounds 중첩으로 최대 생명력이 줄어들면 Vampiric Blood로 최대 생명력을 30% 늘려라",
+    "[탱버] Weakened로 쫄을 받는 동안 Gnashing Void 암흑 도트가 쌓이면 Anti-Magic Shell로 마법 피해를 흡수하라",
+    "@hm [우선 처치] 생명력 35% 아래에서 점령 영역으로 가는 Voidmaw는 Death Grip으로 끌어오거나 Chains of Ice로 70% 감속시켜라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[탱버] Smashed가 쌓인 채 두 번째 큰 발톱 충격을 받을 때 Icebound Fortitude로 받는 피해를 30% 줄여라",
+    "[탱버] Shadowclaw Slam 충격은 암흑 피해도 함께 오니 Anti-Magic Shell로 마법 피해를 흡수하라",
+    "[위치] Blistercreep이 달라붙으면 Death's Advance로 감속을 무시하고 자기 쪽 Void Crystal 벽으로 달려가라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[탱버] Shattering Twilight는 큰 암흑 피해이니 벽 쪽에서 Anti-Magic Shell과 Icebound Fortitude를 켜고 받아라",
+    "[교대] Destabilizing Strikes 중첩이 쌓이면 Dark Command로 보스를 가져와 Concentrated Void 구슬 반대쪽으로 끌어라",
+    "[차단] 가까운 Fractured Image의 Shadow Fracture는 Mind Freeze로 끊거나 Asphyxiate로 기절시켜라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[탱버] Rakfang 강화로 치유 흡수가 붙으면 Vampiric Blood로 받는 치유를 30% 올리고 Death Strike로 채워라",
+    "[탱버] Vaelgor의 Vaelwing으로 강화된 근접 공격은 암흑 피해를 더하니 Anti-Magic Shell로 흡수하라",
+    "@m [제어] 끊긴 Voidorb가 공대로 떠오지 않으니 Gorefiend's Grasp로 15미터 안 Voidorb를 한곳에 끌어모아라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[교대] Commander Venel Lightblood의 Judgment 직후 Dark Command로 교대해 Final Verdict 증폭 피해를 피하라",
+    "[탱버] Final Verdict와 Shield of the Righteous는 신성 피해이니 Anti-Magic Shell로 흡수하라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Mind Freeze로 차단하라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[탱버] Dark Hand 시전 때 Death's Advance를 켜 두면 강제 이동 효과 면역으로 밀려나지 않고, 암흑 피해는 Anti-Magic Shell로 흡수하라",
+    "@nh [우선 처치] Undying Voidspawn을 Gorefiend's Grasp로 끌어모아 Silverstrike Ricochet 경로에 넣어라",
+    "@nh [교대] Rift Slash 중첩으로 능력치가 줄면 Undying Voidspawn 처리 뒤 Dark Command로 교대하라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[탱버] Alndust Upheaval 대상이 되면 큰 물리 피해를 받으니 Icebound Fortitude나 Vampiric Blood를 켜고 조와 함께 맞아라",
+    "[차단] 아래층에서는 Haunting Essence의 Fearsome Cry를 Mind Freeze로 먼저 끊어라",
+    "[우선 처치] 아래층 Haunting Essence와 Swarming Shade를 Gorefiend's Grasp로 모아 광역으로 함께 잡게 하라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[교대] 반대 색 Light Edict·Void Edict가 오면 같은 색 탱커가 시전 중 Dark Command로 가져와 맞아라",
+    "[탱버] Light Edict·Void Edict의 큰 신성·암흑 피해는 Anti-Magic Shell로 흡수하고 두 번 연달아 올 때는 Icebound Fortitude를 더하라",
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Mind Freeze로 끊어라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[교대] Heaven's Lance 5번 찌르기가 끝나면 Dark Command로 교대하고, 찌르기를 받을 때 Icebound Fortitude를 켜라",
+    "[우선 처치] Midnight Crystal을 Gorefiend's Grasp로 한곳에 끌어모아 시전이 끝나기 전에 함께 잡게 하라",
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩은 Mind Freeze와 Asphyxiate 기절로 없애라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "[교대] Putrid Fist를 맞은 뒤 Dark Command로 교대하고, 맞을 때는 Icebound Fortitude나 Vampiric Blood를 켜라",
+    "[우선 처치] 흩어진 Shroomling은 Gorefiend's Grasp로 정한 자리에 끌어모아 광역기로 처치하게 하라",
+    "@hm [차단] 보스 곁 Sporecap의 Poison Burst를 Mind Freeze로 차단하라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "탱버·교대 줄은 digest 역할 tank 항목(Empowering Slam·Dripping Fangs·Shredding Shards·Steady Strikes·Apex Predator·Caustic Deluge·Stone Breaker·Sever·Caustic Waves·Water Jet)과 core 보스 툴팁의 피해 계열(물리/자연/암흑/냉기)을 기술 툴팁 효과와 짝지었다.",
+   "면역으로 기믹을 무시한다는 서술은 넣지 않았다(기절·공포·밀쳐내기 면역 기술 포함). 영웅 특성 전용 기술은 쓰지 않았다.",
+   "Vashnik @m 끌어오기 줄은 digest 역할 dps의 \"죽음의 기사가 Burning Venom 둘을 Shrouded Venom 곁으로 끌어온다\"를 근거로 했다.",
+   "1시즌: Dark Hand 밀쳐내기 대비는 digest 역할 tank의 '밀림 방지' 문구와 Death's Advance 툴팁의 강제 이동 면역을 짝지었다.",
+   "1시즌: Gorefiend's Grasp 끌어모으기 줄은 digest가 쫄을 모으라고 한 곳(Voidorb 신화, Undying Voidspawn, Midnight Crystal, Shroomling, 아래층 쫄)에만 썼다. Abomination Limb 등 영웅 특성 전용 기술은 쓰지 않았다."
+  ]
+ }
+}

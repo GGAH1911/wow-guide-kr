@@ -1,0 +1,75 @@
+{
+ "id": "hunter/beast-mastery",
+ "arena": [
+  "[생존기] Survival Tactics를 고르면 Feign Death가 2초간 받는 피해를 90% 줄이니 상대가 폭딜 쿨기를 켜고 몰아칠 때 Feign Death를 눌러라",
+  "[생존기] Aspect of the Turtle은 8초간 모든 주문과 공격을 빗나가게 하고 받는 피해를 30% 줄이지만 그동안 공격할 수 없으니 다른 생존기로 버틸 수 없을 때 써라",
+  "[생존기] Survival of the Fittest는 나와 소환수가 받는 모든 피해를 6초간 30% 줄이니 기절에 묶이기 전이나 폭딜이 시작될 때 먼저 써라",
+  "[제어] Freezing Trap은 처음 다가온 적을 1분간 행동 불가로 만들지만 피해에 풀릴 수 있으니 상대 치유 전담을 가둔 사이 아군은 다른 대상에게 폭딜을 넣어라",
+  "[제어] Intimidation은 소환수를 통해 대상을 5초 기절시키니 상대 치유 전담이 묶인 동안 Bestial Wrath를 켜서 폭딜을 넣어라",
+  "[차단] Counter Shot은 40미터 밖에서 시전을 끊고 그 계열 주문을 5초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[회피] Scatter Shot은 20미터 안 대상을 3초간 행동 불가로 만들고 지속 피해를 모두 지우니 나나 아군 치유 전담에게 붙은 근접 딜러를 잠깐 떼어낼 때 써라",
+  "[분담] Master's Call은 소환수와 아군 하나의 뿌리묶기와 이동 방해 효과를 모두 풀고 4초간 면역시키니 감속에 붙잡힌 아군 근접 딜러에게 써라"
+ ],
+ "bg": [
+  "[참고] 거점 수비는 소환수 직업이 좋으니 지키는 거점 깃발 앞에 Freezing Trap을 깔아 점령하러 다가온 첫 적을 행동 불가로 묶어라",
+  "[제어] Chimaeral Sting은 전장 대공세 41명 중 27명이 골랐고 대상을 3초 90% 감속시킨 뒤 3초 침묵과 3초 피해·치유 20% 감소를 차례로 거니 상대 깃발 운반자를 붙잡을 때 써라",
+  "[분담] Master's Call은 아군의 뿌리묶기와 이동 방해를 풀고 4초간 면역시키니 감속에 붙잡힌 아군 깃발 운반자에게 써라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Survival of the Fittest나 Aspect of the Turtle을 폭딜 직전에 먼저 써라",
+  "[위치] Aspect of the Cheetah는 3초간 90% 뒤이어 9초간 30% 이동 속도를 올리니 공격받는 먼 거점이나 깃발 운반자에게 빨리 지원 갈 때 써라",
+  "[해제] Tranquilizing Shot은 적 대상의 격노 효과 하나와 마법 효과 하나를 지우니 상대 깃발 운반자나 거점 수비자에게 걸린 마법 강화 효과를 벗겨라"
+ ],
+ "pvpTalents": "1인 조합전 상위 43명 모두와 전장 대공세 41명 중 39명이 고른 Survival Tactics는 Feign Death에 2초간 받는 피해 90% 감소를 더하며, 1인 조합전 43명 중 34명이 고른 Scatter Shot은 3초 행동 불가와 지속 피해 제거를 주고, 전장 대공세 41명 중 27명이 고른 Chimaeral Sting은 감속·침묵·피해와 치유 감소를 차례로 건다.",
+ "tips": {
+  "survival tactics": "202746",
+  "scatter shot": "213691",
+  "chimaeral sting": "356719"
+ },
+ "spells": {
+  "202746": {
+   "n": "Survival Tactics",
+   "i": "ability_rogue_feigndeath",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Feign Death reduces damage taken by 90% for 2 sec."
+  },
+  "213691": {
+   "n": "Scatter Shot",
+   "i": "ability_golemstormbolt",
+   "m": "Tank Specs – Row 1 PvP Talent · 20 yd range · Instant · 30 sec cooldown",
+   "d": "A short-range shot that deals (4.4616% of Attack Power) damage, removes all harmful damage over time effects, and incapacitates the target for 3 sec. Any damage caused will remove the effect. Turns off your attack when used. [Binding Shackles: Targets incapacitated by Scatter Shot deal 10% less damage to you for 8 sec after the effect ends]"
+  },
+  "356719": {
+   "n": "Chimaeral Sting",
+   "i": "ability_hunter_snaketrap",
+   "m": "Tank Specs – Row 1 PvP Talent · 40 yd range · Instant · 1 min cooldown",
+   "d": "Stings the target, dealing (150% of Attack Power) Nature damage and initiating a series of venoms. Each lasts 3 sec and applies the next effect after the previous one ends.\n\nScorpid Venom:\n90% reduced movement speed.\n\nSpider Venom:\nSilenced.\n\nViper Venom:\n20% reduced damage and healing."
+  }
+ },
+ "spellsKo": {
+  "202746": {
+   "n": "생존술",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "죽은 척하기 사용 시 2초 동안 받는 피해가 90%만큼 감소합니다."
+  },
+  "213691": {
+   "n": "분산 사격",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 20 야드 사정거리 · 즉시 · 30 초 재사용 대기시간",
+   "d": "(전투력의 4.4616%)의 피해를 입히고, 모든 해로운 지속 피해 효과를 제거합니다. 또한 3초 동안 적을 행동 불가 상태로 만들며, 대상에 대한 공격을 중단합니다. 사정거리가 짧습니다. 대상이 피해를 입으면 효과가 사라집니다. [억제의 족쇄: 분산 사격으로 행동 불가 상태가 된 대상의 효과가 사라지면 8초 동안 대상에게 받는 피해가 10%만큼 감소합니다]"
+  },
+  "356719": {
+   "n": "키메라 쐐기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 40 야드 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "독침으로 대상을 찔러 (전투력의 150%)의 자연 피해를 입히고 일련의 맹독을 주입합니다. 각각의 맹독은 3초 동안 지속되며, 이전 맹독 효과 하나가 종료되면 다음 효과를 부여합니다.\n\n전갈 맹독:\n이동 속도를 90%만큼 감소시킵니다.\n\n거미 맹독:\n침묵시킵니다.\n\n살무사 맹독:\n공격력과 치유량을 20%만큼 감소시킵니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 무리의 지도자 43명 전원으로 쏠렸지만 한쪽 전용 기술(Howl of the Pack Leader·Black Arrow 등)은 쓰지 않음",
+   "Scatter Shot과 Freezing Trap은 둘 다 행동 불가 효과라 점감 관계를 확인할 수 없어 연계 줄로 쓰지 않음",
+   "The Beast Within은 전문화 특성과 PvP 특성 이름이 같아 혼동을 피하려 쓰지 않음"
+  ]
+ }
+}

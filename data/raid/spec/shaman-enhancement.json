@@ -1,0 +1,245 @@
+{
+ "id": "shaman/enhancement",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] Gravebound Advance 보호막이 남은 Restless Amani 여럿은 Capacitor Totem으로 기절시켜 우물 도착을 늦춰라",
+    "[생존기] Soulcoil Ignition이 4초 동안 매초 Soulcoil Rite를 일으킬 때 Astral Shift로 받는 피해를 40% 줄여라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Wind Shear로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Ascendance를 켜 바로 처치하라",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Ascendance를 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞을 때 Astral Shift로 받는 피해를 40% 줄여라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Crash Lightning과 Chain Lightning으로 광역 정리해 중앙에 닿기 전에 잡아라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Capacitor Totem으로 기절시킬 수 있다",
+    "@m [생존기] Gloom Expulsion과 Conflagrating Expulsion에 Astral Shift를 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Wind Shear로 끊어라",
+    "[위치] Blink Nova 대상이 되면 Spirit Walk나 Ghost Wolf로 공대에서 빨리 멀어져라",
+    "[우선 처치] 세 보스 생명력을 맞출 때 Crash Lightning과 Chain Lightning으로 First Mate Nama에도 피해가 닿게 하라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 Ascendance를 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Astral Shift로 받는 피해를 40% 줄여라",
+    "[회피] Tempest 회오리에 맞아 느려지면 Spirit Walk로 이동 방해를 풀고 빠져나와라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Ascendance를 켜고 Crash Lightning으로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Astral Shift로 받는 피해를 40% 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Wind Shear로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Wind Shear로 끊어라",
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Ascendance를 몰아라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Spirit Walk나 Ghost Wolf로 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Blightscale Viper의 Acidic Burst 독은 Poison Cleansing Totem으로 30미터 안 아군에게서 지워라",
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Ascendance를 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Wind Shear로 끊어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Crash Lightning과 Chain Lightning으로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 공대 피해에 Astral Shift를 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 광역 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Wind Shear로 끊어라",
+    "[우선 처치] Voidmaw 무리는 Crash Lightning과 Sundering으로 광역으로 잡아라",
+    "@m [해제] Abyssal Malus의 Black Miasma는 저주이니 Cleanse Spirit으로 지워라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] Creep Spit으로 느려졌어도 Void Breath 때 Spirit Walk로 이동 방해 효과를 지우고 빛나는 손 반대쪽 방 끝까지 달려라",
+    "[우선 처치] 벽 앞에 모인 Blistercreep은 Crash Lightning으로 함께 잡아 Blisterburst로 Void Crystal을 부숴라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 Astral Shift로 받는 피해를 줄여라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[우선 처치] Concentrated Void 구슬이 나오면 Feral Lunge로 곧바로 붙어 보스에게 닿기 전에 잡아라",
+    "[차단] 가까운 Fractured Image의 Shadow Fracture는 Wind Shear로 끊거나 Capacitor Totem으로 묶어라",
+    "[참고] Entropic Unraveling 20초 동안 보스가 받는 피해가 25% 늘어나니 Ascendance와 Doom Winds를 여기에 맞추고 공대 피해는 Astral Shift로 줄여라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Voidorb의 Voidbolt는 Wind Shear로 끊거나 Capacitor Totem으로 묶어라",
+    "[분담] Gloom 경로에서 Gloomtouched를 받을 때 Astral Shift로 받는 피해를 줄여라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[참고] 블러드 뒤 보스가 켠 Divine Shield는 적 버프 해제로 지울 수 있으니 Purge로 지워라",
+    "[차단] War Chaplain Senn의 Sacred Shield를 깬 뒤 Blinding Light를 Wind Shear로 끊어라",
+    "[분담] Execution Sentence를 대상 옆에서 나눠 맞을 때 Astral Shift로 받는 피해를 줄여라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[우선 처치] Void Droplet은 파수꾼 밑에서 Crash Lightning으로 파수꾼과 함께 때려 처치하라",
+    "[회피] Vorelus의 Ravenous Abyss가 오면 Spirit Walk로 15미터 밖으로 빠져나가라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage는 Wind Shear로 끊거나 Capacitor Totem으로 묶어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Wind Shear로 가장 먼저 끊어라",
+    "[우선 처치] 아래층 조라면 Ascendance와 Doom Winds를 아껴 두었다가 쫄의 Alnshroud 보호막을 빠르게 깨라",
+    "[회피] 2단계 Corrupted Devastation 궤적은 Spirit Walk로 빠져나가며 쫄을 잡아라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 같은 색 깃털이면 불씨의 Light Eruption·Void Eruption을 Wind Shear로 끊어라",
+    "[생존기] 블러드는 첫 알 단계이니 Rebirth가 시작되면 Bloodlust나 Heroism을 쓰고 Ascendance와 Doom Winds를 몰아라",
+    "[분담] Light Dive·Void Dive를 같은 색 인원과 나눠 맞을 때 Astral Shift로 받는 피해를 줄여라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Matrix의 Safeguard 시전은 Wind Shear와 Capacitor Totem으로 끊고, 쌓인 Safeguard 강화 효과는 Purge로 벗겨라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 순서대로 Wind Shear로 끊어라",
+    "@m [생존기] 블러드는 3단계에 쓰니 Bloodlust나 Heroism을 이때 써라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Wind Shear로 반드시 끊어라",
+    "@hm [해제] 차단을 놓친 Poison Burst 독 도트는 Poison Cleansing Totem으로 주위 인원에게서 지워라",
+    "[위치] Festering Vines 대상이면 Spirit Walk로 이동 속도 감소를 지우고 방 가장자리로 나가라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 192058",
+   "u": "https://nether.wowhead.com/tooltip/spell/192058?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 108271",
+   "u": "https://nether.wowhead.com/tooltip/spell/108271?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 57994",
+   "u": "https://nether.wowhead.com/tooltip/spell/57994?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 114051",
+   "u": "https://nether.wowhead.com/tooltip/spell/114051?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 187874",
+   "u": "https://nether.wowhead.com/tooltip/spell/187874?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 188443",
+   "u": "https://nether.wowhead.com/tooltip/spell/188443?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 58875",
+   "u": "https://nether.wowhead.com/tooltip/spell/58875?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 2645",
+   "u": "https://nether.wowhead.com/tooltip/spell/2645?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 383013",
+   "u": "https://nether.wowhead.com/tooltip/spell/383013?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 57994",
+   "u": "https://nether.wowhead.com/tooltip/spell/57994?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 187874",
+   "u": "https://nether.wowhead.com/tooltip/spell/187874?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 197214",
+   "u": "https://nether.wowhead.com/tooltip/spell/197214?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 51886",
+   "u": "https://nether.wowhead.com/tooltip/spell/51886?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 58875",
+   "u": "https://nether.wowhead.com/tooltip/spell/58875?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 108271",
+   "u": "https://nether.wowhead.com/tooltip/spell/108271?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 196884",
+   "u": "https://nether.wowhead.com/tooltip/spell/196884?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 192058",
+   "u": "https://nether.wowhead.com/tooltip/spell/192058?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 114051",
+   "u": "https://nether.wowhead.com/tooltip/spell/114051?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 384352",
+   "u": "https://nether.wowhead.com/tooltip/spell/384352?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 370",
+   "u": "https://nether.wowhead.com/tooltip/spell/370?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 2825",
+   "u": "https://nether.wowhead.com/tooltip/spell/2825?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 32182",
+   "u": "https://nether.wowhead.com/tooltip/spell/32182?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 383013",
+   "u": "https://nether.wowhead.com/tooltip/spell/383013?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Poison Cleansing Totem은 digest 해제 목록에서 독으로 확인된 Acidic Burst에만 썼다. Cleanse Spirit이 지울 저주 디버프는 digest에 없다. Sszorak의 Tempest는 보스 회오리 기술이며 주술사 Tempest가 아니다",
+   "Gravebound Advance 보호막을 깨는 피해 속성은 적지 않았다. Stormbringer·Totemic 전용 기술(Surging Totem·Tempest 등)은 넣지 않았다",
+   "1시즌: Cleanse Spirit·Poison Cleansing Totem은 kit.dispel 기준으로 digest 해제 목록의 저주(Black Miasma)·독(Poison Burst)에만 썼다. Purge는 digest가 적 버프 해제를 요구한 Divine Shield·Safeguard에만 썼다",
+   "1시즌: Spirit Walk는 툴팁 '이동 방해 효과 제거·이동 속도 60%'만 근거로 Creep Spit·Festering Vines 감속에 썼다. 폭풍인도자·토템술사 영웅 특성 전용 기술(Surging Totem·Tempest 등)은 넣지 않았다"
+  ]
+ }
+}

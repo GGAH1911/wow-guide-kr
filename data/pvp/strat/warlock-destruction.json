@@ -1,0 +1,111 @@
+{
+ "id": "warlock/destruction",
+ "arena": [
+  "[생존기] Unending Resolve는 8초간 받는 모든 피해를 25% 줄이고 차단과 침묵에 면역이 되니 3초 시전인 Chaos Bolt를 끊기지 않고 넣어야 할 때나 상대 폭딜 쿨기가 몰릴 때 켜라",
+  "[생존기] Dark Pact는 제어에 걸린 중에도 쓸 수 있고 현재 생명력 20%를 바쳐 그 두 배가 넘는 보호막을 20초간 두르니 기절에 묶인 채 폭딜을 받으면 바로 눌러라",
+  "[회피] Demonic Circle을 기둥 뒤에 깔아 두면 순간이동으로 돌아가며 모든 감속이 풀리고 Impish Instincts를 고르면 직접 물리 피해를 받을 때마다 재사용 대기시간이 3초 줄어드니 근접 딜러가 붙으면 순간이동해 시야를 끊어라",
+  "[생존기] Nether Ward를 고르면 3초간 나에게 오는 해로운 주문을 모두 반사하니 상대 시전자의 제어 주문 시전이 끝나기 직전에 켜라",
+  "[차단] Felhunter의 Spell Lock은 시전을 끊고 그 계열 주문을 7초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[우선 처치] Fel Fissure를 고르면 Chaos Bolt 대상 아래 5미터 균열이 6초간 적을 50% 감속시키고 받는 치유를 25% 줄이니 폭딜 대상에게 Chaos Bolt를 몰아 넣어라",
+  "[제어] Fear는 대상을 20초간 방향 상실시키지만 피해에 풀릴 수 있으니 상대 치유 전담에게 걸고 아군은 다른 대상을 공격하게 하라",
+  "[제어] Howl of Terror는 10미터 안 적 5명까지 20초간 공포로 도망치게 하지만 피해에 풀릴 수 있으니 근접 딜러들이 붙었을 때 떼어내고 시전 거리를 벌려라"
+ ],
+ "bg": [
+  "[참고] 거점 수비는 소환수 직업이 좋으니 수비를 맡으면 Demonic Circle을 거점 깃발에서 떨어진 곳에 깔아 두고 Shadow Rift를 고르면 2초 뒤 균열 안의 적 플레이어가 내 Demonic Circle로 옮겨지니 점령하러 온 적을 깃발에서 떼어내라",
+  "[분담] Gateway Mastery는 전장 대공세 36명 중 21명이 골랐고 Demonic Gateway 사거리를 20미터 늘리고 같은 사람이 다시 타는 대기시간을 30초 줄이니 공격받는 먼 거점이나 아군 운반자 쪽으로 아군을 옮겨라",
+  "[생존기] Nether Ward는 전장 대공세 36명 중 31명이 골랐고 3초간 해로운 주문을 모두 반사하니 여러 적이 나에게 제어 주문을 시전할 때 켜라",
+  "[제어] Howl of Terror로 공포에 빠진 적은 밀쳐낼 수 없으니 거점을 점령하려는 적 여럿에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라",
+  "[우선 처치] Fel Fissure는 전장 대공세 36명 중 25명이 골랐고 Chaos Bolt 대상 아래 균열이 적을 50% 감속시키고 받는 치유를 25% 줄이니 상대 깃발 운반자나 구슬 운반자에게 Chaos Bolt를 넣어라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Dark Pact 보호막과 Unending Resolve를 폭딜 직전에 먼저 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 29명 중 21명과 전장 대공세 36명 중 31명이 고른 Nether Ward는 3초간 해로운 주문을 모두 반사하고, 1인 조합전 29명 중 20명이 고른 Impish Instincts는 직접 물리 피해를 받을 때 Demonic Circle 재사용 대기시간을 3초 줄이며, 1인 조합전 29명 중 19명과 전장 대공세 36명 중 25명이 고른 Fel Fissure는 Chaos Bolt 대상 아래 균열로 적을 50% 감속시키고 받는 치유를 25% 줄인다.",
+ "tips": {
+  "nether ward": "212295",
+  "impish instincts": "409835",
+  "fel fissure": "200586",
+  "gateway mastery": "248855",
+  "shadow rift": "353294",
+  "fear": "5782"
+ },
+ "spells": {
+  "212295": {
+   "n": "Nether Ward",
+   "i": "spell_fire_felfireward",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · Instant · 45 sec cooldown",
+   "d": "Surrounds the caster with a shield that lasts 3 sec, reflecting all harmful spells cast on you."
+  },
+  "409835": {
+   "n": "Impish Instincts",
+   "i": "spell_shadow_demoniccircleteleport",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Taking direct Physical damage reduces the cooldown of Demonic Circle by 3 sec.\n\nCannot occur more than once every 5 sec. (5s cooldown)"
+  },
+  "200586": {
+   "n": "Fel Fissure",
+   "i": "spell_fire_felhellfire",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Chaos Bolt creates a 5 yd wide eruption of Felfire under the target, reducing movement speed by 50% and reducing all healing received by 25% on all enemies within the fissure. Lasts 6 sec."
+  },
+  "248855": {
+   "n": "Gateway Mastery",
+   "i": "spell_warlock_demonicportal_green",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of your Demonic Gateway by 20 yards, and reduces the cast time by 30%. Reduces the time between how often players can take your Demonic Gateway by 30 sec."
+  },
+  "353294": {
+   "n": "Shadow Rift",
+   "i": "ability_warlock_voidzone",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · 30 yd range · Instant · 1 min cooldown",
+   "d": "Conjure a Shadow Rift at the target location lasting 2 sec. Enemy players within the rift when it expires are teleported to your Demonic Circle.\n\nMust be within 40 yds of your Demonic Circle to cast."
+  },
+  "5782": {
+   "n": "Fear",
+   "i": "spell_shadow_possession",
+   "m": "4% of base mana · 30 yd range · 1.7 sec cast",
+   "d": "Strikes fear in the enemy, disorienting for 20 sec. Damage may cancel the effect. Limit 1."
+  }
+ },
+ "spellsKo": {
+  "212295": {
+   "n": "황천 보호막",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 즉시 · 45 초 재사용 대기시간",
+   "d": "3초 동안 지속되는 보호막으로 시전자를 감싸, 시전자에게 시전되는 모든 해로운 주문을 반사합니다."
+  },
+  "409835": {
+   "n": "악동의 본능",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "직접 물리 피해를 받으면 악마의 마법진의 재사용 대기시간이 3초만큼 감소합니다.\n\n5초에 한 번씩만 발동합니다. (5초 재사용 대기시간)"
+  },
+  "200586": {
+   "n": "지옥 균열",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "혼돈의 화살이 대상의 발밑에 5미터 폭의 지옥불 분출을 일으켜 균열 내의 모든 적의 이동 속도를 50%만큼, 받는 치유량을 25%만큼 감소시킵니다. 6초 동안 지속됩니다."
+  },
+  "248855": {
+   "n": "관문 특화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "악마의 관문의 사거리가 20미터만큼 증가하고, 시전 시간이 30%만큼 감소합니다. 악마의 관문을 이용할 수 있는 대기시간이 30초만큼 감소합니다."
+  },
+  "353294": {
+   "n": "그림자 균열",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 30 야드 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "대상 지역에 2초 동안 지속되는 그림자 균열을 불러냅니다. 균열이 만료될 때 적이 그 안에 남아 있으면 악마의 마법진으로 순간이동됩니다.\n\n악마의 마법진 40미터 내에 있어야 시전할 수 있습니다."
+  },
+  "5782": {
+   "n": "공포",
+   "m": "4% (기본 마나 중) · 30 야드 사정거리 · 1.7 초 주문 시전 시간",
+   "d": "적을 공포에 사로잡히게 하여 20초 동안 방향 감각을 상실하게 만듭니다. 피해를 입으면 효과가 해제될 수 있습니다. 대상은 하나로 제한됩니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 지옥소환사 29명 전원, 전장 대공세 지옥소환사 33·악마학자 3이지만 한쪽 전용 기술은 쓰지 않음",
+   "쐐기 파일에 Fear가 없어 툴팁을 새로 받음. 투기장 상위권 표본이 3v3 7명·2v2 1명뿐이라 투기장 줄은 1인 조합전(29명) 기준",
+   "Fel Fissure의 받는 치유 25% 감소가 전장 고정 치유 20% 감소와 어떻게 겹치는지는 확인하지 않아 언급하지 않음"
+  ]
+ }
+}

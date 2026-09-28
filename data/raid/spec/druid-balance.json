@@ -1,0 +1,273 @@
+{
+ "id": "druid/balance",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] 보호막이 남은 Restless Amani는 Ursol's Vortex로 늦춰 Soulcoil Well에 닿기 전에 잡을 시간을 벌어라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Solar Beam으로 끊어라",
+    "@m [참고] Invoke 시전이 끝날 때 시전 중인 주문이 끊기니 그 순간에는 Starfire와 Wrath 대신 즉시 시전인 Starsurge를 써라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Fury of Elune과 Starsurge를 몰아 바로 처치하라",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Eclipse와 Fury of Elune을 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞을 때 Barkskin으로 받는 피해를 줄여라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Starfall과 Wild Mushroom으로 광역으로 잡아 Malignant Cavity에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Ursol's Vortex로 늦출 수 있다, Clotting Venom은 제어 면역이다",
+    "@m [생존기] Gloom Expulsion과 Conflagrating Expulsion에 Barkskin을 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Solar Beam으로 끊어라",
+    "[위치] Blink Nova 대상이 되면 Dash나 Travel Form으로 공대에서 빨리 멀어져라",
+    "[생존기] Fishy Feedback 공대 피해와 도트에 Barkskin을 맞춰라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 Eclipse와 Fury of Elune을 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Barkskin으로 피해를 줄여라",
+    "[회피] Tempest에 맞아 이동 속도가 줄면 Travel Form으로 변신해 감속을 풀고 벗어나라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Fury of Elune과 Starfall로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Barkskin으로 피해를 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Solar Beam으로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Eclipse와 Fury of Elune을 몰아라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Solar Beam으로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Stampeding Roar로 주위 인원과 함께 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Blightscale Viper의 Acidic Burst 독은 Remove Corruption으로 지울 수 있다",
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Eclipse와 Fury of Elune을 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Solar Beam으로 끊어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Ursol's Vortex로 붙잡고 Starfall로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 공대 피해에 Barkskin을 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Starfall 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator가 모여 있으면 Solar Beam 한 번으로 Pitch Bulwark를 함께 끊고 침묵시켜라",
+    "[우선 처치] Voidmaw는 Starfall과 Wild Mushroom으로 함께 잡아라",
+    "@m [해제] Abyssal Malus의 Black Miasma는 저주라 Remove Corruption으로 지울 수 있다"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] Void Breath 때는 Stampeding Roar로 주위 인원과 함께 빛나는 손 반대쪽 방 끝까지 빨리 달려라",
+    "[회피] Creep Spit 감속이 쌓이면 Travel Form으로 변신해 이동 방해 효과를 풀고 움직여라",
+    "[우선 처치] 벽 앞에 모은 Blistercreep은 Starfall과 Wild Mushroom으로 함께 잡아 Blisterburst로 Void Crystal을 부숴라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] 먼 Fractured Image의 Shadow Fracture를 Solar Beam으로 끊어라",
+    "@m [차단] Nexus Shield가 벗겨진 Fractured Image가 15미터 안이면 Typhoon으로 밀쳐 끊어도 된다",
+    "[생존기] Entropic Unraveling 동안 보스가 받는 피해가 25% 늘어나니 Eclipse와 Fury of Elune을 여기에 맞추고 Barkskin으로 공대 피해를 줄여라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Void Howl 뒤 생긴 Voidorb의 Voidbolt를 Solar Beam으로 끊어라",
+    "@m [제어] 끊겨도 공대로 떠오지 않는 Voidorb는 Ursol's Vortex로 한곳에 붙잡아 모아라",
+    "[생존기] Midnight Flames 피해 일부는 Radiant Barrier를 뚫으니 Barkskin으로 받는 피해를 줄여라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] 풀 직후 Avenging Wrath로 받는 피해가 20% 늘어난 Commander Venel Lightblood에 Eclipse와 Fury of Elune을 맞추고 Starfall로 함께 때려라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Solar Beam으로 끊어라",
+    "[분담] Execution Sentence를 함께 맞을 때 Barkskin으로 받는 피해를 줄여라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[참고] Demiar의 Interrupting Tremor 시전이 끝날 때는 Starfire와 Wrath 대신 즉시 시전인 Starsurge를 써라",
+    "[위치] Grasp of Emptiness 대상이 되면 Dash나 Travel Form으로 원에서 멀리 벗어나 Bursting Emptiness가 공대를 비껴가게 하라",
+    "@nh [우선 처치] Undying Voidspawn은 Ursol's Vortex로 붙잡아 Silverstrike Ricochet 경로에 모으고 Void Barrage는 Solar Beam으로 끊어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Solar Beam으로 먼저 끊어라, 8초 동안 빔 안의 적이 침묵되어 Essence Bolt도 막힌다",
+    "[우선 처치] 아래층 조라면 Eclipse와 Fury of Elune을 아껴 두었다가 Alnshroud 보호막을 빠르게 깨라",
+    "[우선 처치] 2단계에는 Rift Shroud로 보스가 받는 피해가 99% 줄어드니 Starfall과 Wild Mushroom을 쫄에 써라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Solar Beam으로 끊어라",
+    "[생존기] Eclipse와 Fury of Elune은 2단계 알에 아껴 두었다가 Rebirth 시전 동안 몰아 써라",
+    "[분담] 같은 색 Light Dive·Void Dive를 함께 맞을 때 Barkskin으로 피해를 줄여라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩을 Solar Beam과 Typhoon 밀쳐내기로 없애라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 Solar Beam으로 순서대로 끊어라",
+    "[우선 처치] 흩어진 Midnight Crystal은 40미터 안 적을 두루 때리는 Starfall로 함께 때려 시전이 끝나기 전에 처치하라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Solar Beam으로 끊어라",
+    "@hm [해제] 차단을 놓친 Poison Burst 도트는 독이니 Remove Corruption으로 지워라",
+    "[우선 처치] 모인 자리의 Bursting Shroom은 Starfall과 Wild Mushroom으로 16초 안에 처치하라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 102793",
+   "u": "https://nether.wowhead.com/tooltip/spell/102793?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 78675",
+   "u": "https://nether.wowhead.com/tooltip/spell/78675?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 194153",
+   "u": "https://nether.wowhead.com/tooltip/spell/194153?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 5176",
+   "u": "https://nether.wowhead.com/tooltip/spell/5176?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 78674",
+   "u": "https://nether.wowhead.com/tooltip/spell/78674?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 202770",
+   "u": "https://nether.wowhead.com/tooltip/spell/202770?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1239669",
+   "u": "https://nether.wowhead.com/tooltip/spell/1239669?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 22812",
+   "u": "https://nether.wowhead.com/tooltip/spell/22812?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 191034",
+   "u": "https://nether.wowhead.com/tooltip/spell/191034?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 88747",
+   "u": "https://nether.wowhead.com/tooltip/spell/88747?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1850",
+   "u": "https://nether.wowhead.com/tooltip/spell/1850?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 783",
+   "u": "https://nether.wowhead.com/tooltip/spell/783?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 106898",
+   "u": "https://nether.wowhead.com/tooltip/spell/106898?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 2782",
+   "u": "https://nether.wowhead.com/tooltip/spell/2782?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 78675",
+   "u": "https://nether.wowhead.com/tooltip/spell/78675?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 191034",
+   "u": "https://nether.wowhead.com/tooltip/spell/191034?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 88747",
+   "u": "https://nether.wowhead.com/tooltip/spell/88747?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 2782",
+   "u": "https://nether.wowhead.com/tooltip/spell/2782?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 106898",
+   "u": "https://nether.wowhead.com/tooltip/spell/106898?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 783",
+   "u": "https://nether.wowhead.com/tooltip/spell/783?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 132469",
+   "u": "https://nether.wowhead.com/tooltip/spell/132469?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1239669",
+   "u": "https://nether.wowhead.com/tooltip/spell/1239669?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 202770",
+   "u": "https://nether.wowhead.com/tooltip/spell/202770?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 22812",
+   "u": "https://nether.wowhead.com/tooltip/spell/22812?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 102793",
+   "u": "https://nether.wowhead.com/tooltip/spell/102793?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 194153",
+   "u": "https://nether.wowhead.com/tooltip/spell/194153?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 5176",
+   "u": "https://nether.wowhead.com/tooltip/spell/5176?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 78674",
+   "u": "https://nether.wowhead.com/tooltip/spell/78674?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1850",
+   "u": "https://nether.wowhead.com/tooltip/spell/1850?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "1시즌: Solar Beam 한 번으로 여러 쫄을 끊는 줄은 툴팁 '빔 안의 모든 적 침묵'을 근거로 했다, 침묵이 이미 시작된 시전을 끊는지는 대상 외 적에 대해 확인하지 않았다"
+  ],
+  "notes": [
+   "Incarnation: Chosen of Elune은 이름에 쌍점이 있어 쓰지 않고 폭딜은 Eclipse와 Fury of Elune으로 적었다",
+   "Tempest 줄은 digest의 이동 속도 감소와 Travel Form 툴팁의 '변신하면 이동 방해 효과에서 벗어난다'를 연결했다, Invoke 줄은 Starfire 2.25초·Wrath 1.5초 시전과 Starsurge 즉시 시전 툴팁 기준",
+   "Gravebound Advance 보호막을 깨는 피해 계열은 확인되지 않아 언급하지 않았다, 엘룬의 대행자·숲의 수호자 전용 기술은 넣지 않았다",
+   "1시즌: Typhoon 줄은 s1.json 신화 Fractured Image '밀치기도 된다'와 Safeguard '밀쳐내기로 없애라', Ursol's Vortex 줄은 Voidorb '광역 제어기로 모아라'·Undying Voidspawn '끌어모아라'와 연결했다",
+   "1시즌: Incarnation: Chosen of Elune은 쌍점 때문에 쓰지 않고 폭딜은 Eclipse와 Fury of Elune으로 적었다, Remove Corruption은 Black Miasma(Curse)·Poison Burst(Poison)에 연결했다, 엘룬의 대행자·숲의 수호자 전용 기술은 넣지 않았다"
+  ]
+ }
+}

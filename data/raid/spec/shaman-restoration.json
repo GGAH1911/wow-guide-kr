@@ -1,0 +1,150 @@
+{
+ "id": "shaman/restoration",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Essence Rend 대상이 방 가장자리에 도착하면 Purify Spirit으로 지워라, 지운 자리에 Latent Cultist 장판이 남는다",
+    "[생존기] 2단계 Invoke마다 Soulcoil Rite가 터지니 Healing Tide Totem 차례를 맡아라",
+    "@m [차단] 우물 처치 조에 들면 Drowned Echo의 Soulcoiler's Curse를 Wind Shear로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood는 마법 효과이니 Purify Spirit으로 바로 지워라",
+    "[분담] Unstable Miasma를 조원 전원이 7.5미터 안에서 나눠 맞을 때 Spirit Link Totem을 그 자리에 깔아 체력을 고르게 나눠라",
+    "[위치] 두 조가 40미터 이상 떨어지니 Healing Tide Totem은 40미터 안 자기 조에만 닿는다, 맡은 조 곁에 깔아라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Exploding Infection은 지울 때 Caustic Explosion이 공대를 치니 다른 해제자와 시차를 두고 Purify Spirit으로 한 명씩 지워라",
+    "@m [생존기] Imbibe마다 커지는 Gloom Expulsion과 Conflagrating Expulsion에 Healing Tide Totem이나 Spirit Link Totem 차례를 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames 차단 순서에 Wind Shear로 들어가라",
+    "[해제] 차단을 놓친 Icebound Flames는 Purify Spirit으로 지워라",
+    "[생존기] Frostfire Volley 디버프를 지우는 구간에 Healing Tide Totem을 맞춰라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[분담] Mutilate를 공대 쪽으로 돌려 여럿이 나눠 맞는 자리에 Spirit Link Totem을 깔아 체력을 고르게 나눠라",
+    "@m [분담] Serpent's Fury 대상 8미터 안에 14명 이상 모여 To the Slaughter를 맞을 때 그 자리에 Spirit Link Totem을 깔아라",
+    "[위치] Howling Maelstrom 돌풍 전에 가운데로 모일 때 Wind Rush Totem을 깔아 이동 속도를 올려라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[생존기] Stir the Depths 6초 공대 피해에 Healing Tide Totem을 맞춰라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Barbed Bulwark 차단에 Wind Shear로 들어가라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall 차단 순서에 Wind Shear로 들어가라",
+    "[분담] Guillotine 대상 9미터 안에 5명 이상 모일 때 Spirit Link Totem을 깔고, 흩어질 때 Wind Rush Totem으로 40미터 밖까지 빨리 나가게 하라",
+    "@hm [차단] Spiteful Soulcoiler의 Wail of Terror를 Wind Shear로 끊어라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Blightscale Viper의 Acidic Burst 독 도트는 Poison Cleansing Totem을 깔아 30미터 안 인원에게서 차례로 지워라",
+    "[차단] 2단계 Doomscale Warden의 Malice와 3단계 Blightscale Shrieker의 Vicious Echoes를 Wind Shear로 끊어라",
+    "[생존기] Rage of the Shackled 20초 공대 피해와 Fury Unleashed에 Healing Tide Totem과 Ascendance를 나눠 써라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[생존기] Unending Tides에 Healing Tide Totem 차례를 맞춰라",
+    "[광역 피해] Bubblefin Berserker가 살아 있는 동안 Pulsing Tides가 이어지니 Healing Stream Totem을 쿨마다 깔아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[분담] 공대가 모여 Umbral Collapse를 나눠 맞는 자리에 Spirit Link Totem을 깔아 10미터 안 피해를 10% 줄이고 생명력을 고르게 나눠라",
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval에 Healing Tide Totem을 맞춰라",
+    "@m [해제] Abyssal Malus의 Black Miasma는 저주이니 Improved Purify Spirit을 찍은 Purify Spirit으로 지워라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] Blisterburst 받는 피해 증가와 Creep Spit 감속은 마법 효과이니 Purify Spirit으로 지워라",
+    "[회피] Void Breath 방향이 정해지면 달려갈 길목에 Wind Rush Totem을 깔아 공대 이동 속도를 40% 올려라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 Healing Tide Totem을 맞춰라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[생존기] Entropic Unraveling 20초 공대 피해에 Healing Tide Totem이나 Ascendance를 써라",
+    "[참고] Despotic Command가 끝난 대상의 Oppressive Darkness 치유 흡수는 Riptide와 Healing Surge로 벗겨라",
+    "[차단] 가까운 Fractured Image의 Shadow Fracture를 Wind Shear로 끊거나 Capacitor Totem으로 기절시켜라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath 공포는 마법 효과이니 Purify Spirit으로 바로 지워라",
+    "[생존기] Midnight Flames 동안 Radiant Barrier 안에 모인 공대에 Spirit Link Totem을 깔아 흡수막을 뚫는 피해를 나눠라",
+    "[차단] 내 자리에 생긴 Voidorb의 Voidbolt를 Wind Shear로 끊어라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] Avenger's Shield 도트는 마법 효과이니 Purify Spirit으로 바로 지워라",
+    "[참고] Bloodlust나 Heroism을 쓰면 보스가 Divine Shield로 8초간 피해 면역이 되니 적 버프 해제 담당이 준비된 뒤 써라",
+    "[분담] Tyr's Wrath 치유 흡수가 걸린 인원은 Riptide와 Chain Heal로 집중 치유하라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] 플레이어에게 묻은 Corrupting Essence는 마법 효과이니 Purify Spirit으로 지워라",
+    "[해제] Null Corona는 Purify Spirit으로 지우면 흡수량이 다른 사람에게 옮겨 가니 Healing Wave로 채우고 위급할 때만 지워라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage를 Wind Shear로 끊거나 모인 곳에 Capacitor Totem을 깔아 기절시켜라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Wind Shear로 끊고, 놓친 공포는 마법 효과이니 Purify Spirit으로 지워라",
+    "@hm [해제] Consuming Miasma 대상이 Alndust Essence 웅덩이 곁에 닿으면 Purify Spirit으로 지워라",
+    "[광역 피해] 쫄이 나올 때마다 걸리는 Rift Sickness 치유 흡수는 Chain Heal과 Healing Rain으로 여러 명을 함께 벗겨라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[광역 피해] Light Burn·Void Burn 치유 흡수는 Riptide와 Healing Surge로 다 치유해 없애라",
+    "[생존기] 블러드는 첫 알 단계에 쓰니 Bloodlust나 Heroism을 2단계 Rebirth 시작에 맞추고 Healing Tide Totem도 함께 써라",
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Wind Shear로 끊어라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[분담] Dusk Crystal은 Riptide와 Healing Wave로 가득 치유해 Dawn Crystal로 바꿔라",
+    "@nh [해제] Safeguard 중첩 강화 효과는 마법 효과이니 Purge로 벗기고, 시전은 Wind Shear로 끊어라",
+    "@m [생존기] 블러드는 3단계에 쓰니 Bloodlust나 Heroism을 3단계 시작에 맞춰라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [해제] 차단을 놓친 Poison Burst 독 도트는 Poison Cleansing Totem으로 30미터 안 인원에게서 1.5초마다 지워라",
+    "@hm [차단] 보스 곁 Sporecap의 Poison Burst를 Wind Shear로 차단하라",
+    "[생존기] Rotting Pustules로 뒤로 갈수록 피해가 커지니 Healing Tide Totem과 Ascendance를 전투 후반에 몰아 두라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "독 해제는 Poison Cleansing Totem 기준",
+   "Healing Rain은 Totemic 영웅 특성에서 Surging Totem으로 바뀌어 제외, Ancestral Swiftness 등 영웅 한쪽 기술 제외",
+   "1시즌: 해제 줄은 digest 해제 목록(Magic·Curse·Poison)과 Purify Spirit·Improved Purify Spirit·Poison Cleansing Totem·Purge 툴팁을 짝지었다. Divine Shield는 해제 유형이 확인되지 않아 Purge 줄로 쓰지 않고 블러드 시점 참고로만 썼다.",
+   "1시즌: 블러드 줄은 s1.json 보스 블러드 칸(Belo'ren 2단계 첫 알, Midnight Falls 3단계)에 맞췄다. 영웅 특성 전용 기술은 쓰지 않았다."
+  ]
+ }
+}

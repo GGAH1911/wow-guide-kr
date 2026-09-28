@@ -1,0 +1,149 @@
+{
+ "id": "priest/discipline",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Essence Rend는 마법 효과이니 대상이 방 가장자리에 도착하면 Purify로 지워라, 지운 자리에 Latent Cultist 장판이 남는다",
+    "[생존기] 2단계 Invoke마다 Soulcoil Rite가 터지니 Evangelism으로 Atonement를 미리 깔아 두는 차례를 맡아라",
+    "@m [참고] Invoke가 끝나는 순간 시전 중인 주문이 끊기니 Ultimate Penitence 같은 긴 시전을 그 순간과 겹치지 마라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood는 마법 효과이니 Purify로 바로 지워라",
+    "[광역 피해] Venom Coagulation 수액괴물이 살아 있는 동안 Contaminate가 3초마다 공대를 치니 Atonement를 깔고 수액괴물을 공격해 치유하라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Exploding Infection은 지울 때 Caustic Explosion이 공대 전체를 치니 Mass Dispel로 여럿을 한꺼번에 지우지 말고 Purify로 한 명씩 시차를 둬라",
+    "@m [생존기] Imbibe마다 커지는 Gloom Expulsion과 Conflagrating Expulsion 전에 Evangelism으로 Atonement를 깔아 두라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[해제] 차단을 놓친 Icebound Flames는 마법 효과이니 Purify로 지워라",
+    "[생존기] Frostfire Volley 디버프를 지우는 구간과 Fishy Feedback 공대 피해 전에 Evangelism으로 Atonement를 깔아 두라",
+    "[탱버] First Mate Nama의 Steady Strikes 중첩이 높을 때 Pain Suppression으로 탱커가 받는 피해를 40% 줄여라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[탱버] Ravage를 맞는 탱커에게 Pain Suppression을 걸어 받는 피해를 40% 줄여라",
+    "[광역 피해] Venomous Surge가 끝나면 공대 전체가 피해를 받으니 그 전에 Evangelism으로 Atonement를 깔아 두라",
+    "[위치] Howling Maelstrom 돌풍 전에 가운데로 모일 때 Angelic Feather를 깔아 늦는 인원의 이동 속도를 올려라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[생존기] Stir the Depths 6초 공대 피해와 Venomous Emergence 전에 Atonement를 깔고 Ultimate Penitence를 맞춰라",
+    "@m [탱버] Blood Torrent로 치유 흡수가 쌓이는 Ithraz 탱커에게 Pain Suppression을 걸고 Penance로 흡수를 벗겨라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[생존기] Veil of Twilight의 Suffocating Darkness와 Defilement of the Coiled Altar 치유 흡수 구간에 Evangelism과 Ultimate Penitence를 나눠 맞춰라",
+    "@hm [생존기] Sever로 구슬을 터뜨린 직후 Venom Rupture 도트가 쌓이니 그 전에 Atonement를 깔아 두라",
+    "[위치] Guillotine을 나눠 맞은 뒤 40미터 밖으로 흩어질 때 Angelic Feather를 앞에 깔아 이동 속도를 올려라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[참고] Acidic Burst는 독이라 마법만 지우는 Purify로는 지울 수 없으니 독 해제는 다른 힐러에게 맡겨라",
+    "[생존기] Rage of the Shackled 20초 공대 피해 전에 Evangelism으로 Atonement를 깔고 드러난 Venomous Heart를 공격해 치유하라",
+    "[생존기] 3단계 Fury Unleashed는 매초 이어지는 큰 공대 피해이니 Ultimate Penitence를 남겨 두라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[생존기] Unending Tides와 Pop! 공대 피해 전에 Evangelism으로 Atonement를 깔아 두라",
+    "[광역 피해] Bubblefin Berserker가 살아 있는 동안 Pulsing Tides가 이어지니 Atonement를 유지한 채 Bubblefin Berserker를 공격해 치유와 처치를 함께 하라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval 전에 Evangelism으로 Atonement를 깔아 두라",
+    "[탱버] Weakened로 쫄을 받는 탱커에게 Gnashing Void 도트가 쌓이면 Pain Suppression으로 받는 피해를 40% 줄여라",
+    "@m [광역 피해] Void Marked를 해제받은 대상에게 10초 동안 걸리는 Lingering Darkness 도트는 Penance로 채워라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] Blisterburst 받는 피해 증가와 Creep Spit 감속은 마법 효과이니 Purify로 지우고, 벽 앞 여러 명에게 걸리면 Mass Dispel로 15미터 안 5명을 한꺼번에 지워라",
+    "[탱버] Smashed가 쌓인 탱커가 두 번째 큰 발톱 충격을 받을 때 Pain Suppression을 걸어라",
+    "@m [생존기] 첫 Blistercreep 무리가 터지기 전에 Evangelism으로 Atonement를 깔아 두라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[생존기] Entropic Unraveling 동안 보스가 받는 피해가 25% 늘어나니 Evangelism으로 Atonement를 깔고 Ultimate Penitence로 공격해 치유하라",
+    "[참고] Despotic Command가 끝난 대상의 Oppressive Darkness 치유 흡수는 Penance로 벗겨라",
+    "[탱버] 벽 쪽에서 Shattering Twilight를 받는 탱커에게 Pain Suppression을 걸어라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath 공포는 마법 효과이니 Purify로 지우고, 부채꼴에 여럿이 걸리면 Mass Dispel로 한꺼번에 지워라",
+    "[생존기] Midnight Flames 피해 일부가 Radiant Barrier를 뚫으니 그 전에 Evangelism으로 Atonement를 깔아 두라",
+    "[참고] Rakfang 중첩으로 치유 흡수가 붙는 탱커는 Penance로 채워라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] Avenger's Shield 도트는 마법 효과이니 Purify로 바로 지워라",
+    "@m [해제] 신화에서 Avenger's Shield가 모든 플레이어를 노리면 Mass Dispel로 15미터 안 5명의 도트를 한꺼번에 지워라",
+    "[분담] Tyr's Wrath 치유 흡수가 걸린 인원은 Penance로 집중 치유하라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] 플레이어에게 묻은 Corrupting Essence는 마법 효과이니 Purify로 지워라",
+    "[해제] Null Corona는 Purify로 지우면 흡수량이 다른 사람에게 옮겨 가니 Penance로 채우고 위급할 때만 Purify를 써라",
+    "@nh [생존기] Aspect of the End를 끊어 Gravity Collapse가 걸린 탱커에게 Pain Suppression을 걸어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[해제] 차단을 놓친 Fearsome Cry 공포는 마법 효과이니 Purify로 지우고, 여럿이 걸리면 Mass Dispel을 써라",
+    "@hm [해제] Consuming Miasma 대상이 Alndust Essence 웅덩이 곁에 닿으면 Purify로 지워라",
+    "[광역 피해] 쫄이 나올 때마다 걸리는 Rift Sickness 치유 흡수는 Atonement를 깔아 둔 채 쫄을 공격해 여러 명을 함께 벗겨라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[광역 피해] Light Burn·Void Burn 치유 흡수는 Penance로 다 치유해 없애라",
+    "[생존기] 2단계 알에 공격을 몰아야 하니 Evangelism으로 Atonement를 깔고 알을 공격해 치유와 딜을 함께 하라",
+    "[탱버] Light Edict·Void Edict를 맞는 탱커에게 Pain Suppression을 걸어라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[분담] Dusk Crystal은 Penance로 가득 치유해 Dawn Crystal로 바꿔라",
+    "@nh [해제] Safeguard 중첩 강화 효과는 마법 효과이니 Dispel Magic으로 벗기고, 매트릭스가 모여 있으면 Mass Dispel로 여럿을 함께 벗겨라",
+    "[광역 피해] Total Eclipse 동안 Eclipsed 치유 흡수는 Penance로 벗기고 수정 운반자를 먼저 챙겨라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [참고] Poison Burst 도트는 독이라 마법만 지우는 Purify로는 지울 수 없으니 독 해제는 다른 힐러에게 맡겨라",
+    "[생존기] Rotting Pustules로 뒤로 갈수록 피해가 커지니 Evangelism과 Ultimate Penitence를 전투 후반에 몰아 두라",
+    "[광역 피해] 모인 Shroomling과 Bursting Shroom을 Atonement를 깐 채 공격해 공대 치유와 처치를 함께 하라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Purify는 마법과 질병만 지워 Ula'tek 독 해제 불가",
+   "Power Word 계열은 이름에 쌍점이 있어 문장에서 제외, Void Shield 등 영웅 특성 한쪽 기술 제외",
+   "1시즌: 해제 줄은 digest 해제 목록(Magic)과 Purify·Mass Dispel·Dispel Magic 툴팁을 짝지었다. Void Marked와 Divine Shield는 해제 유형이 확인되지 않아 해제 줄로 쓰지 않았다.",
+   "1시즌: 영웅 특성 전용 기술(Entropic Rift 등)은 쓰지 않았다."
+  ]
+ }
+}

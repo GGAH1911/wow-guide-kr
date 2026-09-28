@@ -1,0 +1,264 @@
+{
+ "id": "evoker/augmentation",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] 보호막이 남은 Restless Amani는 Landslide로 묶어 Soulcoil Well에 닿기 전에 잡을 시간을 벌어라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Quell로 끊어라",
+    "@m [참고] Invoke 시전이 끝날 때 시전 중인 주문이 끊기니 Ebon Might와 Eruption 시전, Upheaval 강화는 그 직후로 미뤄라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄고 Temporal Wound는 10초 뒤에 피해를 넣으니 Breath of Eons를 사이 단계 직전에 쓰지 말고 뒤로 미뤄라",
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Upheaval과 Eruption으로 바로 처치하라",
+    "[생존기] Unstable Miasma를 나눠 맞을 때 Obsidian Scales로 받는 피해를 줄여라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Upheaval을 높은 단계로 강화해 넓게 맞히고 Eruption과 함께 광역으로 잡아 Malignant Cavity에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Landslide나 Sleep Walk로 묶을 수 있다, Clotting Venom은 제어 면역이다",
+    "@m [생존기] Gloom Expulsion과 Conflagrating Expulsion에 Obsidian Scales를 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Quell로 끊어라",
+    "[위치] Blink Nova 대상이 되면 Hover로 빨리 공대에서 멀어지며 시전을 이어가라",
+    "[생존기] Fishy Feedback 공대 피해에 Obsidian Scales나 Zephyr를 맞춰라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 시작에 맞춰 Ebon Might를 새로 걸고 Breath of Eons로 Sszorak 위를 지나가라",
+    "[참고] Dig In 동안 Prescience는 폭딜 쿨기를 켠 딜러에게 걸어라",
+    "[분담] Mutilate를 나눠 맞을 때 Obsidian Scales로 피해를 줄여라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Upheaval과 Eruption으로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Obsidian Scales로 피해를 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Quell로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Ebon Might를 새로 걸고 Breath of Eons로 Zul'jan 위를 지나가라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Quell로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Zephyr로 주위 인원의 이동 속도를 높여 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Blightscale Viper의 Acidic Burst 독은 Expunge로 지울 수 있다",
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Ebon Might를 새로 걸고 Breath of Eons로 Venomous Heart 위를 지나가라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Quell로 끊어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Upheaval과 Eruption으로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 공대 피해에 Obsidian Scales나 Zephyr를 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Upheaval 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Quell로 끊어라",
+    "[우선 처치] Voidmaw는 Upheaval을 높은 단계로 강화해 넓게 맞히고 Eruption과 함께 잡아라",
+    "@m [해제] Abyssal Malus의 Black Miasma는 저주라 Cauterizing Flame으로 지울 수 있다"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] Void Breath 때는 Zephyr로 주위 인원의 광역 피해를 20% 줄이고 이동 속도를 30% 올려 빛나는 손 반대쪽 방 끝까지 달려라",
+    "[회피] Creep Spit 감속이 쌓인 아군은 Rescue로 데리고 날아가 이동 방해 효과를 함께 지워라",
+    "[우선 처치] 벽 앞에 모은 Blistercreep은 Upheaval과 Eruption으로 함께 잡아 Blisterburst로 Void Crystal을 부숴라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Fractured Image의 Shadow Fracture를 Quell로 끊어라",
+    "@m [차단] Nexus Shield가 벗겨진 Fractured Image가 앞에 있으면 Wing Buffet으로 밀쳐 끊어도 된다",
+    "[생존기] Entropic Unraveling 동안 보스가 받는 피해가 25% 늘어나니 시작에 맞춰 Ebon Might를 새로 걸고 Breath of Eons로 보스 위를 지나가라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Void Howl 뒤 생긴 Voidorb의 Voidbolt를 Quell로 끊어라",
+    "@m [제어] 끊겨도 공대로 떠오지 않는 Voidorb 하나는 Sleep Walk로 묶어 자기 쪽으로 걸어오게 하라",
+    "[생존기] Midnight Flames 피해 일부는 Radiant Barrier를 뚫으니 Obsidian Scales나 Zephyr로 받는 피해를 줄여라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] 풀 직후 Avenging Wrath로 받는 피해가 20% 늘어난 Commander Venel Lightblood에 Ebon Might를 걸고 Breath of Eons로 위를 지나가라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Quell로 끊어라",
+    "[참고] 풀 직후 Prescience는 폭딜 쿨기를 켠 딜러에게 걸어라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[참고] Demiar의 Interrupting Tremor 시전이 끝날 때는 Eruption 시전과 Upheaval 강화를 멈춰라",
+    "[위치] Grasp of Emptiness 대상이 되면 Hover로 원에서 멀리 벗어나며 시전을 이어가 Bursting Emptiness가 공대를 비껴가게 하라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage를 Quell로 끊어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Quell로 먼저 끊고 남는 차단으로 Essence Bolt를 끊어라",
+    "[우선 처치] 아래층 조라면 Breath of Eons를 아껴 두었다가 Alnshroud 보호막을 깰 때 쫄 위를 지나가라",
+    "@m [분담] Rift Madness 교대 인원이라면 Hover로 이동하며 시전을 이어가 대상 곁으로 가라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Quell로 끊어라",
+    "[생존기] 2단계 알 Rebirth 시전에 맞춰 Ebon Might를 새로 걸고 Breath of Eons로 알 위를 지나가라",
+    "[분담] 같은 색 Light Dive·Void Dive를 함께 맞을 때 Obsidian Scales로 피해를 줄여라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩을 Quell과 Wing Buffet 밀쳐내기로 없애라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 Quell로 순서대로 끊어라",
+    "[생존기] Shattered Sky 25초 공대 피해에 Obsidian Scales를 맞추고 주위 인원과 함께라면 Zephyr를 써라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Quell로 끊어라",
+    "@hm [해제] 차단을 놓친 Poison Burst 도트는 독이니 Expunge로 지워라",
+    "[우선 처치] 모인 자리의 Bursting Shroom은 Upheaval과 Eruption으로 16초 안에 처치하라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {
+  "Temporal Wound": "시간의 상처"
+ },
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 358385",
+   "u": "https://nether.wowhead.com/tooltip/spell/358385?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 351338",
+   "u": "https://nether.wowhead.com/tooltip/spell/351338?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 395152",
+   "u": "https://nether.wowhead.com/tooltip/spell/395152?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 395160",
+   "u": "https://nether.wowhead.com/tooltip/spell/395160?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 396286",
+   "u": "https://nether.wowhead.com/tooltip/spell/396286?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 403631",
+   "u": "https://nether.wowhead.com/tooltip/spell/403631?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 363916",
+   "u": "https://nether.wowhead.com/tooltip/spell/363916?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 360806",
+   "u": "https://nether.wowhead.com/tooltip/spell/360806?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 358267",
+   "u": "https://nether.wowhead.com/tooltip/spell/358267?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 374227",
+   "u": "https://nether.wowhead.com/tooltip/spell/374227?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 409311",
+   "u": "https://nether.wowhead.com/tooltip/spell/409311?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 365585",
+   "u": "https://nether.wowhead.com/tooltip/spell/365585?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 351338",
+   "u": "https://nether.wowhead.com/tooltip/spell/351338?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 396286",
+   "u": "https://nether.wowhead.com/tooltip/spell/396286?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 395160",
+   "u": "https://nether.wowhead.com/tooltip/spell/395160?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 374251",
+   "u": "https://nether.wowhead.com/tooltip/spell/374251?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 374227",
+   "u": "https://nether.wowhead.com/tooltip/spell/374227?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 370665",
+   "u": "https://nether.wowhead.com/tooltip/spell/370665?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 357214",
+   "u": "https://nether.wowhead.com/tooltip/spell/357214?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 395152",
+   "u": "https://nether.wowhead.com/tooltip/spell/395152?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 403631",
+   "u": "https://nether.wowhead.com/tooltip/spell/403631?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 360806",
+   "u": "https://nether.wowhead.com/tooltip/spell/360806?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 363916",
+   "u": "https://nether.wowhead.com/tooltip/spell/363916?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 409311",
+   "u": "https://nether.wowhead.com/tooltip/spell/409311?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 358267",
+   "u": "https://nether.wowhead.com/tooltip/spell/358267?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 365585",
+   "u": "https://nether.wowhead.com/tooltip/spell/365585?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "Vitriolic Stasis 줄은 Temporal Wound의 '10초 뒤 추가 피해'가 보스의 99% 피해 감소를 똑같이 받는다고 보고 쓴 연결이다",
+   "1시즌: Breath of Eons 줄은 Temporal Wound가 10초 뒤 피해를 넣으므로 Entropic Unraveling 20초·알 Rebirth 40초 안에 들어간다고 보고 쓴 연결이다"
+  ],
+  "notes": [
+   "Breath of Eons·Ebon Might 줄은 툴팁 'Temporal Wound는 Ebon Might를 받은 아군 피해의 15%를 10초 뒤 복제', 'Ebon Might 10초'와 Dig In 25초·Ghastly Regeneration 피해 증가를 연결했다, Prescience 줄은 툴팁 '재사용 대기 중인 딜러 우선' 기준",
+   "Temporal Wound 한글 이름은 Breath of Eons 한글 툴팁의 '시간의 상처'를 그대로 names에 넣었다, 비늘사령관·시간 감시자 전용 기술(Mass Eruption, Temporal Burst, Duplicate 등)은 넣지 않았다",
+   "1시즌: Ebon Might·Breath of Eons 줄은 툴팁 'Ebon Might 10초', 'Temporal Wound는 경로 적에게 10초' 기준, Prescience 줄은 툴팁 '재사용 대기 중인 딜러 우선' 기준",
+   "1시즌: Sleep Walk 줄은 s1.json 신화 Voidorb '광역 제어기로 모아라'와 툴팁 '20초 방향 상실, 자신에게 걸어오게 함'을 연결했다, Wing Buffet은 Fractured Image·Safeguard '밀쳐내기'와 연결했다",
+   "1시즌: 비늘사령관·시간 감시자 전용 기술은 넣지 않았다"
+  ]
+ }
+}

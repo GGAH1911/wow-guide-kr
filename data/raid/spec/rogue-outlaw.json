@@ -1,0 +1,228 @@
+{
+ "id": "rogue/outlaw",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Essence Rend는 마법 효과이니 방 가장자리에 도착한 뒤 Cloak of Shadows로 스스로 지워라, 지운 자리에 Latent Cultist가 생긴다",
+    "[생존기] 사이 단계 Hungering Pyre를 나눠 맞을 때 Feint로 광역 피해를 줄여라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Kick으로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood는 마법 효과이니 Cloak of Shadows로 스스로 지울 수 있다",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Adrenaline Rush와 Killing Spree를 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞을 때 Feint로 광역 피해를 줄여라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Exploding Infection은 마법 효과라 Cloak of Shadows로 스스로 지울 수 있다, 지우면 Caustic Explosion이 터지니 다른 해제와 시차를 둬라",
+    "[우선 처치] 맹독 쫄은 Blade Flurry와 Blade Rush로 광역으로 잡아 중앙에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Blind로 묶을 수 있다"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Kick으로 끊어라",
+    "[해제] 차단을 놓쳐 걸린 Icebound Flames는 마법 효과이니 Cloak of Shadows로 스스로 지울 수 있다",
+    "[우선 처치] 겹쳐 선 두 보스에 Blade Flurry와 Blade Rush를 넣어 First Mate Nama에도 피해가 닿게 하라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 Adrenaline Rush와 Killing Spree를 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Feint로 광역 피해를 줄여라",
+    "@m [위치] To the Slaughter에 맞아 Virulence를 받으면 Grappling Hook으로 곧바로 흩어져라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Blade Flurry와 Blade Rush로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Feint로 광역 피해를 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Kick으로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Adrenaline Rush와 Killing Spree를 몰아라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Kick으로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Grappling Hook으로 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Adrenaline Rush와 Killing Spree를 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Kick으로 끊어라",
+    "[우선 처치] Blightscale Spawn 알은 Blade Flurry와 Blade Rush로 깨서 약한 Blightscale Rawling으로 만들어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Blade Flurry와 Blade Rush로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 공대 피해에 Feint를 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Blade Flurry와 Blade Rush 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Kick으로 끊어라",
+    "[우선 처치] Voidmaw 무리는 Blade Flurry와 Blade Rush로 광역으로 잡아라",
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval 공대 피해에 Feint를 맞춰라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] Blisterburst의 받는 피해 증가와 Creep Spit 이동 속도 감소는 마법 효과이니 Cloak of Shadows로 스스로 지울 수 있다",
+    "[회피] Void Breath 때는 Grappling Hook으로 빛나는 손 반대쪽 방 끝까지 가라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 Feint로 받는 피해를 줄여라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] 가까운 Fractured Image의 Shadow Fracture는 Kick이나 Kidney Shot으로 끊어라",
+    "[참고] Entropic Unraveling 20초 동안 보스가 받는 피해가 25% 늘어나니 Adrenaline Rush와 Killing Spree를 여기에 맞추고 공대 피해는 Feint로 줄여라",
+    "[우선 처치] Concentrated Void 구슬이 나오면 Blade Rush로 곧바로 붙어 보스에게 닿기 전에 잡아라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath 공포는 마법 효과이니 Cloak of Shadows로 스스로 지울 수 있다",
+    "[차단] Voidorb의 Voidbolt는 Kick으로 끊거나 Kidney Shot으로 묶어라",
+    "[생존기] Midnight Flames 공대 피해가 25초 이어지니 Radiant Barrier 안에서 Feint를 맞춰라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] Avenger's Shield 도트는 마법 효과이니 Cloak of Shadows로 스스로 지울 수 있다",
+    "[차단] War Chaplain Senn의 Sacred Shield를 깬 뒤 Blinding Light를 Kick으로 끊어라",
+    "[우선 처치] 풀 직후 Avenging Wrath로 받는 피해가 늘어난 Commander Venel Lightblood에 Blade Flurry와 Blade Rush로 광역을 모아라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] 플레이어에게 묻은 Corrupting Essence는 마법 효과이니 Cloak of Shadows로 스스로 지울 수 있다",
+    "[참고] Null Corona는 해제하면 남은 흡수량이 다른 사람에게 옮겨 가니 위급할 때가 아니면 Cloak of Shadows를 이때 쓰지 마라",
+    "[우선 처치] Void Droplet은 파수꾼 밑에서 Blade Flurry로 파수꾼과 함께 때려 처치하라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Kick으로 가장 먼저 끊어라",
+    "[해제] 차단을 놓친 Fearsome Cry 공포는 마법 효과이니 Cloak of Shadows로 스스로 지울 수 있다",
+    "[우선 처치] 아래층 조라면 Adrenaline Rush와 Killing Spree를 아껴 두었다가 쫄의 Alnshroud 보호막을 빠르게 깨라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 같은 색 깃털이면 불씨의 Light Eruption·Void Eruption을 Kick으로 끊어라",
+    "[분담] Light Dive·Void Dive를 같은 색 인원과 나눠 맞을 때 Feint로 받는 피해를 줄여라",
+    "[생존기] 2단계 알의 Rebirth 동안 Adrenaline Rush와 Killing Spree를 몰아 Immortal Flame을 깎아라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Matrix의 Safeguard 시전을 Kick과 Kidney Shot으로 끊어 중첩을 없애라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 순서대로 Kick으로 끊어라",
+    "[생존기] Shattered Sky 25초 공대 피해에 Feint를 맞춰라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Kick으로 반드시 끊어라",
+    "[우선 처치] 정한 자리에 모인 Shroomling과 Bursting Shroom은 Blade Flurry와 Blade Rush로 광역으로 잡아라",
+    "[생존기] Fungal Bloom과 Bursting Pustules 공대 피해에 Feint를 맞춰라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 31224",
+   "u": "https://nether.wowhead.com/tooltip/spell/31224?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1966",
+   "u": "https://nether.wowhead.com/tooltip/spell/1966?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1766",
+   "u": "https://nether.wowhead.com/tooltip/spell/1766?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 2094",
+   "u": "https://nether.wowhead.com/tooltip/spell/2094?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 13750",
+   "u": "https://nether.wowhead.com/tooltip/spell/13750?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 51690",
+   "u": "https://nether.wowhead.com/tooltip/spell/51690?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 13877",
+   "u": "https://nether.wowhead.com/tooltip/spell/13877?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 271877",
+   "u": "https://nether.wowhead.com/tooltip/spell/271877?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 195457",
+   "u": "https://nether.wowhead.com/tooltip/spell/195457?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1766",
+   "u": "https://nether.wowhead.com/tooltip/spell/1766?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 13877",
+   "u": "https://nether.wowhead.com/tooltip/spell/13877?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 271877",
+   "u": "https://nether.wowhead.com/tooltip/spell/271877?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1966",
+   "u": "https://nether.wowhead.com/tooltip/spell/1966?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 31224",
+   "u": "https://nether.wowhead.com/tooltip/spell/31224?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 195457",
+   "u": "https://nether.wowhead.com/tooltip/spell/195457?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 408",
+   "u": "https://nether.wowhead.com/tooltip/spell/408?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 13750",
+   "u": "https://nether.wowhead.com/tooltip/spell/13750?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 51690",
+   "u": "https://nether.wowhead.com/tooltip/spell/51690?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "1시즌: Cloak of Shadows의 'harmful spell effects 제거'가 Null Corona의 '해제되면 옮겨 감'을 일으키는지는 출처가 없어, 쓰지 말라는 경고로만 넣었다"
+  ],
+  "notes": [
+   "Cloak of Shadows는 툴팁 'harmful spell effects 제거' 기준으로 digest 해제 목록의 마법 효과(Essence Rend·Blighted Blood·Exploding Infection·Icebound Flames)에만 썼고 독(Acidic Burst 등)에는 쓰지 않았다",
+   "기만자·운명결속 영웅 특성 전용 기술은 넣지 않았다",
+   "1시즌: Cloak of Shadows는 툴팁 'harmful spell effects 제거' 기준으로 digest 해제 목록의 마법 효과(Blisterburst·Creep Spit·Dread Breath·Avenger's Shield·Corrupting Essence·Fearsome Cry)에만 썼고 독인 Poison Burst에는 쓰지 않았다",
+   "1시즌: 기만자·운명결속 영웅 특성 전용 기술은 넣지 않았다"
+  ]
+ }
+}

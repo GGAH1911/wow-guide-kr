@@ -1,0 +1,147 @@
+{
+ "id": "demon-hunter/vengeance",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[위치] Possession Barrage 대상이 되면 Infernal Strike로 보스에게서 멀리 뛰어라",
+    "[제어] 보호막이 남은 Restless Amani 무리는 Sigil of Misery로 15초 방향 감각 상실시켜 늦춰라",
+    "[생존기] Uncoiled Rage가 걸리면 도발이 통하지 않고 모든 피해가 500% 오르니 Fiery Brand와 Metamorphosis를 써라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[탱버] Empowering Slam은 250만 물리 피해이니 시전 때 Demon Spikes로 방어도를 올려 둬라",
+    "[교대] 사이 단계가 끝나면 Torment로 보스를 가져와라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[탱버] Dripping Fangs 중첩이 쌓이면 Fiery Brand로 받는 피해를 40% 줄여라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Chaos Nova나 Sigil of Misery로 묶을 수 있다"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[교대] Shredding Shards 교대 때 Torment로 Scrollsage Iku를 받고 Fiery Brand로 받는 피해를 40% 줄여라",
+    "[차단] Icebound Flames를 Disrupt로 차단하라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[교대] Apex Predator 시전 중 Torment로 대상을 바꿔 Ravage와 Mutilate를 하나씩 맡아라",
+    "[탱버] Ravage를 맞을 때 Fiery Brand나 Metamorphosis를 써라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[탱버] Caustic Deluge 5초 동안 Fiery Brand로 받는 피해를 40% 줄여라",
+    "[위치] Stone Breaker로 밀려난 뒤 Infernal Strike로 밟기 자리에 뛰어들어라",
+    "@m [차단] Barbed Bulwark와 Visceral Burst를 Disrupt로 차단하라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[교대] Sever 교대 때 Torment를 쓰고 맞을 때 Fiery Brand를 켜라",
+    "[차단] Veil of Twilight가 깨지면 Eternal Nightfall을 Disrupt로 차단하라",
+    "@hm [차단] Spiteful Soulcoiler의 Wail of Terror를 Disrupt로 차단하라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[교대] Caustic Waves 시전 때 Torment로 Ula'tek과 Gore Rattle을 바꿔라",
+    "[위치] Mother's Wrath 뒤 걸리는 Hobbled 감속은 Vengeful Retreat로 지우고 Infernal Strike로 곧바로 공격 범위 안으로 돌아가라",
+    "[차단] 2단계 Doomscale Warden의 Malice를 Disrupt로 차단하라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[탱버] 맞을 때마다 피해가 20%씩 쌓이는 후반 Water Jet에 Fiery Brand로 받는 피해를 40% 줄여라",
+    "[제어] 거품으로 몰려드는 Bubblefin Shorerunner를 Sigil of Misery로 묶어라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[교대] 첫 Umbral Collapse 뒤 Torment로 보스를 가져와 두 번째 Umbral Collapse를 받아라",
+    "[탱버] Weakened로 쫄이 몰려들어 Gnashing Void 도트가 쌓이면 Metamorphosis로 생명력을 40% 늘리고 방어도를 올려라",
+    "[차단] 사이 단계 Pitch Bulwark를 Disrupt로 차단하고, 쫄 여럿이 모여 시전하면 Sigil of Silence로 한꺼번에 침묵시켜라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[탱버] Smashed가 쌓인 채 두 번째 큰 발톱 충격을 받을 때 Demon Spikes로 방어도를 올리고 Fiery Brand로 받는 피해를 40% 줄여라",
+    "[위치] Blistercreep이 달라붙으면 Infernal Strike로 자기 쪽 Void Crystal 벽까지 뛰고, Creep Spit 감속은 Vengeful Retreat로 지워라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[탱버] Shattering Twilight는 큰 암흑 피해이니 벽 쪽에서 Fiery Brand나 Metamorphosis를 켜고 받아라",
+    "[교대] Destabilizing Strikes 중첩이 쌓이면 Torment로 보스를 가져와 Concentrated Void 구슬 반대쪽으로 끌어라",
+    "[차단] 가까운 Fractured Image의 Shadow Fracture는 Disrupt로 끊거나 Chaos Nova로 기절시켜라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[탱버] Ezzorak의 Rakfang은 큰 물리 피해이니 시전 때 Demon Spikes로 방어도를 올려 두라",
+    "[우선 처치] 사이 단계 Manifestation of Midnight은 Torment로 잡아 공대에서 떨어뜨리고 Fiery Brand로 받는 피해를 줄여라",
+    "[차단] 가까운 Voidorb의 Voidbolt를 Disrupt로 끊어라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[교대] Commander Venel Lightblood의 Judgment 직후 Torment로 교대해 Final Verdict 증폭 피해를 피하라",
+    "[탱버] 세 보스의 큰 신성 피해가 겹칠 때 Fiery Brand나 Metamorphosis를 켜라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Disrupt로 차단하라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[위치] Dark Hand에 밀려나면 Infernal Strike로 파수꾼 근접 범위로 곧바로 뛰어 돌아가라",
+    "@nh [교대] Rift Slash 중첩으로 능력치가 줄면 Undying Voidspawn 처리 뒤 Torment로 교대하라",
+    "@nh [생존기] Aspect of the End를 끊어 Gravity Collapse로 받는 물리 피해가 300% 늘면 Demon Spikes와 Metamorphosis를 켜라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[탱버] Alndust Upheaval 대상이 되면 큰 물리 피해를 받으니 Fiery Brand나 Metamorphosis를 켜고 조와 함께 맞아라",
+    "[탱버] 아래층에서 Colossal Horror의 Colossal Strikes가 세지면 Fiery Brand로 받는 피해를 40% 줄여라",
+    "[차단] 아래층에서는 Haunting Essence의 Fearsome Cry를 Disrupt로 먼저 끊고, 여럿이 모이면 Sigil of Silence를 깔아라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[교대] 반대 색 Light Edict·Void Edict가 오면 같은 색 탱커가 시전 중 Torment로 가져와 맞아라",
+    "[탱버] Light Edict·Void Edict는 큰 피해이니 Fiery Brand를 켜고, 두 번 연달아 올 때는 Metamorphosis를 더하라",
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Disrupt로 끊어라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[교대] Heaven's Lance 5번 찌르기가 끝나면 Torment로 교대하고, 찌르기를 받을 때 Fiery Brand를 켜라",
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩은 Disrupt와 Chaos Nova 기절로 없애라",
+    "@nh [해제] Safeguard 중첩 강화 효과는 마법 효과이니 Consume Magic으로 벗겨라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "[교대] Putrid Fist를 맞은 뒤 Torment로 교대하고, 맞기 전에 Demon Spikes로 방어도를 올려라",
+    "@hm [차단] 보스 곁 Sporecap의 Poison Burst를 Disrupt로 차단하라",
+    "[우선 처치] 모인 자리의 Bursting Shroom은 Sigil of Flame과 Spirit Bomb으로 함께 쳐라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "탱버·교대 줄은 digest 역할 tank 항목(Empowering Slam·Dripping Fangs·Shredding Shards·Steady Strikes·Apex Predator·Caustic Deluge·Stone Breaker·Sever·Caustic Waves·Water Jet)과 core 보스 툴팁의 피해 계열(물리/자연/암흑/냉기)을 기술 툴팁 효과와 짝지었다.",
+   "면역으로 기믹을 무시한다는 서술은 넣지 않았다(기절·공포·밀쳐내기 면역 기술 포함). 영웅 특성 전용 기술은 쓰지 않았다.",
+   "1시즌: Fiery Brand는 툴팁 원문('받는 피해 40% 감소')대로 썼다. Safeguard 줄은 digest 해제 목록(Magic)과 Consume Magic 툴팁을 짝지었다.",
+   "1시즌: Divine Shield는 해제 유형이 확인되지 않아 Consume Magic 줄로 쓰지 않았다. 영웅 특성 전용 기술(Reaver's Glaive 등)은 쓰지 않았다."
+  ]
+ }
+}

@@ -1,0 +1,293 @@
+{
+ "id": "mage/fire",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] Gravebound Advance 보호막이 남은 Restless Amani는 Frost Nova로 6초 동안 얼려 Soulcoil Well로 가는 시간을 늦춰라",
+    "@m [참고] Invoke가 끝나는 순간 시전 중인 주문이 끊기니 그 순간에는 Pyroblast와 Fireball 대신 즉시 시전인 Fire Blast와 Phoenix Flames를 써라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Counterspell로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Combustion을 사이 단계 뒤로 미뤄라",
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Fire Blast와 Phoenix Flames를 몰아 바로 처치하라",
+    "[생존기] Unstable Miasma를 나눠 맞기 전에 Blazing Barrier를 씌워 피해를 흡수하라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Flamestrike와 Meteor로 광역으로 잡아 Malignant Cavity에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Frost Nova로 얼려 묶을 수 있다",
+    "@m [생존기] Gloom Expulsion과 Conflagrating Expulsion 공대 피해에 Blazing Barrier를 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Counterspell로 끊어라",
+    "[위치] Blink Nova 대상이 되면 Blink나 Shimmer로 공대에서 빨리 멀어져라",
+    "[생존기] Fishy Feedback 공대 피해와 12초 도트에 Blazing Barrier를 맞춰라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 30% 늘어나니 Combustion과 Meteor를 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Blazing Barrier로 피해를 흡수하라",
+    "[회피] Tempest 회오리를 피해 움직이는 동안에는 이동 중 시전되는 Scorch로 딜을 이어가라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Flamestrike와 Phoenix Flames로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Blazing Barrier로 피해를 흡수하라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Counterspell로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Combustion을 여기에 맞춰라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Counterspell로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Blink나 Shimmer로 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Combustion을 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Counterspell로 끊어라",
+    "[생존기] Rage of the Shackled 20초 공대 피해와 Fury Unleashed에 Blazing Barrier를 맞추고, 위급하면 Ice Block이나 Ice Cold로 살아남아라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Flamestrike와 Phoenix Flames로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides 공대 피해에 Blazing Barrier를 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Flamestrike 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Counterspell로 끊어라",
+    "[우선 처치] Voidmaw는 Flamestrike와 Meteor로 함께 잡아라",
+    "@m [해제] Abyssal Malus의 Black Miasma는 저주라 Remove Curse로 지울 수 있다"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] Void Breath 때는 Blink나 Shimmer로 빛나는 손 반대쪽 방 끝까지 빨리 가라",
+    "[우선 처치] 벽 앞에 모은 Blistercreep은 Flamestrike와 Meteor로 함께 잡아 Blisterburst로 Void Crystal을 부숴라",
+    "@m [생존기] 첫 Blistercreep 무리가 터지기 전에 Blazing Barrier를 씌워 피해를 흡수하라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Fractured Image의 Shadow Fracture를 Counterspell로 끊어라",
+    "[생존기] Entropic Unraveling 동안 보스가 받는 피해가 25% 늘어나니 Combustion을 여기에 맞추고 Blazing Barrier로 피해를 흡수하라",
+    "[우선 처치] Concentrated Void 구슬로 대상을 바꿀 때는 이동 중에도 시전되는 Scorch와 즉시 시전인 Fire Blast로 이어서 때려라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Void Howl 뒤 생긴 Voidorb의 Voidbolt를 Counterspell로 끊어라",
+    "[회피] Nullzone 사슬은 Blink나 Shimmer로 초기 반경 밖 10미터까지 빨리 벗어나 끊어라",
+    "[생존기] Midnight Flames 피해 일부는 Radiant Barrier를 뚫으니 사이 단계 전에 Blazing Barrier를 씌워 두라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] 풀 직후 Avenging Wrath로 받는 피해가 20% 늘어난 Commander Venel Lightblood에 Combustion을 맞추고 Flamestrike로 함께 때려라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Counterspell로 끊어라",
+    "[참고] 블러드 뒤 보스가 Divine Shield를 켜면 적 버프 해제 담당으로 Spellsteal을 써서 지워라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[참고] Demiar의 Interrupting Tremor 시전이 끝날 때는 Pyroblast 시전을 멈추고 즉시 시전인 Fire Blast와 Phoenix Flames를 써라",
+    "[위치] Grasp of Emptiness 대상이 되면 Blink나 Shimmer로 원에서 멀리 벗어나 Bursting Emptiness가 공대를 비껴가게 하라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage를 Counterspell로 끊어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Counterspell로 먼저 끊고 남는 차단으로 Essence Bolt를 끊어라",
+    "[우선 처치] 아래층 조라면 Combustion을 아껴 두었다가 Alnshroud 보호막을 빠르게 깨라",
+    "[우선 처치] 2단계에는 Rift Shroud로 보스가 받는 피해가 99% 줄어드니 Flamestrike와 Meteor를 쫄에 써라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Counterspell로 끊어라",
+    "[생존기] Combustion은 2단계 알에 아껴 두었다가 Rebirth 시전 동안 써라",
+    "[분담] 같은 색 Light Dive·Void Dive를 함께 맞기 전에 Blazing Barrier를 씌워 피해를 흡수하라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩을 Counterspell로 끊고, 마법 효과인 Safeguard 강화는 Spellsteal로 벗겨라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 Counterspell로 순서대로 끊어라",
+    "[생존기] Shattered Sky 25초 공대 피해에 Blazing Barrier를 맞추고, 위급하면 Ice Block이나 Ice Cold로 살아남아라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Counterspell로 끊어라",
+    "[우선 처치] 모인 자리의 Bursting Shroom은 Flamestrike와 Meteor로 16초 안에 처치하라",
+    "[위치] Festering Vines 대상이 되면 Blink나 Shimmer로 방 가장자리까지 빨리 나가라"
+   ]
+  }
+ },
+ "tips": {
+  "blink": "1953"
+ },
+ "spells": {
+  "1953": {
+   "n": "Blink",
+   "i": "spell_arcane_blink",
+   "m": "2% of base mana · Instant · 20 sec cooldown · 1 Charge",
+   "d": "Teleports you forward 20 yds or until reaching an obstacle, and frees you from all stuns and bonds."
+  }
+ },
+ "spellsKo": {
+  "1953": {
+   "n": "점멸",
+   "m": "2% (기본 마나 중) · 즉시 · 20 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "전방으로 20미터를 순간이동합니다. 경로에 장애물이 있으면 이동이 중단됩니다. 모든 기절 및 구속 효과에서 벗어납니다."
+  }
+ },
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 122",
+   "u": "https://nether.wowhead.com/tooltip/spell/122?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 11366",
+   "u": "https://nether.wowhead.com/tooltip/spell/11366?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 133",
+   "u": "https://nether.wowhead.com/tooltip/spell/133?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 108853",
+   "u": "https://nether.wowhead.com/tooltip/spell/108853?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 257541",
+   "u": "https://nether.wowhead.com/tooltip/spell/257541?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 2139",
+   "u": "https://nether.wowhead.com/tooltip/spell/2139?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 190319",
+   "u": "https://nether.wowhead.com/tooltip/spell/190319?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 235313",
+   "u": "https://nether.wowhead.com/tooltip/spell/235313?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 2120",
+   "u": "https://nether.wowhead.com/tooltip/spell/2120?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 153561",
+   "u": "https://nether.wowhead.com/tooltip/spell/153561?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1953",
+   "u": "https://nether.wowhead.com/tooltip/spell/1953?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 212653",
+   "u": "https://nether.wowhead.com/tooltip/spell/212653?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 2948",
+   "u": "https://nether.wowhead.com/tooltip/spell/2948?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 45438",
+   "u": "https://nether.wowhead.com/tooltip/spell/45438?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 414659",
+   "u": "https://nether.wowhead.com/tooltip/spell/414659?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 2139",
+   "u": "https://nether.wowhead.com/tooltip/spell/2139?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 2120",
+   "u": "https://nether.wowhead.com/tooltip/spell/2120?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 153561",
+   "u": "https://nether.wowhead.com/tooltip/spell/153561?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 475",
+   "u": "https://nether.wowhead.com/tooltip/spell/475?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1953",
+   "u": "https://nether.wowhead.com/tooltip/spell/1953?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 212653",
+   "u": "https://nether.wowhead.com/tooltip/spell/212653?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 235313",
+   "u": "https://nether.wowhead.com/tooltip/spell/235313?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 190319",
+   "u": "https://nether.wowhead.com/tooltip/spell/190319?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 2948",
+   "u": "https://nether.wowhead.com/tooltip/spell/2948?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 108853",
+   "u": "https://nether.wowhead.com/tooltip/spell/108853?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 30449",
+   "u": "https://nether.wowhead.com/tooltip/spell/30449?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 11366",
+   "u": "https://nether.wowhead.com/tooltip/spell/11366?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 257541",
+   "u": "https://nether.wowhead.com/tooltip/spell/257541?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 45438",
+   "u": "https://nether.wowhead.com/tooltip/spell/45438?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 414659",
+   "u": "https://nether.wowhead.com/tooltip/spell/414659?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "1시즌: Divine Shield는 s1.json이 '적 버프 해제 기술로 지워라'라고만 적었고 해제 유형(Magic)은 dispel 목록에서 확인되지 않았다, Spellsteal 툴팁은 'beneficial magic effect'만 훔친다"
+  ],
+  "notes": [
+   "Gravebound Advance 보호막을 어느 피해 계열이 깨는지는 확인하지 않아 쓰지 않고 Frost Nova 이동 저지만 넣었다",
+   "Invoke 줄은 digest의 신화 \"시전 중인 주문이 끊긴다\"와 Pyroblast 4초·Fireball 1.75초 시전, Fire Blast 즉시 시전 툴팁을 연결했다",
+   "Ice Block은 면역으로 기믹을 무시한다고 쓰지 않고 \"살아남는다\" 수준으로만 썼다, Blink의 기절 해제로 Shell Spin 기절을 푼다는 말은 출처가 없어 넣지 않았다",
+   "성난태양·서리불꽃 영웅 특성 전용 기술은 넣지 않았다",
+   "1시즌: Blink는 쐐기 파일에 없어 2시즌 레이드 화염 파일의 1953 툴팁(영문·한글)을 그대로 옮겼다",
+   "1시즌: Safeguard는 dispel 목록 Magic 확인, Spellsteal 툴팁과 연결했다, 성난태양·서리불꽃 영웅 전용 기술은 넣지 않았다"
+  ]
+ }
+}

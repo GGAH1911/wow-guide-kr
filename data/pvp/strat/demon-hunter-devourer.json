@@ -1,0 +1,87 @@
+{
+ "id": "demon-hunter/devourer",
+ "arena": [
+  "[생존기] Blur는 10초간 받는 모든 피해를 25% 줄이니 상대 폭딜 쿨기가 켜지는 순간에 맞춰 써라",
+  "[회피] Glimpse를 고르면 Vengeful Retreat로 뛰는 동안 제어 효과에 면역이 되고 착지할 때까지 받는 피해가 20% 주니 상대 제어 주문 시전이 끝나기 직전에 뒤로 뛰어라",
+  "[회피] Shift는 30미터 안 지정한 곳으로 순간이동하니 근접 딜러가 붙으면 기둥 뒤로 옮겨 시야를 끊거나 아군 치유 전담 곁으로 돌아가라",
+  "[해제] Reverse Magic을 고르면 나와 10미터 안 아군의 해로운 마법 효과를 모두 지우고 시전자에게 되돌리니 아군 치유 전담 곁에서 마법 제어가 걸리면 바로 써라",
+  "[해제] Consume Magic은 30미터 밖에서 대상의 이로운 마법 효과 하나를 지우니 상대에게 걸린 마법 보호 효과부터 벗겨라",
+  "[제어] Imprison은 대상을 1분간 행동 불가로 만들지만 피해에 풀릴 수 있으니 상대 치유 전담에게 걸고 아군은 다른 대상을 공격하게 하라",
+  "[차단] Disrupt는 시전을 끊고 그 계열 주문을 5초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[참고] Beckon을 고르면 Reap 뒤 다음 Consume의 시전 시간이 없어지고 영혼 파편을 하나 더 만드니 상대 차단기가 돌아와 있을 때는 Reap 뒤에 Consume을 넣어라"
+ ],
+ "bg": [
+  "[참고] 깃발 지도에서 치유 전담이 운반하지 못하면 이동력 좋은 딜러가 운반하니 깃발을 들면 Vengeful Retreat로 감속을 모두 풀고 Shift로 추격자와 거리를 벌려라",
+  "[생존기] Armor of Souls는 전장 대공세 43명 중 26명이 골랐고 방어도를 65% 올리고 피해를 받을 때 12% 확률로 영혼 파편을 만드니 오래 맞는 거점 한타에서도 Void Metamorphosis에 필요한 영혼 파편을 채울 수 있다",
+  "[제어] Sigil of Misery는 2초 뒤 인장 위 적을 모두 15초간 방향 상실시키지만 방향 상실에 걸린 대상은 밀쳐낼 수 없으니 거점을 점령하려는 적에게 쓰되 아군 밀쳐내기와 겹치지 않게 하라",
+  "[분담] Spectral Sight는 8초간 은신하거나 투명한 적을 보여 주니 거점을 지킬 때 상대 은신 직업이 몰래 점령하러 오는지 확인하라",
+  "[해제] Reverse Magic을 고르면 10미터 안 아군의 해로운 마법 효과를 모두 지우니 거점에 뭉친 아군에게 마법 제어가 여럿 걸렸을 때 써라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Blur를 폭딜 직전에 먼저 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 47명 전원과 전장 대공세 43명 전원이 고른 Beckon은 Reap 뒤 다음 Consume을 즉시 시전으로 만들고 영혼 파편을 하나 더 주며, 1인 조합전 47명 중 37명과 전장 대공세 43명 중 39명이 고른 Glimpse는 Vengeful Retreat 동안 제어 효과 면역과 받는 피해 20% 감소를 주고, 1인 조합전 47명 중 27명이 고른 Reverse Magic은 나와 10미터 안 아군의 해로운 마법 효과를 모두 지워 시전자에게 되돌린다.",
+ "tips": {
+  "beckon": "1261697",
+  "glimpse": "354489",
+  "reverse magic": "205604",
+  "armor of souls": "1261414"
+ },
+ "spells": {
+  "1261697": {
+   "n": "Beckon",
+   "i": "ability_creature_disease_05",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Reap reduces the cast time of your next Consume by 100% and causes it to generate 1 additional Soul Fragment."
+  },
+  "354489": {
+   "n": "Glimpse",
+   "i": "ability_demonhunter_vengefulretreat2",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Vengeful Retreat provides immunity to loss of control effects, and reduces damage taken by 20% until you land."
+  },
+  "205604": {
+   "n": "Reverse Magic",
+   "i": "ability_demonhunter_reversemagic",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 1 min cooldown",
+   "d": "Removes all harmful magical effects from yourself and all nearby allies within 10 yards, and sends them back to their original caster if possible."
+  },
+  "1261414": {
+   "n": "Armor of Souls",
+   "i": "sha_spell_warlock_demonsoul_nightborne",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Your Armor is increased by 65%. Taking damage has a 12% chance to generate a Soul Fragment. (Proc chance: 12%)"
+  }
+ },
+ "spellsKo": {
+  "1261697": {
+   "n": "유혹",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "수확이 다음 집어삼키기의 시전 시간을 100%만큼 감소시키며, 영혼 파편 1개를 추가로 생성하게 합니다."
+  },
+  "354489": {
+   "n": "벗어나기",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "복수의 퇴각이 제어 불가 효과에 면역으로 만들며 착지할 때까지 받는 피해를 20%만큼 감소시킵니다."
+  },
+  "205604": {
+   "n": "마법 역전",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 1 분 재사용 대기시간",
+   "d": "자신과 주위 10미터 내의 모든 아군에게서 해로운 마법 효과를 제거하고, 가능한 경우 해당 효과를 시전한 대상에게 되돌려줍니다."
+  },
+  "1261414": {
+   "n": "영혼의 방어구",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "방어도가 65%만큼 증가합니다. 피해를 받으면 12%의 확률로 영혼 파편을 생성합니다. (효과 발동 확률: 12%)"
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 공허상흔 34·궤멸자 13으로 갈려 한쪽 전용 기술은 쓰지 않음",
+   "투기장 상위권 표본이 3v3 7명·2v2 4명뿐이라 투기장 줄은 1인 조합전(47명) 채택률과 일반 원칙 기준",
+   "Consume의 즉시 시전이 차단을 피한다는 점은 툴팁에 없는 일반 원리라 차단기 대기 여부에 맞춘 운용으로만 씀"
+  ]
+ }
+}

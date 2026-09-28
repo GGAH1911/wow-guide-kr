@@ -1,0 +1,251 @@
+{
+ "id": "death-knight/unholy",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] Gravebound Advance 보호막이 남은 Restless Amani는 Chains of Ice로 이동 속도를 70% 줄여 우물 도착을 늦춰라",
+    "[생존기] Soulcoil Ignition은 4초 동안 매초 암흑 피해 Soulcoil Rite를 일으키니 Anti-Magic Shell로 흡수하라",
+    "[우선 처치] 사이 단계 Echo of Jawae에 Dark Transformation을 맞춰 Tether of Awakening을 빨리 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Dark Transformation을 켜 바로 처치하라",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Army of the Dead와 Dark Transformation을 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma 암흑 피해를 나눠 맞을 때 Anti-Magic Shell로 흡수하라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄에는 Outbreak로 Virulent Plague를 퍼뜨리고 Epidemic과 Death and Decay로 광역 정리해 중앙에 닿기 전에 잡아라",
+    "@hm [참고] Clotting Venom은 끌어오기 기술로 끌어올 수 없으니 Death Grip을 쓰지 마라",
+    "@m [분담] 배정되면 Death Grip으로 Burning Venom 둘을 Shrouded Venom 곁으로 끌어와라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Mind Freeze로 끊어라",
+    "[생존기] Fishy Feedback 암흑 공대 피해와 Blink Nova 비전 피해는 Anti-Magic Shell로 흡수하라",
+    "[우선 처치] 세 보스 생명력을 맞출 때 Virulent Plague와 Epidemic으로 First Mate Nama에도 피해가 닿게 하라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 Army of the Dead와 Dark Transformation을 여기에 맞춰라",
+    "[분담] Mutilate 자연 피해를 나눠 맞을 때 Anti-Magic Shell로 흡수하라",
+    "[회피] Tempest 회오리를 피하다 근접 거리를 벗어나면 30미터 사거리의 Death Coil과 Epidemic으로 딜을 이어가라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Dark Transformation을 켜고 Epidemic으로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast 물리 피해를 나눠 맞을 때 Icebound Fortitude로 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Mind Freeze로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Mind Freeze로 끊어라",
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Army of the Dead와 Dark Transformation을 몰아라",
+    "[회피] Guillotine 물리 피해를 나눠 맞을 때 Icebound Fortitude로 줄이고 곧바로 Wraith Walk로 40미터 밖으로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Army of the Dead와 Dark Transformation을 몰아라",
+    "[생존기] Rage of the Shackled 20초 자연 공대 피해에 Anti-Magic Zone을 깔아 공대 마법 피해를 15% 줄여라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Mind Freeze로 끊어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Epidemic과 Death and Decay로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 냉기 공대 피해는 Anti-Magic Shell로 흡수하라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 광역 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Mind Freeze로 끊어라",
+    "[우선 처치] Voidmaw 무리는 Epidemic과 Death and Decay로 광역으로 잡아라",
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval에 배정되면 Anti-Magic Zone으로 공대가 받는 마법 피해를 줄여라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] Void Breath 때는 Death's Advance로 느려지지 않은 채 빛나는 손 반대쪽 방 끝까지 달려라",
+    "[우선 처치] 벽 앞에 모인 Blistercreep은 Epidemic과 Death and Decay로 함께 잡아 Blisterburst로 Void Crystal을 부숴라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 Blisterburst 암흑 피해를 Anti-Magic Shell로 흡수하라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] 가까운 Fractured Image의 Shadow Fracture는 Mind Freeze로 끊거나 Blinding Sleet로 묶어라",
+    "[참고] Entropic Unraveling 20초 동안 보스가 받는 피해가 25% 늘어나니 Army of the Dead와 Dark Transformation을 여기에 맞춰라",
+    "[생존기] Entropic Unraveling의 매초 암흑 피해는 Anti-Magic Shell로 흡수하라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Voidorb의 Voidbolt는 Mind Freeze로 끊어라",
+    "[생존기] Midnight Flames 암흑 피해는 Anti-Magic Shell로 흡수하라",
+    "[생존기] 배정되면 Midnight Flames 동안 Radiant Barrier 안에 Anti-Magic Zone을 깔아 공대가 받는 마법 피해를 줄여라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[차단] War Chaplain Senn의 Sacred Shield를 깬 뒤 Blinding Light를 Mind Freeze로 끊어라",
+    "[분담] Execution Sentence 신성 피해를 대상 옆에서 나눠 맞을 때 Anti-Magic Shell로 흡수하라",
+    "[우선 처치] 풀 직후 Avenging Wrath로 받는 피해가 늘어난 Commander Venel Lightblood에 Epidemic과 Death and Decay로 광역을 모아라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[우선 처치] Void Droplet은 파수꾼 밑에서 Epidemic과 Death and Decay로 파수꾼과 함께 때려 처치하라",
+    "@nh [우선 처치] Call of the Void로 나온 Undying Voidspawn을 Death Grip으로 끌어와 한곳에 모아라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage는 Mind Freeze로 끊어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Mind Freeze로 가장 먼저 끊어라",
+    "[우선 처치] 아래층 조라면 Army of the Dead와 Dark Transformation을 아껴 두었다가 쫄의 Alnshroud 보호막을 빠르게 깨라",
+    "[생존기] Rift Emergence와 Caustic Phlegm 자연 피해는 Anti-Magic Shell로 흡수하라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 같은 색 깃털이면 불씨의 Light Eruption·Void Eruption을 Mind Freeze로 끊어라",
+    "[분담] Light Dive·Void Dive를 같은 색 인원과 나눠 맞을 때 Anti-Magic Shell로 피해를 흡수하라",
+    "[생존기] 2단계 알의 Rebirth 동안 Army of the Dead와 Dark Transformation을 몰아 Immortal Flame을 깎아라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Matrix의 Safeguard 시전을 Mind Freeze로 끊어 중첩을 없애라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 순서대로 Mind Freeze로 끊어라",
+    "[우선 처치] 흩어진 Midnight Crystal은 Death Grip으로 끌어와 한곳에 모아 시전이 끝나기 전에 처치하라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Mind Freeze로 반드시 끊어라",
+    "[우선 처치] 정한 자리에 모인 Shroomling과 Bursting Shroom은 Epidemic과 Death and Decay로 광역으로 잡아라",
+    "[생존기] Fungal Bloom 자연 피해와 16초 도트는 Anti-Magic Shell로 흡수하라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 45524",
+   "u": "https://nether.wowhead.com/tooltip/spell/45524?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 48707",
+   "u": "https://nether.wowhead.com/tooltip/spell/48707?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1233448",
+   "u": "https://nether.wowhead.com/tooltip/spell/1233448?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 42650",
+   "u": "https://nether.wowhead.com/tooltip/spell/42650?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 43265",
+   "u": "https://nether.wowhead.com/tooltip/spell/43265?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 77575",
+   "u": "https://nether.wowhead.com/tooltip/spell/77575?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 191587",
+   "u": "https://nether.wowhead.com/tooltip/spell/191587?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 207317",
+   "u": "https://nether.wowhead.com/tooltip/spell/207317?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 49576",
+   "u": "https://nether.wowhead.com/tooltip/spell/49576?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 47528",
+   "u": "https://nether.wowhead.com/tooltip/spell/47528?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 47541",
+   "u": "https://nether.wowhead.com/tooltip/spell/47541?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 48792",
+   "u": "https://nether.wowhead.com/tooltip/spell/48792?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 212552",
+   "u": "https://nether.wowhead.com/tooltip/spell/212552?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 51052",
+   "u": "https://nether.wowhead.com/tooltip/spell/51052?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 47528",
+   "u": "https://nether.wowhead.com/tooltip/spell/47528?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 43265",
+   "u": "https://nether.wowhead.com/tooltip/spell/43265?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 207317",
+   "u": "https://nether.wowhead.com/tooltip/spell/207317?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 51052",
+   "u": "https://nether.wowhead.com/tooltip/spell/51052?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 48265",
+   "u": "https://nether.wowhead.com/tooltip/spell/48265?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 48707",
+   "u": "https://nether.wowhead.com/tooltip/spell/48707?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 207167",
+   "u": "https://nether.wowhead.com/tooltip/spell/207167?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 42650",
+   "u": "https://nether.wowhead.com/tooltip/spell/42650?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1233448",
+   "u": "https://nether.wowhead.com/tooltip/spell/1233448?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 49576",
+   "u": "https://nether.wowhead.com/tooltip/spell/49576?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Anti-Magic Shell·Anti-Magic Zone 줄은 core 보스 툴팁의 피해 속성(Shadow·Nature·Frost·Arcane)을 마법 피해로 보고 연결했고, 물리 피해(Ravenous Feast·Guillotine)에는 Icebound Fortitude만 썼다",
+   "Death's Advance 밀쳐내기 면역의 기믹 적용 여부와 Gravebound Advance를 깨는 피해 속성은 미확인이라 쓰지 않았다. San'layn·Rider of the Apocalypse 전용 기술(Vampiric Strike·Death Charge 등)은 넣지 않았다",
+   "1시즌: Anti-Magic Shell·Anti-Magic Zone 줄은 core 보스 툴팁의 피해 속성(암흑·신성·자연)을 마법 피해로 보고 흡수·감소만 썼고, '해로운 마법 효과 적용 방지'로 디버프(Blisterburst·Dread Breath·Fearsome Cry)를 막는다는 말은 출처가 없어 쓰지 않았다",
+   "1시즌: Death Grip은 digest가 끌어모으라고 한 Undying Voidspawn·Midnight Crystal에만 썼다. Death's Advance의 밀쳐내기 면역으로 Primordial Roar 등을 버틴다는 말은 쓰지 않았다",
+   "1시즌: 산레인·묵시록의 기수 영웅 특성 전용 기술은 넣지 않았다"
+  ]
+ }
+}

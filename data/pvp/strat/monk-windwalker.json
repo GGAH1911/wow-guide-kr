@@ -1,0 +1,86 @@
+{
+ "id": "monk/windwalker",
+ "arena": [
+  "[생존기] Touch of Karma는 10초간 최대 생명력 50%까지 받는 피해를 모두 흡수하고 그 70%를 대상에게 되돌리니 상대가 폭딜 쿨기를 켜고 나를 몰아칠 때 써라",
+  "[생존기] Diffuse Magic은 6초간 받는 마법 피해를 60% 줄이고 나에게 걸린 해로운 마법 효과를 시전자에게 되돌리니 상대 시전자의 마법 폭딜이나 마법 지속 피해가 몰릴 때 써라",
+  "[생존기] Turbo Fists를 고르면 Fists of Fury를 채널링하는 동안 모든 공격을 막아 내고 맞은 적을 90% 감속시키니 근접 딜러가 붙어 폭딜할 때 Fists of Fury로 받아쳐라",
+  "[제어] Grapple Weapon은 20미터 밖에서 적의 무기와 방패를 5초간 빼앗으니 무기를 쓰는 근접 딜러가 폭딜 쿨기를 켰을 때 써라",
+  "[제어] Paralysis는 대상을 1분간 행동 불가로 만들지만 피해에 풀릴 수 있으니 상대 치유 전담에게 걸고 아군은 다른 대상을 공격하게 하라",
+  "[제어] Leg Sweep은 6미터 안 적을 모두 3초간 기절시키니 상대 치유 전담에게 붙어 묶은 사이 아군이 폭딜을 넣게 하라",
+  "[차단] Spear Hand Strike는 시전을 끊고 그 계열 주문을 5초간 막으니 상대 치유 전담의 치유 시전에 아껴 두어라",
+  "[해제] Tiger's Lust는 아군의 이동 불가와 감속을 모두 풀고 6초간 70% 빠르게 하고 Detox는 아군의 독과 질병을 지우니 발이 묶인 아군 치유 전담을 풀어 시야를 끊게 하라"
+ ],
+ "bg": [
+  "[참고] Ride the Wind를 고르면 Flying Serpent Kick이 내 감속을 풀고 지나간 자리에 바람길을 남겨 그 위 아군이 30% 빨라지고 감속에 면역이 되니 깃발 운반자 앞에서 길을 열어 주거나 운반을 맡았을 때 추격을 떼어라",
+  "[위치] Turbo Fists를 고른 Fists of Fury는 맞은 적을 모두 90% 감속시키니 상대 깃발 운반자나 구슬 운반자를 붙잡을 때 채널링하라",
+  "[제어] Ring of Peace는 5초간 고리 안으로 들어오는 적을 밀쳐내지만 공포나 방향 상실에 걸린 대상은 밀쳐낼 수 없으니 아군 공포 제어가 걸리지 않은 적을 거점 깃발에서 떼어낼 때 써라",
+  "[분담] Transcendence는 15분간 영혼을 남겨 두고 영혼과 자리를 바꿀 수 있으니 지키는 거점에 영혼을 남기고 싸우다 거점이 공격받으면 바로 돌아가라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Touch of Karma와 Diffuse Magic을 폭딜 직전에 먼저 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 47명 전원과 전장 대공세 43명 전원이 고른 Turbo Fists는 Fists of Fury 채널링 중 모든 공격을 막아 내고 맞은 적을 90% 감속시키며, 1인 조합전 47명 중 35명이 고른 Grapple Weapon은 20미터 밖 적의 무기와 방패를 5초간 빼앗고, 1인 조합전 47명 중 33명이 고른 Ride the Wind는 Flying Serpent Kick에 감속 해제와 아군 이동 속도 증가 바람길을 더한다.",
+ "tips": {
+  "turbo fists": "287681",
+  "grapple weapon": "233759",
+  "ride the wind": "201372",
+  "diffuse magic": "122783"
+ },
+ "spells": {
+  "287681": {
+   "n": "Turbo Fists",
+   "i": "monk_ability_fistoffury",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Fists of Fury now reduces all targets movement speed by 90%, and you Parry all attacks while channelling Fists of Fury."
+  },
+  "233759": {
+   "n": "Grapple Weapon",
+   "i": "ability_warrior_disarm",
+   "m": "Tank Specs – Row 1 PvP Talent · 20 yd range · Instant · 45 sec cooldown",
+   "d": "You fire off a rope spear, grappling the target's weapons and shield, returning them to you for 5 sec."
+  },
+  "201372": {
+   "n": "Ride the Wind",
+   "i": "ability_monk_ridethewind",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Flying Serpent Kick clears all snares from you when used and forms a path of wind in its wake, causing all allies who stand in it to have 30% increased movement speed and to be immune to movement slowing effects."
+  },
+  "122783": {
+   "n": "Diffuse Magic",
+   "i": "spell_monk_diffusemagic",
+   "m": "Talent · Instant · 1.5 min cooldown",
+   "d": "Reduces magic damage you take by 60% for 6 sec, and transfers all currently active harmful magical effects on you back to their original caster if possible."
+  }
+ },
+ "spellsKo": {
+  "287681": {
+   "n": "쾌속의 주먹",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "분노의 주먹이 모든 대상의 이동 속도를 90%만큼 감소시킵니다. 또한 분노의 주먹을 사용하는 동안에는 모든 공격을 무기로 막습니다."
+  },
+  "233759": {
+   "n": "갈고리 무기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 20 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "밧줄 달린 창을 발사하여 대상의 무기와 방패에 꽂은 후, 5초 동안 자신에게 가져옵니다."
+  },
+  "201372": {
+   "n": "바람 타기",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "비룡차기 사용 시 모든 감속 효과가 해제되고 지나간 길에 바람의 길이 형성됩니다. 길 안에 서 있는 아군은 이동 속도가 30%만큼 증가하고 이동 속도 감소 효과에 면역이 됩니다."
+  },
+  "122783": {
+   "n": "마법 해소",
+   "m": "특성 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "6초 동안 자신이 받는 마법 피해가 60%만큼 감소하고, 가능할 경우 현재 자신에게 활성화된 모든 해로운 마법 효과를 시전한 대상에게 되돌려줍니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 음영파 41·천신의 대변자 6으로 갈려 한쪽 전용 기술과 Absolute Serenity 같은 한쪽 전용 PvP 특성은 쓰지 않음",
+   "투기장 줄은 1인 조합전 47명과 2v2 32명의 채택 분포(Turbo Fists·Grapple Weapon·Ride the Wind 순)가 같아 이를 기준으로 씀",
+   "Transcendence의 자리 바꾸기 기술은 쌍점이 든 이름이라 이름 없이 설명함. Paralysis와 Leg Sweep의 점감 관계는 확인하지 않아 연계로 쓰지 않음"
+  ]
+ }
+}

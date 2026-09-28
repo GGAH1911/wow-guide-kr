@@ -1,0 +1,236 @@
+{
+ "id": "paladin/retribution",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[우선 처치] Gravebound Advance는 마법 피해를 흡수하는 보호막이니 신성 피해인 Execution Sentence와 Divine Storm으로 Restless Amani 보호막을 깨라",
+    "[생존기] 사이 단계 Hungering Pyre를 나눠 맞을 때 Divine Protection으로 피해를 줄여라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Rebuke로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Avenging Wrath와 Execution Sentence를 몰아 바로 처치하라",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Avenging Wrath와 Execution Sentence를 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞을 때 Divine Protection으로 피해를 줄여라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Divine Storm과 Wake of Ashes로 광역으로 잡아 중앙에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Hammer of Justice로 묶을 수 있다",
+    "@m [생존기] Gloom Expulsion과 Conflagrating Expulsion에 Divine Protection을 맞춰라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Rebuke로 끊어라",
+    "[우선 처치] 겹쳐 선 두 보스에 Divine Storm을 넣어 First Mate Nama에도 피해가 닿게 하라",
+    "[위치] Blink Nova 대상이 되면 Divine Steed로 공대에서 빨리 멀어져라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 Avenging Wrath와 Execution Sentence를 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Divine Protection으로 피해를 줄여라",
+    "@m [위치] To the Slaughter에 맞아 Virulence를 받으면 Divine Steed로 곧바로 흩어져라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Divine Storm과 Wake of Ashes로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Divine Protection으로 피해를 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Rebuke로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Avenging Wrath와 Execution Sentence를 몰아라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Rebuke로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Divine Steed로 도끼에서 40미터 밖으로 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Blightscale Viper의 Acidic Burst는 독이니 Cleanse Toxins로 지워라",
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Avenging Wrath와 Execution Sentence를 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Rebuke로 끊어라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Divine Storm으로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 공대 피해에 Divine Protection을 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Divine Storm 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Rebuke로 끊어라",
+    "[우선 처치] Voidmaw 무리는 Divine Storm과 Wake of Ashes로 광역으로 잡아라",
+    "@m [우선 처치] 사이 단계 Abyssal Voidshaper가 Gathering Darkness를 쓰기 전에 Avenging Wrath를 켜고 즉시 대상을 바꿔 잡아라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[우선 처치] 벽 앞에 모인 Blistercreep은 Divine Storm으로 함께 잡아 Blisterburst로 Void Crystal을 부숴라",
+    "[회피] Void Breath 때는 Divine Steed로 빛나는 손 반대쪽 방 끝까지 달려라",
+    "@m [생존기] 첫 Blistercreep 무리가 터질 때 Divine Protection으로 받는 피해를 줄여라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] 가까운 Fractured Image의 Shadow Fracture는 Rebuke나 Hammer of Justice로 끊어라",
+    "[참고] Entropic Unraveling 20초 동안 보스가 받는 피해가 25% 늘어나니 Avenging Wrath와 Execution Sentence를 여기에 맞춰라",
+    "[위치] Despotic Command 대상이면 Divine Steed로 곧바로 다른 인원과 떨어지고 끝나기 직전 방 가장자리로 가라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Voidorb의 Voidbolt는 Rebuke로 끊거나 Hammer of Justice로 묶어라",
+    "[생존기] Midnight Flames 암흑 피해가 25초 이어지니 Radiant Barrier 안에서 Divine Protection으로 받는 피해를 줄여라",
+    "[분담] Gloom 흡수 인원의 Gloomtouched 피해가 무거우면 Blessing of Sacrifice로 받는 피해를 30% 나눠 받아라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[차단] War Chaplain Senn의 Sacred Shield를 깬 뒤 Blinding Light를 Rebuke로 끊어라",
+    "[우선 처치] 풀 직후 Commander Venel Lightblood가 받는 피해가 20% 늘어나니 Wake of Ashes로 광역을 모아라",
+    "[분담] Execution Sentence를 대상 옆에서 나눠 맞을 때 Divine Protection으로 받는 피해를 줄여라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[우선 처치] Void Droplet은 파수꾼 밑에서 Divine Storm으로 파수꾼과 함께 때려 처치하라",
+    "[회피] Vorelus의 Ravenous Abyss가 오면 Divine Steed로 15미터 밖으로 빠져나가라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage는 Rebuke로 끊거나 Hammer of Justice로 묶어라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Rebuke로 가장 먼저 끊어라",
+    "[우선 처치] 아래층 조라면 Avenging Wrath를 아껴 두었다가 쫄의 Alnshroud 보호막을 빠르게 깨라",
+    "[회피] 2단계 Corrupted Devastation 궤적은 Divine Steed로 빠져나가며 쫄을 잡아라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 같은 색 깃털이면 불씨의 Light Eruption·Void Eruption을 Rebuke로 끊어라",
+    "[생존기] 2단계 알의 Rebirth 동안 Avenging Wrath와 Execution Sentence를 몰아 Immortal Flame을 깎아라",
+    "@m [분담] 구슬 처리 담당이면 Divine Shield로 모든 피해에 면역이 된 채 움직여 Radiant Echoes 구슬을 없애라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Matrix의 Safeguard 시전을 Rebuke와 Hammer of Justice로 끊어 중첩을 모두 없애라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 순서대로 Rebuke로 끊어라",
+    "[우선 처치] Midnight Crystal은 시전이 끝나기 전에 Divine Storm으로 함께 때려 처치하라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Rebuke로 반드시 끊어라",
+    "@hm [해제] 차단을 놓친 Poison Burst 독 도트는 Cleanse Toxins로 지워라",
+    "[우선 처치] 정한 자리에 모인 Shroomling과 Bursting Shroom은 Divine Storm과 Wake of Ashes로 광역으로 잡아라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 343527",
+   "u": "https://nether.wowhead.com/tooltip/spell/343527?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 53385",
+   "u": "https://nether.wowhead.com/tooltip/spell/53385?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 498",
+   "u": "https://nether.wowhead.com/tooltip/spell/498?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 96231",
+   "u": "https://nether.wowhead.com/tooltip/spell/96231?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 853",
+   "u": "https://nether.wowhead.com/tooltip/spell/853?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 31884",
+   "u": "https://nether.wowhead.com/tooltip/spell/31884?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 190784",
+   "u": "https://nether.wowhead.com/tooltip/spell/190784?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 213644",
+   "u": "https://nether.wowhead.com/tooltip/spell/213644?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1044",
+   "u": "https://nether.wowhead.com/tooltip/spell/1044?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 96231",
+   "u": "https://nether.wowhead.com/tooltip/spell/96231?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 53385",
+   "u": "https://nether.wowhead.com/tooltip/spell/53385?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 255937",
+   "u": "https://nether.wowhead.com/tooltip/spell/255937?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 31884",
+   "u": "https://nether.wowhead.com/tooltip/spell/31884?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 190784",
+   "u": "https://nether.wowhead.com/tooltip/spell/190784?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 498",
+   "u": "https://nether.wowhead.com/tooltip/spell/498?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 853",
+   "u": "https://nether.wowhead.com/tooltip/spell/853?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 343527",
+   "u": "https://nether.wowhead.com/tooltip/spell/343527?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 6940",
+   "u": "https://nether.wowhead.com/tooltip/spell/6940?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 642",
+   "u": "https://nether.wowhead.com/tooltip/spell/642?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 213644",
+   "u": "https://nether.wowhead.com/tooltip/spell/213644?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "Gravebound Advance 툴팁의 'absorbing magic damage'를 마법 피해만 흡수하는 뜻으로 읽었다, 신성 피해는 어느 해석이든 흡수되므로 줄 내용은 유지된다"
+  ],
+  "notes": [
+   "Cleanse Toxins는 kit.dispel(독·질병) 기준으로 Acidic Burst에만 썼다, @hm Poisonous Bite도 독이지만 줄 수 제한으로 넣지 않았다",
+   "기사단·태양의 사자 영웅 특성 전용 기술은 넣지 않았다",
+   "1시즌: Lightblinded Vanguard 줄에서는 보스 기술과 이름이 같은 Avenging Wrath·Divine Shield·Judgment·Divine Toll·Execution Sentence·Blinding Light·Divine Storm을 징벌 기술로 쓰지 않았다",
+   "1시즌: Cleanse Toxins는 kit.dispel(독) 기준으로 digest 해제 목록의 독인 Poison Burst에만 썼다. Divine Shield 구슬 줄은 digest 신화 공대 공통 '면역기를 쓴 채 움직일 수 있는 직업을 구슬 처리 담당으로'에 근거했다. 기사단·태양의 사자 영웅 특성 전용 기술은 넣지 않았다"
+  ]
+ }
+}

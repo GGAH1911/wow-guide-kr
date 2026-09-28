@@ -1,0 +1,135 @@
+{
+ "id": "druid/feral",
+ "arena": [
+  "[생존기] Survival Instincts는 6초간 받는 모든 피해를 50% 줄이니 상대 폭딜 쿨기가 켜지는 순간에 맞춰 써라",
+  "[생존기] Barkskin은 8초간 받는 모든 피해를 20% 줄이고 기절이나 공포 중에도 쓸 수 있으니 기절에 묶인 채 폭딜을 받으면 바로 눌러라",
+  "[제어] Maim은 연계 점수 1개당 1초씩 최대 5초 기절시키니 연계 점수를 5개 채워 상대 치유 전담을 묶고 그 사이 Berserk를 켜 폭딜 대상을 몰아쳐라",
+  "[제어] Cyclone은 대상을 최대 5초간 방향 상실시키지만 그동안 무적으로 만드니 폭딜 대상이 아닌 상대 치유 전담에게 걸어라",
+  "[차단] Skull Bash는 13미터 밖에서 달려들어 시전을 끊고 그 계열 주문을 5초간 막고 Savage Momentum을 고르면 차단에 성공할 때 Tiger's Fury와 Survival Instincts 재사용 대기시간이 10초 줄어드니 상대 치유 전담의 치유 시전에 맞춰라",
+  "[우선 처치] Wicked Claws를 고르면 Rip도 Infected Wounds를 걸고 2번까지 쌓여 대상이 받는 치유를 한 번에 8%씩 줄이니 폭딜 대상에게 Rake와 Rip을 끊기지 않게 유지하라",
+  "[위치] Typhoon은 전방 15미터 적을 밀쳐내고 6초간 50% 감속시키니 나를 쫓는 근접 딜러를 떼어낼 때 써라",
+  "[해제] Remove Corruption은 아군의 저주와 독을 모두 지우니 아군 치유 전담에게 걸린 저주나 독부터 풀어라"
+ ],
+ "bg": [
+  "[참고] 거점 수비는 은신 직업이 좋으니 Prowl로 지키는 거점 깃발 곁에 숨어 있다가 Mighty Bash로 점령하러 온 적을 4초간 기절시켜라",
+  "[참고] 지도 공략상 깃발 운반자가 은신하면 깃발이 떨어지니 깃발을 든 동안에는 Prowl을 쓰지 마라",
+  "[분담] Tireless Pursuit는 전장 대공세 41명 중 22명이 골랐고 Cat Form이나 Travel Form을 벗은 뒤 3초간 이동 속도를 25%까지 유지하니 Tiger Dash나 Stampeding Roar로 공격받는 거점이나 아군 운반자에게 먼저 지원 가라",
+  "[위치] Rake의 Infected Wounds는 12초간 20% 감속시키고 Wicked Claws를 고르면 받는 치유도 줄이니 상대 깃발 운반자나 구슬 운반자에게 먼저 걸어라",
+  "[제어] Typhoon은 적을 밀쳐내지만 공포나 방향 상실에 걸린 대상은 밀쳐낼 수 없으니 Cyclone이나 아군 공포가 걸리지 않은 적을 거점 깃발이나 운반로에서 떼어내라",
+  "[생존기] 전장에서는 받는 치유량이 20% 줄어드니 치유를 기다리기보다 Survival Instincts와 Barkskin을 폭딜 직전에 먼저 써라"
+ ],
+ "pvpTalents": "1인 조합전 상위 50명 중 45명과 전장 대공세 41명 중 39명이 고른 Wicked Claws는 Infected Wounds를 2번까지 쌓아 한 번에 받는 치유를 8%씩 줄이고 Rip으로도 걸게 하며, 1인 조합전 50명 중 25명과 전장 대공세 41명 중 22명이 고른 Tireless Pursuit는 Cat Form이나 Travel Form을 벗은 뒤 3초간 이동 속도를 유지하고, 1인 조합전 50명 중 25명이 고른 High Winds는 Cyclone과 Typhoon과 Entangling Roots 사거리를 5미터 늘린다.",
+ "tips": {
+  "wicked claws": "203242",
+  "tireless pursuit": "377801",
+  "high winds": "200931",
+  "savage momentum": "205673",
+  "cyclone": "33786",
+  "mighty bash": "5211",
+  "infected wounds": "48484",
+  "travel form": "783"
+ },
+ "spells": {
+  "203242": {
+   "n": "Wicked Claws",
+   "i": "artifactability_feraldruid_openwounds",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Infected Wounds can now stack up to 2 times, and reduces 8% of all healing received by the target per stack.\n\nInfected Wounds can now also be applied from Rip."
+  },
+  "377801": {
+   "n": "Tireless Pursuit",
+   "i": "spell_druid_tirelesspursuit",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "For 3 sec after leaving Cat Form or Travel Form, you retain up to 25% movement speed."
+  },
+  "200931": {
+   "n": "High Winds",
+   "i": "ability_druid_cyclone",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of Cyclone, Typhoon, and Entangling Roots by 5 yds."
+  },
+  "205673": {
+   "n": "Savage Momentum",
+   "i": "ability_mount_jungletiger",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Interrupting a spell with Skull Bash reduces the remaining cooldown of Tiger's Fury, Survival Instincts, and [Tiger Dash / Dash] by 10 sec."
+  },
+  "33786": {
+   "n": "Cyclone",
+   "i": "spell_nature_earthbind",
+   "m": "Talent · 1.2% of base mana · 20 yd range · 1.7 sec cast",
+   "d": "Tosses the enemy target into the air, disorienting them but making them invulnerable for up to 5 sec. Only one target can be affected by your Cyclone at a time."
+  },
+  "5211": {
+   "n": "Mighty Bash",
+   "i": "ability_druid_bash",
+   "m": "Talent · Melee Range · Instant · 1 min cooldown",
+   "d": "Invokes the spirit of Ursoc to stun the target for 4 sec. Usable in all shapeshift forms."
+  },
+  "48484": {
+   "n": "Infected Wounds",
+   "i": "ability_druid_infectedwound",
+   "m": "Talent",
+   "d": "Rake damage increased by 30%, and Rake causes an Infected Wound in the target, reducing the target's movement speed by 20% for 12 sec."
+  },
+  "783": {
+   "n": "Travel Form",
+   "i": "ability_druid_travelform",
+   "m": "Instant",
+   "d": "Shapeshift into a travel form appropriate to your current location, increasing movement speed on land, in water, or in the air, and granting protection from Polymorph effects.\n\nThe act of shapeshifting frees you from movement impairing effects."
+  }
+ },
+ "spellsKo": {
+  "203242": {
+   "n": "무시무시한 발톱",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "감염된 상처가 최대 2번까지 중첩되고 대상이 받는 모든 치유량이 중첩당 8%만큼 감소합니다.\n\n이제 도려내기로도 감염된 상처를 적용시킬 수 있습니다."
+  },
+  "377801": {
+   "n": "불휴의 추적",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "표범 변신이나 날쌘 동물 변신을 해제해도 3초 동안 이동 속도가 최대 25%만큼 유지됩니다."
+  },
+  "200931": {
+   "n": "강풍",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "회오리바람, 태풍, 휘감는 뿌리의 사정거리가 5미터만큼 증가합니다."
+  },
+  "205673": {
+   "n": "야생의 가속",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "두개골 강타로 주문 시전을 방해하면 호랑이의 분노, 생존 본능, [범의 질주 / 질주]의 남은 재사용 대기시간이 10초만큼 감소합니다."
+  },
+  "33786": {
+   "n": "회오리바람",
+   "m": "특성 · 1.2% (기본 마나 중) · 20 야드 사정거리 · 1.7 초 주문 시전 시간",
+   "d": "적을 공중으로 날립니다. 대상은 5초 동안 방향 감각을 상실하지만, 무적 상태가 됩니다. 한 대상만 날려둘 수 있습니다."
+  },
+  "5211": {
+   "n": "거센 강타",
+   "m": "특성 · 근접 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "우르속의 혼을 일깨워 4초 동안 대상을 기절시킵니다. 모든 변신 상태에서 사용할 수 있습니다."
+  },
+  "48484": {
+   "n": "감염된 상처",
+   "m": "특성",
+   "d": "갈퀴 발톱의 공격력이 30%만큼 증가합니다. 또한 갈퀴 발톱 공격 시 대상에게 감염된 상처를 입혀, 12초 동안 대상의 이동 속도를 20%만큼 감소시킵니다."
+  },
+  "783": {
+   "n": "날쌘 동물 변신",
+   "m": "즉시",
+   "d": "현재 위치에 따라 빠른 이동에 알맞은 모습으로 변신합니다. 땅 위나 물속, 또는 하늘에서 이동 속도가 증가하고, 변이 효과에 면역이 됩니다.\n\n변신을 하면 이동 방해 효과에서 벗어납니다."
+  }
+ },
+ "names": {},
+ "note": "전문화별 PvP 전용 공략 출처가 없어 기술·PvP 특성 툴팁, 상위권 실제 채택률, 모드·지도 요구를 맞춘 일반 원칙입니다.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 야생추적자 45·발톱의 드루이드 5, 3v3 7·8로 갈려 한쪽 전용 기술은 쓰지 않음",
+   "Cyclone·Mighty Bash·Infected Wounds는 쐐기 파일에 없어 툴팁을 새로 받음. Maim과 Mighty Bash는 둘 다 기절이라 연계로 쓰지 않음",
+   "깃발 운반 중 은신 시 깃발이 떨어진다는 사실은 전쟁노래 협곡·쌍둥이 봉우리 지도 공략 기준"
+  ]
+ }
+}

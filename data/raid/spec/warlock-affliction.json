@@ -1,0 +1,254 @@
+{
+ "id": "warlock/affliction",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] Gravebound Advance 보호막이 남은 Restless Amani 무리는 Shadowfury로 3초 기절시켜 Soulcoil Well로 가는 시간을 늦춰라",
+    "@m [참고] Invoke가 끝나는 순간 시전 중인 주문이 끊기니 그 순간에는 Shadow Bolt와 Unstable Affliction 시전을 멈추고 즉시 시전인 Agony를 걸어라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Felhunter의 Spell Lock으로 끊어라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Summon Darkglare를 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞기 전에 Dark Pact로 보호막을 씌워라",
+    "@m [위치] Shifting Protovenom이 걸리면 Burning Rush로 빨리 짝에게 붙거나 다른 사람에게서 떨어져라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Seed of Corruption으로 광역으로 잡아 Malignant Cavity에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Fear로 묶을 수 있다, 피해를 받으면 풀릴 수 있다",
+    "@m [분담] Burning Venom 둘이 Shrouded Venom 곁으로 끌려오면 하나를 Fear로 묶어 동시 폭발을 막아라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Felhunter의 Spell Lock으로 끊어라",
+    "[위치] Blink Nova 대상이 되면 Demonic Circle로 순간이동하거나 Burning Rush로 공대에서 빨리 멀어져라",
+    "[생존기] Fishy Feedback 공대 피해와 12초 도트에 Dark Pact를 맞춰라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 30% 늘어나니 Summon Darkglare와 Dark Harvest를 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Dark Pact로 피해를 흡수하라",
+    "[회피] Burning Rush는 이동 방해 효과로 평소 속도 아래로 떨어지지 않으니 Tempest 감속이 쌓여도 회오리를 피할 수 있다"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Summon Darkglare와 Seed of Corruption으로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Dark Pact로 피해를 흡수하라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Felhunter의 Spell Lock으로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Summon Darkglare를 여기에 맞춰라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Felhunter의 Spell Lock으로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 40미터 밖에 깔아 둔 Demonic Circle로 순간이동해 도끼에서 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Summon Darkglare와 Dark Harvest를 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Felhunter의 Spell Lock으로 끊어라",
+    "[생존기] Rage of the Shackled 20초 공대 피해와 Fury Unleashed에 Unending Resolve를 맞춰 받는 피해를 25% 줄여라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Seed of Corruption으로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides 공대 피해에 Dark Pact와 Unending Resolve를 나눠 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Seed of Corruption 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Felhunter의 Spell Lock으로 끊어라",
+    "[우선 처치] Voidmaw는 Seed of Corruption으로 함께 잡아라",
+    "[생존기] 전투 시작과 사이 단계 뒤 Dark Upheaval 공대 피해에 Dark Pact를 맞춰라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] Burning Rush는 이동 방해 효과로 평소 속도 아래로 떨어지지 않으니 Creep Spit 감속이 쌓여도 Void Breath 반대쪽 방 끝까지 달려라",
+    "[우선 처치] 벽 앞에 모은 Blistercreep은 Seed of Corruption으로 함께 잡아 Blisterburst로 Void Crystal을 부숴라",
+    "@m [생존기] 첫 Blistercreep 무리가 터지기 전에 Dark Pact로 보호막을 씌워라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Fractured Image의 Shadow Fracture를 Felhunter의 Spell Lock으로 끊어라",
+    "@m [차단] Nexus Shield가 벗겨진 Fractured Image들이 모여 있으면 Shadowfury로 함께 기절시켜 끊어라",
+    "[생존기] Entropic Unraveling 동안 보스가 받는 피해가 25% 늘어나니 Summon Darkglare를 여기에 맞추고 Unending Resolve로 공대 피해를 25% 줄여라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Void Howl 뒤 생긴 Voidorb의 Voidbolt를 Felhunter의 Spell Lock으로 끊어라",
+    "@m [제어] 끊겨도 공대로 떠오지 않는 Voidorb는 한곳에 모인 것을 Shadowfury로 함께 기절시켜라",
+    "[생존기] Midnight Flames 피해 일부는 Radiant Barrier를 뚫으니 Dark Pact로 보호막을 씌워라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] 풀 직후 Avenging Wrath로 받는 피해가 20% 늘어난 Commander Venel Lightblood에 Summon Darkglare를 맞추고 Seed of Corruption으로 함께 때려라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Felhunter의 Spell Lock으로 끊어라",
+    "[참고] 블러드 뒤 보스가 Divine Shield를 켜면 적 버프 해제 담당으로 Felhunter의 Devour Magic을 써서 지워라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[참고] Demiar의 Interrupting Tremor 시전이 끝날 때는 Shadow Bolt와 Unstable Affliction 시전을 멈추고 즉시 시전인 Agony를 걸어라",
+    "[위치] Grasp of Emptiness 대상이 되면 Burning Rush로 원에서 멀리 달려 Bursting Emptiness가 공대를 비껴가게 하라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage를 Felhunter의 Spell Lock으로 끊거나 Shadowfury로 함께 기절시켜라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Felhunter의 Spell Lock으로 먼저 끊고 남는 차단으로 Essence Bolt를 끊어라",
+    "[우선 처치] 아래층 조라면 Summon Darkglare를 아껴 두었다가 Alnshroud 보호막을 빠르게 깨라",
+    "[우선 처치] 2단계에는 Rift Shroud로 보스가 받는 피해가 99% 줄어드니 Seed of Corruption을 쫄에 써라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Felhunter의 Spell Lock으로 끊어라",
+    "[생존기] Summon Darkglare는 2단계 알에 아껴 두었다가 Rebirth 시전 동안 써라",
+    "[분담] 같은 색 Light Dive·Void Dive를 함께 맞기 전에 Dark Pact로 보호막을 씌워라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩을 Spell Lock과 Shadowfury로 없애고, 마법 효과인 Safeguard 강화는 Devour Magic으로 벗겨라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 Felhunter의 Spell Lock으로 순서대로 끊어라",
+    "[우선 처치] 흩어진 Midnight Crystal이 모여 있으면 Seed of Corruption으로 함께 때려 시전이 끝나기 전에 처치하라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Felhunter의 Spell Lock으로 끊어라",
+    "[우선 처치] 모인 자리의 Bursting Shroom은 Seed of Corruption으로 16초 안에 처치하라",
+    "[위치] Festering Vines 대상은 이동 속도가 30% 줄지만 Burning Rush를 켜면 평소 속도 아래로 떨어지지 않으니 방 가장자리로 빨리 나가라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 30283",
+   "u": "https://nether.wowhead.com/tooltip/spell/30283?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 686",
+   "u": "https://nether.wowhead.com/tooltip/spell/686?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1259790",
+   "u": "https://nether.wowhead.com/tooltip/spell/1259790?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 980",
+   "u": "https://nether.wowhead.com/tooltip/spell/980?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 19647",
+   "u": "https://nether.wowhead.com/tooltip/spell/19647?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 205180",
+   "u": "https://nether.wowhead.com/tooltip/spell/205180?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 108416",
+   "u": "https://nether.wowhead.com/tooltip/spell/108416?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 111400",
+   "u": "https://nether.wowhead.com/tooltip/spell/111400?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 27243",
+   "u": "https://nether.wowhead.com/tooltip/spell/27243?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 5782",
+   "u": "https://nether.wowhead.com/tooltip/spell/5782?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 48018",
+   "u": "https://nether.wowhead.com/tooltip/spell/48018?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1257052",
+   "u": "https://nether.wowhead.com/tooltip/spell/1257052?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 104773",
+   "u": "https://nether.wowhead.com/tooltip/spell/104773?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 19647",
+   "u": "https://nether.wowhead.com/tooltip/spell/19647?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 27243",
+   "u": "https://nether.wowhead.com/tooltip/spell/27243?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 108416",
+   "u": "https://nether.wowhead.com/tooltip/spell/108416?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 111400",
+   "u": "https://nether.wowhead.com/tooltip/spell/111400?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 30283",
+   "u": "https://nether.wowhead.com/tooltip/spell/30283?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 205180",
+   "u": "https://nether.wowhead.com/tooltip/spell/205180?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 104773",
+   "u": "https://nether.wowhead.com/tooltip/spell/104773?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 19505",
+   "u": "https://nether.wowhead.com/tooltip/spell/19505?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 686",
+   "u": "https://nether.wowhead.com/tooltip/spell/686?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1259790",
+   "u": "https://nether.wowhead.com/tooltip/spell/1259790?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 980",
+   "u": "https://nether.wowhead.com/tooltip/spell/980?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "1시즌: Divine Shield는 s1.json이 '적 버프 해제 기술로 지워라'라고만 적었고 해제 유형(Magic)은 dispel 목록에서 확인되지 않았다, Devour Magic 툴팁은 'beneficial magic effect'만 지운다"
+  ],
+  "notes": [
+   "Gravebound Advance 보호막을 어느 피해 계열이 깨는지는 확인하지 않아 쓰지 않고 Shadowfury 기절로 늦추는 것만 넣었다",
+   "Unending Resolve 툴팁의 차단·침묵 면역이 신화 Invoke 끝의 끊김·침묵을 막는지는 출처가 없어 쓰지 않았다",
+   "Vashnik 신화 흑마법사 제어 줄은 digest \"하나는 흑마법사 제어기로 묶어\"와 Fear 툴팁을 연결했다, Banish는 Burning Venom 종족을 확인 못 해 넣지 않았다",
+   "Singe Magic은 쐐기 파일 kit.dispel이 비어 있고 임프가 있어야 해 쓰지 않았다, 영혼 수확자·지옥소환사 전용(Wither·Malevolence 등)은 넣지 않았다",
+   "1시즌: Shadowfury 줄은 s1.json 신화 Fractured Image '밀치기·기절·공포도 된다', Voidorb '광역 제어기로 모아라', Safeguard '기절로 없애라'와 Shadowfury '8미터 안 3초 기절' 툴팁을 연결했다",
+   "1시즌: Unending Resolve 차단 면역이 Interrupting Tremor에 통하는지는 출처가 없어 쓰지 않았다, Singe Magic은 kit.dispel이 비어 있어 쓰지 않았다, 영혼 수확자·지옥소환사 전용 기술은 넣지 않았다"
+  ]
+ }
+}

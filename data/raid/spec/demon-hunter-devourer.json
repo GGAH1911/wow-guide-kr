@@ -1,0 +1,269 @@
+{
+ "id": "demon-hunter/devourer",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] 보호막이 남은 Restless Amani는 Void Nova로 기절시켜 Soulcoil Well에 닿기 전에 잡을 시간을 벌어라",
+    "@m [차단] 우물 처치 조라면 Drowned Echo의 Soulcoiler's Curse를 Disrupt로 끊어라",
+    "@m [참고] Invoke 시전이 끝날 때 시전 중인 주문이 끊기니 그 순간에는 Consume 시전과 Void Ray 채널링을 멈춰라"
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] Venom Coagulation 수액괴물이 나오면 Void Ray와 Reap을 몰아 바로 처치하라",
+    "[참고] Vitriolic Stasis 동안 보스가 받는 피해가 99% 줄어드니 Void Metamorphosis와 The Hunt를 사이 단계 뒤로 미뤄라",
+    "[생존기] Unstable Miasma를 나눠 맞을 때 Blur로 받는 피해를 줄여라"
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] 맹독 쫄은 Eradicate와 Hungering Slash로 광역으로 잡아 Malignant Cavity에 닿기 전에 처치하라",
+    "[제어] Burning Venom은 Hardened Venom 전까지 Void Nova나 Sigil of Misery로 묶을 수 있다, Clotting Venom은 제어 면역이다",
+    "@m [생존기] Gloom Expulsion과 Conflagrating Expulsion에 Blur를 맞추고 공대 생존기 순번이면 Darkness를 깔아라"
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Scrollsage Iku의 Icebound Flames를 Disrupt로 끊어라",
+    "[위치] Blink Nova 대상이 되면 Shift로 공대에서 멀리 순간이동하라",
+    "[생존기] Fishy Feedback 공대 피해와 도트에 Blur나 Soul Immolation을 맞춰라"
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Dig In 25초 동안 Sszorak이 받는 피해가 늘어나니 Void Metamorphosis와 The Hunt를 여기에 맞춰라",
+    "[분담] Mutilate를 나눠 맞을 때 Blur로 피해를 줄여라",
+    "[회피] Tempest에 맞아 이동 속도가 줄면 Vengeful Retreat로 감속을 지우고 벗어나라"
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Venomous Emergence 쫄은 Void Ray와 Eradicate로 가장 먼저 잡아라",
+    "[생존기] Ravenous Feast를 나눠 맞을 때 Blur로 피해를 줄여라",
+    "@m [차단] Broodling of Ithraz의 Visceral Burst와 Caustic Globule의 Barbed Bulwark를 Disrupt로 끊어라"
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] 사이 단계 Ghastly Regeneration으로 Zul'jan이 받는 피해가 100% 늘어나니 Void Metamorphosis와 The Hunt를 몰아라",
+    "[차단] Veil of Twilight 보호막이 깨지면 Eternal Nightfall을 Disrupt로 끊어라",
+    "[회피] Guillotine을 나눠 맞은 뒤 Shift로 도끼에서 40미터 밖을 향해 곧바로 벗어나라"
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Rage of the Shackled 뒤 드러난 Venomous Heart에 Void Metamorphosis와 The Hunt를 몰아라",
+    "[차단] Malice와 Anguished Cry, Vicious Echoes를 Disrupt로 끊어라",
+    "[회피] Caustic Waves를 피해 움직일 때는 이동 중에도 시전되는 Consume으로 딜을 이어가라"
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Alluring Bubble로 몰려드는 Bubblefin Shorerunner를 Void Nova로 기절시키고 Eradicate로 거품에 닿기 전에 잡아라",
+    "[생존기] Pop!과 Unending Tides의 공대 피해에 Blur를 맞춰라",
+    "@m [우선 처치] Waterfog Shield가 주위 멀록 피해를 99% 줄이니 Eradicate 전에 Bubblefin Frostscale부터 잡아라"
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] 사이 단계 Shadowguard Stalwart와 Voidbound Annihilator의 Pitch Bulwark를 Disrupt로 끊어라",
+    "[우선 처치] Voidmaw는 Eradicate와 Hungering Slash로 함께 잡아라",
+    "@m [우선 처치] 사이 단계 Abyssal Voidshaper가 나타나면 The Hunt로 곧바로 돌진해 Gathering Darkness 전에 잡아라"
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] Void Breath 때는 Shift로 빛나는 손 반대쪽 방 끝을 향해 순간이동하라",
+    "[회피] Creep Spit 감속이 쌓이면 Vengeful Retreat로 감속을 지우고 움직여라",
+    "[우선 처치] 벽 앞에 모은 Blistercreep은 Eradicate와 Hungering Slash로 함께 잡아 Blisterburst로 Void Crystal을 부숴라"
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Fractured Image의 Shadow Fracture를 Disrupt로 끊어라",
+    "@m [차단] Nexus Shield가 벗겨진 Fractured Image는 Void Nova로 기절시켜 끊어도 된다",
+    "[생존기] Entropic Unraveling 동안 보스가 받는 피해가 25% 늘어나니 Void Metamorphosis와 The Hunt를 여기에 맞추고 Blur로 공대 피해를 줄여라"
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Void Howl 뒤 생긴 Voidorb의 Voidbolt를 Disrupt로 끊어라",
+    "@m [제어] 끊겨도 공대로 떠오지 않는 Voidorb가 모여 있으면 Void Nova로 함께 기절시켜라",
+    "[회피] Nullzone 사슬은 Shift로 초기 반경 밖 10미터까지 순간이동해 끊어라"
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] 풀 직후 Avenging Wrath로 받는 피해가 20% 늘어난 Commander Venel Lightblood에 Void Metamorphosis와 The Hunt를 맞춰라",
+    "[차단] Sacred Shield가 깨지면 War Chaplain Senn의 Blinding Light를 Disrupt로 끊어라",
+    "[참고] 블러드 뒤 보스가 Divine Shield를 켜면 적 버프 해제 담당으로 Consume Magic을 써서 지워라"
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[참고] Demiar의 Interrupting Tremor 시전이 끝날 때는 Consume 시전과 Void Ray 채널링을 멈춰라",
+    "[위치] Grasp of Emptiness 대상이 되면 Shift로 원에서 멀리 순간이동해 Bursting Emptiness가 공대를 비껴가게 하라",
+    "@nh [차단] Undying Voidspawn의 Void Barrage를 Disrupt로 끊거나 모여 있으면 Void Nova로 함께 기절시켜라"
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Haunting Essence의 Fearsome Cry를 Disrupt로 먼저 끊고 남는 차단으로 Essence Bolt를 끊어라",
+    "[우선 처치] 아래층 조라면 Void Metamorphosis와 The Hunt를 아껴 두었다가 Alnshroud 보호막을 빠르게 깨라",
+    "[회피] 2단계 Corrupted Devastation 궤적을 피해 움직일 때는 이동 중에도 시전되는 Consume으로 쫄 딜을 이어가라"
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] 자기 깃털 색과 같은 불씨의 Light Eruption·Void Eruption을 Disrupt로 끊어라",
+    "[생존기] Void Metamorphosis와 The Hunt는 2단계 알에 아껴 두었다가 Rebirth 시전 동안 몰아 써라",
+    "[분담] 같은 색 Light Dive·Void Dive를 함께 맞을 때 Blur로 피해를 줄여라"
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Safeguard Prism 매트릭스의 Safeguard 중첩을 Disrupt와 Void Nova로 없애고, 마법 효과인 Safeguard 강화는 Consume Magic으로 벗겨라",
+    "@m [차단] 배정된 Termination Matrix의 Terminate를 Disrupt로 순서대로 끊어라",
+    "[생존기] Shattered Sky 25초 공대 피해에 Blur를 맞추고 공대 생존기 순번이면 Darkness를 깔아라"
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Sporecap의 Poison Burst를 Disrupt로 끊어라",
+    "[우선 처치] 모인 자리의 Bursting Shroom은 Eradicate와 Hungering Slash로 16초 안에 처치하라",
+    "[위치] Festering Vines 대상이 되면 Shift로 방 가장자리까지 순간이동하라"
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "레이드 보스별 전문화 전용 출처가 없어 기술 툴팁과 보스 기믹을 맞춰 쓴 일반 원칙입니다.",
+ "sources": [
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1234195",
+   "u": "https://nether.wowhead.com/tooltip/spell/1234195?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 183752",
+   "u": "https://nether.wowhead.com/tooltip/spell/183752?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 473662",
+   "u": "https://nether.wowhead.com/tooltip/spell/473662?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 473728",
+   "u": "https://nether.wowhead.com/tooltip/spell/473728?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1226019",
+   "u": "https://nether.wowhead.com/tooltip/spell/1226019?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1217605",
+   "u": "https://nether.wowhead.com/tooltip/spell/1217605?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1246167",
+   "u": "https://nether.wowhead.com/tooltip/spell/1246167?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 198589",
+   "u": "https://nether.wowhead.com/tooltip/spell/198589?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1226033",
+   "u": "https://nether.wowhead.com/tooltip/spell/1226033?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1239519",
+   "u": "https://nether.wowhead.com/tooltip/spell/1239519?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 207684",
+   "u": "https://nether.wowhead.com/tooltip/spell/207684?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 196718",
+   "u": "https://nether.wowhead.com/tooltip/spell/196718?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1234796",
+   "u": "https://nether.wowhead.com/tooltip/spell/1234796?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 1241937",
+   "u": "https://nether.wowhead.com/tooltip/spell/1241937?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead 툴팁 (nether, 영문·한글) 198793",
+   "u": "https://nether.wowhead.com/tooltip/spell/198793?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 183752",
+   "u": "https://nether.wowhead.com/tooltip/spell/183752?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1226033",
+   "u": "https://nether.wowhead.com/tooltip/spell/1226033?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1239519",
+   "u": "https://nether.wowhead.com/tooltip/spell/1239519?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1246167",
+   "u": "https://nether.wowhead.com/tooltip/spell/1246167?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1234796",
+   "u": "https://nether.wowhead.com/tooltip/spell/1234796?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 198793",
+   "u": "https://nether.wowhead.com/tooltip/spell/198793?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1234195",
+   "u": "https://nether.wowhead.com/tooltip/spell/1234195?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 1217605",
+   "u": "https://nether.wowhead.com/tooltip/spell/1217605?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 198589",
+   "u": "https://nether.wowhead.com/tooltip/spell/198589?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 278326",
+   "u": "https://nether.wowhead.com/tooltip/spell/278326?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 473662",
+   "u": "https://nether.wowhead.com/tooltip/spell/473662?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 473728",
+   "u": "https://nether.wowhead.com/tooltip/spell/473728?dataEnv=1&locale=1"
+  },
+  {
+   "t": "1시즌: Wowhead 툴팁 (nether, 영문·한글) 196718",
+   "u": "https://nether.wowhead.com/tooltip/spell/196718?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "Void Metamorphosis는 영혼 파편 50개가 있어야 쓸 수 있어, Dig In·Ghastly Regeneration·Venomous Heart 구간에 맞출 수 있을지는 그때 모인 영혼 수에 달렸다",
+   "1시즌: Divine Shield는 s1.json이 '적 버프 해제 기술로 지워라'라고만 적었고 해제 유형(Magic)은 dispel 목록에서 확인되지 않았다, Consume Magic 툴팁은 'beneficial Magic effect'만 지운다"
+  ],
+  "notes": [
+   "Invoke 줄은 Consume 2초 시전·Void Ray 3초 채널링 툴팁 기준, Caustic Waves 줄은 Consume 툴팁 'Castable while moving' 기준",
+   "궤멸자·공허상흔 전용 기술(Demonsurge, Collapsing Star, Voidfall 등)은 넣지 않았다, Gravebound Advance 보호막을 깨는 피해 계열은 언급하지 않았다",
+   "1시즌: Void Nova 줄은 s1.json 신화 Fractured Image '기절도 된다', Voidorb '광역 제어기로 모아라', Safeguard '기절로 없애라'와 툴팁 '대상과 주위 적 2초 기절'을 연결했다",
+   "1시즌: Interrupting Tremor 줄은 Consume 2초 시전·Void Ray 3초 채널링, Corrupted Devastation 줄은 Consume 'Castable while moving' 툴팁 기준, 궤멸자·공허상흔 전용 기술(Collapsing Star 등)은 넣지 않았다"
+  ]
+ }
+}
