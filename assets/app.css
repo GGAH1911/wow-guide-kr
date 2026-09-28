@@ -119,6 +119,7 @@ html[lang="en"] .items li{grid-template-columns:76px minmax(0,1fr)}
 html[lang="en"] .tag{padding:2px 3px;overflow:visible}
 html[lang="en"] .lnav .long{display:none}html[lang="en"] .lnav .short{display:inline}
 html[lang="en"] .lnav .nm{font-size:15px;gap:6px}
+html[lang="en"] .ctile .ce{display:none}
 html[lang="en"] .rkname b,html[lang="en"] .rkname small{white-space:normal;text-overflow:clip;line-height:1.25}
 .ab{font-weight:600;color:var(--ink);overflow-wrap:break-word}
 .ab.has-tip{cursor:help;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:color-mix(in srgb,var(--cls) 70%,transparent)}
