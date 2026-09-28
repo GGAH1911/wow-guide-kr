@@ -34,7 +34,7 @@ function migrate() {
   ls.set("wg:v", "1");
 }
 migrate();
-// ---------- 화면 언어(UI): ko(기본) | en ----------
+// ---------- 사이트 언어(UI): ko(기본) | en ----------
 // 주소 ?ui=en|ko 로 고르면 이 기기에 저장한다. 영어 화면은 게임 언어도 영어로 고정하고(한/EN 버튼 없음),
 // 화면 문구는 assets/i18n.en.json 사전으로 그린 뒤에 바꾼다. 한국어 화면은 이 어느 것도 하지 않는다.
 const UI = (() => { let q = null; try { q = new URLSearchParams(location.search).get("ui"); } catch (e) {} if (q === "en" || q === "ko") ls.set("wg:ui", q); return ls.get("wg:ui") === "en" ? "en" : "ko"; })();
@@ -269,14 +269,14 @@ document.addEventListener("click", e => {
 }, true);
 
 // ---------- 상단 고정 헤더(모든 페이지) ----------
-// 홈 · (전문화 페이지) 전문화 이름 ▾ + 쐐기 공략/레이드 공략/스킬 · (그 밖) 사이트 링크 · 내 전문화 · 게임 언어(한/EN) · 메뉴(☰)
+// 홈 · (전문화 페이지) 전문화 이름 ▾ + 쐐기 공략/레이드 공략/스킬 · (그 밖) 사이트 링크 · 내 전문화 · 클라이언트 언어(한/EN) · 메뉴(☰)
 // 게임 언어 버튼은 id="tiplang" 하나뿐이다(각 페이지의 언어 전환 처리가 이 버튼에 붙는다)
 const SPEC_PAGES = ["sheet", "guide", "compare", "raid", "pvp"];
 const HOME_SVG = `<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 9.5 10 3.5l7 6V17a1 1 0 0 1-1 1h-3.5v-5h-5v5H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>`;
 const MENU_SVG = `<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3.5 6h13M3.5 10h13M3.5 14h13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>`;
-// 화면 언어 전환: 한국어 화면에서는 "English", 영어 화면에서는 "한국어"(번역하지 않음)
+// 사이트 언어 전환: 한국어 화면에서는 "English", 영어 화면에서는 "한국어"(번역하지 않음)
 const uiSw = () => UI === "en" ? `<button type="button" class="uisw" data-ui="ko" translate="no" lang="ko" title="한국어 화면으로">한국어</button>` : `<button type="button" class="uisw" data-ui="en" lang="en" title="English site">English</button>`;
-const hlang = () => UI === "en" ? uiSw() : `<div class="vseg hlang" id="tiplang" role="group" aria-label="게임 언어 (기술·NPC 이름과 툴팁)" title="게임 언어: 기술·NPC 이름과 툴팁을 한글/영문 클라이언트 기준으로"><button type="button" data-l="ko" aria-pressed="${lang === "ko"}">한</button><button type="button" data-l="en" aria-pressed="${lang === "en"}">EN</button></div>`;
+const hlang = () => UI === "en" ? uiSw() : `<div class="hlw"><span class="hlcap" aria-hidden="true">클라이언트 언어</span><div class="vseg hlang" id="tiplang" role="group" aria-label="클라이언트 언어 (기술·NPC 이름과 툴팁)" title="클라이언트 언어: 기술·NPC 이름과 툴팁을 한글/영문 게임 클라이언트 기준으로"><button type="button" data-l="ko" aria-pressed="${lang === "ko"}">한</button><button type="button" data-l="en" aria-pressed="${lang === "en"}">EN</button></div></div>`;
 document.addEventListener("click", e => {
   const b = e.target.closest("[data-ui]"); if (!b) return;
   e.preventDefault(); ls.set("wg:ui", b.dataset.ui);
@@ -303,7 +303,7 @@ function siteHeader(s, view, hero) {
     <a class="home" href="${BASE}" title="첫 화면" aria-label="첫 화면">${HOME_SVG}</a>
     ${mid}${hlang()}
     <button class="gmb" id="gmb" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="gmenu" aria-label="메뉴" title="메뉴">${MENU_SVG}</button>
-    <div class="gmenu" id="gmenu" hidden><div class="gm-in"><div class="gsep">쐐기</div><a href="${BASE}"${cur("select")}>쐐기 홈 · 전문화 고르기</a><a href="${rankUrl("all" + SQ())}"${cur("rank")}>쐐기 순위표</a><a href="${BASE}specs/"${cur("specs")}>전문화 목록</a><div class="gsep">레이드</div><a href="${raidHubUrl(SQ().slice(1), "#guide")}"${cur("raidhub")}>레이드 홈 · 공략 고르기</a><a href="${raidHubUrl(SQ().slice(1), "#rank")}">레이드 순위</a><div class="gsep">PvP</div><a href="${pvpHubUrl("", "#guide")}"${cur("pvphub")}>PvP 홈 · 빌드 고르기</a><a href="${pvpHubUrl("", "#rank")}">PvP 순위</a>${mine}${s ? '<button type="button" id="gchg">전문화 변경</button>' : ""}${UI === "en" ? '<div class="gsep">Language</div><button type="button" data-ui="ko" translate="no" lang="ko">한국어</button>' : '<div class="gsep">화면 언어</div><button type="button" data-ui="en" lang="en">English</button>'}</div></div></div></header>`;
+    <div class="gmenu" id="gmenu" hidden><div class="gm-in"><div class="gsep">쐐기</div><a href="${BASE}"${cur("select")}>쐐기 홈 · 전문화 고르기</a><a href="${rankUrl("all" + SQ())}"${cur("rank")}>쐐기 순위표</a><a href="${BASE}specs/"${cur("specs")}>전문화 목록</a><div class="gsep">레이드</div><a href="${raidHubUrl(SQ().slice(1), "#guide")}"${cur("raidhub")}>레이드 홈 · 공략 고르기</a><a href="${raidHubUrl(SQ().slice(1), "#rank")}">레이드 순위</a><div class="gsep">PvP</div><a href="${pvpHubUrl("", "#guide")}"${cur("pvphub")}>PvP 홈 · 빌드 고르기</a><a href="${pvpHubUrl("", "#rank")}">PvP 순위</a>${mine}${s ? '<button type="button" id="gchg">전문화 변경</button>' : ""}${UI === "en" ? '<div class="gsep">Site language</div><button type="button" data-ui="ko" translate="no" lang="ko">한국어</button>' : '<div class="gsep">사이트 언어</div><button type="button" data-ui="en" lang="en">English</button>'}</div></div></div></header>`;
 }
 const topbar = (s, view, hero) => siteHeader(s, view, hero);
 function bindTopbar(s) {
