@@ -95,8 +95,8 @@ wr('rank/index.html', `${head({ title: '쐐기 순위표 · 쐐기 공략', base
 </html>
 `);
 
-// ---- PvP 지도 공략 (/pvp/map/?m=<지도>, data/pvp/maps.json) ----
-wr('pvp/map/index.html', `${head({ title: 'PvP 지도 공략', base: '../../', wg: { page: 'pvpmap' }, desc: '한밤 2시즌 전장(전장 대공세·평점제 전장)과 투기장 지도별 공략: 목표, 배치, 역할별 할 일' })}
+// ---- PvP 전장·투기장 공략 (/pvp/map/?m=<장소>, data/pvp/maps.json) ----
+wr('pvp/map/index.html', `${head({ title: 'PvP 전장·투기장 공략', base: '../../', wg: { page: 'pvpmap' }, desc: '한밤 2시즌 전장(전장 대공세·평점제 전장)과 투기장 장소별 공략: 목표, 배치, 역할별 할 일' })}
 <body>${loading}${noscript('../../')}</body>
 </html>
 `);
