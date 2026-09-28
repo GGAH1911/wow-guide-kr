@@ -91,17 +91,10 @@ Raider.IO 쐐기 점수 상위 500명을 **세계 · 세계(중국 제외) · �
 | 쐐기 순위·전문화·영웅 특성 비율 | Raider.IO 쐐기 점수 순위 | 매일 04:00 (한국 시각) |
 | 레이드 상위 공격대 조합·진행 현황 | Raider.IO 레이드 순위·처치 명단 | 매주 목요일 04:00 |
 | PvP 순위·빌드·PvP 특성 | Blizzard Battle.net 공식 API (미국·유럽·한국·대만) | 매일 04:00 |
-| 기술 설명·툴팁·한글 이름 | Wowhead 게임 데이터(nether 툴팁) | 공략 작성 때 |
+| 기술 설명·툴팁·한글 이름 | Wowhead 게임 데이터 | 공략 작성 때 |
 | 던전·보스·지도 공략 | Wowhead, warcraft.wiki.gg, raidstrats.gg, Icy Veins 등(페이지마다 출처 표시) | 공략 작성 때 |
 
 - 수치는 게임 데이터(툴팁) 원문에 있는 것만 씁니다. 출처를 확인하지 못한 내용은 쓰지 않고, 출처는 각 페이지 아래에 적습니다.
 - 전문화별 레이드 활용 줄과 PvP 전략은 전문화 전용 공략 출처가 없어 **기술 툴팁 + 보스·지도 기믹 + 상위권 실제 채택률**을 맞춘 일반 원칙입니다(화면에도 표시).
 - 공략 초안이며, 게임 패치로 내용이 달라질 수 있습니다.
 
----
-
-## 개발자용
-
-- 구조: `assets/`(엔진 app.js, app.css) · `data/`(roster, 쐐기 core/role/spec, raid, pvp) · `tools/build.mjs`(페이지 셸 생성, `node tools/build.mjs`) · `tools/ci/`(매일 수집·배포 스크립트) · `tools/research/`(수집기) · `docs/screenshots/`(이 설명서 이미지)
-- 배포: GitHub Actions `site` 워크플로. main에 올리면 배포되고, 매일 04:00 KST에 수집해 `data` 브랜치에 저장한 뒤 배포합니다. PvP 수집에는 저장소 비밀값 `BNET_CLIENT_ID`/`BNET_CLIENT_SECRET`(Battle.net API)이 필요합니다.
-- 로컬 확인: `node tools/dev/pages-sim.mjs <저장소 경로>` → http://localhost:8972/wow-guide-kr/
