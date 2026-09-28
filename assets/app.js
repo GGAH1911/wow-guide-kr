@@ -123,6 +123,8 @@ function setClassColor(c) {
   const st = document.documentElement.style;
   st.setProperty("--cls", c.color); st.setProperty("--cls-ink", c.ink[0]); st.setProperty("--cls-ink-d", c.ink[1]);
 }
+// 출처 링크: 조사 때 쓴 Wowhead 툴팁 API 주소(JSON)는 사람이 볼 Wowhead 페이지로 바꿔 건다
+const srcU = u => { const m = /^https:\/\/nether\.wowhead\.com\/tooltip\/(spell|npc|item|zone|achievement)\/(\d+)/.exec(String(u)); return m ? `https://www.wowhead.com/${lang === "ko" ? "ko/" : ""}${m[1]}=${m[2]}` : u; };
 const esc = x => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 function icon(s, size) {
   const c = s.cls, light = isLight(c.color);
@@ -574,7 +576,7 @@ async function sheetPage() {
       <div>한글 모드의 NPC·던전 이름은 Mythic Dungeon Tools와 LittleWigs 애드온의 한국어 번역 데이터, 기술 이름은 Wowhead 한국어 데이터를 따릅니다. 몹 이름을 누르면 나오는 생김새 이미지는 Wowhead 모델 썸네일입니다.</div>
       ${spec && spec.note ? `<div>${esc(spec.note)}</div>` : ""}
       ${spec ? `<div><b style="color:var(--tip)">참고</b> 태그는 가이드 원문이 아니라 ${esc(s.koFull)} 키트에 맞춘 추가 팁입니다.</div>` : ""}
-      <div>출처: ${src.map(x => `<a href="${x.u}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join(" · ")}</div>
+      <div>출처: ${src.map(x => `<a href="${esc(srcU(x.u))}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join(" · ")}</div>
       <div>전문화 목록과 아이콘은 게임 데이터(${esc(ROSTER.meta.gameBuild)}) 기준입니다. <a href="${BASE}specs/">전체 전문화</a> · <a href="${BASE}?pick">처음부터 고르기</a></div>`;
   };
   document.getElementById("foot").innerHTML = footer();
@@ -1014,7 +1016,7 @@ async function raidPage() {
   document.getElementById("foot").innerHTML = `<div>난이도: 기술마다 게임 던전 도감의 적용 난이도를 따릅니다. <span class="dbadge d-h">영웅+</span>는 영웅·신화, <span class="dbadge d-m">신화</span>는 신화에서만 나오는 내용입니다. 일반·영웅은 인원(10~30명)에 따라 체력과 기믹 대상 수만 달라지고, 신화는 20명 고정입니다.</div>
     ${rspec && rspec.note ? `<div>${esc(rspec.note)}</div>` : ""}
     <div>한글 모드의 기술 이름은 Wowhead 한국어 데이터, NPC 이름은 Wowhead 한국어 NPC 데이터를 따릅니다.</div>
-    <div>출처: ${core.sources.map(x => `<a href="${x.u}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join(" · ")}</div>
+    <div>출처: ${core.sources.map(x => `<a href="${esc(srcU(x.u))}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join(" · ")}</div>
     <div><a href="${sheetUrl(s.id)}">쐐기 공략</a> · <a href="${BASE}specs/">전체 전문화</a> · <a href="${BASE}">첫 화면</a></div>`;
 
   const escH = x => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -1278,7 +1280,7 @@ const pvpState = () => { const q = new URLSearchParams(location.search); let br 
 const pvpSeg = (st) => `<span class="seg pvpbr" role="group" aria-label="모드">${PVP_BR.map(([k, t]) => `<button type="button" data-pbr="${k}" aria-pressed="${st.br === k}">${t}</button>`).join("")}</span>`;
 const pvpSmpSeg = (st) => `<span class="seg smp" role="group" aria-label="표본">${PVP_SMP.map(([k, t]) => `<button type="button" data-psmp="${k}" aria-pressed="${st.smp === k}">${k === "kr" ? `<img class="flag" src="${BASE}assets/flags/kr.svg" alt="" width="18" height="12">` : GLOBE}${t}</button>`).join("")}</span>`;
 const brName = k => (PVP_BR.find(x => x[0] === k) || [k, k])[1];
-const armoryUrl = (reg, realm, name) => `https://worldofwarcraft.blizzard.com/ko-kr/character/${reg}/${realm}/${encodeURIComponent(name.toLowerCase())}`;
+const armoryUrl = (reg, realm, name) => `https://worldofwarcraft.blizzard.com/${UI === "en" ? "en-us" : "ko-kr"}/character/${encodeURIComponent(reg)}/${encodeURIComponent(realm)}/${encodeURIComponent(String(name).toLowerCase())}`;
 const PVP_REG = { us: "미국", eu: "유럽", kr: "한국", tw: "대만" };
 const pflag = k => PVP_REG[k] ? `<img class="flag" src="${BASE}assets/flags/${k}.svg" alt="${PVP_REG[k]}" title="${PVP_REG[k]}" width="18" height="12">` : "";
 const pvpNote = (M, st) => { const b = M.brackets[st.br] && M.brackets[st.br][st.smp]; if (!b) return ""; return PVP_TEAM(st.br) ? `${brName(st.br)} 순위 상위 ${b.top}명의 <b>지금 켜 둔 전문화</b> 기준(순위표에 전문화가 없어 캐릭터 정보로 읽음, 전문화를 바꾼 캐릭터는 다르게 잡힐 수 있음${b.noinfo ? `, 정보 없음 ${b.noinfo}명 제외` : ""}).` : `전문화별 ${brName(st.br)} 순위를 합쳐 점수 순 상위 ${b.top}명(컷 ${b.cutoff}점, 전체 ${b.ranked.toLocaleString()}명 중).`; };
@@ -1320,7 +1322,7 @@ async function pvpMapPage() {
       <section class="boss"><h3><span>요약</span><small>Brief</small></h3><ul class="items">${brief}</ul></section>
       ${(M.detail || {}).overview ? `<section class="boss"><h3><span>흐름</span><small>Overview</small></h3><p>${esc(ko(M.detail.overview))}</p>${secs}</section>` : ""}
       ${roleHtml ? `<section class="boss"><h3><span>역할별 할 일</span><small>Roles</small></h3>${roleHtml}</section>` : ""}
-      <p class="note">출처: ${(M.sources || []).map(s => `<a href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}</a>`).join(" · ")}. 장소·기술 이름은 게임 데이터(한글 클라이언트) 기준입니다. 전문화별 할 일은 각 전문화 PvP 페이지의 "PvP 전략"에 있습니다.</p></div>`;
+      <p class="note">출처: ${(M.sources || []).map(s => `<a href="${esc(srcU(s.u))}" target="_blank" rel="noopener">${esc(s.t)}</a>`).join(" · ")}. 장소·기술 이름은 게임 데이터(한글 클라이언트) 기준입니다. 전문화별 할 일은 각 전문화 PvP 페이지의 "PvP 전략"에 있습니다.</p></div>`;
     document.title = `${nm(M)} · PvP 전장·투기장 공략`;
   };
   const sync = () => history.replaceState(null, "", location.pathname + "?m=" + id);
@@ -1362,7 +1364,7 @@ async function pvpHubPage() {
     const team = PVP_TEAM(st.br);
     const table = `<div class="tbl"><table class="rtab"><thead><tr><th class="num">#</th><th>전문화</th><th>상위 ${b ? b.top : 0}명 중</th>${team ? "" : '<th class="num">순위 인원</th><th class="num">최고</th><th class="num">중앙값</th>'}</tr></thead><tbody>${L.map(({ s, v }, i) => `<tr${saved && saved.id === s.id ? ' class="me"' : ""}><td class="num">${i + 1}</td><td><a class="spl" href="${pvpUrl(s.id, `?br=${st.br}&smp=${st.smp}`)}">${icon(s, 18)} ${esc(specName(s))}</a></td><td><span class="sbar"><i style="width:${Math.min(100, share(s.id) * 4)}%"></i></span> <b>${v.n}</b>명 <span class="muted">${pctTxt(Math.round(share(s.id) * 10) / 10)}</span></td>${team ? "" : `<td class="num">${(v.total || 0).toLocaleString()}</td><td class="num">${v.best || "—"}</td><td class="num">${v.med || "—"}</td>`}</tr>`).join("")}</tbody></table></div>`;
     const rows = (R.rows || []).slice(0, 100);
-    const ladder = rows.length ? `<div class="tbl"><table class="rtab"><thead><tr><th class="num">순위</th><th class="num">점수</th><th>캐릭터</th><th>전문화</th><th>영웅 특성</th><th class="num">승/판</th></tr></thead><tbody>${rows.map(r => { const s = BYID[r[5]]; const h = s && r[6] ? heroOf(s, r[6]) : null; return `<tr><td class="num">${r[0]}</td><td class="num"><b>${r[1]}</b></td><td><a href="${armoryUrl(r[4], r[3], r[2])}" target="_blank" rel="noopener" translate="no">${esc(r[2])}</a> <span class="rs" translate="no">${pflag(r[4])} ${esc(r[3])}</span></td><td>${s ? `<a class="spl" href="${pvpUrl(s.id, `?br=${st.br}&smp=${st.smp}`)}">${icon(s, 16)} ${esc(specName(s))}</a>` : '<span class="muted">—</span>'}</td><td>${h ? esc(heroName(h)) : '<span class="muted">—</span>'}</td><td class="num">${r[7]}/${r[8]}</td></tr>`; }).join("")}</tbody></table></div>` : `<p class="empty">${esc(PVP_SMP.find(x => x[0] === st.smp)[1])} ${brName(st.br)} 순위 기록이 없습니다.</p>`;
+    const ladder = rows.length ? `<div class="tbl"><table class="rtab"><thead><tr><th class="num">순위</th><th class="num">점수</th><th>캐릭터</th><th>전문화</th><th>영웅 특성</th><th class="num">승/판</th></tr></thead><tbody>${rows.map(r => { const s = BYID[r[5]]; const h = s && r[6] ? heroOf(s, r[6]) : null; return `<tr><td class="num">${Number(r[0])}</td><td class="num"><b>${Number(r[1])}</b></td><td><a href="${armoryUrl(r[4], r[3], r[2])}" target="_blank" rel="noopener" translate="no">${esc(r[2])}</a> <span class="rs" translate="no">${pflag(r[4])} ${esc(r[3])}</span></td><td>${s ? `<a class="spl" href="${pvpUrl(s.id, `?br=${st.br}&smp=${st.smp}`)}">${icon(s, 16)} ${esc(specName(s))}</a>` : '<span class="muted">—</span>'}</td><td>${h ? esc(heroName(h)) : '<span class="muted">—</span>'}</td><td class="num">${Number(r[7])}/${Number(r[8])}</td></tr>`; }).join("")}</tbody></table></div>` : `<p class="empty">${esc(PVP_SMP.find(x => x[0] === st.smp)[1])} ${brName(st.br)} 순위 기록이 없습니다.</p>`;
     const tiers = (M.tiers || []).filter((t, i, a) => a.findIndex(x => x.en === t.en) === i).sort((x, y) => (y.min || 0) - (x.min || 0));
     // 전문화 고르기: 역할마다 지금 모드·표본의 상위권 비율 순위
     // 그 역할이 상위권에 한 명도 없으면(예: 1인 조합전 탱커) 전문화별 순위표에 오른 인원 비율로 매긴다
@@ -1424,7 +1426,7 @@ async function pvpSpecPage() {
       <p class="note">게임에서 특성 창(N) → 빌드 목록 → 가져오기 → 붙여넣기. ${team ? `${brName(st.br)} 상위권 중 이 전문화 ${d.n}명` : `이 전문화 ${brName(st.br)} 상위 ${d.n}명`}의 특성 코드를 영웅 특성별로 모아, 다른 사람들 코드와 특성이 가장 많이 겹치는 실제 코드를 골랐습니다(평균 일치: 그 코드와 나머지 사람들 사이에서 같은 특성의 비율). 사람 수가 많은 영웅 특성부터 보여 줍니다. PvP 특성은 코드에 들어 있지 않으니 아래 표를 보고 고르세요.</p></section>` : "";
     const pv = d && d.pvp ? Object.entries(d.pvp) : [];
     const pvpSec = pv.length ? `<section class="boss"><h3><span>PvP 특성</span><small>채택률</small></h3><div class="tbl"><table class="rtab"><thead><tr><th>특성</th><th>채택</th></tr></thead><tbody>${pv.slice(0, 10).map(([id, x]) => `<tr><td>${x.spell ? `<a href="https://www.wowhead.com/${lang === "ko" ? "ko/" : ""}spell=${x.spell}" target="_blank" rel="noopener">${esc(lang === "ko" && x.ko ? x.ko : x.en)}</a>` : esc(lang === "ko" && x.ko ? x.ko : x.en)}</td><td><span class="sbar"><i style="width:${x.n / d.n * 100}%"></i></span> ${Math.round(x.n / d.n * 100)}% <span class="muted">(${x.n}/${d.n})</span></td></tr>`).join("")}</tbody></table></div><p class="note">PvP 특성 칸 3개 중 고른 비율. 이름은 게임 데이터(블리자드 API 한국어·영어)입니다.</p></section>` : "";
-    const topSec = d && d.top && d.top.length ? `<section class="boss"><h3><span>상위 캐릭터</span><small>${esc(brName(st.br))}</small></h3><div class="tbl"><table class="rtab"><thead><tr><th class="num">#</th><th class="num">점수</th><th>캐릭터</th><th>영웅 특성</th><th class="num">승/판</th></tr></thead><tbody>${d.top.map((r, i) => { const h = r[4] ? heroOf(s, r[4]) : null; return `<tr><td class="num">${i + 1}</td><td class="num"><b>${r[0]}</b></td><td><a href="${armoryUrl(r[3], r[2], r[1])}" target="_blank" rel="noopener" translate="no">${esc(r[1])}</a> <span class="rs" translate="no">${pflag(r[3])} ${esc(r[2])}</span></td><td>${h ? esc(heroName(h)) : '<span class="muted">—</span>'}</td><td class="num">${r[5]}/${r[6]}</td></tr>`; }).join("")}</tbody></table></div></section>` : "";
+    const topSec = d && d.top && d.top.length ? `<section class="boss"><h3><span>상위 캐릭터</span><small>${esc(brName(st.br))}</small></h3><div class="tbl"><table class="rtab"><thead><tr><th class="num">#</th><th class="num">점수</th><th>캐릭터</th><th>영웅 특성</th><th class="num">승/판</th></tr></thead><tbody>${d.top.map((r, i) => { const h = r[4] ? heroOf(s, r[4]) : null; return `<tr><td class="num">${i + 1}</td><td class="num"><b>${Number(r[0])}</b></td><td><a href="${armoryUrl(r[3], r[2], r[1])}" target="_blank" rel="noopener" translate="no">${esc(r[1])}</a> <span class="rs" translate="no">${pflag(r[3])} ${esc(r[2])}</span></td><td>${h ? esc(heroName(h)) : '<span class="muted">—</span>'}</td><td class="num">${Number(r[5])}/${Number(r[6])}</td></tr>`; }).join("")}</tbody></table></div></section>` : "";
     const sum = b ? `<p class="rrec"><b>${esc(s.koFull)}</b>: ${esc(brName(st.br))} ${team ? `상위 ${b.top}명 중` : `상위 ${b.top}명(컷 ${b.cutoff}점) 중`} <b>${inTop}명</b>${b.top ? ` (${pctTxt(Math.round(inTop / b.top * 1000) / 10)})` : ""} · ${ROSTER.roles[s.role].ko} ${roleRank}위${d && !team && d.total != null ? ` · 순위 인원 ${d.total.toLocaleString()}명, 최고 ${d.best || "—"}점` : ""}</p>` : "";
     const none = !d || !d.n ? `<p class="empty">${esc(PVP_SMP.find(x => x[0] === st.smp)[1])} ${brName(st.br)}에서 이 전문화의 상위권 기록이 없습니다.</p>` : "";
     document.getElementById("main").innerHTML = `${sum}${none}${heroSec}${builds}${pvpSec}${pvpStratHtml(s, St, MSP, P)}${topSec}`;
@@ -1526,7 +1528,7 @@ async function rankPage() {
     const comp = KRS() || CNS() || (XCN() && !reg) ? (KRS() && all.length < (st.by === "spec" ? STOP() : T.top || 500) ? `<p class="comp sub">한국 순위에 점수가 있는 캐릭터가 ${all.length}명뿐입니다. 아래쪽은 점수가 낮은 캐릭터라 비율은 참고만 하세요.</p>` : "") + compLine(rows.length, [...head.map(k => [label(k)[0], cnt[k], 1]), ...(tail.length ? [[`그 밖의 ${tail.length}개 전문화`, tail.reduce((x, k) => x + cnt[k], 0), 1]] : []), ...rest.map(k => [label(k)[0], cnt[k], 1])], lead) : reg && !rows.length ? `<p class="comp">이 순위 상위 ${all.length}명 안에 ${regName(reg)} 캐릭터가 없습니다.</p>` : (reg && rows.length < 30 ? `<p class="comp sub">${reg === "!cn" ? "중국을 빼면" : regName(reg) + "은"} 상위 ${all.length}명 중 ${rows.length}명뿐이라 비율은 참고만 하세요.</p>` : "") + compLine(rows.length, [...head.map(k => [label(k)[0], cnt[k], 1]), ...(tail.length ? [[`그 밖의 ${tail.length}개 전문화`, tail.reduce((x, k) => x + cnt[k], 0), 1]] : []), ...rest.map(k => [label(k)[0], cnt[k], 1])], lead);
     const shown = filter ? rows.filter(r => kOf(r) === filter) : rows;
     const regIx = new Map(rows.map((r, i) => [r, i + 1]));
-    const tr = r => `<tr><td class="rk">${r[0]}${XCN() ? `<span class="rs">중국 제외 ${sepIx.get(r)}위</span>` : reg && !KRS() ? `<span class="rs">${esc(regName(reg))} ${regIx.get(r)}위</span>` : ""}</td><td><a href="https://raider.io${esc(r[5])}" target="_blank" rel="noopener" translate="no">${esc(r[2])}</a><span class="rs" translate="no">${flag(r[4])} ${esc(r[3])}</span></td><td><span class="dot" style="--cls:${color[kOf(r)]}"></span>${esc(label(r[6])[0])}</td><td class="num">${Number(r[1]).toFixed(1)}</td></tr>`;
+    const tr = r => `<tr><td class="rk">${Number(r[0])}${XCN() ? `<span class="rs">중국 제외 ${sepIx.get(r)}위</span>` : reg && !KRS() ? `<span class="rs">${esc(regName(reg))} ${regIx.get(r)}위</span>` : ""}</td><td><a href="https://raider.io${esc(r[5])}" target="_blank" rel="noopener" translate="no">${esc(r[2])}</a><span class="rs" translate="no">${flag(r[4])} ${esc(r[3])}</span></td><td><span class="dot" style="--cls:${color[kOf(r)]}"></span>${esc(label(r[6])[0])}</td><td class="num">${Number(r[1]).toFixed(1)}</td></tr>`;
     const colName = st.by === "spec" ? "영웅 특성" : "전문화";
     return `${KRS() || CNS() ? "" : regRow}${rows.length ? bar : ""}${comp}${leg}
       <table class="rtab"><thead><tr><th>${KRS() ? "한국 순위" : CNS() ? "중국 순위" : reg || XCN() ? "세계 순위" : "순위"}</th><th>캐릭터</th><th>${colName}</th><th class="num">점수</th></tr></thead><tbody>${shown.map(tr).join("")}</tbody></table>

@@ -15,7 +15,10 @@ const SPECS = R.classes.flatMap(c => c.specs.map(s => ({ ...s, id: `${c.slug}/${
 const FONT = 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css';
 const up = depth => depth ? '../'.repeat(depth) : './';
 
-function head({ title, base, wg, desc, extra = '' }) {
+// 공유 미리보기(레딧·인벤·디스코드 등): og:image 는 절대 주소여야 한다
+const SITE = 'https://ggah1911.github.io/wow-guide-kr/';
+const OG_DESC = '한밤 2시즌 쐐기·레이드·PvP 40개 전문화 공략과 상위권 순위 · Midnight Season 2 Mythic+, raid and PvP guides for all 40 specs (Korean / English)';
+function head({ title, base, wg, desc, extra = '', ogTitle, ogDesc }) {
   return `<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -23,6 +26,15 @@ function head({ title, base, wg, desc, extra = '' }) {
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${esc(title)}</title>
 ${desc ? `<meta name="description" content="${esc(desc)}">\n` : ''}<meta name="color-scheme" content="light dark">
+<link rel="icon" href="${base}assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="와우 공략 · WoW Guide">
+<meta property="og:title" content="${esc(ogTitle || title)}">
+<meta property="og:description" content="${esc(ogDesc || desc || OG_DESC)}">
+<meta property="og:image" content="${SITE}assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="${FONT}">
 <link rel="stylesheet" href="${base}assets/app.css">
@@ -34,7 +46,7 @@ const loading = `<div id="app"><div class="wrap loading">불러오는 중…</di
 const noscript = base => `<noscript><div class="wrap"><p>이 페이지는 JavaScript가 필요합니다. <a href="${base}specs/">전문화 목록</a>에서 정적 링크로 이동할 수 있습니다.</p></div></noscript>`;
 
 // ---- S1 첫 화면 ----
-wr('index.html', `${head({ title: '쐐기 공략 · 한밤 2시즌', base: './', wg: { page: 'select' }, desc: '한밤 2시즌 쐐기 던전 8개를 역할과 전문화에 맞춰 보는 공략' })}
+wr('index.html', `${head({ title: '쐐기 공략 · 한밤 2시즌', base: './', wg: { page: 'select' }, desc: '한밤 2시즌 쐐기 던전 8개를 역할과 전문화에 맞춰 보는 공략', ogTitle: '와우 공략 · WoW Guide — 한밤 2시즌 쐐기 · 레이드 · PvP', ogDesc: OG_DESC })}
 <body>${loading}${noscript('./')}</body>
 </html>
 `);
@@ -179,6 +191,7 @@ wr('404.html', `<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>페이지를 찾지 못했습니다 · 쐐기 공략</title>
+<link rel="icon" href="/wow-guide-kr/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="${FONT}">
 <script>(function(){var m=location.pathname.match(/^\\/[^\\/]+\\//);var b=(/\\.github\\.io$|^localhost$|^127\\./.test(location.hostname)&&m)?m[0]:"/";window.WG={page:"notfound",base:b};document.write('<link rel="stylesheet" href="'+b+'assets/app.css"><script src="'+b+'assets/app.js" defer><\\/script>');})();</script>
 </head>
