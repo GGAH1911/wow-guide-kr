@@ -98,3 +98,13 @@ Raider.IO 쐐기 점수 상위 500명을 **세계 · 세계(중국 제외) · �
 - 전문화별 레이드 활용 줄과 PvP 전략은 전문화 전용 공략 출처가 없어 **기술 툴팁 + 보스·지도 기믹 + 상위권 실제 채택률**을 맞춘 일반 원칙입니다(화면에도 표시).
 - 공략 초안이며, 게임 패치로 내용이 달라질 수 있습니다.
 
+---
+
+## 라이선스
+
+이 저장소의 **코드**(`assets/` 엔진, `tools/` 빌드·수집 스크립트, HTML 페이지 셸)는 [MIT 라이선스](LICENSE)입니다. 자유롭게 복사·수정·재배포해도 되고, 출처 표기만 남기면 됩니다.
+
+`data/`(쐐기·레이드·PvP 데이터)와 `docs/screenshots/`의 게임 화면은 이 라이선스에 포함되지 않습니다. Wowhead·Raider.IO·Blizzard Battle.net API에서 받아온 것으로, 각 서비스의 이용약관을 따르며 이 저장소 밖으로 재배포하지 않습니다.
+
+이 사이트는 비공식 팬 제작 공략 사이트이며 Blizzard Entertainment와 관련이 없거나 후원받지 않았습니다. World of Warcraft, Warcraft, Blizzard Entertainment는 미국 및/또는 다른 국가에서 Blizzard Entertainment, Inc.의 상표 또는 등록상표입니다.
+
