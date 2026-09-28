@@ -1,0 +1,75 @@
+{
+ "id": "hunter/beast-mastery",
+ "arena": [
+  "[생존기] With Survival Tactics, Feign Death reduces damage taken by 90% for 2 sec. Press Feign Death when the enemy pops burst cooldowns and unloads on you.",
+  "[생존기] Aspect of the Turtle makes all spells and attacks miss you and reduces damage taken by 30% for 8 sec, but you can't attack meanwhile. Use it when no other defensive can keep you alive.",
+  "[생존기] Survival of the Fittest reduces all damage taken by you and your pet by 30% for 6 sec. Use it first, before you get stunned or when the burst starts.",
+  "[제어] Freezing Trap incapacitates the first enemy to approach for 1 min but damage can break it. While the enemy healer is trapped, your team bursts another target.",
+  "[제어] Intimidation stuns the target for 5 sec via your pet. Pop Bestial Wrath and burst while the enemy healer is locked down.",
+  "[차단] Counter Shot interrupts a cast from 40 yds and locks that school for 5 sec. Save it for the enemy healer's heals.",
+  "[회피] Scatter Shot incapacitates a target within 20 yds for 3 sec and removes all DoTs. Use it to briefly peel melee DPS off you or your healer.",
+  "[분담] Master's Call removes all roots and movement impairing effects from your pet and one ally and makes them immune for 4 sec. Use it on your melee DPS when they're held by slows."
+ ],
+ "bg": [
+  "[참고] Pet classes are good at base defense. Place Freezing Trap in front of the base flag you're guarding to incapacitate the first enemy that comes to capture.",
+  "[제어] Chimaeral Sting was picked by 27 of 41 Battleground Blitz players. It slows the target by 90% for 3 sec, then silences for 3 sec, then reduces damage and healing by 20% for 3 sec. Use it to hold the enemy flag carrier.",
+  "[분담] Master's Call removes roots and movement impairing effects from an ally and makes them immune for 4 sec. Use it on your flag carrier when they're held by slows.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Survival of the Fittest or Aspect of the Turtle right before the burst.",
+  "[위치] Aspect of the Cheetah increases movement speed by 90% for 3 sec, then 30% for 9 sec. Use it to quickly support a distant base under attack or your flag carrier.",
+  "[해제] Tranquilizing Shot removes one Enrage effect and one magic effect from an enemy target. Strip magic buffs from the enemy flag carrier or base defenders."
+ ],
+ "pvpTalents": "Survival Tactics, picked by all top 43 Solo Shuffle players and 39 of 41 Battleground Blitz players, adds a 90% damage reduction for 2 sec to Feign Death. Scatter Shot, picked by 34 of 43 Solo Shuffle players, gives a 3 sec incapacitate and removes DoTs. Chimaeral Sting, picked by 27 of 41 Battleground Blitz players, applies a slow, a silence, then a damage and healing reduction in sequence.",
+ "tips": {
+  "survival tactics": "202746",
+  "scatter shot": "213691",
+  "chimaeral sting": "356719"
+ },
+ "spells": {
+  "202746": {
+   "n": "Survival Tactics",
+   "i": "ability_rogue_feigndeath",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Feign Death reduces damage taken by 90% for 2 sec."
+  },
+  "213691": {
+   "n": "Scatter Shot",
+   "i": "ability_golemstormbolt",
+   "m": "Tank Specs – Row 1 PvP Talent · 20 yd range · Instant · 30 sec cooldown",
+   "d": "A short-range shot that deals (4.4616% of Attack Power) damage, removes all harmful damage over time effects, and incapacitates the target for 3 sec. Any damage caused will remove the effect. Turns off your attack when used. [Binding Shackles: Targets incapacitated by Scatter Shot deal 10% less damage to you for 8 sec after the effect ends]"
+  },
+  "356719": {
+   "n": "Chimaeral Sting",
+   "i": "ability_hunter_snaketrap",
+   "m": "Tank Specs – Row 1 PvP Talent · 40 yd range · Instant · 1 min cooldown",
+   "d": "Stings the target, dealing (150% of Attack Power) Nature damage and initiating a series of venoms. Each lasts 3 sec and applies the next effect after the previous one ends.\n\nScorpid Venom:\n90% reduced movement speed.\n\nSpider Venom:\nSilenced.\n\nViper Venom:\n20% reduced damage and healing."
+  }
+ },
+ "spellsKo": {
+  "202746": {
+   "n": "생존술",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "죽은 척하기 사용 시 2초 동안 받는 피해가 90%만큼 감소합니다."
+  },
+  "213691": {
+   "n": "분산 사격",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 20 야드 사정거리 · 즉시 · 30 초 재사용 대기시간",
+   "d": "(전투력의 4.4616%)의 피해를 입히고, 모든 해로운 지속 피해 효과를 제거합니다. 또한 3초 동안 적을 행동 불가 상태로 만들며, 대상에 대한 공격을 중단합니다. 사정거리가 짧습니다. 대상이 피해를 입으면 효과가 사라집니다. [억제의 족쇄: 분산 사격으로 행동 불가 상태가 된 대상의 효과가 사라지면 8초 동안 대상에게 받는 피해가 10%만큼 감소합니다]"
+  },
+  "356719": {
+   "n": "키메라 쐐기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 40 야드 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "독침으로 대상을 찔러 (전투력의 150%)의 자연 피해를 입히고 일련의 맹독을 주입합니다. 각각의 맹독은 3초 동안 지속되며, 이전 맹독 효과 하나가 종료되면 다음 효과를 부여합니다.\n\n전갈 맹독:\n이동 속도를 90%만큼 감소시킵니다.\n\n거미 맹독:\n침묵시킵니다.\n\n살무사 맹독:\n공격력과 치유량을 20%만큼 감소시킵니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 무리의 지도자 43명 전원으로 쏠렸지만 한쪽 전용 기술(Howl of the Pack Leader·Black Arrow 등)은 쓰지 않음",
+   "Scatter Shot과 Freezing Trap은 둘 다 행동 불가 효과라 점감 관계를 확인할 수 없어 연계 줄로 쓰지 않음",
+   "The Beast Within은 전문화 특성과 PvP 특성 이름이 같아 혼동을 피하려 쓰지 않음"
+  ]
+ }
+}

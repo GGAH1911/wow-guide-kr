@@ -1,0 +1,75 @@
+{
+ "id": "priest/shadow",
+ "arena": [
+  "[생존기] Dispersion can be used while stunned, feared or silenced and reduces all damage taken by 75% for 6 sec, but you can't attack or cast meanwhile. Press it when you take burst while CC'd.",
+  "[회피] With Phase Shift, Fade makes you avoid all attacks and spells for 1 sec, but not interrupts. Press Fade the moment an enemy CC cast finishes.",
+  "[우선 처치] Psyfiend reduces the target's movement speed and healing taken by 50% for 12 sec. Summon it on your kill target to make it hard for the enemy healer to save them.",
+  "[제어] Silence silences a target up to 40 yds away for 5 sec. Put it on the enemy healer and pop Voidform to burst meanwhile.",
+  "[제어] Psychic Scream makes enemies within 8 yds flee in fear for 8 sec but damage can break it. Use it when enemies your team isn't hitting get on you.",
+  "[참고] Enemies who dispel Vampiric Touch are feared for 3 sec. Apply it first to targets the enemy healer is likely to dispel.",
+  "[해제] Mass Dispel removes harmful magic from 5 allies within 15 yds and one beneficial magic effect from 5 enemies, including magic normal dispels can't remove. Use it to strip the enemy's undispellable magic protection effects.",
+  "[해제] Dispel Magic removes one beneficial magic effect from an enemy target. Strip magic protection the enemy healer applied."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 5-6 DPS and healers carry the flag first. Help the carry by dropping Angelic Feather's speed boost on your flag carrier's path.",
+  "[분담] Leap of Faith instantly pulls an ally in front of you. Pull your pinned flag carrier back toward your team.",
+  "[우선 처치] Psyfiend was picked by 37 of 44 Battleground Blitz players and reduces the target's movement speed and healing taken by 50% for 12 sec. Summon it on the enemy flag or orb carrier.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Dispersion right before the burst and escape with its increased movement speed.",
+  "[제어] Enemies feared by Psychic Scream can't be knocked back. Use it on enemies trying to capture a base, but don't overlap it with your team's knockbacks.",
+  "[해제] Mass Dispel removes harmful magic from 5 allies within 15 yds at once. Use it when several magic CC effects land on allies stacked in a base teamfight."
+ ],
+ "pvpTalents": "Phase Shift, picked by 44 of the top 50 Solo Shuffle and 36 of 44 Battleground Blitz players, makes you avoid all attacks and spells for 1 sec on Fade. Driven to Madness, picked by 43 of 50 Solo Shuffle players, reduces Voidform's cooldown as you get attacked while it's inactive. Psyfiend, picked by 37 of 44 Battleground Blitz players, reduces the target's movement speed and healing taken by 50%.",
+ "tips": {
+  "phase shift": "408557",
+  "driven to madness": "199259",
+  "psyfiend": "211522"
+ },
+ "spells": {
+  "199259": {
+   "n": "Driven to Madness",
+   "i": "ability_warlock_improvedsoulleech",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "While Voidform is not active, being attacked will reduce the cooldown of Voidform by 3 sec. (1s cooldown)"
+  },
+  "211522": {
+   "n": "Psyfiend",
+   "i": "spell_priest_psyfiend",
+   "m": "Tank Specs – Row 1 PvP Talent · 40 yd range · Instant · 45 sec cooldown",
+   "d": "Summons a Psyfiend with [Total Health * (0.04)] health for 12 sec beside you to attack the target at range with Psyflay.\n\nPsyflay\nDeals up to 1% of the target's total health in Shadow damage every 1 sec. Also slows their movement speed by 50% and reduces healing received by 50%."
+  },
+  "408557": {
+   "n": "Phase Shift",
+   "i": "spell_priest_spectralguise",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Step into the shadows when you cast Fade, avoiding all attacks and spells for 1 sec.\n\nInterrupt effects are not affected by Phase Shift."
+  }
+ },
+ "spellsKo": {
+  "199259": {
+   "n": "광기에 내몰리다",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "공허의 형상이 활성화되지 않은 상태에서 공격을 받으면 공허의 형상의 재사용 대기시간이 3초만큼 감소합니다. (1초 재사용 대기시간)"
+  },
+  "211522": {
+   "n": "영혼의 마귀",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 40 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "생명력이 [총 생명력 * (0.04)]인 영혼의 마귀를 곁에 소환해 12초 동안 원거리의 적을 영혼의 채찍으로 공격하게 합니다.\n\n영혼의 채찍\n1초마다 대상의 생명력의 최대 1%만큼 암흑 피해를 입힙니다. 또한, 대상의 이동 속도를 50%만큼 감소시키고 받는 치유 효과를 50%만큼 감소시킵니다."
+  },
+  "408557": {
+   "n": "위상 변화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "소실 시전 시 그림자에 숨어들어 1초 동안 모든 공격과 주문을 회피합니다.\n\n주문 방해 효과는 위상 변화에 영향을 받지 않습니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 공허술사 46·집정관 4, 전장 대공세 31·13으로 갈려 한쪽 전용 기술(Halo 계열 등)은 쓰지 않음",
+   "쌍점이 든 이름(Shadow Word 계열·Power Word 계열·Mind Flay 계열)은 지침에 따라 문장에 쓰지 않음",
+   "Psyfiend 치유 감소와 전장 고정 치유 20% 감소가 어떻게 겹치는지는 툴팁으로 확인되지 않아 연결하지 않음"
+  ]
+ }
+}

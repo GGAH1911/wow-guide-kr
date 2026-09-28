@@ -1,0 +1,149 @@
+{
+ "id": "priest/discipline",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Essence Rend is a Magic effect, so dispel it with Purify once the target reaches the edge of the room. A Latent Cultist pool is left where it was removed.",
+    "[생존기] Soulcoil Rite goes off with every Phase 2 Invoke, so take a turn pre-spreading Atonement with Evangelism.",
+    "@m [참고] Spells being cast are interrupted the moment Invoke ends, so do not overlap long casts like Ultimate Penitence with that moment."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood is a Magic effect, so dispel it right away with Purify.",
+    "[광역 피해] While a Venom Coagulation ooze is alive, Contaminate hits the raid every 3 sec, so spread Atonement and heal by attacking the ooze."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Dispelling Exploding Infection makes Caustic Explosion hit the whole raid, so do not clear several at once with Mass Dispel. Stagger them one at a time with Purify.",
+    "@m [생존기] Spread Atonement with Evangelism before Gloom Expulsion and Conflagrating Expulsion, which grow with each Imbibe."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[해제] An Icebound Flames that slips past interrupts is a Magic effect, so dispel it with Purify.",
+    "[생존기] Spread Atonement with Evangelism before the window when Frostfire Volley debuffs are being cleared and before Fishy Feedback raid damage.",
+    "[탱버] When First Mate Nama's Steady Strikes stacks get high, reduce the tank's damage taken by 40% with Pain Suppression."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[탱버] Put Pain Suppression on the tank taking Ravage to reduce their damage taken by 40%.",
+    "[광역 피해] The whole raid takes damage when Venomous Surge ends, so spread Atonement with Evangelism before then.",
+    "[위치] When gathering in the middle before the Howling Maelstrom gusts, drop Angelic Feather to speed up late players."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[생존기] Spread Atonement and line up Ultimate Penitence before the 6 sec of Stir the Depths raid damage and Venomous Emergence.",
+    "@m [탱버] Put Pain Suppression on the Ithraz tank stacking healing absorbs from Blood Torrent and strip the absorb with Penance."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[생존기] Split Evangelism and Ultimate Penitence across the Veil of Twilight Suffocating Darkness and Defilement of the Coiled Altar healing absorb windows.",
+    "@hm [생존기] Venom Rupture DoTs stack up right after Sever pops the orbs, so spread Atonement before then.",
+    "[위치] When spreading past 40 yards after soaking Guillotine, drop Angelic Feather ahead for movement speed."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[참고] Acidic Burst is a Poison, so Purify, which only removes Magic, cannot clear it. Leave poison dispels to another healer.",
+    "[생존기] Spread Atonement with Evangelism before the 20 sec of Rage of the Shackled raid damage and heal by attacking the exposed Venomous Heart.",
+    "[생존기] Phase 3 Fury Unleashed is heavy raid damage every second, so keep Ultimate Penitence for it."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[생존기] Spread Atonement with Evangelism before Unending Tides and Pop! raid damage.",
+    "[광역 피해] Pulsing Tides continues while a Bubblefin Berserker is alive, so keep Atonement up and attack the Bubblefin Berserker to heal and kill it at the same time."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[생존기] Spread Atonement with Evangelism before Dark Upheaval at the pull and after each intermission.",
+    "[탱버] When Gnashing Void DoTs stack on the tank picking up adds under Weakened, reduce their damage taken by 40% with Pain Suppression.",
+    "@m [광역 피해] Heal through the 10 sec Lingering Darkness DoT on players dispelled of Void Marked with Penance."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] The Blisterburst damage taken increase and the Creep Spit slow are Magic effects, so dispel them with Purify. If several players at the wall have them, clear up to 5 players within 15 yards at once with Mass Dispel.",
+    "[탱버] Put Pain Suppression on the tank with Smashed stacks when they take the second big claw impact.",
+    "@m [생존기] Spread Atonement with Evangelism before the first Blistercreep pack pops."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[생존기] The boss takes 25% more damage during Entropic Unraveling, so spread Atonement with Evangelism and heal by attacking with Ultimate Penitence.",
+    "[참고] Strip the Oppressive Darkness healing absorb from players coming out of Despotic Command with Penance.",
+    "[탱버] Put Pain Suppression on the tank taking Shattering Twilight by the wall."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath fear is a Magic effect, so dispel it with Purify. If several players are caught in the cone, clear them at once with Mass Dispel.",
+    "[생존기] Part of the Midnight Flames damage gets through Radiant Barrier, so spread Atonement with Evangelism before then.",
+    "[참고] Heal through the healing absorb on the tank from Rakfang stacks with Penance."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] The Avenger's Shield DoT is a Magic effect, so dispel it right away with Purify.",
+    "@m [해제] On Mythic, when Avenger's Shield targets every player, clear the DoTs from up to 5 players within 15 yards at once with Mass Dispel.",
+    "[분담] Focus heal players with the Tyr's Wrath healing absorb using Penance."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] Corrupting Essence on a player is a Magic effect, so dispel it with Purify.",
+    "[해제] Purifying Null Corona moves the absorb to someone else, so heal through it with Penance and only Purify in an emergency.",
+    "@nh [생존기] Put Pain Suppression on the tank that gets Gravity Collapse from breaking Aspect of the End."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[해제] Fearsome Cry fear that slips past interrupts is a Magic effect, so dispel it with Purify. If several players are affected, use Mass Dispel.",
+    "@hm [해제] Dispel Consuming Miasma with Purify once the target reaches an Alndust Essence pool.",
+    "[광역 피해] For the Rift Sickness healing absorb applied every time adds spawn, keep Atonement spread and attack the adds to strip several players at once."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[광역 피해] Heal off the Light Burn and Void Burn healing absorbs completely with Penance.",
+    "[생존기] Damage needs to go into the Phase 2 egg, so spread Atonement with Evangelism and attack the egg to heal and deal damage at the same time.",
+    "[탱버] Put Pain Suppression on the tank taking Light Edict or Void Edict."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[분담] Heal a Dusk Crystal to full with Penance to turn it into a Dawn Crystal.",
+    "@nh [해제] The stacking Safeguard buff is a Magic effect, so strip it with Dispel Magic. If the matrices are grouped, strip several at once with Mass Dispel.",
+    "[광역 피해] During Total Eclipse, strip the Eclipsed healing absorbs with Penance, prioritizing crystal carriers."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [참고] The Poison Burst DoT is a Poison, so Purify, which only removes Magic, cannot clear it. Leave poison dispels to another healer.",
+    "[생존기] Rotting Pustules makes damage ramp up as the fight goes on, so stack Evangelism and Ultimate Penitence late in the fight.",
+    "[광역 피해] Attack the gathered Shroomlings and Bursting Shrooms with Atonement spread to heal the raid and kill them at the same time."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Purify는 마법과 질병만 지워 Ula'tek 독 해제 불가",
+   "Power Word 계열은 이름에 쌍점이 있어 문장에서 제외, Void Shield 등 영웅 특성 한쪽 기술 제외",
+   "1시즌: 해제 줄은 digest 해제 목록(Magic)과 Purify·Mass Dispel·Dispel Magic 툴팁을 짝지었다. Void Marked와 Divine Shield는 해제 유형이 확인되지 않아 해제 줄로 쓰지 않았다.",
+   "1시즌: 영웅 특성 전용 기술(Entropic Rift 등)은 쓰지 않았다."
+  ]
+ }
+}

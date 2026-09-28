@@ -1,0 +1,98 @@
+{
+ "id": "druid/guardian",
+ "arena": [
+  "[생존기] Barkskin can be used while stunned, frozen, incapacitated, feared or asleep, and reduces damage taken by 20% for 8 sec. Pop it immediately when burst comes in while you're CC'd.",
+  "[생존기] Survival Instincts has 2 charges and reduces damage taken by 50% for 6 sec. Use one charge at a time when enemy burst cooldowns are focused on you.",
+  "[차단] Skull Bash charges a target within 13 yds, interrupts the cast and locks that school for 5 sec; Charging Bash adds 10 yds range. Save it for the enemy healer's heal casts.",
+  "[제어] Overrun charges the target, stuns it for 3 sec and knocks back its allies within 15 yds. Stun the enemy healer while peeling the DPS next to them.",
+  "[제어] Incapacitating Roar incapacitates enemies within 10 yds for 3 sec but damage can break it. Use it when enemies your team isn't hitting are grouped up.",
+  "[분담] With Den Mother, allies within 15 yds gain 15% max health and stuns on you are 15% shorter. Fight close to your team.",
+  "[광역 피해] With Demoralizing Roar, enemies within 10 yds deal 20% less damage for 8 sec. Use it among enemy melee DPS when they burst your teammates.",
+  "[위치] Shifting into Bear Form or Travel Form removes movement impairing effects and protects against polymorph effects. Shift out of slows and roots."
+ ],
+ "bg": [
+  "[참고] In Battleground Blitz there are 0-1 tanks, and slow tanks need help carrying the flag. Carry with Dash (60% faster for 10 sec) and shapeshift to break movement impairing effects.",
+  "[위치] Stampeding Roar increases movement speed of allies within 15 yds by 60% for 8 sec. Use it when the flag carrier and escorts run together or when rotating between bases.",
+  "[분담] With Grove Protection, allies inside the grove take 50% less damage from enemies outside it for 10 sec. Drop it on base defense or where you escort the flag carrier.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Prioritize chaining Ironfur armor and Survival Instincts damage reduction over Frenzied Regeneration healing.",
+  "[제어] Typhoon and Overrun knock enemies back, but feared or disoriented targets can't be knocked back. Push enemies without CC on them out of the base."
+ ],
+ "pvpTalents": "Den Mother, picked by 20 of the top 25 Solo Shuffle and 38 of 41 Battleground Blitz players, increases max health of allies within 15 yds by 15% and shortens stuns on you. Overrun, picked by 18 of 25 Solo Shuffle and 26 of 41 Battleground Blitz players, stuns the target for 3 sec and knocks back nearby enemies. Demoralizing Roar, picked by 19 of 41 Battleground Blitz players, reduces damage dealt by enemies within 10 yds by 20% for 8 sec.",
+ "tips": {
+  "den mother": "236180",
+  "overrun": "202246",
+  "demoralizing roar": "201664",
+  "charging bash": "228431",
+  "grove protection": "354654"
+ },
+ "spells": {
+  "201664": {
+   "n": "Demoralizing Roar",
+   "i": "ability_druid_challangingroar",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 30 sec cooldown",
+   "d": "Demoralizes all enemies within 10 yards, reducing the damage they do by 20% for 8 sec."
+  },
+  "202246": {
+   "n": "Overrun",
+   "i": "ability_druid_overrun",
+   "m": "Tank Specs – Row 1 PvP Talent · 8 - 25 yd range · Instant · 25 sec cooldown · Requires Bear Form",
+   "d": "Charge to an enemy, stunning them for 3 sec and knocking back their allies within 15 yards."
+  },
+  "228431": {
+   "n": "Charging Bash",
+   "i": "inv_bone_skull_04",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of your Skull Bash by 10 yards."
+  },
+  "236180": {
+   "n": "Den Mother",
+   "i": "ability_druid_denmother",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "You bolster nearby allies within 15 yards, increasing their maximum health by 15%.\n\nThe duration of all stun effects on you is reduced by 15%."
+  },
+  "354654": {
+   "n": "Grove Protection",
+   "i": "ability_druid_protectionofthegrove",
+   "m": "Tank Specs – Row 1 PvP Talent · 30 yd range · Instant · 1 min cooldown",
+   "d": "Summon a grove to protect allies in the area for 10 sec, reducing damage taken by 50% from enemies outside the grove."
+  }
+ },
+ "spellsKo": {
+  "201664": {
+   "n": "위협의 포효",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 30 초 재사용 대기시간",
+   "d": "10미터 내의 모든 적의 사기를 떨어뜨려, 8초 동안 적의 공격력을 20%만큼 감소시킵니다."
+  },
+  "202246": {
+   "n": "약진",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 8 - 25 야드 사정거리 · 즉시 · 25 초 재사용 대기시간 · 곰 변신 필요",
+   "d": "적에게 돌진하여 3초 동안 기절시키고, 15미터 내의 모든 적을 뒤로 밀쳐냅니다."
+  },
+  "228431": {
+   "n": "돌진 강타",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "두개골 강타의 사정거리가 10미터만큼 증가합니다."
+  },
+  "236180": {
+   "n": "무리 어미",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "15미터 내의 아군을 강화하여 대상의 최대 생명력을 15%만큼 증가시킵니다.\n\n자신에게 시전되는 모든 기절 효과의 지속시간이 15%만큼 감소합니다."
+  },
+  "354654": {
+   "n": "숲의 보호",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 30 야드 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "숲을 소환하여 10초 동안 해당 지역의 아군을 보호합니다. 숲 밖의 적으로부터 받는 피해가 50%만큼 감소합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "투기장 상위권 표본이 3v3 1명·한국 3v3 8명·2v2 5명뿐이라 투기장 줄은 1인 조합전(25명) 채택률과 일반 원칙 기준",
+   "영웅 특성이 1인 조합전 엘룬의 대행자 23·발톱의 드루이드 2로 치우쳤지만 Boundless Moonlight·Ravage 등 한쪽 전용 기술은 쓰지 않음",
+   "쌍점이 든 Incarnation 이름은 쓰지 않음"
+  ]
+ }
+}

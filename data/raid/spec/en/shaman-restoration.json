@@ -1,0 +1,150 @@
+{
+ "id": "shaman/restoration",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Once the Essence Rend target reaches the edge of the room, dispel it with Purify Spirit. A Latent Cultist pool is left where it was removed.",
+    "[생존기] Soulcoil Rite goes off with every Phase 2 Invoke, so take a turn with Healing Tide Totem.",
+    "@m [차단] If you are on the well-kill team, interrupt Drowned Echo's Soulcoiler's Curse with Wind Shear."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood is a Magic effect, so dispel it right away with Purify Spirit.",
+    "[분담] When the whole group soaks Unstable Miasma within 7.5 yards, drop Spirit Link Totem on that spot to even out health.",
+    "[위치] The two groups are more than 40 yards apart, so Healing Tide Totem only reaches your own group within 40 yards. Drop it next to your assigned group."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Dispelling Exploding Infection makes Caustic Explosion hit the raid, so stagger with the other dispellers and clear one player at a time with Purify Spirit.",
+    "@m [생존기] Line up a Healing Tide Totem or Spirit Link Totem turn with Gloom Expulsion and Conflagrating Expulsion, which grow with each Imbibe."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Join the interrupt rotation on Scrollsage Iku's Icebound Flames with Wind Shear.",
+    "[해제] Dispel an Icebound Flames that slips past interrupts with Purify Spirit.",
+    "[생존기] Line up Healing Tide Totem with the window when Frostfire Volley debuffs are being cleared."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[분담] Drop Spirit Link Totem where Mutilate is aimed at the raid and several players soak it, to even out health.",
+    "@m [분담] When 14 or more players stack within 8 yards of the Serpent's Fury target to take To the Slaughter, drop Spirit Link Totem on that spot.",
+    "[위치] When gathering in the middle before the Howling Maelstrom gusts, drop Wind Rush Totem for movement speed."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[생존기] Line up Healing Tide Totem with the 6 sec of raid damage from Stir the Depths.",
+    "@m [차단] Join the interrupts on Broodling of Ithraz's Visceral Burst and Barbed Bulwark with Wind Shear."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[차단] Once the Veil of Twilight shield breaks, join the Eternal Nightfall interrupt rotation with Wind Shear.",
+    "[분담] When 5 or more players stack within 9 yards of the Guillotine target, drop Spirit Link Totem, and when spreading, use Wind Rush Totem to get everyone past 40 yards quickly.",
+    "@hm [차단] Interrupt Spiteful Soulcoiler's Wail of Terror with Wind Shear."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Drop Poison Cleansing Totem to clear the Acidic Burst poison DoT from Blightscale Viper off players within 30 yards one by one.",
+    "[차단] Interrupt Doomscale Warden's Malice in Phase 2 and Blightscale Shrieker's Vicious Echoes in Phase 3 with Wind Shear.",
+    "[생존기] Split Healing Tide Totem and Ascendance between the 20 sec of Rage of the Shackled raid damage and Fury Unleashed."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[생존기] Take a Healing Tide Totem turn on Unending Tides.",
+    "[광역 피해] Pulsing Tides continues while a Bubblefin Berserker is alive, so drop Healing Stream Totem on cooldown."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[분담] Drop Spirit Link Totem where the raid stacks to soak Umbral Collapse to reduce damage within 10 yards by 10% and even out health.",
+    "[생존기] Line up Healing Tide Totem with Dark Upheaval at the pull and after each intermission.",
+    "@m [해제] Abyssal Malus's Black Miasma is a Curse, so remove it with Purify Spirit, talented into Improved Purify Spirit."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] The Blisterburst damage taken increase and the Creep Spit slow are Magic effects, so dispel them with Purify Spirit.",
+    "[회피] Once the Void Breath direction is set, drop Wind Rush Totem along the running path to raise raid movement speed by 40%.",
+    "@m [생존기] Line up Healing Tide Totem when the first Blistercreep pack pops."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[생존기] Use Healing Tide Totem or Ascendance on the 20 sec of raid damage from Entropic Unraveling.",
+    "[참고] Strip the Oppressive Darkness healing absorb from players coming out of Despotic Command with Riptide and Healing Surge.",
+    "[차단] Interrupt Shadow Fracture from the nearest Fractured Image with Wind Shear or stun it with Capacitor Totem."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath fear is a Magic effect, so dispel it right away with Purify Spirit.",
+    "[생존기] During Midnight Flames, drop Spirit Link Totem on the raid stacked inside Radiant Barrier to share the damage that gets through the absorb.",
+    "[차단] Interrupt Voidbolt from the Voidorb that spawns at your spot with Wind Shear."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] The Avenger's Shield DoT is a Magic effect, so dispel it right away with Purify Spirit.",
+    "[참고] Using Bloodlust or Heroism makes the boss immune to damage for 8 sec with Divine Shield, so use it once the enemy buff dispeller is ready.",
+    "[분담] Focus heal players with the Tyr's Wrath healing absorb using Riptide and Chain Heal."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] Corrupting Essence on a player is a Magic effect, so dispel it with Purify Spirit.",
+    "[해제] Dispelling Null Corona with Purify Spirit moves the absorb to someone else, so heal through it with Healing Wave and only dispel in an emergency.",
+    "@nh [차단] Interrupt Undying Voidspawn's Void Barrage with Wind Shear, or drop Capacitor Totem where they are grouped to stun them."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Interrupt Haunting Essence's Fearsome Cry with Wind Shear. A fear that slips through is a Magic effect, so dispel it with Purify Spirit.",
+    "@hm [해제] Dispel Consuming Miasma with Purify Spirit once the target reaches an Alndust Essence pool.",
+    "[광역 피해] Strip the Rift Sickness healing absorb applied every time adds spawn from several players at once with Chain Heal and Healing Rain."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[광역 피해] Heal off the Light Burn and Void Burn healing absorbs completely with Riptide and Healing Surge.",
+    "[생존기] Bloodlust is used on the first egg phase, so time Bloodlust or Heroism with the start of Phase 2 Rebirth and use Healing Tide Totem with it.",
+    "[차단] Interrupt Light Eruption or Void Eruption from embers matching your feather color with Wind Shear."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[분담] Heal a Dusk Crystal to full with Riptide and Healing Wave to turn it into a Dawn Crystal.",
+    "@nh [해제] The stacking Safeguard buff is a Magic effect, so strip it with Purge, and interrupt the cast with Wind Shear.",
+    "@m [생존기] Bloodlust is used in Phase 3, so time Bloodlust or Heroism with the start of Phase 3."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [해제] Poison Cleansing Totem clears a Poison Burst poison DoT that slips past interrupts off players within 30 yards every 1.5 sec.",
+    "@hm [차단] Interrupt Poison Burst from the Sporecaps near the boss with Wind Shear.",
+    "[생존기] Rotting Pustules makes damage ramp up as the fight goes on, so stack Healing Tide Totem and Ascendance late in the fight."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "독 해제는 Poison Cleansing Totem 기준",
+   "Healing Rain은 Totemic 영웅 특성에서 Surging Totem으로 바뀌어 제외, Ancestral Swiftness 등 영웅 한쪽 기술 제외",
+   "1시즌: 해제 줄은 digest 해제 목록(Magic·Curse·Poison)과 Purify Spirit·Improved Purify Spirit·Poison Cleansing Totem·Purge 툴팁을 짝지었다. Divine Shield는 해제 유형이 확인되지 않아 Purge 줄로 쓰지 않고 블러드 시점 참고로만 썼다.",
+   "1시즌: 블러드 줄은 s1.json 보스 블러드 칸(Belo'ren 2단계 첫 알, Midnight Falls 3단계)에 맞췄다. 영웅 특성 전용 기술은 쓰지 않았다."
+  ]
+ }
+}

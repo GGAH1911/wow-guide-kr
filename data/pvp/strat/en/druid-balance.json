@@ -1,0 +1,110 @@
+{
+ "id": "druid/balance",
+ "arena": [
+  "[생존기] Barkskin reduces all damage taken by 20% for 8 sec and can be used while stunned or feared. Press it immediately when you take burst while stunned.",
+  "[생존기] Shift into Bear Form and use Frenzied Regeneration to heal 24% of your health over 3 sec. Survive on your own when your healer is CC'd.",
+  "[제어] Cyclone disorients the target for up to 5 sec but also makes it invulnerable. Put it on the enemy healer rather than your kill target. With Owlkin Adept, Owlkin Frenzy stacks reduce your next Cyclone cast time by 10%.",
+  "[제어] Entangling Roots roots the target for 30 sec but damage can break it. With High Winds, it, Cyclone and Typhoon gain 5 yds range. Root melee DPS from afar and gain distance.",
+  "[차단] Solar Beam interrupts the target's cast and silences all enemies in the beam for 8 sec. Time it to the enemy healer's heal cast before they get behind a pillar.",
+  "[위치] Typhoon knocks back enemies within 15 yds in front of you and slows them by 50% for 6 sec. Use it to peel melee DPS off you.",
+  "[참고] With Moonkin Aura, each Starsurge increases spell crit chance of 8 allies within 40 yds by 2% for 18 sec, stacking up to 3 times. Pre-cast Starsurge right before your team's burst.",
+  "[해제] Remove Corruption removes all curses and poisons from an ally. Cleanse curses or poisons on your healer first."
+ ],
+ "bg": [
+  "[광역 피해] Star Burst was picked by 22 of 47 Battleground Blitz players. Starfall stars linger for 15 sec and explode around enemies they touch, so drop Starfall around the base flag you're guarding to hit enemies coming to capture.",
+  "[위치] Ursol's Vortex slows enemies within 8 yds by 50% for 10 sec and pulls the first enemy that tries to leave back to the center. Drop it on the base flag or under the enemy carrier.",
+  "[제어] Typhoon knocks enemies back, but feared or disoriented targets can't be knocked back. Push enemies not under Cyclone or your team's fears off the base flag or carrier path.",
+  "[분담] Stampeding Roar makes allies within 15 yds 60% faster for 8 sec. Use it to run with your flag carrier or when several allies rotate to support a base under attack.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Barkskin and Bear Form right before the burst."
+ ],
+ "pvpTalents": "Moonkin Aura, picked by 43 of the top 46 Solo Shuffle and 42 of 58 Rated Battleground players, raises spell crit for 8 allies within 40 yds on every Starsurge. Owlkin Adept, picked by 39 of 46 Solo Shuffle players and all 18 3v3 players, reduces your next Cyclone or Entangling Roots cast time by 10%. High Winds, picked by 28 of 46 Solo Shuffle players, increases the range of Cyclone, Typhoon and Entangling Roots by 5 yds.",
+ "tips": {
+  "moonkin aura": "209740",
+  "owlkin adept": "354541",
+  "high winds": "200931",
+  "star burst": "356517",
+  "cyclone": "33786",
+  "entangling roots": "339"
+ },
+ "spells": {
+  "339": {
+   "n": "Entangling Roots",
+   "i": "spell_nature_stranglevines",
+   "m": "1.2% of base mana · 35 yd range · 1.7 sec cast",
+   "d": "Roots the target in place for 30 sec. Damage may cancel the effect. [Incarnation: Tree of Life: Tree of Life: Instant cast.]"
+  },
+  "33786": {
+   "n": "Cyclone",
+   "i": "spell_nature_earthbind",
+   "m": "Talent · 1.2% of base mana · 20 yd range · 1.7 sec cast",
+   "d": "Tosses the enemy target into the air, disorienting them but making them invulnerable for up to 5 sec. Only one target can be affected by your Cyclone at a time."
+  },
+  "200931": {
+   "n": "High Winds",
+   "i": "ability_druid_cyclone",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of Cyclone, Typhoon, and Entangling Roots by 5 yds."
+  },
+  "209740": {
+   "n": "Moonkin Aura",
+   "i": "ability_druid_improvedmoonkinform",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Starsurge grants 2% spell critical strike chance to 8 allies within 40 yards for 18 sec, stacking up to 3 times."
+  },
+  "354541": {
+   "n": "Owlkin Adept",
+   "i": "ability_druid_owlkinfrenzy",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Owlkin Frenzy can stack up to 2 times and reduces the cast time of your next Cyclone or Entangling Roots by 10%."
+  },
+  "356517": {
+   "n": "Star Burst",
+   "i": "ability_druid_cresentburn",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Starfall calls down collapsing stars that last 15 sec. Enemies that come into contact with a star cause it to burst, knocking nearby enemies upwards and dealing (211.5% of Spell Power) Astral damage. Generates 15 Astral Power.\n\nThe Druid and their allies may pick up stars, causing them to orbit around you."
+  }
+ },
+ "spellsKo": {
+  "339": {
+   "n": "휘감는 뿌리",
+   "m": "1.2% (기본 마나 중) · 35 야드 사정거리 · 1.7 초 주문 시전 시간",
+   "d": "30초 동안 대상을 제자리에 묶습니다. 대상이 피해를 입으면 효과가 해제될 수 있습니다. [화신: 생명의 나무: 생명의 나무: 즉시 시전됩니다.]"
+  },
+  "33786": {
+   "n": "회오리바람",
+   "m": "특성 · 1.2% (기본 마나 중) · 20 야드 사정거리 · 1.7 초 주문 시전 시간",
+   "d": "적을 공중으로 날립니다. 대상은 5초 동안 방향 감각을 상실하지만, 무적 상태가 됩니다. 한 대상만 날려둘 수 있습니다."
+  },
+  "200931": {
+   "n": "강풍",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "회오리바람, 태풍, 휘감는 뿌리의 사정거리가 5미터만큼 증가합니다."
+  },
+  "209740": {
+   "n": "달빛야수 오라",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "별빛쇄도 시전 시 18초 동안 40미터 내에 있는 아군 8명의 주문 극대화율이 2%만큼 증가하며, 최대 3번까지 중첩됩니다."
+  },
+  "354541": {
+   "n": "능숙한 올빼미야수",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "올빼미야수의 광기가 최대 2번까지 중첩됩니다. 또한 다음 회오리바람 또는 휘감는 뿌리의 시전 시간을 10%만큼 감소시킵니다."
+  },
+  "356517": {
+   "n": "별 폭발",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "별똥별 시전 시 15초 동안 붕괴하는 별을 불러 내립니다. 적과 접촉한 별은 폭발을 일으켜 주위 적을 공중으로 날려 보내고 (주문력의 211.5%)의 천공 피해를 입힙니다. 15의 천공의 힘을 생성합니다.\n\n드루이드와 아군은 별을 획득하여 자신의 주위를 맴돌게 할 수 있습니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 숲의 수호자 43·엘룬의 대행자 3으로 거의 숲의 수호자지만 한쪽 전용 기술은 쓰지 않음",
+   "Owlkin Frenzy 툴팁(157228)이 달빛야수 변신 문구로 받아져 영문 이름은 쓰지 않고 Owlkin Adept 툴팁 문구만 인용",
+   "Cyclone과 Entangling Roots는 쐐기 파일에 없어 툴팁을 새로 받음. 제어기 사이 점감 관계는 확인하지 않아 연계로 쓰지 않음"
+  ]
+ }
+}

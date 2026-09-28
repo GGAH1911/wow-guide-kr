@@ -1,0 +1,152 @@
+{
+ "id": "priest/holy",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] Once the Essence Rend target reaches the edge of the room, dispel it with Purify. A Latent Cultist pool is left where it was removed.",
+    "[생존기] Soulcoil Rite goes off with every Phase 2 Invoke, so take a turn with Divine Hymn.",
+    "@m [참고] Spells being cast are interrupted the moment Invoke ends, so start the 5 sec channel Divine Hymn after Invoke ends."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] Blighted Blood is a Magic effect, so dispel it right away with Purify.",
+    "[위치] The two groups are more than 40 yards apart, so Divine Hymn only reaches your own group within 40 yards. Use it next to your assigned group.",
+    "[광역 피해] While Contaminate hits the raid every 3 sec, top up several players with Prayer of Healing and Prayer of Mending."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[해제] Dispelling Exploding Infection makes Caustic Explosion hit the raid, so do not clear them all at once with Mass Dispel. Stagger them one at a time with Purify.",
+    "@m [생존기] Line up a Divine Hymn or Apotheosis turn with Gloom Expulsion and Conflagrating Expulsion, which grow with each Imbibe."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[해제] An Icebound Flames that slips past interrupts is a Magic effect, so dispel it with Purify.",
+    "[생존기] Line up Divine Hymn with the window when Frostfire Volley debuffs are being cleared.",
+    "[탱버] Put Guardian Spirit on the tank when First Mate Nama's Steady Strikes stacks get high."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[탱버] Put Guardian Spirit on the tank taking Ravage to raise their healing received by 60%.",
+    "[광역 피해] When Venomous Surge ends and the whole raid takes damage, top up with Prayer of Healing and Halo.",
+    "[위치] When gathering in the middle before the Howling Maelstrom gusts, drop Angelic Feather to speed up late players."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[생존기] Line up Divine Hymn or Apotheosis with the 6 sec of raid damage from Stir the Depths.",
+    "@m [분담] Dump Flash Heal and Prayer of Mending on players inside a Tainted Blood source to fill the absorb within 8 sec.",
+    "@m [탱버] Put Guardian Spirit on the Ithraz tank stacking healing absorbs from Blood Torrent to raise their healing received by 60%."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[생존기] Use Divine Hymn during the Suffocating Darkness and Defilement of the Coiled Altar healing absorb windows so its stacking healing received increase strips the absorbs.",
+    "@hm [생존기] Venom Rupture DoTs stack up right after Sever, so line up Apotheosis.",
+    "[위치] When spreading past 40 yards after soaking Guillotine, drop Angelic Feather for movement speed."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[참고] Acidic Burst is a Poison, so Purify, which only removes Magic and Disease, cannot clear it. Leave poison dispels to another healer.",
+    "[생존기] Split Divine Hymn and Apotheosis between the 20 sec of Rage of the Shackled raid damage and Fury Unleashed.",
+    "@hm [생존기] Players turned to stone by Petrifying Sting absorb healing, so raise their healing received by 60% with Guardian Spirit."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[생존기] Take a Divine Hymn turn on Unending Tides.",
+    "[광역 피해] After Pop! knocks the raid apart, top up with Halo, which reaches out to 40 yards, and Prayer of Mending.",
+    "@hm [생존기] If a missed Frost Orb stacks up the Shatter DoT, hold through it with Apotheosis."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[생존기] On Dark Upheaval at the pull and after each intermission, heal the raid within 40 yards for 5 sec with Divine Hymn.",
+    "[탱버] When Gnashing Void DoTs stack on the tank picking up adds under Weakened, raise their healing received by 60% with Guardian Spirit.",
+    "@m [광역 피해] Heal through the 10 sec Lingering Darkness DoT on players dispelled of Void Marked with Renew and Flash Heal."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] The Blisterburst damage taken increase and the Creep Spit slow are Magic effects, so dispel them with Purify. If several players at the wall have them, clear up to 5 players within 15 yards at once with Mass Dispel.",
+    "[광역 피해] After the raid takes Primordial Roar stacked, top up the target and 4 players within 40 yards together with Prayer of Healing.",
+    "@m [생존기] Line up Divine Hymn when the first Blistercreep pack pops."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[생존기] Use Divine Hymn or Apotheosis on the 20 sec of raid damage from Entropic Unraveling.",
+    "[참고] Strip the Oppressive Darkness healing absorb from players coming out of Despotic Command with Flash Heal.",
+    "[탱버] Put Guardian Spirit on the tank taking Shattering Twilight by the wall."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[해제] Dread Breath fear is a Magic effect, so dispel it with Purify. If several players are caught in the cone, clear them at once with Mass Dispel.",
+    "[생존기] Part of the Midnight Flames damage gets through Radiant Barrier, so line up Divine Hymn.",
+    "[참고] Put Guardian Spirit on the tank gaining healing absorbs from Rakfang stacks to raise their healing received by 60%."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[해제] The Avenger's Shield DoT is a Magic effect, so dispel it right away with Purify.",
+    "@m [해제] On Mythic, when Avenger's Shield targets every player, clear the DoTs from up to 5 players within 15 yards at once with Mass Dispel.",
+    "[분담] Focus heal players with the Tyr's Wrath healing absorb using Prayer of Healing and Flash Heal."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] Corrupting Essence on a player is a Magic effect, so dispel it with Purify.",
+    "[해제] Purifying Null Corona moves the absorb to someone else, so heal through it with Flash Heal and only Purify in an emergency.",
+    "@nh [광역 피해] The Aspect of the End target's healing received keeps dropping, so raise it by 60% with Guardian Spirit."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[해제] Fearsome Cry fear that slips past interrupts is a Magic effect, so dispel it with Purify. If several players are affected, use Mass Dispel.",
+    "@hm [해제] Dispel Consuming Miasma with Purify once the target reaches an Alndust Essence pool.",
+    "[광역 피해] Strip the Rift Sickness healing absorb applied every time adds spawn from several players at once with Halo and Prayer of Healing."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[광역 피해] Heal off the Light Burn and Void Burn healing absorbs completely with Flash Heal and Prayer of Mending.",
+    "[생존기] Burning Heart comes more often during Phase 2 Rebirth, so line up Apotheosis or Divine Hymn.",
+    "[탱버] Put Guardian Spirit on the tank taking Light Edict or Void Edict."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[분담] Heal a Dusk Crystal to full with Flash Heal to turn it into a Dawn Crystal.",
+    "@nh [해제] The stacking Safeguard buff is a Magic effect, so strip it with Dispel Magic. If the matrices are grouped, strip several at once with Mass Dispel.",
+    "[광역 피해] During Total Eclipse, strip the Eclipsed healing absorbs with Halo and Prayer of Healing, prioritizing crystal carriers."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [참고] The Poison Burst DoT is a Poison, so Purify cannot clear it. Leave poison dispels to another healer.",
+    "[생존기] Rotting Pustules makes damage ramp up as the fight goes on, so stack Divine Hymn and Apotheosis late in the fight.",
+    "[광역 피해] When Fungal Bloom knocks the raid apart, heal everyone within 40 yards at once with Halo."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Purify는 마법과 질병만 지워 Ula'tek 독 해제 불가",
+   "Holy Word 계열은 이름에 쌍점이 있어 문장에서 제외",
+   "1시즌: 해제 줄은 digest 해제 목록(Magic)과 Purify·Mass Dispel·Dispel Magic 툴팁을 짝지었다. Improved Purify는 질병만 더하므로 Poison Burst는 해제 불가로 적었다.",
+   "1시즌: 이름에 쌍점이 든 Holy Word 기술은 점검 규칙상 쓰지 않았다. 영웅 특성 전용 기술은 쓰지 않았다."
+  ]
+ }
+}

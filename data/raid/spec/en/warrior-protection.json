@@ -1,0 +1,151 @@
+{
+ "id": "warrior/protection",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[위치] If you are the Possession Barrage target, Heroic Leap far from the boss so the echoes fly far away.",
+    "[제어] When a Restless Amani with its shield still up walks toward the well, slow everything within 12 yards by 70% with Piercing Howl to delay it.",
+    "[생존기] Under Uncoiled Rage, taunts do not work and all damage rises by 500%, so reduce damage taken by 40% with Shield Wall."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[탱버] Empowering Slam deals 2.5 million physical damage and grows stronger the more it hits the same target, so split Ignore Pain and Shield Wall across the hits.",
+    "[탱버] When Bloodvenom Injection's 40 sec Shadow DoT stacks up, reduce the magic damage by 20% with Spell Reflection.",
+    "[교대] When the intermission ends, take the boss with Taunt and go to the same side."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[탱버] Dripping Fangs increases physical damage taken by 200% and stacks, so use Shield Wall or Last Stand as the stacks build.",
+    "[제어] Burning Venom can be stunned with Storm Bolt or Shockwave until Hardened Venom."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[교대] On the Shredding Shards swap, take Scrollsage Iku with Taunt. It is Frost damage, so reduce the magic damage by 20% with Spell Reflection.",
+    "[차단] When you are in position, interrupt Icebound Flames with Pummel.",
+    "[탱버] When First Mate Nama's Steady Strikes stacks get high, reduce damage taken by 40% with Shield Wall."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[교대] During the Apex Predator cast, swap targets with Taunt after the first Ravage or Mutilate so each tank takes one.",
+    "[탱버] Ravage deals 3.5 million physical damage, so use Shield Wall or Last Stand when you take it.",
+    "[탱버] Mutilate is Nature damage, so when taking it with the raid, reduce the magic damage by 20% with Spell Reflection."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[탱버] Caustic Deluge pours Nature damage for 5 sec and stacks Envenomed, so time Spell Reflection with it.",
+    "[위치] After being knocked back by Stone Breaker, Heroic Leap onto the stomp spots and step on them in order.",
+    "@m [차단] Interrupt Barbed Bulwark and Broodling of Ithraz's Visceral Burst with Pummel."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[교대] Sever leaves physical damage and a 600% damage increase, so swap with Taunt before the next Sever and use Shield Wall when you take it.",
+    "[차단] Once the Veil of Twilight shield breaks, interrupt Eternal Nightfall with Pummel.",
+    "@hm [차단] Interrupt Spiteful Soulcoiler's Wail of Terror with Pummel."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[교대] On the Caustic Waves cast, swap Ula'tek and Gore Rattle with Taunt.",
+    "[위치] If Mother's Wrath knocks you back, get right back into Ula'tek's range with Heroic Leap or Charge.",
+    "[차단] Interrupt Doomscale Warden's Malice and Weakened Doomscale's Anguished Cry in Phase 2 with Pummel."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[탱버] Water Jet Frost damage grows by 20% with every hit, so reduce the magic damage by 20% with Spell Reflection.",
+    "[제어] Stun Bubblefin Shorerunners rushing to the bubble with Shockwave or slow them with Piercing Howl."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[탱버] When Blackening Wounds stacks lower your max health, raise it by 30% with Last Stand to hold through.",
+    "[탱버] When adds charge in under Weakened, reduce the damage of enemies within 10 yards with Demoralizing Shout, and when Gnashing Void Shadow DoTs stack up, reduce the magic damage by 20% with Spell Reflection.",
+    "[차단] Interrupt the intermission Pitch Bulwark with Pummel, and if several adds cast together, interrupt all casts within 14 yards at once with Disrupting Shout."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[탱버] When taking the second big claw impact with Smashed stacked, reduce damage taken by 40% with Shield Wall.",
+    "[위치] If a Blistercreep latches onto you, Heroic Leap quickly to your side's Void Crystal wall.",
+    "@m [생존기] Raid-wide damage is heavy when the first Blistercreep pack pops, so raise the health of raid members within 40 yards by 10% with Rallying Cry."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[탱버] Shattering Twilight is heavy Shadow damage, so pop Shield Wall and Spell Reflection together by the wall and take it.",
+    "[교대] When Destabilizing Strikes stacks build up, take the boss with Taunt and drag it away from the Concentrated Void orbs.",
+    "[차단] Interrupt Shadow Fracture from the nearest Fractured Image with Pummel or stun it with Storm Bolt."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[탱버] Ezzorak's Rakfang is heavy physical damage, so keep Ignore Pain stacked and use Shield Wall when the empowerment has stacked.",
+    "[탱버] Melee attacks empowered by Vaelgor's Vaelwing add Shadow damage, so reduce the magic damage by 20% with Spell Reflection.",
+    "[우선 처치] Pick up the intermission Manifestation of Midnight with Taunt and pull it away from the raid, and when Unbound Shadow raises its attack speed, block its melee with Shield Block."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[교대] Swap with Taunt right after Commander Venel Lightblood's Judgment to avoid the amplified Final Verdict damage.",
+    "[탱버] Shield of the Righteous and Exorcism are Holy damage, so reduce the magic damage by 20% with Spell Reflection.",
+    "[차단] Once Sacred Shield breaks, interrupt War Chaplain Senn's Blinding Light with Pummel."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[위치] If Dark Hand knocks you back, get right back into the sentinel's melee range with Charge or Heroic Leap.",
+    "@nh [교대] When Rift Slash stacks reduce your stats, swap with Taunt after the Undying Voidspawn is handled.",
+    "@nh [생존기] Gravity Collapse from breaking Aspect of the End increases physical damage taken by 300%, so pop Shield Wall."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[탱버] The Alndust Upheaval target takes heavy physical damage, so pop Shield Wall and take it with your group.",
+    "[탱버] When Colossal Horror's Colossal Strikes ramp up on the lower floor, use Last Stand or Shield Wall.",
+    "[차단] On the lower floor, interrupt Haunting Essence's Fearsome Cry first with Pummel."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[교대] When the opposite-color Light Edict or Void Edict comes, the matching-color tank takes the boss with Taunt during the cast and takes it.",
+    "[탱버] Light Edict and Void Edict are heavy Holy and Shadow damage, so reduce the magic damage by 20% with Spell Reflection, and add Shield Wall when two come back to back.",
+    "[차단] Interrupt Light Eruption or Void Eruption from embers matching your feather color with Pummel."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "[교대] Swap with Taunt after the 5 Heaven's Lance stabs end, and pop Shield Wall or Ignore Pain when you take the stabs.",
+    "@nh [차단] Remove Safeguard stacks on a Safeguard Prism matrix with Pummel and Storm Bolt or Shockwave stuns.",
+    "@m [차단] Interrupt Terminate from your assigned Termination Prism matrix with Pummel."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "[교대] Swap with Taunt after taking Putrid Fist, and pop Shield Wall or Last Stand when you take it.",
+    "[제어] Slow chasing Shroomlings within 12 yards by 70% with Piercing Howl and gather them at the set spot.",
+    "@hm [차단] Interrupt Poison Burst from the Sporecaps near the boss with Pummel."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "탱버·교대 줄은 digest 역할 tank 항목(Empowering Slam·Dripping Fangs·Shredding Shards·Steady Strikes·Apex Predator·Caustic Deluge·Stone Breaker·Sever·Caustic Waves·Water Jet)과 core 보스 툴팁의 피해 계열(물리/자연/암흑/냉기)을 기술 툴팁 효과와 짝지었다.",
+   "면역으로 기믹을 무시한다는 서술은 넣지 않았다(기절·공포·밀쳐내기 면역 기술 포함). 영웅 특성 전용 기술은 쓰지 않았다.",
+   "1시즌: 탱버·교대 줄은 digest 역할 tank 항목과 s1.json 보스 툴팁의 피해 계열(물리/암흑/신성)을 기술 툴팁 효과와 짝지었다.",
+   "1시즌: Heaven's Lance는 우주 피해라 Spell Reflection 대신 모든 피해 감소기만 붙였다. 영웅 특성 전용 기술은 쓰지 않았다."
+  ]
+ }
+}

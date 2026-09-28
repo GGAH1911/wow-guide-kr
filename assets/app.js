@@ -5,7 +5,10 @@
 "use strict";
 const CFG = window.WG || {};
 const BASE = CFG.base || "./";
-const J = p => fetch(BASE + p).then(r => { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); });
+const J0 = p => fetch(BASE + p).then(r => { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); });
+// 영어 화면(UI=en)이면 사람이 쓴 공략 데이터는 data/<분류>/en/<파일> 을 먼저 받고, 없으면 원본(한국어)을 쓴다. 매일 수집하는 수치 파일은 대상이 아니다.
+const EN_DATA = /^data\/(?:spec\/[^/]+|core\/dungeons|role\/[^/]+|raid\/(?:core|s1)|raid\/spec\/[^/]+|pvp\/maps|pvp\/strat\/[^/]+)\.json$/;
+const J = p => UI === "en" && EN_DATA.test(p) ? J0(p.replace(/\/([^/]+)$/, "/en/$1")).catch(() => J0(p)) : J0(p);
 
 // ---------- 저장값 ----------
 const ls = {
@@ -31,7 +34,74 @@ function migrate() {
   ls.set("wg:v", "1");
 }
 migrate();
-let lang = ls.get("wg:lang") === "ko" ? "ko" : "en";
+// ---------- 화면 언어(UI): ko(기본) | en ----------
+// 주소 ?ui=en|ko 로 고르면 이 기기에 저장한다. 영어 화면은 게임 언어도 영어로 고정하고(한/EN 버튼 없음),
+// 화면 문구는 assets/i18n.en.json 사전으로 그린 뒤에 바꾼다. 한국어 화면은 이 어느 것도 하지 않는다.
+const UI = (() => { let q = null; try { q = new URLSearchParams(location.search).get("ui"); } catch (e) {} if (q === "en" || q === "ko") ls.set("wg:ui", q); return ls.get("wg:ui") === "en" ? "en" : "ko"; })();
+let lang = UI === "en" ? "en" : ls.get("wg:lang") === "ko" ? "ko" : "en";
+let I18N = null;
+const HANGUL = /[가-힣]/;
+// 영문 뒤에 남는 조사(예: "Top 500 players가")를 지운다
+const JOSA_TAIL = /([A-Za-z0-9)\]%'’·])(?:으로|에서|까지|부터|은|는|이|가|을|를|의|에|로|와|과|도|만)(?=[\s.,)!?:·]|$)/g;
+function prepI18n(dict) {
+  const map = Object.assign({}, dict); const rx = L => (L || []).map(([p, r]) => [new RegExp(p, "g"), r]);
+  const first = rx(map.$first), pre = rx(map.$pre), post = rx(map.$post); delete map.$first; delete map.$pre; delete map.$post;
+  const all = Object.keys(map).filter(k => k.length >= 2 && !k.includes("{")).sort((a, b) => b.length - a.length).map(k => [k, map[k]]);
+  // 긴 문구(8자 이상)는 숫자 규칙보다 먼저, 짧은 문구는 나중에
+  return { map, long: all.filter(([k]) => k.length >= 8), phrases: all.filter(([k]) => k.length < 8), first, pre, post, raw: dict };
+}
+function trText(s) {
+  if (!I18N || !HANGUL.test(s)) return s;
+  const lead = s.match(/^\s*/)[0], trail = s.match(/\s*$/)[0]; let t = s.trim();
+  const M = I18N.map;
+  if (M[t] != null) return lead + M[t] + trail;
+  if (I18N.x && I18N.x[t] != null) return lead + I18N.x[t] + trail;
+  const nums = []; const key = t.replace(/\d[\d,.:\-]*/g, m => { nums.push(m); return "{" + (nums.length - 1) + "}"; });
+  if (nums.length && M[key] != null) return lead + M[key].replace(/\{(\d+)\}/g, (_, i) => nums[i] != null ? nums[i] : "") + trail;
+  for (const [re, r] of I18N.first) t = t.replace(re, r);
+  for (const [k, v] of I18N.long) if (t.includes(k)) t = t.split(k).join(v);
+  for (const [re, r] of I18N.pre) t = t.replace(re, r);
+  for (const [k, v] of I18N.phrases) if (t.includes(k)) t = t.split(k).join(v);
+  for (const [re, r] of I18N.post) t = t.replace(re, r);
+  t = t.replace(JOSA_TAIL, "$1").replace(/ {2,}/g, " ");
+  return lead + t + trail;
+}
+const I18N_ATTRS = ["title", "aria-label", "placeholder", "alt"];
+const noTr = el => !el || !!(el.closest && el.closest('[translate="no"],pre,script,style,textarea'));
+function trAttrs(el) { for (const a of I18N_ATTRS) { const v = el.getAttribute(a); if (v && HANGUL.test(v)) { const n = trText(v); if (n !== v) el.setAttribute(a, n); } } }
+function trNode(root) {
+  if (!I18N || !root) return;
+  if (root.nodeType === 3) { if (HANGUL.test(root.nodeValue) && !noTr(root.parentElement)) { const n = trText(root.nodeValue); if (n !== root.nodeValue) root.nodeValue = n; } return; }
+  if (root.nodeType !== 1 && root.nodeType !== 9) return;
+  const el = root.nodeType === 9 ? root.documentElement : root;
+  if (noTr(el)) return;
+  const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); const L = []; let n; while ((n = w.nextNode())) if (HANGUL.test(n.nodeValue)) L.push(n);
+  for (const t of L) if (!noTr(t.parentElement)) { const v = trText(t.nodeValue); if (v !== t.nodeValue) t.nodeValue = v; }
+  if (el.getAttribute) trAttrs(el);
+  el.querySelectorAll("[title],[aria-label],[placeholder],[alt]").forEach(x => { if (!noTr(x)) trAttrs(x); });
+}
+function startI18n(dict) {
+  I18N = prepI18n(dict);
+  document.documentElement.lang = "en";
+  trNode(document);
+  new MutationObserver(ms => { for (const m of ms) {
+    if (m.type === "childList") m.addedNodes.forEach(trNode);
+    else if (m.type === "characterData") trNode(m.target);
+    else if (m.type === "attributes" && !noTr(m.target)) trAttrs(m.target);
+  } }).observe(document.documentElement, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: I18N_ATTRS });
+}
+// 로스터의 한글 이름(직업·전문화·영웅 특성·역할)도 사전에 넣는다(화면 고정 문구에 섮여 나오는 경우)
+function rosterI18n(r) {
+  if (!I18N) return;
+  const add = (ko, en) => { if (ko && en && I18N.map[ko] == null) I18N.map[ko] = en; };
+  Object.values(r.roles || {}).forEach(x => add(x.ko, x.en));
+  // 전문화 짧은 이름(보호·무기 등)은 다른 말 속에도 나오므로 문구 전체가 같을 때만 바꾼다
+  const x = {}; r.classes.forEach(c => c.specs.forEach(s => { if (s.ko && s.en) x[s.ko] = s.en; }));
+  r.classes.forEach(c => { add(c.ko, c.en); c.specs.forEach(s => { add(s.koFull, s.enFull); (s.heroes || []).forEach(h => add(h.ko, h.en)); }); });
+  I18N = prepI18n(Object.assign({}, I18N.map, { $first: I18N.raw.$first, $pre: I18N.raw.$pre, $post: I18N.raw.$post }));
+  I18N.x = x;
+  trNode(document);
+}
 
 // ---------- 로스터 ----------
 let ROSTER, SPECS = [], BYID = {};
@@ -204,7 +274,14 @@ document.addEventListener("click", e => {
 const SPEC_PAGES = ["sheet", "guide", "compare", "raid", "pvp"];
 const HOME_SVG = `<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 9.5 10 3.5l7 6V17a1 1 0 0 1-1 1h-3.5v-5h-5v5H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>`;
 const MENU_SVG = `<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3.5 6h13M3.5 10h13M3.5 14h13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>`;
-const hlang = () => `<div class="vseg hlang" id="tiplang" role="group" aria-label="게임 언어 (기술·NPC 이름과 툴팁)" title="게임 언어: 기술·NPC 이름과 툴팁을 한글/영문 클라이언트 기준으로"><button type="button" data-l="ko" aria-pressed="${lang === "ko"}">한</button><button type="button" data-l="en" aria-pressed="${lang === "en"}">EN</button></div>`;
+// 화면 언어 전환: 한국어 화면에서는 "English", 영어 화면에서는 "한국어"(번역하지 않음)
+const uiSw = () => UI === "en" ? `<button type="button" class="uisw" data-ui="ko" translate="no" lang="ko" title="한국어 화면으로">한국어</button>` : `<button type="button" class="uisw" data-ui="en" lang="en" title="English site">English</button>`;
+const hlang = () => UI === "en" ? uiSw() : `<div class="vseg hlang" id="tiplang" role="group" aria-label="게임 언어 (기술·NPC 이름과 툴팁)" title="게임 언어: 기술·NPC 이름과 툴팁을 한글/영문 클라이언트 기준으로"><button type="button" data-l="ko" aria-pressed="${lang === "ko"}">한</button><button type="button" data-l="en" aria-pressed="${lang === "en"}">EN</button></div>`;
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-ui]"); if (!b) return;
+  e.preventDefault(); ls.set("wg:ui", b.dataset.ui);
+  const u = new URL(location.href); u.searchParams.delete("ui"); location.replace(u.href);
+});
 function siteHeader(s, view, hero) {
   const saved = BYID[ls.get("wg:spec")];
   const cur = k => CFG.page === k ? ' aria-current="page"' : "";
@@ -226,7 +303,7 @@ function siteHeader(s, view, hero) {
     <a class="home" href="${BASE}" title="첫 화면" aria-label="첫 화면">${HOME_SVG}</a>
     ${mid}${hlang()}
     <button class="gmb" id="gmb" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="gmenu" aria-label="메뉴" title="메뉴">${MENU_SVG}</button>
-    <div class="gmenu" id="gmenu" hidden><div class="gm-in"><div class="gsep">쐐기</div><a href="${BASE}"${cur("select")}>쐐기 홈 · 전문화 고르기</a><a href="${rankUrl("all" + SQ())}"${cur("rank")}>쐐기 순위표</a><a href="${BASE}specs/"${cur("specs")}>전문화 목록</a><div class="gsep">레이드</div><a href="${raidHubUrl(SQ().slice(1), "#guide")}"${cur("raidhub")}>레이드 홈 · 공략 고르기</a><a href="${raidHubUrl(SQ().slice(1), "#rank")}">레이드 순위</a><div class="gsep">PvP</div><a href="${pvpHubUrl("", "#guide")}"${cur("pvphub")}>PvP 홈 · 빌드 고르기</a><a href="${pvpHubUrl("", "#rank")}">PvP 순위</a>${mine}${s ? '<button type="button" id="gchg">전문화 변경</button>' : ""}</div></div></div></header>`;
+    <div class="gmenu" id="gmenu" hidden><div class="gm-in"><div class="gsep">쐐기</div><a href="${BASE}"${cur("select")}>쐐기 홈 · 전문화 고르기</a><a href="${rankUrl("all" + SQ())}"${cur("rank")}>쐐기 순위표</a><a href="${BASE}specs/"${cur("specs")}>전문화 목록</a><div class="gsep">레이드</div><a href="${raidHubUrl(SQ().slice(1), "#guide")}"${cur("raidhub")}>레이드 홈 · 공략 고르기</a><a href="${raidHubUrl(SQ().slice(1), "#rank")}">레이드 순위</a><div class="gsep">PvP</div><a href="${pvpHubUrl("", "#guide")}"${cur("pvphub")}>PvP 홈 · 빌드 고르기</a><a href="${pvpHubUrl("", "#rank")}">PvP 순위</a>${mine}${s ? '<button type="button" id="gchg">전문화 변경</button>' : ""}${UI === "en" ? '<div class="gsep">Language</div><button type="button" data-ui="ko" translate="no" lang="ko">한국어</button>' : '<div class="gsep">화면 언어</div><button type="button" data-ui="en" lang="en">English</button>'}</div></div></div></header>`;
 }
 const topbar = (s, view, hero) => siteHeader(s, view, hero);
 function bindTopbar(s) {
@@ -738,6 +815,8 @@ function guidePage() {
   const s = BYID[CFG.spec], G = window.GUIDE;
   setClassColor(s.cls);
   const hero = CFG.hero;
+  // 영어 화면: 빌드 때 넣어 둔 영문 본문(<template id="gbody-en">)으로 바꾼다
+  if (UI === "en") { const t = document.getElementById("gbody-en"); if (t) document.getElementById("gbody").innerHTML = t.innerHTML; }
   const visiting = ls.get("wg:spec") !== s.id;
   if (!visiting) ls.set("wg:hero:" + s.id, hero);
   document.getElementById("top").innerHTML = topbar(s, "guide", hero);
@@ -845,6 +924,8 @@ async function comparePage() {
 // 문장 난이도: brief 항목은 옵션 {d:"hm"}, 상세 줄은 머리 "@hm " 접두사. 없으면 모든 난이도.
 // =====================================================================
 const DIFF = [["n", "일반"], ["h", "영웅"], ["m", "신화"]];
+// 보스 요약(전투 유형·블러드·배정): 영어 화면은 영문 meta, 한국어 화면은 metaKo
+const MK = t => UI === "en" && t.meta ? t.meta : t.metaKo;
 const RAID_TAGS = { soak: "분담", swap: "교대", cd: "생존기" };
 // 레이드 묶음: 2시즌(이번 시즌, 상위 공격대 조합·전문화 활용 줄 있음) · 지난 시즌(공통 공략만). 주소 ?set=, 저장값 wg:rset, 또는 #보스로 고른다
 const RAID_SETS = [
@@ -1067,7 +1148,7 @@ async function raidPage() {
   };
   function overviewHtml() {
     const rows = T.map(t => { const x = (core.detail[t.id] || {})[t.name] || {}; const all = [...t.brief.map(b => (b[2] || {}).d), ...(x.phases || []).flatMap(p => p.points.map(l => parse(l).d))]; const nm = all.filter(d => d === "m").length, nh = all.filter(d => d === "hm" || d === "h").length;
-      return `<tr><td>${t.order}</td><td><a href="#${t.id}" data-go="${t.id}"><span class="bn">${esc(t.name)}</span></a>${isLair(t) ? ' <span class="dbadge d-n">소굴</span>' : set.id !== "s2" ? ` <span class="dbadge d-n">${esc(raidName(t.raid))}</span>` : ""}</td><td>${esc(t.metaKo.fight || t.meta.fight || "")}</td><td>${esc(t.metaKo.lust || t.meta.lust || "")}</td><td>${esc(t.metaKo.assign || t.meta.assign || "")}</td><td class="num">${nh}</td><td class="num">${nm}</td></tr>`; }).join("");
+      return `<tr><td>${t.order}</td><td><a href="#${t.id}" data-go="${t.id}"><span class="bn">${esc(t.name)}</span></a>${isLair(t) ? ' <span class="dbadge d-n">소굴</span>' : set.id !== "s2" ? ` <span class="dbadge d-n">${esc(raidName(t.raid))}</span>` : ""}</td><td>${esc(MK(t).fight || t.meta.fight || "")}</td><td>${esc(MK(t).lust || t.meta.lust || "")}</td><td>${esc(MK(t).assign || t.meta.assign || "")}</td><td class="num">${nh}</td><td class="num">${nm}</td></tr>`; }).join("");
     const head = set.id === "s2" ? `<h2 class="dname">${lang === "ko" ? "맹독 심연" : "The Venomous Abyss"}</h2><p class="dsub">한밤 2시즌 레이드 8보스와 소굴 보스 1개. 보스를 누르면 그 보스 탭으로 갑니다.</p>`
       : `<h2 class="dname">한밤 ${set.ko} 레이드</h2><p class="dsub">${(core.raids || []).map(r => `${esc(raidName(r.id))} ${core.tabs.filter(t => t.raid === r.id).length}보스`).join(" · ")}. 지난 시즌 레이드라 상위 공격대 조합은 없고, 공통 공략(요약·단계별 상세·역할별 할 일)${T.some(t => SDETAIL[t.id]) ? "과 전문화 활용 줄이 있습니다" : "만 있습니다"}. 보스를 누르면 그 보스 탭으로 갑니다.</p>`;
     return `<div>${head}</div>
@@ -1090,7 +1171,7 @@ async function raidPage() {
       const extra = (SBRIEF[t.id] || {})[t.name] || [];
       const items = [...t.brief, ...extra].filter(([k, , o]) => on.has(k) && inDiff((o || {}).d));
       const lis = items.map(([k, x, o]) => lineLi(k, tokens(x), (o || {}).d)).join("");
-      const meta = [t.metaKo.fight && `전투: ${t.metaKo.fight}`, t.metaKo.lust && `블러드: ${t.metaKo.lust}`, t.metaKo.assign && `배정: ${t.metaKo.assign}`].filter(Boolean).map(esc).join(" · ");
+      const meta = [MK(t).fight && `전투: ${MK(t).fight}`, MK(t).lust && `블러드: ${MK(t).lust}`, MK(t).assign && `배정: ${MK(t).assign}`].filter(Boolean).map(esc).join(" · ");
       mainEl.innerHTML = `<div><h2 class="dname"><span class="bn">${esc(t.name)}</span></h2><p class="dsub">${esc(bossSub(t))}${meta ? " · " + meta : ""}</p></div>
         <section class="boss"><h3><span class="bn">${esc(t.name)}</span><small>${bossSmall(t)}</small></h3>${lis ? `<ul class="items">${lis}</ul>` : `<p class="empty">선택한 태그·난이도 항목 없음</p>`}${deepHtml(t)}</section>${compHtml(t.id, "신화 상위 공격대 조합")}`;
     }
@@ -1281,7 +1362,7 @@ async function pvpHubPage() {
     const team = PVP_TEAM(st.br);
     const table = `<div class="tbl"><table class="rtab"><thead><tr><th class="num">#</th><th>전문화</th><th>상위 ${b ? b.top : 0}명 중</th>${team ? "" : '<th class="num">순위 인원</th><th class="num">최고</th><th class="num">중앙값</th>'}</tr></thead><tbody>${L.map(({ s, v }, i) => `<tr${saved && saved.id === s.id ? ' class="me"' : ""}><td class="num">${i + 1}</td><td><a class="spl" href="${pvpUrl(s.id, `?br=${st.br}&smp=${st.smp}`)}">${icon(s, 18)} ${esc(specName(s))}</a></td><td><span class="sbar"><i style="width:${Math.min(100, share(s.id) * 4)}%"></i></span> <b>${v.n}</b>명 <span class="muted">${pctTxt(Math.round(share(s.id) * 10) / 10)}</span></td>${team ? "" : `<td class="num">${(v.total || 0).toLocaleString()}</td><td class="num">${v.best || "—"}</td><td class="num">${v.med || "—"}</td>`}</tr>`).join("")}</tbody></table></div>`;
     const rows = (R.rows || []).slice(0, 100);
-    const ladder = rows.length ? `<div class="tbl"><table class="rtab"><thead><tr><th class="num">순위</th><th class="num">점수</th><th>캐릭터</th><th>전문화</th><th>영웅 특성</th><th class="num">승/판</th></tr></thead><tbody>${rows.map(r => { const s = BYID[r[5]]; const h = s && r[6] ? heroOf(s, r[6]) : null; return `<tr><td class="num">${r[0]}</td><td class="num"><b>${r[1]}</b></td><td><a href="${armoryUrl(r[4], r[3], r[2])}" target="_blank" rel="noopener">${esc(r[2])}</a> <span class="rs">${pflag(r[4])} ${esc(r[3])}</span></td><td>${s ? `<a class="spl" href="${pvpUrl(s.id, `?br=${st.br}&smp=${st.smp}`)}">${icon(s, 16)} ${esc(specName(s))}</a>` : '<span class="muted">—</span>'}</td><td>${h ? esc(heroName(h)) : '<span class="muted">—</span>'}</td><td class="num">${r[7]}/${r[8]}</td></tr>`; }).join("")}</tbody></table></div>` : `<p class="empty">${esc(PVP_SMP.find(x => x[0] === st.smp)[1])} ${brName(st.br)} 순위 기록이 없습니다.</p>`;
+    const ladder = rows.length ? `<div class="tbl"><table class="rtab"><thead><tr><th class="num">순위</th><th class="num">점수</th><th>캐릭터</th><th>전문화</th><th>영웅 특성</th><th class="num">승/판</th></tr></thead><tbody>${rows.map(r => { const s = BYID[r[5]]; const h = s && r[6] ? heroOf(s, r[6]) : null; return `<tr><td class="num">${r[0]}</td><td class="num"><b>${r[1]}</b></td><td><a href="${armoryUrl(r[4], r[3], r[2])}" target="_blank" rel="noopener" translate="no">${esc(r[2])}</a> <span class="rs" translate="no">${pflag(r[4])} ${esc(r[3])}</span></td><td>${s ? `<a class="spl" href="${pvpUrl(s.id, `?br=${st.br}&smp=${st.smp}`)}">${icon(s, 16)} ${esc(specName(s))}</a>` : '<span class="muted">—</span>'}</td><td>${h ? esc(heroName(h)) : '<span class="muted">—</span>'}</td><td class="num">${r[7]}/${r[8]}</td></tr>`; }).join("")}</tbody></table></div>` : `<p class="empty">${esc(PVP_SMP.find(x => x[0] === st.smp)[1])} ${brName(st.br)} 순위 기록이 없습니다.</p>`;
     const tiers = (M.tiers || []).filter((t, i, a) => a.findIndex(x => x.en === t.en) === i).sort((x, y) => (y.min || 0) - (x.min || 0));
     // 전문화 고르기: 역할마다 지금 모드·표본의 상위권 비율 순위
     // 그 역할이 상위권에 한 명도 없으면(예: 1인 조합전 탱커) 전문화별 순위표에 오른 인원 비율로 매긴다
@@ -1343,7 +1424,7 @@ async function pvpSpecPage() {
       <p class="note">게임에서 특성 창(N) → 빌드 목록 → 가져오기 → 붙여넣기. ${team ? `${brName(st.br)} 상위권 중 이 전문화 ${d.n}명` : `이 전문화 ${brName(st.br)} 상위 ${d.n}명`}의 특성 코드를 영웅 특성별로 모아, 다른 사람들 코드와 특성이 가장 많이 겹치는 실제 코드를 골랐습니다(평균 일치: 그 코드와 나머지 사람들 사이에서 같은 특성의 비율). 사람 수가 많은 영웅 특성부터 보여 줍니다. PvP 특성은 코드에 들어 있지 않으니 아래 표를 보고 고르세요.</p></section>` : "";
     const pv = d && d.pvp ? Object.entries(d.pvp) : [];
     const pvpSec = pv.length ? `<section class="boss"><h3><span>PvP 특성</span><small>채택률</small></h3><div class="tbl"><table class="rtab"><thead><tr><th>특성</th><th>채택</th></tr></thead><tbody>${pv.slice(0, 10).map(([id, x]) => `<tr><td>${x.spell ? `<a href="https://www.wowhead.com/${lang === "ko" ? "ko/" : ""}spell=${x.spell}" target="_blank" rel="noopener">${esc(lang === "ko" && x.ko ? x.ko : x.en)}</a>` : esc(lang === "ko" && x.ko ? x.ko : x.en)}</td><td><span class="sbar"><i style="width:${x.n / d.n * 100}%"></i></span> ${Math.round(x.n / d.n * 100)}% <span class="muted">(${x.n}/${d.n})</span></td></tr>`).join("")}</tbody></table></div><p class="note">PvP 특성 칸 3개 중 고른 비율. 이름은 게임 데이터(블리자드 API 한국어·영어)입니다.</p></section>` : "";
-    const topSec = d && d.top && d.top.length ? `<section class="boss"><h3><span>상위 캐릭터</span><small>${esc(brName(st.br))}</small></h3><div class="tbl"><table class="rtab"><thead><tr><th class="num">#</th><th class="num">점수</th><th>캐릭터</th><th>영웅 특성</th><th class="num">승/판</th></tr></thead><tbody>${d.top.map((r, i) => { const h = r[4] ? heroOf(s, r[4]) : null; return `<tr><td class="num">${i + 1}</td><td class="num"><b>${r[0]}</b></td><td><a href="${armoryUrl(r[3], r[2], r[1])}" target="_blank" rel="noopener">${esc(r[1])}</a> <span class="rs">${pflag(r[3])} ${esc(r[2])}</span></td><td>${h ? esc(heroName(h)) : '<span class="muted">—</span>'}</td><td class="num">${r[5]}/${r[6]}</td></tr>`; }).join("")}</tbody></table></div></section>` : "";
+    const topSec = d && d.top && d.top.length ? `<section class="boss"><h3><span>상위 캐릭터</span><small>${esc(brName(st.br))}</small></h3><div class="tbl"><table class="rtab"><thead><tr><th class="num">#</th><th class="num">점수</th><th>캐릭터</th><th>영웅 특성</th><th class="num">승/판</th></tr></thead><tbody>${d.top.map((r, i) => { const h = r[4] ? heroOf(s, r[4]) : null; return `<tr><td class="num">${i + 1}</td><td class="num"><b>${r[0]}</b></td><td><a href="${armoryUrl(r[3], r[2], r[1])}" target="_blank" rel="noopener" translate="no">${esc(r[1])}</a> <span class="rs" translate="no">${pflag(r[3])} ${esc(r[2])}</span></td><td>${h ? esc(heroName(h)) : '<span class="muted">—</span>'}</td><td class="num">${r[5]}/${r[6]}</td></tr>`; }).join("")}</tbody></table></div></section>` : "";
     const sum = b ? `<p class="rrec"><b>${esc(s.koFull)}</b>: ${esc(brName(st.br))} ${team ? `상위 ${b.top}명 중` : `상위 ${b.top}명(컷 ${b.cutoff}점) 중`} <b>${inTop}명</b>${b.top ? ` (${pctTxt(Math.round(inTop / b.top * 1000) / 10)})` : ""} · ${ROSTER.roles[s.role].ko} ${roleRank}위${d && !team && d.total != null ? ` · 순위 인원 ${d.total.toLocaleString()}명, 최고 ${d.best || "—"}점` : ""}</p>` : "";
     const none = !d || !d.n ? `<p class="empty">${esc(PVP_SMP.find(x => x[0] === st.smp)[1])} ${brName(st.br)}에서 이 전문화의 상위권 기록이 없습니다.</p>` : "";
     document.getElementById("main").innerHTML = `${sum}${none}${heroSec}${builds}${pvpSec}${pvpStratHtml(s, St, MSP, P)}${topSec}`;
@@ -1445,7 +1526,7 @@ async function rankPage() {
     const comp = KRS() || CNS() || (XCN() && !reg) ? (KRS() && all.length < (st.by === "spec" ? STOP() : T.top || 500) ? `<p class="comp sub">한국 순위에 점수가 있는 캐릭터가 ${all.length}명뿐입니다. 아래쪽은 점수가 낮은 캐릭터라 비율은 참고만 하세요.</p>` : "") + compLine(rows.length, [...head.map(k => [label(k)[0], cnt[k], 1]), ...(tail.length ? [[`그 밖의 ${tail.length}개 전문화`, tail.reduce((x, k) => x + cnt[k], 0), 1]] : []), ...rest.map(k => [label(k)[0], cnt[k], 1])], lead) : reg && !rows.length ? `<p class="comp">이 순위 상위 ${all.length}명 안에 ${regName(reg)} 캐릭터가 없습니다.</p>` : (reg && rows.length < 30 ? `<p class="comp sub">${reg === "!cn" ? "중국을 빼면" : regName(reg) + "은"} 상위 ${all.length}명 중 ${rows.length}명뿐이라 비율은 참고만 하세요.</p>` : "") + compLine(rows.length, [...head.map(k => [label(k)[0], cnt[k], 1]), ...(tail.length ? [[`그 밖의 ${tail.length}개 전문화`, tail.reduce((x, k) => x + cnt[k], 0), 1]] : []), ...rest.map(k => [label(k)[0], cnt[k], 1])], lead);
     const shown = filter ? rows.filter(r => kOf(r) === filter) : rows;
     const regIx = new Map(rows.map((r, i) => [r, i + 1]));
-    const tr = r => `<tr><td class="rk">${r[0]}${XCN() ? `<span class="rs">중국 제외 ${sepIx.get(r)}위</span>` : reg && !KRS() ? `<span class="rs">${esc(regName(reg))} ${regIx.get(r)}위</span>` : ""}</td><td><a href="https://raider.io${esc(r[5])}" target="_blank" rel="noopener">${esc(r[2])}</a><span class="rs">${flag(r[4])} ${esc(r[3])}</span></td><td><span class="dot" style="--cls:${color[kOf(r)]}"></span>${esc(label(r[6])[0])}</td><td class="num">${Number(r[1]).toFixed(1)}</td></tr>`;
+    const tr = r => `<tr><td class="rk">${r[0]}${XCN() ? `<span class="rs">중국 제외 ${sepIx.get(r)}위</span>` : reg && !KRS() ? `<span class="rs">${esc(regName(reg))} ${regIx.get(r)}위</span>` : ""}</td><td><a href="https://raider.io${esc(r[5])}" target="_blank" rel="noopener" translate="no">${esc(r[2])}</a><span class="rs" translate="no">${flag(r[4])} ${esc(r[3])}</span></td><td><span class="dot" style="--cls:${color[kOf(r)]}"></span>${esc(label(r[6])[0])}</td><td class="num">${Number(r[1]).toFixed(1)}</td></tr>`;
     const colName = st.by === "spec" ? "영웅 특성" : "전문화";
     return `${KRS() || CNS() ? "" : regRow}${rows.length ? bar : ""}${comp}${leg}
       <table class="rtab"><thead><tr><th>${KRS() ? "한국 순위" : CNS() ? "중국 순위" : reg || XCN() ? "세계 순위" : "순위"}</th><th>캐릭터</th><th>${colName}</th><th class="num">점수</th></tr></thead><tbody>${shown.map(tr).join("")}</tbody></table>
@@ -1541,7 +1622,7 @@ function selectPage() {
         ${step2}</section>
       <section class="step${sp ? "" : " locked"}" id="st-hero" ${sp ? "" : 'aria-disabled="true"'}><h2>영웅 특성. <span>나중에 바꿔도 됩니다</span></h2><p class="hint">공략의 영웅 카드와 스킬 탭이 이 선택을 따릅니다.</p>
         ${sp ? `${sp.hero500 ? smpRow() : ""}<div class="tiles">${sp.heroes.map(hh => `<button class="tile" type="button" data-hero="${hh.slug}"><span><span class="tt">${esc(hh.ko)}</span><span class="ts">${esc(hh.en)}${hh.slug === defaultHero(sp) && sp.defaultHero ? " · 쐐기 추천" : ""}${heroTop(sp, hh.slug) ? `<br>${SL()}쐐기 상위 ${STOP()}명${SX()} 기준 <b>${heroTop(sp, hh.slug).pct}%</b> (${heroTop(sp, hh.slug).c}명)` : ""}</span></span></button>`).join("")}</div>${sp.hero500 ? `<div class="sharenote">${heroComp(sp)}</div>` : ""}<p class="later">${sp.status === "ready" ? `<a class="cmplink" href="${compareUrl(sp.id)}">두 영웅 특성 비교 ›</a> ` : ""}${sp.hero500 ? `<a class="cmplink" href="${rankUrl("spec=" + sp.id + SQ())}">순위표 ›</a> ` : ""}<a class="cmplink" href="${raidUrl(sp.id)}" data-raid="1">레이드 공략 ›</a> <button class="pill gray" type="button" data-hero="${defaultHero(sp)}">나중에 고를게요 (${esc(ro(heroOf(sp, defaultHero(sp)).ko))} 시작)</button></p>` : ""}</section>
-      <p class="s1-foot">고른 전문화는 이 기기에만 저장됩니다. 나중에 공략 위쪽 <b>전문화 변경</b>으로 바꿀 수 있습니다. 전체 목록은 <a href="${BASE}specs/">전문화 목록</a>, 상위 500명은 <a href="${BASE}rank/">쐐기 순위표</a>에 있습니다.<br>전문화 목록과 한글 이름은 게임 데이터(${esc(ROSTER.meta.gameBuild)}) 기준입니다.<br>이 사이트는 비공식 팬 제작 공략 사이트이며 Blizzard Entertainment와 관련이 없거나 후원받지 않았습니다. World of Warcraft, Warcraft, Blizzard Entertainment는 미국 및/또는 다른 국가에서 Blizzard Entertainment, Inc.의 상표 또는 등록상표입니다.</p>
+      <p class="s1-foot">고른 전문화는 이 기기에만 저장됩니다. 나중에 공략 위쪽 <b>전문화 변경</b>으로 바꿀 수 있습니다. 전체 목록은 <a href="${BASE}specs/">전문화 목록</a>, 상위 500명은 <a href="${BASE}rank/">쐐기 순위표</a>에 있습니다.<br>전문화 목록과 한글 이름은 게임 데이터(${esc(ROSTER.meta.gameBuild)}) 기준입니다.<br>${UI === "en" ? '<a href="?ui=ko" data-ui="ko" translate="no" lang="ko">한국어</a>' : '<a href="?ui=en" data-ui="en" lang="en">English version</a>'} · 이 사이트는 비공식 팬 제작 공략 사이트이며 Blizzard Entertainment와 관련이 없거나 후원받지 않았습니다. World of Warcraft, Warcraft, Blizzard Entertainment는 미국 및/또는 다른 국가에서 Blizzard Entertainment, Inc.의 상표 또는 등록상표입니다.</p>
       </div>`;
   };
   const syncUrl = () => {
@@ -1609,8 +1690,9 @@ function notFoundPage() {
 }
 
 // ---------- 시작 ----------
-J("data/roster.json").then(r => {
+Promise.all([J("data/roster.json"), UI === "en" && ls.get("wg:i18nraw") !== "1" ? J0("assets/i18n.en.json").then(startI18n).catch(() => {}) : null]).then(([r]) => {
   indexRoster(r);
+  rosterI18n(r);
   paintHeader();
   const run = { sheet: sheetPage, guide: guidePage, compare: comparePage, raid: raidPage, raidhub: raidHubPage, pvp: pvpSpecPage, pvphub: pvpHubPage, pvpmap: pvpMapPage, rank: rankPage, select: selectPage, specs: specsPage, notfound: notFoundPage }[CFG.page];
   return run && run();

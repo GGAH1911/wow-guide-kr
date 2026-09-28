@@ -1,0 +1,87 @@
+{
+ "id": "death-knight/frost",
+ "arena": [
+  "[생존기] Anti-Magic Shell absorbs magic damage and blocks harmful magic effects for 5 sec. Use it when an enemy caster sends magic CC or magic burst.",
+  "[분담] With Spellwarden you can cast Anti-Magic Shell on allies and its cooldown drops by 10 sec. Put it on your healer when magic CC is incoming.",
+  "[생존기] Icebound Fortitude makes you immune to stuns and reduces all damage taken by 30% for 8 sec. Pop it right before the enemy stun chain starts.",
+  "[해제] Lichborne makes you immune to charm, fear and sleep for 10 sec. Pop it early when the enemy is about to fear.",
+  "[제어] Strangulate replaces Asphyxiate and silences a target up to 20 yds away for 4 sec. Put it on the enemy healer and burst with Pillar of Frost meanwhile.",
+  "[차단] Mind Freeze interrupts a cast from 15 yds and locks that school for 5 sec. Save it for the enemy healer's heals.",
+  "[제어] Blinding Sleet disorients enemies in front of you for 5 sec, then slows them by 50% for 6 sec, but damage can break it. Use it on enemy DPS your team isn't hitting.",
+  "[우선 처치] Death Grip pulls a target up to 30 yds away to you. Pull your kill target or the enemy healer out from behind a pillar into line of sight."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 5-6 DPS and healers carry the flag first. Death Grip the enemy flag carrier toward your team to help secure the kill.",
+  "[위치] Death's Advance increases movement speed by 35% for 10 sec, keeps slows from dropping you below normal speed, and grants knockback immunity. Pop it near edges or cart circles so you don't get knocked off.",
+  "[제어] Deathchill was picked by 25 of 46 Battleground Blitz players and adds a 4 sec root to Remorseless Winter and Chains of Ice. Hold the enemy flag carrier or stop enemies entering a base.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Icebound Fortitude and Anti-Magic Shell right before the burst.",
+  "[광역 피해] Frostwyrm's Fury damages all enemies in a 40 yd line, stuns for 3 sec and slows by 50% for 10 sec. Use it on enemies stacked on a base or cart.",
+  "[제어] Enemies disoriented by Blinding Sleet can't be knocked back. Use it on enemies trying to capture a base, but don't overlap it with your team's knockbacks."
+ ],
+ "pvpTalents": "Strangulate, picked by 36 of the top 37 Solo Shuffle and 43 of 46 Battleground Blitz players, replaces Asphyxiate with a 4 sec silence. Spellwarden, picked by 30 of 37 Solo Shuffle and 31 of 46 Battleground Blitz players, lets you cast Anti-Magic Shell on allies. Deathchill, picked by 25 of 46 Battleground Blitz players, adds a 4 sec root to Remorseless Winter and Chains of Ice.",
+ "tips": {
+  "strangulate": "47476",
+  "spellwarden": "410320",
+  "deathchill": "204080",
+  "asphyxiate": "221562"
+ },
+ "spells": {
+  "47476": {
+   "n": "Strangulate",
+   "i": "spell_shadow_soulleech_3",
+   "m": "Tank Specs – Row 1 PvP Talent · Replaces Asphyxiate · 20 yd range · Instant · 45 sec cooldown",
+   "d": "Shadowy tendrils constrict an enemy's throat, silencing them for 4 sec."
+  },
+  "204080": {
+   "n": "Deathchill",
+   "i": "spell_frost_frostarmor",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Your Remorseless Winter and Chains of Ice apply Deathchill, rooting the target in place for 4 sec.\n\nRemorseless Winter\nAll targets within 8 yards are afflicted with Deathchill when Remorseless Winter is cast.\n\nChains of Ice\nWhen you Chains of Ice a target already afflicted by your Chains of Ice they will be afflicted by Deathchill."
+  },
+  "221562": {
+   "n": "Asphyxiate",
+   "i": "ability_deathknight_asphixiate",
+   "m": "Talent · 20 yd range · Instant · 45 sec cooldown",
+   "d": "Lifts the enemy target off the ground, crushing their throat with dark energy and stunning them for 5 sec."
+  },
+  "410320": {
+   "n": "Spellwarden",
+   "i": "spell_shadow_antimagicshell",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Anti-Magic Shell is now usable on allies and its cooldown is reduced by 10 sec."
+  }
+ },
+ "spellsKo": {
+  "47476": {
+   "n": "질식시키기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 어둠의 질식을(를) 대신함 · 20 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "어둠의 촉수로 대상의 목을 졸라 4초 동안 침묵하도록 만듭니다."
+  },
+  "204080": {
+   "n": "죽음의 한기",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "냉혹한 겨울과 얼음 결계가 죽음의 한기 효과를 적용하여 대상을 4초 동안 이동 불가 상태로 만듭니다.\n\n냉혹한 겨울\n냉혹한 겨울 시전 시 8미터 내의 모든 대상에게 죽음의 한기 효과를 적용합니다.\n\n얼음 결계\n이미 얼음 결계가 적용된 대상에게 얼음 결계를 사용하면 대상에게 죽음의 한기 효과를 적용합니다."
+  },
+  "221562": {
+   "n": "어둠의 질식",
+   "m": "특성 · 20 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "암흑 마력으로 적 대상을 지면에서 들어올리고 목을 휘감아 5초 동안 기절시킵니다."
+  },
+  "410320": {
+   "n": "주문 수호자",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "아군에게 대마법 보호막을 시전할 수 있습니다. 또한 재사용 대기시간이 10초만큼 감소합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 죽음의 인도자 36·종말의 기수 1로 쏠렸지만 한쪽 전용 기술(Reaper's Mark·Death Charge 등)은 쓰지 않음",
+   "투기장 상위권 표본이 3v3 2~3명·2v2(한국) 3명뿐이라 투기장 줄은 1인 조합전(37명) 채택률과 일반 원칙 기준",
+   "Death Grip 툴팁상 PvP 전투에서는 재사용 대기시간이 10초 늘어남"
+  ]
+ }
+}

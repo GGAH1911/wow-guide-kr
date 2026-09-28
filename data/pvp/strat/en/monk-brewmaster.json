@@ -1,0 +1,85 @@
+{
+ "id": "monk/brewmaster",
+ "arena": [
+  "[제어] Double Barrel makes your next Keg Smash deal 50% more damage and stun all targets hit for 3 sec. Lock down an enemy DPS and healer together when they stand close.",
+  "[제어] Paralysis incapacitates a target within 20 yds but damage can break it. Use it on the enemy healer your team isn't hitting; Leg Sweep stuns enemies within 6 yds for 3 sec.",
+  "[차단] Spear Hand Strike interrupts a cast and locks that school for 5 sec. Save it for the enemy healer's heals.",
+  "[생존기] Fortifying Brew turns your skin to stone for 15 sec, and with Microbrew its cooldown drops by 50%. Use it every time the enemy pops burst cooldowns.",
+  "[제어] With Hot Trub, Purifying Brew splits 20% of the purified Stagger damage among nearby enemies, and after purifying damage equal to your max health your next Breath of Fire incapacitates for 4 sec. Stay on melee DPS and use Purifying Brew often.",
+  "[위치] Ring of Peace knocks enemies entering the ring out of it for 5 sec. Drop it in the path of melee DPS chasing your healer.",
+  "[분담] Tiger's Lust removes all roots and slows from an ally and increases their movement speed by 70% for 6 sec. Use it on your rooted healer or DPS."
+ ],
+ "bg": [
+  "[참고] In Battleground Blitz there are 0-1 tanks, and slow tanks need help carrying the flag. With Niuzao's Essence, Roll, Purifying Brew and Fortifying Brew remove all slows so you can keep carrying.",
+  "[제어] Ring of Peace knocks back enemies entering the ring, but feared or disoriented targets can't be knocked back. Drop it on the path enemies without CC on them take into a base or toward your flag carrier.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, clear built-up Stagger with Purifying Brew and cut damage taken with Celestial Infusion absorbs.",
+  "[제어] Keg Smash with Double Barrel stuns all enemies hit for 3 sec. Use it on enemies grouped to capture a base or on the pack escorting the enemy flag carrier.",
+  "[분담] Tiger's Lust removes roots and slows from an ally and makes them 70% faster for 6 sec. Use it on your rooted flag carrier."
+ ],
+ "pvpTalents": "Double Barrel, picked by 23 of the top 27 Solo Shuffle and 30 of 38 Battleground Blitz players, makes your next Keg Smash stun all targets hit for 3 sec. Hot Trub, picked by 20 of 27 Solo Shuffle players, turns damage purified by Purifying Brew back on enemies and adds an incapacitate to Breath of Fire. Microbrew, picked by 26 of 38 Battleground Blitz players, halves Fortifying Brew's cooldown.",
+ "tips": {
+  "double barrel": "202335",
+  "hot trub": "410346",
+  "microbrew": "202107",
+  "niuzao's essence": "232876"
+ },
+ "spells": {
+  "202107": {
+   "n": "Microbrew",
+   "i": "ability_monk_fortifyingale_new",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Reduces the cooldown of Fortifying Brew by 50%."
+  },
+  "202335": {
+   "n": "Double Barrel",
+   "i": "archaeology_5_0_emptykegofbrewfatherxinwoyin",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 45 sec cooldown",
+   "d": "Your next Keg Smash deals 50% additional damage, and stuns all targets it hits for 3 sec."
+  },
+  "232876": {
+   "n": "Niuzao's Essence",
+   "i": "inv_misc_beer_06",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Drinking a Purifying Brew, Celestial Brew, Fortifying Brew, or casting Roll will dispel all snares affecting you."
+  },
+  "410346": {
+   "n": "Hot Trub",
+   "i": "spell_brew_dark",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Purifying Brew deals 20% of cleared damage split among nearby enemies. After clearing 100% of your maximum health in Stagger damage, your next Breath of Fire incapacitates targets for 4 sec."
+  }
+ },
+ "spellsKo": {
+  "202107": {
+   "n": "식전주",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "강화주의 재사용 대기시간이 50%만큼 감소합니다."
+  },
+  "202335": {
+   "n": "이중 맥주통",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 45 초 재사용 대기시간",
+   "d": "다음 맥주통 휘두르기의 공격력이 50%만큼 증가하고, 적중한 모든 대상을 3초 동안 기절시킵니다."
+  },
+  "232876": {
+   "n": "니우짜오의 정수",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "정화주, 천신주, 강화주를 마시거나 구르기를 시전하면 자신에게 걸린 모든 감속 효과가 제거됩니다."
+  },
+  "410346": {
+   "n": "뜨거운 맥즙",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "정화주 사용 시 주위의 적에게 정화한 피해의 20%를 나누어 입힙니다. 최대 생명력의 100%에 해당하는 시간차 피해를 정화하면 다음 불의 숨결이 대상을 4초 동안 행동 불가 상태로 만듭니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "투기장 상위권 표본이 3v3 1명·한국 3v3 2명·2v2 3명뿐이라 투기장 줄은 1인 조합전(27명) 채택률과 일반 원칙 기준",
+   "영웅 특성이 1인 조합전 조화의 종사 21·음영파 6, 전장 대공세 22·16으로 갈려 Flurry Strikes·Aspect of Harmony 등 한쪽 전용 기술은 쓰지 않음",
+   "쌍점이 든 Transcendence 전환 기술은 이름 규칙상 쓰지 않음"
+  ]
+ }
+}

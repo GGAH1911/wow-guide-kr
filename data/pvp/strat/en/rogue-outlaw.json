@@ -1,0 +1,111 @@
+{
+ "id": "rogue/outlaw",
+ "arena": [
+  "[생존기] Cloak of Shadows instantly removes all harmful spell effects and resists harmful spells for 5 sec. Use it when enemy casters send CC spells or magic burst.",
+  "[생존기] With Preemptive Maneuver, Feint grants an extra 25% damage reduction while you're stunned and costs 30% less Energy. Pop Feint right before you get stunned.",
+  "[생존기] Evasion increases your dodge chance by 100% for 10 sec. Use it when melee DPS pop burst cooldowns and get on you.",
+  "[제어] Kidney Shot lasts longer with more combo points, up to an 8 sec stun. Lock down the enemy healer and pop Adrenaline Rush to burst meanwhile.",
+  "[제어] Gouge incapacitates for 4 sec from the target's front and Blind disorients for 1 min, but damage can break both. Put them on the enemy healer and have your team attack another target.",
+  "[분담] Smoke Bomb creates an 8 yd smoke cloud around you for 5 sec, and enemies can't target into or out of it. Drop it next to your kill target so the enemy healer outside can't heal them.",
+  "[차단] Kick interrupts a cast and locks that school for 6 sec. Save it for the enemy healer's heals.",
+  "[제어] Dismantle disarms an enemy's weapon and shield for 5 sec. Use it when weapon-wielding melee DPS pop their burst cooldowns."
+ ],
+ "bg": [
+  "[참고] Stealth classes are good at base defense. Hide in Stealth next to the base flag you're guarding, then Cheap Shot enemies that come to capture for a 6 sec stun.",
+  "[참고] Per map rules, a flag carrier that stealths drops the flag. Don't use Vanish or Stealth while holding the flag.",
+  "[위치] Grappling Hook pulls you to a spot up to 40 yds away. Use it to chase an enemy flag carrier who escaped onto a roof or upper floor, or to quickly support a base under attack.",
+  "[분담] Shroud of Concealment stealths allies within 30 yds for 15 sec. Use it to lead a small group into an enemy base or cart unseen, and Sap an out-of-combat defender for 1 min.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Feint, Evasion and Cloak of Shadows right before the burst.",
+  "[제어] Enemies disoriented by Blind can't be knocked back. Use it on enemies trying to capture a base, but don't overlap it with your team's knockbacks."
+ ],
+ "pvpTalents": "Smoke Bomb, picked by 39 of the top 41 Solo Shuffle players and all 33 Battleground Blitz players, creates an 8 yd smoke cloud enemies can't target into or out of. Dismantle, picked by 33 of 41 Solo Shuffle and 27 of 33 Battleground Blitz players, disarms an enemy's weapon and shield for 5 sec. Preemptive Maneuver, picked by 25 of 33 Battleground Blitz players, adds 25% damage reduction to Feint while stunned.",
+ "tips": {
+  "smoke bomb": "212182",
+  "dismantle": "207777",
+  "preemptive maneuver": "1219122",
+  "cheap shot": "1833",
+  "sap": "6770",
+  "gouge": "1776"
+ },
+ "spells": {
+  "1776": {
+   "n": "Gouge",
+   "i": "ability_gouge",
+   "m": "Talent · 25 Energy · Melee Range · Instant · 25 sec cooldown",
+   "d": "Gouges the eyes of an enemy target, incapacitating for 4 sec. Damage may interrupt the effect.\n\nMust be in front of your target.\n\nAwards 1 combo points."
+  },
+  "1833": {
+   "n": "Cheap Shot",
+   "i": "ability_cheapshot",
+   "m": "40 Energy · Melee Range · Instant · 12 sec cooldown · 1 Charge · Requires Stealth",
+   "d": "Stuns the target for 6 sec.\n\nAwards 1 combo point."
+  },
+  "6770": {
+   "n": "Sap",
+   "i": "ability_sap",
+   "m": "35 Energy · 10 yd range · Instant · Requires Stealth",
+   "d": "Incapacitates a target not in combat for 1 min. Only works on Humanoids, Beasts, Demons, and Dragonkin. Damage will revive the target. Limit 1."
+  },
+  "207777": {
+   "n": "Dismantle",
+   "i": "ability_rogue_dismantle",
+   "m": "Tank Specs – Row 1 PvP Talent · 15 Energy · Melee Range · Instant · 45 sec cooldown",
+   "d": "Disarm the enemy, preventing the use of any weapons or shield for 5 sec."
+  },
+  "212182": {
+   "n": "Smoke Bomb",
+   "i": "ability_rogue_smoke",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 3 min cooldown",
+   "d": "Creates a cloud of thick smoke in an 8 yard radius around the Rogue for 5 sec. Enemies are unable to target into or out of the smoke cloud."
+  },
+  "1219122": {
+   "n": "Preemptive Maneuver",
+   "i": "ability_rogue_feint",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Feint decreases your damage taken by an additional 25% while stunned and its energy cost is reduced by 30%."
+  }
+ },
+ "spellsKo": {
+  "1776": {
+   "n": "후려치기",
+   "m": "특성 · 기력 25 · 근접 사정거리 · 즉시 · 25 초 재사용 대기시간",
+   "d": "적의 눈을 공격하여 4초 동안 행동 불가 상태로 만듭니다. 대상이 피해를 입으면 효과가 사라질 수 있습니다.\n\n대상의 앞에 있어야 합니다.\n\n연계 점수 1점을 얻습니다."
+  },
+  "1833": {
+   "n": "비열한 습격",
+   "m": "기력 40 · 근접 사정거리 · 즉시 · 12 초 재사용 대기시간 · 1회 사용 가능 · 은신 필요",
+   "d": "적을 6초 동안 기절시킵니다.\n\n연계 점수 1점을 얻습니다."
+  },
+  "6770": {
+   "n": "혼절시키기",
+   "m": "기력 35 · 10 야드 사정거리 · 즉시 · 은신 필요",
+   "d": "비전투 상태의 적을 공격하여 1분 동안 행동 불가 상태로 만듭니다. 인간형, 야수, 악마, 용족에게만 효과가 있습니다. 대상이 피해를 입으면 깨어납니다. 대상은 하나로 제한됩니다."
+  },
+  "207777": {
+   "n": "장비 분해",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 기력 15 · 근접 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "적을 무장 해제시켜 5초 동안 무기와 방패를 사용하지 못하게 합니다."
+  },
+  "212182": {
+   "n": "연막탄",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 3 분 재사용 대기시간",
+   "d": "도적 주위로 8미터 반경에 5초 동안 연막을 생성합니다. 연막 밖의 적은 안쪽의 대상을, 연막 안의 적은 바깥쪽의 대상을 대상으로 지정할 수 없습니다."
+  },
+  "1219122": {
+   "n": "선제 조치",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "교란이 기절한 동안 받는 피해를 추가로 25%만큼 감소시키며, 기력 소모량도 30%만큼 감소합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 기만자(Trickster) 30·운명결속 11, 전장 대공세 운명결속 25·기만자 8로 갈려 한쪽 전용 기술(Unseen Blade·Hand of Fate 등)은 쓰지 않음",
+   "평점제 전장 표본은 3명뿐이라 전장 줄은 전장 대공세 채택률과 지도 공략 기준",
+   "깃발 운반 중 은신 시 깃발이 떨어진다는 사실은 전쟁노래 협곡·쌍둥이 봉우리 지도 공략 기준"
+  ]
+ }
+}

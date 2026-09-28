@@ -1,0 +1,98 @@
+{
+ "id": "shaman/restoration",
+ "arena": [
+  "[분담] Grounding Totem redirects all harmful single-target spells aimed at party members within 30 yds to itself for 3 sec, but not AoE spells. Drop it right before an enemy single-target CC cast finishes.",
+  "[생존기] Astral Shift reduces damage taken by 40% for 12 sec. Pop it first when you start getting focused.",
+  "[차단] Wind Shear interrupts a cast from 30 yds and locks that school for 4 sec. Save it for the enemy healer's heals.",
+  "[제어] Capacitor Totem stuns enemies within 8 yds for 3 sec after 2 sec, and with Lightning Lasso you stun a target within 20 yds for 5 sec while moving. Lock down the enemy healer in sync with your team's burst.",
+  "[위치] Static Field Totem creates an electric circuit enemies can't pass for 6 sec. Drop it between you and melee DPS chasing you to block their path.",
+  "[해제] Purify Spirit removes all magic and curse effects from an ally, and Purge removes one beneficial magic effect from an enemy. Dispel CC on allies first and strip enemy protection effects when you have time.",
+  "[광역 피해] Spirit Link Totem reduces damage taken by allies within 10 yds by 10% for 6 sec and evenly redistributes their health every sec. Drop it next to an ally when burst is focused on them.",
+  "[위치] Spiritwalker's Grace lets you cast Shaman spells while moving for 15 sec, and Ghost Wolf keeps your movement speed from dropping below 100%. Heal while breaking line of sight with pillars."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 2 healers, and on flag maps a durable, mobile healer is a good carrier. You can carry with Ghost Wolf and, if talented, Burrow, which makes you unattackable for 5 sec and breaks movement impairing effects.",
+  "[위치] Wind Rush Totem increases the movement speed of allies passing within 10 yds by 40% for 5 sec, for 15 sec. Drop it on the flag carrier path or on routes between bases.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Spread damage focused on one ally across nearby allies with Spirit Link Totem, which redistributes health rather than healing.",
+  "[제어] Static Field Totem creates a circuit enemies can't pass for 6 sec, and Capacitor Totem stuns enemies within 8 yds for 3 sec. Cut off enemies rushing a base or your flag carrier.",
+  "[분담] Grounding Totem pulls harmful single-target spells aimed at party members within 30 yds for 3 sec. Drop it next to your flag carrier when CC spells are incoming on them."
+ ],
+ "pvpTalents": "Grounding Totem, picked by 44 of the top 45 Solo Shuffle and 42 of 45 Battleground Blitz players, pulls harmful single-target spells aimed at party members for 3 sec. Static Field Totem, picked by 32 of 45 Battleground Blitz and 23 Solo Shuffle players, creates a circuit enemies can't pass for 6 sec. Master of the Elements, picked by 25 of 45 Solo Shuffle players, increases your next Healing Wave's healing by 30% per Lava Burst, stacking up to 2 times.",
+ "tips": {
+  "grounding totem": "204336",
+  "static field totem": "355580",
+  "lightning lasso": "305483",
+  "burrow": "409293",
+  "master of the elements": "462375"
+ },
+ "spells": {
+  "204336": {
+   "n": "Grounding Totem",
+   "i": "spell_nature_groundingtotem",
+   "m": "Tank Specs – Row 1 PvP Talent · 1.18% of base mana · Instant · 30 sec cooldown",
+   "d": "Summons a totem at your feet that will redirect all harmful spells cast within 30 yards on a nearby party or raid member to itself. Will not redirect area of effect spells. Lasts 3 sec."
+  },
+  "305483": {
+   "n": "Lightning Lasso",
+   "i": "shaman_pvp_lightninglasso",
+   "m": "Tank Specs – Row 1 PvP Talent · 20 yd range · Instant · 45 sec cooldown",
+   "d": "Grips the target in lightning, stunning and dealing (3850% of Spell Power) Nature damage over 5 sec while the target is lassoed. Can move while channeling."
+  },
+  "355580": {
+   "n": "Static Field Totem",
+   "i": "spell_shaman_stormtotem",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · 30 yd range · Instant · 1.5 min cooldown",
+   "d": "Summons a totem with 4% of your health at the target location for 6 sec that forms a circuit of electricity that enemies cannot pass through."
+  },
+  "409293": {
+   "n": "Burrow",
+   "i": "pvp_burrow",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 2 min cooldown",
+   "d": "Burrow beneath the ground, becoming unattackable, removing movement impairing effects, and increasing your movement speed by 50% for 5 sec.\n\nWhen the effect ends, enemies within 6 yards are knocked in the air and take [Spell Power * 6.6 * (1 + Versatility)] Physical damage."
+  },
+  "462375": {
+   "n": "Master of the Elements",
+   "i": "spell_nature_elementalabsorption",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Casting Lava Burst increases the healing of your next Healing Wave by 30%, stacking up to 2 times.\n\nHealing Wave applies Flame Shock to a nearby enemy when empowered by Master of the Elements."
+  }
+ },
+ "spellsKo": {
+  "204336": {
+   "n": "마법흡수 토템",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1.18% (기본 마나 중) · 즉시 · 30 초 재사용 대기시간",
+   "d": "자신의 위치에 토템을 소환합니다. 토템은 주위 30미터 내의 파티원 또는 공격대원을 대상으로 시전되는 모든 해로운 주문을 토템에 이전합니다. 광역 주문에는 효과가 없습니다. 3초 동안 지속됩니다."
+  },
+  "305483": {
+   "n": "번개 올가미",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 20 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "대상을 번개로 붙잡아 기절시키고 대상이 붙잡혀 있는 동안 5초에 걸쳐 (주문력의 3850%)의 자연 피해를 입힙니다. 정신 집중하는 동안 이동할 수 있습니다."
+  },
+  "355580": {
+   "n": "전자기장 토템",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 30 야드 사정거리 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "대상 위치에 6초 동안 자신의 생명력의 4%에 해당하는 생명력을 지닌 토템을 소환합니다. 토템은 전류의 흐름을 형성하여 적이 통과하지 못하게 합니다."
+  },
+  "409293": {
+   "n": "잠복",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 2 분 재사용 대기시간",
+   "d": "땅속으로 잠복해 이동 방해 효과를 제거하고 5초 동안 공격받지 않는 상태가 되며 이동 속도가 50%만큼 증가합니다.\n\n효과가 끝나면 6미터 내의 적을 공중으로 날려 보내고 [주문력 * 6.6 * (1 + 유연성)]의 물리 피해를 입힙니다."
+  },
+  "462375": {
+   "n": "원소의 대가",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "용암 폭발 시전 시 다음 치유의 물결의 치유량이 30%만큼 증가합니다. 최대 2번까지 중첩됩니다.\n\n치유의 물결이 원소의 대가로 강화되면 시전 시 주위의 적에게 화염 충격을 겁니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 선견자 27·토템술사 18, 전장 대공세 토템술사 30·선견자 15로 갈려 Surging Totem·Ancestral Swiftness 등 한쪽 전용 기술은 쓰지 않음",
+   "Rain Dance(전장 대공세 45명 중 24명)는 Healing Rain을 바꾸는데 토템술사는 Healing Rain이 Surging Totem으로 대체되어 두 영웅 공통 운용으로 쓸 수 없어 줄에서 뺌",
+   "투기장 3v3 상위권 표본이 2명뿐이라 투기장 줄은 1인 조합전(45명)과 2v2(18명) 채택률 기준"
+  ]
+ }
+}

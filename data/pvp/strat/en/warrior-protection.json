@@ -1,0 +1,111 @@
+{
+ "id": "warrior/protection",
+ "arena": [
+  "[생존기] Shield Wall reduces all damage taken by 40% for 8 sec. Time it to when the enemy pops burst cooldowns.",
+  "[생존기] Spell Reflection reflects the first spell cast at you and reduces magic damage taken by 20% for 5 sec. Time it to an enemy caster's CC spell or big spell cast.",
+  "[차단] Pummel interrupts a cast and locks that school for 5 sec. Save it for the enemy healer's heals.",
+  "[제어] Storm Bolt stuns a target up to 20 yds away for 4 sec, and Shockwave stuns all enemies within 10 yds in front of you for 2 sec. Have your team burst while the enemy healer is locked down.",
+  "[분담] Intervene charges to an ally and intercepts melee and ranged attacks against them for 6 sec. Use it on a focused ally; with Safeguard it has 2 charges and adds 20% damage reduction.",
+  "[생존기] Demoralizing Shout reduces damage dealt by enemies within 10 yds for 8 sec, and with Morale Killer it reduces their damage to all targets, not just you. Use it when melee DPS are on you bursting.",
+  "[해제] Berserker Rage removes fear and some incapacitate effects and makes you immune for 6 sec. Break fear CC immediately.",
+  "[제어] Disarm disarms an enemy's weapon and shield for 5 sec. Use it when weapon-wielding melee DPS pop their burst cooldowns."
+ ],
+ "bg": [
+  "[참고] In 8-player Battleground Blitz groups there are 0-1 tanks; tanks can carry the flag but need help if they're slow. When carrying, gain distance with Heroic Leap or Dragon Charge, which replaces it.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, keep damage-reducing Ignore Pain and Shield Block up without gaps.",
+  "[분담] Bodyguard transfers 40% of the physical damage an ally takes to you and breaks if you're more than 20 yds apart. Use it while staying next to a healer carrying the flag.",
+  "[제어] Dragon Charge knocks back enemies along its path, but feared or disoriented targets can't be knocked back. Aim for enemies without CC on them to push them off a base or the flag carrier path.",
+  "[위치] Piercing Howl slows enemies within 12 yds by 70% for 8 sec and makes allies within 6 yds 30% faster for 4 sec. Use it to cut off enemies chasing the flag carrier.",
+  "[생존기] With Power Through Adversity, healing reduction effects can't be applied to you during Shield Wall. Pop Shield Wall when you're focused while under an enemy healing reduction debuff."
+ ],
+ "pvpTalents": "Morale Killer, picked by 25 of the top 29 Solo Shuffle and 24 of 37 Battleground Blitz players, reduces Demoralizing Shout's cooldown by 15 sec and extends its damage reduction to all targets. Power Through Adversity, picked by 27 of 37 Battleground Blitz players, prevents healing reduction effects during Shield Wall, and Dragon Charge, picked by 22, replaces Heroic Leap and knocks back enemies along its path.",
+ "tips": {
+  "morale killer": "199023",
+  "safeguard": "424654",
+  "disarm": "236077",
+  "bodyguard": "213871",
+  "dragon charge": "206572",
+  "power through adversity": "1234791"
+ },
+ "spells": {
+  "199023": {
+   "n": "Morale Killer",
+   "i": "ability_warrior_warcry",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Reduces the cooldown of Demoralizing Shout by 15 sec, and Demoralizing Shout now reduces the damage enemies deal to all targets, not just you."
+  },
+  "206572": {
+   "n": "Dragon Charge",
+   "i": "spell_warrior_dragoncharge",
+   "m": "Tank Specs – Row 1 PvP Talent · Replaces Heroic Leap · Instant · 45 sec cooldown · 1 Charge",
+   "d": "Run at high speed at a distance in front of you. All enemies in your path will take (70% of Attack Power) Physical damage and be knocked back."
+  },
+  "213871": {
+   "n": "Bodyguard",
+   "i": "ability_warrior_shieldguard",
+   "m": "Tank Specs – Row 1 PvP Talent · 10 yd range · Instant · 15 sec cooldown",
+   "d": "Protect an ally, causing 40% of all Physical damage they take to be transfered to you. When the target takes Physical damage, your Shield Slam cooldown has a 30% chance to be reset. Bodyguard is cancelled if the target is further than 20 yards from you. Lasts 1 min.\n\nOnly one target can be Bodyguarded at a time."
+  },
+  "236077": {
+   "n": "Disarm",
+   "i": "ability_warrior_disarm",
+   "m": "Tank Specs – Row 1 PvP Talent · Melee Range · Instant · 45 sec cooldown",
+   "d": "Disarm the enemy's weapons and shield for 5 sec. Disarmed creatures deal significantly reduced damage."
+  },
+  "424654": {
+   "n": "Safeguard",
+   "i": "ability_warrior_safeguard",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Intervene now has 2 charges and reduces the ally's damage taken by 20% for 5 sec.\n\nIntervene's cooldown is increased by 10 sec."
+  },
+  "1234791": {
+   "n": "Power Through Adversity",
+   "i": "ability_hunter_harass",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Second Wind reduces damage taken by 10% to 40%, with larger attacks being reduced by more.\n\nWhile Shield Wall is active, healing reductions do not apply to you."
+  }
+ },
+ "spellsKo": {
+  "199023": {
+   "n": "사기 저하",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "사기의 외침의 재사용 대기시간이 15초만큼 감소하고, 사기의 외침이 자신뿐 아니라 모든 대상이 적에게 입는 피해를 감소시킵니다."
+  },
+  "206572": {
+   "n": "용의 돌진",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 영웅의 도약을(를) 대신함 · 즉시 · 45 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "전방의 먼 거리를 빠른 속도로 달려갑니다. 이동 경로상의 모든 적에게 (전투력의 70%)의 물리 피해를 입히고 뒤로 밀쳐냅니다."
+  },
+  "213871": {
+   "n": "경호원",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 10 야드 사정거리 · 즉시 · 15 초 재사용 대기시간",
+   "d": "아군을 보호하여 받는 모든 물리 피해의 40%를 자신에게 이전합니다. 대상이 물리 피해를 받으면 방패 밀쳐내기의 재사용 대기시간이 30%의 확률로 초기화됩니다. 대상과 자신 사이의 거리가 20미터 이상 벌어지면 경호원의 효과가 취소됩니다. 1분 동안 지속됩니다.\n\n한 번에 하나의 대상만 경호원으로 보호할 수 있습니다."
+  },
+  "236077": {
+   "n": "무장 해제",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 근접 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "5초 동안 적의 무기와 방패를 무장 해제시킵니다. 무장 해제된 적은 공격력이 크게 감소합니다."
+  },
+  "424654": {
+   "n": "보호",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "가로막기가 2회 충전되고 5초 동안 아군이 받는 피해를 20%만큼 감소시킵니다.\n\n가로막기의 재사용 대기시간이 10초만큼 증가합니다."
+  },
+  "1234791": {
+   "n": "역경을 통한 힘",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "재기의 바람이 받는 피해를 10%에서 40%만큼 감소시킵니다. 강력한 공격일수록 받는 피해를 더 많이 감소시킵니다.\n\n방패의 벽이 활성화된 동안에는 치유 감소 효과에 걸리지 않습니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "투기장 상위권 표본이 3v3 1명·2v2(한국) 2명뿐이라 투기장 줄은 1인 조합전(29명) 채택률과 일반 원칙 기준",
+   "영웅 특성 비율이 1인 조합전 산왕 17·거신 12, 전장 대공세 산왕 29·거신 8로 갈려 Demolish·Thunder Blast 등 한쪽 전용 기술은 쓰지 않음",
+   "Power Through Adversity의 치유 감소 무시가 전장 고정 치유 20% 감소까지 포함하는지는 툴팁만으로 확인되지 않아 연결하지 않음"
+  ]
+ }
+}

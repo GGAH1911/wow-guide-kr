@@ -1,0 +1,111 @@
+{
+ "id": "shaman/elemental",
+ "arena": [
+  "[회피] Grounding Totem absorbs harmful single-target spells aimed at allies within 30 yds for 3 sec. Drop it right before an enemy CC cast finishes.",
+  "[생존기] Astral Shift reduces damage taken by 40% for 12 sec. Use it first when the enemy pops burst cooldowns and unloads on you.",
+  "[생존기] With Burrow, you go underground for 5 sec, can't be attacked, break movement impairing effects, and knock up enemies within 6 yds when it ends. Use it to dodge burst when your other defensives are down.",
+  "[제어] Hex turns the target into a frog for 1 min, incapacitating it, but damage can break it. Put it on the enemy healer and burst with Stormkeeper meanwhile.",
+  "[차단] Wind Shear interrupts a cast from 30 yds and locks that school for 4 sec. Save it for the enemy healer's heals.",
+  "[제어] Capacitor Totem explodes after 2 sec and stuns enemies within 8 yds for 3 sec. Drop it under melee DPS on you or your healer.",
+  "[회피] Thunderstorm can be used while stunned, knocks back enemies within 10 yds and slows them by 40% for 5 sec. Gain distance when melee DPS get on you.",
+  "[해제] Purge removes one beneficial magic effect from an enemy target. Strip magic protection the enemy healer applied, and remove curses from allies with Cleanse Spirit."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 5-6 DPS. Use Ghost Wolf's 30% movement speed and slow immunity to quickly support a base under attack or your flag carrier.",
+  "[제어] Static Field Totem was picked by 18 of 41 Battleground Blitz players and creates an electric circuit enemies can't pass for 6 sec. Block the enemy flag carrier's escape route or a base entrance.",
+  "[제어] Earthgrab Totem roots enemies within 8 yds for 8 sec every 2 sec for 20 sec. Drop it in the path of enemies chasing your flag carrier.",
+  "[위치] Thunderstorm knocks back enemies within 10 yds. Push enemies near edges or cart circles, and remember feared or disoriented targets can't be knocked back.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Astral Shift right before the burst and block CC spells with Grounding Totem.",
+  "[해제] Poison Cleansing Totem removes all poisons from one ally within 30 yds every 1.5 sec for 6 sec. Drop it when poisons land on several allies stacked in a base teamfight."
+ ],
+ "pvpTalents": "Grounding Totem, picked by 45 of the top 47 Solo Shuffle and 35 of 41 Battleground Blitz players, absorbs harmful single-target spells aimed at allies for 3 sec. Shamanism, picked by 45 of 47 Solo Shuffle players, lets you cast Bloodlust or Heroism on yourself and one ally for 10 sec every 60 sec. Burrow, picked by 39 of 47 Solo Shuffle and 32 of 41 Battleground Blitz players, makes you unattackable for 5 sec.",
+ "tips": {
+  "grounding totem": "204336",
+  "shamanism": "193876",
+  "burrow": "409293",
+  "static field totem": "355580",
+  "hex": "51514",
+  "thunderstorm": "51490"
+ },
+ "spells": {
+  "51490": {
+   "n": "Thunderstorm",
+   "i": "spell_shaman_thunderstorm",
+   "m": "Instant · 30 sec cooldown",
+   "d": "Calls down a bolt of lightning, dealing (15.1503% of Spell Power) Nature damage to all enemies within 10 yards, reducing their movement speed by 40% for 5 sec, and knocking them [Thundershock: upward / away from the Shaman]. Usable while stunned."
+  },
+  "51514": {
+   "n": "Hex",
+   "i": "spell_shaman_hex",
+   "m": "Talent · 30 yd range · 1.7 sec cast · 30 sec cooldown",
+   "d": "Transforms the enemy into a frog for 1 min. While hexed, the victim is incapacitated, and cannot attack or cast spells. Damage may cancel the effect. Limit 1. Only works on Humanoids and Beasts."
+  },
+  "193876": {
+   "n": "Shamanism",
+   "i": "trade_archaeology_ancientorcshamanheaddress",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Your Bloodlust / Heroism spell now has a 60 sec cooldown, but increases Haste by 15%, and only affects you and your friendly target when cast for 10 sec.\n\nIn addition, Bloodlust / Heroism is no longer affected by Sated / Exhaustion."
+  },
+  "204336": {
+   "n": "Grounding Totem",
+   "i": "spell_nature_groundingtotem",
+   "m": "Tank Specs – Row 1 PvP Talent · 1.18% of base mana · Instant · 30 sec cooldown",
+   "d": "Summons a totem at your feet that will redirect all harmful spells cast within 30 yards on a nearby party or raid member to itself. Will not redirect area of effect spells. Lasts 3 sec."
+  },
+  "355580": {
+   "n": "Static Field Totem",
+   "i": "spell_shaman_stormtotem",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · 30 yd range · Instant · 1.5 min cooldown",
+   "d": "Summons a totem with 4% of your health at the target location for 6 sec that forms a circuit of electricity that enemies cannot pass through."
+  },
+  "409293": {
+   "n": "Burrow",
+   "i": "pvp_burrow",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 2 min cooldown",
+   "d": "Burrow beneath the ground, becoming unattackable, removing movement impairing effects, and increasing your movement speed by 50% for 5 sec.\n\nWhen the effect ends, enemies within 6 yards are knocked in the air and take [Spell Power * 6.6 * (1 + Versatility)] Physical damage."
+  }
+ },
+ "spellsKo": {
+  "51490": {
+   "n": "천둥폭풍",
+   "m": "즉시 · 30 초 재사용 대기시간",
+   "d": "번개를 불러내어 10미터 내의 모든 적에게 (주문력의 15.1503%)의 자연 피해를 입히고, 5초 동안 이동 속도를 40%만큼 감소시킵니다. 피해를 입은 적은 [천둥충격: 공중으로 날려 보내집니다 / 뒤로 밀쳐집니다.] 기절한 상태에서도 사용할 수 있습니다."
+  },
+  "51514": {
+   "n": "사술",
+   "m": "특성 · 30 야드 사정거리 · 1.7 초 주문 시전 시간 · 30 초 재사용 대기시간",
+   "d": "1분 동안 적을 개구리로 변신시킵니다. 사술에 걸린 대상은 공격하거나 주문을 시전할 수 없습니다. 대상이 피해를 입으면 효과가 해제될 수 있습니다. 대상은 하나로 제한됩니다. 야수와 인간형에게만 사용할 수 있습니다."
+  },
+  "193876": {
+   "n": "주술의 힘",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "피의 욕망 / 영웅심 주문의 재사용 대기시간이 60초로 변경되지만, 가속이 15%만큼 증가하고 시전 시 10초 동안 자신과 아군 대상에게만 효과가 적용됩니다.\n\n추가로 피의 욕망 / 영웅심이 만족함 / 소진의 영향을 받지 않습니다."
+  },
+  "204336": {
+   "n": "마법흡수 토템",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1.18% (기본 마나 중) · 즉시 · 30 초 재사용 대기시간",
+   "d": "자신의 위치에 토템을 소환합니다. 토템은 주위 30미터 내의 파티원 또는 공격대원을 대상으로 시전되는 모든 해로운 주문을 토템에 이전합니다. 광역 주문에는 효과가 없습니다. 3초 동안 지속됩니다."
+  },
+  "355580": {
+   "n": "전자기장 토템",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 30 야드 사정거리 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "대상 위치에 6초 동안 자신의 생명력의 4%에 해당하는 생명력을 지닌 토템을 소환합니다. 토템은 전류의 흐름을 형성하여 적이 통과하지 못하게 합니다."
+  },
+  "409293": {
+   "n": "잠복",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 2 분 재사용 대기시간",
+   "d": "땅속으로 잠복해 이동 방해 효과를 제거하고 5초 동안 공격받지 않는 상태가 되며 이동 속도가 50%만큼 증가합니다.\n\n효과가 끝나면 6미터 내의 적을 공중으로 날려 보내고 [주문력 * 6.6 * (1 + 유연성)]의 물리 피해를 입힙니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 선견자 43·폭풍인도자 4로 쏠렸지만 한쪽 전용 기술(Call of the Ancestors·Tempest 등)은 쓰지 않음",
+   "투기장 상위권 표본이 3v3 8명·2v2 1명뿐이라 투기장 줄은 1인 조합전(47명) 채택률과 일반 원칙 기준",
+   "Burrow가 깃발을 떨어뜨리는지는 확인되지 않아 깃발 운반 줄에 쓰지 않음"
+  ]
+ }
+}

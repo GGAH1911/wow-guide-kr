@@ -1,0 +1,285 @@
+{
+ "id": "monk/windwalker",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[해제] If you are the Essence Rend target, move to the edge of the room and you can clear the harmful Magic effect yourself with Diffuse Magic. A Latent Cultist spawns where it was removed.",
+    "[분담] When melee soak Hungering Pyre in the intermission, reduce the big hit with Dampen Harm.",
+    "@m [차단] If you are on the well-kill team, interrupt Drowned Echo's Soulcoiler's Curse with Spear Hand Strike."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[해제] If you get Blighted Blood, you can clear it yourself with Diffuse Magic.",
+    "[참고] The boss takes 99% less damage during Vitriolic Stasis, so hold Invoke Xuen and Zenith until after the intermission.",
+    "[생존기] When soaking Unstable Miasma, reduce the damage with Dampen Harm or Touch of Karma."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] AoE down the venom adds with Spinning Crane Kick and Whirling Dragon Punch before they reach Malignant Cavity.",
+    "[제어] Burning Venom can be held with Paralysis until Hardened Venom. Damage may break it.",
+    "@m [생존기] Line up Diffuse Magic with Gloom Expulsion and Conflagrating Expulsion raid damage to reduce the magic damage."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Interrupt Scrollsage Iku's Icebound Flames with Spear Hand Strike.",
+    "[해제] If a missed interrupt lets Icebound Flames land on you, you can clear it yourself with Diffuse Magic.",
+    "[위치] If you are the Blink Nova target, get away from the raid quickly with Flying Serpent Kick or Roll."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Sszorak takes 30% more damage during the 25 sec Dig In, so line up Invoke Xuen and Zenith with it.",
+    "[분담] When soaking Mutilate, reduce the big hit with Dampen Harm.",
+    "[회피] When Tempest slows stack up, remove them with Tiger's Lust and dodge the whirlwinds."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Kill the Venomous Emergence adds first with Whirling Dragon Punch and Spinning Crane Kick.",
+    "[생존기] When soaking Ravenous Feast, reduce the damage with Dampen Harm or Touch of Karma.",
+    "@m [차단] Interrupt Broodling of Ithraz's Visceral Burst and Caustic Globule's Barbed Bulwark with Spear Hand Strike."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[우선 처치] Ghastly Regeneration in the intermission makes Zul'jan take 100% more damage, so line up Invoke Xuen and Zenith with it.",
+    "[차단] Once the Veil of Twilight shield breaks, interrupt Eternal Nightfall with Spear Hand Strike.",
+    "[회피] After soaking Guillotine, immediately get 40 yards away from the axe with Flying Serpent Kick or Roll."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[우선 처치] Dump Invoke Xuen and Zenith into the Venomous Heart exposed after Rage of the Shackled.",
+    "[해제] Blightscale Viper's Acidic Burst is a Poison effect, so clear it with Detox.",
+    "[차단] Interrupt Malice, Anguished Cry, and Vicious Echoes with Spear Hand Strike."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Kill the Bubblefin Shorerunners drawn in by Alluring Bubble with Spinning Crane Kick before they reach the bubble.",
+    "[생존기] Line up Diffuse Magic with the Frost raid damage from Pop! and Unending Tides to reduce the magic damage.",
+    "@m [우선 처치] Waterfog Shield reduces damage to nearby murlocs by 99%, so kill the Bubblefin Frostscale before using Spinning Crane Kick."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] In the intermission, interrupt Pitch Bulwark from Shadowguard Stalwart and Voidbound Annihilator with Spear Hand Strike.",
+    "[우선 처치] Kill the Voidmaws together with Spinning Crane Kick and Fists of Fury.",
+    "[생존기] Line up Dampen Harm with Dark Upheaval raid damage at the pull and after each intermission."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[해제] If you get the Blisterburst damage taken increase or the Creep Spit slow, you can clear the harmful Magic effect yourself with Diffuse Magic.",
+    "[회피] When Creep Spit slows stack up, remove them with Tiger's Lust and run to the far end of the room opposite Void Breath.",
+    "[우선 처치] Kill the Blistercreeps gathered at the wall together with Spinning Crane Kick and Fists of Fury so Blisterburst breaks the Void Crystal."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Interrupt Shadow Fracture from the nearest Fractured Image with Spear Hand Strike.",
+    "@m [차단] If Fractured Images stripped of Nexus Shield are grouped within 6 yards, stun them all with Leg Sweep to interrupt them.",
+    "[생존기] The boss takes 25% more damage during Entropic Unraveling, so line up Invoke Xuen and Zenith with it and reduce the raid damage with Dampen Harm."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Interrupt Voidbolt from the Voidorbs spawned after Void Howl with Spear Hand Strike.",
+    "@m [제어] If Voidorbs that do not drift toward the raid even when interrupted are grouped within 6 yards, stun them together with Leg Sweep.",
+    "[회피] Break the Nullzone chain by quickly getting 10 yards past its starting radius with Flying Serpent Kick or Roll."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[우선 처치] Line up Invoke Xuen and Zenith on Commander Venel Lightblood, who takes 20% more damage from Avenging Wrath right after the pull.",
+    "[차단] Once Sacred Shield breaks, interrupt War Chaplain Senn's Blinding Light with Spear Hand Strike.",
+    "[해제] If you get the Avenger's Shield DoT, you can clear the harmful Magic effect yourself with Diffuse Magic."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[해제] Corrupting Essence on you is a Magic effect, so you can clear it yourself with Diffuse Magic.",
+    "[위치] If you are targeted by Grasp of Emptiness, get far out of the circle with Flying Serpent Kick or Roll so Bursting Emptiness misses the raid.",
+    "@nh [차단] Interrupt Undying Voidspawn's Void Barrage with Spear Hand Strike, or stun them together with Leg Sweep if they are grouped."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Interrupt Haunting Essence's Fearsome Cry first with Spear Hand Strike, then use spare interrupts on Essence Bolt.",
+    "[우선 처치] If you are on the lower floor team, save Invoke Xuen and Zenith to break the Alnshroud shield quickly.",
+    "[우선 처치] In Phase 2, Rift Shroud makes the boss take 99% less damage, so spend Spinning Crane Kick and Fists of Fury on the adds."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] Interrupt Light Eruption or Void Eruption from embers matching your feather color with Spear Hand Strike.",
+    "[생존기] Save Invoke Xuen and Zenith for the Phase 2 egg and dump them during the Rebirth cast.",
+    "[분담] When soaking Light Dive or Void Dive of your color together, reduce the big hit with Dampen Harm."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Remove Safeguard stacks on a Safeguard Prism matrix with Spear Hand Strike and Leg Sweep.",
+    "@m [차단] Interrupt Terminate from your assigned Termination Matrix in order with Spear Hand Strike.",
+    "[우선 처치] Kill the stacked Midnight Crystals with Spinning Crane Kick and Fists of Fury before the cast finishes."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Interrupt Sporecap's Poison Burst with Spear Hand Strike.",
+    "@hm [해제] A Poison Burst DoT that slips past interrupts is a Poison, so clear it with Detox.",
+    "[우선 처치] Kill the Bursting Shrooms at the stack spot with Spinning Crane Kick and Fists of Fury within 16 sec."
+   ]
+  }
+ },
+ "tips": {
+  "dampen harm": "122278",
+  "diffuse magic": "122783"
+ },
+ "spells": {
+  "122278": {
+   "n": "Dampen Harm",
+   "i": "ability_monk_dampenharm",
+   "m": "Talent · Instant · 2 min cooldown",
+   "d": "Reduces all damage you take by 20% to 50% for 10 sec, with larger attacks being reduced by more."
+  },
+  "122783": {
+   "n": "Diffuse Magic",
+   "i": "spell_monk_diffusemagic",
+   "m": "Talent · Instant · 1.5 min cooldown",
+   "d": "Reduces magic damage you take by 60% for 6 sec, and transfers all currently active harmful magical effects on you back to their original caster if possible."
+  }
+ },
+ "spellsKo": {
+  "122278": {
+   "n": "해악 감퇴",
+   "m": "특성 · 즉시 · 2 분 재사용 대기시간",
+   "d": "10초 동안 받는 피해가 20%에서 50%까지 감소합니다. 피해가 큰 공격은 감소량이 증가합니다."
+  },
+  "122783": {
+   "n": "마법 해소",
+   "m": "특성 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "6초 동안 자신이 받는 마법 피해가 60%만큼 감소하고, 가능할 경우 현재 자신에게 활성화된 모든 해로운 마법 효과를 시전한 대상에게 되돌려줍니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 122783",
+   "u": "https://nether.wowhead.com/tooltip/spell/122783?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 122278",
+   "u": "https://nether.wowhead.com/tooltip/spell/122278?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 116705",
+   "u": "https://nether.wowhead.com/tooltip/spell/116705?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 123904",
+   "u": "https://nether.wowhead.com/tooltip/spell/123904?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 1249625",
+   "u": "https://nether.wowhead.com/tooltip/spell/1249625?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 122470",
+   "u": "https://nether.wowhead.com/tooltip/spell/122470?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 101546",
+   "u": "https://nether.wowhead.com/tooltip/spell/101546?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 152175",
+   "u": "https://nether.wowhead.com/tooltip/spell/152175?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 115078",
+   "u": "https://nether.wowhead.com/tooltip/spell/115078?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 101545",
+   "u": "https://nether.wowhead.com/tooltip/spell/101545?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 109132",
+   "u": "https://nether.wowhead.com/tooltip/spell/109132?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 116841",
+   "u": "https://nether.wowhead.com/tooltip/spell/116841?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 218164",
+   "u": "https://nether.wowhead.com/tooltip/spell/218164?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 116705",
+   "u": "https://nether.wowhead.com/tooltip/spell/116705?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 101546",
+   "u": "https://nether.wowhead.com/tooltip/spell/101546?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 113656",
+   "u": "https://nether.wowhead.com/tooltip/spell/113656?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 122278",
+   "u": "https://nether.wowhead.com/tooltip/spell/122278?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 122783",
+   "u": "https://nether.wowhead.com/tooltip/spell/122783?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 116841",
+   "u": "https://nether.wowhead.com/tooltip/spell/116841?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 119381",
+   "u": "https://nether.wowhead.com/tooltip/spell/119381?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 123904",
+   "u": "https://nether.wowhead.com/tooltip/spell/123904?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 1249625",
+   "u": "https://nether.wowhead.com/tooltip/spell/1249625?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 101545",
+   "u": "https://nether.wowhead.com/tooltip/spell/101545?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 109132",
+   "u": "https://nether.wowhead.com/tooltip/spell/109132?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 218164",
+   "u": "https://nether.wowhead.com/tooltip/spell/218164?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [
+   "Diffuse Magic 툴팁은 해로운 마법 효과를 \"가능하면\" 시전자에게 되돌린다고 해서 보스 디버프가 반드시 옮겨지는지는 확인하지 못했다, Essence Rend·Blighted Blood·Icebound Flames 줄은 \"지울 수 있다\"로 썼다"
+  ],
+  "notes": [
+   "Gravebound Advance 보호막을 어느 피해 계열이 깨는지는 확인하지 않아 쓰지 않았다",
+   "Fortifying Brew는 풍운 툴팁에 피해 감소 수치가 없어 쓰지 않고 Dampen Harm·Diffuse Magic 툴팁을 새로 받아 썼다",
+   "Detox는 digest 해제 목록 Acidic Burst(Poison)에 연결했다, 음영파·천신의 대변자 영웅 특성 전용 기술은 넣지 않았다",
+   "1시즌: Diffuse Magic 해제 줄은 s1.json 해제 목록(Blisterburst·Creep Spit·Avenger's Shield·Corrupting Essence 모두 Magic)과 툴팁 '해로운 마법 효과를 시전자에게 되돌린다'를 연결했다, Dread Breath 공포 중 사용 가능 여부는 툴팁에 없어 쓰지 않았다",
+   "1시즌: Dampen Harm·Diffuse Magic 툴팁은 2시즌 레이드 풍운 파일에서 그대로 옮겼다, Fortifying Brew는 툴팁에 수치가 없어 쓰지 않았다",
+   "1시즌: Invoke Xuen은 쐐기 파일 names(백호 쉬엔의 원령) 약칭을 썼다, 음영파·천신의 대변자 전용 기술은 넣지 않았다"
+  ]
+ }
+}

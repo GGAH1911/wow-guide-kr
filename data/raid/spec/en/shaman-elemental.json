@@ -1,0 +1,269 @@
+{
+ "id": "shaman/elemental",
+ "detail": {
+  "nekzali-the-soulcoiler": {
+   "Nek'zali the Soulcoiler": [
+    "[제어] Root a Restless Amani with its Gravebound Advance shield still up using Earthgrab Totem to delay it reaching the well.",
+    "@m [참고] Spells being cast are interrupted the moment Invoke ends, so stop casting Lightning Bolt and Lava Burst at that moment.",
+    "@m [차단] If you are on the well-kill team, interrupt Drowned Echo's Soulcoiler's Curse with Wind Shear."
+   ]
+  },
+  "entombed-sentinels": {
+   "Entombed Sentinels": [
+    "[우선 처치] When a Venom Coagulation ooze spawns, pop Stormkeeper to kill it right away.",
+    "[참고] The boss takes 99% less damage during Vitriolic Stasis, so hold Ascendance until after the intermission.",
+    "[생존기] When soaking Unstable Miasma, reduce damage taken by 40% with Astral Shift."
+   ]
+  },
+  "vashnik-the-malignant": {
+   "Vashnik the Malignant": [
+    "[우선 처치] AoE down the venom adds with Chain Lightning and Earthquake before they reach the center.",
+    "[제어] Burning Venom can be stunned with Capacitor Totem or rooted with Earthgrab Totem until Hardened Venom.",
+    "@m [생존기] Line up Astral Shift with Gloom Expulsion and Conflagrating Expulsion."
+   ]
+  },
+  "the-lost-explorers": {
+   "The Lost Explorers": [
+    "[차단] Interrupt Scrollsage Iku's Icebound Flames with Wind Shear.",
+    "[위치] If you are the Blink Nova target, get away from the raid quickly with Gust of Wind or Ghost Wolf.",
+    "[회피] Keep casting with Spiritwalker's Grace while moving to dodge Shell Spin shells and Evil Eyes flames."
+   ]
+  },
+  "sszorak": {
+   "Sszorak": [
+    "[생존기] Sszorak takes more damage during the 25 sec Dig In, so line up Ascendance and Stormkeeper with it.",
+    "[분담] When soaking Mutilate, reduce damage taken by 40% with Astral Shift.",
+    "[회피] Keep casting with Spiritwalker's Grace while moving to dodge the Tempest whirlwinds."
+   ]
+  },
+  "the-twin-fangs": {
+   "The Twin Fangs": [
+    "[우선 처치] Kill the Venomous Emergence adds first by popping Stormkeeper and using Chain Lightning.",
+    "[생존기] When soaking Ravenous Feast, reduce damage taken by 40% with Astral Shift.",
+    "@m [차단] Interrupt Broodling of Ithraz's Visceral Burst and Caustic Globule's Barbed Bulwark with Wind Shear."
+   ]
+  },
+  "the-coiled-altar": {
+   "The Coiled Altar": [
+    "[차단] Once the Veil of Twilight shield breaks, interrupt Eternal Nightfall with Wind Shear.",
+    "[우선 처치] Ghastly Regeneration in the intermission makes Zul'jan take 100% more damage, so dump Ascendance.",
+    "[회피] After soaking Guillotine, immediately get 40 yards away from the axe with Gust of Wind or Ghost Wolf."
+   ]
+  },
+  "ulatek": {
+   "Ula'tek": [
+    "[해제] Clear the Acidic Burst poison from Blightscale Viper off allies within 30 yards with Poison Cleansing Totem.",
+    "[우선 처치] Dump Ascendance and Stormkeeper into the Venomous Heart exposed after Rage of the Shackled.",
+    "[차단] Interrupt Malice, Anguished Cry, and Vicious Echoes with Wind Shear."
+   ]
+  },
+  "nymrissa-wavecaller": {
+   "Nymrissa Wavecaller": [
+    "[우선 처치] Kill the Bubblefin Shorerunners drawn in by Alluring Bubble with Chain Lightning and Earthquake before they reach the bubble.",
+    "[위치] When you are the Chilling Frost target and have to move slowly, keep casting with Spiritwalker's Grace.",
+    "[생존기] Line up Astral Shift with the raid damage from Pop! and Unending Tides."
+   ]
+  },
+  "imperator-averzian": {
+   "Imperator Averzian": [
+    "[차단] In the intermission, interrupt Pitch Bulwark from Shadowguard Stalwart and Voidbound Annihilator with Wind Shear.",
+    "[우선 처치] AoE down the Voidmaw packs with Earthquake and Chain Lightning.",
+    "@m [해제] Abyssal Malus's Black Miasma is a Curse, so remove it with Cleanse Spirit."
+   ]
+  },
+  "vorasius": {
+   "Vorasius": [
+    "[회피] During Void Breath, leap forward with Gust of Wind to reach the far end of the room opposite the glowing hand.",
+    "[우선 처치] Kill the Blistercreeps gathered at the wall together with Earthquake so Blisterburst breaks the Void Crystal.",
+    "@m [생존기] When the first Blistercreep pack pops, reduce damage taken with Astral Shift."
+   ]
+  },
+  "fallenking-salhadaar": {
+   "Fallen-King Salhadaar": [
+    "[차단] Interrupt Shadow Fracture from distant Fractured Images with Wind Shear or hold them with Capacitor Totem.",
+    "[참고] The boss takes 25% more damage during the 20 sec Entropic Unraveling, so line up Ascendance with it and reduce the raid damage with Astral Shift.",
+    "[회피] Keep casting with Spiritwalker's Grace while moving to dodge Umbral Beams."
+   ]
+  },
+  "vaelgor-ezzorak": {
+   "Vaelgor & Ezzorak": [
+    "[차단] Interrupt Voidorb's Voidbolt with Wind Shear or hold it with Capacitor Totem.",
+    "[분담] When taking Gloomtouched in the Gloom path, reduce damage taken with Astral Shift."
+   ]
+  },
+  "lightblinded-vanguard": {
+   "Lightblinded Vanguard": [
+    "[참고] The Divine Shield the boss casts after Bloodlust can be removed by an enemy buff dispel, so remove it with Purge.",
+    "[차단] After breaking War Chaplain Senn's Sacred Shield, interrupt Blinding Light with Wind Shear.",
+    "[분담] When soaking Execution Sentence next to the target, reduce damage taken with Astral Shift."
+   ]
+  },
+  "crown-of-the-cosmos": {
+   "Crown of the Cosmos": [
+    "[참고] Stop casting Lava Burst when Demiar's Interrupting Tremor cast finishes.",
+    "[우선 처치] Kill the Void Droplets under the sentinel by hitting them together with the sentinel using Earthquake.",
+    "@nh [차단] Interrupt Undying Voidspawn's Void Barrage with Wind Shear or hold it with Capacitor Totem."
+   ]
+  },
+  "chimaerus-the-undreamt-god": {
+   "Chimaerus the Undreamt God": [
+    "[차단] Interrupt Haunting Essence's Fearsome Cry first with Wind Shear.",
+    "[우선 처치] If you are on the lower floor team, save Ascendance to break the adds' Alnshroud shields quickly.",
+    "@m [분담] If you are on the Rift Madness swap, use Gust of Wind to reach the target quickly and switch realms."
+   ]
+  },
+  "beloren-child-of-alar": {
+   "Belo'ren, Child of Al'ar": [
+    "[차단] If your feather color matches, interrupt the embers' Light Eruption or Void Eruption with Wind Shear.",
+    "[생존기] Bloodlust goes on the first egg phase, so when Rebirth starts, use Bloodlust or Heroism and dump Ascendance.",
+    "[분담] When soaking Light Dive or Void Dive with same-color players, reduce damage taken with Astral Shift."
+   ]
+  },
+  "midnight-falls": {
+   "Midnight Falls": [
+    "@nh [차단] Interrupt the Safeguard Matrix's Safeguard casts with Wind Shear and Capacitor Totem, and strip the stacked Safeguard buff with Purge.",
+    "@m [차단] Interrupt Terminate from your assigned Termination Matrix in order with Wind Shear.",
+    "@m [생존기] Bloodlust is used in Phase 3, so use Bloodlust or Heroism then."
+   ]
+  },
+  "rotmire": {
+   "Rotmire": [
+    "@hm [차단] Always interrupt Sporecap's Poison Burst with Wind Shear, and take the second Sporecap that spawns far away from range.",
+    "@hm [해제] Clear a Poison Burst poison DoT that slips past interrupts off nearby players with Poison Cleansing Totem.",
+    "[우선 처치] AoE down the Shroomlings and Bursting Shrooms gathered at the set spot with Earthquake and Chain Lightning."
+   ]
+  }
+ },
+ "tips": {},
+ "spells": {},
+ "spellsKo": {},
+ "names": {},
+ "note": "There is no spec-specific source for each raid boss, so these are general principles written by matching ability tooltips to boss mechanics.",
+ "sources": [
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 51485",
+   "u": "https://nether.wowhead.com/tooltip/spell/51485?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 51505",
+   "u": "https://nether.wowhead.com/tooltip/spell/51505?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 188196",
+   "u": "https://nether.wowhead.com/tooltip/spell/188196?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 57994",
+   "u": "https://nether.wowhead.com/tooltip/spell/57994?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 191634",
+   "u": "https://nether.wowhead.com/tooltip/spell/191634?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 114050",
+   "u": "https://nether.wowhead.com/tooltip/spell/114050?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 108271",
+   "u": "https://nether.wowhead.com/tooltip/spell/108271?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 188443",
+   "u": "https://nether.wowhead.com/tooltip/spell/188443?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 462620",
+   "u": "https://nether.wowhead.com/tooltip/spell/462620?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 192058",
+   "u": "https://nether.wowhead.com/tooltip/spell/192058?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 2645",
+   "u": "https://nether.wowhead.com/tooltip/spell/2645?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 192063",
+   "u": "https://nether.wowhead.com/tooltip/spell/192063?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 79206",
+   "u": "https://nether.wowhead.com/tooltip/spell/79206?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 454009",
+   "u": "https://nether.wowhead.com/tooltip/spell/454009?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Wowhead tooltip (nether, EN/KO) 383013",
+   "u": "https://nether.wowhead.com/tooltip/spell/383013?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 57994",
+   "u": "https://nether.wowhead.com/tooltip/spell/57994?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 188443",
+   "u": "https://nether.wowhead.com/tooltip/spell/188443?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 462620",
+   "u": "https://nether.wowhead.com/tooltip/spell/462620?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 51886",
+   "u": "https://nether.wowhead.com/tooltip/spell/51886?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 192063",
+   "u": "https://nether.wowhead.com/tooltip/spell/192063?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 108271",
+   "u": "https://nether.wowhead.com/tooltip/spell/108271?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 192058",
+   "u": "https://nether.wowhead.com/tooltip/spell/192058?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 114050",
+   "u": "https://nether.wowhead.com/tooltip/spell/114050?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 79206",
+   "u": "https://nether.wowhead.com/tooltip/spell/79206?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 370",
+   "u": "https://nether.wowhead.com/tooltip/spell/370?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 51505",
+   "u": "https://nether.wowhead.com/tooltip/spell/51505?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 2825",
+   "u": "https://nether.wowhead.com/tooltip/spell/2825?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 32182",
+   "u": "https://nether.wowhead.com/tooltip/spell/32182?dataEnv=1&locale=1"
+  },
+  {
+   "t": "Season 1: Wowhead tooltip (nether, EN/KO) 383013",
+   "u": "https://nether.wowhead.com/tooltip/spell/383013?dataEnv=1&locale=1"
+  }
+ ],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "Poison Cleansing Totem은 digest 해제 목록에서 독으로 확인된 Acidic Burst에만 썼다. Cleanse Spirit이 지울 저주 디버프는 digest에 없다",
+   "Gravebound Advance 보호막을 깨는 피해 속성은 적지 않았다. Farseer·Stormbringer 전용 기술(Ancestral Swiftness·Tempest 등)은 넣지 않았다",
+   "1시즌: Cleanse Spirit·Poison Cleansing Totem은 kit.dispel 기준으로 digest 해제 목록의 저주(Black Miasma)·독(Poison Burst)에만 썼다. Purge는 digest가 적 버프 해제를 요구한 Divine Shield·Safeguard에만 썼다",
+   "1시즌: Capacitor Totem은 digest가 기절을 허용한 Shadow Fracture·Voidbolt·Void Barrage·Safeguard에 썼다. 선견자·폭풍인도자 영웅 특성 전용 기술(Ancestral Swiftness·Tempest 등)은 넣지 않았다"
+  ]
+ }
+}

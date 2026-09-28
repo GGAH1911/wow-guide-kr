@@ -1,0 +1,97 @@
+{
+ "id": "evoker/preservation",
+ "arena": [
+  "[생존기] Emerald Communion can be cast while stunned, disoriented, incapacitated or silenced and heals 20% of your health every sec for 5 sec. Press it when you take burst while CC'd.",
+  "[회피] With Nullifying Shroud, Verdant Embrace blocks your next full CC effect for 3 sec. Cast Verdant Embrace right before an enemy CC cast finishes.",
+  "[분담] Time Dilation spreads 50% of the damage an ally takes over 8 sec, for 8 sec. Put it on the ally eating enemy burst so they don't drop all at once.",
+  "[생존기] Obsidian Scales reduces damage taken by 30% for 12 sec, and with Obsidian Mettle you're immune to interrupts, silences and pushback meanwhile. Pop it before long empowered spells while the enemy interrupt is up.",
+  "[차단] Quell interrupts a cast from 25 yds and locks that school for 6 sec. Save it for the enemy healer's heals.",
+  "[제어] Sleep Walk disorients the target for 20 sec but damage can wake it, and Landslide roots enemies on its path for 15 sec. Sleep an enemy your team isn't hitting and root melee DPS chasing you.",
+  "[해제] Naturalize removes magic and poison effects from an ally, and Cauterizing Flame removes bleed, poison, curse and disease effects. Dispel CC on allies with Naturalize first.",
+  "[해제] With Scouring Flame, Fire Breath burns off 2 beneficial magic effects from every target hit. Breathe toward enemy DPS when they pop burst buffs."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 2 healers, and on flag maps a mobile healer is a good carrier. Cast while moving with Hover; with Unburdened Flight your movement speed can't drop below 100% during Hover.",
+  "[분담] Rescue flies you to an ally and carries both of you to a chosen spot, removing movement impairing effects from both. Pull out a flag carrier or base ally the enemy has pinned down.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than healing harder, spread damage with Time Dilation and prevent damage up front with Temporal Anomaly absorbs.",
+  "[위치] Zephyr lifts you and up to 4 allies within 20 yds, reducing AoE damage taken by 20% and increasing movement speed by 30% for 8 sec. Use it when rotating between bases together or when taking AoE damage.",
+  "[제어] Tail Swipe and Wing Buffet knock enemies back, but feared or disoriented targets can't be knocked back. Push enemies away from the base or flag carrier without overlapping targets you put to sleep with Sleep Walk."
+ ],
+ "pvpTalents": "Nullifying Shroud, picked by all top 43 Solo Shuffle players and 46 of 47 Battleground Blitz players, blocks your next full CC when you cast Verdant Embrace. Emerald Communion, picked by all 43 Solo Shuffle and all 47 Battleground Blitz players, heals you heavily for 5 sec even while CC'd. Unburdened Flight, picked by 35 of 47 Battleground Blitz players, keeps your movement speed from dropping during Hover.",
+ "tips": {
+  "nullifying shroud": "1241352",
+  "emerald communion": "370960",
+  "obsidian mettle": "378444",
+  "scouring flame": "378438",
+  "unburdened flight": "378437"
+ },
+ "spells": {
+  "370960": {
+   "n": "Emerald Communion",
+   "i": "ability_evoker_green_01",
+   "m": "Tank Specs – Row 1 PvP Talent · Channeled (5 sec cast) · 3 min cooldown",
+   "d": "Commune with the Emerald Dream, restoring 20% health and 2% mana every 1 sec for 5 sec. Overhealing is transferred to an injured ally within 40 yds.\n\nCastable while stunned, disoriented, incapacitated, or silenced."
+  },
+  "378437": {
+   "n": "Unburdened Flight",
+   "i": "ability_skyreach_lens_flare",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Hover prevents movement speed from being reduced below 100%."
+  },
+  "378438": {
+   "n": "Scouring Flame",
+   "i": "spell_fire_selfdestruct",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Fire Breath burns away 2 beneficial Magic effects from all targets."
+  },
+  "378444": {
+   "n": "Obsidian Mettle",
+   "i": "inv_misc_scales_basilliskorange",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "While Obsidian Scales is active you gain immunity to interrupt, silence, and pushback effects."
+  },
+  "1241352": {
+   "n": "Nullifying Shroud",
+   "i": "spell_arcane_prismaticcloak",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Verdant Embrace wreathes you in arcane energy, preventing the next full loss of control effect against you. Lasts 3 sec."
+  }
+ },
+ "spellsKo": {
+  "370960": {
+   "n": "에메랄드 교감",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 집중 (5 초 주문 시전 시간) · 3 분 재사용 대기시간",
+   "d": "에메랄드의 꿈과 교감하여 5초 동안 1초마다 20%의 생명력과 2%의 마나를 회복합니다. 초과 치유량은 40미터 내의 부상당한 아군에게 이전됩니다.\n\n기절, 방향 감각 상실, 행동 불가, 침묵 상태에서 시전할 수 있습니다."
+  },
+  "378437": {
+   "n": "굴레를 벗어난 날개",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "부양 중에는 이동 속도가 100% 미만으로 감소하지 않습니다."
+  },
+  "378438": {
+   "n": "소탕의 불길",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "불의 숨결 시전 시 모든 대상에게서 이로운 마법 효과 2개를 제거합니다."
+  },
+  "378444": {
+   "n": "흑요석의 기개",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "흑요석 비늘이 활성화된 동안 시전 방해, 침묵, 밀쳐내기 효과에 면역이 됩니다."
+  },
+  "1241352": {
+   "n": "무효화의 장막",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "신록의 품으로 몸을 감싸 다음 회의 제어 불가 효과를 방지합니다. 3초 동안 지속됩니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 불꽃형성자 40·시간 감시자 3, 전장 대공세 시간 감시자 31·불꽃형성자 16으로 갈려 Chrono Flame·Consume Flame 등 한쪽 전용 기술은 쓰지 않음",
+   "Dream Simulacrum 특성을 고르면 Verdant Embrace가 도약하지 않으므로 Nullifying Shroud 줄은 이동 여부와 무관한 제어 방지 효과만 씀"
+  ]
+ }
+}

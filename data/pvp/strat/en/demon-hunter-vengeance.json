@@ -1,0 +1,86 @@
+{
+ "id": "demon-hunter/vengeance",
+ "arena": [
+  "[생존기] Fiery Brand brands you and the enemy, reducing damage you take by 40%. Pop it when the enemy's burst cooldowns are focused on you.",
+  "[생존기] Metamorphosis increases current health by 40% for 15 sec, healing you for that amount, and increases Armor by 200%. Press it when your health has taken a big hit.",
+  "[차단] Disrupt interrupts a cast and locks that school for 5 sec, and Sigil of Silence silences all enemies in the area after 2 sec. Split the two across the enemy healer's heal casts.",
+  "[제어] Sigil of Misery disorients enemies in the area with fear for 15 sec after 2 sec. With Lay In Wait it has 2 charges and waits in place for up to 90 sec until an enemy approaches, so pre-place it on the path to your healer.",
+  "[제어] Imprison incapacitates the target but damage can break it; with Detainment it lasts 1 sec longer and the target is immune to damage and healing while trapped. Use it on the enemy healer while your team isn't bursting.",
+  "[분담] Darkness gives allies within 8 yds a chance to avoid attack damage for 8 sec, doubled outside of raids. Stand in it with your team when enemy burst is focused.",
+  "[해제] Consume Magic devours and removes one beneficial magic effect from an enemy. Strip an enemy DPS's burst buff or protective magic.",
+  "[위치] Vengeful Retreat removes all slows and leaps you backward, and Infernal Strike leaps you to a spot within 30 yds. Use them when you're slowed or need to get behind a pillar."
+ ],
+ "bg": [
+  "[참고] In Battleground Blitz there are 0-1 tanks, and slow tanks need help carrying the flag. Create your own distance with Infernal Strike's leap and Vengeful Retreat's slow removal.",
+  "[제어] Illidan's Grasp stuns a target within 15 yds for 5 sec while you move it, and pressing it again throws it to a spot within 20 yds. Move the enemy flag carrier or base capper toward your team.",
+  "[제어] With Lay In Wait, Sigil of Misery waits up to 90 sec until an enemy approaches. Place it on the base flag you're guarding or the flag room entrance, and coordinate with your team's knockbacks since feared enemies can't be knocked back.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than relying on heals, keep Demon Spikes armor and Fiery Brand damage reduction chained without gaps.",
+  "[참고] Spectral Sight reveals stealthed and invisible enemies, and enemies behind walls, for 8 sec. Use it on base defense to check for approaching stealthers."
+ ],
+ "pvpTalents": "Sigil Mastery, picked by 18 of the top 26 Solo Shuffle players, further reduces sigil cooldowns by 25%. Lay In Wait, picked by 15 of 27 Battleground Blitz and 11 of 26 Solo Shuffle players, turns Sigil of Misery into a 2-charge trap that waits for 90 sec. Illidan's Grasp, picked by 14 of 27 Battleground Blitz players, stuns the target for 5 sec and throws it within 20 yds.",
+ "tips": {
+  "sigil mastery": "211489",
+  "lay in wait": "1235091",
+  "detainment": "205596",
+  "illidan's grasp": "205630"
+ },
+ "spells": {
+  "205596": {
+   "n": "Detainment",
+   "i": "inv_misc_steelweaponchain",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Imprison's PvP duration is increased by 1 sec, and targets become immune to damage and healing while imprisoned."
+  },
+  "205630": {
+   "n": "Illidan's Grasp",
+   "i": "ability_demonhunter_illidansgrasp",
+   "m": "Tank Specs – Row 1 PvP Talent · 15 yd range · Channeled (5 sec cast) · 1 min cooldown",
+   "d": "You strangle the target with demonic magic, stunning them in place and dealing (1120% of Attack Power) Shadow damage over 5 sec while the target is grasped. Can move while channeling.\n\nUse Illidan's Grasp again to toss the target to a location within 20 yards."
+  },
+  "211489": {
+   "n": "Sigil Mastery",
+   "i": "ability_fomor_boss_rune_green",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Reduces the cooldown of your Sigils by an additional 25%."
+  },
+  "1235091": {
+   "n": "Lay In Wait",
+   "i": "ability_demonhunter_eyeofleotheras",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Sigil of Misery has 2 charges and now lays in wait for up to 90 sec at your selected location until an enemy approaches."
+  }
+ },
+ "spellsKo": {
+  "205596": {
+   "n": "억류",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "플레이어 간 전투 시 감금의 지속시간이 1초만큼 증가하고, 감금된 대상은 피해 및 치유에 면역이 됩니다."
+  },
+  "205630": {
+   "n": "일리단의 손아귀",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 15 야드 사정거리 · 집중 (5 초 주문 시전 시간) · 1 분 재사용 대기시간",
+   "d": "악마의 마법으로 대상의 목을 동안 5초 동안 제자리에 매달고, 지속시간에 걸쳐 (전투력의 1120%)의 암흑 피해를 입힙니다. 시전하는 동안 이동할 수 있습니다.\n\n일리단의 손아귀를 다시 사용하면 대상을 20미터 내의 장소로 집어던집니다."
+  },
+  "211489": {
+   "n": "인장 숙련",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "인장의 재사용 대기시간이 추가로 25%만큼 감소합니다."
+  },
+  "1235091": {
+   "n": "차분한 기다림",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "불행의 인장이 2회 충전되며, 사용 시 선택한 지점에 적이 다가올 때까지 최대 90초 동안 지속됩니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "투기장 상위권 표본이 없어(3v3·2v2 기록 없음) 투기장 줄은 1인 조합전(26명) 채택률과 일반 원칙 기준",
+   "영웅 특성이 1인 조합전 궤멸자 15·알드라치 파괴자 11로 갈려 Reaver's Glaive·Voidfall 등 한쪽 전용 기술은 쓰지 않음",
+   "Illidan's Grasp 던지기가 공포·방향 상실 대상에게 막히는지는 확인되지 않아 연결하지 않음"
+  ]
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "id": "warlock/demonology",
+ "arena": [
+  "[생존기] Unending Resolve reduces all damage taken by 25% for 8 sec and makes you immune to interrupts and silences. Pop it when enemy burst cooldowns or interrupt attempts pile up and keep casting.",
+  "[생존기] Dark Pact can be used while CC'd; it sacrifices 20% of your current health to grant a shield worth more than twice that for 20 sec. Press it immediately when you take burst while stunned.",
+  "[회피] Place Demonic Circle behind a pillar and teleport back to it to remove all slows. With Impish Instincts, each time you take direct physical damage its cooldown drops by 3 sec. When melee DPS get on you, teleport and break line of sight.",
+  "[차단] Your Felguard's Axe Toss stuns a target up to 30 yds away for 4 sec and interrupts its cast. Time it to the enemy healer's heal casts.",
+  "[참고] With Soul Rip, up to 3 enemy players within 20 yds deal 25% less damage and receive 25% less healing for 8 sec, until they reclaim their soul. Use it right before summoning Summon Demonic Tyrant on your kill target.",
+  "[제어] Fear disorients the target for 20 sec but damage can break it. Put it on the enemy healer and have your team attack another target.",
+  "[생존기] With Nether Ward, all harmful spells cast at you are reflected for 3 sec. Pop it right before an enemy caster's CC cast finishes.",
+  "[제어] Shadowfury stuns all enemies within 8 yds for 3 sec. Lock down the enemy healer and your kill target together when they stand close."
+ ],
+ "bg": [
+  "[참고] Pet classes are good at base defense. On defense, summon Call Fel Lord next to the base flag you're guarding; for 15 sec it stuns enemy players entering within 6 yds for 1 sec each, stopping captures.",
+  "[분담] Gateway Mastery was picked by 24 of 33 Battleground Blitz players. It increases Demonic Gateway's range by 20 yds and reduces the reuse delay for the same person by 30 sec. Move your team toward a distant base under attack or your carrier.",
+  "[생존기] Nether Ward was picked by 26 of 33 Battleground Blitz players and reflects all harmful spells for 3 sec. Pop it when multiple enemies are casting CC at you.",
+  "[제어] Enemies disoriented by Fear can't be knocked back. Use it on enemies trying to capture a base, but don't overlap it with your team's knockbacks.",
+  "[위치] Curse of Exhaustion slows the target by 50% for 12 sec. Put it on the enemy flag or orb carrier so your team can catch up.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Dark Pact's shield and Unending Resolve right before the burst."
+ ],
+ "pvpTalents": "Soul Rip, picked by 20 of the top 27 Solo Shuffle players, reduces damage dealt and healing received by up to 3 enemies within 20 yds by 25% for 8 sec. Impish Instincts, picked by 19 of 27 Solo Shuffle players, reduces Demonic Circle's cooldown by 3 sec when you take direct physical damage. Nether Ward, picked by 26 of 33 Battleground Blitz players, reflects all harmful spells for 3 sec.",
+ "tips": {
+  "soul rip": "410598",
+  "impish instincts": "409835",
+  "nether ward": "212295",
+  "gateway mastery": "248855",
+  "call fel lord": "212459"
+ },
+ "spells": {
+  "212295": {
+   "n": "Nether Ward",
+   "i": "spell_fire_felfireward",
+   "m": "Tank Specs – Row 1 PvP Talent · 1% of base mana · Instant · 45 sec cooldown",
+   "d": "Surrounds the caster with a shield that lasts 3 sec, reflecting all harmful spells cast on you."
+  },
+  "212459": {
+   "n": "Call Fel Lord",
+   "i": "achievement_boss_hellfire_fellord",
+   "m": "Tank Specs – Row 1 PvP Talent · 40 yd range · Instant · 2 min cooldown",
+   "d": "Summon a fel lord to guard the location for 15 sec. Any enemy that comes within 6 yards will suffer [(Spell Power * 2) * 1 * 1 * (1 + Versatility)] Physical damage, and players struck will be stunned for 1 sec."
+  },
+  "248855": {
+   "n": "Gateway Mastery",
+   "i": "spell_warlock_demonicportal_green",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Increases the range of your Demonic Gateway by 20 yards, and reduces the cast time by 30%. Reduces the time between how often players can take your Demonic Gateway by 30 sec."
+  },
+  "409835": {
+   "n": "Impish Instincts",
+   "i": "spell_shadow_demoniccircleteleport",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Taking direct Physical damage reduces the cooldown of Demonic Circle by 3 sec.\n\nCannot occur more than once every 5 sec. (5s cooldown)"
+  },
+  "410598": {
+   "n": "Soul Rip",
+   "i": "pvp_soulrip",
+   "m": "Tank Specs – Row 1 PvP Talent · 1 Soul Shard · 20 yd range · Instant · 1 min cooldown",
+   "d": "Fracture the soul of up to 3 target players within 20 yds into the shadows, reducing their damage done by 25% and healing received by 25% for 8 sec. Souls are fractured up to 20 yds from the player's location.\n\nPlayers can retrieve their souls to remove this effect."
+  }
+ },
+ "spellsKo": {
+  "212295": {
+   "n": "황천 보호막",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 1% (기본 마나 중) · 즉시 · 45 초 재사용 대기시간",
+   "d": "3초 동안 지속되는 보호막으로 시전자를 감싸, 시전자에게 시전되는 모든 해로운 주문을 반사합니다."
+  },
+  "212459": {
+   "n": "지옥 군주 부르기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 40 야드 사정거리 · 즉시 · 2 분 재사용 대기시간",
+   "d": "15초 동안 지옥 군주를 소환하여 해당 지역을 지키게 합니다. 6미터 내로 접근하는 적은 [(주문력 * 2) * 1 * 1 * (1 + 유연성)]의 물리 피해를 입고, 적중당한 플레이어는 1초 동안 기절합니다."
+  },
+  "248855": {
+   "n": "관문 특화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "악마의 관문의 사거리가 20미터만큼 증가하고, 시전 시간이 30%만큼 감소합니다. 악마의 관문을 이용할 수 있는 대기시간이 30초만큼 감소합니다."
+  },
+  "409835": {
+   "n": "악동의 본능",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "직접 물리 피해를 받으면 악마의 마법진의 재사용 대기시간이 3초만큼 감소합니다.\n\n5초에 한 번씩만 발동합니다. (5초 재사용 대기시간)"
+  },
+  "410598": {
+   "n": "영혼 도려내기",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 영혼의 조각 1개 · 20 야드 사정거리 · 즉시 · 1 분 재사용 대기시간",
+   "d": "20미터 내에 있는 대상 최대 3명의 영혼을 산산이 조각내 어둠 속으로 보내고 8초 동안 공격력을 25%만큼, 받는 치유 효과를 25%만큼 감소시킵니다. 조각난 영혼은 플레이어의 위치에서 최대 20미터 떨어진 지점에 생성됩니다.\n\n해당 효과를 제거하려면 플레이어가 영혼을 회수해야 합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 악마학자 23·영혼 수확자 4, 전장 대공세 17·16으로 갈려 한쪽 전용 기술은 쓰지 않음",
+   "투기장 상위권 표본이 3v3 3명·2v2 4명뿐이라 투기장 줄은 1인 조합전(27명) 채택률과 일반 원칙 기준",
+   "kit 해제기 Singe Magic은 임프 기술이라 지옥수호병을 부리는 기본 운용에서 쓸 수 있는지 툴팁으로 확인되지 않아 쓰지 않음"
+  ]
+ }
+}

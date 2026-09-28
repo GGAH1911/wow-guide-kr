@@ -1,0 +1,87 @@
+{
+ "id": "priest/holy",
+ "arena": [
+  "[생존기] With Spirit of the Redeemer, you can activate Spirit of Redemption yourself: for 6 sec you can't be targeted by attacks or spells and your heals are free. Press it right before focus fire takes you down.",
+  "[분담] Guardian Spirit increases the target's healing taken by 60% for 10 sec and prevents one fatal hit. Put it on the ally the enemy burst is focused on.",
+  "[회피] With Phase Shift, Fade makes you avoid all attacks and spells for 1 sec, but not interrupts. Press Fade the moment an enemy CC cast finishes.",
+  "[제어] Psychic Scream makes enemies within 8 yds flee in fear for 8 sec. With Psychic Shroud, hitting a player blocks the next CC effect on you within 6 sec.",
+  "[해제] Purify removes all harmful magic effects from an ally, and Mass Dispel removes harmful magic from 5 allies within 15 yds, including magic normal dispels can't remove. Use Mass Dispel when several allies are CC'd.",
+  "[위치] With Phantasm, Fade removes all slows, and Angelic Feather increases movement speed by 40% for 5 sec. When slowed, use these to break line of sight behind a pillar.",
+  "[생존기] Desperate Prayer increases your max health by 25% for 10 sec and instantly heals you for that amount. Press it first when focus fire starts.",
+  "[분담] Power Infusion increases the target player's Haste by 20% for 15 sec. Apply it when your DPS pops their burst cooldowns."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 2 healers, and on flag maps a mobile healer is a good carrier. You can help carry by shaking slows with Angelic Feather and Fade via Phantasm.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. For a focused flag carrier, apply Guardian Spirit first: it increases healing taken by 60% and prevents one death.",
+  "[분담] Leap of Faith instantly pulls an ally in front of you. Pull a pinned flag carrier back toward your team.",
+  "[제어] Enemies feared by Psychic Scream can't be knocked back. Use it on enemies trying to capture a base, but don't overlap it with your team's knockbacks.",
+  "[광역 피해] Divine Hymn heals party and raid members within 40 yds over 5 sec, and each heal increases healing taken by 4%. Use it when allies stacked on base defense take AoE damage."
+ ],
+ "pvpTalents": "Spirit of the Redeemer, picked by all top 37 Solo Shuffle players and 41 of 42 Battleground Blitz players, turns Spirit of Redemption into a self-activated 6 sec invulnerable healing form every 2 min. Phase Shift, picked by all 37 Solo Shuffle and 39 of 42 Battleground Blitz players, makes you avoid all attacks and spells for 1 sec on Fade. Sanctified Ground, picked by 29 of 42 Battleground Blitz players, protects allies standing on Holy Word: Sanctify ground from silences and interrupts for 5 sec.",
+ "tips": {
+  "spirit of the redeemer": "215982",
+  "phase shift": "408557",
+  "psychic shroud": "1246968",
+  "spirit of redemption": "215769"
+ },
+ "spells": {
+  "215769": {
+   "n": "Spirit of Redemption",
+   "i": "inv_enchant_essenceeternallarge",
+   "m": "Instant · 2 min cooldown",
+   "d": "The Priest becomes the Spirit of Redemption for 6 sec. The Spirit of Redemption cannot move, attack, be attacked or targeted by any spells or effects. While in this form the Priest can cast any healing spell free of cost."
+  },
+  "215982": {
+   "n": "Spirit of the Redeemer",
+   "i": "inv_enchant_essenceeternallarge",
+   "m": "Tank Specs – Row 1 PvP Talent · Replaces Spirit of Redemption",
+   "d": "Your Spirit of Redemption is now an active ability with a 2 minute cooldown, but the duration is reduced by 9 sec and you will no longer enter Spirit of Redemption upon dying."
+  },
+  "408557": {
+   "n": "Phase Shift",
+   "i": "spell_priest_spectralguise",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Step into the shadows when you cast Fade, avoiding all attacks and spells for 1 sec.\n\nInterrupt effects are not affected by Phase Shift."
+  },
+  "1246968": {
+   "n": "Psychic Shroud",
+   "i": "ability_priest_surgeofdarkness",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "When your Psychic Scream affects 1 or more players, the next crowd control effect against you is prevented. Lasts 6 sec."
+  }
+ },
+ "spellsKo": {
+  "215769": {
+   "n": "구원의 영혼",
+   "m": "즉시 · 2 분 재사용 대기시간",
+   "d": "사제가 6초 동안 구원의 영혼이 됩니다. 구원의 영혼은 이동 및 공격을 할 수 없지만, 주문 및 기타 효과의 대상이 되거나 공격을 받지도 않습니다. 구원의 영혼 상태에서는 모든 치유 주문을 자원 소모 없이 사용할 수 있습니다."
+  },
+  "215982": {
+   "n": "구원자의 영혼",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 구원의 영혼을(를) 대신함",
+   "d": "구원의 영혼이 이제 사용 능력이 되고 2분의 재사용 대기시간이 적용됩니다. 하지만 지속시간이 9초로 감소하고, 사망 시 구원의 영혼이 되지 않습니다."
+  },
+  "408557": {
+   "n": "위상 변화",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "소실 시전 시 그림자에 숨어들어 1초 동안 모든 공격과 주문을 회피합니다.\n\n주문 방해 효과는 위상 변화에 영향을 받지 않습니다."
+  },
+  "1246968": {
+   "n": "영혼의 수의",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "영혼의 절규가 1명 이상의 플레이어에게 영향을 주면 자신에게 걸리는 다음 군중 제어 효과를 방지합니다. 6초 동안 지속됩니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [
+   "Sanctified Ground는 툴팁상 성역화 권능에 붙는데 이번 시즌 Ultimate Serenity가 성역화 대상 특성을 평온 권능으로 옮겨 실제 발동 기술이 불확실해 전략 줄에는 쓰지 않음"
+  ],
+  "notes": [
+   "상위권 영웅 특성이 거의 모두 예언자(1인 조합전 37/37)지만 지침대로 한쪽 전용 기술은 쓰지 않음",
+   "쌍점이 든 빛의 권능 이름(평온·응징·성역화)은 문장에 쓰지 않음"
+  ]
+ }
+}

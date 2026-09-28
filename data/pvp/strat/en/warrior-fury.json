@@ -1,0 +1,146 @@
+{
+ "id": "warrior/fury",
+ "arena": [
+  "[생존기] Enraged Regeneration can be used while stunned or incapacitated, reduces damage taken by 30% for 8 sec and increases Bloodthirst healing. Use it immediately when you take burst while stunned.",
+  "[우선 처치] With Slaughterhouse, each Rampage and Odyn's Fury hit reduces the target's healing taken by 3% for 12 sec, stacking up to 12 times. Focus Rampage on one target to stack the healing reduction.",
+  "[생존기] Spell Reflection reflects the first spell cast at you and reduces magic damage taken by 20% for 5 sec. Time it right before an enemy caster's CC cast finishes.",
+  "[차단] Pummel interrupts a cast and locks that school for 5 sec. Save it for the enemy healer's heals.",
+  "[제어] Storm Bolt stuns a target up to 20 yds away for 4 sec. Pop Recklessness and burst while the enemy healer is locked down.",
+  "[참고] With Enduring Rage, you can become Enraged while movement impaired and can gain Recklessness for 5 sec when CC'd. Unload damage right after the CC ends.",
+  "[제어] Disarm disarms an enemy's weapon and shield for 5 sec. Use it when weapon-wielding melee DPS pop their burst cooldowns.",
+  "[분담] Berserker Shout removes fear and incapacitate effects from you, makes you immune for 6 sec, and removes fears from allies within 12 yds. With Berserker Roar, the next CC effect within 5 sec has its duration reduced by 50%. Shout it next to your team when the enemy CC chain starts."
+ ],
+ "bg": [
+  "[참고] Battleground Blitz groups run 5-6 DPS; healers carry the flag first, or a mobile DPS if none can. Keep up with and protect the carrier using Charge and Heroic Leap.",
+  "[우선 처치] Slaughterhouse was picked by 40 of 41 Battleground Blitz players and reduces healing taken by up to 36% via Rampage and Odyn's Fury. Focus it on one enemy flag carrier or base defender.",
+  "[광역 피해] Odyn's Fury damages all enemies within 12 yds. Use it on enemies stacked on a base to apply Slaughterhouse's healing reduction to several of them.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, use Enraged Regeneration and Defensive Stance damage reduction first.",
+  "[위치] Piercing Howl slows enemies within 12 yds by 70% for 8 sec and makes allies within 6 yds 30% faster for 4 sec. Use it to cut off enemies chasing your flag carrier.",
+  "[제어] Enemies feared by Intimidating Shout can't be knocked back. Use it to drive off enemies trying to capture a base, but don't overlap it with your team's knockbacks."
+ ],
+ "pvpTalents": "Slaughterhouse, picked by 31 of the top 32 Solo Shuffle and 40 of 41 Battleground Blitz players, reduces the target's healing taken by 3% per Rampage and Odyn's Fury hit, stacking up to 12 times. Enduring Rage, picked by 25 of 32 Solo Shuffle and 32 of 41 Battleground Blitz players, gives a chance to gain Enrage while movement impaired and Recklessness while CC'd. Death Wish, picked by 24 of 41 Battleground Blitz players, costs 10% of your health to increase damage dealt and taken by 10% each for 15 sec.",
+ "tips": {
+  "slaughterhouse": "352998",
+  "enduring rage": "411764",
+  "death wish": "199261",
+  "disarm": "236077",
+  "berserker roar": "1227751",
+  "enraged regeneration": "184364",
+  "piercing howl": "12323",
+  "intimidating shout": "5246",
+  "berserker shout": "384100"
+ },
+ "spells": {
+  "5246": {
+   "n": "Intimidating Shout",
+   "i": "ability_golemthunderclap",
+   "m": "Talent · 8 yd range · Instant · 1.5 min cooldown",
+   "d": "Causes the targeted enemy to cower in fear while all enemies within 8 yards flee from you and their movement speed is reduced by 70% for 8 sec.\nDamage may cancel the effect."
+  },
+  "12323": {
+   "n": "Piercing Howl",
+   "i": "spell_shadow_deathscream",
+   "m": "Talent · Instant · 1.5 min cooldown",
+   "d": "Snares all enemies within 12 yards, reducing their movement speed by 70% for 8 sec.\n\nSpurs all allies within 6 yards, increasing their movement speed by 30% for 4 sec."
+  },
+  "184364": {
+   "n": "Enraged Regeneration",
+   "i": "ability_warrior_focusedrage",
+   "m": "Talent · Instant · 2 min cooldown",
+   "d": "Reduces damage taken by 30% and Bloodthirst restores an additional 20% health for 8 sec. Usable while stunned or incapacitated."
+  },
+  "199261": {
+   "n": "Death Wish",
+   "i": "spell_shadow_deathpact",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 4 sec cooldown",
+   "d": "Increases your damage taken and done by 10% for 15 sec at the cost of 10% of your health. Stacks up to 5 times."
+  },
+  "236077": {
+   "n": "Disarm",
+   "i": "ability_warrior_disarm",
+   "m": "Tank Specs – Row 1 PvP Talent · Melee Range · Instant · 45 sec cooldown",
+   "d": "Disarm the enemy's weapons and shield for 5 sec. Disarmed creatures deal significantly reduced damage."
+  },
+  "352998": {
+   "n": "Slaughterhouse",
+   "i": "ability_warrior_deepcuts",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Rampage and Odyn's Fury damage reduce healing the target receives by 3% for 12 sec, stacking up to 12 times."
+  },
+  "384100": {
+   "n": "Berserker Shout",
+   "i": "spell_nature_ancestralguardian",
+   "m": "Talent · Instant · 1 min cooldown",
+   "d": "Go berserk, removing and granting immunity to Fear, Sap, and Incapacitate effects for 6 sec.\n\nAlso remove fear effects from group members within 12 yds."
+  },
+  "411764": {
+   "n": "Enduring Rage",
+   "i": "ability_warrior_rampage",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "You have a chance to become Enraged while you are suffering movement impairing effects.\n\nSuffering loss of control effects have a chance to grant you Recklessness for 5 sec."
+  },
+  "1227751": {
+   "n": "Berserker Roar",
+   "i": "spell_nature_ancestralguardian",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Berserker Shout also reduces the duration of the next crowd control effect within 5 sec by 50% on group members within 12 yds."
+  }
+ },
+ "spellsKo": {
+  "5246": {
+   "n": "위협의 외침",
+   "m": "특성 · 8 야드 사정거리 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "대상을 공포에 질려 제자리에서 떨게 하고, 8초 동안 주위 8미터 내 모든 적의 이동 속도를 70%만큼 감소시킵니다.\n피해를 받으면 효과가 해제될 수 있습니다."
+  },
+  "12323": {
+   "n": "날카로운 고함",
+   "m": "특성 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "8초 동안 12미터 내에 있는 적의 이동 속도를 70%만큼 감소시킵니다.\n\n6미터 내 모든 아군을 자극하여 4초 동안 이동 속도를 30%만큼 증가시킵니다."
+  },
+  "184364": {
+   "n": "격노의 재생력",
+   "m": "특성 · 즉시 · 2 분 재사용 대기시간",
+   "d": "8초 동안 받는 피해가 30%만큼 감소하고, 피의 갈증이 추가로 20%만큼의 생명력을 회복합니다. 행동 불가 상태나 기절 중에도 사용할 수 있습니다."
+  },
+  "199261": {
+   "n": "죽음의 소원",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 4 초 재사용 대기시간",
+   "d": "10%의 생명력을 소모하여 15초 동안 받는 피해량과 공격력을 10%만큼 증가시킵니다. 최대 5번까지 중첩됩니다."
+  },
+  "236077": {
+   "n": "무장 해제",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 근접 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "5초 동안 적의 무기와 방패를 무장 해제시킵니다. 무장 해제된 적은 공격력이 크게 감소합니다."
+  },
+  "352998": {
+   "n": "도축장",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "광란 및 오딘의 격노의 공격이 12초 동안 대상이 받는 치유 효과를 3%만큼 감소시킵니다. 최대 12번까지 중첩됩니다."
+  },
+  "384100": {
+   "n": "광전사의 외침",
+   "m": "특성 · 즉시 · 1 분 재사용 대기시간",
+   "d": "광폭화하여 6초 동안 공포, 혼절시키기, 행동 불가 상태를 제거하고 면역이 됩니다.\n\n추가로 12미터 내 파티원에게 부여된 공포 효과를 제거합니다."
+  },
+  "411764": {
+   "n": "지속적인 분노",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "이동 방해 효과에 걸리면 일정 확률로 격노 상태가 됩니다.\n\n제어 불가 효과에 걸리면 일정 확률로 5초 동안 무모한 희생이 부여됩니다."
+  },
+  "1227751": {
+   "n": "광전사의 포효",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "광전사의 외침 사용 시 추가로 다음 5초 안에 12미터 내 파티원에게 걸리는 군중 제어 효과의 지속시간이 50%만큼 감소합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "영웅 특성이 1인 조합전 산왕 31·학살자 1, 전장 대공세 산왕 39·학살자 2로 산왕이 대부분이지만 한쪽 전용 기술(Thunder Blast 등)은 쓰지 않음",
+   "Death Wish는 받는 피해도 늘어나 쓰임 상황을 툴팁만으로 정할 수 없어 전략 줄에는 쓰지 않고 채택률만 적음"
+  ]
+ }
+}

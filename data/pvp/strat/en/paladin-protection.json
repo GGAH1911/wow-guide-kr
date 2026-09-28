@@ -1,0 +1,278 @@
+{
+ "id": "paladin/protection",
+ "arena": [
+  "[분담] Guardian of the Forgotten Queen replaces Guardian of Ancient Kings and makes the target ally immune to all damage for 6 sec. Use it on the ally the enemy burst is focused on.",
+  "[차단] Avenger's Shield only interrupts non-player targets, so interrupt player casts with Rebuke. With Shield of Virtue active, your next Avenger's Shield interrupts and silences all enemies within 8 yds of the target.",
+  "[생존기] Ardent Defender reduces damage taken by 30% for 12 sec and lets you survive one fatal hit at 20% health. Pop it first when you're being focused.",
+  "[생존기] Divine Shield, Lay on Hands and Blessing of Protection leave Forbearance for 30 sec. Plan the order so you don't chain them on the same target.",
+  "[제어] Hammer of Justice stuns a target within 10 yds for 6 sec, and Blinding Light disorients enemies within 10 yds for 6 sec but damage can break it. Use them on the enemy healer your team isn't hitting.",
+  "[분담] Blessing of Sacrifice reduces an ally's damage taken by 30% for 12 sec and transfers that damage to you. Use it on a focused ally while your own defensive is active.",
+  "[위치] Blessing of Freedom grants immunity to movement impairing effects for 8 sec. With Bear the Burden, each Word of Glory reduces Blessing of Freedom's cooldown by 4 sec, but its healing on allies is reduced by 50%."
+ ],
+ "bg": [
+  "[참고] In 8-player Battleground Blitz groups there are 0-1 tanks, and slow tanks need help carrying the flag. Extend Divine Steed by 2 sec with Steed of Glory and carry while immune to movement impairing effects.",
+  "[제어] During Steed of Glory you knock back enemies you move through, but feared or disoriented targets can't be knocked back. Run through enemies without CC on them.",
+  "[분담] With Hallowed Ground, Consecration clears and suppresses slows on allies inside it. Stand your flag carrier or base defenders on Consecration.",
+  "[생존기] Healing taken is reduced by 20% in battlegrounds. Rather than waiting on heals, keep Shield of the Righteous armor and Ardent Defender damage reduction chained without gaps.",
+  "[분담] Guardian of the Forgotten Queen gives the target ally 6 sec of damage immunity. Use it right before your flag carrier goes down.",
+  "[제어] Searing Glare makes enemy players in a 25 yd cone miss their spells and attacks for 4 sec. Aim it at enemy packs rushing a base."
+ ],
+ "pvpTalents": "Guardian of the Forgotten Queen, picked by 26 of the top 27 Solo Shuffle and 25 of 36 Battleground Blitz players, protects one ally from all damage for 6 sec. Shield of Virtue, picked by 23 of 27 Solo Shuffle players, makes your next Avenger's Shield interrupt and silence all enemies around the target. Steed of Glory, picked by 21 of 36 Battleground Blitz players, extends Divine Steed by 2 sec and adds movement impairment immunity and knockbacks.",
+ "tips": {
+  "guardian of the forgotten queen": "228049",
+  "shield of virtue": "215652",
+  "bear the burden": "468454",
+  "steed of glory": "199542",
+  "hallowed ground": "216868",
+  "searing glare": "410126",
+  "shield of the righteous": "53600",
+  "ardent defender": "31850",
+  "guardian of ancient kings": "86659",
+  "divine shield": "642",
+  "lay on hands": "633",
+  "blessing of protection": "1022",
+  "blessing of freedom": "1044",
+  "word of glory": "85673",
+  "hammer of justice": "853",
+  "rebuke": "96231",
+  "avenger's shield": "31935",
+  "blinding light": "115750",
+  "divine steed": "190784",
+  "forbearance": "25771"
+ },
+ "spells": {
+  "633": {
+   "n": "Lay on Hands",
+   "i": "spell_holy_layonhands",
+   "m": "Talent · 40 yd range · Instant · 10 min cooldown",
+   "d": "Heals a friendly target for an amount equal to 100% your maximum health.\n\nCannot be used on a target with Forbearance. Causes Forbearance for 30 sec."
+  },
+  "642": {
+   "n": "Divine Shield",
+   "i": "spell_holy_divineshield",
+   "m": "Instant · 5 min cooldown",
+   "d": "Grants immunity to all damage, harmful effects, knockbacks and forced movement effects for 8 sec.\n\nCannot be used if you have Forbearance. Causes Forbearance for 30 sec."
+  },
+  "853": {
+   "n": "Hammer of Justice",
+   "i": "spell_holy_sealofmight",
+   "m": "0.7% of base mana · 10 yd range · Instant · 45 sec cooldown",
+   "d": "Stuns the target for 6 sec."
+  },
+  "1022": {
+   "n": "Blessing of Protection",
+   "i": "spell_holy_sealofprotection",
+   "m": "Talent · 3% of base mana · 40 yd range · Instant · 5 min cooldown · 1 Charge",
+   "d": "Blesses a party or raid member, granting immunity to Physical damage and harmful effects for 10 sec.\n\nCannot be used on a target with Forbearance. Causes Forbearance for 30 sec.\n\nShares a cooldown with Blessing of Spellwarding."
+  },
+  "1044": {
+   "n": "Blessing of Freedom",
+   "i": "spell_holy_sealofvalor",
+   "m": "Talent · 1.4% of base mana · 40 yd range · Instant · 25 sec cooldown · 1 Charge",
+   "d": "Blesses a party or raid member, granting immunity to movement impairing effects [Unbound Freedom: and increasing movement speed by 30%]for 8 sec."
+  },
+  "25771": {
+   "n": "Forbearance",
+   "i": "spell_holy_removecurse",
+   "m": "Unlimited range · Instant",
+   "d": "Cannot be affected by Divine Shield, Hand of Protection, or Lay on Hands for 30 sec."
+  },
+  "31850": {
+   "n": "Ardent Defender",
+   "i": "spell_holy_ardentdefender",
+   "m": "Talent · Instant · 1.5 min cooldown",
+   "d": "Reduces all damage you take by 30% for 12 sec.\n\nWhile Ardent Defender is active, the next attack that would otherwise kill you will instead bring you to 20% of your maximum health."
+  },
+  "31935": {
+   "n": "Avenger's Shield",
+   "i": "spell_holy_avengersshield",
+   "m": "Talent · 30 yd range · Instant · 15 sec cooldown",
+   "d": "Hurls your shield at an enemy target, dealing (200% of Attack Power) Holy damage, interrupting and silencing the non-Player target for 3 sec, and then jumping to 2 additional nearby enemies.\n\nShields you for 8 sec, absorbing 75% as much damage as it dealt.\n\nDeals ((12% of Attack Power)) additional damage to all enemies within 5 yds of each target hit."
+  },
+  "53600": {
+   "n": "Shield of the Righteous",
+   "i": "ability_paladin_shieldofvengeance",
+   "m": "3 to 5 Holy Power · Melee Range · Instant · 1 sec cooldown",
+   "d": "Slams enemies in front of you with your shield, causing (95% of Attack Power) Holy damage, and increasing your Armor by (192 * Strength / 100) for 4.5 sec.\n\nArmor granted by Shield of the Righteous is increased by up to 72%, based on your missing health."
+  },
+  "85673": {
+   "n": "Word of Glory",
+   "i": "inv_helmet_96",
+   "m": "3 Holy Power / 15% of base mana · 40 yd range · Instant",
+   "d": "Calls down the Light to heal a friendly target for (415.8% of Spell Power).\n\nProtection:"
+  },
+  "86659": {
+   "n": "Guardian of Ancient Kings",
+   "i": "spell_holy_heroism",
+   "m": "Talent · 30 yd range · Instant · 3 min cooldown · 1 Charge",
+   "d": "Empowers you with the spirit of ancient kings, reducing all damage you take by 50% for 8 sec."
+  },
+  "96231": {
+   "n": "Rebuke",
+   "i": "spell_holy_rebuke",
+   "m": "Talent · Melee Range · Instant · 15 sec cooldown",
+   "d": "Interrupts spellcasting and prevents any spell in that school from being cast for 5 sec."
+  },
+  "115750": {
+   "n": "Blinding Light",
+   "i": "ability_paladin_blindinglight",
+   "m": "Talent · 1.2% of base mana · Instant · 1.5 min cooldown",
+   "d": "Emits dazzling light in all directions, blinding enemies within 10 yds, causing them to wander disoriented for 6 sec. Damage may cancel the effect."
+  },
+  "190784": {
+   "n": "Divine Steed",
+   "i": "ability_paladin_divinesteed",
+   "m": "Talent · Instant · 45 sec cooldown · 1 Charge",
+   "d": "Leap atop your Charger for 3 sec, increasing movement speed by 100%. Usable while indoors or in combat."
+  },
+  "199542": {
+   "n": "Steed of Glory",
+   "i": "spell_holy_crusaderaura",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Your Divine Steed lasts for an additional 2 sec.\n\nWhile active you become immune to movement impairing effects, and you knock back enemies that you move through."
+  },
+  "215652": {
+   "n": "Shield of Virtue",
+   "i": "inv_shield_60",
+   "m": "Tank Specs – Row 1 PvP Talent · Instant · 45 sec cooldown",
+   "d": "When activated, your next Avenger's Shield will interrupt and silence all enemies within 8 yds of the target."
+  },
+  "216868": {
+   "n": "Hallowed Ground",
+   "i": "spell_holy_innerfire",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Your Consecration clears and suppresses all snare effects on allies within its area of effect."
+  },
+  "228049": {
+   "n": "Guardian of the Forgotten Queen",
+   "i": "spell_holy_heroism",
+   "m": "Tank Specs – Row 1 PvP Talent · Replaces Guardian of Ancient Kings · 40 yd range · Instant · 4 min cooldown · 1 Charge",
+   "d": "Empowers the friendly target with the spirit of the forgotten queen, causing the target to be immune to all damage for 6 sec."
+  },
+  "410126": {
+   "n": "Searing Glare",
+   "i": "pvp_searingglare",
+   "m": "Tank Specs – Row 1 PvP Talent · Replaces Blinding Light · 1.25 sec cast · 1 min cooldown",
+   "d": "Call upon the light to blind enemy players in a 25 yd cone, causing enemies to miss their spells and attacks for 4 sec."
+  },
+  "468454": {
+   "n": "Bear the Burden",
+   "i": "ability_paladin_selflesshealer",
+   "m": "Tank Specs – Row 1 PvP Talent",
+   "d": "Word of Glory's mana cost is reduced by 100% and now reduces the cooldown of Blessing of Freedom by 4 sec when cast, but its healing is reduced by 50% when cast on allies."
+  }
+ },
+ "spellsKo": {
+  "633": {
+   "n": "신의 축복",
+   "m": "특성 · 40 야드 사정거리 · 즉시 · 10 분 재사용 대기시간",
+   "d": "자신의 최대 생명력의 100%만큼 아군 대상의 생명력을 회복시킵니다.\n\n참을성 상태인 대상에게는 사용할 수 없습니다. 대상은 이후 30초 동안 참을성 상태가 됩니다."
+  },
+  "642": {
+   "n": "천상의 보호막",
+   "m": "즉시 · 5 분 재사용 대기시간",
+   "d": "8초 동안 모든 피해와 해로운 효과, 밀쳐내기, 강제 이동 효과에 면역이 됩니다.\n\n참을성 상태일 때는 사용할 수 없습니다. 이후 30초 동안 참을성 상태가 됩니다."
+  },
+  "853": {
+   "n": "심판의 망치",
+   "m": "0.7% (기본 마나 중) · 10 야드 사정거리 · 즉시 · 45 초 재사용 대기시간",
+   "d": "6초 동안 대상을 기절시킵니다."
+  },
+  "1022": {
+   "n": "보호의 축복",
+   "m": "특성 · 3% (기본 마나 중) · 40 야드 사정거리 · 즉시 · 5 분 재사용 대기시간 · 1회 사용 가능",
+   "d": "대상 파티원 또는 공격대원에게 축복을 내려, 10초 동안 모든 물리 피해와 해로운 효과로부터 보호합니다.\n\n참을성 상태인 대상에게는 사용할 수 없습니다. 대상은 이후 30초 동안 참을성 상태가 됩니다.\n\n주문 수호의 축복과 재사용 대기시간을 공유합니다."
+  },
+  "1044": {
+   "n": "자유의 축복",
+   "m": "특성 · 1.4% (기본 마나 중) · 40 야드 사정거리 · 즉시 · 25 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "대상 파티원 또는 공격대원에게 축복을 내려, 8초 동안 이동 방해 효과에 면역이 되도록 [해방된 자유: 하고, 이동 속도를 30%만큼 증가시킵니다 / 합니다]."
+  },
+  "25771": {
+   "n": "참을성",
+   "m": "사정거리 없음 · 즉시",
+   "d": "30초 동안 천상의 보호막, 보호의 손길, 신의 축복을 받을 수 없습니다."
+  },
+  "31850": {
+   "n": "헌신적인 수호자",
+   "m": "특성 · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "12초 동안 자신이 받는 모든 피해를 30%만큼 감소시킵니다.\n\n헌신적인 수호자가 활성화되어 있는 동안 죽음에 이르는 피해를 입으면, 죽지 않고 남은 생명력이 최대 생명력의 20%로 변경됩니다."
+  },
+  "31935": {
+   "n": "응징의 방패",
+   "m": "특성 · 30 야드 사정거리 · 즉시 · 15 초 재사용 대기시간",
+   "d": "적에게 방패를 날려 (전투력의 200%)의 신성 피해를 입힙니다. 대상이 플레이어가 아니라면 주문 시전을 차단하고 3초 동안 침묵시킵니다. 또한, 주위 적 2명을 연쇄적으로 가격합니다.\n\nShields you for 8 sec, absorbing 75% as much damage as it dealt.\n\nDeals ((전투력의 12%)) additional damage to all enemies within 5 yds of each target hit."
+  },
+  "53600": {
+   "n": "정의의 방패",
+   "m": "신성한 힘 3의 5개 · 근접 사정거리 · 즉시 · 1 초 재사용 대기시간",
+   "d": "전방의 적을 방패로 가격하여 (전투력의 95%)의 신성 피해를 입힙니다. 4.5초 동안 방어도가 (160 * 힘 / 100)만큼 증가합니다.\n\nArmor granted by Shield of the Righteous is increased by up to 72%, based on your missing health."
+  },
+  "85673": {
+   "n": "영광의 서약",
+   "m": "신성한 힘 3개 / 15% (기본 마나 중) · 40 야드 사정거리 · 즉시",
+   "d": "아군 대상에게 빛을 내려 (주문력의 415.8%)만큼 생명력을 회복시킵니다.\n\nProtection:"
+  },
+  "86659": {
+   "n": "고대 왕의 수호자",
+   "m": "특성 · 30 야드 사정거리 · 즉시 · 3 분 재사용 대기시간 · 1회 사용 가능",
+   "d": "고대 왕의 영혼으로 자신을 강화화여, 8초 동안 받는 모든 피해가 50%만큼 감소합니다."
+  },
+  "96231": {
+   "n": "비난",
+   "m": "특성 · 근접 사정거리 · 즉시 · 15 초 재사용 대기시간",
+   "d": "주문 시전을 차단하고, 대상이 5초 동안 같은 계열의 주문을 시전하는 것을 방해합니다."
+  },
+  "115750": {
+   "n": "눈부신 빛",
+   "m": "특성 · 1.2% (기본 마나 중) · 즉시 · 1.5 분 재사용 대기시간",
+   "d": "휘황찬란한 빛을 사방으로 내뿜어 10미터 내의 적들의 눈을 멀게 하고, 6초 동안 방향 감각을 상실하여 방황하게 만듭니다. 피해를 받으면 효과가 해제될 수 있습니다."
+  },
+  "190784": {
+   "n": "천상의 군마",
+   "m": "특성 · 즉시 · 45 초 재사용 대기시간 · 1회 사용 가능",
+   "d": "군마에 올라타 3초 동안 이동 속도가 100%만큼 증가합니다. 실내 또는 전투 중에도 사용할 수 있습니다."
+  },
+  "199542": {
+   "n": "영광의 군마",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "천상의 군마의 지속시간이 2초만큼 증가합니다.\n\n활성화되어 있는 동안 이동 방해 효과에 면역 상태가 되고, 달려 가는 경로상에 있는 적을 뒤로 밀쳐냅니다."
+  },
+  "215652": {
+   "n": "고결의 방패",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 즉시 · 45 초 재사용 대기시간",
+   "d": "활성화되면 다음 응징의 방패 시전 시 대상으로부터 8미터 내의 모든 적의 주문 시전을 차단하고 침묵시킵니다."
+  },
+  "216868": {
+   "n": "신성화된 땅",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "신성화가 적용 범위 내의 모든 아군에게 걸린 감속 효과를 제거하고 억제합니다."
+  },
+  "228049": {
+   "n": "잊힌 여왕의 수호자",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 고대 왕의 수호자을(를) 대신함 · 40 야드 사정거리 · 즉시 · 4 분 재사용 대기시간 · 1회 사용 가능",
+   "d": "아군 대상을 잊힌 여왕의 영혼으로 강화하여, 대상이 6초 동안 모든 피해에 면역이 되게 합니다."
+  },
+  "410126": {
+   "n": "이글거리는 시선",
+   "m": "탱커 스펙 – 1열 PvP 특성 · 눈부신 빛을(를) 대신함 · 1.25 초 주문 시전 시간 · 1 분 재사용 대기시간",
+   "d": "빛을 불러 내려 25미터 부채꼴 범위 내의 적 플레이어를 실명시킵니다. 4초 동안 적의 주문과 공격이 빗나가게 만듭니다."
+  },
+  "468454": {
+   "n": "번뇌를 짊어진 자",
+   "m": "탱커 스펙 – 1열 PvP 특성",
+   "d": "영광의 서약의 마나 소모량이 100%만큼 감소합니다. 또한 시전 시 자유의 축복의 재사용 대기시간을 4초만큼 감소시키지만 아군에게 시전 시 치유량이 50%만큼 감소합니다."
+  }
+ },
+ "names": {},
+ "note": "There is no spec-specific PvP guide source, so these are general principles built from ability and PvP talent tooltips, actual top-player pick rates, and mode and map requirements.",
+ "sources": [],
+ "audit": {
+  "unverified": [],
+  "notes": [
+   "투기장 상위권 표본이 3v3 1명·3v3/2v2(한국) 각 3명뿐이라 투기장 줄은 1인 조합전(27명) 채택률과 일반 원칙 기준",
+   "쐐기 전문화 파일 tips에 있으나 spells 툴팁이 빠진 기술 13개를 받아 이 파일에 넣음",
+   "영웅 특성이 1인 조합전 기사단 12·빛의 대장장이 15, 전장 대공세 21·15로 갈려 Holy Bulwark·Hammer of Light 등 한쪽 전용 기술은 쓰지 않음"
+  ]
+ }
+}
