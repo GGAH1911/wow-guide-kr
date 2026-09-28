@@ -1216,7 +1216,7 @@ async function pvpMapPage() {
   app().innerHTML = '<div class="wrap rank"><p class="muted">불러오는 중…</p></div>';
   const MS = await J("data/pvp/maps.json").catch(() => null);
   const maps = (MS && MS.maps) || [];
-  if (!maps.length) { app().innerHTML = '<div class="wrap rank"><p>지도 공략 데이터가 없습니다.</p></div>'; return; }
+  if (!maps.length) { app().innerHTML = '<div class="wrap rank"><p>전장·투기장 공략 데이터가 없습니다.</p></div>'; return; }
   let id = q.get("m"); if (!maps.some(m => m.id === id)) id = maps[0].id;
   let mode = ls.get("wg:pvpmode") === "r" ? "r" : "b";
   const role0 = (BYID[ls.get("wg:spec")] || {}).role;
@@ -1232,15 +1232,15 @@ async function pvpMapPage() {
     const roleHtml = roles.map(r => { const L = M.role[r].map(pvpParse).filter(show); return L.length ? `<h4>${ROLE_ICON[r]} ${ROSTER.roles[r].ko}</h4><ul class="items">${L.map(p => pvpLi(p.k, esc(ko(p.x)), bg ? pvpModeBadge(p.m) : "")).join("")}</ul>` : ""; }).join("");
     const meta = M.meta || {};
     app().innerHTML = `<div class="wrap rank rhub">
-      <section class="s1-hero"><h1>PvP 지도 공략</h1><p>한밤 2시즌 전장(전장 대공세·평점제 전장)과 투기장. 지도를 고르면 목표·배치·역할별 할 일을 봅니다.</p></section>
+      <section class="s1-hero"><h1>PvP 전장·투기장 공략</h1><p>한밤 2시즌 전장(전장 대공세·평점제 전장)과 투기장. 장소를 고르면 목표·배치·역할별 할 일을 봅니다.</p></section>
       <nav class="maptabs">${tabs}</nav>
       ${bg ? `<div class="rkchips"><span class="tlabel">모드</span><span class="seg" role="group"><button type="button" data-pmode="b" aria-pressed="${mode === "b"}">전장 대공세 (8v8)</button><button type="button" data-pmode="r" aria-pressed="${mode === "r"}">평점제 전장 (10v10)</button></span></div>` : ""}
       <div><h2 class="dname">${esc(nm(M))}</h2><p class="dsub">${bg ? "전장" : "투기장"}${meta.goal ? " · " + esc(ko(meta.goal)) : ""}${meta.size ? " · " + esc(meta.size) : ""}${lang === "ko" && M.ko ? ` · ${esc(M.name)}` : ""}</p></div>
       <section class="boss"><h3><span>요약</span><small>Brief</small></h3><ul class="items">${brief}</ul></section>
       ${(M.detail || {}).overview ? `<section class="boss"><h3><span>흐름</span><small>Overview</small></h3><p>${esc(ko(M.detail.overview))}</p>${secs}</section>` : ""}
       ${roleHtml ? `<section class="boss"><h3><span>역할별 할 일</span><small>Roles</small></h3>${roleHtml}</section>` : ""}
-      <p class="note">출처: ${(M.sources || []).map(s => `<a href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}</a>`).join(" · ")}. 지도·기술 이름은 게임 데이터(한글 클라이언트) 기준입니다. 전문화별 할 일은 각 전문화 PvP 페이지의 "PvP 전략"에 있습니다.</p></div>`;
-    document.title = `${nm(M)} · PvP 지도 공략`;
+      <p class="note">출처: ${(M.sources || []).map(s => `<a href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}</a>`).join(" · ")}. 장소·기술 이름은 게임 데이터(한글 클라이언트) 기준입니다. 전문화별 할 일은 각 전문화 PvP 페이지의 "PvP 전략"에 있습니다.</p></div>`;
+    document.title = `${nm(M)} · PvP 전장·투기장 공략`;
   };
   const sync = () => history.replaceState(null, "", location.pathname + "?m=" + id);
   app().addEventListener("click", e => {
@@ -1250,7 +1250,7 @@ async function pvpMapPage() {
   reLang = () => draw();
   draw(); sync();
 }
-// PvP 홈의 지도 목록(3단계)
+// PvP 홈의 전장·투기장 목록(3단계)
 const pvpMapListHtml = maps => { if (!maps || !maps.length) return ""; const nm = m => lang === "ko" && m.ko ? m.ko : m.name;
   return ["bg", "arena"].map(t => { const L = maps.filter(m => m.type === t); return L.length ? `<div class="rpg"><span class="tlabel">${t === "bg" ? "전장 (전장 대공세·평점제 전장)" : "투기장 (1인 조합전·2v2·3v3)"}</span><div class="rpl">${L.map(m => `<a href="${pvpMapUrl(m.id)}"><span>${esc(nm(m))}</span></a>`).join("")}</div></div>` : ""; }).join(""); };
 // 전문화 PvP 전략(4단계)
@@ -1262,7 +1262,7 @@ const pvpStratHtml = (s, St, mspec, P) => { if (!St) return "";
     <h4>투기장 · 1인 조합전</h4>${list(St.arena)}
     <h4>전장 · 전장 대공세 · 평점제 전장</h4>${list(St.bg)}
     ${St.pvpTalents ? `<h4>PvP 특성</h4><p>${esc(ko(St.pvpTalents))}</p>` : ""}
-    <p class="note">${esc(St.note || "")} 지도별 공략은 <a href="${BASE}pvp/#maps">PvP 지도 공략</a>에 있습니다.</p></section>`; };
+    <p class="note">${esc(St.note || "")} 장소별 공략은 <a href="${BASE}pvp/#maps">PvP 전장·투기장 공략</a>에 있습니다.</p></section>`; };
 
 async function pvpHubPage() {
   const saved = BYID[ls.get("wg:spec")];
@@ -1292,12 +1292,12 @@ async function pvpHubPage() {
         return { s: x, pct: Math.round(pct * 10) / 10, sub: byTotal ? (v && v.total ? `순위 인원 ${v.total.toLocaleString()}명` : "순위 기록 없음") : (v && v.n ? `${v.n}명` : "상위권에 없음"), href: pvpUrl(x.id, `?br=${st.br}&smp=${st.smp}`), cur: saved && saved.id === x.id }; }))}</div>`; }).join("");
     app().innerHTML = `<div class="wrap rank rhub">
       <section class="s1-hero"><h1>PvP</h1><p>한밤 2시즌 평점제 PvP. 블리자드 공식 순위표(미국·유럽·한국·대만) 기준 전문화 비율, 추천 빌드, 순위(${esc(M.src)}, ${esc(M.date)}). 중국은 공식 API에 없어 빠집니다.</p></section>
-      <nav class="rhnav"><a href="#guide">빌드</a><a href="#maps">지도 공략</a><a href="#rank">전문화 비율</a><a href="#ladder">순위표</a><a href="#tiers">평점 구간</a></nav>
+      <nav class="rhnav"><a href="#guide">빌드</a><a href="#maps">전장·투기장</a><a href="#rank">전문화 비율</a><a href="#ladder">순위표</a><a href="#tiers">평점 구간</a></nav>
       <section class="boss" id="guide"><h3><span>전문화별 PvP 빌드</span><small>추천 빌드 · 영웅 특성 · PvP 특성</small></h3>
         ${saved ? `<a class="rmine" href="${pvpUrl(saved.id, `?br=${st.br}&smp=${st.smp}`)}">${icon(saved, 28)}<span><b>${esc(specName(saved))} PvP ›</b><span class="sub">${esc(brName(st.br))} 상위권이 쓰는 빌드·영웅 특성·PvP 특성</span></span></a>` : '<p class="hint">전문화를 고르면 그 전문화의 PvP 빌드가 열립니다.</p>'}
         <details class="rpick"${saved ? "" : " open"}><summary>${saved ? "다른 전문화로 보기" : "전문화 고르기"}</summary>${pickGrid}</details>
         <p class="note">전문화 페이지에는 모드별 추천 빌드·PvP 특성과 함께 "PvP 전략"(투기장·전장에서 그 전문화가 할 일)이 있습니다.</p></section>
-      ${MS && MS.maps && MS.maps.length ? `<section class="boss" id="maps"><h3><span>지도 공략</span><small>전장 · 투기장</small></h3>${pvpMapListHtml(MS.maps)}<p class="note">지도마다 목표·시작 배치·역할별 할 일. 전장은 전장 대공세(8v8)와 평점제 전장(10v10) 차이를 따로 표시합니다.</p></section>` : ""}
+      ${MS && MS.maps && MS.maps.length ? `<section class="boss" id="maps"><h3><span>전장·투기장 공략</span><small>목표·배치·역할별 할 일</small></h3>${pvpMapListHtml(MS.maps)}<p class="note">장소마다 목표·시작 배치·역할별 할 일. 전장은 전장 대공세(8v8)와 평점제 전장(10v10) 차이를 따로 표시합니다.</p></section>` : ""}
       <div class="rkchips pvpctl"><span class="tlabel">모드</span>${pvpSeg(st)}</div>
       <div class="rkchips"><span class="tlabel">표본</span>${pvpSmpSeg(st)}</div>
       <section class="home-rank" id="rank"><div class="hr-head"><h2>${esc(brName(st.br))} 전문화 비율 <span>${pvpNote(M, st)}</span></h2></div>
