@@ -4,7 +4,7 @@
   "nekzali-the-soulcoiler": {
    "Nek'zali the Soulcoiler": [
     "[위치] If you are the Possession Barrage target, use Divine Steed for 100% movement speed and run far from the boss.",
-    "[제어] Stun a Restless Amani with its shield still up for 6 sec with Hammer of Justice to slow it down.",
+    "[제어] Stun a Restless Amani with its shield still up for 6 sec with Hammer of Justice to slow it down (Icy Veins); Method says shielded Amani can't be stopped.",
     "[생존기] Under Uncoiled Rage, taunts do not work and all damage rises by 500%, so reduce damage taken by 50% with Guardian of Ancient Kings."
    ]
   },
@@ -16,7 +16,7 @@
   },
   "vashnik-the-malignant": {
    "Vashnik the Malignant": [
-    "[탱버] When Dripping Fangs stacks build up, reduce damage taken by 30% with Ardent Defender.",
+    "[탱버] Time Ardent Defender (30% damage reduction) for the Dripping Fangs hit, then swap.",
     "[제어] Burning Venom can be held with Hammer of Justice or Blinding Light until Hardened Venom."
    ]
   },

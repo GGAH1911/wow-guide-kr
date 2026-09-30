@@ -4,7 +4,7 @@
   "nekzali-the-soulcoiler": {
    "Nek'zali the Soulcoiler": [
     "[위치] Possession Barrage 대상이 되면 Divine Steed로 이동 속도를 100% 올려 보스에게서 멀리 달려가라",
-    "[제어] 보호막이 남은 Restless Amani는 Hammer of Justice로 6초 기절시켜 늦춰라",
+    "[제어] 보호막이 남은 Restless Amani는 Hammer of Justice로 6초 기절시켜 늦춰라(Icy Veins), Method는 보호막이 있는 동안 멈출 수 없다고 적었다",
     "[생존기] Uncoiled Rage가 걸리면 도발이 통하지 않고 모든 피해가 500% 오르니 Guardian of Ancient Kings로 받는 피해를 50% 줄여라"
    ]
   },
@@ -16,7 +16,7 @@
   },
   "vashnik-the-malignant": {
    "Vashnik the Malignant": [
-    "[탱버] Dripping Fangs 중첩이 쌓이면 Ardent Defender로 받는 피해를 30% 줄여라",
+    "[탱버] Dripping Fangs 시전에 맞춰 Ardent Defender로 받는 피해를 30% 줄이고, 맞은 뒤에는 교대하라",
     "[제어] Burning Venom은 Hardened Venom 전까지 Hammer of Justice나 Blinding Light로 묶을 수 있다"
    ]
   },
