@@ -567,6 +567,29 @@ function langSeg(id) {
 }
 
 // ---------- 모바일: 영상 링크를 YouTube 앱으로 열기 ----------
+// ---- 영상 팝업: a.ytpop[data-yt] 를 누르면 YouTube 임베드 플레이어를 페이지 위 팝업으로 띄운다 ----
+// 닫기: ✕·바깥·Esc·휴대폰 뒤로 가기. 닫으면 iframe 을 지워 재생을 멈춘다. 임베드가 막힌 영상을 위해 "YouTube에서 보기" 링크를 함께 둔다
+(function () {
+  let el = null, pushed = false;
+  const close = back => {
+    if (!el) return; el.remove(); el = null; document.documentElement.classList.remove("yt-open");
+    if (back && pushed) { pushed = false; history.back(); } else pushed = false;
+  };
+  addEventListener("popstate", () => { if (el) { pushed = false; close(false); } });
+  document.addEventListener("keydown", e => { if (el && e.key === "Escape") { e.preventDefault(); close(true); } });
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a.ytpop[data-yt]"); if (!a) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // 새 탭으로 열기는 그대로
+    e.preventDefault(); e.stopImmediatePropagation();
+    const id = a.dataset.yt.replace(/[^\w-]/g, "");
+    el = document.createElement("div"); el.className = "ytmodal";
+    el.innerHTML = `<div class="yt-back" data-ytx></div><div class="yt-box" role="dialog" aria-modal="true" aria-label="${esc(a.textContent.trim())}"><div class="yt-bar"><span class="yt-t">${esc(a.title || a.textContent.trim())}</span><a class="yt-ext" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">YouTube에서 보기 ↗</a><button type="button" class="yt-x" data-ytx aria-label="닫기">✕</button></div><div class="yt-frame"><iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1" title="${esc(a.title || "영상")}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>`;
+    el.addEventListener("click", ev => { if (ev.target.closest("[data-ytx]")) close(true); });
+    document.body.append(el); document.documentElement.classList.add("yt-open");
+    history.pushState({ wgYt: 1 }, ""); pushed = true;
+    el.querySelector(".yt-x").focus({ preventScroll: true });
+  }, true);
+})();
 (function () {
   const ua = navigator.userAgent;
   const isAndroid = /Android/i.test(ua);
@@ -948,7 +971,7 @@ async function sheetPage() {
     const last = r.pulls[r.pulls.length - 1].cum;
     const short = last < r.total ? `<p class="rwarn">이 경로는 최신 MDT 데이터 기준 잡몹 ${pct(last)}%에서 끝난다. 경로를 만든 뒤 MDT에서 빠진 몹이 있어서이니 마지막 보스 전에 근처 몹을 조금 더 잡는다.</p>` : "";
     return `<div class="sechead"><h2>경로 · 일반몹 · 보스</h2><p>${esc(src.author)} PUG 경로 · 번호나 몹 위에 마우스를 올리면 풀 이름, 누르면 공략 · 회색 점은 이 경로에서 잡지 않는 몹 · 잡몹 총량 ${r.total}</p></div>
-      <p class="dlinks rlinks"><button class="vid mdtcopy" type="button" data-d="${d.id}" data-r="1" data-label="이 경로 MDT 복사" title="게임에서 /mdt → Import에 붙여 넣기">이 경로 MDT 복사</button>${r.run ? `<a class="vid" href="https://www.youtube.com/watch?v=${esc(r.run.id)}" target="_blank" rel="noopener" title="${esc(r.run.title)}">▶ ${esc(src.author)} 주행 영상 (해설 없음, ${esc(r.run.key)})</a>` : ""}${EN_VID && r.video ? `<a class="vid" href="${esc(r.video)}" target="_blank" rel="noopener">▶ ${esc(src.author)} 해설 영상</a>` : ""}<a class="vid" href="${esc(src.folder)}" target="_blank" rel="noopener" title="${esc(src.name)} · ${esc(src.updated)}">경로 원본</a><textarea class="mdtbox" readonly hidden aria-label="MDT 경로 문자열">${esc(r.string)}</textarea></p>
+      <p class="dlinks rlinks"><button class="vid mdtcopy" type="button" data-d="${d.id}" data-r="1" data-label="이 경로 MDT 복사" title="게임에서 /mdt → Import에 붙여 넣기">이 경로 MDT 복사</button>${r.run ? `<a class="vid ytpop" data-yt="${esc(r.run.id)}" href="https://www.youtube.com/watch?v=${esc(r.run.id)}" rel="noopener" title="${esc(r.run.title)}">▶ ${esc(src.author)} 주행 영상 (해설 없음, ${esc(r.run.key)})</a>` : ""}${EN_VID && r.video ? `<a class="vid" href="${esc(r.video)}" target="_blank" rel="noopener">▶ ${esc(src.author)} 해설 영상</a>` : ""}<a class="vid" href="${esc(src.folder)}" target="_blank" rel="noopener" title="${esc(src.name)} · ${esc(src.updated)}">경로 원본</a><textarea class="mdtbox" readonly hidden aria-label="MDT 경로 문자열">${esc(r.string)}</textarea></p>
       ${fixHtml(r)}${short}${map}<div class="pulls" hidden>${cards}</div>`;
   }
   // 경로 보정 안내: MDT 업데이트로 번호만 바뀐 몹을 다시 연결(relink)했거나 빠진 몹 대신 보충(add)한 경우. 복사 문자열도 보정본이다.
