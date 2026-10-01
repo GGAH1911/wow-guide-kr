@@ -156,6 +156,8 @@ details.fold:not([open]) .chev{transform:rotate(-90deg)}
 .vid:hover{border-color:var(--link);text-decoration:none}
 .dlinks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
 .dlinks .vid{margin-right:0;font-size:12.5px;padding:4px 11px}
+.mdtcopy{cursor:pointer;background:var(--surface);font-family:inherit}
+.mdtbox{flex-basis:100%;width:100%;min-height:64px;font:11px/1.4 ui-monospace,Menlo,monospace;border:1px solid var(--line);border-radius:6px;padding:6px;background:var(--surface);color:var(--ink-2)}
 .expall{font-size:12.5px;font-weight:600;border:1px solid var(--line);color:var(--ink-2);background:var(--surface);border-radius:var(--r-pill);padding:4px 11px;cursor:pointer}
 .sechead{margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px}
 .sechead h2{font-size:19px;margin:0;letter-spacing:-.02em}
