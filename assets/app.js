@@ -611,6 +611,8 @@ async function sheetPage() {
     J("data/core/routes.json").catch(() => null),
   ]);
   const ROUTES = (routes && routes.dungeons) || {};
+  // 영문 해설 공략 영상(Raider.IO·Topicx 해설·Dalaran Gaming)은 영문판에서만 보인다. 한글판에는 말이 없는 Topicx 주행 영상만 둔다
+  const EN_VID = UI === "en";
   const saved = ls.get("wg:spec");
   let visiting = saved !== s.id;
   const save = (k, v) => { if (!visiting) ls.set(k, v); };
@@ -945,7 +947,7 @@ async function sheetPage() {
     const last = r.pulls[r.pulls.length - 1].cum;
     const short = last < r.total ? `<p class="rwarn">이 경로는 최신 MDT 데이터 기준 잡몹 ${pct(last)}%에서 끝난다. 경로를 만든 뒤 MDT에서 빠진 몹이 있어서이니 마지막 보스 전에 근처 몹을 조금 더 잡는다.</p>` : "";
     return `<div class="sechead"><h2>경로 · 일반몹 · 보스</h2><p>${esc(src.author)} PUG 경로 · 번호나 몹 위에 마우스를 올리면 풀 이름, 누르면 공략 · 회색 점은 이 경로에서 잡지 않는 몹 · 잡몹 총량 ${r.total}</p></div>
-      <p class="dlinks rlinks"><button class="vid mdtcopy" type="button" data-d="${d.id}" data-r="1" data-label="이 경로 MDT 복사" title="게임에서 /mdt → Import에 붙여 넣기">이 경로 MDT 복사</button>${r.video ? `<a class="vid" href="${esc(r.video)}" target="_blank" rel="noopener">▶ ${esc(src.author)} 해설 영상</a>` : ""}<a class="vid" href="${esc(src.folder)}" target="_blank" rel="noopener" title="${esc(src.name)} · ${esc(src.updated)}">경로 원본</a><textarea class="mdtbox" readonly hidden aria-label="MDT 경로 문자열">${esc(r.string)}</textarea></p>
+      <p class="dlinks rlinks"><button class="vid mdtcopy" type="button" data-d="${d.id}" data-r="1" data-label="이 경로 MDT 복사" title="게임에서 /mdt → Import에 붙여 넣기">이 경로 MDT 복사</button>${r.run ? `<a class="vid" href="https://www.youtube.com/watch?v=${esc(r.run.id)}" target="_blank" rel="noopener" title="${esc(r.run.title)}">▶ ${esc(src.author)} 주행 영상 (해설 없음, ${esc(r.run.key)})</a>` : ""}${EN_VID && r.video ? `<a class="vid" href="${esc(r.video)}" target="_blank" rel="noopener">▶ ${esc(src.author)} 해설 영상</a>` : ""}<a class="vid" href="${esc(src.folder)}" target="_blank" rel="noopener" title="${esc(src.name)} · ${esc(src.updated)}">경로 원본</a><textarea class="mdtbox" readonly hidden aria-label="MDT 경로 문자열">${esc(r.string)}</textarea></p>
       ${fixHtml(r)}${short}${map}<div class="pulls" hidden>${cards}</div>`;
   }
   // 경로 보정 안내: MDT 업데이트로 번호만 바뀐 몹을 다시 연결(relink)했거나 빠진 몹 대신 보충(add)한 경우. 복사 문자열도 보정본이다.
@@ -1176,10 +1178,10 @@ async function sheetPage() {
       const inner = (ov ? `<p class="dover">${abWrap(ov)}</p>` : "") + (lis ? `<ul class="items">${lis}</ul>` : `<p class="empty">선택한 태그 항목 없음</p>`);
       const ek = `easy-${d.id}-${b.n}`, eOpen = openState[ek] !== false;
       const list = d.id === "general" ? inner : `<details class="easy fold" data-k="${ek}"${eOpen ? " open" : ""}><summary><span>간편 공략</span><span class="chev" aria-hidden="true">▾</span></summary><div class="easybody">${inner}</div></details>`;
-      return { list, deep: deepHtml(d.id, b), vid: (RIO[d.id] && b.k !== "Trash") ? `<a class="vid" href="${rioVideo(d.id, b.t)}" target="_blank" rel="noopener">▶ 영상</a>` : "" };
+      return { list, deep: deepHtml(d.id, b), vid: (EN_VID && RIO[d.id] && b.k !== "Trash") ? `<a class="vid" href="${rioVideo(d.id, b.t)}" target="_blank" rel="noopener">▶ 영상</a>` : "" };
     };
     const R0 = ROUTES[d.id], inRoute = new Set(R0 ? R0.pulls.filter(p => p.boss).map(p => p.boss) : []);
-    mainEl.innerHTML = `<div><h2 class="dname">${d.name}</h2><p class="dsub">${d.sub}${d.time ? ` · <span class="dtime">제한 시간 <b>${d.time}분</b></span>` : ""}${RIO[d.id] ? `</p><p class="dlinks"><a class="vid" href="${rioVideo(d.id)}" target="_blank" rel="noopener">▶ Raider.IO 영상</a><a class="vid rio" href="${rioArticle(d.id)}" target="_blank" rel="noopener">Raider.IO 글</a>${ROUTES[d.id] ? "" : mdtHtml(d.id)}` : ` · <a class="vid" href="${core.generalVideo.href}" target="_blank" rel="noopener">${core.generalVideo.label}</a>`}</p></div>` + (d.id !== "general" ? heroCard(d) : "") + bosses.map(b => {
+    mainEl.innerHTML = `<div><h2 class="dname">${d.name}</h2><p class="dsub">${d.sub}${d.time ? ` · <span class="dtime">제한 시간 <b>${d.time}분</b></span>` : ""}${RIO[d.id] ? `</p><p class="dlinks">${EN_VID ? `<a class="vid" href="${rioVideo(d.id)}" target="_blank" rel="noopener">▶ Raider.IO 영상</a>` : ""}<a class="vid rio" href="${rioArticle(d.id)}" target="_blank" rel="noopener">Raider.IO 글</a>${ROUTES[d.id] ? "" : mdtHtml(d.id)}` : EN_VID ? ` · <a class="vid" href="${core.generalVideo.href}" target="_blank" rel="noopener">${core.generalVideo.label}</a>` : ""}</p></div>` + (d.id !== "general" ? heroCard(d) : "") + bosses.map(b => {
       if (b.block) return fold(b, blockHtml(b));
       if (inRoute.has(b.n)) return "";
       const x = bossInner(b);
