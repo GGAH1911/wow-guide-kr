@@ -7,7 +7,7 @@ const CFG = window.WG || {};
 const BASE = CFG.base || "./";
 const J0 = p => fetch(BASE + p).then(r => { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); });
 // 영어 화면(UI=en)이면 사람이 쓴 공략 데이터는 data/<분류>/en/<파일> 을 먼저 받고, 없으면 원본(한국어)을 쓴다. 매일 수집하는 수치 파일은 대상이 아니다.
-const EN_DATA = /^data\/(?:spec\/[^/]+|core\/dungeons|role\/[^/]+|raid\/(?:core|s1)|raid\/spec\/[^/]+|pvp\/maps|pvp\/strat\/[^/]+)\.json$/;
+const EN_DATA = /^data\/(?:spec\/[^/]+|core\/(?:dungeons|routes)|role\/[^/]+|raid\/(?:core|s1)|raid\/spec\/[^/]+|pvp\/maps|pvp\/strat\/[^/]+)\.json$/;
 const J = p => UI === "en" && EN_DATA.test(p) ? J0(p.replace(/\/([^/]+)$/, "/en/$1")).catch(() => J0(p)) : J0(p);
 
 // ---------- 저장값 ----------
@@ -15,6 +15,25 @@ const ls = {
   get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
   set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
 };
+// 다크 모드: 버튼 하나로 켜고 끈다. 저장값이 "light"일 때만 라이트, 나머지는 다크(시스템 설정은 보지 않음)
+const THEME = () => ls.get("wg:theme") === "light" ? "light" : "dark";
+document.documentElement.dataset.theme = THEME();
+const SUN_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+const MOON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+// 버튼에는 누르면 바뀔 모드의 아이콘을 보인다(다크일 때 해, 라이트일 때 달)
+const thBtn = (spin = false) => { const d = THEME() === "dark"; return `<button type="button" class="thsw${spin ? " spin" : ""}" id="thsw" aria-label="${d ? "라이트 모드로" : "다크 모드로"}" title="${d ? "라이트 모드로" : "다크 모드로"}">${d ? SUN_SVG : MOON_SVG}</button>`; };
+// 전환 연출(블러 디졸브): 옛 화면은 흐려지며 살짝 커져 사라지고, 새 화면은 흐릿한 상태에서 선명해지며 나타난다(View Transitions).
+// 지원하지 않는 브라우저는 색만 부드럽게 바뀌고, "동작 줄이기"를 켠 사용자는 즉시 바뀐다. 버튼 아이콘은 돌면서 해↔달로 바뀐다.
+document.addEventListener("click", e => {
+  const b = e.target.closest("#thsw"); if (!b) return;
+  const next = THEME() === "dark" ? "light" : "dark", root = document.documentElement;
+  const apply = () => { ls.set("wg:theme", next); root.dataset.theme = next; const cur = document.getElementById("thsw"); if (cur) cur.outerHTML = thBtn(true); };
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return apply();
+  if (!document.startViewTransition) {
+    root.classList.add("theme-anim"); apply(); setTimeout(() => root.classList.remove("theme-anim"), 450); return;
+  }
+  document.startViewTransition(apply);
+});
 const ss = {
   get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } },
   set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} },
@@ -135,6 +154,41 @@ function classIcon(c, size) {
   return `<span class="ico${light ? " light" : ""}" style="--c:${c.color};${size ? `--s:${size}px;` : ""}${light ? "color:#1D1D1F" : ""}" aria-hidden="true">${esc((lang === "ko" ? c.ko : c.en).charAt(0))}<img src="https://wow.zamimg.com/images/wow/icons/large/classicon_${c.token.toLowerCase()}.jpg" alt="" loading="lazy" onerror="this.remove()"></span>`;
 }
 const sheetUrl = (id, hash) => `${BASE}${id}/${hash || ""}`;
+// ---- 즐겨찾기: 방문자 브라우저(localStorage)에만 저장. 로그인·서버 없이 GitHub Pages 에서 그대로 동작한다 ----
+// 저장 키 wg:favs = ["paladin/protection", ...]. 다른 기기로는 ?favs=a,b 주소(메뉴의 "즐겨찾기 링크 복사")로 옮긴다
+const favList = () => { try { const a = JSON.parse(ls.get("wg:favs") || "[]"); return Array.isArray(a) ? a.filter(id => BYID[id]) : []; } catch (e) { return []; } };
+const favHas = id => favList().includes(id);
+const favSave = a => ls.set("wg:favs", JSON.stringify([...new Set(a)]));
+const favToggle = id => { const a = favList(); favSave(a.includes(id) ? a.filter(x => x !== id) : [...a, id]); return favHas(id); };
+const favBtn = id => { const on = favHas(id); return `<button type="button" class="favb" data-fav="${id}" aria-pressed="${on}" aria-label="${on ? "즐겨찾기에서 빼기" : "즐겨찾기에 추가"}" title="${on ? "즐겨찾기에서 빼기" : "즐겨찾기에 추가"}">${on ? "★" : "☆"}</button>`; };
+// 즐겨찾기 칩 줄. mode: 쐐기(sheet)·레이드(raid)·PvP(pvp) 중 지금 보는 쪽 주소로 연다
+const favChips = (mode, cur) => favList().map(id => BYID[id]).map(x => `<a class="favchip${x.id === cur ? " cur" : ""}" href="${mode === "raid" ? raidUrl(x.id) : mode === "pvp" ? pvpUrl(x.id) : sheetUrl(x.id, ls.get("wg:tab") ? "#" + ls.get("wg:tab") : "")}" data-spec="${x.id}" style="--cls-ink:${x.cls.ink[0]};--cls-ink-d:${x.cls.ink[1]}">${icon(x, 22)}<span>${esc(specName(x))}</span></a>`).join("");
+// 메뉴의 즐겨찾기 묶음(추가한 순서). 별을 누르면 favRefresh 가 바로 다시 그린다
+const favMenuHtml = mode => favList().length ? `<div class="gsep">★ 즐겨찾기</div>${favList().map(id => BYID[id]).map(x => `<a href="${mode === "raid" ? raidUrl(x.id) : mode === "pvp" ? pvpUrl(x.id) : sheetUrl(x.id)}" data-spec="${x.id}">${esc(x.koFull)}</a>`).join("")}<button type="button" id="gfavcopy">즐겨찾기 링크 복사</button>` : "";
+const favRefresh = () => {
+  document.querySelectorAll(".favb[data-fav]").forEach(b => { b.outerHTML = favBtn(b.dataset.fav); });
+  const m = document.getElementById("gfavs"); if (m) m.innerHTML = favMenuHtml(m.dataset.mode);
+};
+document.addEventListener("click", e => {
+  const b = e.target.closest(".favb[data-fav]");
+  if (b) { e.preventDefault(); const on = favToggle(b.dataset.fav); favRefresh(); const bn = document.getElementById("bfav"); if (bn && on) bn.remove(); document.dispatchEvent(new CustomEvent("wg:favs")); return; }
+  const cp = e.target.closest("#gfavcopy");
+  if (cp) {
+    const url = `${location.origin}${BASE}?favs=${favList().join(",")}`;
+    const done = t => { cp.textContent = t; setTimeout(() => cp.textContent = "즐겨찾기 링크 복사", 2500); };
+    try { navigator.clipboard.writeText(url).then(() => done("복사됨 · 다른 기기에서 열기"), () => prompt("이 주소를 다른 기기에서 여세요", url)); } catch (err) { prompt("이 주소를 다른 기기에서 여세요", url); }
+  }
+});
+// ?favs=a,b 로 들어오면 즐겨찾기에 합치고 주소에서 뺀다
+function favImport() {
+  const q = new URLSearchParams(location.search), v = q.get("favs"); if (v == null) return 0;
+  const add = v.split(",").map(x => x.trim()).filter(x => BYID[x]), before = favList().length;
+  favSave([...favList(), ...add]);
+  q.delete("favs"); history.replaceState(history.state, "", location.pathname + (q.toString() ? "?" + q : "") + location.hash);
+  const n = favList().length - before;
+  if (add.length) { const t = document.createElement("div"); t.className = "favtoast"; t.textContent = n ? `즐겨찾기 ${n}개를 가져왔습니다` : "이미 즐겨찾기에 있는 전문화입니다"; document.body.append(t); setTimeout(() => t.remove(), 3500); }
+  return n;
+}
 const guideUrl = (id, hero) => `${BASE}${id}/${hero}/`;
 const raidUrl = (id, hash) => `${BASE}${id}/raid/${hash || ""}`;
 const pvpUrl = (id, q) => `${BASE}${id}/pvp/${q || ""}`;
@@ -240,7 +294,7 @@ function openSheet(role, currentId) {
   const draw = () => {
     el.innerHTML = `<div class="sheet-panel"><div class="sheet-head"><div class="t"><h2>전문화 변경</h2><button class="x" type="button" aria-label="닫기">✕</button></div>
       <div class="seg rseg" role="group" aria-label="역할">${["tank", "healer", "dps", "class"].map(k => `<button type="button" data-role="${k}" aria-pressed="${k === r}">${k === "class" ? "직업별" : ROSTER.roles[k].ko + " " + SPECS.filter(s => s.role === k).length}</button>`).join("")}</div></div>
-      <div class="sheet-body">${specListHtml(r, currentId)}${anySoon() ? '<p class="note">준비 중인 전문화도 고를 수 있습니다. 던전 공략과 역할 운영까지 볼 수 있고, 내 기술 대응은 순서대로 채웁니다.</p>' : ""}</div></div>`;
+      <div class="sheet-body">${favList().length ? `<div class="favrow"><span class="favlab">★ 즐겨찾기</span>${favChips("sheet", currentId)}</div>` : ""}${specListHtml(r, currentId)}${anySoon() ? '<p class="note">준비 중인 전문화도 고를 수 있습니다. 던전 공략과 역할 운영까지 볼 수 있고, 내 기술 대응은 순서대로 채웁니다.</p>' : ""}</div></div>`;
   };
   draw();
   const prevRe = reSample; reSample = () => draw();
@@ -296,16 +350,16 @@ function siteHeader(s, view, hero) {
     : mode === "pvp" ? [["pvphub-guide", pvpHubUrl("", "#guide"), "빌드"], ["pvphub-rank", pvpHubUrl("", "#rank"), "순위"]]
     : [["rank", rankUrl("all" + SQ()), "순위표"], ["specs", BASE + "specs/", "전문화 목록"]];
   const mid = s ? (() => { const g = s.status === "ready" && hero;
-      return `<button class="nm" id="nm" type="button" aria-haspopup="dialog" title="같은 역할의 다른 전문화"><span class="dot"></span><span class="n">${esc(specName(s))}</span>${hero ? `<span class="h">· ${esc(heroName(heroOf(s, hero)))}</span>` : ""}<span class="car" aria-hidden="true">▾</span></button>
+      return `<button class="nm" id="nm" type="button" aria-haspopup="dialog" title="같은 역할의 다른 전문화"><span class="dot"></span><span class="n">${esc(specName(s))}</span>${hero ? `<span class="h">· ${esc(heroName(heroOf(s, hero)))}</span>` : ""}<span class="car" aria-hidden="true">▾</span></button>${favBtn(s.id)}
     <nav class="vseg" aria-label="보기"><a href="${sheetUrl(s.id)}"${view === "sheet" ? ' aria-current="page"' : ""}><span class="long">쐐기 공략</span><span class="short">쐐기</span></a><a class="vr" href="${raidUrl(s.id)}"${view === "raid" ? ' aria-current="page"' : ""}><span class="long">레이드 공략</span><span class="short">레이드</span></a><a class="vp" href="${pvpUrl(s.id)}"${view === "pvp" ? ' aria-current="page"' : ""}><span class="long">PvP</span><span class="short">PvP</span></a><a class="vg" href="${g ? guideUrl(s.id, hero) : "#"}"${view === "guide" ? ' aria-current="page"' : ""}${g ? "" : ' aria-disabled="true" title="스킬 준비 중"'}><span class="long">스킬</span><span class="short">스킬</span></a></nav>`; })()
     : `${modeSeg}<nav class="gnav" aria-label="${mode === "raid" ? "레이드" : "쐐기"}">${links.map(([k, u, t]) => `<a href="${u}"${cur(k)}>${t}</a>`).join("")}</nav><span class="gsp"></span>${saved ? `<a class="gmine" href="${mode === "raid" ? raidUrl(saved.id) : mode === "pvp" ? pvpUrl(saved.id) : sheetUrl(saved.id)}" data-spec="${saved.id}" title="내 전문화: ${esc(saved.koFull)} ${mode === "raid" ? "레이드 공략" : mode === "pvp" ? "PvP" : "쐐기 공략"}">${icon(saved, 22)}<span class="gml">${esc(specName(saved))}</span></a>` : ""}`;
   const sh = saved && ls.get("wg:hero:" + saved.id);
   const mine = s && saved && saved.id === s.id ? "" : saved ? `<div class="gsep">내 전문화 · ${esc(saved.koFull)}</div><a href="${sheetUrl(saved.id)}">쐐기 공략</a><a href="${raidUrl(saved.id)}">레이드 공략</a><a href="${pvpUrl(saved.id)}">PvP</a>${saved.status === "ready" ? `<a href="${guideUrl(saved.id, sh && heroOf(saved, sh) ? sh : defaultHero(saved))}">스킬</a>` : ""}` : `<a href="${BASE}?pick">전문화 고르기</a>`;
   return `<header class="lnav gh"><div class="in wrap">
     <a class="home" href="${BASE}" title="첫 화면" aria-label="첫 화면">${HOME_SVG}</a>
-    ${mid}${hlang()}
+    ${mid}${hlang()}${thBtn()}
     <button class="gmb" id="gmb" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="gmenu" aria-label="메뉴" title="메뉴">${MENU_SVG}</button>
-    <div class="gmenu" id="gmenu" hidden><div class="gm-in"><div class="gsep">쐐기</div><a href="${BASE}"${cur("select")}>쐐기 홈 · 전문화 고르기</a><a href="${rankUrl("all" + SQ())}"${cur("rank")}>쐐기 순위표</a><a href="${BASE}specs/"${cur("specs")}>전문화 목록</a><div class="gsep">레이드</div><a href="${raidHubUrl(SQ().slice(1), "#guide")}"${cur("raidhub")}>레이드 홈 · 공략 고르기</a><a href="${raidHubUrl(SQ().slice(1), "#rank")}">레이드 순위</a><div class="gsep">PvP</div><a href="${pvpHubUrl("", "#guide")}"${cur("pvphub")}>PvP 홈 · 빌드 고르기</a><a href="${pvpHubUrl("", "#rank")}">PvP 순위</a>${mine}${s ? '<button type="button" id="gchg">전문화 변경</button>' : ""}${UI === "en" ? '<div class="gsep">Site language</div><button type="button" data-ui="ko" translate="no" lang="ko">한국어</button>' : '<div class="gsep">사이트 언어</div><button type="button" data-ui="en" lang="en">English</button>'}</div></div></div></header>`;
+    <div class="gmenu" id="gmenu" hidden><div class="gm-in"><div class="gsep">쐐기</div><a href="${BASE}"${cur("select")}>쐐기 홈 · 전문화 고르기</a><a href="${rankUrl("all" + SQ())}"${cur("rank")}>쐐기 순위표</a><a href="${BASE}specs/"${cur("specs")}>전문화 목록</a><div class="gsep">레이드</div><a href="${raidHubUrl(SQ().slice(1), "#guide")}"${cur("raidhub")}>레이드 홈 · 공략 고르기</a><a href="${raidHubUrl(SQ().slice(1), "#rank")}">레이드 순위</a><div class="gsep">PvP</div><a href="${pvpHubUrl("", "#guide")}"${cur("pvphub")}>PvP 홈 · 빌드 고르기</a><a href="${pvpHubUrl("", "#rank")}">PvP 순위</a><div id="gfavs" data-mode="${mode}">${favMenuHtml(mode)}</div>${mine}${s ? '<button type="button" id="gchg">전문화 변경</button>' : ""}${UI === "en" ? '<div class="gsep">Site language</div><button type="button" data-ui="ko" translate="no" lang="ko">한국어</button>' : '<div class="gsep">사이트 언어</div><button type="button" data-ui="en" lang="en">English</button>'}</div></div></div></header>`;
 }
 const topbar = (s, view, hero) => siteHeader(s, view, hero);
 function bindTopbar(s) {
@@ -343,8 +397,9 @@ function bannerHtml(s, visiting) {
   let h = "";
   if (visiting && mine) {
     h += `<div class="banner share" id="bshare"><b>${esc(ro(s.koFull))}</b> 보는 중입니다. 저장된 내 전문화는 ${esc(mine.koFull)}입니다.<div class="acts"><a class="pill gray" href="${sheetUrl(mine.id, location.hash)}">내 전문화로</a><button class="pill" type="button" id="bsave">이 전문화로 저장</button></div></div>`;
-  } else if (visiting && ss.get("wg:nudge-off") !== "1") {
-    h += `<div class="banner share" id="bshare">이 전문화를 내 전문화로 저장하면, 다음부터 첫 화면에서 바로 이 공략이 열립니다.<div class="acts"><button class="pill" type="button" id="bsave">저장</button><button class="pill gray" type="button" id="bclose">닫기</button></div></div>`;
+  }
+  if (!favList().length && ls.get("wg:favnudge") !== "off") {
+    h += `<div class="banner share" id="bfav"><span>☆ 자주 보는 전문화는 즐겨찾기에 추가하세요. 첫 화면과 전문화 변경 맨 위에 모여 바로 열 수 있습니다. 즐겨찾기는 이 브라우저에만 저장됩니다.</span><div class="acts">${favBtn(s.id).replace('class="favb"', 'class="favb pill"').replace(/>[☆★]</, ">☆ 즐겨찾기에 추가<")}<button class="pill gray" type="button" id="bfavx">닫기</button></div></div>`;
   }
   if (s.status !== "ready") {
     const roleOk = s.role === "tank";
@@ -353,6 +408,7 @@ function bannerHtml(s, visiting) {
   return h;
 }
 function bindBanner(s, onSave) {
+  const fx = document.getElementById("bfavx"); if (fx) fx.onclick = () => { ls.set("wg:favnudge", "off"); document.getElementById("bfav").remove(); };
   const sv = document.getElementById("bsave"), cl = document.getElementById("bclose");
   if (sv) sv.onclick = () => { ls.set("wg:spec", s.id); document.getElementById("bshare").remove(); onSave(); };
   if (cl) cl.onclick = () => { ss.set("wg:nudge-off", "1"); document.getElementById("bshare").remove(); };
@@ -386,6 +442,67 @@ function makeKo(dict) {
 }
 // "산레인으로", "기사단으로"처럼 받침에 맞는 조사 로/으로
 const ro = w => { const c = w.charCodeAt(w.length - 1); if (c < 0xAC00 || c > 0xD7A3) return w + "(으)로"; const j = (c - 0xAC00) % 28; return w + (j === 0 || j === 8 ? "로" : "으로"); };
+// 영문 문장에서 대문자로 이어진 덩어리(예: "Interrupt Radiant Spellsower's Light Bolt Volley")를 아는 이름 단위로 쪼갠다.
+// 왼쪽부터 가장 긴 아는 이름(기술 툴팁·한글 사전·NPC)을 찾아 감싸고, 소유격('s)은 이름 밖에 둔다.
+// 아는 이름이 아닌 나머지는 문장 첫 동사·연결어(AB_STOP)를 떼고 남은 것만 감싼다. 한글 문장 속 이름은 덩어리가 이름 하나라 결과가 그대로다.
+const AB_STOP = new Set(("A An The And Or But If When While Whenever Once After Before During For From To On In At By With Without Into Of Then So As " +
+  "This That These Those It Its They Them Their You Your Each Every Both All Any No Not Only Also Even Just Always Never Otherwise Instead " +
+  "Use Using Kill Killing Interrupt Interrupts Kick Kicking Pull Pulling Put Keep Assign Go Going Take Save Stand Move Dodge Spread Stack Avoid " +
+  "Dispel Purge Cast Casting Pop Hold Stop Watch Face Stun Let Bring Do Don't Run Step Drop Clear Burst Focus Swap Switch Turn Send Skip Wait " +
+  "Lust Bloodlust Heroism Topicx Method Wowhead Physical Holy Fire Frost Nature Shadow Arcane Magic Poison Disease Curse Bleed Enrage " +
+  "DPS Tank Tanks Healer Healers Melee Ranged Boss Bosses Trash Mob Mobs Add Adds Pull Pulls Phase Intermission DoT HoT Dead Dying " +
+  "Note Tip Important Mandatory Optional Recommended Here There Now Later Next Last First Second Third " +
+  "Players Player Place Soak Taunt Under Over Break Slow Freeze Rotate Refresh Spend Engage Mark Right Left Gather Press Line Leave Make Give Get " +
+  "Throughout Everyone Getting Touching Eating Standing Have Aim Grab Set Split Remove Absorb Damage Party RP " +
+  "Mythic Heroic Normal AoE CC Two Three Four One Until Unless Between Behind Away Back Out Up Down Both Either Neither Still Again Then").split(" "));
+// 한 덩어리 seg 가 아는 이름이면 [보일 글자, 꼬리, 조회 이름] 을 돌려준다. 원형 → 소유격 → 복수 → 동사형 → 단수로 쓴 복수 이름 순서.
+function abMatch(seg, known) {
+  const hy = seg.match(/-[a-z][a-z-]*$/); // "Stormkeeper-empowered" → Stormkeeper + -empowered
+  for (const t of ["", "'s", "’s", "'", "’", "s'", "s", "es", "ing", "ed", ...(hy ? [hy[0]] : [])]) { // Pummeling → Pummel
+    if (t && !seg.endsWith(t)) continue;
+    const bs = t ? seg.slice(0, -t.length) : seg;
+    if (bs && /[A-Za-z!]$/.test(bs) && known(bs)) return [bs, t, ""];
+  }
+  if (/ies$/.test(seg) && known(seg.slice(0, -3) + "y")) return [seg, "", seg.slice(0, -3) + "y"]; // Singularities → Singularity
+  if (/[^e]ing$/.test(seg) && known(seg.slice(0, -3) + "e")) return [seg, "", seg.slice(0, -3) + "e"]; // Silencing → Silence, Death Striking → Death Strike
+  for (const t of ["s", "es"]) if (known(seg + t)) return [seg, "", seg + t]; // Mirror Image → Mirror Images(이름이 복수형)
+  const ws = seg.split(" ");
+  for (let q = 0; q < ws.length - 1; q++) if (/[a-z]s$/.test(ws[q])) { const sg = [...ws.slice(0, q), ws[q].slice(0, -1), ...ws.slice(q + 1)].join(" "); if (known(sg)) return [seg, "", sg]; } // Orbs of Disruption
+  return null;
+}
+// 덩어리를 아는 이름들로 나누는 방법 중 아는 이름이 덮는 단어가 가장 많은 것을 고른다(같으면 조각이 적은 쪽).
+// 예: "Remove Curse of Doom" → Remove + [Curse of Doom] (왼쪽부터 가장 긴 것을 고르면 [Remove Curse] + of Doom 이 됨)
+function abSplit(run, known) {
+  const w = run.split(" "), n = w.length, best = Array(n + 1).fill(null);
+  best[n] = { cov: 0, pcs: 0, parts: [] };
+  for (let i = n - 1; i >= 0; i--) {
+    let b = { cov: best[i + 1].cov, pcs: best[i + 1].pcs, parts: [[w[i]], ...best[i + 1].parts] }; // i 를 일반 단어로
+    for (let j = n; j > i; j--) {
+      const m = abMatch(w.slice(i, j).join(" "), known); if (!m) continue;
+      const c = { cov: best[j].cov + (j - i), pcs: best[j].pcs + 1, parts: [m, ...best[j].parts] };
+      if (c.cov > b.cov || (c.cov === b.cov && c.pcs < b.pcs)) b = c;
+    }
+    best[i] = b;
+  }
+  const out = []; let buf = [];
+  const flush = () => {
+    if (!buf.length) return;
+    let a = 0, b = buf.length;
+    const weak = x => AB_STOP.has(x.replace(/['’]s?$/, "")) || /^[a-z&]/.test(x);
+    while (a < b && weak(buf[a])) a++;
+    while (b > a && /^[a-z&]/.test(buf[b - 1])) b--;
+    const core = buf.slice(a, b), cw = core.join(" ");
+    const wrap = core.length && /^[A-Z]/.test(core[0]) && !(core.length === 1 && AB_STOP.has(core[0].replace(/['’]s?$/, "")));
+    out.push([...buf.slice(0, a), wrap ? `<span class="ab">${cw}</span>` : cw, ...buf.slice(b)].filter(Boolean).join(" "));
+    buf = [];
+  };
+  for (const p of best[0].parts) {
+    if (p.length === 1) { buf.push(p[0]); continue; }
+    flush(); const [base, suf, tn] = p; out.push(`<span class="ab"${tn ? ` data-tn="${tn}"` : ""}>${base}</span>${suf}`);
+  }
+  flush();
+  return out.join(" ");
+}
 const tipNorm = s => s.replace(/\s*\([^)]*\)\s*$/, "").replace(/[’]/g, "'").replace(/\s+/g, " ").trim().toLowerCase();
 
 // ---------- Wowhead 링크: 게임 언어가 한글이면 한국어 Wowhead(/ko/), 영문이면 영문 ----------
@@ -487,11 +604,13 @@ async function sheetPage() {
   const s = BYID[CFG.spec];
   if (!s) { location.replace(BASE + "?pick"); return; }
   setClassColor(s.cls);
-  const [core, en, ko, names, npcs, role, spec] = await Promise.all([
+  const [core, en, ko, names, npcs, role, spec, routes] = await Promise.all([
     J("data/core/dungeons.json"), J("data/core/spells.en.json"), J("data/core/spells.ko.json"), J("data/core/names.ko.json"),
     J("data/core/npcs.json"), J(`data/role/${s.role}.json`),
     s.status === "ready" ? J(`data/spec/${s.id.replace("/", "-")}.json`) : Promise.resolve(null),
+    J("data/core/routes.json").catch(() => null),
   ]);
+  const ROUTES = (routes && routes.dungeons) || {};
   const saved = ls.get("wg:spec");
   let visiting = saved !== s.id;
   const save = (k, v) => { if (!visiting) ls.set(k, v); };
@@ -507,7 +626,7 @@ async function sheetPage() {
   const NPC_RE = new RegExp("(?<![A-Za-z'’])(" + [...new Set([...Object.keys(KO_ALL), ...Object.keys(MOBS)])].sort((a, b) => b.length - a.length).map(k => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|") + ")(?![A-Za-z'’])", "g");
   const tokens = str => str.replace(/\{([^{}]+)\}/g, (m, n) => A(n));
   const answer = key => {
-    const a = (spec && spec.answers[key]) ?? role.answers[key] ?? role.answers[key.split(".")[0]];
+    const base = key.split(".")[0], a = (spec && spec.answers[key]) ?? role.answers[key] ?? (spec && spec.answers[base]) ?? role.answers[base];
     return a == null ? null : tokens(a);
   };
   // 공용 항목의 역할별 태그: 옵션 객체 rt: {dps: "prio", healer: "prio"} (없으면 원래 태그)
@@ -543,6 +662,7 @@ async function sheetPage() {
     const lines = Array.isArray(x) ? x : [...(x.phases || []).flatMap(p => p.points), ...(x.group || [])];
     lines.forEach(l => { const m = String(l).match(tagRe); present.add(m ? TAGK[m[1]] : "tip"); });
   })));
+  [role.pulls, spec && spec.pulls, Object.fromEntries(Object.entries(ROUTES).map(([k, r]) => [k, r.notes]))].forEach(src => Object.values(src || {}).forEach(ps => Object.values(ps).forEach(arr => (arr || []).forEach(l => { const m = String(l).match(tagRe); present.add(m ? TAGK[m[1]] : "tip"); }))));
   const ORDER = role.order.filter(t => present.has(t));
   let off = []; try { off = JSON.parse(ls.get("wg:tags:" + s.role) || "[]"); } catch (e) {}
   if (!Array.isArray(off) || ls.get("wg:tags:" + s.role) == null) off = role.off;
@@ -555,12 +675,15 @@ async function sheetPage() {
   let openState = {}; try { openState = JSON.parse(ls.get("wg:open") || "{}") || {}; } catch (e) { openState = {}; }
 
   // ---- 화면 뼈대 ----
-  const heroSeg = `<div class="seg" id="hero" role="group" aria-label="Hero talent">${s.heroes.map(h => `<button type="button" data-h="${h.slug}" aria-pressed="${h.slug === hero}" data-ko="${esc(h.ko)}">${esc(h.en)}</button>`).join("")}</div>`;
+  // 영웅 특성 버튼 옆에 쐐기 상위 순위권의 선택 비율(roster.hero500)을 바로 보여 준다
+  const heroPct = h => { const t = heroTop(s, h.slug); return t ? ` <span class="hpct">${t.pct}%</span>` : ""; };
+  const heroSrc = s.heroes.some(h => heroTop(s, h.slug)) ? `<span class="herosrc">${SL()}쐐기 상위 ${STOP()}명${SX()} 선택</span>` : "";
+  const heroSeg = `<div class="seg" id="hero" role="group" aria-label="Hero talent">${s.heroes.map(h => `<button type="button" data-h="${h.slug}" aria-pressed="${h.slug === hero}" data-ko="${esc(esc(h.ko) + heroPct(h))}">${esc(h.en)}${heroPct(h)}</button>`).join("")}</div>`;
   app().innerHTML = topbar(s, "sheet", hero) + specRow(s) + `<div class="wrap">
     <div id="banners">${bannerHtml(s, visiting)}</div>
     <p class="lede" id="lede"></p>
     <nav class="tabbar" aria-label="던전"><div class="tabs" id="tabs" role="tablist"></div><div class="tabtrack" id="tabtrack" hidden><div class="tabthumb" id="tabthumb"></div></div></nav>
-    <div class="ctrl"><div class="herorow"><span class="herogrp"><span data-ko="영웅 특성">Hero</span>${heroSeg}</span></div><div class="filters" id="filters"></div></div>
+    <div class="ctrl"><div class="herorow"><span class="herogrp"><span data-ko="영웅 특성">Hero</span>${heroSeg}${heroSrc}</span></div><div class="filters" id="filters"></div></div>
     <main id="main"></main>
     <footer id="foot"></footer></div>`;
   bindTopbar(s);
@@ -607,9 +730,23 @@ async function sheetPage() {
   const escH = x => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   const AB_RE = /([A-Z](?:[A-Za-z'’\-]+|(?=\s[A-Z]))(?:\s(?:(?:of|the|and|&amp;|on|in|to|a)\s)*[A-Z][A-Za-z'’\-]*)*)/g;
   // "Power Word: Shield"처럼 콜론이 든 이름은 툴팁·한글 사전에 있는 이름일 때만 한 덩어리로 감싼다
-  const AB_COLON = /([A-Z][A-Za-z'’\-]*(?:\s[A-Z][A-Za-z'’\-]*)*:\s[A-Z][A-Za-z'’\-]*(?:\s(?:(?:of|the|and|&amp;|on|in|to|a)\s)*[A-Z][A-Za-z'’\-]*)*)/g;
+  // 꼬리에는 다음 콜론 이름("… and Shadow Word: Madness")의 앞부분을 붙이지 않는다
+  const AB_COLON = /([A-Z][A-Za-z'’\-]*(?:\s[A-Z][A-Za-z'’\-]*)*:\s[A-Z][A-Za-z'’\-]*(?:\s(?:(?:of|the|and|&amp;|on|in|to|a)\s)*(?![A-Z][A-Za-z'’\-]*(?:\s[A-Z][A-Za-z'’\-]*)*:)[A-Z][A-Za-z'’\-]*)*)/g;
   const abKnown = m => { const k = tipNorm(m.replace(/&amp;/g, "&")); return Object.values(core.tips).some(t => t[k]) || (spec && spec.tips[k]) || core.commonTips[k] || KO_ALL[m] != null; };
-  const abWrap = x => escH(x).split(AB_COLON).map((part, i) => i % 2 && abKnown(part) ? `<span class="ab">${part}</span>` : part.replace(AB_RE, m => `<span class="ab">${m}</span>`)).join("");
+  const abIsName = m => abKnown(m) || !!MOBS[m.replace(/&amp;/g, "&")];
+  // "Put Power Word: Shield"처럼 앞에 문장 단어가 붙으면 앞 단어를 하나씩 떼며 아는 이름을 찾는다(복수 -s/-es 포함)
+  const colonPart = part => {
+    const w = part.split(" "), ci = w.findIndex(x => x.endsWith(":")), rest = x => x ? x.replace(AB_RE, y => abSplit(y, abIsName)) : "";
+    // 앞 문장 단어(Put, Press)와 뒤에 붙은 다른 이름(and Mind Blast)을 떼어 가며 가장 긴 아는 이름을 찾는다(복수 -s/-es 포함)
+    for (let i = 0; i <= ci; i++) for (let k = w.length; k > ci + 1; k--) {
+      const nm = w.slice(i, k).join(" "), pl = nm.match(/^(.*?)(es|s)$/);
+      const hit = abKnown(nm) ? [nm, ""] : pl && abKnown(pl[1]) ? [pl[1], pl[2]] : null;
+      if (hit) return [rest(w.slice(0, i).join(" ")), `<span class="ab">${hit[0]}</span>${hit[1]}`, rest(w.slice(k).join(" "))].filter(Boolean).join(" ");
+    }
+    return rest(part);
+  };
+
+  const abWrap = x => escH(x).split(AB_COLON).map((part, i) => i % 2 ? colonPart(part) : part.replace(AB_RE, m => abSplit(m, abIsName))).join("");
   function deepItems(arr) {
     return (arr || []).map(x => { const m = String(x).match(tagRe); return [m ? TAGK[m[1]] : "tip", m ? String(x).slice(m[0].length) : String(x)]; })
       .filter(([t]) => on.has(t))
@@ -626,8 +763,8 @@ async function sheetPage() {
     const key = `deep-${did}-${b.n}`;
     const open = openState[key] === true;
     const blk = (title, arr, cls) => { const lis = deepItems(arr); return lis ? `<div class="dblk${cls ? " " + cls : ""}"><h4>${title}</h4><ul class="items">${lis}</ul></div>` : ""; };
-    const phases = (x.phases || []).map(p => blk(escH(p.title), p.points)).join("");
-    const body = (x.overview ? `<p class="dover">${abWrap(x.overview)}</p>` : "") + phases + blk(role.label, roleLines(did, b.n), "role") + blk(`${s.koFull} 활용`, (SDETAIL[did] || {})[b.n], "spec") + blk("파티 공통", x.group);
+    const phases = (x.phases || []).map(p => blk(abWrap(p.title), p.points)).join("");
+    const body = phases + blk(role.label, roleLines(did, b.n), "role") + blk(`${s.koFull} 활용`, (SDETAIL[did] || {})[b.n], "spec") + blk("파티 공통", x.group);
     return `<details class="deep fold" data-k="${key}"${open ? " open" : ""}><summary><span>상세 공략</span><span class="chev" aria-hidden="true">▾</span></summary><div class="deepbody">${body || '<p class="empty">선택한 태그 항목 없음</p>'}</div></details>`;
   }
   // MDT(Mythic Dungeon Tools) 추천 경로: data/core/dungeons.json 의 mdt[던전] (Method 가이드가 거는 Tactyks PUG Friendly 경로, wago 원본 문자열)
@@ -638,9 +775,9 @@ async function sheetPage() {
   };
   document.addEventListener("click", e => {
     const b = e.target.closest(".mdtcopy"); if (!b) return;
-    const m = (core.mdt || {})[b.dataset.d]; if (!m) return;
+    const m = b.dataset.r ? ROUTES[b.dataset.d] : (core.mdt || {})[b.dataset.d]; if (!m) return;
     const box = b.parentElement.querySelector(".mdtbox");
-    const label = "MDT 경로 복사";
+    const label = b.dataset.label || "MDT 경로 복사";
     const done = () => { b.textContent = "복사됨 · /mdt → Import"; setTimeout(() => b.textContent = label, 2500); };
     const fallback = () => { if (box) { box.hidden = false; box.focus(); box.select(); } b.textContent = "선택됨"; setTimeout(() => b.textContent = label, 2500); };
     try { navigator.clipboard.writeText(m.string).then(done, fallback); } catch (err) { fallback(); }
@@ -662,8 +799,8 @@ async function sheetPage() {
     const shared = [TIPS[did] || {}, core.commonTips];
     mainEl.querySelectorAll(".ab").forEach(el => {
       if (el.dataset.sid) return;
-      const k = tipNorm(el.textContent); let id = null;
-      const inShared = el.closest(".deepbody") && !el.closest(".dblk.spec");
+      const k = tipNorm(el.dataset.tn || el.textContent); let id = null;
+      const inShared = (el.closest(".deepbody") && !el.closest(".dblk.spec")) || el.closest(".dover");
       for (const m of inShared ? shared : maps) { if (m[k]) { id = m[k]; break; } }
       if (!id) return;
       el.dataset.sid = id; el.classList.add("has-tip"); el.tabIndex = 0; el.setAttribute("role", "button");
@@ -759,14 +896,265 @@ async function sheetPage() {
     const lis = hc.items.filter(([t]) => on.has(t)).map(([t, x]) => `<li><span class="tag t-${t}">${TAGS[t]}</span><span>${tokens(x.replace("{busters}", "\u0000")).replace("\u0000", list)}</span></li>`).join("");
     return `<section class="boss herocard"><h3>${hc.title}<small>Hero</small></h3>${lis ? `<ul class="items">${lis}</ul>` : `<p class="empty">선택한 태그 항목 없음</p>`}</section>`;
   }
+  // 경로 지도 + 풀 공략: data/core/routes.json (Topicx 경로, tools/routes/build_routes.py)
+  // 지도 번호·몹 점에 마우스를 올리면 풀 이름, 누르면 팝업으로 공략. 보스 풀은 보스 공략을 그대로 담는다.
+  // 일반 풀 = 몹 기술(core.trash에서 그 풀의 몹 항목) + 풀 운영(notes) + 역할·전문화 층 pulls[던전][풀번호]
+  const slug = x => String(x).toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  const mobOf = it => { const m = String(it[1]).match(/<b class="mob">([^<]+)<\/b>/); return m ? m[1] : null; };
+  function routeSection(d, bossOf, bossInner) {
+    const r = ROUTES[d.id]; if (!r) return "";
+    const items = (TRASH[d.id] || []).flatMap(g => g.i);
+    const pct = x => (x / r.total * 100).toFixed(1);
+    const cen = p => [p.reduce((a, q) => a + q[0], 0) / p.length, p.reduce((a, q) => a + q[1], 0) / p.length];
+    const C = r.pulls.map(p => cen(p.p));
+    // 지도
+    let path = "", prev = r.entr;
+    C.forEach((c, i) => { const mv = r.moves[i + 1]; path += `<line class="${mv ? "rmove" : "rseg"}" x1="${prev[0]}" y1="${prev[1]}" x2="${c[0].toFixed(0)}" y2="${c[1].toFixed(0)}"/>`; prev = c; });
+    // 경로에서 잡지 않는 몹은 회색 점(잡몹 점수 0인 몹은 더 작게). 누를 수 없고 풀 점 아래에 깔린다.
+    const rest = `<g class="rrest">${(r.rest || []).map(q => `<circle cx="${q[0]}" cy="${q[1]}" r="${q[2] > 0 ? 9 : 6}"/>`).join("")}</g>`;
+    const dots = r.pulls.map((p, i) => `<g class="rp" data-n="${i + 1}">${p.p.map((q, j) => `<circle cx="${q[0]}" cy="${q[1]}" r="10" fill="#${p.c}"${(p.addp || []).includes(j) ? ' class="padd"' : ""}/>`).join("")}</g>`).join("");
+    const nums = C.map((c, i) => { const b = r.pulls[i].boss; return `<g class="rnum${b ? " rboss" : ""}" data-n="${i + 1}" tabindex="0" role="button" aria-label="${b ? "보스" : "일반몹"} ${i + 1}"><circle cx="${c[0].toFixed(0)}" cy="${c[1].toFixed(0)}" r="26"/><text x="${c[0].toFixed(0)}" y="${c[1].toFixed(0)}">${i + 1}</text></g>`; }).join("");
+    const entr = `<g class="rentr"><circle cx="${r.entr[0]}" cy="${r.entr[1]}" r="18"/><text x="${r.entr[0] + 28}" y="${r.entr[1]}">입구</text></g>`;
+    const map = `<div class="rmap" data-d="${d.id}" style="aspect-ratio:${r.w}/${r.h}"><img src="${BASE + r.img}" width="${r.w}" height="${r.h}" alt="${esc(d.name)} 경로 지도" loading="lazy"><svg viewBox="0 0 ${r.w} ${r.h}" aria-hidden="false">${rest}${path}<g class="rdots">${dots}</g>${entr}${nums}<g class="rtop"></g></svg><button type="button" class="rmz" aria-label="지도 크게 보기">⤢ 크게 보기</button></div><div class="rmtip" aria-live="polite"><span class="rmt-ph">번호나 몹 위에 마우스를 올리면 여기에 풀 정보가 나옵니다 · 누르면 공략</span></div>`;
+    // 풀 공략(팝업에 띄우는 카드, 평소에는 숨김)
+    const RP = ((role.pulls || {})[d.id]) || {}, SP = ((spec && spec.pulls || {})[d.id]) || {};
+    const blk = (t, lis, cls) => lis ? `<div class="dblk${cls ? " " + cls : ""}"><h4>${t}</h4><ul class="items">${lis}</ul></div>` : "";
+    const cards = r.pulls.map((p, i) => {
+      const n = i + 1, mobs = p.mobs.filter(m => m[2] > 0 || p.boss === m[0]);
+      const mv = (r.moves[n] ? `<p class="rmv">✈ ${esc(r.moves[n])}</p>` : "") + (p.add ? `<p class="radd">＋ 보충: ${p.add.map(x => `<span class="mob">${esc(x)}</span>`).join(", ")} · Topicx 경로를 만든 뒤 MDT 업데이트로 빠진 몹 대신 더 잡아 100%를 채운다</p>` : "");
+      const notes = deepItems((r.notes[n] || []).map(x => /^\[/.test(x) ? x : "[참고] " + x));
+      const rl = deepItems(RP[n]), sl = deepItems(SP[n]);
+      const lines = blk("풀 운영", notes) + blk(role.label, rl, "role") + blk(`${s.koFull} 활용`, sl, "spec");
+      const B = p.boss && bossOf(p.boss);
+      let head, k, body, vid = "";
+      if (B) {
+        const x = bossInner(B); vid = x.vid;
+        head = esc(B.n); k = B.k; body = mv + x.list + lines + x.deep;
+      } else {
+        const names = new Set(mobs.map(m => m[0]));
+        const its = items.filter(it => names.has(mobOf(it)) && on.has(tagOf(it))).map(it => `<li><span class="tag t-${tagOf(it)}">${TAGS[tagOf(it)]}</span><span>${itemHtml(it)}</span></li>`).join("");
+        const comp = `<p class="rcomp">${mobs.map(m => `<span class="mob">${esc(m[0])}</span> ${m[1]}`).join(" · ")}</p>`;
+        head = (p.boss ? [p.boss] : mobs.slice(0, 2).map(m => m[0])).map(esc).join(", ") + (!p.boss && mobs.length > 2 ? ` +${mobs.length - 2}` : "");
+        k = p.boss ? "Boss" : `${pct(p.f)}% · 누적 ${pct(p.cum)}%`;
+        body = mv + comp + (its ? `<ul class="items">${its}</ul>` : "") + lines;
+        if (!its && !lines) body += `<p class="empty">선택한 태그 항목 없음</p>`;
+      }
+      return `<section class="boss pcard${p.boss ? " pboss" : ""}" data-pull="${n}" hidden><h3><span class="bn">${head}</span><small>${vid}<span class="pcat">${p.boss ? "보스" : "일반몹"}</span>&nbsp;${n}&nbsp;·&nbsp;<span class="pk">${k}</span></small></h3><div class="pullbody">${body}</div></section>`;
+    }).join("");
+    const src = routes.source;
+    const last = r.pulls[r.pulls.length - 1].cum;
+    const short = last < r.total ? `<p class="rwarn">이 경로는 최신 MDT 데이터 기준 잡몹 ${pct(last)}%에서 끝난다. 경로를 만든 뒤 MDT에서 빠진 몹이 있어서이니 마지막 보스 전에 근처 몹을 조금 더 잡는다.</p>` : "";
+    return `<div class="sechead"><h2>경로 · 일반몹 · 보스</h2><p>${esc(src.author)} PUG 경로 · 번호나 몹 위에 마우스를 올리면 풀 이름, 누르면 공략 · 회색 점은 이 경로에서 잡지 않는 몹 · 잡몹 총량 ${r.total}</p></div>
+      <p class="dlinks rlinks"><button class="vid mdtcopy" type="button" data-d="${d.id}" data-r="1" data-label="이 경로 MDT 복사" title="게임에서 /mdt → Import에 붙여 넣기">이 경로 MDT 복사</button>${r.video ? `<a class="vid" href="${esc(r.video)}" target="_blank" rel="noopener">▶ ${esc(src.author)} 해설 영상</a>` : ""}<a class="vid" href="${esc(src.folder)}" target="_blank" rel="noopener" title="${esc(src.name)} · ${esc(src.updated)}">경로 원본</a><textarea class="mdtbox" readonly hidden aria-label="MDT 경로 문자열">${esc(r.string)}</textarea></p>
+      ${fixHtml(r)}${short}${map}<div class="pulls" hidden>${cards}</div>`;
+  }
+  // 경로 보정 안내: MDT 업데이트로 번호만 바뀐 몹을 다시 연결(relink)했거나 빠진 몹 대신 보충(add)한 경우. 복사 문자열도 보정본이다.
+  function fixHtml(r) {
+    const f = r.fixes || []; if (!f.length) return "";
+    const one = ([n, name, k]) => `<span>${n}풀</span> <span class="mob">${esc(name)}</span> <span>${k === "add" ? "보충" : k === "group" ? "같은 무리라 함께" : "다시 연결"}</span>`;
+    return `<p class="rfix"><span>MDT 경로 보정:</span> ${f.map(one).join(" · ")}<span>. Topicx 경로를 만든 뒤 MDT 업데이트로 바뀐 부분을 맞췄습니다(빠진 몹 대신 보충, 같은 무리 몹은 함께 당김). 복사 문자열 이름 끝에 "(보정)"이 붙습니다.</span></p>`;
+  }
   function trashSection(d, fold) {
-    const tr = TRASH[d.id]; if (!tr) return "";
+    const tr = TRASH[d.id]; if (!tr || ROUTES[d.id]) return "";
     const cards = tr.map((g, gi) => {
       const lis = g.i.filter(it => on.has(tagOf(it))).map(it => `<li><span class="tag t-${tagOf(it)}">${TAGS[tagOf(it)]}</span><span>${itemHtml(it)}</span></li>`).join("");
       const body = lis ? `<ul class="items">${lis}</ul>` : `<p class="empty">선택한 태그 항목 없음</p>`;
       return fold({ n: g.n, k: `Trash · ${g.i.length}` }, body, " trash", `trash-${d.id}-${gi}`, false);
     }).join("");
     return `<div class="sechead"><h2>일반몹</h2><p>구간을 눌러 펼치기 · 출처 Icy Veins</p></div>` + cards;
+  }
+  // 풀 공략 팝업: body에 한 번 만들고 던전마다 다시 묶는다. 카드는 열 때 팝업으로 옮기고 닫을 때 숨김 보관함으로 돌려놓는다.
+  const PM = (() => {
+    const el = document.createElement("div"); el.className = "pmodal"; el.hidden = true;
+    el.innerHTML = `<div class="pm-back" data-x></div><div class="pm-box" role="dialog" aria-modal="true" aria-label="풀 공략"><div class="pm-bar"><button type="button" class="pm-nav" data-step="-1" aria-label="이전 풀">◀</button><span class="pm-pos"></span><button type="button" class="pm-nav" data-step="1" aria-label="다음 풀">▶</button><button type="button" class="expall pm-exp" hidden>상세 모두 펼치기</button><button type="button" class="pm-x" data-x>닫기 ✕</button></div><div class="pm-body"></div></div>`;
+    document.body.append(el);
+    return { el, body: el.querySelector(".pm-body"), pos: el.querySelector(".pm-pos"), cur: null, n: 0, ctx: null };
+  })();
+  // 팝업과 지도 보기는 휴대폰 뒤로 가기로 닫히도록 history에 한 칸씩 쌓는다(위에서부터 닫힘).
+  const LAYERS = [];
+  const pushLayer = k => { LAYERS.push(k); history.pushState({ wgLayer: k }, ""); };
+  const closeTop = k => { if (LAYERS[LAYERS.length - 1] === k) history.back(); else (k === "pm" ? pmCloseRaw : mvCloseRaw)(); };
+  addEventListener("popstate", () => { const k = LAYERS.pop(); if (k === "pm") pmCloseRaw(); else if (k === "mv") mvCloseRaw(); });
+  // 지도 띠에 넣는 풀 한 줄(분류 · 번호 · 이름 · 비중). 카드에 이미 입힌 한글화·몹 표시를 그대로 가져온다.
+  const bandHtml = (store, n) => {
+    const q = `.pcard[data-pull="${n}"]`, c = store.querySelector(q) || PM.body.querySelector(q); if (!c) return "";
+    return `<span class="pcat${c.classList.contains("pboss") ? " b" : ""}">${c.querySelector(".pcat").textContent}</span><b>${n}</b><span class="rmt-n">${c.querySelector(".bn").innerHTML}</span><small>${pkHtml(c.querySelector(".pk").textContent)}</small>`;
+  };
+  function pkHtml(k) { const i = k.indexOf(" · "); return i < 0 ? escH(k) : `${escH(k.slice(0, i))}<span class="pk2">${escH(k.slice(i))}</span>`; }
+  const untab = el => el.querySelectorAll("[tabindex]").forEach(x => x.removeAttribute("tabindex"));
+  // 하이라이트한 풀은 몹 점을 번호 원 위(맨 위 칸 .rtop)로 올려 번호에 가리지 않게 하고, 나머지는 제자리(.rdots)로 돌린다
+  const raiseDots = (svg, n) => {
+    const top = svg.querySelector(".rtop"), base = svg.querySelector(".rdots"); if (!top || !base) return;
+    if (n && top.children.length === 1 && top.firstElementChild.dataset.n === String(n)) return; // 이미 올라가 있음(마우스 이벤트 반복 방지)
+    [...top.children].forEach(g => base.appendChild(g));
+    const g = n && base.querySelector(`.rp[data-n="${n}"]`); if (g) top.appendChild(g);
+  };
+  function pmCloseRaw(refocus = true) {
+    if (PM.el.hidden) return;
+    const c = PM.ctx;
+    if (PM.cur) { PM.cur.hidden = true; if (c && c.store.isConnected) c.store.append(PM.cur); else PM.cur.remove(); }
+    PM.cur = null; PM.el.hidden = true; document.documentElement.classList.remove("pm-open");
+    if (c && c.store.isConnected) { c.sel(null); const g = refocus && MV.el.hidden && c.svg.querySelector(`.rnum[data-n="${PM.n}"]`); g && g.focus({ preventScroll: true }); }
+  }
+  const pmClose = () => closeTop("pm");
+  function pmOpen(n) {
+    const c = PM.ctx; if (!c) return;
+    const card = c.store.querySelector(`.pcard[data-pull="${n}"]`); if (!card) return;
+    if (PM.cur) { PM.cur.hidden = true; c.store.append(PM.cur); }
+    card.hidden = false; PM.body.replaceChildren(card); PM.cur = card; PM.n = +n;
+    PM.pos.textContent = `${n} / ${c.max}`;
+    PM.el.querySelector('[data-step="-1"]').disabled = PM.n <= 1;
+    PM.el.querySelector('[data-step="1"]').disabled = PM.n >= c.max;
+    // 상세 공략이 있는 카드(보스 풀)에서만 "상세 모두 펼치기"를 보인다. 글자는 지금 펼침 상태에 맞춘다
+    const ex = PM.el.querySelector(".pm-exp"), deeps = [...card.querySelectorAll("details.deep")];
+    ex.hidden = !deeps.length; ex.textContent = deeps.length && deeps.every(x => x.open) ? "상세 모두 접기" : "상세 모두 펼치기";
+    const was = PM.el.hidden;
+    PM.el.hidden = false; document.documentElement.classList.add("pm-open"); PM.body.scrollTop = 0;
+    c.sel(n); c.hide();
+    if (!MV.el.hidden) mvSelect(n);
+    if (was) { pushLayer("pm"); PM.el.querySelector(".pm-x").focus({ preventScroll: true }); }
+  }
+  PM.el.addEventListener("click", e => {
+    if (e.target.closest("[data-x]")) return pmClose();
+    const st = e.target.closest(".pm-nav"); if (st && PM.ctx) pmOpen(Math.min(PM.ctx.max, Math.max(1, PM.n + +st.dataset.step)));
+  });
+  document.addEventListener("keydown", e => {
+    if (PM.el.hidden) return;
+    if (e.key === "Escape") { e.preventDefault(); pmClose(); }
+    else if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && !e.target.closest("input,textarea") && PM.ctx) pmOpen(Math.min(PM.ctx.max, Math.max(1, PM.n + (e.key === "ArrowLeft" ? -1 : 1))));
+  });
+  // ---- 지도 크게 보기: 전체 화면, 두 손가락 확대·한 손가락 이동·빈 곳 두 번 탭 확대, 휠 확대(데스크톱) ----
+  // 터치: 풀을 한 번 탭하면 하이라이트 + 띠, 같은 풀을 다시 탭하거나 "공략 보기"를 누르면 팝업. 마우스: 올리면 하이라이트, 누르면 팝업.
+  const MV = (() => {
+    const el = document.createElement("div"); el.className = "mviewer"; el.hidden = true;
+    el.innerHTML = `<div class="mv-stage"><div class="mv-layer"></div></div><button type="button" class="mv-x" aria-label="지도 닫기">✕</button><div class="mv-zoom"><button type="button" data-z="in" aria-label="확대">+</button><button type="button" data-z="out" aria-label="축소">−</button><button type="button" data-z="fit" aria-label="원래대로">⟲</button></div><div class="mv-band" hidden><div class="mv-info"></div><button type="button" class="mv-go">공략 보기 ›</button></div>`;
+    document.body.append(el);
+    return { el, stage: el.querySelector(".mv-stage"), layer: el.querySelector(".mv-layer"), band: el.querySelector(".mv-band"), info: el.querySelector(".mv-info"), w: 1, h: 1, k: 1, fit: 1, tx: 0, ty: 0, sel: null, pts: [], svg: null };
+  })();
+  const mvMaxK = () => Math.max(MV.fit * 2, 3);
+  const mvApply = () => { MV.layer.style.transform = `translate(${MV.tx}px,${MV.ty}px) scale(${MV.k})`; if (MV.sel) mvBandPos(); };
+  const mvClamp = () => {
+    const W = MV.stage.clientWidth, H = MV.stage.clientHeight, w = MV.w * MV.k, h = MV.h * MV.k;
+    MV.tx = w <= W ? (W - w) / 2 : Math.min(0, Math.max(W - w, MV.tx));
+    MV.ty = h <= H ? (H - h) / 2 : Math.min(0, Math.max(H - h, MV.ty));
+  };
+  const mvZoomAt = (k, cx, cy) => {
+    k = Math.min(mvMaxK(), Math.max(MV.fit, k));
+    const mx = (cx - MV.tx) / MV.k, my = (cy - MV.ty) / MV.k;
+    MV.k = k; MV.tx = cx - mx * k; MV.ty = cy - my * k; mvClamp(); mvApply();
+  };
+  const mvFit = () => { MV.fit = Math.min(MV.stage.clientWidth / MV.w, MV.stage.clientHeight / MV.h); MV.k = MV.fit; MV.tx = MV.ty = 0; mvClamp(); mvApply(); };
+  // 탭 판정: 가장 가까운 번호 원·몹 점을 찾고, 화면에서 24px 안쪽이면 그 풀(번호가 작아도 손가락으로 잡히게)
+  const mvHit = (cx, cy) => {
+    const mx = (cx - MV.tx) / MV.k, my = (cy - MV.ty) / MV.k; let best = null, bd = Infinity;
+    MV.pts.forEach(p => { const d = Math.hypot(p.x - mx, p.y - my) - p.r; if (d < bd) { bd = d; best = p.n; } });
+    return bd * MV.k <= 24 ? best : null;
+  };
+  const mvBandPos = () => {}; // 띠는 항상 화면 하단(지도는 끌어서 옮길 수 있음)
+  function mvSelect(n) {
+    MV.sel = n ? String(n) : null;
+    if (!MV.svg) return;
+    MV.svg.classList.toggle("sel", !!n); MV.svg.querySelectorAll("[data-n]").forEach(g => g.classList.toggle("on", g.dataset.n === MV.sel)); raiseDots(MV.svg, MV.sel);
+    if (!n || !PM.ctx) { MV.band.hidden = true; return; }
+    MV.info.innerHTML = bandHtml(PM.ctx.store, n); untab(MV.info);
+    MV.band.hidden = false; mvBandPos();
+  }
+  function mvOpen(n) {
+    const c = PM.ctx; if (!c) return;
+    const svg = c.svg.cloneNode(true); untab(svg); svg.classList.remove("sel"); svg.querySelectorAll(".on").forEach(g => g.classList.remove("on"));
+    const img = c.map.querySelector("img").cloneNode(); img.loading = "eager";
+    const vb = svg.viewBox.baseVal; MV.w = vb.width; MV.h = vb.height;
+    MV.layer.style.width = MV.w + "px"; MV.layer.style.height = MV.h + "px";
+    MV.layer.replaceChildren(img, svg); MV.svg = svg;
+    const pt = (g, ci, num) => ({ n: g.dataset.n, x: +ci.getAttribute("cx"), y: +ci.getAttribute("cy"), r: +ci.getAttribute("r"), num });
+    MV.pts = [...svg.querySelectorAll(".rnum")].map(g => pt(g, g.querySelector("circle"), true)).concat([...svg.querySelectorAll(".rp")].flatMap(g => [...g.querySelectorAll("circle")].map(ci => pt(g, ci, false))));
+    MV.band.classList.remove("hover"); // 손가락으로 열면 "공략 보기"를 보인다(마우스를 움직이면 다시 숨김)
+    MV.el.hidden = false; document.documentElement.classList.add("mv-open"); pushLayer("mv");
+    mvFit(); mvSelect(n || null); c.hide();
+    MV.el.querySelector(".mv-x").focus({ preventScroll: true });
+  }
+  function mvCloseRaw() { if (MV.el.hidden) return; MV.el.hidden = true; document.documentElement.classList.remove("mv-open"); MV.layer.replaceChildren(); MV.svg = null; MV.sel = null; MV.band.hidden = true; }
+  (() => {
+    const ptrs = new Map(); let G = null, lastTap = { t: 0, x: 0, y: 0 };
+    const sr = () => MV.stage.getBoundingClientRect();
+    const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y), mid = p => ({ x: (p[0].x + p[1].x) / 2, y: (p[0].y + p[1].y) / 2 });
+    const base = () => { const p = [...ptrs.values()].map(q => ({ ...q })); G = { k: MV.k, tx: MV.tx, ty: MV.ty, p, moved: G ? G.moved : false, multi: (G && G.multi) || p.length > 1, t0: G ? G.t0 : performance.now() }; };
+    MV.stage.addEventListener("pointerdown", e => { try { MV.stage.setPointerCapture(e.pointerId); } catch (_) {} ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY }); base(); });
+    MV.stage.addEventListener("pointermove", e => {
+      const r = sr();
+      if (!ptrs.has(e.pointerId)) { // 마우스 올리기 = 하이라이트
+        // 마우스는 올리기만 해도 띠가 바뀌므로 띠의 "공략 보기"까지 갈 수 없다 → 마우스 띠에서는 버튼을 숨기고 풀을 눌러 연다
+        if (e.pointerType === "mouse") { const n = mvHit(e.clientX - r.left, e.clientY - r.top); MV.band.classList.add("hover"); if (n !== MV.sel) mvSelect(n); MV.stage.style.cursor = n ? "pointer" : ""; }
+        return;
+      }
+      ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      const p = [...ptrs.values()];
+      if (p.length === 1 && G.p.length === 1) {
+        const dx = p[0].x - G.p[0].x, dy = p[0].y - G.p[0].y;
+        if (!G.moved && Math.hypot(dx, dy) > 6) G.moved = true;
+        if (G.moved) { MV.tx = G.tx + dx; MV.ty = G.ty + dy; mvClamp(); mvApply(); }
+      } else if (p.length >= 2 && G.p.length >= 2) {
+        G.moved = true;
+        const m0 = mid(G.p), m1 = mid(p), k = Math.min(mvMaxK(), Math.max(MV.fit, G.k * dist(p[0], p[1]) / dist(G.p[0], G.p[1])));
+        const mx = (m0.x - r.left - G.tx) / G.k, my = (m0.y - r.top - G.ty) / G.k;
+        MV.k = k; MV.tx = m1.x - r.left - mx * k; MV.ty = m1.y - r.top - my * k; mvClamp(); mvApply();
+      }
+    });
+    const end = e => {
+      if (!ptrs.has(e.pointerId)) return;
+      ptrs.delete(e.pointerId);
+      if (ptrs.size) return base();
+      const g = G; G = null;
+      if (e.type !== "pointerup" || g.moved || g.multi || performance.now() - g.t0 > 500) return;
+      const r = sr(), x = e.clientX - r.left, y = e.clientY - r.top, n = mvHit(x, y), now = performance.now();
+      if (e.pointerType !== "mouse") MV.band.classList.remove("hover");
+      if (n) { lastTap.t = 0; if (e.pointerType === "mouse" || MV.sel === n) pmOpen(n); else mvSelect(n); return; }
+      if (now - lastTap.t < 320 && Math.hypot(x - lastTap.x, y - lastTap.y) < 40) { mvZoomAt(MV.k > MV.fit * 1.05 ? MV.fit : MV.fit * 2.5, x, y); lastTap.t = 0; }
+      else { lastTap = { t: now, x, y }; if (e.pointerType !== "mouse") mvSelect(null); }
+    };
+    MV.stage.addEventListener("pointerup", end); MV.stage.addEventListener("pointercancel", end);
+    MV.stage.addEventListener("wheel", e => { e.preventDefault(); const r = sr(); mvZoomAt(MV.k * Math.exp(-e.deltaY * 0.0015), e.clientX - r.left, e.clientY - r.top); }, { passive: false });
+    MV.el.addEventListener("click", e => {
+      if (e.target.closest(".mv-x")) return closeTop("mv");
+      if (e.target.closest(".mv-go")) return MV.sel && pmOpen(MV.sel);
+      const z = e.target.closest("[data-z]"); if (!z) return;
+      const W = MV.stage.clientWidth / 2, H = MV.stage.clientHeight / 2;
+      if (z.dataset.z === "fit") mvFit(); else mvZoomAt(MV.k * (z.dataset.z === "in" ? 1.6 : 1 / 1.6), W, H);
+    });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && PM.el.hidden && !MV.el.hidden) { e.preventDefault(); closeTop("mv"); } });
+    addEventListener("resize", () => { if (!MV.el.hidden) mvFit(); });
+  })();
+  function bindRoute() {
+    LAYERS.length = 0; pmCloseRaw(false); mvCloseRaw();
+    const map = mainEl.querySelector(".rmap"); if (!map) { PM.ctx = null; return; }
+    const svg = map.querySelector("svg"), tip = map.nextElementSibling, ph = tip.innerHTML, store = mainEl.querySelector(".pulls");
+    const sel = n => { svg.classList.toggle("sel", !!n); svg.querySelectorAll("[data-n]").forEach(g => g.classList.toggle("on", g.dataset.n === String(n))); raiseDots(svg, n); };
+    const hide = () => { tip.innerHTML = ph; tip.classList.remove("on"); if (PM.el.hidden) sel(null); };
+    // 풀 정보는 지도 아래 전용 칸(.rmtip)에만 띄워 지도를 가리지 않는다. 비어 있을 때는 안내 문구.
+    const show = n => {
+      const h = bandHtml(store, n); if (!h) return;
+      tip.innerHTML = h; untab(tip); tip.classList.add("on"); sel(n);
+    };
+    const nOf = g => g.dataset.n;
+    svg.querySelectorAll(".rnum,.rp").forEach(g => {
+      g.addEventListener("mouseenter", () => show(nOf(g)));
+      g.addEventListener("mouseleave", hide);
+    });
+    // 마우스로 누르면 바로 팝업, 손가락으로 누르면 지도 크게 보기(누른 풀을 골라 둔 채로)
+    let lastPT = "mouse";
+    map.addEventListener("pointerdown", e => { lastPT = e.pointerType; });
+    map.addEventListener("click", e => {
+      if (e.target.closest(".rmz")) return mvOpen();
+      const g = e.target.closest(".rnum,.rp"), n = g && g.dataset.n;
+      if (lastPT !== "mouse") return mvOpen(n);
+      if (n) pmOpen(n);
+    });
+    svg.querySelectorAll(".rnum").forEach(g => {
+      g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pmOpen(nOf(g)); } });
+      g.addEventListener("focus", () => { if (g.matches(":focus-visible")) show(nOf(g)); });
+      g.addEventListener("blur", hide);
+    });
+    PM.ctx = { store, svg, map, sel, hide, max: store.querySelectorAll(".pcard").length };
   }
   function render() {
     [...tabsEl.children].forEach((b, i) => b.setAttribute("aria-selected", D[i].id === active));
@@ -779,16 +1167,26 @@ async function sheetPage() {
       return `<details class="boss fold${cls}" data-k="${key}"${open ? " open" : ""}><summary><h3><span class="bn">${b.n}</span><small>${b.k} <span class="chev" aria-hidden="true">▾</span></small></h3></summary>${body}</details>`;
     };
     const blockHtml = b => b.block === "dispel" ? dispelTable() : macros();
-    mainEl.innerHTML = `<div><h2 class="dname">${d.name}</h2><p class="dsub">${d.sub}${d.time ? ` · <span class="dtime">제한 시간 <b>${d.time}분</b></span>` : ""}${RIO[d.id] ? `</p><p class="dlinks"><a class="vid" href="${rioVideo(d.id)}" target="_blank" rel="noopener">▶ Raider.IO 영상</a><a class="vid rio" href="${rioArticle(d.id)}" target="_blank" rel="noopener">Raider.IO 글</a><button class="expall" type="button">상세 모두 펼치기</button>${mdtHtml(d.id)}` : ` · <a class="vid" href="${core.generalVideo.href}" target="_blank" rel="noopener">${core.generalVideo.label}</a>`}</p></div>` + (d.id !== "general" ? heroCard(d) : "") + bosses.map(b => {
-      if (b.block) return fold(b, blockHtml(b));
-      // 보스 요약 항목 = 공용 층 + 역할 층(role.brief) + 전문화 층(spec.brief)
+    // 보스 공략 본문(요약 = 공용 층 + 역할 층 role.brief + 전문화 층 spec.brief, 그리고 상세 공략)
+    const bossInner = b => {
       const extra = [...(((role.brief || {})[d.id] || {})[b.n] || []), ...(((spec && spec.brief || {})[d.id] || {})[b.n] || [])];
       const lis = [...b.i, ...extra].filter(it => on.has(tagOf(it))).map(it => `<li><span class="tag t-${tagOf(it)}">${TAGS[tagOf(it)]}</span><span>${itemHtml(it)}</span></li>`).join("");
-      const body = lis ? `<ul class="items">${lis}</ul>` : `<p class="empty">선택한 태그 항목 없음</p>`;
-      if (d.id === "general") return fold(b, body, b.hero ? " herocard" : "");
-      const vid = (RIO[d.id] && b.k !== "Trash") ? `<a class="vid" href="${rioVideo(d.id, b.t)}" target="_blank" rel="noopener">▶ 영상</a>` : "";
-      return `<section class="boss${b.hero ? " herocard" : ""}"><h3><span>${b.n}</span><small>${vid}${b.k}</small></h3>${body}${deepHtml(d.id, b)}</section>`;
-    }).join("") + trashSection(d, fold);
+      // 간편 공략 = 흐름 요약(상세 공략의 overview) + 요약 항목. 상세 공략처럼 접고 펼 수 있는 표시를 단다(기본 펼침).
+      const ov = ((DETAIL[d.id] || {})[b.n] || {}).overview;
+      const inner = (ov ? `<p class="dover">${abWrap(ov)}</p>` : "") + (lis ? `<ul class="items">${lis}</ul>` : `<p class="empty">선택한 태그 항목 없음</p>`);
+      const ek = `easy-${d.id}-${b.n}`, eOpen = openState[ek] !== false;
+      const list = d.id === "general" ? inner : `<details class="easy fold" data-k="${ek}"${eOpen ? " open" : ""}><summary><span>간편 공략</span><span class="chev" aria-hidden="true">▾</span></summary><div class="easybody">${inner}</div></details>`;
+      return { list, deep: deepHtml(d.id, b), vid: (RIO[d.id] && b.k !== "Trash") ? `<a class="vid" href="${rioVideo(d.id, b.t)}" target="_blank" rel="noopener">▶ 영상</a>` : "" };
+    };
+    const R0 = ROUTES[d.id], inRoute = new Set(R0 ? R0.pulls.filter(p => p.boss).map(p => p.boss) : []);
+    mainEl.innerHTML = `<div><h2 class="dname">${d.name}</h2><p class="dsub">${d.sub}${d.time ? ` · <span class="dtime">제한 시간 <b>${d.time}분</b></span>` : ""}${RIO[d.id] ? `</p><p class="dlinks"><a class="vid" href="${rioVideo(d.id)}" target="_blank" rel="noopener">▶ Raider.IO 영상</a><a class="vid rio" href="${rioArticle(d.id)}" target="_blank" rel="noopener">Raider.IO 글</a>${ROUTES[d.id] ? "" : mdtHtml(d.id)}` : ` · <a class="vid" href="${core.generalVideo.href}" target="_blank" rel="noopener">${core.generalVideo.label}</a>`}</p></div>` + (d.id !== "general" ? heroCard(d) : "") + bosses.map(b => {
+      if (b.block) return fold(b, blockHtml(b));
+      if (inRoute.has(b.n)) return "";
+      const x = bossInner(b);
+      if (d.id === "general") return fold(b, x.list, b.hero ? " herocard" : "");
+      return `<section class="boss${b.hero ? " herocard" : ""}" id="boss-${slug(b.n)}"><h3><span>${b.n}</span><small>${x.vid}${b.k}</small></h3>${x.list}${x.deep}</section>`;
+    }).join("") + routeSection(d, n => bosses.find(b => b.n === n), bossInner) + trashSection(d, fold);
+    bindRoute();
     decorateTips(d.id);
     npcDecorate(mainEl);
     if (lang === "ko") koApply(mainEl);
@@ -1037,7 +1435,8 @@ async function raidPage() {
   const escH = x => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   // 레이드: 이름 속 연결어에 by·for·with·from 추가, 끝 느낌표(Pop!) 포함
   const AB_RE = /([A-Z](?:[A-Za-z'’\-]+|(?=\s[A-Z]))(?:\s(?:(?:of|the|and|&amp;|on|in|to|a|by|for|with|from)\s)*[A-Z][A-Za-z'’\-]*)*!?)/g;
-  const abWrap = x => escH(x).replace(AB_RE, m => `<span class="ab">${m}</span>`);
+  const abIsName = m => { const k = tipNorm(m.replace(/&amp;/g, "&")); return Object.values(core.tips).some(t => t[k]) || !!specTips[k] || KO_ALL[m.replace(/&amp;/g, "&")] != null || !!MOBS[m.replace(/&amp;/g, "&")]; };
+  const abWrap = x => escH(x).replace(AB_RE, m => abSplit(m, abIsName));
   const parse = l => { const m = String(l).match(tagRe); return m ? { d: m[1] || null, t: TAGK[m[2]], x: String(l).slice(m[0].length) } : { d: null, t: "tip", x: String(l) }; };
   const lineLi = (t, body, d) => `<li><span class="tag t-${t}">${TAGS[t]}</span><span>${dBadge(d)}${body}</span></li>`;
   const deepItems = arr => (arr || []).map(parse).filter(o => on.has(o.t) && inDiff(o.d)).map(o => lineLi(o.t, abWrap(o.x), o.d)).join("");
@@ -1053,7 +1452,7 @@ async function raidPage() {
   function decorateTips(id) {
     mainEl.querySelectorAll(".ab").forEach(el => {
       if (el.dataset.sid) return;
-      const k = tipNorm(el.textContent); let sid = null;
+      const k = tipNorm(el.dataset.tn || el.textContent); let sid = null;
       const inShared = !el.closest(".dblk.spec") && !el.closest(".sbrief");
       for (const m of inShared ? [core.tips[id] || {}] : tipMaps(id)) { if (m[k]) { sid = m[k]; break; } }
       if (!sid && id === "overview") for (const t of T) { const m = core.tips[t.id] || {}; if (m[k]) { sid = m[k]; break; } }
@@ -1631,6 +2030,7 @@ function selectPage() {
       </div></div>
       <div class="wrap">
       <section class="s1-hero"><h1>쐐기 공략</h1><p>한밤 2시즌 쐐기 던전 8개를 내 전문화에 맞춰 봅니다. 세 번만 고르면 됩니다. 레이드 공략과 순위는 위쪽 <a href="${raidHubUrl()}"><b>레이드</b></a>에 있습니다.</p></section>
+      ${favList().length ? `<section class="favhome"><h2>★ 즐겨찾기</h2><div class="favrow">${favChips("sheet")}</div></section>` : ""}
       ${homeRankHtml(saved)}
       <section class="step" id="st-first"><h2>${pick.by === "class" ? "직업." : "역할."} <span>${pick.by === "class" ? "어떤 직업을 플레이하나요?" : "어떤 역할로 쐐기에 가나요?"}</span></h2>
         <div class="seg byseg" role="group" aria-label="찾는 방법"><button type="button" data-by="class" aria-pressed="${pick.by === "class"}">직업으로 찾기</button><button type="button" data-by="role" aria-pressed="${pick.by === "role"}">역할로 찾기</button></div>
@@ -1710,6 +2110,7 @@ function notFoundPage() {
 Promise.all([J("data/roster.json"), UI === "en" && ls.get("wg:i18nraw") !== "1" ? J0("assets/i18n.en.json").then(startI18n).catch(() => {}) : null]).then(([r]) => {
   indexRoster(r);
   rosterI18n(r);
+  favImport();
   paintHeader();
   const run = { sheet: sheetPage, guide: guidePage, compare: comparePage, raid: raidPage, raidhub: raidHubPage, pvp: pvpSpecPage, pvphub: pvpHubPage, pvpmap: pvpMapPage, rank: rankPage, select: selectPage, specs: specsPage, notfound: notFoundPage }[CFG.page];
   return run && run();

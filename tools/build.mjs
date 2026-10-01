@@ -25,7 +25,8 @@ function head({ title, base, wg, desc, extra = '', ogTitle, ogDesc }) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${esc(title)}</title>
-${desc ? `<meta name="description" content="${esc(desc)}">\n` : ''}<meta name="color-scheme" content="light dark">
+${desc ? `<meta name="description" content="${esc(desc)}">\n` : ''}<meta name="color-scheme" content="dark light">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("wg:theme")==="light"?"light":"dark"}catch(e){document.documentElement.dataset.theme="dark"}</script>
 <link rel="icon" href="${base}assets/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="와우 공략 · WoW Guide">
