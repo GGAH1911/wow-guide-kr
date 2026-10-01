@@ -573,17 +573,18 @@ function langSeg(id) {
   let el = null, pushed = false;
   const close = back => {
     if (!el) return; el.remove(); el = null; document.documentElement.classList.remove("yt-open");
-    if (back && pushed) { pushed = false; history.back(); } else pushed = false;
+    if (back && pushed) { pushed = false; window.__ytPop = true; history.back(); } else pushed = false;
   };
-  addEventListener("popstate", () => { if (el) { pushed = false; close(false); } });
+  // 영상 팝업을 닫느라 생긴 popstate 는 아래 층(풀 공략 팝업·지도 보기)이 함께 닫히지 않게 __ytPop 으로 표시한다
+  addEventListener("popstate", () => { if (el) { pushed = false; window.__ytPop = true; close(false); } });
   document.addEventListener("keydown", e => { if (el && e.key === "Escape") { e.preventDefault(); close(true); } });
   document.addEventListener("click", e => {
     const a = e.target.closest("a.ytpop[data-yt]"); if (!a) return;
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // 새 탭으로 열기는 그대로
     e.preventDefault(); e.stopImmediatePropagation();
-    const id = a.dataset.yt.replace(/[^\w-]/g, "");
+    const id = a.dataset.yt.replace(/[^\w-]/g, ""), st = parseInt(a.dataset.start, 10) || 0;
     el = document.createElement("div"); el.className = "ytmodal";
-    el.innerHTML = `<div class="yt-back" data-ytx></div><div class="yt-box" role="dialog" aria-modal="true" aria-label="${esc(a.textContent.trim())}"><div class="yt-bar"><span class="yt-t">${esc(a.title || a.textContent.trim())}</span><a class="yt-ext" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">YouTube에서 보기 ↗</a><button type="button" class="yt-x" data-ytx aria-label="닫기">✕</button></div><div class="yt-frame"><iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1" title="${esc(a.title || "영상")}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>`;
+    el.innerHTML = `<div class="yt-back" data-ytx></div><div class="yt-box" role="dialog" aria-modal="true" aria-label="${esc(a.textContent.trim())}"><div class="yt-bar"><span class="yt-t">${esc(a.title || a.textContent.trim())}</span><a class="yt-ext" href="https://www.youtube.com/watch?v=${id}${st ? `&t=${st}s` : ""}" target="_blank" rel="noopener">YouTube에서 보기 ↗</a><button type="button" class="yt-x" data-ytx aria-label="닫기">✕</button></div><div class="yt-frame"><iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1${st ? `&start=${st}` : ""}" title="${esc(a.title || "영상")}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>`;
     el.addEventListener("click", ev => { if (ev.target.closest("[data-ytx]")) close(true); });
     document.body.append(el); document.documentElement.classList.add("yt-open");
     history.pushState({ wgYt: 1 }, ""); pushed = true;
@@ -965,6 +966,10 @@ async function sheetPage() {
         body = mv + comp + (its ? `<ul class="items">${its}</ul>` : "") + lines;
         if (!its && !lines) body += `<p class="empty">선택한 태그 항목 없음</p>`;
       }
+      // 주행 영상에서 이 풀이 시작하는 시점(routes.json pulls[].vt, 화면 대조로 뽑음). vok=false 면 영상의 몹 구성이 다르다고 알린다
+      const mmss = t => `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`;
+      const vline = r.run && p.vt != null ? `<p class="rvid"><a class="vid ytpop" data-yt="${esc(r.run.id)}" data-start="${p.vt}" href="https://www.youtube.com/watch?v=${esc(r.run.id)}&t=${p.vt}s" rel="noopener" title="${esc(r.run.title)}">▶ 영상에서 이 풀 보기 (${mmss(p.vt)})</a>${p.vok === false ? `<span class="rvidx">영상은 이 풀의 몹 구성이 우리 경로와 다릅니다</span>` : ""}</p>` : "";
+      body = vline + body;
       return `<section class="boss pcard${p.boss ? " pboss" : ""}" data-pull="${n}" hidden><h3><span class="bn">${head}</span><small>${vid}<span class="pcat">${p.boss ? "보스" : "일반몹"}</span>&nbsp;${n}&nbsp;·&nbsp;<span class="pk">${k}</span></small></h3><div class="pullbody">${body}</div></section>`;
     }).join("");
     const src = routes.source;
@@ -1000,7 +1005,7 @@ async function sheetPage() {
   const LAYERS = [];
   const pushLayer = k => { LAYERS.push(k); history.pushState({ wgLayer: k }, ""); };
   const closeTop = k => { if (LAYERS[LAYERS.length - 1] === k) history.back(); else (k === "pm" ? pmCloseRaw : mvCloseRaw)(); };
-  addEventListener("popstate", () => { const k = LAYERS.pop(); if (k === "pm") pmCloseRaw(); else if (k === "mv") mvCloseRaw(); });
+  addEventListener("popstate", () => { if (window.__ytPop) { window.__ytPop = false; return; } const k = LAYERS.pop(); if (k === "pm") pmCloseRaw(); else if (k === "mv") mvCloseRaw(); });
   // 지도 띠에 넣는 풀 한 줄(분류 · 번호 · 이름 · 비중). 카드에 이미 입힌 한글화·몹 표시를 그대로 가져온다.
   const bandHtml = (store, n) => {
     const q = `.pcard[data-pull="${n}"]`, c = store.querySelector(q) || PM.body.querySelector(q); if (!c) return "";
