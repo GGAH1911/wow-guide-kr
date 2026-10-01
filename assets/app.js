@@ -166,12 +166,12 @@ const favChips = (mode, cur) => favList().map(id => BYID[id]).map(x => `<a class
 // 메뉴의 즐겨찾기 묶음(추가한 순서). 별을 누르면 favRefresh 가 바로 다시 그린다
 const favMenuHtml = mode => favList().length ? `<div class="gsep">★ 즐겨찾기</div>${favList().map(id => BYID[id]).map(x => `<a href="${mode === "raid" ? raidUrl(x.id) : mode === "pvp" ? pvpUrl(x.id) : sheetUrl(x.id)}" data-spec="${x.id}">${esc(x.koFull)}</a>`).join("")}<button type="button" id="gfavcopy">즐겨찾기 링크 복사</button>` : "";
 const favRefresh = () => {
-  document.querySelectorAll(".favb[data-fav]").forEach(b => { b.outerHTML = favBtn(b.dataset.fav); });
+  document.querySelectorAll(".favb[data-fav]").forEach(b => { if (!b.closest(".banner")) b.outerHTML = favBtn(b.dataset.fav); });
   const m = document.getElementById("gfavs"); if (m) m.innerHTML = favMenuHtml(m.dataset.mode);
 };
 document.addEventListener("click", e => {
   const b = e.target.closest(".favb[data-fav]");
-  if (b) { e.preventDefault(); const on = favToggle(b.dataset.fav); favRefresh(); const bn = document.getElementById("bfav"); if (bn && on) bn.remove(); document.dispatchEvent(new CustomEvent("wg:favs")); return; }
+  if (b) { e.preventDefault(); const inBanner = b.closest(".banner"); const on = favToggle(b.dataset.fav); favRefresh(); const bn = document.getElementById("bfav"); if (bn && on) bn.remove(); if (inBanner && on) b.remove(); document.dispatchEvent(new CustomEvent("wg:favs")); return; }
   const cp = e.target.closest("#gfavcopy");
   if (cp) {
     const url = `${location.origin}${BASE}?favs=${favList().join(",")}`;
@@ -396,9 +396,10 @@ function bannerHtml(s, visiting) {
   const mine = BYID[ls.get("wg:spec")];
   let h = "";
   if (visiting && mine) {
-    h += `<div class="banner share" id="bshare"><b>${esc(ro(s.koFull))}</b> 보는 중입니다. 저장된 내 전문화는 ${esc(mine.koFull)}입니다.<div class="acts"><a class="pill gray" href="${sheetUrl(mine.id, location.hash)}">내 전문화로</a><button class="pill" type="button" id="bsave">이 전문화로 저장</button></div></div>`;
+    h += `<div class="banner share" id="bshare"><b>${esc(ro(s.koFull))}</b> 보는 중입니다. 저장된 내 전문화는 ${esc(mine.koFull)}입니다.<div class="acts"><a class="pill gray" href="${sheetUrl(mine.id, location.hash)}">내 전문화로</a><button class="pill" type="button" id="bsave">이 전문화로 저장</button>${favHas(s.id) ? "" : favBtn(s.id).replace('class="favb"', 'class="favb pill gray"').replace(/>[☆★]</, ">☆ 즐겨찾기에 추가<")}</div></div>`;
   }
-  if (!favList().length && ls.get("wg:favnudge") !== "off") {
+  // 안내는 한 번에 하나만: "보는 중" 안내가 이미 있으면(그 안에 즐겨찾기 버튼이 있음) 즐겨찾기 안내는 띄우지 않는다
+  if (!h && !favList().length && ls.get("wg:favnudge") !== "off") {
     h += `<div class="banner share" id="bfav"><span>☆ 자주 보는 전문화는 즐겨찾기에 추가하세요. 첫 화면과 전문화 변경 맨 위에 모여 바로 열 수 있습니다. 즐겨찾기는 이 브라우저에만 저장됩니다.</span><div class="acts">${favBtn(s.id).replace('class="favb"', 'class="favb pill"').replace(/>[☆★]</, ">☆ 즐겨찾기에 추가<")}<button class="pill gray" type="button" id="bfavx">닫기</button></div></div>`;
   }
   if (s.status !== "ready") {
