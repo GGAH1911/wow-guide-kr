@@ -630,6 +630,21 @@ async function sheetPage() {
     const body = (x.overview ? `<p class="dover">${abWrap(x.overview)}</p>` : "") + phases + blk(role.label, roleLines(did, b.n), "role") + blk(`${s.koFull} 활용`, (SDETAIL[did] || {})[b.n], "spec") + blk("파티 공통", x.group);
     return `<details class="deep fold" data-k="${key}"${open ? " open" : ""}><summary><span>상세 공략</span><span class="chev" aria-hidden="true">▾</span></summary><div class="deepbody">${body || '<p class="empty">선택한 태그 항목 없음</p>'}</div></details>`;
   }
+  // MDT(Mythic Dungeon Tools) 추천 경로: data/core/dungeons.json 의 mdt[던전] (Method 가이드가 거는 Tactyks PUG Friendly 경로, wago 원본 문자열)
+  const mdtHtml = id => {
+    const m = (core.mdt || {})[id]; if (!m) return "";
+    const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+    return `<button class="vid mdtcopy" type="button" data-d="${id}" title="게임에서 /mdt → Import에 붙여 넣기">MDT 경로 복사</button><a class="vid" href="${esc(m.wago)}" target="_blank" rel="noopener" title="${esc(m.name)} (${esc(m.author)}, Method 추천 · ${esc(m.updated)})">MDT 경로 원본</a><textarea class="mdtbox" readonly hidden aria-label="MDT 경로 문자열">${esc(m.string)}</textarea>`;
+  };
+  document.addEventListener("click", e => {
+    const b = e.target.closest(".mdtcopy"); if (!b) return;
+    const m = (core.mdt || {})[b.dataset.d]; if (!m) return;
+    const box = b.parentElement.querySelector(".mdtbox");
+    const label = "MDT 경로 복사";
+    const done = () => { b.textContent = "복사됨 · /mdt → Import"; setTimeout(() => b.textContent = label, 2500); };
+    const fallback = () => { if (box) { box.hidden = false; box.focus(); box.select(); } b.textContent = "선택됨"; setTimeout(() => b.textContent = label, 2500); };
+    try { navigator.clipboard.writeText(m.string).then(done, fallback); } catch (err) { fallback(); }
+  });
   document.addEventListener("click", e => {
     const b = e.target.closest(".expall"); if (!b) return;
     const all = [...document.querySelectorAll("details.deep")]; const openAll = all.some(d => !d.open);
@@ -764,7 +779,7 @@ async function sheetPage() {
       return `<details class="boss fold${cls}" data-k="${key}"${open ? " open" : ""}><summary><h3><span class="bn">${b.n}</span><small>${b.k} <span class="chev" aria-hidden="true">▾</span></small></h3></summary>${body}</details>`;
     };
     const blockHtml = b => b.block === "dispel" ? dispelTable() : macros();
-    mainEl.innerHTML = `<div><h2 class="dname">${d.name}</h2><p class="dsub">${d.sub}${d.time ? ` · <span class="dtime">제한 시간 <b>${d.time}분</b></span>` : ""}${RIO[d.id] ? `</p><p class="dlinks"><a class="vid" href="${rioVideo(d.id)}" target="_blank" rel="noopener">▶ Raider.IO 영상</a><a class="vid rio" href="${rioArticle(d.id)}" target="_blank" rel="noopener">Raider.IO 글</a><button class="expall" type="button">상세 모두 펼치기</button>` : ` · <a class="vid" href="${core.generalVideo.href}" target="_blank" rel="noopener">${core.generalVideo.label}</a>`}</p></div>` + (d.id !== "general" ? heroCard(d) : "") + bosses.map(b => {
+    mainEl.innerHTML = `<div><h2 class="dname">${d.name}</h2><p class="dsub">${d.sub}${d.time ? ` · <span class="dtime">제한 시간 <b>${d.time}분</b></span>` : ""}${RIO[d.id] ? `</p><p class="dlinks"><a class="vid" href="${rioVideo(d.id)}" target="_blank" rel="noopener">▶ Raider.IO 영상</a><a class="vid rio" href="${rioArticle(d.id)}" target="_blank" rel="noopener">Raider.IO 글</a><button class="expall" type="button">상세 모두 펼치기</button>${mdtHtml(d.id)}` : ` · <a class="vid" href="${core.generalVideo.href}" target="_blank" rel="noopener">${core.generalVideo.label}</a>`}</p></div>` + (d.id !== "general" ? heroCard(d) : "") + bosses.map(b => {
       if (b.block) return fold(b, blockHtml(b));
       // 보스 요약 항목 = 공용 층 + 역할 층(role.brief) + 전문화 층(spec.brief)
       const extra = [...(((role.brief || {})[d.id] || {})[b.n] || []), ...(((spec && spec.brief || {})[d.id] || {})[b.n] || [])];
