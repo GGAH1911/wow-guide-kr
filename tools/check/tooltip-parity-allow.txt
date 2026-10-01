@@ -1,0 +1,3 @@
+# tools/check/tooltip-parity.mjs 예외 목록. 형식: 위치<TAB>기술 ID<TAB>이유
+# 한글 문장에만 툴팁이 붙지만 영문이 맞는 경우만 적는다. 영문 문장을 고칠 수 있으면 고치고 여기 적지 마라.
+routes notes.nalorakk.15[0]	364343	한글 "다음 Echo"가 기원사 Echo(364343)에 잘못 붙는 것. 영문 "the next one"이 맞다

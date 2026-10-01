@@ -1,0 +1,20 @@
+# PR 게이트: 한글/영문 기술 툴팁 대조(tools/check/tooltip-parity.mjs). 실패하면 PR을 병합하지 않는다.
+# main 브랜치 보호 규칙의 필수 검사 이름은 아래 job 이름 "tooltip-parity" 다.
+name: check
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  tooltip-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 한글/영문 툴팁 대조
+        run: node tools/check/tooltip-parity.mjs
