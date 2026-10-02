@@ -656,6 +656,12 @@ html.mv-open{overflow:hidden}
 .pm-bar .pm-exp+.pm-x{margin-left:0}
 .pm-bar .pm-exp[hidden]+.pm-x,.pm-bar .pm-x{margin-left:auto}
 .pm-body{overflow:auto;padding:12px;overscroll-behavior:contain}
+/* 넘기는 중(.pm-peek): 내용·배경을 반투명하게 해서 뒤의 지도가 비치게 한다. 상단 바는 그대로 */
+.pm-box,.pm-body,.pm-back{transition:opacity .14s,background-color .14s,box-shadow .14s}
+.pm-peek .pm-box{background:transparent;box-shadow:none}
+.pm-peek .pm-body{opacity:.24}
+.pm-peek .pm-back{opacity:.2}
+@media (prefers-reduced-motion:reduce){.pm-box,.pm-body,.pm-back{transition:none}}
 html.pm-open{overflow:hidden}
 @media print{.pmodal{display:none!important}}
 .rfix{margin:0 0 8px;font-size:12.5px;color:var(--ink-2);background:var(--surface);border-left:3px solid #38bdf8;border-radius:6px;padding:6px 10px}

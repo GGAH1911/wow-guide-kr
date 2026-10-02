@@ -1035,7 +1035,7 @@ async function sheetPage() {
     if (PM.el.hidden) return;
     const c = PM.ctx;
     if (PM.cur) { PM.cur.hidden = true; if (c && c.store.isConnected) c.store.append(PM.cur); else PM.cur.remove(); }
-    PM.cur = null; PM.el.hidden = true; document.documentElement.classList.remove("pm-open");
+    PM.cur = null; PM.el.hidden = true; PM.el.classList.remove("pm-peek"); document.documentElement.classList.remove("pm-open");
     if (c && c.store.isConnected) { c.sel(null); const g = refocus && MV.el.hidden && c.svg.querySelector(`.rnum[data-n="${PM.n}"]`); g && g.focus({ preventScroll: true }); }
   }
   const pmClose = () => closeTop("pm");
@@ -1056,14 +1056,21 @@ async function sheetPage() {
     if (!MV.el.hidden) mvSelect(n);
     if (was) { pushLayer("pm"); PM.el.querySelector(".pm-x").focus({ preventScroll: true }); }
   }
+  // ◀ ▶ 로 풀을 넘기는 동안은 팝업 내용을 반투명하게 해서 뒤의 지도(고른 풀 표시)가 같이 보이게 한다. 상단 바는 그대로 불투명.
+  // 마우스: ◀ ▶ 위에 있는 동안. 터치·키보드: 마지막 조작 뒤 1.6초. 내용을 누르거나 닫으면 바로 끝난다.
+  let peekT = 0;
+  const peek = (on, hold) => { clearTimeout(peekT); PM.el.classList.toggle("pm-peek", !!on); if (on && hold) peekT = setTimeout(() => PM.el.classList.remove("pm-peek"), hold); };
+  PM.el.addEventListener("pointerover", e => { if (e.pointerType === "mouse" && e.target.closest(".pm-nav:not(:disabled)")) peek(true); });
+  PM.el.addEventListener("pointerout", e => { if (e.pointerType === "mouse" && e.target.closest(".pm-nav") && !(e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest(".pm-nav"))) peek(false); });
+  PM.el.addEventListener("pointerdown", e => { if (e.target.closest(".pm-body")) peek(false); });
   PM.el.addEventListener("click", e => {
     if (e.target.closest("[data-x]")) return pmClose();
-    const st = e.target.closest(".pm-nav"); if (st && PM.ctx) pmOpen(Math.min(PM.ctx.max, Math.max(1, PM.n + +st.dataset.step)));
+    const st = e.target.closest(".pm-nav"); if (st && PM.ctx) { pmOpen(Math.min(PM.ctx.max, Math.max(1, PM.n + +st.dataset.step))); peek(true, e.detail === 0 || e.pointerType !== "mouse" ? 1600 : 0); }
   });
   document.addEventListener("keydown", e => {
     if (PM.el.hidden) return;
     if (e.key === "Escape") { e.preventDefault(); pmClose(); }
-    else if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && !e.target.closest("input,textarea") && PM.ctx) pmOpen(Math.min(PM.ctx.max, Math.max(1, PM.n + (e.key === "ArrowLeft" ? -1 : 1))));
+    else if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && !e.target.closest("input,textarea") && PM.ctx) { pmOpen(Math.min(PM.ctx.max, Math.max(1, PM.n + (e.key === "ArrowLeft" ? -1 : 1)))); peek(true, 1600); }
   });
   // ---- 지도 크게 보기: 전체 화면, 두 손가락 확대·한 손가락 이동·빈 곳 두 번 탭 확대, 휠 확대(데스크톱) ----
   // 터치: 풀을 한 번 탭하면 하이라이트 + 띠, 같은 풀을 다시 탭하거나 "공략 보기"를 누르면 팝업. 마우스: 올리면 하이라이트, 누르면 팝업.
