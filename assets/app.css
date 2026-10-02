@@ -648,6 +648,9 @@ html.mv-open{overflow:hidden}
 .pm-bar{display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid var(--line);background:var(--surface)}
 .pm-bar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer}
 .pm-bar button:disabled{opacity:.35;cursor:default}
+/* 좁은 화면에서 보스 풀의 "상세 모두 펼치기" 글자가 두 줄로 접혀 바 높이가 바뀌고 ◀ ▶ 가 밀리던 것을 막는다 */
+.pm-bar{flex-wrap:nowrap}.pm-bar button{white-space:nowrap}
+@media (max-width:400px){.pm-bar{gap:4px;padding:8px 8px}.pm-bar button{padding:4px 7px;font-size:12.5px}.pm-pos{min-width:44px}}
 .pm-pos{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:52px;text-align:center}
 .pm-bar .pm-exp{margin-left:auto}
 .pm-bar .pm-exp+.pm-x{margin-left:0}
