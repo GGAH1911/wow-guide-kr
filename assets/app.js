@@ -265,6 +265,8 @@ function rankList(rows, cls) {
   let k = 0;
   return `<ol class="rklist${R.length > 10 ? " two" : ""}${cls ? " " + cls : ""}">${R.map(r => { const has = r.pct > 0; if (has) k++; return `<li><a class="rkrow${r.cur ? " cur" : ""}" href="${r.href}" data-spec="${r.s.id}"${r.cur ? ' aria-current="page"' : ""} style="--cls:${r.s.cls.color}"><span class="rkn${has && k <= 3 ? " t" + k : ""}">${has ? k : "–"}</span>${icon(r.s, 28)}<span class="rkname"><b>${esc(specName(r.s))}</b>${r.sub ? `<small>${r.sub}</small>` : ""}</span><span class="rkbar"><i style="width:${has ? r.pct / mx * 100 : 0}%"></i></span><span class="rkpct">${has ? pctTxt(r.pct) : "—"}</span></a></li>`; }).join("")}</ol>`;
 }
+// 역할 점수 상위 500명 비율 안내(표본 구성 줄 + 기준 설명). 전문화 전환 시트와 전문화 목록이 같이 쓴다
+const roleNote = role => `<div class="sharenote">${roleComp(role)}<p class="note">비율: 2시즌(이번 시즌) ${SL()}${esc(ROSTER.roles[role].ko)} 쐐기 점수 상위 ${M5().top || 500}명${SX() ? SX() + " 캐릭터" : ""}(${esc(M5().src || "Raider.IO")}, ${esc(M5().date || "")})${SX() ? "가" : "이"} 지금 켜 둔 전문화. 전문화를 고르면 영웅 특성도 같은 방식으로 비교합니다. <a href="${rankUrl("role=" + role + SQ())}">${esc(ROSTER.roles[role].ko)} 순위표 ›</a></p></div>`;
 function specListHtml(role, currentId, mode) {
   // mode: "sheet"(링크 대신 data-go) 또는 "page"(정적 링크)
   const list = role === "class" ? SPECS : SPECS.filter(s => s.role === role);
@@ -272,7 +274,7 @@ function specListHtml(role, currentId, mode) {
   const attrs = s => `href="${sheetUrl(s.id)}" data-spec="${s.id}"${s.id === currentId ? ' aria-current="page"' : ""}`;
   const hasRS = role !== "class" && list.some(roleShareOf);
   const hasCS = role === "class" && list.some(specShare);
-  const rsNote = hasRS ? `<div class="sharenote">${roleComp(role)}<p class="note">비율: 2시즌(이번 시즌) ${SL()}${esc(ROSTER.roles[role].ko)} 쐐기 점수 상위 ${M5().top || 500}명${SX() ? SX() + " 캐릭터" : ""}(${esc(M5().src || "Raider.IO")}, ${esc(M5().date || "")})${SX() ? "가" : "이"} 지금 켜 둔 전문화. 전문화를 고르면 영웅 특성도 같은 방식으로 비교합니다. <a href="${rankUrl("role=" + role + SQ())}">${esc(ROSTER.roles[role].ko)} 순위표 ›</a></p></div>`
+  const rsNote = hasRS ? roleNote(role)
     : hasCS ? `<div class="sharenote"><p class="note">비율: 직업마다 ${SL()}쐐기 점수 상위 ${M5().top || 500}명${SX() ? SX() + " 캐릭터" : ""}(${esc(M5().src || "Raider.IO")}, ${esc(M5().date || "")})${SX() ? "가" : "이"} 지금 켜 둔 전문화. 직업 이름을 누르면 그 직업 순위표가 열립니다.</p></div>` : "";
   const top = hasRS || hasCS ? smpRow() : "";
   // 역할 목록: 쐐기 상위 500명 비율 순위(순위 번호·막대). 비율 자료가 없으면 예전 모양
@@ -2112,6 +2114,29 @@ function selectPage() {
 function specsPage() {
   const saved = ls.get("wg:spec");
   if (saved) document.querySelectorAll(`a[data-spec="${saved}"]`).forEach(a => a.setAttribute("aria-current", "page"));
+  // 선택비율: 그 역할 쐐기 점수 상위 500명 가운데 이 전문화 비율(전문화 고르기 화면과 같은 수치). 표본은 세계·세계(중국 제외)·한국·중국
+  // 링크는 build.mjs가 만든 정적 목록을 그대로 두고, 비율·표본 단추·기준 설명만 덧붙인다. 표본을 바꾸면 새로고침 없이 다시 그린다
+  const ORDER = {};
+  ["tank", "healer"].forEach(r => { const g = document.querySelector(`#${r} .stiles`); if (g) ORDER[r] = [...g.children]; });
+  const drawShare = () => {
+    document.querySelectorAll(".specs-page .smprow, .specs-page .sharenote, .specs-page .shr, .specs-page .chip .pct").forEach(e => e.remove());
+    if (!SPECS.some(roleShareOf)) return;
+    const hero = document.querySelector(".s1-hero"); if (hero) hero.insertAdjacentHTML("beforeend", smpRow());
+    ["tank", "healer", "dps"].forEach(r => {
+      const sec = document.getElementById(r); if (!sec) return;
+      const of = a => BYID[a.dataset.spec] && roleShareOf(BYID[a.dataset.spec]);
+      if (r !== "dps") {
+        const g = sec.querySelector(".stiles"), items = ORDER[r];
+        // 비율이 큰 순서로 늘어놓는다(전문화 고르기 화면과 같은 순서)
+        g.append(...items.slice().sort((x, y) => ((of(y) || { share: -1 }).share) - ((of(x) || { share: -1 }).share)));
+        items.forEach(a => { const rs = of(a); if (rs) { a.style.setProperty("--cls", BYID[a.dataset.spec].cls.color); a.querySelector(".sn").parentElement.insertAdjacentHTML("beforeend", `<span class="shr"><span class="sbar"><i style="width:${Math.min(100, rs.share)}%"></i></span><b>${pctTxt(rs.share)}</b> ${rs.n}명</span>`); } });
+      } else sec.querySelectorAll("a.chip[data-spec]").forEach(a => { const rs = of(a); if (rs) a.insertAdjacentHTML("beforeend", `<span class="pct">${pctTxt(rs.share)}</span>`); });
+      sec.insertAdjacentHTML("beforeend", roleNote(r));
+    });
+    if (saved) document.querySelectorAll(`a[data-spec="${saved}"]`).forEach(a => a.setAttribute("aria-current", "page"));
+  };
+  reSample = () => drawShare();
+  drawShare();
   if (location.hash) { const el = document.getElementById(location.hash.slice(1)); if (el) el.scrollIntoView(); }
 }
 
