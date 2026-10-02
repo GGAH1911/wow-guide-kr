@@ -692,3 +692,12 @@ html.yt-open{overflow:hidden}
 .pcard .rvid{margin:0 0 8px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:13px}
 .pcard .rvidx{color:var(--muted);font-size:12.5px}
 .s1-hero .smprow{margin:16px 0 0}
+
+/* 검색 엔진·JS 꺼진 환경용 정적 본문(JS 가 켜지면 #app 이 통째로 다시 그려진다) */
+.seo{max-width:760px;line-height:1.65;padding-top:24px;padding-bottom:40px}
+.seo h1{font-size:22px;margin:8px 0 12px}
+.seo h2{font-size:17px;margin:22px 0 8px}
+.seo h3{font-size:15px;margin:16px 0 4px}
+.seo ul{margin:4px 0 8px;padding-left:20px}
+.seo li{margin:3px 0}
+.seo a{color:inherit;text-decoration:underline}
