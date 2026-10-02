@@ -632,13 +632,15 @@ async function sheetPage() {
   const s = BYID[CFG.spec];
   if (!s) { location.replace(BASE + "?pick"); return; }
   setClassColor(s.cls);
-  const [core, en, ko, names, npcs, role, spec, routes] = await Promise.all([
+  const [core, en, ko, names, npcs, role, spec, routes, locs] = await Promise.all([
     J("data/core/dungeons.json"), J("data/core/spells.en.json"), J("data/core/spells.ko.json"), J("data/core/names.ko.json"),
     J("data/core/npcs.json"), J(`data/role/${s.role}.json`),
     s.status === "ready" ? J(`data/spec/${s.id.replace("/", "-")}.json`) : Promise.resolve(null),
     J("data/core/routes.json").catch(() => null),
+    J0("data/core/locations.json").catch(() => null),
   ]);
   const ROUTES = (routes && routes.dungeons) || {};
+  const LOCS = (locs && locs.dungeons) || {};
   // 영문 해설 공략 영상(Raider.IO·Topicx 해설·Dalaran Gaming)은 영문판에서만 보인다. 한글판에는 말이 없는 Topicx 주행 영상만 둔다
   const EN_VID = UI === "en";
   const saved = ls.get("wg:spec");
@@ -1015,8 +1017,8 @@ async function sheetPage() {
   // 팝업과 지도 보기는 휴대폰 뒤로 가기로 닫히도록 history에 한 칸씩 쌓는다(위에서부터 닫힘).
   const LAYERS = [];
   const pushLayer = k => { LAYERS.push(k); history.pushState({ wgLayer: k }, ""); };
-  const closeTop = k => { if (LAYERS[LAYERS.length - 1] === k) history.back(); else (k === "pm" ? pmCloseRaw : mvCloseRaw)(); };
-  addEventListener("popstate", () => { if (window.__ytPop) { window.__ytPop = false; return; } const k = LAYERS.pop(); if (k === "pm") pmCloseRaw(); else if (k === "mv") mvCloseRaw(); });
+  const closeTop = k => { if (LAYERS[LAYERS.length - 1] === k) history.back(); else (k === "pm" ? pmCloseRaw : k === "lc" ? lcCloseRaw : mvCloseRaw)(); };
+  addEventListener("popstate", () => { if (window.__ytPop) { window.__ytPop = false; return; } const k = LAYERS.pop(); if (k === "pm") pmCloseRaw(); else if (k === "mv") mvCloseRaw(); else if (k === "lc") lcCloseRaw(); });
   // 지도 띠에 넣는 풀 한 줄(분류 · 번호 · 이름 · 비중). 카드에 이미 입힌 한글화·몹 표시를 그대로 가져온다.
   const bandHtml = (store, n) => {
     const q = `.pcard[data-pull="${n}"]`, c = store.querySelector(q) || PM.body.querySelector(q); if (!c) return "";
@@ -1072,6 +1074,52 @@ async function sheetPage() {
     if (e.key === "Escape") { e.preventDefault(); pmClose(); }
     else if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && !e.target.closest("input,textarea") && PM.ctx) { pmOpen(Math.min(PM.ctx.max, Math.max(1, PM.n + (e.key === "ArrowLeft" ? -1 : 1)))); peek(true, 1600); }
   });
+  // ---- 던전 입구 위치 지도: 던전 머리의 카드(.loccard)를 누르면 지역 지도 위에 입구 핀을 보여 준다 ----
+  // 데이터 data/core/locations.json(좌표는 지도 그림 가로·세로 %), 그림 assets/locations/<지역>.<ko|en>.webp
+  const TT = (k, e) => (UI === "en" ? e : k);
+  const LL = o => (o ? (lang === "ko" ? o.ko : o.en) : "");   // 이름·핀 이름: 게임 언어
+  const LU = o => (o ? (UI === "en" ? o.en : o.ko) : "");     // 문장: 사이트 언어
+  const locImg = m => `${BASE}assets/locations/${m.zone}.${lang === "ko" ? "ko" : "en"}.webp`;
+  const locPins = (m, big) => m.pins.map(p => `<span class="lc-pin${p.x < 22 ? " lft" : p.x > 78 ? " rgt" : ""}${p.y < 22 ? " btm" : ""}" style="left:${p.x}%;top:${p.y}%"><i></i>${big ? `<em>${esc(LL(p.label))}</em>` : ""}</span>`).join("");
+  const locCard = id => {
+    const L = LOCS[id]; if (!L) return "";
+    const m = L.maps[0];
+    return `<button type="button" class="loccard" data-loc="${id}"><span class="lc-thumb"><img src="${locImg(m)}" alt="" loading="lazy" decoding="async">${locPins(m, false)}</span><span class="lc-info"><b>${TT("입구 위치", "Entrance location")}</b><small>${esc(LL(m.name))} · ${TT("눌러서 지도 보기", "Tap to open the map")} ›</small></span></button>`;
+  };
+  const LC = (() => {
+    const el = document.createElement("div"); el.className = "lcmodal"; el.hidden = true;
+    el.innerHTML = `<div class="lc-back" data-lx></div><div class="lc-box" role="dialog" aria-modal="true"><div class="lc-bar"><b class="lc-title"></b><span class="lc-steps"></span><button type="button" class="lc-x" data-lx aria-label="닫기">✕</button></div><div class="lc-body"></div></div>`;
+    document.body.append(el);
+    return { el, title: el.querySelector(".lc-title"), steps: el.querySelector(".lc-steps"), body: el.querySelector(".lc-body"), id: null, i: 0 };
+  })();
+  function lcDraw() {
+    const L = LOCS[LC.id]; if (!L) return;
+    const d = D.find(x => x.id === LC.id), m = L.maps[LC.i];
+    LC.title.textContent = `${d ? (lang === "ko" ? (KO_ALL[d.name] || d.name) : d.name) : ""} · ${LL(m.name)}`;
+    LC.steps.innerHTML = L.maps.length > 1 ? L.maps.map((x, i) => `<button type="button" data-ls="${i}" aria-pressed="${i === LC.i}">${i + 1}</button>`).join("") : "";
+    const way = L.way && LC.i === L.maps.length - 1 ? `<div class="lc-way"><code>${esc(L.way)}</code><button type="button" class="lc-copy" data-way="${esc(L.way)}">${TT("복사", "Copy")}</button><small>${TT("게임 채팅창에 붙여 넣으면 지도에 위치가 표시됩니다", "Paste into the game chat to set a map waypoint")}</small></div>` : "";
+    const tw = locs.timeways ? `<p class="lc-tw">${esc(LU(locs.timeways.text))} <code>${esc(locs.timeways.way)}</code></p>` : "";
+    LC.body.innerHTML = `<div class="lc-map"><img src="${locImg(m)}" alt="${esc(LL(m.name))}" decoding="async">${locPins(m, true)}</div>${m.step ? `<p class="lc-step">${esc(LU(m.step))}</p>` : ""}<p class="lc-text">${esc(LU(L.text))}</p>${way}${tw}<p class="lc-src">${TT("출처: Wowhead 던전 가이드·지역 지도, Method", "Source: Wowhead dungeon guide and zone maps, Method")}</p>`;
+    LC.body.scrollTop = 0;
+  }
+  function lcOpen(id) {
+    if (!LOCS[id]) return;
+    LC.id = id; LC.i = 0; lcDraw();
+    const was = LC.el.hidden; LC.el.hidden = false; document.documentElement.classList.add("lc-open");
+    if (was) { pushLayer("lc"); LC.el.querySelector(".lc-x").focus({ preventScroll: true }); }
+  }
+  function lcCloseRaw() { if (LC.el.hidden) return; LC.el.hidden = true; document.documentElement.classList.remove("lc-open"); }
+  const lcClose = () => closeTop("lc");
+  LC.el.addEventListener("click", e => {
+    if (e.target.closest("[data-lx]")) return lcClose();
+    const st = e.target.closest("[data-ls]"); if (st) { LC.i = +st.dataset.ls; return lcDraw(); }
+    const cp = e.target.closest(".lc-copy"); if (cp) {
+      const done = () => { cp.textContent = TT("복사됨", "Copied"); setTimeout(() => { cp.textContent = TT("복사", "Copy"); }, 1800); };
+      try { navigator.clipboard.writeText(cp.dataset.way).then(done, () => { const c = cp.parentElement.querySelector("code"); const r = document.createRange(); r.selectNodeContents(c); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); cp.textContent = TT("선택됨", "Selected"); }); } catch (err) { /* 클립보드 없음 */ }
+    }
+  });
+  document.addEventListener("click", e => { const b = e.target.closest(".loccard"); if (b) lcOpen(b.dataset.loc); });
+  document.addEventListener("keydown", e => { if (!LC.el.hidden && e.key === "Escape") { e.preventDefault(); lcClose(); } });
   // ---- 지도 크게 보기: 전체 화면, 두 손가락 확대·한 손가락 이동·빈 곳 두 번 탭 확대, 휠 확대(데스크톱) ----
   // 터치: 풀을 한 번 탭하면 하이라이트 + 띠, 같은 풀을 다시 탭하거나 "공략 보기"를 누르면 팝업. 마우스: 올리면 하이라이트, 누르면 팝업.
   const MV = (() => {
@@ -1228,7 +1276,7 @@ async function sheetPage() {
       return { list, deep: deepHtml(d.id, b), vid: (EN_VID && RIO[d.id] && b.k !== "Trash") ? `<a class="vid" href="${rioVideo(d.id, b.t)}" target="_blank" rel="noopener">▶ 영상</a>` : "" };
     };
     const R0 = ROUTES[d.id], inRoute = new Set(R0 ? R0.pulls.filter(p => p.boss).map(p => p.boss) : []);
-    mainEl.innerHTML = `<div><h2 class="dname">${d.name}</h2><p class="dsub">${d.sub}${d.time ? ` · <span class="dtime">제한 시간 <b>${d.time}분</b></span>` : ""}${RIO[d.id] ? `</p><p class="dlinks">${EN_VID ? `<a class="vid" href="${rioVideo(d.id)}" target="_blank" rel="noopener">▶ Raider.IO 영상</a>` : ""}<a class="vid rio" href="${rioArticle(d.id)}" target="_blank" rel="noopener">Raider.IO 글</a>${ROUTES[d.id] ? "" : mdtHtml(d.id)}` : EN_VID ? ` · <a class="vid" href="${core.generalVideo.href}" target="_blank" rel="noopener">${core.generalVideo.label}</a>` : ""}</p></div>` + (d.id !== "general" ? heroCard(d) : "") + bosses.map(b => {
+    mainEl.innerHTML = `<div><h2 class="dname">${d.name}</h2><p class="dsub">${d.sub}${d.time ? ` · <span class="dtime">제한 시간 <b>${d.time}분</b></span>` : ""}${RIO[d.id] ? `</p><p class="dlinks">${EN_VID ? `<a class="vid" href="${rioVideo(d.id)}" target="_blank" rel="noopener">▶ Raider.IO 영상</a>` : ""}<a class="vid rio" href="${rioArticle(d.id)}" target="_blank" rel="noopener">Raider.IO 글</a>${ROUTES[d.id] ? "" : mdtHtml(d.id)}` : EN_VID ? ` · <a class="vid" href="${core.generalVideo.href}" target="_blank" rel="noopener">${core.generalVideo.label}</a>` : ""}</p></div>` + (d.id !== "general" ? locCard(d.id) : "") + (d.id !== "general" ? heroCard(d) : "") + bosses.map(b => {
       if (b.block) return fold(b, blockHtml(b));
       if (inRoute.has(b.n)) return "";
       const x = bossInner(b);
