@@ -117,7 +117,7 @@ function dungeonStatic(s, d, spec, role) {
   h += RT ? `Topicx PUG 경로 ${RT.pulls.length}풀 기준으로 풀마다 몹 구성과 ${esc(s.koFull)}${iga(s.koFull)} 할 일을 적었습니다.` : '보스별 공략과 운영 요점을 정리했습니다.';
   h += `</p>\n`;
   const LOC = LOCDATA.dungeons[d.id];
-  if (LOC) h += `<h2>입구 위치</h2>\n<p>${esc(LOC.text.ko)}${LOC.way ? ` 좌표: <code>${esc(LOC.way)}</code>` : ''}</p>\n<p>${esc(LOCDATA.timeways.text.ko)}</p>\n`;
+  if (LOC) h += `<h2>입구 위치</h2>\n<p>${LOC.nocont ? '지역' : '대륙·지역'}: ${esc(LOC.where.ko)} (확장팩 ${esc(LOC.exp.ko)})</p>\n<p>${esc(LOC.text.ko)}${LOC.way ? ` 좌표: <code>${esc(LOC.way)}</code>` : ''}</p>\n<p>${esc(LOCDATA.timeways.text.ko)}</p>\n`;
   h += `<h2>보스</h2>\n` + d.bosses.map(b => `<h3>${esc(KONAMES[b.n] ? KONAMES[b.n] + ' (' + b.n + ')' : b.n)}</h3>\n<ul>${(b.i || []).map(itemTxt).join('')}</ul>`).join('\n') + '\n';
   if (RT) {
     h += `<h2>경로 · 풀별 공략</h2>\n`;

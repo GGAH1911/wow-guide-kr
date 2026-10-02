@@ -1,5 +1,5 @@
 {
- "source": "좌표: Wowhead 던전 가이드(Midnight 12.1) 지도 핀. 설명: Method 'Season 2 Dungeon Entrance Locations'. 지도 이미지: Wowhead 지역 지도. Voidscar·Vale 은 /way 명령 좌표의 지도 번호가 출처마다 달라 뺐다.",
+ "source": "좌표: Wowhead 던전 가이드(Midnight 12.1) 지도 핀. 설명: Method 'Season 2 Dungeon Entrance Locations'. 지도 이미지: Wowhead 지역 지도. Voidscar·Vale 은 /way 명령 좌표의 지도 번호가 출처마다 달라 뺐다. 대륙: 동부 왕국(쿠엘탈라스)·잔달라·용의 섬은 Wowpedia/Warcraft Wiki·블리자드 공지·Overgear 확인, 하란다르·공허폭풍은 블리자드 한밤 소개문 기준(대륙은 확인되지 않아 적지 않음).",
  "timeways": {
   "way": "/way #2393 42.4 58.3",
   "text": {
@@ -73,6 +73,18 @@
    "text": {
     "ko": "똬리의 섬의 아탈우텍 금고(Vaults of Atal'Utek) 안에 있습니다. 섬의 문 3곳 중 어디로 들어가도 되고, 금고 안의 Amani Foothold 지역으로 가면 던전 입구가 있습니다.",
     "en": "Inside the Vaults of Atal'Utek on The Coiled Isle. Use any of the 3 gates on the isle, then head to the Amani Foothold inside the Vaults to find the entrance."
+   },
+   "where": {
+    "ko": "동부 왕국(Eastern Kingdoms) › 똬리의 섬(줄아만 동쪽의 섬) › 아탈우텍 금고",
+    "en": "Eastern Kingdoms › The Coiled Isle (an island east of Zul'Aman) › Vaults of Atal'Utek"
+   },
+   "short": {
+    "ko": "동부 왕국 · 똬리의 섬",
+    "en": "Eastern Kingdoms · The Coiled Isle"
+   },
+   "exp": {
+    "ko": "한밤",
+    "en": "Midnight"
    }
   },
   "nalorakk": {
@@ -99,6 +111,18 @@
    "text": {
     "ko": "줄아만 남쪽, 거대한 날로라크 곰 머리 석상 안에 있습니다. 안으로 들어가 계단을 내려가면 정면에 던전 입구가 보입니다.",
     "en": "In the south of Zul'Aman, inside the giant carved stone bear head of Nalorakk. Go in and down the stairs; the entrance is straight ahead."
+   },
+   "where": {
+    "ko": "동부 왕국(Eastern Kingdoms) › 쿠엘탈라스 › 줄아만 남쪽",
+    "en": "Eastern Kingdoms › Quel'Thalas › southern Zul'Aman"
+   },
+   "short": {
+    "ko": "동부 왕국 · 줄아만",
+    "en": "Eastern Kingdoms · Zul'Aman"
+   },
+   "exp": {
+    "ko": "한밤",
+    "en": "Midnight"
    }
   },
   "murder": {
@@ -125,6 +149,18 @@
    "text": {
     "ko": "실버문 시내 동쪽, Astalor's Sanctum 바로 바깥에 있습니다.",
     "en": "In Silvermoon City, just outside Astalor's Sanctum on the east side."
+   },
+   "where": {
+    "ko": "동부 왕국(Eastern Kingdoms) › 쿠엘탈라스 › 실버문 시내 동쪽",
+    "en": "Eastern Kingdoms › Quel'Thalas › eastern Silvermoon City"
+   },
+   "short": {
+    "ko": "동부 왕국 · 실버문",
+    "en": "Eastern Kingdoms · Silvermoon City"
+   },
+   "exp": {
+    "ko": "한밤",
+    "en": "Midnight"
    }
   },
   "vale": {
@@ -149,9 +185,22 @@
    ],
    "way": null,
    "text": {
-    "ko": "하란다르 남서쪽에 있습니다.",
-    "en": "In the south-western part of Harandar."
-   }
+    "ko": "입구는 하란다르 남서쪽에 있습니다.",
+    "en": "The entrance is in the south-west of Harandar."
+   },
+   "where": {
+    "ko": "한밤의 새 지역 하란다르(Harandar) — 세계수의 거대한 뿌리가 만나는 곳에 있는 원시 정글(haranir의 고향)이며 남서쪽에 있습니다. 실버문의 포탈로 갑니다(/way #2393 36.8 68.4).",
+    "en": "Harandar, a new Midnight zone: a primordial jungle where the great roots of the World Trees meet (home of the haranir), in its south-west. Reach it via the portal in Silvermoon City (/way #2393 36.8 68.4)."
+   },
+   "short": {
+    "ko": "하란다르 (한밤 신규 지역)",
+    "en": "Harandar (new Midnight zone)"
+   },
+   "exp": {
+    "ko": "한밤",
+    "en": "Midnight"
+   },
+   "nocont": true
   },
   "voidscar": {
    "maps": [
@@ -175,9 +224,22 @@
    ],
    "way": null,
    "text": {
-    "ko": "공허폭풍 북부, PvP 지역인 Slayer's Rise 안에 있습니다.",
-    "en": "In northern Voidstorm, inside the PvP area Slayer's Rise."
-   }
+    "ko": "입구는 공허폭풍 북부, PvP 지역인 Slayer's Rise 안에 있습니다.",
+    "en": "The entrance is in northern Voidstorm, inside the PvP area Slayer's Rise."
+   },
+   "where": {
+    "ko": "한밤의 새 지역 공허폭풍(Voidstorm) — 공허가 빚어낸 멀고 낯선 세계(블리자드 소개문)이며 북부에 있습니다. 실버문의 포탈로 갑니다(/way #2393 35.3 65.3).",
+    "en": "Voidstorm, a new Midnight zone: a distant, mysterious world shaped by the Void (Blizzard's description), in its north. Reach it via the portal in Silvermoon City (/way #2393 35.3 65.3)."
+   },
+   "short": {
+    "ko": "공허폭풍 (한밤 신규 지역)",
+    "en": "Voidstorm (new Midnight zone)"
+   },
+   "exp": {
+    "ko": "한밤",
+    "en": "Midnight"
+   },
+   "nocont": true
   },
   "kings": {
    "maps": [
@@ -203,6 +265,18 @@
    "text": {
     "ko": "줄다자르 서쪽, 아탈다자르 피라미드 꼭대기에 있습니다(아탈다자르 던전에서 야즈마와 싸우는 바로 그 자리). 아탈다자르 던전으로 잘못 들어가지 말고 지역 위를 날아서 가세요.",
     "en": "In western Zuldazar, on top of the Atal'Dazar pyramid (where you fight Yazma inside the Atal'Dazar dungeon). Fly over the zone instead of entering the Atal'Dazar dungeon by mistake."
+   },
+   "where": {
+    "ko": "잔달라(Zandalar) › 줄다자르 서쪽",
+    "en": "Zandalar › western Zuldazar"
+   },
+   "short": {
+    "ko": "잔달라 · 줄다자르",
+    "en": "Zandalar · Zuldazar"
+   },
+   "exp": {
+    "ko": "격전의 아제로스",
+    "en": "Battle for Azeroth"
    }
   },
   "ruby": {
@@ -229,6 +303,18 @@
    "text": {
     "ko": "깨어나는 해안 남쪽에 있습니다.",
     "en": "In the south of The Waking Shores."
+   },
+   "where": {
+    "ko": "용의 섬(Dragon Isles) › 깨어나는 해안 남쪽",
+    "en": "Dragon Isles › southern Waking Shores"
+   },
+   "short": {
+    "ko": "용의 섬 · 깨어나는 해안",
+    "en": "Dragon Isles · The Waking Shores"
+   },
+   "exp": {
+    "ko": "용군단",
+    "en": "Dragonflight"
    }
   },
   "temple": {
@@ -255,6 +341,18 @@
    "text": {
     "ko": "볼둔 북쪽, Slithering Gulch 지역 안에 있습니다.",
     "en": "In northern Vol'dun, inside the Slithering Gulch."
+   },
+   "where": {
+    "ko": "잔달라(Zandalar) › 볼둔 북쪽",
+    "en": "Zandalar › northern Vol'dun"
+   },
+   "short": {
+    "ko": "잔달라 · 볼둔",
+    "en": "Zandalar · Vol'dun"
+   },
+   "exp": {
+    "ko": "격전의 아제로스",
+    "en": "Battle for Azeroth"
    }
   }
  }

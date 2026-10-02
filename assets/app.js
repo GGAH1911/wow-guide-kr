@@ -1084,7 +1084,7 @@ async function sheetPage() {
   const locCard = id => {
     const L = LOCS[id]; if (!L) return "";
     const m = L.maps[0];
-    return `<button type="button" class="loccard" data-loc="${id}"><span class="lc-thumb"><img src="${locImg(m)}" alt="" loading="lazy" decoding="async">${locPins(m, false)}</span><span class="lc-info"><b>${TT("입구 위치", "Entrance location")}</b><small>${esc(LL(m.name))} · ${TT("눌러서 지도 보기", "Tap to open the map")} ›</small></span></button>`;
+    return `<button type="button" class="loccard" data-loc="${id}"><span class="lc-thumb"><img src="${locImg(m)}" alt="" loading="lazy" decoding="async">${locPins(m, false)}</span><span class="lc-info"><b>${TT("입구 위치", "Entrance location")}</b><small>${esc(LU(L.short) || LL(m.name))} · ${TT("눌러서 지도 보기", "Tap to open the map")} ›</small></span></button>`;
   };
   const LC = (() => {
     const el = document.createElement("div"); el.className = "lcmodal"; el.hidden = true;
@@ -1099,7 +1099,7 @@ async function sheetPage() {
     LC.steps.innerHTML = L.maps.length > 1 ? L.maps.map((x, i) => `<button type="button" data-ls="${i}" aria-pressed="${i === LC.i}">${i + 1}</button>`).join("") : "";
     const way = L.way && LC.i === L.maps.length - 1 ? `<div class="lc-way"><code>${esc(L.way)}</code><button type="button" class="lc-copy" data-way="${esc(L.way)}">${TT("복사", "Copy")}</button><small>${TT("게임 채팅창에 붙여 넣으면 지도에 위치가 표시됩니다", "Paste into the game chat to set a map waypoint")}</small></div>` : "";
     const tw = locs.timeways ? `<p class="lc-tw">${esc(LU(locs.timeways.text))} <code>${esc(locs.timeways.way)}</code></p>` : "";
-    LC.body.innerHTML = `<div class="lc-map"><img src="${locImg(m)}" alt="${esc(LL(m.name))}" decoding="async">${locPins(m, true)}</div>${m.step ? `<p class="lc-step">${esc(LU(m.step))}</p>` : ""}<p class="lc-text">${esc(LU(L.text))}</p>${way}${tw}<p class="lc-src">${TT("출처: Wowhead 던전 가이드·지역 지도, Method", "Source: Wowhead dungeon guide and zone maps, Method")}</p>`;
+    LC.body.innerHTML = `<div class="lc-map"><img src="${locImg(m)}" alt="${esc(LL(m.name))}" decoding="async">${locPins(m, true)}</div>${L.where ? `<p class="lc-where"><b>${L.nocont ? TT("지역", "Region") : TT("대륙 · 지역", "Continent · Region")}</b>${esc(LU(L.where))}${L.exp ? ` <span class="lc-exp">${esc(LU(L.exp))}</span>` : ""}</p>` : ""}${m.step ? `<p class="lc-step">${esc(LU(m.step))}</p>` : ""}<p class="lc-text">${esc(LU(L.text))}</p>${way}${tw}<p class="lc-src">${TT("출처: Wowhead 던전 가이드·지역 지도, Method", "Source: Wowhead dungeon guide and zone maps, Method")}</p>`;
     LC.body.scrollTop = 0;
   }
   function lcOpen(id) {
