@@ -1,5 +1,5 @@
 {
- "source": "좌표: Wowhead 던전 가이드(Midnight 12.1) 지도 핀. 설명: Method 'Season 2 Dungeon Entrance Locations'. 지도 이미지: Wowhead 지역 지도. Voidscar·Vale 은 /way 명령 좌표의 지도 번호가 출처마다 달라 뺐다. 대륙: 동부 왕국(쿠엘탈라스)·잔달라·용의 섬은 Wowpedia/Warcraft Wiki·블리자드 공지·Overgear 확인, 하란다르·공허폭풍은 블리자드 한밤 소개문 기준(대륙은 확인되지 않아 적지 않음).",
+ "source": "좌표: Wowhead 던전 가이드(Midnight 12.1) 지도 핀. 설명: Method 'Season 2 Dungeon Entrance Locations'. 지도 이미지: Wowhead 지역 지도. Voidscar·Vale 은 /way 명령 좌표의 지도 번호가 출처마다 달라 뺐다. 대륙: 동부 왕국(쿠엘탈라스)·잔달라·용의 섬은 Wowpedia/Warcraft Wiki·블리자드 공지·Overgear 확인, 똬리의 섬·줄아만의 쿠엘탈라스 소속은 게임 대륙 지도(동부 왕국→쿠엘탈라스→지역) 확인(사용자), 하란다르·공허폭풍은 블리자드 한밤 소개문 기준(대륙은 확인되지 않아 적지 않음).",
  "timeways": {
   "way": "/way #2393 42.4 58.3",
   "text": {
@@ -75,8 +75,8 @@
     "en": "Inside the Vaults of Atal'Utek on The Coiled Isle. Use any of the 3 gates on the isle, then head to the Amani Foothold inside the Vaults to find the entrance."
    },
    "where": {
-    "ko": "동부 왕국(Eastern Kingdoms) › 똬리의 섬(줄아만 동쪽의 섬) › 아탈우텍 금고",
-    "en": "Eastern Kingdoms › The Coiled Isle (an island east of Zul'Aman) › Vaults of Atal'Utek"
+    "ko": "동부 왕국(Eastern Kingdoms) › 쿠엘탈라스 › 똬리의 섬(줄아만 동쪽의 섬) › 아탈우텍 금고",
+    "en": "Eastern Kingdoms › Quel'Thalas › The Coiled Isle (an island east of Zul'Aman) › Vaults of Atal'Utek"
    },
    "short": {
     "ko": "동부 왕국 · 똬리의 섬",
