@@ -92,6 +92,7 @@ const koDict = spec => { // app.js sheetPage 의 KO_ALL 과 같은 규칙
 const seoApp = inner => `<div id="app"><div class="wrap seo">${inner}</div></div>`;
 const plain = h => String(h).replace(/<span class="need[^"]*"[^>]*>(.*?)<\/span>/g, '[$1] ').replace(/<[^>]+>/g, '').replace(/[{}]/g, '').replace(/\s+/g, ' ').trim();
 const koDungeon = d => KONAMES[d.name] || d.name;
+const LOCDATA = rd('data/core/locations.json');
 // ---- S1 첫 화면 (정적 본문: 직업별 40개 전문화 링크) ----
 const homeStatic = `<h1>와우 공략 · 한밤 2시즌 쐐기·레이드·PvP</h1>
 <p>월드 오브 워크래프트 한밤(Midnight) 2시즌의 쐐기 던전 8개, 레이드, PvP 공략을 내 전문화 기준으로 보여 주는 한국어 사이트입니다. 13개 직업 40개 전문화를 모두 다룹니다.</p>
@@ -115,6 +116,8 @@ function dungeonStatic(s, d, spec, role) {
   h += `<p>${esc(s.koFull)}(${esc(s.enFull)})${ro(s.koFull)} 한밤 2시즌 쐐기 던전 ${esc(koDungeon(d))}(${esc(d.name)}, 제한 시간 ${d.time}분)${eul(koDungeon(d))} 도는 공략입니다. `;
   h += RT ? `Topicx PUG 경로 ${RT.pulls.length}풀 기준으로 풀마다 몹 구성과 ${esc(s.koFull)}${iga(s.koFull)} 할 일을 적었습니다.` : '보스별 공략과 운영 요점을 정리했습니다.';
   h += `</p>\n`;
+  const LOC = LOCDATA.dungeons[d.id];
+  if (LOC) h += `<h2>입구 위치</h2>\n<p>${esc(LOC.text.ko)}${LOC.way ? ` 좌표: <code>${esc(LOC.way)}</code>` : ''}</p>\n<p>${esc(LOCDATA.timeways.text.ko)}</p>\n`;
   h += `<h2>보스</h2>\n` + d.bosses.map(b => `<h3>${esc(KONAMES[b.n] ? KONAMES[b.n] + ' (' + b.n + ')' : b.n)}</h3>\n<ul>${(b.i || []).map(itemTxt).join('')}</ul>`).join('\n') + '\n';
   if (RT) {
     h += `<h2>경로 · 풀별 공략</h2>\n`;

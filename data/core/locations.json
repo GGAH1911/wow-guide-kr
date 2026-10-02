@@ -1,0 +1,261 @@
+{
+ "source": "좌표: Wowhead 던전 가이드(Midnight 12.1) 지도 핀. 설명: Method 'Season 2 Dungeon Entrance Locations'. 지도 이미지: Wowhead 지역 지도. Voidscar·Vale 은 /way 명령 좌표의 지도 번호가 출처마다 달라 뺐다.",
+ "timeways": {
+  "way": "/way #2393 42.4 58.3",
+  "text": {
+   "ko": "가장 빠른 길: 실버문의 타임웨이(Timeways) 포탈. 탈라시안 대학 바로 바깥에 있고, 각 던전 근처로 이어집니다.",
+   "en": "Fastest way: the Timeways portal hub in Silvermoon City, just outside the Thalassian University. It leads to near each dungeon."
+  }
+ },
+ "dungeons": {
+  "altar": {
+   "maps": [
+    {
+     "zone": 16365,
+     "name": {
+      "ko": "똬리의 섬",
+      "en": "The Coiled Isle"
+     },
+     "pins": [
+      {
+       "x": 43.3,
+       "y": 44.2,
+       "label": {
+        "ko": "문 1",
+        "en": "Gate 1"
+       }
+      },
+      {
+       "x": 45.4,
+       "y": 65.9,
+       "label": {
+        "ko": "문 2",
+        "en": "Gate 2"
+       }
+      },
+      {
+       "x": 31.8,
+       "y": 64.9,
+       "label": {
+        "ko": "문 3",
+        "en": "Gate 3"
+       }
+      }
+     ],
+     "step": {
+      "ko": "1단계 · 섬의 문 3곳 중 아무 데나 들어가 아탈우텍 금고로 — 문 1 Gate of the Serpent Eye · 문 2 Gate of the Eastern Fang · 문 3 Gate of the Western Fang",
+      "en": "Step 1 · Enter the Vaults of Atal'Utek through any of the 3 gates — Gate 1 Gate of the Serpent Eye · Gate 2 Gate of the Eastern Fang · Gate 3 Gate of the Western Fang"
+     }
+    },
+    {
+     "zone": 16535,
+     "name": {
+      "ko": "아탈우텍 금고",
+      "en": "Vaults of Atal'Utek"
+     },
+     "pins": [
+      {
+       "x": 47.2,
+       "y": 67.6,
+       "label": {
+        "ko": "송곳니의 제단 입구",
+        "en": "Altar of Fangs entrance"
+       }
+      }
+     ],
+     "step": {
+      "ko": "2단계 · 금고 안 Amani Foothold에서 던전 입구로",
+      "en": "Step 2 · Inside the Vaults, the entrance is at the Amani Foothold"
+     }
+    }
+   ],
+   "way": "/way #2509 47.2 67.6",
+   "text": {
+    "ko": "똬리의 섬의 아탈우텍 금고(Vaults of Atal'Utek) 안에 있습니다. 섬의 문 3곳 중 어디로 들어가도 되고, 금고 안의 Amani Foothold 지역으로 가면 던전 입구가 있습니다.",
+    "en": "Inside the Vaults of Atal'Utek on The Coiled Isle. Use any of the 3 gates on the isle, then head to the Amani Foothold inside the Vaults to find the entrance."
+   }
+  },
+  "nalorakk": {
+   "maps": [
+    {
+     "zone": 15947,
+     "name": {
+      "ko": "줄아만",
+      "en": "Zul'Aman"
+     },
+     "pins": [
+      {
+       "x": 31.4,
+       "y": 83.9,
+       "label": {
+        "ko": "날로라크의 소굴 입구",
+        "en": "Den of Nalorakk entrance"
+       }
+      }
+     ]
+    }
+   ],
+   "way": "/way #2437 31.4 83.9",
+   "text": {
+    "ko": "줄아만 남쪽, 거대한 날로라크 곰 머리 석상 안에 있습니다. 안으로 들어가 계단을 내려가면 정면에 던전 입구가 보입니다.",
+    "en": "In the south of Zul'Aman, inside the giant carved stone bear head of Nalorakk. Go in and down the stairs; the entrance is straight ahead."
+   }
+  },
+  "murder": {
+   "maps": [
+    {
+     "zone": 15969,
+     "name": {
+      "ko": "실버문",
+      "en": "Silvermoon City"
+     },
+     "pins": [
+      {
+       "x": 56.2,
+       "y": 61.1,
+       "label": {
+        "ko": "죽음의 골목 입구",
+        "en": "Murder Row entrance"
+       }
+      }
+     ]
+    }
+   ],
+   "way": "/way #2393 56.2 61.1",
+   "text": {
+    "ko": "실버문 시내 동쪽, Astalor's Sanctum 바로 바깥에 있습니다.",
+    "en": "In Silvermoon City, just outside Astalor's Sanctum on the east side."
+   }
+  },
+  "vale": {
+   "maps": [
+    {
+     "zone": 15355,
+     "name": {
+      "ko": "하란다르",
+      "en": "Harandar"
+     },
+     "pins": [
+      {
+       "x": 27.8,
+       "y": 77.9,
+       "label": {
+        "ko": "눈부신 골짜기 입구",
+        "en": "The Blinding Vale entrance"
+       }
+      }
+     ]
+    }
+   ],
+   "way": null,
+   "text": {
+    "ko": "하란다르 남서쪽에 있습니다.",
+    "en": "In the south-western part of Harandar."
+   }
+  },
+  "voidscar": {
+   "maps": [
+    {
+     "zone": 15458,
+     "name": {
+      "ko": "공허폭풍",
+      "en": "Voidstorm"
+     },
+     "pins": [
+      {
+       "x": 51.6,
+       "y": 18.2,
+       "label": {
+        "ko": "공허흉터 투기장 입구",
+        "en": "Voidscar Arena entrance"
+       }
+      }
+     ]
+    }
+   ],
+   "way": null,
+   "text": {
+    "ko": "공허폭풍 북부, PvP 지역인 Slayer's Rise 안에 있습니다.",
+    "en": "In northern Voidstorm, inside the PvP area Slayer's Rise."
+   }
+  },
+  "kings": {
+   "maps": [
+    {
+     "zone": 8499,
+     "name": {
+      "ko": "줄다자르",
+      "en": "Zuldazar"
+     },
+     "pins": [
+      {
+       "x": 37.6,
+       "y": 39.4,
+       "label": {
+        "ko": "왕들의 안식처 입구",
+        "en": "King's Rest entrance"
+       }
+      }
+     ]
+    }
+   ],
+   "way": "/way #862 37.6 39.4",
+   "text": {
+    "ko": "줄다자르 서쪽, 아탈다자르 피라미드 꼭대기에 있습니다(아탈다자르 던전에서 야즈마와 싸우는 바로 그 자리). 아탈다자르 던전으로 잘못 들어가지 말고 지역 위를 날아서 가세요.",
+    "en": "In western Zuldazar, on top of the Atal'Dazar pyramid (where you fight Yazma inside the Atal'Dazar dungeon). Fly over the zone instead of entering the Atal'Dazar dungeon by mistake."
+   }
+  },
+  "ruby": {
+   "maps": [
+    {
+     "zone": 13644,
+     "name": {
+      "ko": "깨어나는 해안",
+      "en": "The Waking Shores"
+     },
+     "pins": [
+      {
+       "x": 60.0,
+       "y": 75.7,
+       "label": {
+        "ko": "루비 생명의 웅덩이 입구",
+        "en": "Ruby Life Pools entrance"
+       }
+      }
+     ]
+    }
+   ],
+   "way": "/way #2022 60.0 75.7",
+   "text": {
+    "ko": "깨어나는 해안 남쪽에 있습니다.",
+    "en": "In the south of The Waking Shores."
+   }
+  },
+  "temple": {
+   "maps": [
+    {
+     "zone": 8501,
+     "name": {
+      "ko": "볼둔",
+      "en": "Vol'dun"
+     },
+     "pins": [
+      {
+       "x": 51.9,
+       "y": 26.7,
+       "label": {
+        "ko": "세스랄리스 사원 입구",
+        "en": "Temple of Sethraliss entrance"
+       }
+      }
+     ]
+    }
+   ],
+   "way": "/way #864 51.9 26.7",
+   "text": {
+    "ko": "볼둔 북쪽, Slithering Gulch 지역 안에 있습니다.",
+    "en": "In northern Vol'dun, inside the Slithering Gulch."
+   }
+  }
+ }
+}

@@ -712,3 +712,46 @@ html.yt-open{overflow:hidden}
 .seo ul{margin:4px 0 8px;padding-left:20px}
 .seo li{margin:3px 0}
 .seo a{color:inherit;text-decoration:underline}
+
+/* 던전 입구 위치 지도: 던전 머리 카드(.loccard)와 모달(.lcmodal) */
+.loccard{display:flex;align-items:center;gap:12px;width:100%;max-width:420px;margin:10px 0 0;padding:8px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.loccard:hover{border-color:var(--link)}
+.lc-thumb{position:relative;flex:0 0 132px;aspect-ratio:3/2;border-radius:8px;overflow:hidden;background:#111}
+.lc-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.lc-info{display:flex;flex-direction:column;gap:2px;min-width:0}
+.lc-info b{font-size:14px}
+.lc-info small{font-size:12px;color:var(--muted)}
+.lc-pin{position:absolute;width:0;height:0;pointer-events:none}
+.lc-pin i{position:absolute;left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;background:#ef4444;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.5)}
+.lc-thumb .lc-pin i{left:-5px;top:-5px;width:10px;height:10px;border-width:1.5px}
+.lc-pin i::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:2px solid rgba(239,68,68,.7);animation:lcpulse 1.8s ease-out infinite}
+@keyframes lcpulse{0%{transform:scale(.5);opacity:1}100%{transform:scale(1.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){.lc-pin i::after{animation:none}}
+.lc-pin em{position:absolute;left:0;bottom:14px;transform:translateX(-50%);white-space:nowrap;font-style:normal;font-size:12.5px;font-weight:600;color:#fff;background:rgba(17,17,17,.86);padding:3px 8px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.lc-pin.btm em{bottom:auto;top:14px}
+.lc-pin.lft em{transform:none;left:-6px}
+.lc-pin.rgt em{transform:none;left:auto;right:-6px}
+.lcmodal{position:fixed;inset:0;z-index:62;display:flex;align-items:flex-start;justify-content:center;padding:clamp(12px,5vh,56px) 16px 16px}
+.lcmodal[hidden]{display:none}
+.lc-back{position:absolute;inset:0;background:var(--scrim)}
+.lc-box{position:relative;width:min(1000px,100%);max-height:calc(100dvh - clamp(12px,5vh,56px) - 16px);display:flex;flex-direction:column;background:var(--bg);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.4);overflow:hidden}
+.lc-bar{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--line);background:var(--surface)}
+.lc-title{font-size:14px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lc-steps{display:flex;gap:4px;margin-left:auto}
+.lc-steps button,.lc-x{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer;white-space:nowrap}
+.lc-steps button[aria-pressed="true"]{background:var(--link);border-color:var(--link);color:#fff}
+.lc-steps:empty+.lc-x{margin-left:auto}
+.lc-body{overflow:auto;padding:12px;overscroll-behavior:contain}
+.lc-map{position:relative;width:100%;max-width:max(320px,calc((100dvh - 330px) * 1.5));margin:0 auto;border-radius:10px;overflow:hidden;background:#111;line-height:0}
+.lc-map img{display:block;width:100%;height:auto}
+.lc-step{margin:10px 0 0;font-weight:600;font-size:14px}
+.lc-text{margin:6px 0 0;font-size:14px;line-height:1.55}
+.lc-way{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:10px 0 0}
+.lc-way code,.lc-tw code{font:12.5px ui-monospace,Menlo,monospace;background:var(--fill);padding:3px 8px;border-radius:6px}
+.lc-way button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:3px 10px;cursor:pointer}
+.lc-way small{flex-basis:100%;color:var(--muted);font-size:12px}
+.lc-tw{margin:10px 0 0;font-size:13px;color:var(--ink-2);line-height:1.6}
+.lc-src{margin:10px 0 0;font-size:11.5px;color:var(--muted)}
+html.lc-open{overflow:hidden}
+@media (max-width:520px){.lc-thumb{flex-basis:108px}.lc-pin em{font-size:11.5px}.lc-box{border-radius:12px}}
+@media print{.lcmodal,.loccard{display:none!important}}
