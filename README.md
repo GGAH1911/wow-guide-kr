@@ -7,7 +7,7 @@
 
 | 쐐기 | 레이드 | PvP |
 |---|---|---|
-| 던전 8개 공략, 기술 대응, 영웅 특성 비교, 특성 빌드, 쐐기 점수 상위 500명 순위 | 2시즌 맹독 심연 8보스 + 소굴 1보스, 1시즌 레이드 4개 10보스, 상위 공격대 조합 | 1인 조합전·전장 대공세·투기장·평점제 전장 순위, 추천 빌드, 전장·투기장 공략 25개, 전문화 전략 |
+| 던전 8개 **경로 지도**와 풀별 공략(40개 전문화 전부), 주행 영상 바로가기, 기술 대응, 영웅 특성 비교, 특성 빌드, 쐐기 점수 상위 500명 순위 | 2시즌 맹독 심연 8보스 + 소굴 1보스, 1시즌 레이드 4개 10보스, 상위 공격대 조합 | 1인 조합전·전장 대공세·투기장·평점제 전장 순위, 추천 빌드, 전장·투기장 공략 25개, 전문화 전략 |
 
 ---
 
@@ -30,6 +30,8 @@
 - **집 아이콘**: 첫 화면
 - **[쐐기 | 레이드 | PvP]**: 세 갈래 사이를 오갑니다. 전문화 페이지에서는 대신 **쐐기 공략 · 레이드 공략 · PvP · 스킬** 탭이 나옵니다.
 - **내 전문화 아이콘**: 저장한 전문화의 공략으로 바로 이동
+- **☆ 즐겨찾기**: 자주 보는 전문화를 별로 저장합니다(여러 개 가능). 첫 화면과 전문화 바꾸기 창에 즐겨찾기 칩이 뜨고, 메뉴의 **즐겨찾기 링크 복사**로 다른 기기에 같은 목록을 옮길 수 있습니다.
+- **해 아이콘 (다크 모드)**: 어두운 화면과 밝은 화면을 바꿉니다. 처음에는 어두운 화면이고, 기기 설정은 따르지 않습니다.
 - **한 / EN (클라이언트 언어)**: 게임 클라이언트 언어 전환. 기술·NPC·전문화 이름과 툴팁이 한글 클라이언트 또는 영문 클라이언트 표기로 바뀝니다.
 - **☰ 메뉴**: 쐐기·레이드·PvP의 모든 페이지와 내 전문화 바로가기, 전문화 변경, 사이트 언어(한국어 / English) 전환
 
@@ -37,9 +39,18 @@
 
 ### 3. 쐐기 공략
 
-던전 탭을 고르면 그 던전의 쫄·보스마다 **내 전문화가 할 일**(차단·해제·생존기·위치 등)이 태그와 함께 나옵니다. 태그 버튼으로 필요한 것만 골라 볼 수 있고, 영웅 특성을 바꾸면 내용도 그에 맞게 바뀝니다.
+던전 탭을 고르면 그 던전의 **경로 지도**가 나옵니다. 지도에는 Topicx PUG 경로(풀 번호 1, 2, 3 …)가 그려져 있고, 그 경로로 당기면 잡몹 100%를 채웁니다. 번호나 몹 위에 마우스를 올리면 풀 이름과 누적 %가 지도 아래에 뜨고, 누르면 그 풀의 공략 팝업이 열립니다. 회색 점은 이 경로에서 잡지 않는 몹입니다.
 
-![쐐기 공략: 던전별 할 일](docs/screenshots/03-mplus-guide.jpg)
+![경로 지도: 번호와 몹 점, 풀별 정보](docs/screenshots/14-route-map.jpg)
+
+- **크게 보기**: 지도를 전체 화면으로 봅니다. 두 손가락으로 확대·축소하고 한 손가락으로 이동하며(PC는 휠), 풀을 한 번 누르면 강조되고 **공략 보기**로 팝업이 열립니다.
+- **이 경로 MDT 복사**: 게임의 `/mdt` → Import에 붙여 넣는 문자열입니다. Topicx 경로를 만든 뒤 MDT 업데이트로 바뀐 몹은 보충하거나 같은 무리로 묶어 100% 이상이 되게 맞췄고, 문자열 이름 끝에 "(보정)"이 붙습니다. 어떤 풀을 고쳤는지는 지도 위에 적습니다.
+
+**풀 공략 팝업**에는 그 풀의 몹 구성, 몹마다 **내 전문화가 할 일**(차단·해제·생존기·위치 등 태그 포함), 보스 풀에서는 **간편 공략**과 **상세 공략**이 나옵니다. ◀ ▶ 로 앞뒤 풀을 넘기고 Esc나 바깥을 누르면 닫히며, 모바일 뒤로 가기 버튼으로도 닫힙니다. 영웅 특성을 바꾸면 내용도 그에 맞게 바뀝니다.
+
+![풀 공략 팝업: 영상에서 보기와 전문화 할 일](docs/screenshots/15-pull-popup.jpg)
+
+**주행 영상**: 던전마다 Topicx의 **해설 없는** 주행 영상을 하나씩 달았고, 풀 팝업의 **▶ 영상에서 이 풀 보기 (m:ss)** 를 누르면 사이트 안에서 그 풀이 시작하는 장면부터 재생합니다. 시각은 영상 화면의 쐐기 목표창 잡몹 %와 몹 이름표를 우리 경로와 대조해 뽑은 **±10~20초 추정**입니다. 영상이 그 풀을 우리 경로와 다른 몹 구성으로 잡았으면 링크 옆에 안내가 붙고, 시작 장면을 찾지 못한 풀은 링크가 없습니다. 영어 해설 영상(Raider.IO 등)은 한국어 화면에서 숨기고 영문 화면에서만 보입니다.
 
 기술 이름에 마우스를 올리면(모바일은 누르면) 게임과 같은 **툴팁**이 뜹니다.
 
@@ -94,16 +105,19 @@ Raider.IO 쐐기 점수 상위 500명을 **세계 · 세계(중국 제외) · �
 | PvP 순위·빌드·PvP 특성 | Blizzard Battle.net 공식 API (미국·유럽·한국·대만) | 매일 04:00 |
 | 기술 설명·툴팁·한글 이름 | Wowhead 게임 데이터 | 공략 작성 때 |
 | 던전·보스·전장·투기장 공략 | Wowhead, warcraft.wiki.gg, raidstrats.gg, Icy Veins 등(페이지마다 출처 표시) | 공략 작성 때 |
+| 쐐기 경로(풀 구성·순서) | Topicx PUG 경로(Mythic Dungeon Tools 문자열), 몹 한글 이름은 MDT·LittleWigs 번역 데이터 | 시즌·MDT 업데이트 때 |
+| 풀별 주행 영상 시점 | Topicx 무해설 주행 영상 화면 대조(잡몹 %, 몹 이름표) | 영상 교체 때 |
 
 - 수치는 게임 데이터(툴팁) 원문에 있는 것만 씁니다. 출처를 확인하지 못한 내용은 쓰지 않고, 출처는 각 페이지 아래에 적습니다.
 - 전문화별 레이드 활용 줄과 PvP 전략은 전문화 전용 공략 출처가 없어 **기술 툴팁 + 보스·지도 기믹 + 상위권 실제 채택률**을 맞춘 일반 원칙입니다(화면에도 표시).
+- 쐐기 경로의 전략(어떤 몹을 어느 순서로 당기는가)은 Topicx를 따르고, 수치와 피해 속성은 Wowhead 툴팁을 따릅니다. Topicx 개인 메모는 옮기지 않았습니다.
 - 공략 초안이며, 게임 패치로 내용이 달라질 수 있습니다.
 
 ---
 
 ## English version
 
-The whole site is also available in English: https://ggah1911.github.io/wow-guide-kr/?ui=en (or ☰ menu → English). Guides, raid and PvP strategy, rankings and menus are all in English, and ability and NPC names match the English game client. The choice is saved on your device; switch back with the 한국어 button.
+The whole site is also available in English: https://ggah1911.github.io/wow-guide-kr/?ui=en (or ☰ menu → English). Guides, route maps and pull popups, raid and PvP strategy, rankings and menus are all in English, and ability and NPC names match the English game client. In English, each dungeon also shows the English-commentary route videos; the Korean site only links Topicx's no-commentary run. The choice is saved on your device; switch back with the 한국어 button.
 
 ---
 
