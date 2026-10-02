@@ -639,10 +639,11 @@ html.mv-open{overflow:hidden}
 .pcat{display:inline-block;flex:0 0 auto;white-space:nowrap;font-size:11px;font-weight:700;line-height:1.5;padding:0 6px;border-radius:5px;background:#ffd60a;color:#111}
 .pcard.pboss .pcat,.rmtip .pcat.b{background:#fca5a5;color:#450a0a}
 .pcard h3 small .vid{margin-right:6px}
-.pmodal{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:16px}
+/* 풀 팝업: 위쪽 위치를 고정하고 내용 높이만 가변(◀ ▶ 로 넘겨도 상단 바가 움직이지 않는다) */
+.pmodal{--pm-top:clamp(12px,5vh,56px);position:fixed;inset:0;z-index:60;display:flex;align-items:flex-start;justify-content:center;padding:var(--pm-top) 16px 16px}
 .pmodal[hidden]{display:none}
 .pm-back{position:absolute;inset:0;background:var(--scrim)}
-.pm-box{position:relative;width:min(1100px,100%);max-height:calc(100dvh - 32px);display:flex;flex-direction:column;background:var(--bg);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.4);overflow:hidden}
+.pm-box{position:relative;width:min(1100px,100%);max-height:calc(100dvh - var(--pm-top) - 16px);display:flex;flex-direction:column;background:var(--bg);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.4);overflow:hidden}
 @media (min-width:1800px){.pm-box{width:min(1320px,100%)}}
 .pm-bar{display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid var(--line);background:var(--surface)}
 .pm-bar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer}
