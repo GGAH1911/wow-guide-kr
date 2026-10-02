@@ -642,7 +642,8 @@ html.mv-open{overflow:hidden}
 .pmodal{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:16px}
 .pmodal[hidden]{display:none}
 .pm-back{position:absolute;inset:0;background:var(--scrim)}
-.pm-box{position:relative;width:min(760px,100%);max-height:calc(100dvh - 32px);display:flex;flex-direction:column;background:var(--bg);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.4);overflow:hidden}
+.pm-box{position:relative;width:min(1100px,100%);max-height:calc(100dvh - 32px);display:flex;flex-direction:column;background:var(--bg);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.4);overflow:hidden}
+@media (min-width:1800px){.pm-box{width:min(1320px,100%)}}
 .pm-bar{display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid var(--line);background:var(--surface)}
 .pm-bar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer}
 .pm-bar button:disabled{opacity:.35;cursor:default}
