@@ -691,3 +691,4 @@ html.yt-open{overflow:hidden}
 @media (max-width:520px){.ytmodal{padding:0}.yt-box{border-radius:0}.yt-ext{display:none}}
 .pcard .rvid{margin:0 0 8px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:13px}
 .pcard .rvidx{color:var(--muted);font-size:12.5px}
+.s1-hero .smprow{margin:16px 0 0}
