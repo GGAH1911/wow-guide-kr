@@ -57,7 +57,8 @@ migrate();
 // 주소 ?ui=en|ko 로 고르면 이 기기에 저장한다. 영어 화면은 게임 언어도 영어로 고정하고(한/EN 버튼 없음),
 // 화면 문구는 assets/i18n.en.json 사전으로 그린 뒤에 바꾼다. 한국어 화면은 이 어느 것도 하지 않는다.
 const UI = (() => { let q = null; try { q = new URLSearchParams(location.search).get("ui"); } catch (e) {} if (q === "en" || q === "ko") ls.set("wg:ui", q); return ls.get("wg:ui") === "en" ? "en" : "ko"; })();
-let lang = UI === "en" ? "en" : ls.get("wg:lang") === "ko" ? "ko" : "en";
+// 게임 언어(기술·NPC 이름 표기): 한글이 기본, 한/EN 버튼으로 영문을 고른 사람만 영문(영어 화면은 항상 영문)
+let lang = UI === "en" ? "en" : ls.get("wg:lang") === "en" ? "en" : "ko";
 let I18N = null;
 const HANGUL = /[가-힣]/;
 // 영문 뒤에 남는 조사(예: "Top 500 players가")를 지운다
@@ -700,6 +701,9 @@ async function sheetPage() {
 
   let active = D[1].id;
   const st = ls.get("wg:tab"); if (st && D.some(d => d.id === st)) active = st;
+  // 던전 전용 주소(/<직업>/<전문화>/dungeon/<던전>/)는 저장된 탭보다 우선. 그 주소에서 탭을 눌러 붙은 #<던전>이 있으면 그것이 우선
+  // (주소 깊이를 바꾸는 replaceState 는 BASE 상대 경로를 깨므로 탭 전환은 해시만 바꾼다)
+  if (CFG.dungeon && D.some(d => d.id === CFG.dungeon)) active = CFG.dungeon;
   const h0 = location.hash.slice(1); if (D.some(d => d.id === h0)) active = h0;
   let openState = {}; try { openState = JSON.parse(ls.get("wg:open") || "{}") || {}; } catch (e) { openState = {}; }
 
@@ -882,6 +886,11 @@ async function sheetPage() {
   bindTips(".has-tip");
 
   // ---- 언어 ----
+  // 던전 전용 주소에서는 제목에 던전 이름을 넣는다(그 밖의 주소는 예전과 같음)
+  function pageTitle() {
+    const dn = CFG.dungeon && D.find(x => x.id === active && x.id !== "general");
+    return dn ? `${specName(s)} ${lang === "ko" ? (KO_ALL[dn.name] || dn.name) : dn.name} 쐐기 공략 · 한밤 2시즌` : `${specName(s)} · 쐐기 공략`;
+  }
   function applyChrome() {
     const k = lang === "ko";
     [...tabsEl.children].forEach((b, i) => b.textContent = k ? (KO_ALL[D[i].name] || D[i].name) : D[i].name);
@@ -889,7 +898,7 @@ async function sheetPage() {
     document.getElementById("lede").textContent = `쐐기 ${core.dungeons.length}개 던전 ${roleKo} 공략 · 기술·NPC 이름은 ${k ? "한글" : "영문"} 클라이언트 기준`;
     document.querySelector(".lnav .n").textContent = specName(s);
     const hn = document.querySelector(".lnav .h"); if (hn) hn.textContent = "· " + heroName(heroOf(s, hero));
-    document.title = `${specName(s)} · 쐐기 공략`;
+    document.title = pageTitle();
     whLinks();
   }
   document.querySelectorAll("#tiplang button").forEach(b => b.onclick = () => {
@@ -901,7 +910,7 @@ async function sheetPage() {
   // ---- 탭·필터·영웅 ----
   D.forEach(d => {
     const b = document.createElement("button"); b.className = "tab"; b.id = "tab-" + d.id; b.type = "button"; b.setAttribute("role", "tab"); b.textContent = d.name;
-    b.onclick = () => { active = d.id; save("wg:tab", d.id); history.replaceState(history.state, "", location.pathname + location.search + "#" + d.id); render(); };
+    b.onclick = () => { active = d.id; save("wg:tab", d.id); history.replaceState(history.state, "", location.pathname + location.search + "#" + d.id); render(); if (CFG.dungeon) document.title = pageTitle(); };
     tabsEl.appendChild(b);
   });
   ORDER.forEach(k => {
