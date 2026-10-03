@@ -69,7 +69,7 @@ for (const [role, rows] of Object.entries(RL.roles)) { roleCnt[role] = {}; roleT
     if (!pick) { roleSkip[role]++; continue; } const id = `${cls}/${pick.slug}`; roleCnt[role][id] = (roleCnt[role][id] || 0) + 1; roleTot[role]++; }
   RANK[`role-${role}`] = { kind: 'role', id: role, rows: rk }; }
 for (const c of R.classes) for (const s of c.specs) { const id = `${c.slug}/${s.slug}`; const n = roleCnt[s.role][id] || 0; res[id].roleShare = { n, roleN: roleTot[s.role], share: roleTot[s.role] ? Math.round(n / roleTot[s.role] * 1000) / 10 : null }; }
-for (const role of Object.keys(RL.roles)) if (roleTot[role] < (LOW ? 300 : 400)) { console.error(`이상 검사 실패: ${role} 순위에서 센 인원 ${roleTot[role]}명 (뺀 인원 ${roleSkip[role]})`); process.exit(2); }
+for (const role of Object.keys(RL.roles)) if (roleTot[role] < (LOW ? 300 : 400)) { const f = (RL.failed || []).filter(x => x.label === 'role:' + role).map(x => `${x.page}쪽 ${x.err}`).join(', '); console.error(`이상 검사 실패(${REGION}): ${role} 순위에서 센 인원 ${roleTot[role]}명 (뺀 인원 ${roleSkip[role]})${f ? ` (요청 실패: ${f})` : ''}`); process.exit(2); }
 console.log('역할 비율:', Object.entries(roleTot).map(([r, n]) => `${r} ${n}명(뺀 ${roleSkip[r]})`).join(', '));
 const MC = process.env.MURLOK_CACHE; // 선택: 로컬 비교용 캐시 파일
 const M = MC && fs.existsSync(MC) ? JSON.parse(fs.readFileSync(MC, 'utf8')) : {};
@@ -83,7 +83,16 @@ for (const [id, v] of Object.entries(res)) {
   if (tried && h.unknown / tried > 0.1) probs.push(`${id}: 영웅 판별 실패 ${h.unknown}/${tried} (선택 노드 번호가 바뀌었을 수 있음)`);
   if (v.mplus.classN < (LOW ? 100 : 400)) probs.push(`${id}: 직업 순위 ${v.mplus.classN}명만 받음`);
 }
-if (probs.length) { console.error('이상 검사 실패:\n' + probs.join('\n')); process.exit(2); }
+// 수집 중 끝내 받지 못한 쪽(rio-common.mjs FAILED)을 함께 알린다: 인원이 모자란 원인이 요청 실패인지 실제 인원인지 가른다
+const FAIL = [...(D.failed || []), ...(CL.failed || []), ...(RL.failed || [])];
+const failOf = label => FAIL.filter(f => f.label === label).map(f => `${f.page}쪽 ${f.err}`).join(', ');
+const REG_KO = { world: '세계', xcn: '세계(중국 제외)', cn: '중국', kr: '한국' }[REGION] || REGION;
+if (probs.length) {
+  const withFail = probs.map(x => { const id = x.split(':')[0], f = failOf(id); return f ? `${x} (요청 실패: ${f})` : x; });
+  console.error(`이상 검사 실패(${REG_KO} 표본):\n` + withFail.join('\n') + (FAIL.length ? `\n요청 실패 전체 ${FAIL.length}건: ` + FAIL.map(f => `${f.label} ${f.page}쪽(${f.err})`).join(', ') : '\n요청 실패 없음: 실제로 받은 인원이 적다'));
+  process.exit(2);
+}
+if (FAIL.length) console.error(`요청 실패 ${FAIL.length}건(이상 검사는 통과): ` + FAIL.map(f => `${f.label} ${f.page}쪽(${f.err})`).join(', '));
 if (flag === '--write') {
   const META = { src: 'Raider.IO', date: new Date(Date.parse(D.fetched) + 9 * 3600e3).toISOString().slice(0, 10), /* 한국 날짜(매일 04:00 KST 수집은 UTC로 전날) */ season: 'season-mn-2', top: 500, specTop: SPEC_TOP, region: REGION, roles: Object.fromEntries(Object.keys(RL.roles).map(r => [r, { ranked: RL.roles[r].length, counted: roleTot[r], skipped: roleSkip[r] }])) };
   if (KR) R.meta['mplus500' + REGION] = META; else R.meta.mplus500 = META;
