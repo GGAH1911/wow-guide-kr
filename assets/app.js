@@ -1130,17 +1130,20 @@ async function sheetPage() {
   })();
   const mvMaxK = () => Math.max(MV.fit * 2, 3);
   const mvApply = () => { MV.layer.style.transform = `translate(${MV.tx}px,${MV.ty}px) scale(${MV.k})`; if (MV.sel) mvBandPos(); };
+  // 지도 어느 곳이든(가장자리, 아래 편집 막대에 가리는 곳도) 화면 가운데까지 끌어올 수 있게, 지도 끝이 화면 가운데를 넘지 않는 데까지 이동을 허용한다
   const mvClamp = () => {
     const W = MV.stage.clientWidth, H = MV.stage.clientHeight, w = MV.w * MV.k, h = MV.h * MV.k;
-    MV.tx = w <= W ? (W - w) / 2 : Math.min(0, Math.max(W - w, MV.tx));
-    MV.ty = h <= H ? (H - h) / 2 : Math.min(0, Math.max(H - h, MV.ty));
+    MV.tx = Math.min(W / 2, Math.max(W / 2 - w, MV.tx));
+    MV.ty = Math.min(H / 2, Math.max(H / 2 - h, MV.ty));
   };
+  const mvCenter = () => { MV.tx = (MV.stage.clientWidth - MV.w * MV.k) / 2; MV.ty = (MV.stage.clientHeight - MV.h * MV.k) / 2; };
   const mvZoomAt = (k, cx, cy) => {
     k = Math.min(mvMaxK(), Math.max(MV.fit, k));
+    if (k <= MV.fit * 1.001) { MV.k = MV.fit; mvCenter(); return mvApply(); } // 맞춤 크기로 돌아오면 가운데로
     const mx = (cx - MV.tx) / MV.k, my = (cy - MV.ty) / MV.k;
     MV.k = k; MV.tx = cx - mx * k; MV.ty = cy - my * k; mvClamp(); mvApply();
   };
-  const mvFit = () => { MV.fit = Math.min(MV.stage.clientWidth / MV.w, MV.stage.clientHeight / MV.h); MV.k = MV.fit; MV.tx = MV.ty = 0; mvClamp(); mvApply(); };
+  const mvFit = () => { MV.fit = Math.min(MV.stage.clientWidth / MV.w, MV.stage.clientHeight / MV.h); MV.k = MV.fit; mvCenter(); mvApply(); };
   // 탭 판정: 가장 가까운 번호 원·몹 점을 찾고, 화면에서 24px 안쪽이면 그 풀(번호가 작아도 손가락으로 잡히게)
   const mvHit = (cx, cy) => {
     const mx = (cx - MV.tx) / MV.k, my = (cy - MV.ty) / MV.k; let best = null, bd = Infinity;
