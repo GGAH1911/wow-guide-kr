@@ -941,15 +941,313 @@ async function sheetPage() {
   // 일반 풀 = 몹 기술(core.trash에서 그 풀의 몹 항목) + 풀 운영(notes) + 역할·전문화 층 pulls[던전][풀번호]
   const slug = x => String(x).toLowerCase().replace(/[^a-z0-9]+/g, "-");
   const mobOf = it => { const m = String(it[1]).match(/<b class="mob">([^<]+)<\/b>/); return m ? m[1] : null; };
+  // ---- 내 경로: 방문자가 붙여 넣은 MDT 문자열을 이 브라우저 안에서만 풀어 기본 경로와 같은 지도·풀 공략으로 그린다 ----
+  // 문자열 형식은 MDT와 같은 !~MDT2~ + base64(raw deflate(CBOR)). 몹 좌표표는 data/core/mdt-enemies.json(tools/routes/build_enemies.py)
+  // 저장: 문자열 wg:myroute:<던전>, 보기 선택 wg:rmode:<던전>("mine"이면 내 경로). 서버로 보내지 않는다.
+  const MYR = {};   // 던전 → 풀어 둔 내 경로 또는 { err }
+  let ENEMIES = null;
+  const myStr = did => ls.get("wg:myroute:" + did) || "";
+  const myMode = did => ls.get("wg:rmode:" + did) === "mine";
+  let myEdit = null; // 문자열 입력 칸을 다시 연 던전
+  function cborDec(u8) {
+    const dv = new DataView(u8.buffer, u8.byteOffset, u8.byteLength), td = new TextDecoder(); let i = 0;
+    const f16 = h => { const sg = h & 0x8000 ? -1 : 1, e = (h >> 10) & 31, f = h & 1023; return e === 0 ? sg * 2 ** -14 * (f / 1024) : e === 31 ? (f ? NaN : sg * Infinity) : sg * 2 ** (e - 15) * (1 + f / 1024); };
+    const arg = ai => { if (ai < 24) return ai; const n = { 24: 1, 25: 2, 26: 4, 27: 8 }[ai]; if (!n) throw new Error("cbor"); let v = 0; for (let k = 0; k < n; k++) v = v * 256 + u8[i++]; return v; };
+    const dec = () => {
+      if (i >= u8.length) throw new Error("cbor");
+      const ib = u8[i++], mt = ib >> 5, ai = ib & 31;
+      if (mt === 7) {
+        if (ai === 20) return false; if (ai === 21) return true; if (ai === 22 || ai === 23) return null;
+        if (ai === 25) { const v = f16(dv.getUint16(i)); i += 2; return v; }
+        if (ai === 26) { const v = dv.getFloat32(i); i += 4; return v; }
+        if (ai === 27) { const v = dv.getFloat64(i); i += 8; return v; }
+        throw new Error("cbor");
+      }
+      const v = arg(ai);
+      if (mt === 0) return v;
+      if (mt === 1) return -1 - v;
+      if (mt === 2 || mt === 3) { const s = td.decode(u8.subarray(i, i + v)); i += v; return s; }
+      if (mt === 4) { const a = []; for (let k = 0; k < v; k++) a.push(dec()); return a; }
+      if (mt === 5) { const o = {}; for (let k = 0; k < v; k++) { const kk = dec(); o[String(kk)] = dec(); } return o; }
+      return dec(); // 태그는 값만
+    };
+    return dec();
+  }
+  async function mdtDecode(str) {
+    const s = str.replace(/\s+/g, "");
+    if (!s.startsWith("!~MDT2~")) throw new Error("format");
+    if (typeof DecompressionStream === "undefined") throw new Error("browser");
+    let bin;
+    try { const b = s.slice(7).replace(/-/g, "+").replace(/_/g, "/"); bin = Uint8Array.from(atob(b + "=".repeat((4 - b.length % 4) % 4)), c => c.charCodeAt(0)); } catch (e) { throw new Error("format"); }
+    for (const f of ["deflate-raw", "deflate", "gzip"]) {
+      let out; try { out = await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream(f))).arrayBuffer(); } catch (e) { continue; }
+      try { return cborDec(new Uint8Array(out)); } catch (e) { throw new Error("format"); }
+    }
+    throw new Error("format");
+  }
+  // MDT 표는 Lua 배열이라 CBOR 배열 또는 번호 키 맵으로 온다
+  const vals = x => Array.isArray(x) ? x : x && typeof x === "object" ? Object.keys(x).sort((a, b) => a - b).map(k => x[k]) : [];
+  // 풀어 낸 MDT 표 → routes.json 의 한 던전과 같은 모양(풀 번호는 몹이 있는 풀만 차례로)
+  function myRouteOf(t, str) {
+    const v = t && t.value; if (!v || !v.pulls) throw new Error("format");
+    const did = Object.keys(ENEMIES.dungeons).find(k => ENEMIES.dungeons[k].idx === +v.currentDungeonIdx);
+    if (!did || !ROUTES[did]) throw new Error("dungeon");
+    const E = ENEMIES.dungeons[did], B = ROUTES[did], used = new Set(), pulls = [];
+    let missing = 0, cum = 0, empty = 0;
+    vals(v.pulls).forEach(p => {
+      if (!p || typeof p !== "object") return;
+      const mobs = {}, pts = []; let f = 0, boss = "";
+      for (const k in p) {
+        if (!/^\d+$/.test(k)) continue;
+        const e = E.e[k];
+        vals(p[k]).forEach(c => {
+          const cl = e && e[3].find(x => x[0] === +c);
+          if (!cl) { missing++; return; }
+          const key = k + ":" + cl[0]; if (used.has(key)) return; used.add(key);
+          (mobs[e[0]] = mobs[e[0]] || [e[0], 0, e[1]])[1]++;
+          f += e[1]; pts.push([cl[1], cl[2]]);
+          if (e[2] && !boss) boss = e[2];
+        });
+      }
+      if (!pts.length) { empty++; return; }
+      cum += f;
+      pulls.push({ c: /^[0-9a-f]{6}$/i.test(String(p.color || "")) ? String(p.color) : "ffffff", f, cum, boss, mobs: Object.values(mobs).sort((a, b) => b[1] * Math.max(b[2], 1) - a[1] * Math.max(a[2], 1)), p: pts });
+    });
+    if (!pulls.length) throw new Error("empty");
+    const rest = [];
+    for (const k in E.e) { const e = E.e[k]; e[3].forEach(cl => { if (!used.has(k + ":" + cl[0])) rest.push([cl[1], cl[2], e[1], e[0]]); }); }
+    // 이 사이트가 넣은 선(wg 표식)이 있으면 꺾임점으로 되살린다. 선 양 끝이 지금 경로의 그 구간 끝과 맞을 때만(풀을 바꿨으면 버림)
+    const P = routePts({ entr: E.entr, pulls }), sx = B.w / 840, sy = B.h / 555, markBends = {};
+    vals(t.objects).forEach(o => {
+      const sg = o && +o.wg - 1; if (!(sg >= 0 && sg < P.length - 1) || !o.l) return;
+      const L = vals(o.l).map(Number), pts = [];
+      for (let i = 0; i + 1 < L.length; i += 2) { const q = [L[i] * sx, -L[i + 1] * sy], z = pts[pts.length - 1]; if (q.every(Number.isFinite) && (!z || Math.hypot(z[0] - q[0], z[1] - q[1]) > 0.5)) pts.push(q); }
+      const near = (a, c) => Math.hypot(a[0] - c[0], a[1] - c[1]) < 4;
+      if (pts.length >= 3 && near(pts[0], P[sg]) && near(pts[pts.length - 1], P[sg + 1])) markBends[sg] = pts.slice(1, -1).map(q => q.map(Math.round));
+    });
+    return { mine: true, did, img: B.img, w: B.w, h: B.h, entr: E.entr, total: E.total, string: str, title: String(t.text || ""), pulls, rest, fixes: [], moves: {}, notes: {}, missing, empty, markBends: Object.keys(markBends).length ? markBends : null };
+  }
+  async function myLoad(str) {
+    if (!ENEMIES) ENEMIES = await J0("data/core/mdt-enemies.json");
+    return myRouteOf(await mdtDecode(str), str.replace(/\s+/g, ""));
+  }
+  const myErrText = (e, did) => {
+    const m = e && e.message, names = core.dungeons.filter(x => ROUTES[x.id]).map(x => lang === "ko" ? (KO_ALL[x.name] || x.name) : x.name).join(", ");
+    if (m === "browser") return TT("이 브라우저는 MDT 문자열 풀기를 지원하지 않습니다. 최신 Chrome·Edge·Safari·Firefox에서 열어 주세요.", "This browser cannot unpack MDT strings. Please use a recent Chrome, Edge, Safari or Firefox.");
+    if (m === "dungeon") return TT(`이번 시즌 쐐기 던전 경로가 아닙니다. 지원 던전: ${names}`, `Not a route for this season's dungeons. Supported: ${names}`);
+    if (m === "empty") return TT("이 경로에는 몹을 넣은 풀이 없습니다.", "This route has no pulls with enemies.");
+    if (m === "format") return TT("MDT 문자열이 아니거나 일부가 잘렸습니다. MDT에서 내보내기로 다시 복사해 주세요(!~MDT2~ 로 시작).", "Not an MDT string, or it was cut off. Copy it again with Export in MDT (it starts with !~MDT2~).");
+    return TT("경로 데이터를 불러오지 못했습니다. 네트워크를 확인하고 다시 시도해 주세요.", "Could not load the route data. Check your connection and try again.");
+  };
+  // 저장해 둔 문자열을 처음 그릴 때 한 번 푼다. 끝나면 그 던전을 보고 있을 때만 다시 그린다
+  function myEnsure(did) {
+    if (MYR[did] || !myStr(did)) return;
+    MYR[did] = { loading: true };
+    myLoad(myStr(did)).then(r => { MYR[did] = r.did === did ? r : { err: new Error("dungeon") }; }, e => { MYR[did] = { err: e }; }).then(() => { if (active === did) render(); });
+  }
+  // 지금 지도에 그릴 경로: 기본 경로, 또는 내 경로(아직 없거나 푸는 중이면 null)
+  function routeView(did) {
+    if (!ROUTES[did]) return null;
+    if (SHARED && SHARED.did === did) return SHARED.r;
+    if (!myMode(did)) return ROUTES[did];
+    const m = MYR[did]; return m && m.pulls && myEdit !== did ? m : null;
+  }
+  function myBox(did) {
+    const m = MYR[did], has = !!myStr(did);
+    if (m && m.loading) return `<p class="mywait">${TT("내 경로를 그리는 중…", "Drawing your route…")}</p>`;
+    const err = m && m.err ? myErrText(m.err, did) : "";
+    return `<div class="mybox" data-d="${did}"><p>${TT("게임에서 <code>/mdt</code> → 경로 고르기 → <b>내보내기</b>로 복사한 문자열을 붙여 넣으세요. 이 던전 경로만이 아니라 지원하는 던전이면 어느 것이든 그 던전 탭에 들어갑니다. 문자열은 이 브라우저에만 저장되고 어디로도 보내지 않습니다.", "In game, open <code>/mdt</code>, pick a route and copy it with <b>Export</b>, then paste it here. A route for another supported dungeon goes to that dungeon's tab. The string stays in this browser and is never sent anywhere.")}</p>
+      <textarea class="myin" rows="3" spellcheck="false" autocomplete="off" placeholder="!~MDT2~…" aria-label="${TT("MDT 경로 문자열", "MDT route string")}">${has && (err || myEdit === did) ? esc(myStr(did)) : ""}</textarea>
+      <div class="mybtns"><button type="button" class="vid mygo">${TT("경로 그리기", "Draw route")}</button>${has && !err && myEdit === did ? `<button type="button" class="vid mycancel">${TT("취소", "Cancel")}</button>` : ""}${has ? `<button type="button" class="vid mydel">${TT("저장한 문자열 지우기", "Delete saved string")}</button>` : ""}</div>
+      <p class="myerr" role="alert"${err ? "" : " hidden"}>${esc(err)}</p></div>`;
+  }
+  const rmodeSeg = did => `<div class="seg rmode" role="group" aria-label="${TT("경로 고르기", "Choose route")}"><button type="button" data-rm="base" data-d="${did}" aria-pressed="${!myMode(did)}">${TT("기본 경로", "Default route")} · ${esc(routes.source.author)}</button><button type="button" data-rm="mine" data-d="${did}" aria-pressed="${myMode(did)}">${TT("내 경로", "My route")}</button></div>`;
+  document.addEventListener("click", e => {
+    const rm = e.target.closest("[data-rm]");
+    if (rm) { ls.set("wg:rmode:" + rm.dataset.d, rm.dataset.rm === "mine" ? "mine" : "base"); myEdit = null; SHARED = null; SHERR = ""; return render(); }
+    const box = e.target.closest(".mybox"); if (!box) return;
+    const did = box.dataset.d, errEl = box.querySelector(".myerr");
+    if (e.target.closest(".mycancel")) { myEdit = null; return render(); }
+    if (e.target.closest(".mydel")) { ls.set("wg:myroute:" + did, ""); delete MYR[did]; myEdit = null; return render(); }
+    const go = e.target.closest(".mygo"); if (!go) return;
+    const str = box.querySelector(".myin").value.trim();
+    if (!str) { errEl.textContent = TT("문자열을 붙여 넣어 주세요.", "Paste a string first."); errEl.hidden = false; return; }
+    go.disabled = true; go.textContent = TT("푸는 중…", "Unpacking…");
+    myLoad(str).then(r => {
+      ls.set("wg:myroute:" + r.did, r.string); ls.set("wg:rmode:" + r.did, "mine"); MYR[r.did] = r; myEdit = null;
+      if (r.did !== active) { const t = document.getElementById("tab-" + r.did); if (t) return t.click(); }
+      render();
+    }, err => { go.disabled = false; go.textContent = TT("경로 그리기", "Draw route"); errEl.textContent = myErrText(err, did); errEl.hidden = false; });
+  });
+  document.addEventListener("click", e => { const b = e.target.closest(".myedit"); if (b) { myEdit = b.dataset.d; render(); } });
+  // ---- 선 꺾기: 경로 선(입구→1풀, n풀→n+1풀 = 구간 0, n)에 꺾임점을 넣어 벽을 돌아가게 그린다 ----
+  // 저장 wg:bends:<던전>:<base|mine> = {h: 경로 문자열 해시, b: {"구간": [[x, y], ...]}}. 경로 문자열이 바뀌면(해시 다름) 버린다.
+  const hashStr = x => { let h = 2166136261; for (let i = 0; i < x.length; i++) { h ^= x.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0).toString(36); };
+  const bendKey = (did, r) => `wg:bends:${did}:${r.mine ? "mine" : "base"}`;
+  function bendsOf(did, r) {
+    if (r.shared) return SHARED.b;
+    try { const o = JSON.parse(ls.get(bendKey(did, r)) || "null"); if (o && o.h === hashStr(r.string) && o.b && typeof o.b === "object") return o.b; } catch (e) {}
+    return r.markBends ? JSON.parse(JSON.stringify(r.markBends)) : {};
+  }
+  function bendsSave(did, r, b) {
+    if (r.shared) { SHARED.b = b; return; }
+    for (const k in b) if (!b[k].length) delete b[k];
+    ls.set(bendKey(did, r), Object.keys(b).length || r.markBends ? JSON.stringify({ h: hashStr(r.string), b }) : "");
+  }
+  // 선이 지나는 점: 입구, 각 풀의 몹 중심
+  const routePts = r => [r.entr, ...r.pulls.map(p => [p.p.reduce((a, q) => a + q[0], 0) / p.p.length, p.p.reduce((a, q) => a + q[1], 0) / p.p.length])];
+  const segPts = (P, b, s) => [P[s], ...(b[s] || []), P[s + 1]];
+  const pathHtml = (r, b) => { const P = routePts(r); let h = ""; for (let s = 0; s < P.length - 1; s++) h += `<polyline class="${r.moves[s + 1] ? "rmove" : "rseg"}" data-s="${s}" points="${segPts(P, b, s).map(q => Math.round(q[0]) + "," + Math.round(q[1])).join(" ")}"/>`; return h; };
+  // ---- 3단계: 공유 링크와 선을 넣은 MDT 문자열 ----
+  // 공유 링크 = 지금 페이지 주소 + #r=<base64url(deflate-raw(JSON {v, d: 던전, s: 내 경로 문자열(기본 경로면 없음), b: 꺾임점}))>
+  // 받은 쪽은 저장하지 않고 "공유받은 경로" 보기(SHARED)로 띄우고, "저장"을 눌러야 내 경로·꺾임으로 저장한다.
+  let SHARED = null, SHERR = "", SHERR_D = null;
+  const b64 = u8 => { let t = ""; for (let i = 0; i < u8.length; i += 0x8000) t += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(t); };
+  const unb64 = x => { const b = x.replace(/-/g, "+").replace(/_/g, "/"); return Uint8Array.from(atob(b + "=".repeat((4 - b.length % 4) % 4)), c => c.charCodeAt(0)); };
+  const zip = async (u8, inflate) => {
+    if (typeof CompressionStream === "undefined" || typeof DecompressionStream === "undefined") throw new Error("browser");
+    return new Uint8Array(await new Response(new Blob([u8]).stream().pipeThrough(inflate ? new DecompressionStream("deflate-raw") : new CompressionStream("deflate-raw"))).arrayBuffer());
+  };
+  // CBOR 값 하나를 건너뛴 위치(원래 바이트를 그대로 옮겨 쓰려고)
+  function cborSkip(u8, i) {
+    const ib = u8[i++], mt = ib >> 5, ai = ib & 31;
+    if (mt === 7) return i + ({ 24: 1, 25: 2, 26: 4, 27: 8 }[ai] || 0);
+    let v = ai;
+    if (ai >= 24) { const n = { 24: 1, 25: 2, 26: 4, 27: 8 }[ai]; if (!n) throw new Error("format"); v = 0; for (let k = 0; k < n; k++) v = v * 256 + u8[i++]; }
+    if (mt <= 1) return i;
+    if (mt <= 3) return i + v;
+    if (mt === 4) { for (let k = 0; k < v; k++) i = cborSkip(u8, i); return i; }
+    if (mt === 5) { for (let k = 0; k < 2 * v; k++) i = cborSkip(u8, i); return i; }
+    return cborSkip(u8, i);
+  }
+  const cborHead = (mt, v) => v < 24 ? [mt << 5 | v] : v < 256 ? [mt << 5 | 24, v] : v < 65536 ? [mt << 5 | 25, v >> 8, v & 255] : [mt << 5 | 26, v >>> 24 & 255, v >> 16 & 255, v >> 8 & 255, v & 255];
+  // 새로 넣는 값만 만든다(문자열 키 맵, 배열, 정수·실수, 글자, 참/거짓). { raw } 는 원래 바이트를 그대로
+  function cborEnc(x, out) {
+    if (x && x.raw) { for (const c of x.raw) out.push(c); return out; }
+    if (x === true || x === false || x == null) { out.push(x === true ? 0xf5 : x === false ? 0xf4 : 0xf6); return out; }
+    if (typeof x === "number") {
+      if (Number.isInteger(x)) out.push(...(x >= 0 ? cborHead(0, x) : cborHead(1, -1 - x)));
+      else { const b = new DataView(new ArrayBuffer(8)); b.setFloat64(0, x); out.push(0xfb, ...new Uint8Array(b.buffer)); }
+      return out;
+    }
+    if (typeof x === "string") { const u = new TextEncoder().encode(x); out.push(...cborHead(3, u.length)); for (const c of u) out.push(c); return out; }
+    if (Array.isArray(x)) { out.push(...cborHead(4, x.length)); x.forEach(v => cborEnc(v, out)); return out; }
+    const ks = Object.keys(x); out.push(...cborHead(5, ks.length)); ks.forEach(k => { cborEnc(k, out); cborEnc(x[k], out); }); return out;
+  }
+  // 경로 선을 MDT 그림 선으로: 구간마다 선 하나(l = x1,y1,x2,y2, x2,y2,x3,y3 … MDT 지도 좌표 840x555, y는 음수, 소수 한 자리 글자)
+  function mdtLines(r, b) {
+    const P = routePts(r), sx = r.w / 840, sy = r.h / 555, out = [];
+    for (let s2 = 0; s2 < P.length - 1; s2++) {
+      const pts = segPts(P, b, s2).map(q => [(q[0] / sx).toFixed(1), (-q[1] / sy).toFixed(1)]), l = [];
+      for (let j = 0; j < pts.length - 1; j++) l.push(...pts[j], ...pts[j + 1]);
+      // d = 굵기, 선 비율, 층, 보임, 색, 그리기 층, 부드럽게 (MDT PresetObjects.lua DrawPresetObject 주석과 같은 순서)
+      // wg = 이 사이트가 넣은 선 표식(구간 번호 + 1). MDT는 모르는 칸을 그대로 저장·내보내므로, 다시 복사할 때 이 선만 바꾸고 사이트에 붙이면 꺾임을 되살린다
+      out.push({ d: [5, 1.1, 1, true, r.moves[s2 + 1] ? "7dd3fc" : "ffffff", -8, true], l, wg: s2 + 1 });
+    }
+    return out;
+  }
+  // MDT 문자열의 맨 위 맵에서 objects(그림)에 선을 더하고, text 에 꼬리표를 붙이고, uid 를 새로 만든다. 나머지 값은 원래 바이트 그대로.
+  async function mdtWithLines(str, r, b) {
+    const s0 = str.replace(/\s+/g, ""); if (!s0.startsWith("!~MDT2~")) throw new Error("format");
+    const u8 = await zip(unb64(s0.slice(7)), true);
+    if (u8[0] >> 5 !== 5) throw new Error("format");
+    let i = 0; const ib = u8[i++], ai = ib & 31; let n = ai;
+    if (ai >= 24) { const k = { 24: 1, 25: 2, 26: 4, 27: 8 }[ai]; n = 0; for (let q = 0; q < k; q++) n = n * 256 + u8[i++]; }
+    const ents = [];
+    for (let q = 0; q < n; q++) { const k0 = i, k1 = cborSkip(u8, k0), v1 = cborSkip(u8, k1); ents.push({ key: String(cborDec(u8.subarray(k0, k1))), kraw: u8.subarray(k0, k1), vraw: u8.subarray(k1, v1) }); i = v1; }
+    const ent = k => ents.find(e => e.key === k);
+    const lines = mdtLines(r, b);
+    // 기존 그림은 원래 바이트로 두고, 되돌리기로 숨긴 그림(d[4] = false) 앞에 새 선을 넣는다(MDT StorePresetObject 와 같은 자리)
+    const oe = ent("objects"), olds = [];
+    if (oe) {
+      const v = oe.vraw, mt = v[0] >> 5;
+      if (mt === 4 || mt === 5) {
+        let j = 0; const a = v[j++] & 31; let m = a;
+        if (a >= 24) { const k = { 24: 1, 25: 2, 26: 4, 27: 8 }[a]; m = 0; for (let q = 0; q < k; q++) m = m * 256 + v[j++]; }
+        for (let q = 0; q < m; q++) { if (mt === 5) j = cborSkip(v, j); const e0 = j; j = cborSkip(v, j); olds.push(v.subarray(e0, j)); }
+      }
+    }
+    const dec = x => { try { return cborDec(x); } catch (e) { return null; } };
+    const ours = x => { const o = dec(x); return !!(o && o.wg); };
+    const hadOurs = olds.some(ours), keep = olds.filter(x => !ours(x)); // 예전에 넣은 선은 새 선으로 바꾼다(겹치지 않게)
+    const shown = x => { const o = dec(x); return !(o && o.d && vals(o.d)[3] === false); };
+    let at = keep.findIndex(x => !shown(x)); if (at < 0) at = keep.length;
+    const objs = [...keep.slice(0, at).map(raw => ({ raw })), ...lines, ...keep.slice(at).map(raw => ({ raw }))];
+    const te = ent("text"), ue = ent("uid");
+    const title = (te ? String(cborDec(te.vraw)) : "").replace(/ \((경로 선|route lines)\)$/, "") + TT(" (경로 선)", " (route lines)");
+    // uid: 이미 선을 넣은 경로면 그대로(가져오면 MDT가 같은 경로 갱신을 묻는다), 원래 경로면 그 uid 로 정해지는 새 uid(몇 번 복사해도 같은 값)
+    const uid0 = ue ? String(cborDec(ue.vraw)) : "", A = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let uid = hadOurs && uid0 ? uid0 : "", h = parseInt(hashStr((uid0 || s0) + ":wglines"), 36) || 1;
+    if (!uid) for (let q = 0; q < (uid0.length || 11); q++) { h = Math.imul(h ^ (h >>> 15), 2246822507) >>> 0; uid += A[h % 62]; }
+    const set = (k, v) => { const e = ent(k); const raw = new Uint8Array(cborEnc(v, [])); if (e) e.vraw = raw; else ents.push({ key: k, kraw: new Uint8Array(cborEnc(k, [])), vraw: raw }); };
+    set("objects", objs); set("text", title); set("uid", uid);
+    const out = cborHead(5, ents.length); ents.forEach(e => { for (const c of e.kraw) out.push(c); for (const c of e.vraw) out.push(c); });
+    return "!~MDT2~" + b64(await zip(new Uint8Array(out)));
+  }
+  async function shareUrl(did, r) {
+    const o = { v: 1, d: did, b: bendsOf(did, r) }; if (r.mine) o.s = r.string;
+    const z = b64(await zip(new TextEncoder().encode(JSON.stringify(o)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+    return location.origin + location.pathname + location.search + "#r=" + z;
+  }
+  // 받은 꺾임점은 모양을 확인해서 쓴다(구간 번호 → [[x, y], …], 지도 안쪽, 모두 500개까지)
+  function cleanBends(b, r) {
+    const out = {}, nseg = r.pulls.length; let total = 0;
+    for (const k in (b && typeof b === "object" ? b : {})) {
+      if (!/^\d+$/.test(k) || +k >= nseg || !Array.isArray(b[k])) continue;
+      const a = b[k].filter(q => Array.isArray(q) && q.length === 2 && q.every(Number.isFinite) && q[0] >= 0 && q[1] >= 0 && q[0] <= r.w && q[1] <= r.h).slice(0, Math.max(0, 500 - total)).map(q => q.map(Math.round));
+      if (a.length) { out[k] = a; total += a.length; }
+    }
+    return out;
+  }
+  async function shareInit() {
+    const m = location.hash.match(/^#r=([A-Za-z0-9_-]+)$/); if (!m) return;
+    let did = null;
+    try {
+      const o = JSON.parse(new TextDecoder().decode(await zip(unb64(m[1]), true)));
+      did = o && o.d; if (!ROUTES[did]) throw new Error("dungeon");
+      let r;
+      if (o.s) { r = await myLoad(String(o.s)); if (r.did !== did) throw new Error("dungeon"); } else r = { ...ROUTES[did] };
+      r.shared = true; SHARED = { did, r, b: cleanBends(o.b, r), kind: o.s ? "mine" : "base" };
+    } catch (e) { SHERR = e && e.message === "browser" ? myErrText(e) : TT("공유 링크를 읽지 못했습니다. 링크가 잘리지 않았는지 확인해 주세요.", "Could not read the shared link. Check that it was not cut off."); }
+    // 탭을 누른 것처럼 그 던전으로(주소의 #r= 는 #<던전> 으로 바뀐다)
+    const t = document.getElementById("tab-" + (did && ROUTES[did] ? did : active)); if (t) t.click(); else render();
+    SHERR_D = active; // 오류 안내는 그 던전에서만 보인다
+    const bar = document.querySelector(".shbar, .shwarn"); if (bar) bar.scrollIntoView({ block: "center" });
+  }
+  const shareBar = (did, r) => !r.shared ? "" : `<div class="shbar"><p>${SHARED.kind === "mine" ? TT("공유받은 MDT 경로를 보고 있습니다.", "You are viewing a shared MDT route.") : TT("공유받은 꺾은 선(기본 경로)을 보고 있습니다.", "You are viewing shared bent lines on the default route.")} ${TT("저장하기 전에는 이 브라우저에 남지 않습니다.", "Nothing is saved in this browser until you save it.")}${SHARED.kind === "mine" ? (myStr(did) ? " " + TT("저장하면 지금 저장된 내 경로를 바꿉니다.", "Saving replaces your saved route.") : "") : (Object.keys(bendsOf(did, { ...ROUTES[did], shared: false })).length ? " " + TT("저장하면 지금 꺾어 둔 선을 바꿉니다.", "Saving replaces your bent lines.") : "")}</p><div class="mybtns"><button type="button" class="vid shsave">${SHARED.kind === "mine" ? TT("내 경로로 저장", "Save as my route") : TT("이 꺾은 선 저장", "Save these lines")}</button><button type="button" class="vid shclose">${TT("닫기", "Close")}</button></div></div>`;
+  // 복사: 클립보드가 안 되면 글 상자를 열어 골라 둔다
+  function copyOut(btn, text, done) {
+    const label = btn.dataset.label || btn.textContent; btn.dataset.label = label;
+    const box = () => { let t = btn.parentElement.querySelector(".outbox"); if (!t) { t = document.createElement("textarea"); t.className = "mdtbox outbox"; t.readOnly = true; btn.parentElement.append(t); } t.value = text; t.hidden = false; t.focus(); t.select(); btn.textContent = TT("선택됨 · 복사해 주세요", "Selected · copy it"); };
+    try { navigator.clipboard.writeText(text).then(() => { btn.textContent = done; setTimeout(() => { btn.textContent = label; }, 2500); }, box); } catch (e) { box(); }
+  }
+  document.addEventListener("click", e => {
+    const sh = e.target.closest(".shareurl, .mdtlines, .shsave, .shclose"); if (!sh) return;
+    const did = active, r = routeView(did); if (!r) return;
+    if (sh.matches(".shclose")) { SHARED = null; return render(); }
+    if (sh.matches(".shsave")) {
+      if (SHARED.kind === "mine") { ls.set("wg:myroute:" + did, r.string); ls.set("wg:rmode:" + did, "mine"); const m2 = { ...r, shared: false }; MYR[did] = m2; bendsSave(did, m2, SHARED.b); }
+      else { ls.set("wg:rmode:" + did, "base"); bendsSave(did, ROUTES[did], SHARED.b); }
+      SHARED = null; return render();
+    }
+    const fail = err => { sh.textContent = err && err.message === "browser" ? TT("이 브라우저는 지원하지 않습니다", "Not supported in this browser") : TT("만들지 못했습니다", "Could not create it"); };
+    if (sh.matches(".shareurl")) shareUrl(did, r).then(u => copyOut(sh, u, TT("링크 복사됨", "Link copied")), fail);
+    else mdtWithLines(r.string, r, bendsOf(did, r)).then(x => copyOut(sh, x, TT("복사됨 · /mdt → 가져오기", "Copied · /mdt → Import")), fail);
+  });
   function routeSection(d, bossOf, bossInner) {
-    const r = ROUTES[d.id]; if (!r) return "";
+    if (!ROUTES[d.id]) return "";
+    const mine = myMode(d.id), seg = (SHERR && (SHERR_D == null || SHERR_D === d.id) ? `<p class="rwarn shwarn">${esc(SHERR)}</p>` : "") + rmodeSeg(d.id);
+    if (mine) myEnsure(d.id);
+    const r = routeView(d.id);
+    if (!r) return `<div class="sechead"><h2>${TT("경로 · 일반몹 · 보스", "Route · Trash · Bosses")}</h2></div>${seg}${myBox(d.id)}`;
     const items = (TRASH[d.id] || []).flatMap(g => g.i);
     const pct = x => (x / r.total * 100).toFixed(1);
     const cen = p => [p.reduce((a, q) => a + q[0], 0) / p.length, p.reduce((a, q) => a + q[1], 0) / p.length];
     const C = r.pulls.map(p => cen(p.p));
-    // 지도
-    let path = "", prev = r.entr;
-    C.forEach((c, i) => { const mv = r.moves[i + 1]; path += `<line class="${mv ? "rmove" : "rseg"}" x1="${prev[0]}" y1="${prev[1]}" x2="${c[0].toFixed(0)}" y2="${c[1].toFixed(0)}"/>`; prev = c; });
+    // 지도. 경로 선은 방문자가 꺾어 둔 점(bendsOf)을 지나간다
+    const bends = bendsOf(d.id, r);
+    const path = `<g class="rpath">${pathHtml(r, bends)}</g>`;
+    const outBtns = `<button class="vid shareurl" type="button" title="${TT("이 경로와 꺾은 선을 다른 사람에게 보내는 링크", "A link that sends this route and its bent lines")}">🔗 ${TT("공유 링크", "Share link")}</button><button class="vid mdtlines" type="button" title="${TT("경로 선(꺾은 곳 포함)을 MDT 그림 선으로 넣은 문자열 · 게임에서 /mdt → 가져오기", "The route with its lines (bends included) drawn in MDT · in game /mdt → Import")}">${TT("선 포함 MDT 복사", "Copy MDT with lines")}</button>`;
     // 경로에서 잡지 않는 몹은 회색 점(잡몹 점수 0인 몹은 더 작게). 누를 수 없고 풀 점 아래에 깔린다.
     const rest = `<g class="rrest">${(r.rest || []).map(q => `<circle cx="${q[0]}" cy="${q[1]}" r="${q[2] > 0 ? 9 : 6}"/>`).join("")}</g>`;
     const dots = r.pulls.map((p, i) => `<g class="rp" data-n="${i + 1}">${p.p.map((q, j) => `<circle cx="${q[0]}" cy="${q[1]}" r="10" fill="#${p.c}"${(p.addp || []).includes(j) ? ' class="padd"' : ""}/>`).join("")}</g>`).join("");
@@ -957,7 +1255,8 @@ async function sheetPage() {
     const entr = `<g class="rentr"><circle cx="${r.entr[0]}" cy="${r.entr[1]}" r="18"/><text x="${r.entr[0] + 28}" y="${r.entr[1]}">입구</text></g>`;
     const map = `<div class="rmap" data-d="${d.id}" style="aspect-ratio:${r.w}/${r.h}"><img src="${BASE + r.img}" width="${r.w}" height="${r.h}" alt="${esc(d.name)} 경로 지도" loading="lazy"><svg viewBox="0 0 ${r.w} ${r.h}" aria-hidden="false">${rest}${path}<g class="rdots">${dots}</g>${entr}${nums}<g class="rtop"></g></svg><button type="button" class="rmz" aria-label="지도 크게 보기">⤢ 크게 보기</button></div><div class="rmtip" aria-live="polite"><span class="rmt-ph">번호나 몹 위에 마우스를 올리면 여기에 풀 정보가 나옵니다 · 누르면 공략</span></div>`;
     // 풀 공략(팝업에 띄우는 카드, 평소에는 숨김)
-    const RP = ((role.pulls || {})[d.id]) || {}, SP = ((spec && spec.pulls || {})[d.id]) || {};
+    // 역할·전문화 풀 문장은 기본 경로의 풀 번호에 묶여 있어 내 경로에는 붙이지 않는다(보스 풀의 보스 공략은 그대로)
+    const RP = r.mine ? {} : ((role.pulls || {})[d.id]) || {}, SP = r.mine ? {} : ((spec && spec.pulls || {})[d.id]) || {};
     const blk = (t, lis, cls) => lis ? `<div class="dblk${cls ? " " + cls : ""}"><h4>${t}</h4><ul class="items">${lis}</ul></div>` : "";
     const cards = r.pulls.map((p, i) => {
       const n = i + 1, mobs = p.mobs.filter(m => m[2] > 0 || p.boss === m[0]);
@@ -987,9 +1286,18 @@ async function sheetPage() {
     }).join("");
     const src = routes.source;
     const last = r.pulls[r.pulls.length - 1].cum;
+    if (r.mine) {
+      const warn = (last < r.total ? TT(`이 경로는 잡몹 ${pct(last)}%에서 끝납니다(100% 필요).`, `This route ends at ${pct(last)}% enemy forces (100% needed).`) + " " : "")
+        + (r.missing ? TT(`지금 MDT 데이터(${ENEMIES.source})에 없는 몹 ${r.missing}마리는 빼고 그렸습니다. 다른 MDT 버전에서 만든 경로일 수 있습니다.`, `${r.missing} enemies not in the current MDT data (${ENEMIES.source}) were left out. The route may come from another MDT version.`) + " " : "")
+        + (r.empty ? TT(`몹이 없는 빈 풀 ${r.empty}개는 빼고 번호를 매겼습니다.`, `${r.empty} empty pulls were skipped when numbering.`) : "");
+      return `<div class="sechead"><h2>${TT("경로 · 일반몹 · 보스", "Route · Trash · Bosses")}</h2><p>${TT("내 경로", "My route")}${r.title ? ` <b class="mytitle" translate="no">${esc(r.title)}</b>` : ""} · ${TT("번호나 몹 위에 마우스를 올리면 풀 이름, 누르면 공략 · 회색 점은 이 경로에서 잡지 않는 몹 · 잡몹 총량", "Hover a number or enemy for the pull, click for the guide · gray dots are enemies this route skips · total forces")} ${r.total}</p></div>
+      ${r.shared ? "" : seg}${shareBar(d.id, r)}<p class="dlinks rlinks">${outBtns}${r.shared ? "" : `<button class="vid myedit" type="button" data-d="${d.id}">${TT("다른 문자열 넣기", "Paste another string")}</button>`}</p>
+      <p class="mynote">${TT("내 경로의 일반 풀에는 몹 구성과 몹 기술만 나옵니다. 풀 운영 메모와 전문화 풀 공략은 기본 경로의 풀 번호에 맞춰 쓴 것이라 기본 경로에서 볼 수 있습니다.", "Trash pulls on your route show the enemies and their abilities only. Pull notes and spec pull tips are written for the default route's pull numbers.")}</p>
+      ${warn ? `<p class="rwarn">${warn}</p>` : ""}${map}<div class="pulls" hidden>${cards}</div>`;
+    }
     const short = last < r.total ? `<p class="rwarn">이 경로는 최신 MDT 데이터 기준 잡몹 ${pct(last)}%에서 끝난다. 경로를 만든 뒤 MDT에서 빠진 몹이 있어서이니 마지막 보스 전에 근처 몹을 조금 더 잡는다.</p>` : "";
     return `<div class="sechead"><h2>경로 · 일반몹 · 보스</h2><p>${esc(src.author)} PUG 경로 · 번호나 몹 위에 마우스를 올리면 풀 이름, 누르면 공략 · 회색 점은 이 경로에서 잡지 않는 몹 · 잡몹 총량 ${r.total}</p></div>
-      <p class="dlinks rlinks"><button class="vid mdtcopy" type="button" data-d="${d.id}" data-r="1" data-label="이 경로 MDT 복사" title="게임에서 /mdt → Import에 붙여 넣기">이 경로 MDT 복사</button>${r.run ? `<a class="vid ytpop" data-yt="${esc(r.run.id)}" href="https://www.youtube.com/watch?v=${esc(r.run.id)}" rel="noopener" title="${esc(r.run.title)}">▶ ${esc(src.author)} 주행 영상 (해설 없음, ${esc(r.run.key)})</a>` : ""}${EN_VID && r.video ? `<a class="vid" href="${esc(r.video)}" target="_blank" rel="noopener">▶ ${esc(src.author)} 해설 영상</a>` : ""}<a class="vid" href="${esc(src.folder)}" target="_blank" rel="noopener" title="${esc(src.name)} · ${esc(src.updated)}">경로 원본</a><textarea class="mdtbox" readonly hidden aria-label="MDT 경로 문자열">${esc(r.string)}</textarea></p>
+      ${r.shared ? "" : seg}${shareBar(d.id, r)}<p class="dlinks rlinks">${outBtns}<button class="vid mdtcopy" type="button" data-d="${d.id}" data-r="1" data-label="이 경로 MDT 복사" title="게임에서 /mdt → Import에 붙여 넣기">이 경로 MDT 복사</button>${r.run ? `<a class="vid ytpop" data-yt="${esc(r.run.id)}" href="https://www.youtube.com/watch?v=${esc(r.run.id)}" rel="noopener" title="${esc(r.run.title)}">▶ ${esc(src.author)} 주행 영상 (해설 없음, ${esc(r.run.key)})</a>` : ""}${EN_VID && r.video ? `<a class="vid" href="${esc(r.video)}" target="_blank" rel="noopener">▶ ${esc(src.author)} 해설 영상</a>` : ""}<a class="vid" href="${esc(src.folder)}" target="_blank" rel="noopener" title="${esc(src.name)} · ${esc(src.updated)}">경로 원본</a><textarea class="mdtbox" readonly hidden aria-label="MDT 경로 문자열">${esc(r.string)}</textarea></p>
       ${fixHtml(r)}${short}${map}<div class="pulls" hidden>${cards}</div>`;
   }
   // 경로 보정 안내: MDT 업데이트로 번호만 바뀐 몹을 다시 연결(relink)했거나 빠진 몹 대신 보충(add)한 경우. 복사 문자열도 보정본이다.
@@ -1124,12 +1432,12 @@ async function sheetPage() {
   // 터치: 풀을 한 번 탭하면 하이라이트 + 띠, 같은 풀을 다시 탭하거나 "공략 보기"를 누르면 팝업. 마우스: 올리면 하이라이트, 누르면 팝업.
   const MV = (() => {
     const el = document.createElement("div"); el.className = "mviewer"; el.hidden = true;
-    el.innerHTML = `<div class="mv-stage"><div class="mv-layer"></div></div><button type="button" class="mv-x" aria-label="지도 닫기">✕</button><div class="mv-zoom"><button type="button" data-z="in" aria-label="확대">+</button><button type="button" data-z="out" aria-label="축소">−</button><button type="button" data-z="fit" aria-label="원래대로">⟲</button></div><div class="mv-band" hidden><div class="mv-info"></div><button type="button" class="mv-go">공략 보기 ›</button></div>`;
+    el.innerHTML = `<div class="mv-stage"><div class="mv-layer"></div></div><button type="button" class="mv-x" aria-label="지도 닫기">✕</button><button type="button" class="mv-bend">✎ ${TT("선 꺾기", "Bend lines")}<span class="bcnt"></span></button><div class="mv-zoom"><button type="button" data-z="in" aria-label="확대">+</button><button type="button" data-z="out" aria-label="축소">−</button><button type="button" data-z="fit" aria-label="원래대로">⟲</button></div><div class="mv-band" hidden><div class="mv-info"></div><button type="button" class="mv-go">공략 보기 ›</button></div><div class="mv-edit" hidden><p class="mve-help">${TT("선을 누르면 꺾임점이 생깁니다 · 점을 끌어 옮기기 · 점을 두 번 누르면 지우기", "Tap a line to add a bend · drag a point to move it · double-tap a point to delete it")}</p><div class="mve-btns"><button type="button" data-e="undo" disabled>${TT("되돌리기", "Undo")}</button><button type="button" data-e="del" disabled>${TT("점 지우기", "Delete point")}</button><button type="button" data-e="clear">${TT("모두 지우기", "Clear all")}</button><button type="button" data-e="done" class="mve-done">${TT("완료", "Done")}</button></div></div>`;
     document.body.append(el);
-    return { el, stage: el.querySelector(".mv-stage"), layer: el.querySelector(".mv-layer"), band: el.querySelector(".mv-band"), info: el.querySelector(".mv-info"), w: 1, h: 1, k: 1, fit: 1, tx: 0, ty: 0, sel: null, pts: [], svg: null };
+    return { el, stage: el.querySelector(".mv-stage"), layer: el.querySelector(".mv-layer"), band: el.querySelector(".mv-band"), info: el.querySelector(".mv-info"), bar: el.querySelector(".mv-edit"), w: 1, h: 1, k: 1, fit: 1, tx: 0, ty: 0, sel: null, pts: [], svg: null, edit: null };
   })();
   const mvMaxK = () => Math.max(MV.fit * 2, 3);
-  const mvApply = () => { MV.layer.style.transform = `translate(${MV.tx}px,${MV.ty}px) scale(${MV.k})`; if (MV.sel) mvBandPos(); };
+  const mvApply = () => { MV.layer.style.transform = `translate(${MV.tx}px,${MV.ty}px) scale(${MV.k})`; if (MV.sel) mvBandPos(); if (MV.edit) MV.svg.querySelectorAll(".rbh").forEach(c => c.setAttribute("r", (9 / MV.k).toFixed(1))); };
   // 지도 어느 곳이든(가장자리, 아래 편집 막대에 가리는 곳도) 화면 가운데까지 끌어올 수 있게, 지도 끝이 화면 가운데를 넘지 않는 데까지 이동을 허용한다
   const mvClamp = () => {
     const W = MV.stage.clientWidth, H = MV.stage.clientHeight, w = MV.w * MV.k, h = MV.h * MV.k;
@@ -1165,7 +1473,7 @@ async function sheetPage() {
     const img = c.map.querySelector("img").cloneNode(); img.loading = "eager";
     const vb = svg.viewBox.baseVal; MV.w = vb.width; MV.h = vb.height;
     MV.layer.style.width = MV.w + "px"; MV.layer.style.height = MV.h + "px";
-    MV.layer.replaceChildren(img, svg); MV.svg = svg;
+    MV.layer.replaceChildren(img, svg); MV.svg = svg; MV.did = c.map.dataset.d; bendLabel();
     const pt = (g, ci, num) => ({ n: g.dataset.n, x: +ci.getAttribute("cx"), y: +ci.getAttribute("cy"), r: +ci.getAttribute("r"), num });
     MV.pts = [...svg.querySelectorAll(".rnum")].map(g => pt(g, g.querySelector("circle"), true)).concat([...svg.querySelectorAll(".rp")].flatMap(g => [...g.querySelectorAll("circle")].map(ci => pt(g, ci, false))));
     MV.band.classList.remove("hover"); // 손가락으로 열면 "공략 보기"를 보인다(마우스를 움직이면 다시 숨김)
@@ -1173,15 +1481,86 @@ async function sheetPage() {
     mvFit(); mvSelect(n || null); c.hide();
     MV.el.querySelector(".mv-x").focus({ preventScroll: true });
   }
-  function mvCloseRaw() { if (MV.el.hidden) return; MV.el.hidden = true; document.documentElement.classList.remove("mv-open"); MV.layer.replaceChildren(); MV.svg = null; MV.sel = null; MV.band.hidden = true; }
+  function mvCloseRaw() { if (MV.el.hidden) return; bendEnd(); MV.el.hidden = true; document.documentElement.classList.remove("mv-open"); MV.layer.replaceChildren(); MV.svg = null; MV.sel = null; MV.band.hidden = true; }
+  // ---- 선 꺾기 편집: 지도 크게 보기 안에서 한다(확대·이동 그대로). 바뀔 때마다 저장하고 본문 지도 선도 같이 고친다 ----
+  // MV.edit = { did, r, P: 선이 지나는 점, b: 꺾임점, undo: 이전 상태들, sel: [구간, 번호] }
+  const bendCount = b => Object.values(b).reduce((a, x) => a + x.length, 0);
+  // 크게 보기 단추의 꺾은 개수
+  function bendLabel() {
+    const r = MV.did && routeView(MV.did), n = MV.edit ? bendCount(MV.edit.b) : r ? bendCount(bendsOf(MV.did, r)) : 0;
+    MV.el.querySelector(".mv-bend .bcnt").textContent = n ? ` · ${n}${TT("곳", "")}` : "";
+  }
+  function bendStart() {
+    const did = MV.did, r = did && routeView(did); if (!r || MV.el.hidden || MV.edit) return;
+    mvSelect(null);
+    MV.edit = { did, r, P: routePts(r), b: bendsOf(did, r), undo: [], sel: null };
+    MV.svg.insertAdjacentHTML("beforeend", '<g class="rbends"></g>');
+    MV.el.classList.add("mv-editing"); MV.band.hidden = true; MV.bar.hidden = false;
+    bendDraw();
+  }
+  function bendEnd() {
+    if (!MV.edit) return;
+    MV.edit = null; MV.el.classList.remove("mv-editing"); MV.bar.hidden = true; MV.stage.style.cursor = "";
+    const g = MV.svg && MV.svg.querySelector(".rbends"); if (g) g.remove();
+    bendLabel();
+  }
+  function bendDraw() {
+    const E = MV.edit; if (!E) return;
+    const html = pathHtml(E.r, E.b);
+    [MV.svg, PM.ctx && PM.ctx.svg].forEach(svg => { const g = svg && svg.querySelector(".rpath"); if (g) g.innerHTML = html; });
+    const rad = (9 / MV.k).toFixed(1);
+    MV.svg.querySelector(".rbends").innerHTML = Object.keys(E.b).flatMap(k => E.b[k].map((q, i) => `<circle class="rbh${E.sel && E.sel[0] === +k && E.sel[1] === i ? " on" : ""}" cx="${Math.round(q[0])}" cy="${Math.round(q[1])}" r="${rad}"/>`)).join("");
+    MV.bar.querySelector('[data-e="undo"]').disabled = !E.undo.length;
+    MV.bar.querySelector('[data-e="del"]').disabled = !E.sel;
+    MV.bar.querySelector('[data-e="clear"]').disabled = !bendCount(E.b);
+  }
+  // 상태를 바꾸기 전에 부르면 되돌리기에 쌓는다. 바꾼 뒤에는 bendCommit 으로 저장·다시 그리기
+  const bendPush = () => { const E = MV.edit; E.undo.push(JSON.stringify(E.b)); if (E.undo.length > 100) E.undo.shift(); };
+  function bendCommit() {
+    const E = MV.edit; if (!E) return;
+    bendsSave(E.did, E.r, E.b); bendDraw();
+    bendLabel();
+  }
+  function bendDel() { const E = MV.edit; if (!E || !E.sel) return; bendPush(); E.b[E.sel[0]].splice(E.sel[1], 1); E.sel = null; bendCommit(); }
+  // 화면 좌표 → 지도 좌표, 가장 가까운 꺾임점(화면 18px 안) 또는 선(화면 14px 안)
+  const mvMap = (cx, cy) => [(cx - MV.tx) / MV.k, (cy - MV.ty) / MV.k];
+  function bendHit(cx, cy) {
+    const E = MV.edit, [mx, my] = mvMap(cx, cy);
+    let best = null, bd = 18 / MV.k;
+    for (const k in E.b) E.b[k].forEach((q, i) => { const d = Math.hypot(q[0] - mx, q[1] - my); if (d < bd) { bd = d; best = { h: [+k, i] }; } });
+    if (best) return best;
+    bd = 14 / MV.k;
+    for (let s = 0; s < E.P.length - 1; s++) {
+      const pts = segPts(E.P, E.b, s);
+      for (let j = 0; j < pts.length - 1; j++) {
+        const [ax, ay] = pts[j], [bx, by] = pts[j + 1], L = (bx - ax) ** 2 + (by - ay) ** 2;
+        const t = L ? Math.max(0, Math.min(1, ((mx - ax) * (bx - ax) + (my - ay) * (by - ay)) / L)) : 0;
+        const d = Math.hypot(ax + t * (bx - ax) - mx, ay + t * (by - ay) - my);
+        // 선 끝(입구·풀 번호 원) 위는 꺾임점을 넣을 자리가 아니다
+        const nearEnd = [E.P[s], E.P[s + 1]].some(q => Math.hypot(q[0] - mx, q[1] - my) < Math.max(30, 14 / MV.k));
+        if (d < bd && !nearEnd) { bd = d; best = { s, j, pt: [mx, my] }; }
+      }
+    }
+    return best;
+  }
+  // 선 위 한 점에 꺾임점을 넣고 [구간, 번호]를 돌려준다
+  const bendInsert = hit => { const E = MV.edit; bendPush(); (E.b[hit.s] = E.b[hit.s] || []).splice(hit.j, 0, hit.pt.map(Math.round)); return [hit.s, hit.j]; };
+  const bendMove = (h, cx, cy) => { const E = MV.edit, [mx, my] = mvMap(cx, cy); E.b[h[0]][h[1]] = [Math.round(Math.max(0, Math.min(MV.w, mx))), Math.round(Math.max(0, Math.min(MV.h, my)))]; bendDraw(); };
+
   (() => {
     const ptrs = new Map(); let G = null, lastTap = { t: 0, x: 0, y: 0 };
     const sr = () => MV.stage.getBoundingClientRect();
     const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y), mid = p => ({ x: (p[0].x + p[1].x) / 2, y: (p[0].y + p[1].y) / 2 });
-    const base = () => { const p = [...ptrs.values()].map(q => ({ ...q })); G = { k: MV.k, tx: MV.tx, ty: MV.ty, p, moved: G ? G.moved : false, multi: (G && G.multi) || p.length > 1, t0: G ? G.t0 : performance.now() }; };
-    MV.stage.addEventListener("pointerdown", e => { try { MV.stage.setPointerCapture(e.pointerId); } catch (_) {} ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY }); base(); });
+    const base = () => { const p = [...ptrs.values()].map(q => ({ ...q })); G = { k: MV.k, tx: MV.tx, ty: MV.ty, p, moved: G ? G.moved : false, multi: (G && G.multi) || p.length > 1, t0: G ? G.t0 : performance.now(), dirty: !!(G && (G.dirty || G.drag)) }; }; // 손가락이 늘거나 줄면 끌던 꺾임점은 놓는다(dirty: 끝나면 저장)
+    let lastH = { t: 0, h: null };
+    MV.stage.addEventListener("pointerdown", e => {
+      try { MV.stage.setPointerCapture(e.pointerId); } catch (_) {} ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY }); base();
+      // 편집 중 한 손가락: 꺾임점을 잡으면 끌기, 선을 잡으면(마우스는 끌면 새 점, 손가락은 누르기만 하면 새 점) 표시
+      if (MV.edit && ptrs.size === 1) { const r = sr(); G.hit = bendHit(e.clientX - r.left, e.clientY - r.top); G.pt = e.pointerType; }
+    });
     MV.stage.addEventListener("pointermove", e => {
       const r = sr();
+      if (!ptrs.has(e.pointerId) && MV.edit) { if (e.pointerType === "mouse") { const h = bendHit(e.clientX - r.left, e.clientY - r.top); MV.stage.style.cursor = h ? (h.h ? "move" : "copy") : ""; } return; }
       if (!ptrs.has(e.pointerId)) { // 마우스 올리기 = 하이라이트
         // 마우스는 올리기만 해도 띠가 바뀌므로 띠의 "공략 보기"까지 갈 수 없다 → 마우스 띠에서는 버튼을 숨기고 풀을 눌러 연다
         if (e.pointerType === "mouse") { const n = mvHit(e.clientX - r.left, e.clientY - r.top); MV.band.classList.add("hover"); if (n !== MV.sel) mvSelect(n); MV.stage.style.cursor = n ? "pointer" : ""; }
@@ -1191,7 +1570,12 @@ async function sheetPage() {
       const p = [...ptrs.values()];
       if (p.length === 1 && G.p.length === 1) {
         const dx = p[0].x - G.p[0].x, dy = p[0].y - G.p[0].y;
-        if (!G.moved && Math.hypot(dx, dy) > 6) G.moved = true;
+        if (!G.moved && Math.hypot(dx, dy) > 6) {
+          G.moved = true;
+          // 끌기 시작: 꺾임점이면 그 점, 선이면 마우스만 새 점을 넣어 끈다(손가락으로 선을 끌면 지도 이동)
+          if (G.hit && (G.hit.h || G.pt === "mouse")) { if (G.hit.h) bendPush(); G.drag = G.hit.h || bendInsert(G.hit); MV.edit.sel = G.drag; }
+        }
+        if (G.drag && MV.edit) { bendMove(G.drag, p[0].x - r.left, p[0].y - r.top); return; }
         if (G.moved) { MV.tx = G.tx + dx; MV.ty = G.ty + dy; mvClamp(); mvApply(); }
       } else if (p.length >= 2 && G.p.length >= 2) {
         G.moved = true;
@@ -1205,8 +1589,21 @@ async function sheetPage() {
       ptrs.delete(e.pointerId);
       if (ptrs.size) return base();
       const g = G; G = null;
+      if ((g.drag || g.dirty) && MV.edit) return bendCommit();
       if (e.type !== "pointerup" || g.moved || g.multi || performance.now() - g.t0 > 500) return;
-      const r = sr(), x = e.clientX - r.left, y = e.clientY - r.top, n = mvHit(x, y), now = performance.now();
+      const r = sr(), x = e.clientX - r.left, y = e.clientY - r.top, n = MV.edit ? null : mvHit(x, y), now = performance.now();
+      // 편집 중 누르기: 꺾임점 = 고르기(같은 점을 곧바로 다시 누르면 지우기), 선 = 새 점, 빈 곳 = 고르기 해제(두 번 누르면 확대는 그대로)
+      if (MV.edit && g.hit) {
+        lastTap.t = 0;
+        if (g.hit.h) {
+          const same = lastH.h && lastH.h[0] === g.hit.h[0] && lastH.h[1] === g.hit.h[1] && now - lastH.t < 400;
+          MV.edit.sel = g.hit.h; lastH = { t: now, h: g.hit.h };
+          if (same) { lastH = { t: 0, h: null }; return bendDel(); }
+          return bendDraw();
+        }
+        MV.edit.sel = bendInsert(g.hit); lastH = { t: now, h: MV.edit.sel }; return bendCommit();
+      }
+      if (MV.edit) { MV.edit.sel = null; bendDraw(); }
       if (e.pointerType !== "mouse") MV.band.classList.remove("hover");
       if (n) { lastTap.t = 0; if (e.pointerType === "mouse" || MV.sel === n) pmOpen(n); else mvSelect(n); return; }
       if (now - lastTap.t < 320 && Math.hypot(x - lastTap.x, y - lastTap.y) < 40) { mvZoomAt(MV.k > MV.fit * 1.05 ? MV.fit : MV.fit * 2.5, x, y); lastTap.t = 0; }
@@ -1217,11 +1614,26 @@ async function sheetPage() {
     MV.el.addEventListener("click", e => {
       if (e.target.closest(".mv-x")) return closeTop("mv");
       if (e.target.closest(".mv-go")) return MV.sel && pmOpen(MV.sel);
+      if (e.target.closest(".mv-bend")) return bendStart();
+      const eb = e.target.closest("[data-e]");
+      if (eb && MV.edit) {
+        const E = MV.edit, a = eb.dataset.e;
+        if (a === "done") return bendEnd();
+        if (a === "del") return bendDel();
+        if (a === "undo" && E.undo.length) { E.b = JSON.parse(E.undo.pop()); E.sel = null; bendsSave(E.did, E.r, E.b); return bendCommit(); }
+        if (a === "clear" && bendCount(E.b)) { bendPush(); E.b = {}; E.sel = null; return bendCommit(); }
+        return;
+      }
       const z = e.target.closest("[data-z]"); if (!z) return;
       const W = MV.stage.clientWidth / 2, H = MV.stage.clientHeight / 2;
       if (z.dataset.z === "fit") mvFit(); else mvZoomAt(MV.k * (z.dataset.z === "in" ? 1.6 : 1 / 1.6), W, H);
     });
     document.addEventListener("keydown", e => { if (e.key === "Escape" && PM.el.hidden && !MV.el.hidden) { e.preventDefault(); closeTop("mv"); } });
+    document.addEventListener("keydown", e => {
+      if (!MV.edit || MV.el.hidden) return;
+      if ((e.key === "Delete" || e.key === "Backspace") && MV.edit.sel) { e.preventDefault(); bendDel(); }
+      else if (e.key.toLowerCase() === "z" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); MV.bar.querySelector('[data-e="undo"]').click(); }
+    });
     addEventListener("resize", () => { if (!MV.el.hidden) mvFit(); });
   })();
   function bindRoute() {
@@ -1278,7 +1690,8 @@ async function sheetPage() {
       const list = d.id === "general" ? inner : `<details class="easy fold" data-k="${ek}"${eOpen ? " open" : ""}><summary><span>간편 공략</span><span class="chev" aria-hidden="true">▾</span></summary><div class="easybody">${inner}</div></details>`;
       return { list, deep: deepHtml(d.id, b), vid: (EN_VID && RIO[d.id] && b.k !== "Trash") ? `<a class="vid" href="${rioVideo(d.id, b.t)}" target="_blank" rel="noopener">▶ 영상</a>` : "" };
     };
-    const R0 = ROUTES[d.id], inRoute = new Set(R0 ? R0.pulls.filter(p => p.boss).map(p => p.boss) : []);
+    // 지도에 보스 풀로 들어간 보스는 위쪽 보스 칸에서 뺀다(내 경로에 없는 보스는 위쪽에 그대로 둔다)
+    const R0 = routeView(d.id), inRoute = new Set(R0 ? R0.pulls.filter(p => p.boss).map(p => p.boss) : []);
     mainEl.innerHTML = `<div><h2 class="dname">${d.name}</h2><p class="dsub">${d.sub}${d.time ? ` · <span class="dtime">제한 시간 <b>${d.time}분</b></span>` : ""}${RIO[d.id] ? `</p><p class="dlinks">${EN_VID ? `<a class="vid" href="${rioVideo(d.id)}" target="_blank" rel="noopener">▶ Raider.IO 영상</a>` : ""}<a class="vid rio" href="${rioArticle(d.id)}" target="_blank" rel="noopener">Raider.IO 글</a>${ROUTES[d.id] ? "" : mdtHtml(d.id)}` : EN_VID ? ` · <a class="vid" href="${core.generalVideo.href}" target="_blank" rel="noopener">${core.generalVideo.label}</a>` : ""}</p></div>` + (d.id !== "general" ? locCard(d.id) : "") + (d.id !== "general" ? heroCard(d) : "") + bosses.map(b => {
       if (b.block) return fold(b, blockHtml(b));
       if (inRoute.has(b.n)) return "";
@@ -1295,6 +1708,7 @@ async function sheetPage() {
   }
   render();
   applyChrome();
+  shareInit();
   const back = ss.get("wg:scroll:" + location.pathname);
   if (back != null) { ss.set("wg:scroll:" + location.pathname, ""); if (+back > 0) scrollTo(0, +back); }
 
