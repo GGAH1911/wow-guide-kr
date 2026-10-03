@@ -590,6 +590,7 @@ button.rkrow.lg[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 
 .rmap svg{position:absolute;inset:0;width:100%;height:100%}
 :is(.rmap,.mv-layer) .rseg{stroke:#fff;stroke-width:5;stroke-dasharray:14 10;opacity:.75}
 :is(.rmap,.mv-layer) .rmove{stroke:#7dd3fc;stroke-width:6;stroke-dasharray:4 12;stroke-linecap:round;opacity:.9}
+:is(.rmap,.mv-layer) .rpath polyline{fill:none;stroke-linejoin:round}
 :is(.rmap,.mv-layer) .rrest{pointer-events:none}
 :is(.rmap,.mv-layer) .rrest circle{fill:#9ca3af;fill-opacity:.85;stroke:#000;stroke-width:2;stroke-opacity:.6}
 :is(.rmap,.mv-layer) svg.sel .rrest{opacity:.5}
@@ -666,6 +667,21 @@ html.pm-open{overflow:hidden}
 @media print{.pmodal{display:none!important}}
 .rfix{margin:0 0 8px;font-size:12.5px;color:var(--ink-2);background:var(--surface);border-left:3px solid #38bdf8;border-radius:6px;padding:6px 10px}
 .rwarn{margin:0 0 8px;font-size:12.5px;color:var(--ink-2);background:var(--surface);border-left:3px solid #f59e0b;border-radius:6px;padding:6px 10px}
+/* 내 경로(사용자 MDT 문자열) */
+.seg.rmode{display:flex;width:max-content;max-width:100%;margin:10px 0 0}
+.seg.rmode button{white-space:normal;text-align:center}
+.mybox{margin:10px 0 8px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.mybox p{margin:0 0 8px;font-size:12.5px;color:var(--ink-2)}
+.mybox code{font-size:12px;background:var(--fill);border-radius:4px;padding:0 4px}
+.myin{display:block;width:100%;box-sizing:border-box;min-height:64px;font:11px/1.4 ui-monospace,Menlo,monospace;border:1px solid var(--line);border-radius:6px;padding:6px;background:var(--bg);color:var(--ink);resize:vertical}
+.mybtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.mybtns .vid{margin-right:0;font-size:12.5px;padding:4px 11px;cursor:pointer;background:var(--surface);font-family:inherit}
+.mybtns .vid:disabled{opacity:.6;cursor:default}
+.mybox .myerr{margin:8px 0 0;color:var(--tb)}
+.mywait{margin:10px 0;font-size:13px;color:var(--muted)}
+.myedit{cursor:pointer;background:var(--surface);font-family:inherit}
+.mytitle{color:var(--ink-2);font-weight:600}
+.mynote{margin:0 0 8px;font-size:12px;color:var(--muted)}
 
 /* 즐겨찾기 */
 .gh .favb{flex:0 0 auto;border:0;background:none;color:var(--muted);font-size:19px;line-height:1;padding:2px 4px;margin-left:-2px;cursor:pointer}
@@ -758,3 +774,23 @@ html.yt-open{overflow:hidden}
 html.lc-open{overflow:hidden}
 @media (max-width:520px){.lc-thumb{flex-basis:108px}.lc-pin em{font-size:11.5px}.lc-box{border-radius:12px}}
 @media print{.lcmodal,.loccard{display:none!important}}
+/* 선 꺾기 편집(지도 크게 보기 안) */
+.mv-edit{position:absolute;z-index:2;left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;background:rgba(17,17,17,.9);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#F5F5F7;border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:8px 10px}
+.mv-edit[hidden]{display:none}
+.mve-help{margin:0;flex:1 1 220px;font-size:12.5px;line-height:1.4;color:#D2D2D7}
+.mve-btns{display:flex;flex-wrap:wrap;gap:6px}
+.mve-btns button{min-height:36px;padding:6px 12px;border-radius:10px;font:600 13px/1 inherit;font-family:inherit;color:#F5F5F7;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);cursor:pointer}
+.mve-btns button:disabled{opacity:.4;cursor:default}
+.mve-btns .mve-done{background:#0A84FF;border-color:#0A84FF;color:#fff}
+.mv-editing .mv-band{display:none}
+.mv-editing .mv-layer .rseg{opacity:1}
+.mv-layer .rbh{fill:#fff;stroke:#0A84FF;stroke-width:3;vector-effect:non-scaling-stroke;cursor:move}
+.mv-layer .rbh.on{fill:#0A84FF;stroke:#fff}
+@media (hover:hover) and (pointer:fine){.mv-edit{left:50%;right:auto;transform:translateX(-50%);width:max-content;max-width:min(760px,calc(100% - 140px))}}
+/* 공유받은 경로 보기 */
+.shbar{margin:10px 0 0;background:var(--surface);border:1px solid var(--line);border-left:3px solid #0A84FF;border-radius:10px;padding:8px 12px}
+.shbar p{margin:0;font-size:12.5px;color:var(--ink-2)}
+.shbar .mybtns{margin-top:6px}
+.shareurl,.mdtlines{cursor:pointer;background:var(--surface);font-family:inherit}
+.mv-bend{position:absolute;z-index:2;top:max(10px,env(safe-area-inset-top));right:10px;min-height:44px;padding:0 14px;border-radius:22px;font:600 14px/1 inherit;font-family:inherit;color:#F5F5F7;background:rgba(17,17,17,.82);border:1px solid rgba(255,255,255,.18);cursor:pointer}
+.mv-editing .mv-bend{display:none}
